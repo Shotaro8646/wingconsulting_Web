@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>貿易DXが止まる本当の理由 ── 業務設計ファーストで現場を変える</title>
+<meta name="description" content="総合商社・米州法人で年間30万ドルの損失を80%削減した実績をもとに、貿易オペレーションDXの構造的課題と突破口を解説。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-primary: #0B0F1A;
+    --bg-secondary: #111827;
+    --bg-card: #1A2036;
+    --text-primary: #E8ECF4;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --accent: #D4A853;
+    --accent-hover: #E8C273;
+    --accent-glow: rgba(212, 168, 83, 0.15);
+    --border: rgba(148, 163, 184, 0.12);
+    --font-sans: 'Noto Sans JP', sans-serif;
+    --font-serif: 'Noto Serif JP', serif;
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; font-size: 16px; }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Utility ── */
+  .container { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+  .label {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 120px 0 80px;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -40%; right: -20%;
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero__eyebrow {
+    font-size: 0.8rem;
+    color: var(--accent);
+    letter-spacing: 0.15em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.2s forwards;
+  }
+  .hero h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.8rem, 4.5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+    margin-bottom: 24px;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.4s forwards;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--accent);
+  }
+  .hero__sub {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    max-width: 640px;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.6s forwards;
+  }
+  .hero__cta {
+    opacity: 0;
+    animation: fadeUp 0.7s 0.8s forwards;
+  }
+
+  /* ── Stats Bar ── */
+  .stats {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 48px 0;
+  }
+  .stats__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    text-align: center;
+  }
+  .stats__number {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .stats__desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* ── Section ── */
+  section { padding: 96px 0; }
+  section h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+  section p.lead {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    max-width: 680px;
+    margin-bottom: 48px;
+  }
+
+  /* ── Cards (3 Disconnections) ── */
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px 24px;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .card:hover { border-color: var(--accent); transform: translateY(-4px); }
+  .card__icon {
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    background: var(--accent-glow);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+  }
+  .card h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  .card p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  /* ── Case Study ── */
+  .case {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .case__badge {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--bg-primary);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 4px 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  .case__before-after {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin: 40px 0;
+  }
+  .ba-box {
+    border-radius: 12px;
+    padding: 28px 24px;
+    border: 1px solid var(--border);
+  }
+  .ba-box--before { background: rgba(239, 68, 68, 0.06); border-color: rgba(239, 68, 68, 0.2); }
+  .ba-box--after { background: rgba(34, 197, 94, 0.06); border-color: rgba(34, 197, 94, 0.2); }
+  .ba-box__label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin-bottom: 16px;
+  }
+  .ba-box--before .ba-box__label { color: #F87171; }
+  .ba-box--after .ba-box__label { color: #4ADE80; }
+  .ba-box ul { list-style: none; }
+  .ba-box li {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    padding: 6px 0;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.6;
+  }
+  .ba-box--before li::before { content: '✕'; position: absolute; left: 0; color: #F87171; font-size: 0.75rem; }
+  .ba-box--after li::before { content: '✓'; position: absolute; left: 0; color: #4ADE80; font-weight: 700; }
+
+  /* ── Approach Steps ── */
+  .steps { counter-reset: step; }
+  .step {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 20px;
+    margin-bottom: 36px;
+    align-items: start;
+  }
+  .step__num {
+    counter-increment: step;
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+  .step h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .step p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  /* ── Quote / Credibility ── */
+  .quote-block {
+    border-left: 3px solid var(--accent);
+    padding: 24px 28px;
+    margin: 40px 0;
+    background: var(--accent-glow);
+    border-radius: 0 8px 8px 0;
+  }
+  .quote-block p {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.8;
+    color: var(--text-primary);
+  }
+  .quote-block cite {
+    display: block;
+    margin-top: 12px;
+    font-style: normal;
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  /* ── CTA Section ── */
+  .cta-section {
+    text-align: center;
+    padding: 96px 0 120px;
+  }
+  .cta-section h2 {
+    margin-bottom: 16px;
+  }
+  .cta-section p {
+    color: var(--text-secondary);
+    margin-bottom: 36px;
+    font-size: 0.95rem;
+  }
+
+  /* ── Button ── */
+  .btn {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--bg-primary);
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 14px 36px;
+    border-radius: 8px;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: background 0.3s, transform 0.15s;
+    border: none;
+    cursor: pointer;
+  }
+  .btn:hover { background: var(--accent-hover); transform: translateY(-2px); }
+  .btn--outline {
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+  }
+  .btn--outline:hover { background: var(--accent-glow); }
+
+  /* ── Animations ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 768px) {
+    .stats__grid { grid-template-columns: 1fr; gap: 28px; }
+    .cards { grid-template-columns: 1fr; }
+    .case__before-after { grid-template-columns: 1fr; }
+    section { padding: 64px 0; }
+    .hero { min-height: auto; padding: 100px 0 60px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ════════════════ HERO ════════════════ -->
+<section class="hero">
+  <div class="container">
+    <p class="hero__eyebrow">WHITE PAPER ── 貿易オペレーション × DX</p>
+    <h1>貿易DXが止まる<em>本当の理由</em>は、<br>ツールではなく<em>「仕組みの断絶」</em>にある。</h1>
+    <p class="hero__sub">総合商社の米州法人で、年間30万ドルの物流ペナルティを80%以上削減。SAPの壁を突破した「業務設計ファースト」のアプローチを、一次情報をもとに解説します。</p>
+    <div class="hero__cta">
+      <a href="#contact" class="btn">無料相談を予約する</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ STATS ════════════════ -->
+<div class="stats">
+  <div class="container">
+    <div class="stats__grid">
+      <div>
+        <div class="stats__number">80%+</div>
+        <div class="stats__desc">年間約30万ドルの<br>Demurrageリスク削減率</div>
+      </div>
+      <div>
+        <div class="stats__number">300h</div>
+        <div class="stats__desc">月間の転記・二重入力<br>工数削減</div>
+      </div>
+      <div>
+        <div class="stats__number">初年度</div>
+        <div class="stats__desc">IT投資のROI回収</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════ PROBLEM ════════════════ -->
+<section>
+  <div class="container">
+    <span class="label">Problem</span>
+    <h2>「高速道路はできた。だが走る車がない。」</h2>
+    <p class="lead">eBLの法制化、サイバーポートの推進——政策インフラは整いつつある。しかし現場では、紙のB/Lに青インクで直筆サインしないと貨物が動かない世界が続いている。DXが止まる原因は、3つの「断絶」に集約される。</p>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card__icon">⛓️‍💥</div>
+        <h3>断絶①<br>本社IT × 現地実務</h3>
+        <p>本社が推進するERP統合は「経営のためのDX」。現場が求めるのは「オペレーションのためのDX」。この温度差がシステムへの拒絶反応を生む。</p>
+      </div>
+      <div class="card">
+        <div class="card__icon">🔗</div>
+        <h3>断絶②<br>自社 × 取引先</h3>
+        <p>自社だけシステム化しても、フォワーダーがFAXやWhatsAppで返事をする限り、全体のリードタイムは1秒も縮まらない。</p>
+      </div>
+      <div class="card">
+        <div class="card__icon">📊</div>
+        <h3>断絶③<br>投資 × 効果（ROI）</h3>
+        <p>転記ミスによる遅延、滞留費用、属人的な残業——「見えないコスト」が定量化されず、経営層の投資判断が下りない。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ CASE STUDY ════════════════ -->
+<section class="case">
+  <div class="container">
+    <span class="case__badge">実績ケーススタディ</span>
+    <h2>総合商社・米州法人——<br>「SAPの壁」をバイパスで突破した全記録</h2>
+    <p class="lead">北米内陸部からアジア・中南米への輸出オペレーション。本社から強行導入されたSAP S/4HANAと、日々変動する物流現場の間で何が起きたか。</p>
+
+    <div class="case__before-after">
+      <div class="ba-box ba-box--before">
+        <div class="ba-box__label">BEFORE</div>
+        <ul>
+          <li>SAPに入力が追いつかず「神Excel」が無限増殖</li>
+          <li>月末にSAPへ事後手打ち入力する深夜残業が常態化</li>
+          <li>ベテラン1名の不在で書類突合ミスが頻発</li>
+          <li>年間約30万ドルのDemurrage/Detentionが垂れ流し</li>
+        </ul>
+      </div>
+      <div class="ba-box ba-box--after">
+        <div class="ba-box__label">AFTER</div>
+        <ul>
+          <li>AI-OCR＋クラウドで非定型PDFを自動集約</li>
+          <li>確定データのみ日次バッチでSAPへ自動連携</li>
+          <li>属人化を解消し、誰でも回せるオペレーションに</li>
+          <li>物流ペナルティ80%以上削減、ROI初年度回収</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="quote-block">
+      <p>SAPの追加開発は非現実的だった。取ったのは、SAPと現場の間に「軽量なSaaSとRPA」を挟み込むバイパス構築。現場のやり方を否定せず、「自分たちを早く帰らせてくれる相棒」として受け入れられた。</p>
+      <cite>── 筆者自身がブリッジ人材として現地でプロジェクトをリード</cite>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ APPROACH ════════════════ -->
+<section>
+  <div class="container">
+    <span class="label">Approach</span>
+    <h2>「業務設計ファースト」—— 3つのステップ</h2>
+    <p class="lead">システムありきではなく、現場の痛みから逆算して設計する。これが唯一の突破口。</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step__num">1</div>
+        <div>
+          <h3>As-Isの高解像度な可視化</h3>
+          <p>本社が描く「標準フロー」ではなく、現場で毎日起きている例外処理と「魔改造されたExcel」の実態を把握する。担当者の隣に座り、キーストロークを観察する泥臭さが必要。</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step__num">2</div>
+        <div>
+          <h3>ボトルネック特定と「見えないコスト」の金額化</h3>
+          <p>最も痛みの大きい箇所（Quick Win）を特定し、人件費・滞留コスト・遅延損害を金額換算してROIストーリーを構築。経営層の投資稟議を通す武器を作る。</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step__num">3</div>
+        <div>
+          <h3>ブリッジ人材による段階的導入</h3>
+          <p>IT部門の「システム言語」と現場の「業務言語」を通訳できる人材が、現場のやり方を否定せず「相棒」としてシステムを受け入れさせる。技術ではなく、人のマネジメントが成否を分ける。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ CTA ════════════════ -->
+<section class="cta-section" id="contact">
+  <div class="container">
+    <span class="label">Contact</span>
+    <h2>貿易オペレーションの「見えないコスト」、<br>可視化してみませんか？</h2>
+    <p>現状のプロセス課題の棚卸しから、ROI試算、段階的な改善ロードマップの策定まで。<br>まずは30分の無料相談で、御社の状況をお聞かせください。</p>
+    <a href="#" class="btn">無料相談を予約する</a>
+  </div>
+</section>
+
+</body>
+</html>

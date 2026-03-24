@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BorderFlow AI — 機能一覧</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Noto Sans JP",sans-serif;background:#0b1632;color:#f0f2f7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:880px;margin:0 auto;padding:40px 20px 60px}
+h1{font-size:28px;font-weight:900;text-align:center;margin-bottom:6px;letter-spacing:-.02em}
+h1 em{font-style:normal;color:#d4b978}
+.sub{text-align:center;font-size:14px;color:#8892a8;margin-bottom:32px}
+.tabs{display:flex;gap:8px;margin-bottom:24px;justify-content:center}
+.tab{padding:10px 24px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;border:1px solid #243050;background:transparent;color:#8892a8;transition:.15s}
+.tab.on{background:#d4b978;color:#0b1632;border-color:#d4b978}
+.steps{display:flex;flex-direction:column;gap:4px}
+.step{background:#161d33;border:1px solid #243050;border-radius:12px;overflow:hidden;transition:.15s}
+.step:hover{border-color:#3a4a70}
+.step-h{padding:12px 16px;cursor:pointer;display:flex;align-items:center;gap:12px}
+.sn{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex-shrink:0}
+.sn-std{background:#1c2a48;color:#8892a8}
+.sn-ai{background:rgba(59,130,246,.15);color:#60a5fa}
+.sn-new{background:rgba(212,185,120,.12);color:#d4b978}
+.si{flex:1}
+.si h3{font-size:13px;font-weight:700;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.si p{font-size:11px;color:#8892a8;margin-top:2px}
+.badge{font-size:8px;padding:2px 6px;border-radius:3px;font-weight:700}
+.b-ai{background:rgba(59,130,246,.12);color:#60a5fa}
+.b-nw{background:rgba(212,185,120,.12);color:#d4b978}
+.b-lp{font-size:7px;padding:2px 5px;border-radius:3px;background:#1c2a48;color:#5a6178;flex-shrink:0}
+.arrow{color:#5a6178;font-size:14px;flex-shrink:0;transition:transform .15s}
+.step.open .arrow{transform:rotate(90deg)}
+.step-b{border-top:1px solid #243050;padding:14px 16px 14px 60px;display:none}
+.step.open .step-b{display:block}
+.fl{display:grid;grid-template-columns:1fr 1fr;gap:5px 16px}
+.fi{display:flex;align-items:flex-start;gap:6px;font-size:11px;color:#8892a8;line-height:1.5}
+.fc{color:#d4b978;flex-shrink:0}
+.io{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
+.iot{font-size:8px;padding:2px 7px;border-radius:4px;font-weight:600}
+.i-in{background:rgba(59,130,246,.1);color:#60a5fa}
+.i-out{background:rgba(29,158,117,.1);color:#34d399}
+.cn{height:10px;display:flex;justify-content:center}.cl{width:1px;height:100%;background:#243050}
+@media(max-width:600px){.fl{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>すべての業務ステップで、<em>何ができるか</em></h1>
+<p class="sub">各ステップをクリックすると、機能の詳細とデータの入出力が表示されます</p>
+<div class="tabs" id="tabs"></div>
+<div class="steps" id="sc"></div>
+</div>
+<script>
+var D={
+import:[
+["01","引合・発注","見積依頼からPO作成まで",0,0,"PC-030",["見積依頼・比較","発注書(PO)の自動生成","CSV/Excel一括インポート","品目・条件の登録"],["見積書"],["発注書(PO)"]],
+["02","与信管理","取引先の信用リスクを自動チェック",1,1,"PC-050",["与信枠(Credit Limit)の設定・管理","残枠リアルタイム表示","格付・審査履歴","枠超過アラート"],["発注データ"],["与信承認"]],
+["03","契約・L/C開設","売買契約からL/C開設・管理まで",0,0,"C-010, S-180",["契約書テンプレート管理","L/C開設依頼の自動生成","L/C種別・Amendment履歴","有効期限アラート"],["発注書","与信承認"],["契約書","L/C"]],
+["04","保険・為替予約","海上保険と為替リスクヘッジ",1,1,"C-090, L-120",["海上保険の付保条件管理","保険証券・保険料の記録","為替予約レート登録・管理","節約効果の自動計算"],["契約データ"],["保険証券","為替予約"]],
+["05","書類受領・OCR","書類を投げ込むだけでデータ化",1,0,"L-090",["Invoice/PL/BLのAI-OCR読取","バッチ処理(100件同時)","EDI 24h自動受信","OCR精度レポート"],["Invoice","P/L","B/L"],["構造化データ"]],
+["06","書類照合","書類間の不一致をAIが即座に発見",1,0,"S-120",["PO↔Invoice↔BL 3点突合","数量・金額・品名の不一致検出","略称の曖昧マッチング","是正提案の自動生成"],["OCRデータ","PO"],["照合レポート"]],
+["07","HS・関税計算","分類と関税額をAIが根拠付きで判断",1,0,"L-070",["HS10桁コードのAI推定","教示事例からの根拠提示","FTA/EPA適用判定","誤分類リスク警告"],["品目データ"],["HSコード","関税額"]],
+["08","許可申請・法規制","輸入に必要な許可・届出を自動確認",1,1,"L-060",["外為法・関税定率法チェック","食品衛生法・植防法チェック","必要許可の一覧表示","監査証跡の記録"],["HSコード","原産国"],["法規制結果"]],
+["09","輸入通関申告","申告書ドラフトをAI自動生成",1,0,"L-100",["申告書のAIドラフト","NACCS連携","申告ステータス追跡","申告書PDF出力"],["書類＋HS＋法規制"],["申告書","許可通知"]],
+["10","検品・入庫","数量照合から倉庫入庫まで",0,0,"L-140",["OCRデータとの数量照合","品目別検品結果記録","倉庫/ロット登録","モバイル検品UI"],["B/Lデータ"],["検品レポート","入庫記録"]],
+["11","在庫管理","ロット・評価・棚卸を管理",0,1,"I-010",["ロケーション別在庫管理","ロット・期限管理","在庫評価(移動平均法)","棚卸スケジュール管理"],["入庫記録"],["在庫データ","帳簿価額"]],
+["12","仕入伝票作成","仕訳をAIが自動生成",1,0,"R-010",["OCR＋関税＋為替→仕訳自動生成","勘定科目の自動判定","為替予約レート自動適用","ERP連携出力"],["OCR","関税","為替"],["仕入伝票"]],
+["13","支払・L/C決済","送金からL/C買取まで一元管理",1,0,"S-090",["L/C買取(ネゴ)の銀行手続き","送金依頼書の自動作成","請求書照合","支払期日アラート"],["伝票","L/C"],["送金依頼書","支払記録"]],
+["14","原価計算","ランデッドコストを品目別に自動算出",1,0,"R-080",["FOB+運賃+保険+関税の積上","品目別ランデッドコスト","取引採算率の計算","月次採算レポートPDF"],["全ステップ"],["原価明細","採算レポート"]]
+],
+export:[
+["01","受注・契約","海外バイヤーからの受注と契約",0,0,"C-020",["受注書・契約の作成","テンプレート管理","承認ワークフロー"],["引合"],["受注書","契約書"]],
+["02","与信管理","顧客の信用リスクを自動チェック",1,1,"PC-050",["与信枠の設定・管理","残枠リアルタイム表示","格付・審査履歴"],["受注"],["与信承認"]],
+["03","安全保障・コンプラ","輸出規制を包括的にAIチェック",1,1,"PC-070",["外為法チェック","米国EAR規制チェック","仕向地/取引先スクリーニング","監査証跡"],["受注","品目"],["コンプラ結果"]],
+["04","該非判定","該当/非該当をAI判定",1,0,"L-020",["リスト規制・キャッチオール判定","パラメータシート自動参照","該非判定書の自動生成","7年保管"],["品目","コンプラ"],["該非判定書"]],
+["05","輸出許可(E/L)","E/L要否判定と申請管理",1,1,"L-010",["E/L要否の自動判定","申請書ドラフト","申請状態の追跡"],["該非判定"],["E/L","保管記録"]],
+["06","船積書類作成","Invoice・PL・COをAI自動生成",1,0,"L-050",["Invoice/PL/CO自動生成","受注データから自動反映","バッチ生成"],["受注","該非"],["Invoice","P/L","CO"]],
+["07","輸出通関申告","輸出申告書をAI生成",1,0,"L-040",["申告書のAIドラフト","NACCS連携","許可通知の記録"],["書類","HS"],["申告書","許可通知"]],
+["08","船積・B/L取得","ブッキングからB/L受領まで",0,0,"L-030",["ブッキング管理","B/L内容の自動照合","貨物トラッキング"],["輸出許可"],["B/L"]],
+["09","売上伝票作成","売上仕訳をAI自動生成",1,0,"R-020",["B/L+為替→仕訳自動","勘定科目自動判定","ERP連携出力"],["B/L","為替"],["売上伝票"]],
+["10","請求・入金・消込","請求から入金消込まで一気通貫",1,0,"S-010",["請求書の自動生成・送付","入金データ自動取得","売掛金の自動消込","残高ダッシュボード"],["売上伝票"],["請求書","消込結果"]],
+["11","為替差損益","予約vs実勢の差損益を自動算出",1,0,"C-100",["予約vs実勢レート計算","差損益の仕訳自動","月次レポート","ポジション管理"],["売上","入金","予約"],["差損益レポート"]]
+]};
+var cur="import",opn=null;
+function sw(t){cur=t;opn=null;rn()}
+function tg(n){opn=opn===n?null:n;rn()}
+function rn(){
+  document.getElementById("tabs").innerHTML='<div class="tab'+(cur==="import"?" on":"")+'" onclick="sw(\'import\')">📥 輸入フロー（14ステップ）</div><div class="tab'+(cur==="export"?" on":"")+'" onclick="sw(\'export\')">📤 輸出フロー（11ステップ）</div>';
+  var s=D[cur],o="";
+  s.forEach(function(r,i){
+    var op=opn===r[0];
+    o+='<div class="step'+(op?" open":"")+'">';
+    o+='<div class="step-h" onclick="tg(\''+r[0]+'\')">';
+    o+='<div class="sn '+(r[4]?"sn-new":r[3]?"sn-ai":"sn-std")+'">'+r[0]+'</div>';
+    o+='<div class="si"><h3>'+r[1];
+    if(r[3])o+=' <span class="badge b-ai">AI</span>';
+    if(r[4])o+=' <span class="badge b-nw">NEW</span>';
+    o+='</h3><p>'+r[2]+'</p></div>';
+    o+='<span class="b-lp">'+r[5]+'</span>';
+    o+='<span class="arrow">›</span></div>';
+    o+='<div class="step-b"><div class="fl">';
+    r[6].forEach(function(f){o+='<div class="fi"><span class="fc">✓</span> '+f+'</div>'});
+    o+='</div><div class="io">';
+    r[7].forEach(function(t){o+='<span class="iot i-in">IN: '+t+'</span>'});
+    r[8].forEach(function(t){o+='<span class="iot i-out">OUT: '+t+'</span>'});
+    o+='</div></div></div>';
+    if(i<s.length-1)o+='<div class="cn"><div class="cl"></div></div>';
+  });
+  document.getElementById("sc").innerHTML=o;
+}
+rn();
+</script>
+</body>
+</html>

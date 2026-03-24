@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wings株式会社 | 貿易規制インテリジェンス</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+JP:wght@400;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1A2E5A;
+  --navy-deep: #0F1D3D;
+  --gold: #917816;
+  --gold-light: #B89E2B;
+  --gold-pale: #F5EDD0;
+  --dark: #1A1A1A;
+  --gray-900: #222;
+  --gray-700: #555;
+  --gray-400: #999;
+  --gray-200: #E5E5E5;
+  --gray-100: #F4F4F2;
+  --white: #FEFEFE;
+  --red-alert: #C62828;
+  --amber: #E68A00;
+  --green: #2E7D32;
+  --blue-info: #1565C0;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background: var(--white);
+  color: var(--dark);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* === HERO === */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--navy-deep);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse at 20% 50%, rgba(145,120,22,0.15) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(26,46,90,0.6) 0%, transparent 50%),
+    linear-gradient(160deg, var(--navy-deep) 0%, #0a1528 100%);
+}
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(145,120,22,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(145,120,22,0.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: gridPulse 8s ease-in-out infinite;
+}
+
+@keyframes gridPulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 40px 80px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(145,120,22,0.15);
+  border: 1px solid rgba(145,120,22,0.3);
+  color: var(--gold-light);
+  padding: 6px 16px;
+  border-radius: 2px;
+  font-size: 0.75rem;
+  font-family: 'DM Mono', monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  animation: fadeSlideUp 0.8s ease-out;
+}
+
+.hero-badge .dot {
+  width: 6px;
+  height: 6px;
+  background: var(--gold-light);
+  border-radius: 50%;
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.hero h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--white);
+  line-height: 1.3;
+  margin-bottom: 24px;
+  animation: fadeSlideUp 0.8s ease-out 0.1s both;
+}
+
+.hero h1 .accent {
+  color: var(--gold-light);
+}
+
+.hero-sub {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.65);
+  max-width: 640px;
+  line-height: 1.9;
+  margin-bottom: 48px;
+  animation: fadeSlideUp 0.8s ease-out 0.2s both;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+  animation: fadeSlideUp 0.8s ease-out 0.3s both;
+}
+
+.hero-stat {
+  border-left: 2px solid var(--gold);
+  padding-left: 16px;
+}
+
+.hero-stat .num {
+  font-family: 'DM Mono', monospace;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--gold-light);
+}
+
+.hero-stat .label {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 0.05em;
+}
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === NAV === */
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(15,29,61,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(145,120,22,0.15);
+  transition: all 0.3s;
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.nav-logo {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.nav-logo span { color: var(--gold-light); }
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--gold-light); }
+
+/* === SECTION COMMON === */
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 96px 40px;
+}
+
+.section-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.section-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.section-desc {
+  font-size: 0.95rem;
+  color: var(--gray-700);
+  max-width: 700px;
+  margin-bottom: 56px;
+}
+
+/* === ALERT BANNER === */
+.alert-banner {
+  background: linear-gradient(90deg, var(--red-alert), #B71C1C);
+  color: white;
+  text-align: center;
+  padding: 12px 40px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.alert-banner .mono {
+  font-family: 'DM Mono', monospace;
+  margin-right: 12px;
+  opacity: 0.8;
+}
+
+/* === REGULATION CARDS === */
+.reg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 24px;
+}
+
+.reg-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 3px;
+  padding: 32px;
+  position: relative;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+
+.reg-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+}
+
+.reg-card.critical::before { background: var(--red-alert); }
+.reg-card.warning::before { background: var(--amber); }
+.reg-card.info::before { background: var(--blue-info); }
+.reg-card.stable::before { background: var(--green); }
+
+.reg-card:hover {
+  border-color: var(--navy);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+}
+
+.reg-card .tag {
+  display: inline-block;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 2px;
+  margin-bottom: 16px;
+}
+
+.reg-card.critical .tag { background: #FFEBEE; color: var(--red-alert); }
+.reg-card.warning .tag { background: #FFF3E0; color: var(--amber); }
+.reg-card.info .tag { background: #E3F2FD; color: var(--blue-info); }
+.reg-card.stable .tag { background: #E8F5E9; color: var(--green); }
+
+.reg-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.reg-card .summary {
+  font-size: 0.85rem;
+  color: var(--gray-700);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.reg-card .meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.72rem;
+  color: var(--gray-400);
+  font-family: 'DM Mono', monospace;
+}
+
+.reg-card .impact {
+  font-size: 0.78rem;
+  color: var(--navy);
+  font-weight: 500;
+  background: var(--gray-100);
+  padding: 12px 16px;
+  border-radius: 2px;
+  margin-top: 16px;
+  border-left: 3px solid var(--gold);
+}
+
+.reg-card .impact strong { color: var(--gold); }
+
+/* === TIMELINE === */
+.timeline {
+  position: relative;
+  padding-left: 40px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--gray-200);
+}
+
+.tl-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.tl-item:last-child { border-bottom: none; }
+
+.tl-item::before {
+  content: '';
+  position: absolute;
+  left: -36px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--navy);
+  border: 3px solid var(--white);
+  box-shadow: 0 0 0 2px var(--navy);
+}
+
+.tl-date {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.tl-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.tl-desc {
+  font-size: 0.85rem;
+  color: var(--gray-700);
+  line-height: 1.8;
+}
+
+/* === DX INSIGHT === */
+.dx-section {
+  background: var(--navy-deep);
+  padding: 96px 0;
+}
+
+.dx-section .section-label { color: var(--gold-light); }
+.dx-section .section-title { color: var(--white); }
+.dx-section .section-desc { color: rgba(255,255,255,0.55); }
+
+.dx-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.dx-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 3px;
+  padding: 32px;
+  transition: all 0.3s;
+}
+
+.dx-card:hover {
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(145,120,22,0.3);
+}
+
+.dx-card .icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(145,120,22,0.15);
+  border-radius: 2px;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.dx-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.dx-card p {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.8;
+}
+
+/* === TABLE === */
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 32px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.data-table thead {
+  background: var(--navy);
+}
+
+.data-table th {
+  color: white;
+  font-weight: 500;
+  padding: 14px 20px;
+  text-align: left;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.data-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--gray-200);
+  color: var(--gray-700);
+  vertical-align: top;
+}
+
+.data-table tbody tr:hover {
+  background: var(--gray-100);
+}
+
+.data-table .status {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 2px;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem;
+  font-weight: 500;
+}
+
+.status-active { background: #FFEBEE; color: var(--red-alert); }
+.status-pending { background: #FFF3E0; color: var(--amber); }
+.status-new { background: #E3F2FD; color: var(--blue-info); }
+
+/* === CTA === */
+.cta-section {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);
+  text-align: center;
+  padding: 80px 40px;
+}
+
+.cta-section h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.8rem;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.cta-section p {
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 32px;
+  font-size: 0.92rem;
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--gold);
+  color: white;
+  padding: 14px 36px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.cta-btn:hover {
+  background: var(--gold-light);
+  transform: translateY(-1px);
+}
+
+/* === FOOTER === */
+.footer {
+  background: var(--dark);
+  padding: 48px 40px;
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 0.72rem;
+  color: var(--gray-400);
+  font-family: 'DM Mono', monospace;
+}
+
+.footer-text a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+/* === SEPARATOR === */
+.sep {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.sep hr {
+  border: none;
+  height: 1px;
+  background: var(--gray-200);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .hero-content { padding: 100px 24px 60px; }
+  .section { padding: 64px 24px; }
+  .hero-stats { gap: 32px; }
+  .nav-links { display: none; }
+  .nav-inner { padding: 0 24px; }
+  .reg-grid { grid-template-columns: 1fr; }
+  .dx-grid { grid-template-columns: 1fr; }
+}
+
+/* === TABS === */
+.tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 10px 24px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: var(--gray-100);
+  border: 1px solid var(--gray-200);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: var(--gray-700);
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.tab-btn:hover { border-color: var(--navy); color: var(--navy); }
+
+.tab-btn.active {
+  background: var(--navy);
+  color: white;
+  border-color: var(--navy);
+}
+
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+/* === UPDATE STAMP === */
+.update-stamp {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--gray-400);
+  margin-bottom: 40px;
+}
+
+.update-stamp .live {
+  width: 8px;
+  height: 8px;
+  background: var(--green);
+  border-radius: 50%;
+  animation: blink 1.5s infinite;
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav-bar">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Wings<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#regulations">規制動向</a></li>
+      <li><a href="#timeline">タイムライン</a></li>
+      <li><a href="#tariffs">関税一覧</a></li>
+      <li><a href="#dx">DX対応策</a></li>
+      <li><a href="#contact">お問い合わせ</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ALERT -->
+<div class="alert-banner" style="margin-top:64px;">
+  <span class="mono">[2026.03.21]</span>
+  米国: 通商法122条に基づく全世界一律10%追加関税が2/24発効（7/24まで150日間） ｜ 中国: 日本企業40社を輸出管理リストに追加（2/24施行）
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge"><span class="dot"></span>Trade Regulation Intelligence</div>
+    <h1>日系企業の貿易オペレーションに<br>影響する<span class="accent">規制変動</span>を追跡する</h1>
+    <p class="hero-sub">
+      米中対立の激化、EU環境規制の本格適用、そしてサプライチェーンの構造転換。
+      2026年、日系企業の貿易実務は前例のない複雑性に直面しています。
+      本サイトでは、実務担当者が「今、何をすべきか」を判断するために必要な規制情報と、
+      DXによる対応策を提供します。
+    </p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="num">3</div>
+        <div class="label">主要規制領域を監視</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num">40+</div>
+        <div class="label">日本企業が中国輸出管理対象</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num">10%</div>
+        <div class="label">米国122条追加関税率</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REGULATIONS -->
+<section class="section" id="regulations">
+  <div class="update-stamp">
+    <span class="live"></span>
+    Last updated: 2026-03-21 — Sources: JETRO, 経産省, 商務部, EU Commission
+  </div>
+  <div class="section-label">01 — Regulation Tracker</div>
+  <div class="section-title">主要規制動向</div>
+  <p class="section-desc">
+    日系企業の貿易実務に直接影響する3つの規制領域を継続的に追跡。
+    各トピックの緊急度とビジネスインパクトを明示しています。
+  </p>
+
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('all')">すべて</button>
+    <button class="tab-btn" onclick="switchTab('china')">中国輸出規制</button>
+    <button class="tab-btn" onclick="switchTab('us')">米国関税</button>
+    <button class="tab-btn" onclick="switchTab('eu')">EU CBAM</button>
+  </div>
+
+  <div class="reg-grid" id="reg-grid">
+
+    <!-- Card 1 -->
+    <div class="reg-card critical" data-cat="china">
+      <span class="tag">緊急 — Critical</span>
+      <h3>中国：日本企業40社を輸出管理コントロールリスト・注視リストに追加</h3>
+      <p class="summary">
+        2026年2月24日、中国商務部は第11号・第12号公告で三菱重工、IHI等20社を輸出管理コントロールリストに、
+        さらに20社を注視リストに追加。対象企業への中国原産デュアルユース品の輸出が原則禁止され、
+        第三国経由の再輸出も規制対象。
+      </p>
+      <div class="meta">
+        <span>2026-02-24 施行</span>
+        <span>|</span>
+        <span>根拠: 両用品目輸出管理条例</span>
+      </div>
+      <div class="impact">
+        <strong>DX示唆：</strong> サプライチェーン上の中国原産品トレーサビリティの即時可視化が必須。
+        取引先の規制リスト該当チェックの自動化が急務。
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="reg-card critical" data-cat="china">
+      <span class="tag">緊急 — Critical</span>
+      <h3>中国：対日デュアルユース品目の全面輸出規制強化</h3>
+      <p class="summary">
+        2026年1月6日、商務部公告2026年第1号にて日本の軍事ユーザー・軍事用途向けの
+        全デュアルユース品目の輸出を即日禁止。レアアースを含む広範な品目が対象となる可能性。
+        改訂版規制品目リストは168ページ、数千品目に及ぶ。
+      </p>
+      <div class="meta">
+        <span>2026-01-06 即日施行</span>
+        <span>|</span>
+        <span>影響範囲: 最大10.7兆円規模</span>
+      </div>
+      <div class="impact">
+        <strong>DX示唆：</strong> HSコードベースでの規制品目自動スクリーニングシステムの導入、
+        代替調達先の検索・評価を支援するサプライヤーデータベースの構築。
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="reg-card warning" data-cat="us">
+      <span class="tag">要注意 — Warning</span>
+      <h3>米国：通商法122条に基づく全世界一律10%追加関税</h3>
+      <p class="summary">
+        2026年2月20日、米連邦最高裁がIEEPAに基づく相互関税を違憲と判断。
+        直後にトランプ政権は1974年通商法122条を根拠に全世界一律10%追加関税を発動。
+        2月24日発効、7月24日までの150日間の時限措置。15%への引上げの可能性あり。
+      </p>
+      <div class="meta">
+        <span>2026-02-24 ～ 07-24</span>
+        <span>|</span>
+        <span>税率: 10% (→15%の可能性)</span>
+      </div>
+      <div class="impact">
+        <strong>DX示唆：</strong> 関税率変動シミュレーション機能を持つ原価管理システム、
+        HSコード別の累積関税率自動計算ツールの導入。
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="reg-card warning" data-cat="us">
+      <span class="tag">要注意 — Warning</span>
+      <h3>米国：通商拡大法232条に基づく分野別関税の継続</h3>
+      <p class="summary">
+        自動車・同部品に25%の追加関税（日米合意によりMFN含め15%に引下げ済）。
+        鉄鋼・アルミニウム・銅・木材に25%。半導体・医薬品にも232条調査進行中。
+        分野別関税はIEEPA違憲判決の影響を受けず継続。
+      </p>
+      <div class="meta">
+        <span>継続中</span>
+        <span>|</span>
+        <span>根拠: 通商拡大法232条</span>
+      </div>
+      <div class="impact">
+        <strong>DX示唆：</strong> USMCA原産地規則充足状況の自動判定、
+        部品の原産国構成比率を可視化するBOMトレーサビリティ。
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="reg-card info" data-cat="eu">
+      <span class="tag">準備必須 — Action Required</span>
+      <h3>EU：CBAM（炭素国境調整措置）本格適用開始</h3>
+      <p class="summary">
+        2026年1月1日よりCBAM本格適用。鉄鋼、アルミ、セメント、肥料、電力、水素の輸入者に
+        CBAM証書の購入義務。EU-ETS無償排出枠は2026年から段階的に2.5%削減、2034年全廃。
+        オムニバス簡素化パッケージ（2025年10月発効）で手続き一部緩和。
+      </p>
+      <div class="meta">
+        <span>2026-01-01 本格適用</span>
+        <span>|</span>
+        <span>対象: 6品目カテゴリ</span>
+      </div>
+      <div class="impact">
+        <strong>DX示唆：</strong> 製品別CO2排出量（Scope1/2/3）の自動算定システム、
+        サプライチェーン上の排出データ収集・報告の自動化。
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="reg-card stable" data-cat="eu">
+      <span class="tag">要監視 — Monitor</span>
+      <h3>EU CBAM：対象品目拡大の可能性</h3>
+      <p class="summary">
+        欧州委員会は2025年末までにCBAM適用範囲の見直し報告書を提出。
+        有機化学品、ポリマー（プラスチック）、さらに鉄鋼・アルミの川下製品（自動車部品、機械製品）
+        への拡大が有力候補。2030年までにEU-ETS全セクターへの拡大が目標。
+      </p>
+      <div class="meta">
+        <span>拡大検討中</span>
+        <span>|</span>
+        <span>影響: 自動車・機械セクターに波及</span>
+      </div>
+      <div class="impact">
+        <strong>DX示唆：</strong> 製品ライフサイクル全体のカーボンフットプリント算定基盤の先行構築。
+        将来の規制拡大に備えた柔軟なデータモデル設計。
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="sep"><hr></div>
+
+<!-- TIMELINE -->
+<section class="section" id="timeline">
+  <div class="section-label">02 — Regulatory Timeline</div>
+  <div class="section-title">2026年 規制タイムライン</div>
+  <p class="section-desc">
+    今年の主要な規制イベントを時系列で整理。対応準備のマイルストーン設定にご活用ください。
+  </p>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-date">2026年1月1日</div>
+      <div class="tl-title">EU CBAM 本格適用開始</div>
+      <div class="tl-desc">CBAM証書の購入義務が開始。鉄鋼・アルミ等6品目カテゴリが対象。EU-ETS無償排出枠の2.5%削減も同時開始。</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">2026年1月6日</div>
+      <div class="tl-title">中国：対日デュアルユース品全面輸出規制</div>
+      <div class="tl-desc">商務部2026年第1号公告。日本の軍事関連エンドユーザー向けの全デュアルユース品目の輸出を即日禁止。</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">2026年1月7日</div>
+      <div class="tl-title">中国：日本産ジクロロシラン反ダンピング調査開始</div>
+      <div class="tl-desc">日本産輸入ジクロロシランに対するAD調査を開始。半導体関連素材への波及に留意。</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">2026年2月20日</div>
+      <div class="tl-title">米連邦最高裁：IEEPA関税を違憲判断</div>
+      <div class="tl-desc">国際緊急経済権限法（IEEPA）に基づく関税賦課は大統領の権限を超えると判断。相互関税の法的根拠が崩壊。</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">2026年2月24日</div>
+      <div class="tl-title">米国：122条関税発動 ／ 中国：日本企業40社リスト追加</div>
+      <div class="tl-desc">米国は通商法122条に基づく全世界一律10%追加関税を発動。同日、中国は日本企業40社を輸出管理対象に追加。</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">2026年7月（見通し）</div>
+      <div class="tl-title">USMCA見直し協議期限</div>
+      <div class="tl-desc">北米3カ国によるUSMCA見直し。自動車原産地規則の変更可能性。日系自動車メーカーのサプライチェーンに直接影響。</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">2026年7月24日</div>
+      <div class="tl-title">米国：122条関税の期限（150日間）</div>
+      <div class="tl-desc">通商法122条に基づく10%追加関税の期限到来。延長・税率変更・新措置への移行等の可能性。</div>
+    </div>
+  </div>
+</section>
+
+<div class="sep"><hr></div>
+
+<!-- TARIFF TABLE -->
+<section class="section" id="tariffs">
+  <div class="section-label">03 — Tariff Overview</div>
+  <div class="section-title">米国追加関税 主要措置一覧</div>
+  <p class="section-desc">
+    2026年3月時点で発動中の主な米国追加関税措置。複数の根拠法に基づく関税が累積適用される点に注意。
+  </p>
+
+  <div class="table-wrapper">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>措置</th>
+          <th>根拠法</th>
+          <th>対象</th>
+          <th>税率</th>
+          <th>状況</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-weight:600;color:var(--navy)">一律追加関税</td>
+          <td>通商法122条</td>
+          <td>全世界（一部品目除く）</td>
+          <td>10%（MFN税率と合算）</td>
+          <td><span class="status status-active">発動中</span></td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;color:var(--navy)">自動車・同部品</td>
+          <td>通商拡大法232条</td>
+          <td>全輸入自動車・部品</td>
+          <td>MFN含め15%（日米合意）</td>
+          <td><span class="status status-active">発動中</span></td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;color:var(--navy)">鉄鋼・アルミ・銅</td>
+          <td>通商拡大法232条</td>
+          <td>全輸入鉄鋼・アルミ・銅</td>
+          <td>25%</td>
+          <td><span class="status status-active">発動中</span></td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;color:var(--navy)">半導体</td>
+          <td>通商拡大法232条</td>
+          <td>半導体製品</td>
+          <td>未定</td>
+          <td><span class="status status-pending">調査中</span></td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;color:var(--navy)">医薬品</td>
+          <td>通商拡大法232条</td>
+          <td>医薬品</td>
+          <td>未定</td>
+          <td><span class="status status-pending">調査中</span></td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;color:var(--navy)">デミニミス撤廃</td>
+          <td>大統領令</td>
+          <td>全世界・全品目</td>
+          <td>800ドル以下免税の撤廃</td>
+          <td><span class="status status-active">発動中</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- DX SECTION -->
+<section class="dx-section" id="dx">
+  <div class="section" style="padding-top:0;padding-bottom:0;">
+    <div class="section-label">04 — DX Response Strategy</div>
+    <div class="section-title">規制対応を支えるDX施策</div>
+    <p class="section-desc">
+      規制の複雑化に人力で対処し続けることは限界があります。
+      テクノロジーによる自動化・可視化が、コンプライアンスとオペレーション効率の両立を可能にします。
+    </p>
+
+    <div class="dx-grid">
+      <div class="dx-card">
+        <div class="icon">🔍</div>
+        <h3>規制リスト自動スクリーニング</h3>
+        <p>取引先・品目が各国の規制リスト（中国管理制御リスト、米国EAR/SDN、EU制裁リスト等）に該当するかを、
+        受注・発注時点で自動判定。人的確認工数を90%削減。</p>
+      </div>
+      <div class="dx-card">
+        <div class="icon">📊</div>
+        <h3>関税シミュレーション・原価管理</h3>
+        <p>HSコード別の累積関税率を自動計算し、調達先・輸送ルート変更時のコスト影響をリアルタイムで可視化。
+        関税率変動シナリオ分析を支援。</p>
+      </div>
+      <div class="dx-card">
+        <div class="icon">🌱</div>
+        <h3>カーボンフットプリント算定基盤</h3>
+        <p>CBAM対応に必要な製品別CO2排出量の算定を自動化。
+        サプライヤーからの排出データ収集、EU報告フォーマットへの自動変換まで一気通貫。</p>
+      </div>
+      <div class="dx-card">
+        <div class="icon">🔗</div>
+        <h3>サプライチェーン原産地トレーサビリティ</h3>
+        <p>部品・素材レベルでの原産国・加工国を追跡。USMCA原産地規則充足率や、
+        中国原産品混入リスクの自動検知を実現。</p>
+      </div>
+      <div class="dx-card">
+        <div class="icon">⚡</div>
+        <h3>貿易書類デジタル化・RPA</h3>
+        <p>インボイス、パッキングリスト、原産地証明等の貿易書類の作成・照合を自動化。
+        通関手続きの迅速化とヒューマンエラーの排除。</p>
+      </div>
+      <div class="dx-card">
+        <div class="icon">🛡️</div>
+        <h3>コンプライアンス・ダッシュボード</h3>
+        <p>全取引の規制適合状況をリアルタイムで一元管理。
+        リスクスコアリングによる優先対応の判断支援、監査証跡の自動記録。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <h2>貿易実務のDX化について<br>ご相談ください</h2>
+  <p>規制対応の自動化から、サプライチェーン全体の可視化まで。<br>
+  Wings株式会社がご支援します。</p>
+  <a href="mailto:contact@wings-consulting.co.jp" class="cta-btn">
+    お問い合わせ →
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p class="footer-text">
+    © 2026 Wings株式会社 — Trade Regulation Intelligence<br>
+    本サイトの情報は一般的な参考目的であり、法的助言を構成するものではありません。<br>
+    最新の規制情報は <a href="https://www.jetro.go.jp" target="_blank">JETRO</a>、
+    <a href="https://www.meti.go.jp" target="_blank">経済産業省</a> 等の公式情報をご確認ください。
+  </p>
+</footer>
+
+<script>
+function switchTab(cat) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+  
+  document.querySelectorAll('.reg-card').forEach(card => {
+    if (cat === 'all' || card.dataset.cat === cat) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+// Smooth scroll for nav links
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
+
+</body>
+</html>
