@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GAFAMの「AI軍拡競争」は、あなたの現場の話だ ― Wings株式会社</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1A2E5A;
+  --navy-light: #2A4A7A;
+  --navy-pale: #E8EDF4;
+  --gold: #917816;
+  --gold-light: #C4A82A;
+  --gold-pale: #F5F0DC;
+  --dark: #1a1a1a;
+  --body: #333333;
+  --muted: #6B7280;
+  --light-bg: #F8F7F4;
+  --white: #FFFFFF;
+  --border: #E5E5E5;
+  --ms-blue: #00A4EF;
+  --google-blue: #4285F4;
+  --meta-blue: #0668E1;
+  --amazon-orange: #FF9900;
+  --apple-gray: #555555;
+  --accent-green: #10B981;
+  --accent-red: #EF4444;
+  --accent-purple: #7C3AED;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: var(--body);
+  background: var(--white);
+  line-height: 1.9;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== HERO ===== */
+.hero {
+  background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 30%, var(--navy) 70%, #1a2040 100%);
+  color: var(--white);
+  padding: 80px 24px 60px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(124,58,237,0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -40%;
+  left: -15%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0,164,239,0.08) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.hero-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.hero-badge {
+  display: inline-block;
+  background: rgba(124,58,237,0.2);
+  border: 1px solid rgba(124,58,237,0.35);
+  color: #B794F6;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  padding: 6px 16px;
+  border-radius: 100px;
+  margin-bottom: 24px;
+}
+.hero h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(24px, 4.5vw, 36px);
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.hero h1 em { font-style: normal; color: var(--gold-light); }
+.hero-sub {
+  font-size: 15px;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.8;
+  max-width: 660px;
+}
+.hero-meta {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+}
+
+/* ===== ARTICLE ===== */
+.article {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+.article h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 56px 0 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--gold);
+  line-height: 1.6;
+}
+.article h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 36px 0 12px;
+  padding-left: 14px;
+  border-left: 3px solid var(--gold);
+  line-height: 1.6;
+}
+.article p { margin-bottom: 20px; text-align: justify; }
+.lead-text {
+  font-size: 17px;
+  color: var(--navy);
+  font-weight: 400;
+  line-height: 2;
+  margin-bottom: 32px;
+  padding: 24px;
+  background: var(--navy-pale);
+  border-radius: 8px;
+  border-left: 4px solid var(--navy);
+}
+.lead-text strong { color: var(--navy); font-weight: 700; }
+
+.opening-quote {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 20px;
+  color: var(--muted);
+  text-align: center;
+  padding: 40px 24px;
+  font-style: italic;
+  position: relative;
+}
+.opening-quote::before {
+  content: '"';
+  font-size: 80px;
+  color: var(--gold-pale);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+/* ===== MEGA STAT ===== */
+.mega-stat {
+  text-align: center;
+  padding: 40px 24px;
+  margin: 32px 0;
+  background: linear-gradient(135deg, #0a0a1a 0%, var(--navy) 100%);
+  border-radius: 16px;
+  color: var(--white);
+}
+.mega-stat .mega-num {
+  font-size: clamp(48px, 10vw, 72px);
+  font-weight: 900;
+  line-height: 1;
+  background: linear-gradient(90deg, var(--gold-light), #E8D44D);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.mega-stat .mega-unit {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gold-light);
+}
+.mega-stat .mega-label {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+  margin-top: 8px;
+  line-height: 1.6;
+}
+.mega-stat .mega-sub {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+.mega-stat .mega-sub-item {
+  text-align: center;
+}
+.mega-stat .mega-sub-num {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--white);
+}
+.mega-stat .mega-sub-label {
+  font-size: 11px;
+  color: rgba(255,255,255,0.5);
+}
+
+/* ===== CAPEX TABLE ===== */
+.data-table-wrap {
+  margin: 32px 0;
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.data-table thead { background: var(--navy); color: var(--white); }
+.data-table th { padding: 14px 16px; text-align: left; font-weight: 500; font-size: 13px; }
+.data-table td { padding: 12px 16px; border-bottom: 1px solid var(--border); }
+.data-table tbody tr:nth-child(even) { background: var(--light-bg); }
+.data-table tbody tr:hover { background: var(--navy-pale); }
+.data-table .num { font-weight: 700; color: var(--navy); font-size: 15px; }
+.data-table .brand { font-weight: 700; display: flex; align-items: center; gap: 8px; }
+.data-table .brand-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+/* ===== GAFAM STRATEGY CARDS ===== */
+.gafam-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 16px;
+  margin: 32px 0;
+}
+.gafam-card {
+  border-radius: 12px;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.gafam-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; }
+.gafam-card.ms { background: #F0F8FF; }
+.gafam-card.ms::before { background: var(--ms-blue); }
+.gafam-card.google { background: #F0F4FF; }
+.gafam-card.google::before { background: var(--google-blue); }
+.gafam-card.meta { background: #F0F3FF; }
+.gafam-card.meta::before { background: var(--meta-blue); }
+.gafam-card.amazon { background: #FFF8EE; }
+.gafam-card.amazon::before { background: var(--amazon-orange); }
+.gafam-card.apple { background: #F5F5F5; }
+.gafam-card.apple::before { background: var(--apple-gray); }
+.gafam-card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+.gafam-card .company-name { font-size: 18px; font-weight: 900; }
+.gafam-card.ms .company-name { color: var(--ms-blue); }
+.gafam-card.google .company-name { color: var(--google-blue); }
+.gafam-card.meta .company-name { color: var(--meta-blue); }
+.gafam-card.amazon .company-name { color: var(--amazon-orange); }
+.gafam-card.apple .company-name { color: var(--apple-gray); }
+.gafam-card .role-tag {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+.gafam-card.ms .role-tag { background: #D0EAFF; color: #005A9E; }
+.gafam-card.google .role-tag { background: #D4E4FF; color: #1A56DB; }
+.gafam-card.meta .role-tag { background: #D4DFFF; color: #0044CC; }
+.gafam-card.amazon .role-tag { background: #FFE8C4; color: #A05A00; }
+.gafam-card.apple .role-tag { background: #E8E8E8; color: #333; }
+.gafam-card .logistics-impact {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border);
+  font-size: 13px;
+  line-height: 1.7;
+}
+.gafam-card .logistics-impact strong {
+  color: var(--navy);
+}
+.gafam-card .strategy { font-size: 13px; line-height: 1.7; color: var(--body); }
+
+/* ===== AGENT VISUAL ===== */
+.agent-block {
+  margin: 32px 0;
+  padding: 32px 24px;
+  background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 50%, var(--navy) 100%);
+  border-radius: 16px;
+  color: var(--white);
+}
+.agent-block h3 {
+  color: var(--white);
+  border-left-color: var(--gold-light);
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.agent-flow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+.agent-node {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 10px;
+  padding: 12px 16px;
+  text-align: center;
+  min-width: 100px;
+}
+.agent-node .node-label { font-size: 11px; color: rgba(255,255,255,0.5); margin-bottom: 4px; }
+.agent-node .node-name { font-size: 14px; font-weight: 700; }
+.agent-arrow { color: var(--gold-light); font-size: 18px; flex-shrink: 0; }
+.agent-node.highlight {
+  background: rgba(124,58,237,0.2);
+  border-color: rgba(124,58,237,0.4);
+}
+.agent-node.highlight .node-name { color: #B794F6; }
+.agent-examples {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+.agent-example {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 14px;
+}
+.agent-example .ex-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gold-light);
+  margin-bottom: 4px;
+}
+.agent-example .ex-desc {
+  font-size: 12px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.6;
+}
+
+/* ===== REGULATION COMPARISON ===== */
+.reg-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 32px 0;
+}
+.reg-card {
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid var(--border);
+}
+.reg-card .reg-flag { font-size: 28px; margin-bottom: 8px; }
+.reg-card .reg-region { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+.reg-card .reg-approach { font-size: 12px; font-weight: 700; padding: 3px 8px; border-radius: 100px; display: inline-block; margin-bottom: 10px; }
+.reg-card.us .reg-approach { background: #DBEAFE; color: #1E40AF; }
+.reg-card.eu .reg-approach { background: #FDE68A; color: #92400E; }
+.reg-card.jp .reg-approach { background: #D1FAE5; color: #065F46; }
+.reg-card .reg-desc { font-size: 13px; line-height: 1.7; color: var(--body); }
+.reg-card .reg-impact { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-style: italic; }
+
+/* ===== CALLOUT ===== */
+.callout {
+  margin: 32px 0;
+  padding: 24px;
+  border-radius: 12px;
+  font-size: 15px;
+  line-height: 1.8;
+}
+.callout.warning { background: #FEF3C7; border: 1px solid #F59E0B; color: #92400E; }
+.callout.insight { background: var(--navy-pale); border: 1px solid #93A3C0; color: var(--navy); }
+.callout.purple { background: #F3EAFF; border: 1px solid #7C3AED; color: #4C1D95; }
+.callout strong { font-weight: 700; }
+
+/* ===== TAKEAWAY ===== */
+.takeaway-section { margin: 40px 0; }
+.takeaway-card {
+  display: flex;
+  gap: 20px;
+  padding: 28px;
+  margin-bottom: 20px;
+  background: var(--light-bg);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  align-items: flex-start;
+}
+.takeaway-num {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--navy);
+  color: var(--gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 900;
+}
+.takeaway-content h4 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 8px; line-height: 1.5; }
+.takeaway-content p { font-size: 14px; line-height: 1.8; margin-bottom: 0; }
+
+/* ===== CLOSING ===== */
+.closing-section {
+  margin-top: 56px;
+  padding: 40px;
+  background: linear-gradient(135deg, #0a0a1a 0%, var(--navy) 50%, #1a1a3e 100%);
+  border-radius: 16px;
+  color: var(--white);
+  text-align: center;
+}
+.closing-section h2 {
+  color: var(--white);
+  border-bottom: 2px solid var(--gold-light);
+  display: inline-block;
+  margin: 0 auto 20px;
+  font-size: 20px;
+}
+.closing-section p {
+  color: rgba(255,255,255,0.85);
+  max-width: 640px;
+  margin: 0 auto 16px;
+  text-align: center;
+}
+.closing-section .highlight { color: #B794F6; font-weight: 700; }
+.closing-section .gold { color: var(--gold-light); font-weight: 700; }
+
+.cta-box {
+  margin-top: 40px;
+  padding: 32px;
+  border: 2px solid var(--gold);
+  border-radius: 12px;
+  text-align: center;
+  background: var(--gold-pale);
+}
+.cta-box .cta-label { font-size: 11px; color: var(--gold); font-weight: 700; letter-spacing: 0.15em; margin-bottom: 8px; }
+.cta-box p { font-size: 14px; color: var(--body); margin-bottom: 0; }
+.cta-box .company { font-weight: 700; color: var(--navy); font-size: 16px; }
+
+.references {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+.references h4 { font-size: 13px; color: var(--muted); font-weight: 700; letter-spacing: 0.05em; margin-bottom: 12px; }
+.references ul { list-style: none; font-size: 12px; color: var(--muted); line-height: 2; }
+
+/* ===== SERIES NAV ===== */
+.series-nav {
+  margin: 40px 0 0;
+  padding: 24px;
+  background: var(--light-bg);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+.series-nav .series-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+.series-nav .series-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.series-item {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 13px;
+}
+.series-item .series-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+.series-item .series-num.done { background: var(--navy); color: var(--white); }
+.series-item .series-num.current { background: var(--gold); color: var(--white); }
+.series-item .series-title { color: var(--body); }
+.series-item .series-title.current { color: var(--navy); font-weight: 700; }
+
+@media (max-width: 640px) {
+  .gafam-grid { grid-template-columns: 1fr; }
+  .reg-grid { grid-template-columns: 1fr; }
+  .agent-flow { flex-direction: column; }
+  .agent-arrow { transform: rotate(90deg); }
+  .takeaway-card { flex-direction: column; gap: 12px; }
+  .hero { padding: 60px 20px 40px; }
+  .article { padding: 32px 20px 60px; }
+  .mega-stat .mega-num { font-size: 48px; }
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <span class="hero-badge">AI INFRASTRUCTURE INSIGHT</span>
+    <h1>GAFAMの「AI軍拡競争」は、<br><em>あなたの現場の話だ。</em></h1>
+    <p class="hero-sub">年間6,900億ドルのインフラ投資。エージェントAIの台頭。規制の三極分断。<br>巨大テック企業の動きは、日系企業のDX判断を「見えないところ」で規定し始めている。</p>
+    <div class="hero-meta">
+      <span>Wings株式会社 ｜ DX・ITコンサルティング</span>
+      <span>読了目安：10分</span>
+      <span>DX Insight シリーズ Vol.3</span>
+    </div>
+  </div>
+</header>
+
+<main class="article">
+
+  <p class="opening-quote">GAFAM？うちには関係ないでしょう</p>
+
+  <p>そう思うのは自然だ。自社がAzureを使っていようがAWSを使っていようが、倉庫や配送の現場に直接影響するとは思えない。だが、その認識は2026年において決定的に間違っている。</p>
+
+  <div class="lead-text">
+    前回・前々回で、米国と中国の物流DX最前線を紹介した。倉庫で働くヒューマノイド、自律的に判断するAI、全国規模のドローン配送。しかし、<strong>それらすべてを動かしている「エンジン」は、GAFAMが巨額を投じて構築しているAIインフラだ。</strong>今あなたの会社が選ぶクラウド基盤、AIツール、データ戦略の一つひとつが、このインフラ競争の結果に規定されている。本稿では、GAFAMの動きを「テック業界の話」ではなく「あなたのDX判断に直結する地殻変動」として読み解く。
+  </div>
+
+  <!-- ===== SECTION 1 ===== -->
+  <h2>1. 年間6,900億ドル ― 人類史上最大のインフラ構築</h2>
+
+  <div class="mega-stat">
+    <div class="mega-num">6,900<span class="mega-unit">億ドル</span></div>
+    <div class="mega-label">2026年 主要ハイパースケーラーの資本支出合計<br>（前年比 +36〜50%）</div>
+    <div class="mega-sub">
+      <div class="mega-sub-item">
+        <div class="mega-sub-num">250億$</div>
+        <div class="mega-sub-label">直接的なAIサービス収益<br>（投資額の約4%）</div>
+      </div>
+      <div class="mega-sub-item">
+        <div class="mega-sub-num">75.8GW</div>
+        <div class="mega-sub-label">米国DC電力需要予測<br>（2023年の2倍）</div>
+      </div>
+      <div class="mega-sub-item">
+        <div class="mega-sub-num">×10</div>
+        <div class="mega-sub-label">AIクエリの電力消費<br>（従来検索比）</div>
+      </div>
+    </div>
+  </div>
+
+  <p>この数字が意味するのは、<strong>AIの開発競争が「アルゴリズムの巧拙」から「物理資源の確保」に移った</strong>という事実だ。誰が最も多くのGPU、電力、冷却水を確保できるかが、AIの性能を決める。AWSのCEOは「新設容量は即座に予約で埋まる」と述べており、供給が需要に追いつかない状態が常態化している。</p>
+
+  <div class="data-table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr><th>企業</th><th>2026年 予想Capex</th><th>2025年 実績</th><th>主な投資対象</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="brand"><span class="brand-dot" style="background:var(--amazon-orange)"></span>Amazon (AWS)</span></td>
+          <td><span class="num">約2,000億$</span></td>
+          <td>1,310億$</td>
+          <td>AWS容量拡大、自社チップ Trainium/Graviton</td>
+        </tr>
+        <tr>
+          <td><span class="brand"><span class="brand-dot" style="background:var(--google-blue)"></span>Alphabet (Google)</span></td>
+          <td><span class="num">1,750〜1,850億$</span></td>
+          <td>約750億$</td>
+          <td>自社TPU、AI特化DC</td>
+        </tr>
+        <tr>
+          <td><span class="brand"><span class="brand-dot" style="background:var(--ms-blue)"></span>Microsoft</span></td>
+          <td><span class="num">1,200億$+</span></td>
+          <td>約800億$</td>
+          <td>Azure AI Foundry、Stargateプロジェクト</td>
+        </tr>
+        <tr>
+          <td><span class="brand"><span class="brand-dot" style="background:var(--meta-blue)"></span>Meta</span></td>
+          <td><span class="num">1,150〜1,350億$</span></td>
+          <td>600〜720億$</td>
+          <td>Llama 4学習、AIファーストインフラ</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout insight">
+    <strong>なぜ物流の現場に関係があるのか：</strong> 前回紹介した倉庫のAI最適化、エージェンティックAI、デジタルツイン ― これらはすべて、ここに示したクラウドインフラの上で動いている。GAFAMの投資規模が、あなたが利用できるAIツールの性能・価格・可用性を直接決定する。つまり、この「軍拡競争」の勝者が、あなたの会社のDXの選択肢を規定するのだ。
+  </div>
+
+  <!-- ===== SECTION 2 ===== -->
+  <h2>2. GAFAM各社の戦略 ― 「何屋」なのかを知ることがDX判断の起点</h2>
+  <p>5社はそれぞれ異なるポジションでAI市場を攻めている。自社のDXでどのプラットフォームに乗るかを判断するには、各社が「何を売ろうとしているか」を理解する必要がある。</p>
+
+  <div class="gafam-grid">
+    <div class="gafam-card ms">
+      <div class="card-header">
+        <span class="company-name">Microsoft</span>
+        <span class="role-tag">プラットフォーム支配者</span>
+      </div>
+      <p class="strategy">OpenAIとの提携を軸に、Azure上でAI開発基盤を提供。M365 Copilotでエンタープライズ市場を面で押さえる。</p>
+      <div class="logistics-impact">
+        <strong>物流現場への影響：</strong> Dynamics 365 + CopilotでSCM業務の自動化が加速。既にM365を使っている企業にとっては、最も摩擦の少ないAI導入パスになる。
+      </div>
+    </div>
+    <div class="gafam-card amazon">
+      <div class="card-header">
+        <span class="company-name">Amazon</span>
+        <span class="role-tag">AI流通ハブ</span>
+      </div>
+      <p class="strategy">Amazon Bedrockで自社・他社のAIモデルを選択可能に。自社チップTrainiumで年間100億$超のランレートを実現し、NVIDIA依存を低減。</p>
+      <div class="logistics-impact">
+        <strong>物流現場への影響：</strong> Amazonは「物流企業であり、かつAI基盤企業」という唯一無二の存在。AWSのSCMツールが自社の物流ノウハウを反映している点で、競合とは質が異なる。
+      </div>
+    </div>
+    <div class="gafam-card google">
+      <div class="card-header">
+        <span class="company-name">Google</span>
+        <span class="role-tag">推論能力の王者</span>
+      </div>
+      <p class="strategy">Gemini 2.5 Proの200万トークンコンテキスト。独自チップIronwood TPUで2018年比30倍の電力効率。AppleがSiriのバックエンドに採用。</p>
+      <div class="logistics-impact">
+        <strong>物流現場への影響：</strong> 大量の文書・データを一度に処理する能力は、貿易書類やSCM分析と親和性が高い。Vertex AIは分析特化のユースケースで強みを発揮する。
+      </div>
+    </div>
+    <div class="gafam-card meta">
+      <div class="card-header">
+        <span class="company-name">Meta</span>
+        <span class="role-tag">オープン戦略家</span>
+      </div>
+      <p class="strategy">Llama 4をオープンウェイトで公開し、開発者をエコシステムにロックイン。直接収益よりも3〜5年の長期投資を志向。</p>
+      <div class="logistics-impact">
+        <strong>物流現場への影響：</strong> Llama系モデルは自社サーバーで動かせるため、データを外部に出したくない企業にとっての選択肢。ただしインフラ構築は自力で行う必要がある。
+      </div>
+    </div>
+    <div class="gafam-card apple">
+      <div class="card-header">
+        <span class="company-name">Apple</span>
+        <span class="role-tag">プライバシーの守護者</span>
+      </div>
+      <p class="strategy">エッジAI + Private Cloud Computeで機密情報を端末内処理。Siri 2.0でGoogleのGemini 3を統合。</p>
+      <div class="logistics-impact">
+        <strong>物流現場への影響：</strong> 直接的な法人向けツールは限定的だが、「プライバシー・ファースト」のアーキテクチャは、今後のデータ規制強化に備えた設計思想として参考になる。
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 3 ===== -->
+  <h2>3. 「AIエージェント」の台頭 ― チャットボットの次に来るもの</h2>
+  <p>GAFAMの投資が最も集中しているのが、「エージェント型AI」の開発だ。これは前回の米国物流編で紹介した「エージェンティックAI」と同じ概念であり、2026年に産業横断的な実装フェーズに入った。</p>
+
+  <div class="agent-block">
+    <h3>エージェントAIの動作イメージ：在庫異常検知の場合</h3>
+    <div class="agent-flow">
+      <div class="agent-node">
+        <div class="node-label">STEP 1</div>
+        <div class="node-name">IoTセンサー</div>
+      </div>
+      <div class="agent-arrow">→</div>
+      <div class="agent-node highlight">
+        <div class="node-label">STEP 2</div>
+        <div class="node-name">AIエージェント</div>
+      </div>
+      <div class="agent-arrow">→</div>
+      <div class="agent-node">
+        <div class="node-label">STEP 3</div>
+        <div class="node-name">ERP / WMS</div>
+      </div>
+      <div class="agent-arrow">→</div>
+      <div class="agent-node">
+        <div class="node-label">STEP 4</div>
+        <div class="node-name">サプライヤー発注</div>
+      </div>
+      <div class="agent-arrow">→</div>
+      <div class="agent-node">
+        <div class="node-label">STEP 5</div>
+        <div class="node-name">管理者に結果報告</div>
+      </div>
+    </div>
+    <p style="font-size:13px; color:rgba(255,255,255,0.65); text-align:center; margin-bottom:20px;">
+      人間が介入するのは「例外承認」のみ。STEP 2〜4はAIエージェントが自律実行する。
+    </p>
+    <div class="agent-examples">
+      <div class="agent-example">
+        <div class="ex-title">Amazon Bedrock Agents</div>
+        <div class="ex-desc">APIを動的に呼び出し、在庫管理・保険請求・旅行予約等の多段階タスクを自律実行。</div>
+      </div>
+      <div class="agent-example">
+        <div class="ex-title">Microsoft Copilot</div>
+        <div class="ex-desc">M365/Dynamics内で複数アプリを横断し、SCMレポート生成からアクション提案まで一気通貫。</div>
+      </div>
+      <div class="agent-example">
+        <div class="ex-title">Google Gemini for Workspace</div>
+        <div class="ex-desc">メール・スプレッドシート・ドキュメントを跨いで情報を統合し、意思決定素材を自動生成。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout purple">
+    <strong>ガバナンスの焦点が変わった：</strong> エージェントAIの普及により、企業が管理すべき対象は「AIの出力（何を言うか）」から「AIの行動（何を実行するか）」に移行した。エージェントに発注権限を与えるのか、人事データにアクセスさせるのか。取締役会レベルでの議論が必要になっている。実際、<strong>AIのROIが高い企業の63%が、毎回の取締役会でAIを議題にしている</strong>のに対し、ROIが低い企業ではわずか13%だ。
+  </div>
+
+  <!-- ===== SECTION 4 ===== -->
+  <h2>4. AI規制の「三極分断」 ― どこに本社を置くかで使えるAIが変わる</h2>
+  <p>GAFAMのAI戦略を理解する上で避けて通れないのが、規制環境の劇的な分断だ。米国・欧州・日本で、AIに対するアプローチは正反対とも言える方向に進んでいる。</p>
+
+  <div class="reg-grid">
+    <div class="reg-card us">
+      <div class="reg-flag">🇺🇸</div>
+      <div class="reg-region">米国</div>
+      <span class="reg-approach">イノベーション加速</span>
+      <p class="reg-desc">トランプ政権下で規制緩和に大きく舵。DC建設許可の短縮、「過度な社会的制約」の撤廃。ただし連邦法は未整備で、州ごとの「パッチワーク」が企業負担に。</p>
+      <p class="reg-impact">→ 最先端AIが最初にリリースされるが、消費者保護は手薄</p>
+    </div>
+    <div class="reg-card eu">
+      <div class="reg-flag">🇪🇺</div>
+      <div class="reg-region">欧州</div>
+      <span class="reg-approach">厳格な権利保護</span>
+      <p class="reg-desc">EU AI法が本格稼働。2026年8月から「高リスク」AI（雇用・教育・公共サービス）に厳格な適合性評価が義務化。違反時の制裁も重い。</p>
+      <p class="reg-impact">→ 最新AI機能の投入が遅れる可能性。ただし信頼性は高い</p>
+    </div>
+    <div class="reg-card jp">
+      <div class="reg-flag">🇯🇵</div>
+      <div class="reg-region">日本</div>
+      <span class="reg-approach">ソフトロー型推進</span>
+      <p class="reg-desc">2025年施行のAI法はガイドライン中心の「ソフトロー」。「世界で最もAI開発・利用がしやすい国」を目指し、GAFAMのDC投資を積極誘致中。</p>
+      <p class="reg-impact">→ 日本は「試験場」として有利。DX推進にとっては追い風</p>
+    </div>
+  </div>
+
+  <p>この三極構造は、日系企業にとって一つの好機でもある。日本の規制環境は米欧の中間に位置し、GAFAMが日本をアジアのAI拠点として重視し始めている。実際、Microsoft、Google、Amazonはいずれも日本国内のデータセンター拡充と政府連携を加速させている。<strong>つまり、日本で最新のAIツールをいち早く、かつ安全に使える環境が整いつつある</strong>のだ。</p>
+
+  <!-- ===== SECTION 5 ===== -->
+  <h2>5. 日本の物流現場が取るべきアクション</h2>
+
+  <div class="takeaway-section">
+    <div class="takeaway-card">
+      <div class="takeaway-num">1</div>
+      <div class="takeaway-content">
+        <h4>クラウド選定を「AI戦略」として捉え直す</h4>
+        <p>多くの企業がクラウドを「インフラコスト」として選定しているが、2026年以降はクラウドの選択＝利用できるAIツールの選択になる。Azure上のCopilot、AWS上のBedrock Agents、GCP上のVertex AI ― プラットフォームごとに使えるエージェントAIが異なる。IT部門に任せきりにせず、業務部門がユースケースを起点に選定に関与すべきだ。</p>
+      </div>
+    </div>
+    <div class="takeaway-card">
+      <div class="takeaway-num">2</div>
+      <div class="takeaway-content">
+        <h4>「AIエージェントに何をさせるか」を今から設計する</h4>
+        <p>エージェントAIは「導入する/しない」ではなく、「どこまでやらせるか」を設計する段階に入っている。在庫の自動発注はさせるが、金額が一定以上の場合は人間が承認する。こうした権限設計は現場を知る人間にしかできない。「AIに仕事を奪われる」と恐れるのではなく、「AIの行動範囲を定義する」のがこれからの現場リーダーの仕事になる。</p>
+      </div>
+    </div>
+    <div class="takeaway-card">
+      <div class="takeaway-num">3</div>
+      <div class="takeaway-content">
+        <h4>日本の「ソフトロー環境」を先行者利益に変える</h4>
+        <p>日本のAI規制は欧米に比べて柔軟だ。この環境を活かし、エージェントAIの小規模なPoCを現場で回してみる。欧州企業が規制対応に追われ、米国企業が州ごとのパッチワークに苦しんでいる間に、日本企業は実証と学習を積み重ねることができる。規制の緩さは、いつまでも続くとは限らない。</p>
+      </div>
+    </div>
+    <div class="takeaway-card">
+      <div class="takeaway-num">4</div>
+      <div class="takeaway-content">
+        <h4>AIガバナンスを「経営議題」に格上げする</h4>
+        <p>ROIの高い企業ほど、取締役会でAIを議論している。これは偶然ではない。AIの権限範囲、データの利用方針、規制変更への対応 ― これらは現場判断ではなく経営判断だ。IT部門だけでなく、経営企画・法務・現場の三者が同じテーブルにつくガバナンス体制を構築することが、DXの成否を分ける。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CLOSING ===== -->
+  <div class="closing-section">
+    <h2>AIの「基盤戦争」は、あなたのDXの土台を決める</h2>
+    <p>GAFAMの6,900億ドルは、単なるテック企業の投資合戦ではない。その結果が、<span class="highlight">あなたの会社が使えるAIの性能、価格、そして選択肢を直接規定する</span>。</p>
+    <p>米国編・中国編で見てきた物流DXの最前線も、このインフラの上に成り立っている。つまり、<span class="gold">現場のDXを考えることと、AIプラットフォームの動向を理解することは、もはや同じ仕事だ</span>。</p>
+    <p style="margin-top: 24px; font-weight: 700; color: var(--gold-light);">「うちには関係ない」と言っていられる時間は、残りわずかだ。</p>
+  </div>
+
+  <!-- ===== SERIES NAV ===== -->
+  <div class="series-nav">
+    <div class="series-label">WINGS DX INSIGHT シリーズ</div>
+    <div class="series-list">
+      <div class="series-item">
+        <span class="series-num done">1</span>
+        <span class="series-title">「ロボットが同僚になる日」は、もう来ている ― 米国物流DXの現在地</span>
+      </div>
+      <div class="series-item">
+        <span class="series-num done">2</span>
+        <span class="series-title">中国物流が「別次元」に入った ― 日本の現場は直視できるか</span>
+      </div>
+      <div class="series-item">
+        <span class="series-num current">3</span>
+        <span class="series-title current">GAFAMの「AI軍拡競争」は、あなたの現場の話だ ← 本記事</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CTA ===== -->
+  <div class="cta-box">
+    <p class="cta-label">ABOUT US</p>
+    <p class="company">Wing</p>
+  </div>
+
+  <!-- ===== REFERENCES ===== -->
+  <div class="references">
+    <h4>参考文献</h4>
+    <ul>
+      <li>各社IR資料 — Amazon, Alphabet, Microsoft, Meta 2026年度Capex開示</li>
+      <li>Google 2025 Environmental Report — データセンターエネルギー効率</li>
+      <li>EU AI Act — 段階的施行スケジュール (2024-2026)</li>
+      <li>日本政府 — AI技術の研究、開発及び利用の促進に関する法律 (2025年9月施行)</li>
+      <li>NIST — AI Risk Management Framework 改訂動向</li>
+      <li>Partnership on AI — 2026 Priority Areas</li>
+      <li>US Copyright Office — AI生成コンテンツの著作権登録方針</li>
+      <li>FTC / DOJ — AI市場における独占禁止法執行動向</li>
+    </ul>
+  </div>
+
+</main>
+
+</body>
+</html>
