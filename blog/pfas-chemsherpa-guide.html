@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PFAS規制とchemSHERPA対応の実務ガイド：調査票対応を効率化する方法 | Wing Blog</title>
+<meta name="description" content="PFAS規制の最新動向とchemSHERPA対応の実務を解説。Tier2/3メーカーが直面する調査票対応の課題と、ChemOSによる効率化の方法を紹介します。">
+<meta name="keywords" content="PFAS対応, chemSHERPA, PFAS規制, 化学物質管理, ChemOS, 調査票対応, 製品含有化学物質">
+<meta property="og:title" content="PFAS規制とchemSHERPA対応の実務ガイド：調査票対応を効率化する方法">
+<meta property="og:description" content="PFAS規制の最新動向とchemSHERPA対応の実務を解説。Tier2/3メーカーが直面する調査票対応の課題と、ChemOSによる効率化の方法を紹介します。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://wingconsulting.org/blog/pfas-chemsherpa-guide">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="Wing">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PFAS規制とchemSHERPA対応の実務ガイド">
+<meta name="twitter:description" content="PFAS規制の最新動向とchemSHERPA対応の実務を解説。ChemOSによる効率化の方法を紹介。">
+<link rel="canonical" href="https://wingconsulting.org/blog/pfas-chemsherpa-guide">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "PFAS規制とchemSHERPA対応の実務ガイド：調査票対応を効率化する方法",
+  "description": "PFAS規制の最新動向とchemSHERPA対応の実務を解説。Tier2/3メーカーが直面する調査票対応の課題と、ChemOSによる効率化の方法を紹介します。",
+  "author": {
+    "@type": "Organization",
+    "name": "Wing編集部",
+    "url": "https://wingconsulting.org"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Wing",
+    "url": "https://wingconsulting.org"
+  },
+  "datePublished": "2026-03-25",
+  "dateModified": "2026-03-25",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://wingconsulting.org/blog/pfas-chemsherpa-guide"
+  }
+}
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        navy: { DEFAULT: '#0F2342', dark: '#081830' },
+        gold: { DEFAULT: '#A8965A', light: '#C4AD72', muted: '#7A6B3E', pale: '#F8F5ED', mid: '#B8A560' },
+        slate: { warm: '#F7F6F3', cool: '#EEECe7' },
+        ink: { DEFAULT: '#1A1A1F', mid: '#4A4A55', light: '#8A8A96' },
+      },
+      fontFamily: {
+        serif: ['"Cormorant Garamond"', 'serif'],
+        sans: ['"Noto Sans JP"', 'sans-serif'],
+        display: ['"Outfit"', 'sans-serif'],
+      },
+    }
+  }
+}
+</script>
+<style>
+body { font-family: 'Noto Sans JP', sans-serif; -webkit-font-smoothing: antialiased; }
+.serif { font-family: 'Cormorant Garamond', serif; }
+.display { font-family: 'Outfit', sans-serif; }
+.gold-rule { width: 32px; height: 1.5px; background: #A8965A; }
+article h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+article p { margin-bottom: 1.2rem; }
+article ul { margin-bottom: 1.2rem; padding-left: 1.5rem; }
+article li { margin-bottom: 0.5rem; }
+</style>
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KN7NWHFK9G');
+</script>
+</head>
+<body class="bg-slate-warm text-ink">
+
+<!-- ─── HEADER ─────────────────────────────────────────── -->
+<header class="bg-navy h-[60px] flex items-center px-6 md:px-10 sticky top-0 z-50">
+  <div class="max-w-5xl mx-auto w-full flex items-center justify-between">
+    <a href="/" class="leading-none">
+      <svg width="120" height="36" viewBox="0 0 120 36" fill="none" aria-label="Wing">
+        <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff"/>
+        <path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#fff" opacity=".32"/>
+        <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#fff">Wing</text>
+      </svg>
+    </a>
+    <div class="flex items-center gap-4">
+      <span class="display text-[.7rem] font-medium tracking-wider text-white/50">Blog</span>
+      <a href="/" class="text-[.75rem] text-white/70 hover:text-white transition-colors">&larr; Home</a>
+    </div>
+  </div>
+</header>
+
+<!-- ─── ARTICLE ─────────────────────────────────────────── -->
+<main class="py-16 px-6 md:px-10">
+  <div class="max-w-3xl mx-auto">
+    <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3">Compliance</p>
+    <h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4">PFAS規制とchemSHERPA対応の実務ガイド：調査票対応を効率化する方法</h1>
+    <div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2">
+      <time datetime="2026-03-25">2026.03.25</time>
+      <span>Wing編集部</span>
+    </div>
+    <div class="gold-rule mb-10"></div>
+
+    <article class="text-[.9rem] text-ink leading-[2] max-w-none">
+
+      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">1. PFAS規制の最新動向と企業への影響</h2>
+      <p>PFAS（Per- and Polyfluoroalkyl Substances：有機フッ素化合物）は、撥水性・耐熱性・耐薬品性に優れた化学物質群であり、半導体、自動車部品、電子機器、塗料など幅広い産業で使用されてきました。しかし、その環境残留性と人体への影響懸念から、世界各国で規制が急速に強化されています。</p>
+      <p>欧州では、ECHA（欧州化学品庁）が約1万種類のPFASを対象とした包括的な使用制限提案を進めており、早ければ2027年にも規制が施行される見通しです。米国でもEPAが飲料水基準を厳格化し、各州レベルでのPFAS規制も拡大しています。日本国内でも、化審法による規制強化の動きが加速しており、PFOS・PFOAに続く規制対象物質の追加が予定されています。</p>
+      <p>こうした規制の波は、最終製品メーカーだけでなく、サプライチェーン全体に影響を及ぼします。特にTier2/Tier3の部品・素材メーカーは、顧客からのPFAS含有調査への対応を迫られており、その負荷が急増しています。</p>
+
+      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">2. chemSHERPAとは？対応が求められる背景</h2>
+      <p>chemSHERPA（ケムシェルパ）は、製品含有化学物質の情報伝達スキームとして、日本の産業界で標準的に使用されている仕組みです。経済産業省の主導で策定され、JAMP（アーティクルマネジメント推進協議会）が管理・運用を行っています。</p>
+      <p>chemSHERPAには「chemSHERPA-CI（化学品）」と「chemSHERPA-AI（成形品）」の2種類があり、サプライチェーン上の企業間で製品に含まれる化学物質情報を正確に伝達するための共通フォーマットとして機能します。</p>
+      <p>PFAS規制の強化に伴い、chemSHERPAの調査対象物質リストにもPFAS関連物質が順次追加されています。これにより、従来はPFAS含有の有無を意識する必要がなかった中小の部品メーカーにも、調査票の作成・回答が求められるようになりました。年間数百件から数千件の調査依頼に対応する企業も珍しくなく、化学物質管理担当者の業務負荷は限界に達しつつあります。</p>
+
+      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">3. 調査票対応の3大ボトルネック</h2>
+      <p>chemSHERPA調査票対応において、多くの企業が直面するボトルネックは以下の3つです。</p>
+      <p><strong>ボトルネック1：サプライヤーからの情報収集</strong><br>自社製品に含まれる化学物質情報を把握するには、上流サプライヤーからの情報提供が不可欠です。しかし、サプライヤーの回答率は低く、催促を重ねても期限内に回答が揃わないケースが頻発します。特にPFASのように規制対象が広範な物質では、サプライヤー側の対応能力も追いついていないことが多いです。</p>
+      <p><strong>ボトルネック2：データの統合と整合性確保</strong><br>サプライヤーから得た化学物質データを自社製品の構成に紐づけ、chemSHERPAフォーマットに変換する作業は極めて煩雑です。BOM（部品表）とchemSHERPAデータの紐付け、CAS番号の照合、含有率の計算など、専門知識が必要な作業が多く、手作業ではミスのリスクも高まります。</p>
+      <p><strong>ボトルネック3：規制改定への追従</strong><br>PFAS規制は現在進行形で変化しており、chemSHERPAの管理対象物質リストも定期的に更新されます。新たに追加された物質について過去の調査データを見直し、再調査が必要かを判断する作業も大きな負担となっています。</p>
+
+      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">4. ChemOSによる7ステップ自動化</h2>
+      <p>Wingが開発した「ChemOS」は、chemSHERPA調査票対応を7つのステップで自動化する化学物質管理プラットフォームです。</p>
+      <ul class="list-decimal">
+        <li><strong>調査依頼の自動受付：</strong>顧客からの調査依頼メールをAIが解析し、調査対象製品・物質を自動特定してタスク化</li>
+        <li><strong>BOMとの自動紐付け：</strong>対象製品のBOMを参照し、回答に必要なサプライヤーと部品を自動で洗い出し</li>
+        <li><strong>サプライヤーへの自動照会：</strong>不足している化学物質情報について、サプライヤーへの照会メールを自動生成・送信</li>
+        <li><strong>回答の自動取込み：</strong>サプライヤーから返送されたchemSHERPAファイルを自動で取り込み、データベースに格納</li>
+        <li><strong>含有判定の自動計算：</strong>部品レベルの化学物質データを統合し、製品レベルでの含有率・閾値超過を自動判定</li>
+        <li><strong>chemSHERPAファイルの自動生成：</strong>判定結果をもとに、chemSHERPA-AIフォーマットの回答ファイルを自動生成</li>
+        <li><strong>規制アップデートの自動反映：</strong>chemSHERPAの管理対象物質リスト更新を自動検知し、影響を受ける製品・部品を特定</li>
+      </ul>
+      <p>この7ステップの自動化により、担当者は例外的なケースの判断と最終確認に集中できるようになります。データ入力やフォーマット変換といった定型作業から解放されることで、対応品質の向上と大幅な工数削減を両立します。</p>
+
+      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">5. 導入事例と効果</h2>
+      <p>ある電子部品メーカー（従業員約300名、年間調査対応件数約1,200件）では、ChemOSの導入により以下の成果を実現しました。</p>
+      <ul class="list-disc">
+        <li>調査票対応にかかる工数を約65%削減（年間約4,000時間の削減）</li>
+        <li>回答リードタイムを平均15営業日から5営業日に短縮</li>
+        <li>データ入力ミスに起因する再調査率を90%低減</li>
+        <li>化学物質管理の担当者を3名体制から1.5名体制に最適化</li>
+      </ul>
+      <p>同社の品質保証部門担当者は、「最も大きな変化は、サプライヤーへの照会と回答の取込みが自動化されたことで、催促業務から解放されたこと」と評価しています。従来は回答の催促だけで月間40時間以上を費やしていたとのことです。</p>
+
+      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">6. まとめ</h2>
+      <p>PFAS規制の強化は不可逆的なトレンドであり、chemSHERPA対応の負荷は今後さらに増大することが予想されます。この課題に対して、人員増加やExcel管理の延長で対応し続けることには限界があります。</p>
+      <p>ChemOSのような専門プラットフォームを活用することで、調査票対応の効率化と品質向上を同時に実現し、本来注力すべき製品開発や品質改善に人的リソースを振り向けることが可能になります。PFAS対応やchemSHERPA業務の効率化にお悩みの方は、ぜひご相談ください。</p>
+    </article>
+
+    <!-- CTA -->
+    <div class="mt-14 bg-navy rounded-sm p-8 md:p-10 text-center">
+      <p class="serif text-[1.4rem] font-medium text-white mb-3">DXに関するお悩みをお聞かせください</p>
+      <p class="text-[.82rem] text-white/65 mb-6">初回ヒアリング無料 / オンライン対応可 / 構想段階からの相談歓迎</p>
+      <a href="https://wingconsulting.org/#contact" class="display inline-block text-[.82rem] font-medium text-navy bg-gold px-8 py-3.5 rounded-sm tracking-wider hover:bg-gold-mid transition-colors">相談する</a>
+    </div>
+
+    <!-- Related Articles -->
+    <div class="mt-16">
+      <p class="display text-[.65rem] font-medium tracking-[.18em] uppercase text-gold mb-4">Related Articles</p>
+      <div class="grid md:grid-cols-2 gap-4">
+        <a href="/blog/dx-consulting-guide" class="group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors">
+          <p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2">DX Strategy</p>
+          <p class="text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors">DXコンサルティングとは？失敗しない選び方と成功のポイント</p>
+          <p class="text-[.68rem] text-ink-light mt-2">2026.03.25</p>
+        </a>
+        <a href="/blog/trade-dx-ai-agent" class="group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors">
+          <p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2">Trade DX</p>
+          <p class="text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors">貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来</p>
+          <p class="text-[.68rem] text-ink-light mt-2">2026.03.25</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ─── FOOTER ──────────────────────────────────────────── -->
+<footer class="bg-navy py-10 px-6 md:px-10">
+  <div class="max-w-5xl mx-auto flex flex-wrap justify-between items-center gap-5">
+    <a href="/" class="leading-none">
+      <svg width="110" height="32" viewBox="0 0 110 32" fill="none" aria-label="Wing">
+        <path d="M5 23C8 14,16 7,27 6C20 11,14 17,13 25Z" fill="rgba(255,255,255,.65)"/>
+        <path d="M10 24C13 13,23 5,36 4C29 10,21 18,20 26Z" fill="rgba(255,255,255,.65)" opacity=".3"/>
+        <text x="42" y="22" font-family="Cormorant Garamond,serif" font-size="20" font-weight="500" letter-spacing=".05em" fill="rgba(255,255,255,.6)">Wing</text>
+      </svg>
+    </a>
+    <p class="text-[.66rem] text-white/65">&copy; 2026 Wing Inc. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

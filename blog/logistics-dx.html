@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>「ロボットが同僚になる日」は、もう来ている ― Wings株式会社</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1A2E5A;
+  --navy-light: #2A4A7A;
+  --navy-pale: #E8EDF4;
+  --gold: #917816;
+  --gold-light: #C4A82A;
+  --gold-pale: #F5F0DC;
+  --dark: #1a1a1a;
+  --body: #333333;
+  --muted: #6B7280;
+  --light-bg: #F8F7F4;
+  --white: #FFFFFF;
+  --border: #E5E5E5;
+  --accent-blue: #3B82F6;
+  --accent-green: #10B981;
+  --accent-orange: #F59E0B;
+  --accent-red: #EF4444;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: var(--body);
+  background: var(--white);
+  line-height: 1.9;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== HERO ===== */
+.hero {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, #3A5A8A 100%);
+  color: var(--white);
+  padding: 80px 24px 60px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(145,120,22,0.15) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.hero-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.hero-badge {
+  display: inline-block;
+  background: rgba(145,120,22,0.3);
+  border: 1px solid rgba(145,120,22,0.5);
+  color: var(--gold-light);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  padding: 6px 16px;
+  border-radius: 100px;
+  margin-bottom: 24px;
+}
+.hero h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(26px, 4.5vw, 38px);
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.hero h1 em {
+  font-style: normal;
+  color: var(--gold-light);
+}
+.hero-sub {
+  font-size: 15px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.8;
+  max-width: 640px;
+}
+.hero-meta {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+}
+
+/* ===== ARTICLE ===== */
+.article {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+.article h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 56px 0 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--gold);
+  line-height: 1.6;
+}
+.article h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 36px 0 12px;
+  padding-left: 14px;
+  border-left: 3px solid var(--gold);
+  line-height: 1.6;
+}
+.article p {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+.lead-text {
+  font-size: 17px;
+  color: var(--navy);
+  font-weight: 400;
+  line-height: 2;
+  margin-bottom: 32px;
+  padding: 24px;
+  background: var(--navy-pale);
+  border-radius: 8px;
+  border-left: 4px solid var(--navy);
+}
+.lead-text strong {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+/* ===== QUOTE ===== */
+.opening-quote {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 20px;
+  color: var(--muted);
+  text-align: center;
+  padding: 40px 24px;
+  font-style: italic;
+  position: relative;
+}
+.opening-quote::before {
+  content: '"';
+  font-size: 80px;
+  color: var(--gold-pale);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+/* ===== INFO CARDS ===== */
+.robot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 32px 0;
+}
+.robot-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.robot-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+.robot-card .icon-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.robot-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+.robot-card .maker {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.robot-card .desc {
+  font-size: 13px;
+  color: var(--body);
+  line-height: 1.7;
+}
+.robot-card .stat {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+/* ===== DATA TABLE ===== */
+.data-table-wrap {
+  margin: 32px 0;
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.data-table thead {
+  background: var(--navy);
+  color: var(--white);
+}
+.data-table th {
+  padding: 14px 16px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+.data-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.data-table tbody tr:nth-child(even) {
+  background: var(--light-bg);
+}
+.data-table tbody tr:hover {
+  background: var(--navy-pale);
+}
+.data-table .num {
+  font-weight: 700;
+  color: var(--navy);
+  font-size: 16px;
+}
+.data-table .source {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* ===== COMPANY COMPARISON ===== */
+.company-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 32px 0;
+}
+.company-card {
+  border-radius: 12px;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+.company-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+}
+.company-card.amazon { background: #FFF8E7; }
+.company-card.amazon::before { background: #FF9900; }
+.company-card.fedex { background: #F0E8F5; }
+.company-card.fedex::before { background: #4D148C; }
+.company-card.ups { background: #FDF5EC; }
+.company-card.ups::before { background: #351C15; }
+.company-card .company-name {
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+.company-card.amazon .company-name { color: #FF9900; }
+.company-card.fedex .company-name { color: #4D148C; }
+.company-card.ups .company-name { color: #351C15; }
+.company-card .key-stat {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--navy);
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+.company-card .key-label {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+.company-card .strategy {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--body);
+}
+
+/* ===== TAKEAWAY CARDS ===== */
+.takeaway-section {
+  margin: 40px 0;
+}
+.takeaway-card {
+  display: flex;
+  gap: 20px;
+  padding: 28px;
+  margin-bottom: 20px;
+  background: var(--light-bg);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  align-items: flex-start;
+}
+.takeaway-num {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--navy);
+  color: var(--gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 900;
+}
+.takeaway-content h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+.takeaway-content p {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+/* ===== TIMELINE ===== */
+.timeline-visual {
+  margin: 40px 0;
+  padding: 32px 24px;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  border-radius: 16px;
+  color: var(--white);
+}
+.timeline-visual h3 {
+  color: var(--white);
+  border-left-color: var(--gold-light);
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+.timeline-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 0;
+}
+.timeline-item {
+  flex: 1;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 10px;
+  padding: 16px;
+  position: relative;
+}
+.timeline-item .year {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gold-light);
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+.timeline-item .phase {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.timeline-item .detail {
+  font-size: 12px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.6;
+}
+.timeline-arrow {
+  display: flex;
+  align-items: center;
+  color: var(--gold-light);
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+/* ===== CALLOUT ===== */
+.callout {
+  margin: 32px 0;
+  padding: 24px;
+  border-radius: 12px;
+  font-size: 15px;
+  line-height: 1.8;
+}
+.callout.warning {
+  background: #FEF3C7;
+  border: 1px solid #F59E0B;
+  color: #92400E;
+}
+.callout.insight {
+  background: var(--navy-pale);
+  border: 1px solid #93A3C0;
+  color: var(--navy);
+}
+.callout strong {
+  font-weight: 700;
+}
+
+/* ===== CLOSING ===== */
+.closing-section {
+  margin-top: 56px;
+  padding: 40px;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  border-radius: 16px;
+  color: var(--white);
+  text-align: center;
+}
+.closing-section h2 {
+  color: var(--white);
+  border-bottom: 2px solid var(--gold-light);
+  display: inline-block;
+  margin: 0 auto 20px;
+  font-size: 20px;
+}
+.closing-section p {
+  color: rgba(255,255,255,0.85);
+  max-width: 640px;
+  margin: 0 auto 16px;
+  text-align: center;
+}
+.closing-section .highlight {
+  color: var(--gold-light);
+  font-weight: 700;
+}
+
+/* ===== CTA ===== */
+.cta-box {
+  margin-top: 40px;
+  padding: 32px;
+  border: 2px solid var(--gold);
+  border-radius: 12px;
+  text-align: center;
+  background: var(--gold-pale);
+}
+.cta-box .cta-label {
+  font-size: 11px;
+  color: var(--gold);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  margin-bottom: 8px;
+}
+.cta-box p {
+  font-size: 14px;
+  color: var(--body);
+  margin-bottom: 0;
+}
+.cta-box .company {
+  font-weight: 700;
+  color: var(--navy);
+  font-size: 16px;
+}
+
+/* ===== REFERENCES ===== */
+.references {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+.references h4 {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+.references ul {
+  list-style: none;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 2;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px) {
+  .timeline-row { flex-direction: column; }
+  .timeline-arrow { transform: rotate(90deg); justify-content: center; }
+  .robot-grid, .company-grid { grid-template-columns: 1fr; }
+  .takeaway-card { flex-direction: column; gap: 12px; }
+  .hero { padding: 60px 20px 40px; }
+  .article { padding: 32px 20px 60px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <div class="hero-inner">
+    <span class="hero-badge">LOGISTICS DX INSIGHT</span>
+    <h1>「ロボットが同僚になる日」は、<br><em>もう来ている。</em></h1>
+    <p class="hero-sub">米国物流DXの現在地と、日本の現場が今考えるべきこと。<br>自律型AI・ヒューマノイド・デジタルツイン ― 2025〜2026年の最前線を、データと実例で読み解く。</p>
+    <div class="hero-meta">
+      <span>Wings株式会社 ｜ DX・ITコンサルティング</span>
+      <span>読了目安：8分</span>
+    </div>
+  </div>
+</header>
+
+<!-- ===== ARTICLE ===== -->
+<main class="article">
+
+  <p class="opening-quote">うちの倉庫にロボットなんて、まだまだ先の話だよ</p>
+
+  <p>物流現場を預かる方なら、一度はそう思ったことがあるかもしれない。だが、米国の物流最前線を見れば、その「まだまだ先」はすでに過去のものになりつつある。</p>
+
+  <div class="lead-text">
+    2025年から2026年にかけて、米国物流業界で起きているのは<strong>「デジタル化」の次のフェーズ</strong>への移行だ。紙をなくす、GPSで追跡するといった段階から、<strong>AIが自ら判断し、ロボットが自ら動く「自律型オーケストレーション」</strong>へ。本稿では、米国で実際に稼働している技術と導入効果を具体的な数値で紹介し、日本の物流現場が今日から何を考えるべきかを整理する。
+  </div>
+
+  <!-- ===== SECTION 1 ===== -->
+  <h2>1. 米国の倉庫で「今」起きていること</h2>
+  <p>まず現実を直視しよう。これは未来の構想ではなく、2025〜2026年時点で商用稼働している事実だ。</p>
+
+  <div class="robot-grid">
+    <!-- Stretch -->
+    <div class="robot-card">
+      <div class="icon-wrap" style="background:#E8F5E9;">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <rect x="6" y="12" width="20" height="14" rx="3" fill="#2E7D32" opacity="0.2"/>
+          <rect x="10" y="6" width="12" height="8" rx="2" fill="#2E7D32"/>
+          <rect x="8" y="14" width="16" height="10" rx="2" fill="#2E7D32"/>
+          <circle cx="12" cy="28" r="2" fill="#2E7D32"/>
+          <circle cx="20" cy="28" r="2" fill="#2E7D32"/>
+          <line x1="22" y1="10" x2="28" y2="8" stroke="#2E7D32" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="29" cy="7.5" r="2" fill="#2E7D32" opacity="0.5"/>
+        </svg>
+      </div>
+      <h4>Stretch</h4>
+      <p class="maker">Boston Dynamics</p>
+      <p class="desc">コンテナ荷下ろしの自動化。高度なビジョンシステムで多種多様な箱を認識し、2シフト連続で稼働。</p>
+      <div class="stat">800〜1,000個/時</div>
+    </div>
+    <!-- AmbiSort -->
+    <div class="robot-card">
+      <div class="icon-wrap" style="background:#E3F2FD;">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <rect x="4" y="10" width="24" height="16" rx="3" fill="#1565C0" opacity="0.2"/>
+          <rect x="8" y="6" width="16" height="12" rx="2" fill="#1565C0"/>
+          <rect x="6" y="18" width="8" height="4" rx="1" fill="#1565C0" opacity="0.6"/>
+          <rect x="18" y="18" width="8" height="4" rx="1" fill="#1565C0" opacity="0.6"/>
+          <rect x="10" y="22" width="12" height="4" rx="1" fill="#1565C0" opacity="0.4"/>
+          <rect x="11" y="9" width="4" height="3" rx="1" fill="#E3F2FD"/>
+          <rect x="17" y="9" width="4" height="3" rx="1" fill="#E3F2FD"/>
+        </svg>
+      </div>
+      <h4>AmbiSort</h4>
+      <p class="maker">Ambi Robotics</p>
+      <p class="desc">eコマース仕分け特化。Sim2Real学習で数百万パターンを習得し、24時間稼働。</p>
+      <div class="stat">人間超えの速度・精度</div>
+    </div>
+    <!-- Digit -->
+    <div class="robot-card">
+      <div class="icon-wrap" style="background:#FFF3E0;">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <circle cx="16" cy="7" r="5" fill="#E65100" opacity="0.2"/>
+          <circle cx="16" cy="7" r="3.5" fill="#E65100"/>
+          <rect x="12" y="12" width="8" height="10" rx="2" fill="#E65100"/>
+          <line x1="10" y1="14" x2="12" y2="16" stroke="#E65100" stroke-width="2" stroke-linecap="round"/>
+          <line x1="22" y1="14" x2="20" y2="16" stroke="#E65100" stroke-width="2" stroke-linecap="round"/>
+          <line x1="13" y1="22" x2="12" y2="28" stroke="#E65100" stroke-width="2" stroke-linecap="round"/>
+          <line x1="19" y1="22" x2="20" y2="28" stroke="#E65100" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <h4>Digit</h4>
+      <p class="maker">Agility Robotics</p>
+      <p class="desc">人型ロボット。AmazonやGXOの倉庫で実稼働。既存インフラを無改造で利用可能。</p>
+      <div class="stat">10万個のトート移動達成</div>
+    </div>
+    <!-- Apollo -->
+    <div class="robot-card">
+      <div class="icon-wrap" style="background:#F3E5F5;">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <circle cx="16" cy="7" r="5" fill="#7B1FA2" opacity="0.2"/>
+          <circle cx="16" cy="7" r="3.5" fill="#7B1FA2"/>
+          <rect x="11" y="12" width="10" height="11" rx="2" fill="#7B1FA2"/>
+          <line x1="9" y1="13" x2="11" y2="17" stroke="#7B1FA2" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="23" y1="13" x2="21" y2="17" stroke="#7B1FA2" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="13" y1="23" x2="12" y2="29" stroke="#7B1FA2" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="19" y1="23" x2="20" y2="29" stroke="#7B1FA2" stroke-width="2.5" stroke-linecap="round"/>
+          <rect x="9" y="17" width="4" height="3" rx="1" fill="#7B1FA2" opacity="0.5"/>
+        </svg>
+      </div>
+      <h4>Apollo</h4>
+      <p class="maker">Apptronik</p>
+      <p class="desc">汎用ヒューマノイド。ホットスワップ式バッテリーで最大22時間連続稼働。</p>
+      <div class="stat">55ポンド可搬</div>
+    </div>
+  </div>
+
+  <div class="callout insight">
+    <strong>ヒューマノイドが注目される理由はシンプルだ。</strong> 人間向けに設計された既存のインフラ（階段、通路、工具）をそのまま使えるため、施設の大規模改修が不要でROIの算出が容易になる。つまり「導入の意思決定がしやすい」のだ。
+  </div>
+
+  <!-- ===== SECTION 2 ===== -->
+  <h2>2. AIは「ツール」から「判断する主体」に変わった</h2>
+  <p>変化はロボットの外見だけではない。その「頭脳」であるAIの役割が根本から変わっている。</p>
+  <p>従来のAIは「予測型」だった。過去データをもとに需要を予測し、人間がその予測をもとに判断する。だが現在の最前線では、<strong>自ら判断し、自ら行動する「エージェンティックAI」</strong>が台頭している。</p>
+
+  <h3>従来型AI vs. エージェンティックAI</h3>
+  <p>配送ルートの最適化を例に取ろう。従来型AIは渋滞を考慮したルートを「提示」するまでだった。一方エージェンティックAIは、突発的な事故を検知すると、荷主への通知、後続スケジュールの自動再調整、代替輸送手段の手配までを自律的に実行する。人間が介入するのは、例外的な判断が必要なときだけだ。</p>
+
+  <div class="data-table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>指標</th>
+          <th>改善効果</th>
+          <th>出典</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>在庫切れの削減</td>
+          <td><span class="num">最大 50%</span></td>
+          <td><span class="source">Ryder 2026年予測</span></td>
+        </tr>
+        <tr>
+          <td>サプライチェーン全体コスト</td>
+          <td><span class="num">最大 10% 削減</span></td>
+          <td><span class="source">Ryder 2026年予測</span></td>
+        </tr>
+        <tr>
+          <td>物流コスト</td>
+          <td><span class="num">15% 削減</span></td>
+          <td><span class="source">Microsoft 分析</span></td>
+        </tr>
+        <tr>
+          <td>サービスレベル</td>
+          <td><span class="num">65% 向上</span></td>
+          <td><span class="source">Microsoft 分析</span></td>
+        </tr>
+        <tr>
+          <td>デジタルツインによる効率改善</td>
+          <td><span class="num">最大 10%</span></td>
+          <td><span class="source">FedEx / Ryder 実績</span></td>
+        </tr>
+        <tr>
+          <td>ブロックチェーンによる事務コスト</td>
+          <td><span class="num">最大 30% 削減</span></td>
+          <td><span class="source">Deloitte 報告</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout warning">
+    <strong>注意：</strong> これらは構想段階の数字ではなく、実際の導入企業から報告されている値だ。日本の物流企業が今なお手作業やExcel管理に依存している領域で、米国企業はすでにこの水準の改善を実現し始めている。
+  </div>
+
+  <!-- ===== SECTION 3 ===== -->
+  <h2>3. 米国物流大手は何に賭けているのか</h2>
+  <p>米国の物流大手3社の戦略を概観すれば、投資の方向性が明確に見えてくる。</p>
+
+  <div class="company-grid">
+    <div class="company-card amazon">
+      <p class="company-name">Amazon</p>
+      <p class="key-stat">100万台+</p>
+      <p class="key-label">稼働ロボット数</p>
+      <p class="strategy">最新の「Sequoia」で注文処理時間を25%短縮。次世代「Blue Jay」では複数ロボットアームが協調し、3ラインを1つに集約。</p>
+    </div>
+    <div class="company-card fedex">
+      <p class="company-name">FedEx</p>
+      <p class="key-stat">2PB/日</p>
+      <p class="key-label">処理データ量</p>
+      <p class="strategy">CEOが「デジタル・インテリジェンスは戦力倍増機」と明言。2029年に米国事業で営業利益率10%を目指す。</p>
+    </div>
+    <div class="company-card ups">
+      <p class="company-name">UPS</p>
+      <p class="key-stat">Symphony</p>
+      <p class="key-label">統合クラウド基盤</p>
+      <p class="strategy">輸送・倉庫・在庫・通関のデータを一元統合。ヘルスケア物流という高付加価値領域でDXを加速。</p>
+    </div>
+  </div>
+
+  <p>3社に共通しているのは、<strong>「テクノロジー投資＝コスト」ではなく「テクノロジー投資＝利益構造の転換」</strong>と捉えている点だ。</p>
+
+  <!-- ===== TIMELINE ===== -->
+  <div class="timeline-visual">
+    <h3>物流DXの進化ロードマップ</h3>
+    <div class="timeline-row">
+      <div class="timeline-item">
+        <div class="year">〜2020</div>
+        <div class="phase">可視化</div>
+        <div class="detail">GPS追跡、伝票の電子化、WMSの導入</div>
+      </div>
+      <div class="timeline-arrow">→</div>
+      <div class="timeline-item">
+        <div class="year">2021〜2024</div>
+        <div class="phase">予測・最適化</div>
+        <div class="detail">AI需要予測、ルート最適化、AMR導入開始</div>
+      </div>
+      <div class="timeline-arrow">→</div>
+      <div class="timeline-item">
+        <div class="year">2025〜2026</div>
+        <div class="phase">自律型実行</div>
+        <div class="detail">エージェンティックAI、ヒューマノイド、デジタルツイン統合</div>
+      </div>
+      <div class="timeline-arrow">→</div>
+      <div class="timeline-item" style="border-color: var(--gold-light);">
+        <div class="year">2027〜2030</div>
+        <div class="phase">自己操舵型SC</div>
+        <div class="detail">ダーク・ウェアハウス、自律配送網、複合デジタルツイン</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 4 ===== -->
+  <h2>4. 日本の物流現場が「今日から」考えるべき3つのこと</h2>
+
+  <p>ここまで読んで「米国と日本では規模が違う」と感じた方がいるかもしれない。だが、その認識こそが最大のリスクだ。テクノロジーの進化は加速度的であり、3年後に「あのとき始めておけば」と悔やむ企業は少なくない。</p>
+
+  <div class="takeaway-section">
+    <div class="takeaway-card">
+      <div class="takeaway-num">1</div>
+      <div class="takeaway-content">
+        <h4>データ基盤の整備を「最優先」にする</h4>
+        <p>AIの性能はデータの質に完全に依存する。米国企業がエージェンティックAIで成果を出せているのは、クリーンなデータ基盤を数年かけて整備してきたからだ。Excel台帳が乱立し、基幹システムとの連携が手作業の状態では、いくら高度なAIを導入しても効果は出ない。<strong>「データが正しく、リアルタイムに、一箇所に集まる」状態を作ることが出発点。</strong></p>
+      </div>
+    </div>
+    <div class="takeaway-card">
+      <div class="takeaway-num">2</div>
+      <div class="takeaway-content">
+        <h4>「痛点」を一つ選び、小さく始めて速く拡げる</h4>
+        <p>Amazonの100万台ロボットに目を奪われる必要はない。Stretchが解決しているのは「コンテナの荷下ろし」という極めて具体的な一つの痛点だ。自社で最も人手がかかり、最も離職を生み、最も生産性のボトルネックになっている作業は何か。<strong>その一点を特定し、小規模な自動化から着手する「Start Small, Scale Fast」が最も高い成功率を示している。</strong></p>
+      </div>
+    </div>
+    <div class="takeaway-card">
+      <div class="takeaway-num">3</div>
+      <div class="takeaway-content">
+        <h4>テクノロジーの前に「人の変革」を設計する</h4>
+        <p>30年以上同じやり方で仕事をしてきたベテラン職員に、ある日突然「明日からロボットと一緒に」と言っても機能しない。成功企業は、現場のベテランを「変化の伝道師」として任命し、共感と信頼をベースに導入を進めている。<strong>テクノロジー予算の20〜30%を人材育成と組織変革に充てる発想が不可欠だ。</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CLOSING ===== -->
+  <div class="closing-section">
+    <h2>2030年、物流は「ハイテク産業」になる</h2>
+    <p>AIエージェントが在庫・輸送・労働力を24時間監視し、問題が顕在化する前に自律的に対処する<span class="highlight">「自己操舵型サプライチェーン」</span>が主流になる。照明のない倉庫でロボットが24時間働く「ダーク・ウェアハウス」も、もはやSFの話ではない。</p>
+    <p>日系企業が得意とする現場力・改善力は、適切なテクノロジーと組み合わさったとき、大きな競争優位に変わる。逆に言えば、<span class="highlight">テクノロジーなき現場力は、近い将来、優位性ではなく制約になりかねない。</span></p>
+    <p style="margin-top: 24px; font-weight: 700; color: var(--gold-light);">その準備は、今この瞬間から始まっている。</p>
+  </div>
+
+  <!-- ===== CTA ===== -->
+  <div class="cta-box">
+    <p class="cta-label">ABOUT US</p>
+    <p class="company">Wings株式会社</p>
+    <p>日系企業の物流・サプライチェーン領域におけるDX推進を支援。<br>データ基盤の構築から、現場に即した段階的な自動化戦略の策定まで、<br>ニューヨークと日本の両拠点から伴走型のコンサルティングを提供します。</p>
+  </div>
+
+  <!-- ===== REFERENCES ===== -->
+  <div class="references">
+    <h4>参考文献</h4>
+    <ul>
+      <li>Ryder — 2026 Supply Chain Trends You Should Be Anticipating</li>
+      <li>Microsoft — The future of logistics: How generative AI and agentic AI is creating a new era</li>
+      <li>Boston Dynamics — Stretch Brochure 2025</li>
+      <li>Ambi Robotics / Pitney Bowes — Press Release</li>
+      <li>Saddle Creek Logistics — Warehouse Automation Trends for 2026</li>
+      <li>FedEx — 2026 Investor Day / 2026 Future of Logistics Intelligence Report</li>
+      <li>UPS — Supply Chain Symphony Portal</li>
+      <li>Agility Robotics / Apptronik — Company Disclosures</li>
+      <li>Deloitte — AI Blockchain Integration for Supply Chain 2026 Guide</li>
+    </ul>
+  </div>
+
+</main>
+
+</body>
+</html>
