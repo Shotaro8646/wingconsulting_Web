@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>グローバル企業のIT組織モデル｜海外拠点のIT機能をどう設計するか | Wing Blog</title>
+<meta name="description" content="グローバル展開する日本企業のIT組織設計を解説。集中型・分担型・自律型の3モデルを比較し、海外拠点のITガバナンスと役割分担の最適解を提示します。">
+<meta name="keywords" content="IT組織 グローバル, 海外拠点 IT ガバナンス, グループIT 組織モデル, IT組織設計, グローバルITガバナンス, 海外子会社 IT">
+<meta property="og:title" content="グローバル企業のIT組織モデル｜海外拠点のIT機能をどう設計するか">
+<meta property="og:description" content="グローバル展開する日本企業のIT組織設計を解説。集中型・分担型・自律型の3モデルを比較し、海外拠点のITガバナンスと役割分担の最適解を提示します。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://wingconsulting.org/blog/global-it-organization-model">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="Wing">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="グローバル企業のIT組織モデル｜海外拠点のIT機能をどう設計するか">
+<meta name="twitter:description" content="集中型・分担型・自律型の3モデルを比較。海外拠点のITガバナンスと役割分担の最適解を解説。">
+<link rel="canonical" href="https://wingconsulting.org/blog/global-it-organization-model">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "グローバル企業のIT組織モデル｜海外拠点のIT機能をどう設計するか",
+  "description": "グローバル展開する日本企業のIT組織設計を解説。集中型・分担型・自律型の3モデルを比較し、海外拠点のITガバナンスと役割分担の最適解を提示します。",
+  "author": {
+    "@type": "Organization",
+    "name": "Wing編集部",
+    "url": "https://wingconsulting.org"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Wing",
+    "url": "https://wingconsulting.org"
+  },
+  "datePublished": "2026-03-26",
+  "dateModified": "2026-03-26",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://wingconsulting.org/blog/global-it-organization-model"
+  }
+}
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        navy: { DEFAULT: '#0F2342', dark: '#081830' },
+        gold: { DEFAULT: '#A8965A', light: '#C4AD72', muted: '#7A6B3E', pale: '#F8F5ED', mid: '#B8A560' },
+        slate: { warm: '#F7F6F3', cool: '#EEECe7' },
+        ink: { DEFAULT: '#1A1A1F', mid: '#4A4A55', light: '#8A8A96' },
+      },
+      fontFamily: {
+        serif: ['"Cormorant Garamond"', 'serif'],
+        sans: ['"Noto Sans JP"', 'sans-serif'],
+        display: ['"Outfit"', 'sans-serif'],
+      },
+    }
+  }
+}
+</script>
+<style>
+body { font-family: 'Noto Sans JP', sans-serif; -webkit-font-smoothing: antialiased; }
+.serif { font-family: 'Cormorant Garamond', serif; }
+.display { font-family: 'Outfit', sans-serif; }
+.gold-rule { width: 32px; height: 1.5px; background: #A8965A; }
+article h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+article h3 { margin-top: 1.5rem; margin-bottom: 0.6rem; }
+article p { margin-bottom: 1.2rem; }
+article ul, article ol { margin-bottom: 1.2rem; padding-left: 1.5rem; }
+article li { margin-bottom: 0.5rem; }
+
+/* Diagram styles */
+.model-card {
+  border: 1px solid #E2E0DA;
+  border-radius: 4px;
+  padding: 1.5rem;
+  background: #fff;
+  position: relative;
+}
+.model-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  border-radius: 4px 4px 0 0;
+}
+.model-a::before { background: #0F2342; }
+.model-b::before { background: #A8965A; }
+.model-c::before { background: #4A7C6F; }
+
+.governance-matrix {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2px;
+  background: #E2E0DA;
+  border-radius: 4px;
+  overflow: hidden;
+  max-width: 500px;
+  margin: 1.5rem auto;
+}
+.governance-matrix > div {
+  background: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.flow-diagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+}
+.flow-box {
+  background: #0F2342;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+}
+.flow-box.gold-bg {
+  background: #A8965A;
+}
+.flow-box.teal-bg {
+  background: #4A7C6F;
+}
+.flow-arrow {
+  color: #A8965A;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.org-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+.org-row {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.org-node {
+  border: 1.5px solid #0F2342;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-align: center;
+  min-width: 100px;
+  background: #fff;
+}
+.org-node.hq { background: #0F2342; color: #fff; }
+.org-node.shared { background: #A8965A; color: #fff; border-color: #A8965A; }
+.org-node.local { background: #F8F5ED; border-color: #A8965A; }
+.org-connector {
+  width: 1.5px;
+  height: 20px;
+  background: #A8965A;
+  margin: 0 auto;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  margin: 1.5rem 0;
+}
+.comparison-table th {
+  background: #0F2342;
+  color: #fff;
+  padding: 0.65rem 0.8rem;
+  text-align: left;
+  font-weight: 500;
+  font-size: 0.78rem;
+}
+.comparison-table td {
+  padding: 0.6rem 0.8rem;
+  border-bottom: 1px solid #E2E0DA;
+  vertical-align: top;
+}
+.comparison-table tr:nth-child(even) td {
+  background: #FAFAF8;
+}
+
+.score-high { color: #2D7A4F; font-weight: 500; }
+.score-mid { color: #A8965A; font-weight: 500; }
+.score-low { color: #C4534A; font-weight: 500; }
+
+.insight-box {
+  background: #F8F5ED;
+  border-left: 3px solid #A8965A;
+  padding: 1rem 1.2rem;
+  margin: 1.5rem 0;
+  border-radius: 0 4px 4px 0;
+}
+.insight-box p { margin-bottom: 0.4rem; }
+.insight-box p:last-child { margin-bottom: 0; }
+
+.step-list {
+  counter-reset: step;
+  list-style: none;
+  padding-left: 0;
+}
+.step-list li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 3rem;
+  margin-bottom: 1.2rem;
+}
+.step-list li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0; top: 0;
+  width: 2rem; height: 2rem;
+  background: #0F2342;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+</style>
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KN7NWHFK9G');
+</script>
+</head>
+<body class="bg-slate-warm text-ink">
+
+<!-- ─── HEADER ─────────────────────────────────────────── -->
+<header class="bg-navy h-[60px] flex items-center px-6 md:px-10 sticky top-0 z-50">
+  <div class="max-w-5xl mx-auto w-full flex items-center justify-between">
+    <a href="/" class="leading-none">
+      <svg width="120" height="36" viewBox="0 0 120 36" fill="none" aria-label="Wing">
+        <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff"/>
+        <path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#fff" opacity=".32"/>
+        <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#fff">Wing</text>
+      </svg>
+    </a>
+    <div class="flex items-center gap-4">
+      <span class="display text-[.7rem] font-medium tracking-wider text-white/50">Blog</span>
+      <a href="/" class="text-[.75rem] text-white/70 hover:text-white transition-colors">&larr; Home</a>
+    </div>
+  </div>
+</header>
+
+<!-- ─── ARTICLE ─────────────────────────────────────────── -->
+<main class="py-16 px-6 md:px-10">
+  <div class="max-w-3xl mx-auto">
+    <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3">IT Organization</p>
+    <h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4">グローバル企業のIT組織モデル｜海外拠点のIT機能をどう設計するか</h1>
+    <div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2">
+      <time datetime="2026-03-26">2026.03.26</time>
+      <span>Wing編集部</span>
+    </div>
+    <div class="gold-rule mb-10"></div>
+
+    <article class="text-[.9rem] text-ink leading-[2] max-w-none">
+
+      <!-- ─── Section 1 ─── -->
+      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">1. なぜ今、海外拠点のIT組織設計が課題なのか</h2>
+      <p>日本企業の海外展開が加速する中、多くの企業が共通の壁に直面しています。それは<strong>「海外拠点のIT機能をどこまで本社が統制し、どこから現地に任せるか」</strong>という問題です。</p>
+      <p>この問題を放置すると、以下のようなリスクが顕在化します。</p>
+      <ul class="list-disc">
+        <li>拠点ごとにバラバラなシステムが乱立し、<strong>データの統合・連携ができない</strong></li>
+        <li>本社のIT戦略が海外に伝わらず、<strong>グループ全体のDXが停滞する</strong></li>
+        <li>現地の業務ニーズに本社が対応できず、<strong>シャドーITが横行する</strong></li>
+        <li>セキュリティポリシーが統一されず、<strong>情報漏洩やコンプライアンス違反</strong>のリスクが高まる</li>
+      </ul>
+
+      <div class="insight-box">
+        <p><strong>よくある経営者の悩み</strong></p>
+        <p>「本社から統制を強めると現地の機動力が落ちる。かといって任せきりにするとガバナンスが効かない。ちょうどいいバランスが見つからない。」</p>
+      </div>
+
+      <p>この課題に対する答えは一つではありません。企業の規模、グローバル展開のフェーズ、IT人材の配置状況によって最適なモデルは異なります。本記事では、数多くのグローバルIT組織の設計を支援してきた経験をもとに、<strong>3つの代表的なIT組織モデル</strong>を解説します。</p>
+
+      <!-- ─── Section 2 ─── -->
+      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">2. ITガバナンスの判断軸：「統制の必要性」と「共通性」</h2>
+      <p>IT組織モデルを検討する前に、まず<strong>どの業務をグループ全体で統制すべきか</strong>を整理する必要があります。判断の軸となるのは「統制の必要性」と「共通性」の2つです。</p>
+
+      <!-- Governance Matrix Diagram -->
+      <div class="governance-matrix">
+        <div>
+          <p class="text-[.7rem] text-gold font-medium mb-1">監督</p>
+          <p class="text-[.78rem] font-medium">リスク管理領域</p>
+          <p class="text-[.7rem] text-ink-mid mt-1">ルールによる統治<br>過剰介入を抑制</p>
+        </div>
+        <div>
+          <p class="text-[.7rem] text-gold font-medium mb-1">義務</p>
+          <p class="text-[.78rem] font-medium">グループ管理機能</p>
+          <p class="text-[.7rem] text-ink-mid mt-1">集中管理が必須<br>連結決算・統制機能</p>
+        </div>
+        <div>
+          <p class="text-[.7rem] text-gold font-medium mb-1">独立</p>
+          <p class="text-[.78rem] font-medium">事業独自の領域</p>
+          <p class="text-[.7rem] text-ink-mid mt-1">各社で自立運営<br>先行投資的な領域</p>
+        </div>
+        <div>
+          <p class="text-[.7rem] text-gold font-medium mb-1">選択</p>
+          <p class="text-[.78rem] font-medium">コモディティ業務</p>
+          <p class="text-[.7rem] text-ink-mid mt-1">シェアードサービス化<br>利用の選択性を確保</p>
+        </div>
+      </div>
+      <p class="text-[.75rem] text-ink-light text-center mb-6">[図] ITガバナンスの4象限マトリクス（横軸：共通性、縦軸：統制の必要性）</p>
+
+      <p>たとえば、連結財務に関わるシステムは「義務」として本社で集中管理すべきですが、現地の営業支援ツールは「独立」として事業会社に裁量を持たせるほうが効果的です。この4象限を使って自社のIT業務を整理することで、組織モデルの選択がしやすくなります。</p>
+
+      <!-- ─── Section 3 ─── -->
+      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">3. 3つのIT組織モデルの比較</h2>
+      <p>グローバル企業のIT組織は、大きく分けて<strong>3つのモデル</strong>に類型化できます。それぞれの特徴、メリット・デメリットを見ていきましょう。</p>
+
+      <!-- Model Cards -->
+      <div class="grid gap-5 mt-6 mb-6">
+
+        <!-- Model A -->
+        <div class="model-card model-a">
+          <h3 class="text-[1rem] font-medium text-ink mb-3">モデルA：IT機能集中型（本社/IT子会社主導）</h3>
+          <div class="org-chart">
+            <div class="org-row"><div class="org-node hq">本社 IT部門 / IT子会社</div></div>
+            <div class="org-connector"></div>
+            <div class="org-row">
+              <div class="org-node local">国内事業会社</div>
+              <div class="org-node local">海外事業会社</div>
+              <div class="org-node local">関連会社</div>
+            </div>
+          </div>
+          <p class="text-[.82rem] text-ink-mid mb-2"><strong>特徴：</strong>IT戦略の策定からシステム運用まで、本社のIT部門（またはIT子会社）がグループ全体のIT機能を一元的に担う。</p>
+          <div class="grid md:grid-cols-2 gap-3 text-[.8rem]">
+            <div>
+              <p class="font-medium text-[#2D7A4F] mb-1">メリット</p>
+              <ul class="list-disc pl-4 text-ink-mid">
+                <li>グループ全体で統一された戦略を実行できる</li>
+                <li>投資の重複を排除し、コスト効率が高い</li>
+                <li>セキュリティ・ガバナンスの統制が強力</li>
+              </ul>
+            </div>
+            <div>
+              <p class="font-medium text-[#C4534A] mb-1">デメリット</p>
+              <ul class="list-disc pl-4 text-ink-mid">
+                <li>現地の業務ニーズへの対応が遅くなりがち</li>
+                <li>高いITマネジメント力を持つ人材の集中配置が前提</li>
+                <li>海外拠点の主体性・当事者意識が薄れやすい</li>
+              </ul>
+            </div>
+          </div>
+          <div class="insight-box mt-3">
+            <p class="text-[.8rem]"><strong>適している企業：</strong>グループ全体でのIT標準化を最優先とする企業。IT子会社にグループ横断のマネジメント力がある場合に有効。</p>
+          </div>
+        </div>
+
+        <!-- Model B -->
+        <div class="model-card model-b">
+          <h3 class="text-[1rem] font-medium text-ink mb-3">モデルB：IT機能分担型（本社＋IT子会社の役割分離）</h3>
+          <div class="org-chart">
+            <div class="org-row">
+              <div class="org-node hq">本社 IT企画部門<br><span class="text-[.65rem] font-normal">戦略・ガバナンス</span></div>
+              <div class="org-node shared">IT子会社<br><span class="text-[.65rem] font-normal">実行・運用</span></div>
+            </div>
+            <div class="org-connector"></div>
+            <div class="org-row">
+              <div class="org-node local">国内事業会社</div>
+              <div class="org-node local">海外事業会社</div>
+              <div class="org-node local">関連会社</div>
+            </div>
+          </div>
+          <p class="text-[.82rem] text-ink-mid mb-2"><strong>特徴：</strong>本社IT部門が戦略・ガバナンスを担い、IT子会社が実行・運用を担当。「考える」と「動く」を分離するモデル。</p>
+          <div class="grid md:grid-cols-2 gap-3 text-[.8rem]">
+            <div>
+              <p class="font-medium text-[#2D7A4F] mb-1">メリット</p>
+              <ul class="list-disc pl-4 text-ink-mid">
+                <li>戦略と実行の専門性をそれぞれ高められる</li>
+                <li>本社のIT部門が経営に近い位置で活動できる</li>
+                <li>既存のIT子会社を活かしながら改革できる</li>
+              </ul>
+            </div>
+            <div>
+              <p class="font-medium text-[#C4534A] mb-1">デメリット</p>
+              <ul class="list-disc pl-4 text-ink-mid">
+                <li>本社とIT子会社の間で役割の重複・衝突が起きやすい</li>
+                <li>コミュニケーションコストが増大する</li>
+                <li>責任の所在が曖昧になるリスク</li>
+              </ul>
+            </div>
+          </div>
+          <div class="insight-box mt-3">
+            <p class="text-[.8rem]"><strong>適している企業：</strong>既にIT子会社を持つ企業で、本社のIT企画機能を強化したい場合。戦略と実行の間の密なコミュニケーション体制の構築が成功の鍵。</p>
+          </div>
+        </div>
+
+        <!-- Model C -->
+        <div class="model-card model-c">
+          <h3 class="text-[1rem] font-medium text-ink mb-3">モデルC：事業会社自律型（連邦型ガバナンス）</h3>
+          <div class="org-chart">
+            <div class="org-row"><div class="org-node hq">本社 IT企画部門<br><span class="text-[.65rem] font-normal">方針策定・モニタリング</span></div></div>
+            <div class="org-connector"></div>
+            <div class="org-row">
+              <div class="org-node" style="background:#E8F0E8; border-color:#4A7C6F;">国内A社 IT部門<br><span class="text-[.65rem] font-normal">自律運営</span></div>
+              <div class="org-node" style="background:#E8F0E8; border-color:#4A7C6F;">海外B社 IT部門<br><span class="text-[.65rem] font-normal">自律運営</span></div>
+              <div class="org-node" style="background:#E8F0E8; border-color:#4A7C6F;">海外C社 IT部門<br><span class="text-[.65rem] font-normal">自律運営</span></div>
+            </div>
+          </div>
+          <p class="text-[.82rem] text-ink-mid mb-2"><strong>特徴：</strong>各事業会社が自社のIT機能を主体的に運営。本社はIT投資ルールとセキュリティ方針の策定・モニタリングに徹する。</p>
+          <div class="grid md:grid-cols-2 gap-3 text-[.8rem]">
+            <div>
+              <p class="font-medium text-[#2D7A4F] mb-1">メリット</p>
+              <ul class="list-disc pl-4 text-ink-mid">
+                <li>現地の業務ニーズに最も迅速に対応できる</li>
+                <li>各社の主体性・当事者意識が高まる</li>
+                <li>クラウド活用により、IT子会社なしでも実現可能</li>
+              </ul>
+            </div>
+            <div>
+              <p class="font-medium text-[#C4534A] mb-1">デメリット</p>
+              <ul class="list-disc pl-4 text-ink-mid">
+                <li>グループ全体での最適化が難しい</li>
+                <li>投資の重複、システムの乱立が起きやすい</li>
+                <li>本社のモニタリング能力が問われる</li>
+              </ul>
+            </div>
+          </div>
+          <div class="insight-box mt-3">
+            <p class="text-[.8rem]"><strong>適している企業：</strong>事業多角化が進み、各社の事業特性が大きく異なる企業。IT投資プロセスと技術統制を本社が押さえることで、自律性と統制のバランスを取る。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comparison Table -->
+      <h3 class="text-[1rem] font-medium text-ink mb-3">3つのモデルの比較表</h3>
+      <div class="overflow-x-auto">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th style="width:22%">評価軸</th>
+              <th style="width:26%">A. 集中型</th>
+              <th style="width:26%">B. 分担型</th>
+              <th style="width:26%">C. 自律型</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>統制力</strong></td>
+              <td class="score-high">強い</td>
+              <td class="score-mid">中程度</td>
+              <td class="score-low">弱い（仕組みで補強）</td>
+            </tr>
+            <tr>
+              <td><strong>現場対応力</strong></td>
+              <td class="score-low">遅くなりがち</td>
+              <td class="score-mid">中程度</td>
+              <td class="score-high">高い</td>
+            </tr>
+            <tr>
+              <td><strong>投資効率</strong></td>
+              <td class="score-high">無駄を排除しやすい</td>
+              <td class="score-mid">ある程度最適化可能</td>
+              <td class="score-low">重複投資のリスク</td>
+            </tr>
+            <tr>
+              <td><strong>人材要件</strong></td>
+              <td>本社/IT子会社に高度人材を集中</td>
+              <td>本社・IT子会社の両方に必要</td>
+              <td>各社に分散配置</td>
+            </tr>
+            <tr>
+              <td><strong>導入の容易さ</strong></td>
+              <td class="score-low">大きな組織変革が必要</td>
+              <td class="score-mid">既存体制を活かしやすい</td>
+              <td class="score-high">段階的に移行可能</td>
+            </tr>
+            <tr>
+              <td><strong>向いている企業</strong></td>
+              <td>事業の同質性が高い企業グループ</td>
+              <td>IT子会社を既に持つ企業</td>
+              <td>事業多角化が進んだ企業</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ─── Section 4 ─── -->
+      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">4. IT業務の役割分担をどう設計するか</h2>
+      <p>モデルを選んだ後に重要なのが、<strong>具体的なIT業務の役割分担</strong>です。「誰が責任を持ち、誰が実行するか」を明確にしなければ、組織モデルは絵に描いた餅になります。</p>
+
+      <h3 class="text-[.95rem] font-medium text-ink">IT業務の13分類フレームワーク</h3>
+      <p>IT部門の業務は、大きく<strong>戦略構想・導入実現・全体管理</strong>の3層、13カテゴリに分類できます。</p>
+
+      <div class="overflow-x-auto">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th style="width:15%">業務層</th>
+              <th style="width:25%">カテゴリ</th>
+              <th style="width:60%">主な内容</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="3"><strong>戦略構想</strong></td>
+              <td>IT戦略</td>
+              <td>中期IT戦略の策定、経営とITの連携</td>
+            </tr>
+            <tr>
+              <td>IT組織・人材</td>
+              <td>組織設計、人材育成計画、リソース管理</td>
+            </tr>
+            <tr>
+              <td>ITアーキテクチャ</td>
+              <td>技術方針の決定、標準化、ロードマップ策定</td>
+            </tr>
+            <tr>
+              <td rowspan="4"><strong>導入実現</strong></td>
+              <td>企画・調達</td>
+              <td>IT投資管理、RFP作成、ベンダー選定</td>
+            </tr>
+            <tr>
+              <td>外部委託</td>
+              <td>SI/アウトソースパートナーの管理</td>
+            </tr>
+            <tr>
+              <td>開発</td>
+              <td>品質管理、プロジェクト管理、テスト</td>
+            </tr>
+            <tr>
+              <td>運用・保守</td>
+              <td>サービスデスク、インシデント管理、構成管理</td>
+            </tr>
+            <tr>
+              <td rowspan="4"><strong>全体管理</strong></td>
+              <td>アクセス・資産管理</td>
+              <td>ID管理、ライセンス管理、コスト配賦</td>
+            </tr>
+            <tr>
+              <td>情報セキュリティ</td>
+              <td>セキュリティポリシー、個人情報保護</td>
+            </tr>
+            <tr>
+              <td>障害・災害対策</td>
+              <td>BCP/DR計画、バックアップ体制</td>
+            </tr>
+            <tr>
+              <td>監査・コンプライアンス</td>
+              <td>IT内部統制、法令遵守、IT監査対応</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>各カテゴリについて、「<strong>責任主体</strong>（誰が最終判断するか）」と「<strong>実施主体</strong>（誰が手を動かすか）」を定義することで、曖昧さのない役割分担表が完成します。</p>
+
+      <div class="insight-box">
+        <p><strong>実務上のポイント</strong></p>
+        <p>特に議論になりやすいのが「ITアーキテクチャ」と「情報セキュリティ」です。これらは本社が方針を決め、各拠点が実行する形が一般的ですが、海外拠点の規模やIT成熟度によって最適な分担は変わります。一律に決めず、拠点ごとの成熟度評価を踏まえて段階的に権限を委譲するアプローチが有効です。</p>
+      </div>
+
+      <!-- ─── Section 5 ─── -->
+      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">5. 海外拠点のIT組織で特に重要な5つの論点</h2>
+      <p>グローバルIT組織の設計においては、日本国内のグループ再編とは異なる特有の論点があります。</p>
+
+      <ol class="step-list">
+        <li>
+          <strong>海外拠点のIT要員は本社直轄か、現地採用か</strong>
+          <p class="text-[.82rem] text-ink-mid mt-1">本社からの駐在員は戦略の浸透に有効ですが、現地の業務慣行やローカル規制への対応には限界があります。現地採用のIT人材と駐在員の役割を明確に分け、「戦略は本社、実行は現地」のハイブリッド体制が現実的です。</p>
+        </li>
+        <li>
+          <strong>グローバル標準と現地最適のバランス</strong>
+          <p class="text-[.82rem] text-ink-mid mt-1">ERPや会計システムはグループ標準とすべきですが、CRMや営業支援ツールは現地の商習慣に合わせたほうが効果的なケースが多いです。「何を標準化し、何をローカライズするか」の線引きが重要です。</p>
+        </li>
+        <li>
+          <strong>ITインフラの統合 vs 現地クラウド活用</strong>
+          <p class="text-[.82rem] text-ink-mid mt-1">以前はデータセンターの統合が主流でしたが、クラウドの普及により、現地のSaaSやIaaSを活用しながらセキュリティと統制を担保するモデルが増えています。</p>
+        </li>
+        <li>
+          <strong>海外拠点のIT投資の承認プロセス</strong>
+          <p class="text-[.82rem] text-ink-mid mt-1">「一定額以上は本社承認、それ以下は現地裁量」というルールを設けることで、統制と機動力のバランスを取れます。閾値の設定と透明性のあるプロセス設計がポイントです。</p>
+        </li>
+        <li>
+          <strong>レポーティングラインとコミュニケーション設計</strong>
+          <p class="text-[.82rem] text-ink-mid mt-1">海外IT部門のレポーティングラインを「現地社長のみ」とすると本社の可視性が下がり、「本社IT部門のみ」とすると現地経営との連携が弱まります。<strong>ダブルレポーティング</strong>（現地社長＋本社CIO/IT部門長）の仕組みが有効です。</p>
+        </li>
+      </ol>
+
+      <!-- ─── Section 6 ─── -->
+      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">6. IT組織設計のステップ</h2>
+      <p>最適なIT組織モデルは、自社の現状分析から始まります。以下の5ステップで進めます。</p>
+
+      <div class="flow-diagram">
+        <div class="flow-box">現状分析</div>
+        <span class="flow-arrow">&rarr;</span>
+        <div class="flow-box gold-bg">ガバナンス<br>方針策定</div>
+        <span class="flow-arrow">&rarr;</span>
+        <div class="flow-box">モデル選択</div>
+        <span class="flow-arrow">&rarr;</span>
+        <div class="flow-box gold-bg">役割分担<br>設計</div>
+        <span class="flow-arrow">&rarr;</span>
+        <div class="flow-box teal-bg">移行計画<br>策定</div>
+      </div>
+
+      <ul class="list-disc">
+        <li><strong>Step 1 現状分析：</strong>現在のIT組織体制、IT人材の配置、IT投資額、各拠点のIT成熟度を棚卸しする</li>
+        <li><strong>Step 2 ガバナンス方針策定：</strong>4象限マトリクスを使って、各IT業務の統制レベルを定義する</li>
+        <li><strong>Step 3 モデル選択：</strong>3つのモデルから自社に最適なものを選定。ハイブリッドも検討する</li>
+        <li><strong>Step 4 役割分担設計：</strong>13分類フレームワークを使って、具体的な責任・実施主体を定義する</li>
+        <li><strong>Step 5 移行計画策定：</strong>現体制からの移行ロードマップを策定。段階的な移行がリスクを低減する</li>
+      </ul>
+
+      <div class="insight-box">
+        <p><strong>失敗しないためのヒント</strong></p>
+        <p>IT組織の再編は「一夜にして完成するもの」ではありません。12〜18ヶ月の移行期間を設け、パイロット拠点で検証してからグループ全体に展開するアプローチが成功率を高めます。また、組織図を変えるだけでなく、<strong>ルール・プロセス・ツール・人材</strong>の4要素を同時に整備することが重要です。</p>
+      </div>
+
+      <!-- ─── Section 7 ─── -->
+      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">7. まとめ：自社に合ったモデルを選ぶために</h2>
+      <p>グローバル企業のIT組織設計に唯一の正解はありません。重要なのは、<strong>自社のビジネス戦略・IT成熟度・人材配置に基づいて、論理的にモデルを選択すること</strong>です。</p>
+      <p>多くの企業では、初期は「集中型」でグループ標準を確立し、拠点の成熟度が高まるにつれて「分担型」「自律型」へ段階的に移行するパターンが見られます。どのモデルを選ぶにしても、以下の3つの原則を押さえることが成功の鍵です。</p>
+      <ul class="list-disc">
+        <li><strong>ガバナンスの判断軸を明確にする</strong>（統制すべき領域と任せる領域を分ける）</li>
+        <li><strong>役割分担を具体的に定義する</strong>（曖昧なまま走らない）</li>
+        <li><strong>段階的に移行する</strong>（Big Bangではなく、パイロットから始める）</li>
+      </ul>
+      <p>海外拠点を持つ企業にとって、IT組織の設計は単なる管理部門の話ではなく、<strong>グループ経営の根幹に関わる戦略課題</strong>です。DXの加速、AI活用、データ統合といった次のステージに進むためにも、今こそIT組織の土台を見直すべきタイミングではないでしょうか。</p>
+
+    </article>
+
+    <!-- CTA -->
+    <div class="mt-14 bg-navy rounded-sm p-8 md:p-10 text-center">
+      <p class="serif text-[1.4rem] font-medium text-white mb-3">グローバルIT組織の設計、ご相談ください</p>
+      <p class="text-[.82rem] text-white/65 mb-6">米国・日本の両拠点からグループIT組織の構想策定から移行支援まで伴走します</p>
+      <a href="https://wingconsulting.org/#contact" class="display inline-block text-[.82rem] font-medium text-navy bg-gold px-8 py-3.5 rounded-sm tracking-wider hover:bg-gold-mid transition-colors">相談する</a>
+    </div>
+
+    <!-- Related Articles -->
+    <div class="mt-16">
+      <p class="display text-[.65rem] font-medium tracking-[.18em] uppercase text-gold mb-4">Related Articles</p>
+      <div class="grid md:grid-cols-2 gap-4">
+        <a href="/blog/dx-consulting-guide" class="group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors">
+          <p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2">DX Strategy</p>
+          <p class="text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors">DXコンサルティングとは？失敗しない選び方と成功のポイント</p>
+          <p class="text-[.68rem] text-ink-light mt-2">2026.03.25</p>
+        </a>
+        <a href="/blog/trade-dx-ai-agent" class="group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors">
+          <p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2">Trade DX</p>
+          <p class="text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors">貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来</p>
+          <p class="text-[.68rem] text-ink-light mt-2">2026.03.25</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ─── FOOTER ──────────────────────────────────────────── -->
+<footer class="bg-navy py-10 px-6 md:px-10">
+  <div class="max-w-5xl mx-auto flex flex-wrap justify-between items-center gap-5">
+    <a href="/" class="leading-none">
+      <svg width="110" height="32" viewBox="0 0 110 32" fill="none" aria-label="Wing">
+        <path d="M5 23C8 14,16 7,27 6C20 11,14 17,13 25Z" fill="rgba(255,255,255,.65)"/>
+        <path d="M10 24C13 13,23 5,36 4C29 10,21 18,20 26Z" fill="rgba(255,255,255,.65)" opacity=".3"/>
+        <text x="42" y="22" font-family="Cormorant Garamond,serif" font-size="20" font-weight="500" letter-spacing=".05em" fill="rgba(255,255,255,.6)">Wing</text>
+      </svg>
+    </a>
+    <p class="text-[.66rem] text-white/65">&copy; 2026 Wing Inc. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

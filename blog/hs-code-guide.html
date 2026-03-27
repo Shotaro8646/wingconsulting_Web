@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HSコード完全ガイド：国際貿易の品目分類を戦略的武器に変える | Wing</title>
+<meta name="description" content="HSコードの構造、通則（GRI）の実務適用、Webタリフの検索手法、EPA戦略、事前教示制度まで。貿易実務者が知るべき品目分類の全体像を徹底解説。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700&family=Source+Serif+4:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0B1A33;
+    --navy-light: #132744;
+    --navy-mid: #1A3558;
+    --gold: #A8965A;
+    --gold-light: #C4B383;
+    --gold-pale: #F5F0E4;
+    --cream: #FDFBF7;
+    --text: #2C2C2C;
+    --text-light: #5A5A5A;
+    --text-lighter: #8A8A8A;
+    --border: #E8E4DC;
+    --white: #FFFFFF;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    line-height: 1.9;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Header Bar ── */
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: var(--navy);
+    border-bottom: 2px solid var(--gold);
+    padding: 0 2rem;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .site-header .logo {
+    font-family: 'Source Serif 4', serif;
+    color: var(--gold);
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-decoration: none;
+  }
+
+  .site-header .breadcrumb {
+    font-size: 0.78rem;
+    color: var(--gold-light);
+    opacity: 0.7;
+  }
+
+  .site-header .breadcrumb a {
+    color: var(--gold-light);
+    text-decoration: none;
+  }
+
+  .site-header .breadcrumb span { margin: 0 0.4em; }
+
+  /* ── Hero ── */
+  .hero {
+    margin-top: 56px;
+    background: var(--navy);
+    position: relative;
+    overflow: hidden;
+    padding: 5rem 2rem 4rem;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 20% 80%, rgba(168,150,90,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 85% 20%, rgba(168,150,90,0.05) 0%, transparent 50%);
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  .hero-inner {
+    max-width: 820px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .hero .category-label {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(168,150,90,0.4);
+    padding: 0.3em 1em;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero h1 {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 900;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    color: var(--white);
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    color: var(--gold);
+  }
+
+  .hero .subtitle {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.8;
+    max-width: 640px;
+    margin-bottom: 2rem;
+  }
+
+  .hero .meta-bar {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.45);
+    flex-wrap: wrap;
+  }
+
+  .hero .meta-bar .divider {
+    width: 1px;
+    height: 14px;
+    background: rgba(255,255,255,0.15);
+  }
+
+  /* ── Layout ── */
+  .content-wrapper {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 3rem;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 3rem 2rem 6rem;
+  }
+
+  @media (max-width: 900px) {
+    .content-wrapper {
+      grid-template-columns: 1fr;
+      padding: 2rem 1.2rem 4rem;
+    }
+  }
+
+  /* ── Sidebar TOC ── */
+  .toc-sidebar {
+    position: sticky;
+    top: 80px;
+    align-self: start;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+  }
+
+  @media (max-width: 900px) {
+    .toc-sidebar { display: none; }
+  }
+
+  .toc-sidebar .toc-title {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .toc-sidebar a {
+    display: block;
+    font-size: 0.76rem;
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 0.35em 0;
+    padding-left: 0.8em;
+    border-left: 2px solid transparent;
+    transition: all 0.2s;
+    line-height: 1.5;
+  }
+
+  .toc-sidebar a:hover,
+  .toc-sidebar a.active {
+    color: var(--navy);
+    border-left-color: var(--gold);
+  }
+
+  /* ── Article Body ── */
+  .article-body {
+    max-width: 740px;
+    font-size: 1rem;
+  }
+
+  .article-body p {
+    margin-bottom: 1.4em;
+    color: var(--text);
+  }
+
+  .article-body h2 {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    font-size: 1.55rem;
+    color: var(--navy);
+    margin-top: 3.5rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--gold);
+    line-height: 1.5;
+    scroll-margin-top: 80px;
+  }
+
+  .article-body h3 {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--navy-mid);
+    margin-top: 2.2rem;
+    margin-bottom: 0.8rem;
+    padding-left: 0.8em;
+    border-left: 3px solid var(--gold);
+    line-height: 1.5;
+    scroll-margin-top: 80px;
+  }
+
+  .article-body h4 {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--navy);
+    margin-top: 1.5rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .article-body strong {
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  /* ── Key Insight Box ── */
+  .key-insight {
+    background: var(--gold-pale);
+    border-left: 4px solid var(--gold);
+    padding: 1.3rem 1.5rem;
+    margin: 1.8rem 0;
+    border-radius: 0 6px 6px 0;
+  }
+
+  .key-insight .label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+  }
+
+  .key-insight p {
+    font-size: 0.92rem;
+    line-height: 1.8;
+    margin-bottom: 0 !important;
+    color: var(--navy);
+  }
+
+  /* ── Warning Box ── */
+  .warning-box {
+    background: #FFF8F0;
+    border-left: 4px solid #D4783C;
+    padding: 1.3rem 1.5rem;
+    margin: 1.8rem 0;
+    border-radius: 0 6px 6px 0;
+  }
+
+  .warning-box .label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: #D4783C;
+    margin-bottom: 0.5rem;
+  }
+
+  .warning-box p {
+    font-size: 0.92rem;
+    line-height: 1.8;
+    margin-bottom: 0 !important;
+  }
+
+  /* ── Tables ── */
+  .table-wrap {
+    overflow-x: auto;
+    margin: 1.5rem 0 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+
+  .article-body table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+
+  .article-body thead {
+    background: var(--navy);
+    color: var(--white);
+  }
+
+  .article-body th {
+    padding: 0.8rem 1rem;
+    text-align: left;
+    font-weight: 700;
+    font-size: 0.78rem;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+  }
+
+  .article-body td {
+    padding: 0.7rem 1rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+
+  .article-body tbody tr:nth-child(even) {
+    background: rgba(168,150,90,0.04);
+  }
+
+  .article-body tbody tr:hover {
+    background: rgba(168,150,90,0.08);
+  }
+
+  /* ── Ordered / Unordered Lists ── */
+  .article-body ol,
+  .article-body ul {
+    margin: 0.8rem 0 1.4rem 1.2em;
+  }
+
+  .article-body li {
+    margin-bottom: 0.5em;
+  }
+
+  /* ── Step Flow ── */
+  .step-flow {
+    counter-reset: step;
+    margin: 1.5rem 0 2rem;
+  }
+
+  .step-flow .step {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+    align-items: flex-start;
+  }
+
+  .step-flow .step-num {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    background: var(--navy);
+    color: var(--gold);
+    font-family: 'Source Serif 4', serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-top: 2px;
+  }
+
+  .step-flow .step-content h4 {
+    margin-top: 0;
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem;
+  }
+
+  .step-flow .step-content p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    color: var(--text-light);
+  }
+
+  /* ── Section Divider ── */
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, var(--gold), var(--border), transparent);
+    margin: 3rem 0;
+    border: none;
+  }
+
+  /* ── CTA Footer ── */
+  .article-cta {
+    background: var(--navy);
+    padding: 3rem 2rem;
+    margin-top: 4rem;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .article-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 100%, rgba(168,150,90,0.1), transparent 60%);
+  }
+
+  .article-cta h3 {
+    font-family: 'Noto Serif JP', serif;
+    color: var(--white);
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    border: none;
+    padding: 0;
+    position: relative;
+  }
+
+  .article-cta p {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+
+  .article-cta .cta-btn {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    font-weight: 700;
+    font-size: 0.88rem;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.25s;
+    position: relative;
+  }
+
+  .article-cta .cta-btn:hover {
+    background: var(--gold-light);
+    transform: translateY(-1px);
+  }
+
+  /* ── Footer ── */
+  .site-footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.75rem;
+    color: var(--text-lighter);
+    border-top: 1px solid var(--border);
+  }
+
+  /* ── Fade In Animation ── */
+  .fade-section {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .fade-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── Print Styles ── */
+  @media print {
+    .site-header, .toc-sidebar, .article-cta { display: none; }
+    .hero { margin-top: 0; padding: 2rem; }
+    .content-wrapper { grid-template-columns: 1fr; }
+    body { font-size: 11pt; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ─── Header ─── -->
+<header class="site-header">
+  <a href="/" class="logo">WING</a>
+  <div class="breadcrumb">
+    <a href="/">ホーム</a>
+    <span>/</span>
+    <a href="/blog">コラム</a>
+    <span>/</span>
+    HSコード完全ガイド
+  </div>
+</header>
+
+<!-- ─── Hero ─── -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="category-label">Trade &amp; Logistics</div>
+    <h1>HSコード完全ガイド：<br>国際貿易の<em>品目分類</em>を<br>戦略的武器に変える</h1>
+    <p class="subtitle">
+      関税コストの最適化、EPAの戦略的活用、通関リスクの回避──。
+      すべてはHSコードの正確な理解から始まる。構造・通則・検索手法・改訂動向まで、
+      実務者が押さえるべき品目分類の全体像を体系的に解説する。
+    </p>
+    <div class="meta-bar">
+      <span>著者：Wing編集部</span>
+      <div class="divider"></div>
+      <span>公開：2026年3月</span>
+      <div class="divider"></div>
+      <span>読了時間：約20分</span>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Content ─── -->
+<div class="content-wrapper">
+
+  <!-- Sidebar TOC -->
+  <aside class="toc-sidebar" id="toc">
+    <div class="toc-title">目次</div>
+    <a href="#sec1">HSコードとは何か</a>
+    <a href="#sec2">多層的な重要性</a>
+    <a href="#sec3">階層構造とナショナルコード</a>
+    <a href="#sec4">通則（GRI）の体系</a>
+    <a href="#sec5">Webタリフ検索フロー</a>
+    <a href="#sec6">World Tariffの戦略活用</a>
+    <a href="#sec7">他法令との紐付け</a>
+    <a href="#sec8">事前教示制度</a>
+    <a href="#sec9">EPA運用とHSコード</a>
+    <a href="#sec10">HS改訂：2022→2028</a>
+    <a href="#sec11">誤分類パターンと回避策</a>
+    <a href="#sec12">結語</a>
+  </aside>
+
+  <!-- Article Body -->
+  <article class="article-body">
+
+    <!-- §1 -->
+    <section class="fade-section" id="sec1">
+      <h2>HSコードとは何か</h2>
+      <p>
+        グローバル経済の複雑性が増す現代で、国境を越える貨物の円滑な移動を支える「共通言語」──それが、世界税関機構（WCO）が管理する<strong>「商品の名称及び分類についての統一システム（Harmonized System）」</strong>、通称HSコードである。
+      </p>
+      <p>
+        1988年のHS条約発効以来、日本を含む200以上の国と地域がこのシステムを採用し、世界貿易の95%以上をカバーする国際基準として機能している。その本質は、言語や商習慣が異なる国々の間で商品の定義を標準化し、税関当局が適切に関税・統計を処理できる基盤を提供することにある。
+      </p>
+      <div class="key-insight">
+        <div class="label">&#9670; KEY INSIGHT</div>
+        <p>HSコードの特定は単なる事務手続きではない。企業の法的コンプライアンス、関税コストの最適化、サプライチェーンの安定性を左右する<strong>戦略的業務</strong>である。</p>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- §2 -->
+    <section class="fade-section" id="sec2">
+      <h2>HSコードの多層的な重要性</h2>
+
+      <h3>貿易円滑化とコンプライアンス</h3>
+      <p>
+        国際取引における初期段階の必須事項は、発送する製品が仕向地で輸入可能かどうかの確認である。HSコードは物品を適切に識別・分類するための中心的要素であり、正確な分類によって通関手続きがスムーズに進み、不必要な遅延や貨物の差し止めを回避できる。
+      </p>
+      <div class="warning-box">
+        <div class="label">&#9888; 誤分類のリスク</div>
+        <p>誤った分類は、関税の過払いによるコスト増大、過少申告による罰金・追徴課税、さらには貨物の長期間にわたる滞留といった深刻なリスクを招く。</p>
+      </div>
+
+      <h3>関税率の決定と経済的インパクト</h3>
+      <p>
+        HSコードの最も直接的な機能は、輸入品に課される<strong>関税率（Duty Rate）の決定</strong>である。同一の産品であってもHSコードが1つ異なれば、適用される税率は数%から数十%まで変動し得る。この差は、企業の利益率に直結するコスト管理の根幹を成す。
+      </p>
+      <p>
+        さらに、FTA/EPAの枠組みにおいて特恵税率の適用資格を証明する「原産地規則」もHSコードをベースに規定されており、正確な分類の重要性はさらに高まっている。
+      </p>
+
+      <h3>貿易統計と市場分析への寄与</h3>
+      <p>
+        各国政府や企業は、HSコードに基づく貿易統計を利用して世界経済の動向や特定市場の需要を分析する。HSコードは関税行政のツールであると同時に、グローバルな事業戦略を策定するための<strong>ビジネスインテリジェンスの基盤</strong>でもある。
+      </p>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- §3 -->
+    <section class="fade-section" id="sec3">
+      <h2>HSコードの階層構造とナショナルコード</h2>
+
+      <h3>世界共通の6桁レベル</h3>
+      <p>
+        HSコードは左から桁数が増えるごとに、より詳細な品目へと分類されるピラミッド型の階層構造を持つ。最初の6桁はWCOが管理する世界共通の番号であり、以下の3つの構成要素に分解される。
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>桁数</th><th>名称</th><th>内容と役割</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>上2桁</strong></td><td>類（Chapter）</td><td>物品の大きな区分。01類（動物）〜97類（美術品等）</td></tr>
+            <tr><td><strong>上4桁</strong></td><td>項（Heading）</td><td>類をさらに具体的特徴や材質で細分化した中分類</td></tr>
+            <tr><td><strong>上6桁</strong></td><td>号（Subheading）</td><td>国際的に合意された最も細かい分類。統計・関税率適用の最小単位</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        例えば、清酒などの発酵飲料は「<strong>2206.00</strong>」という6桁で世界的に認識される。この共通性が、異なる言語圏の間での意思疎通を可能にしている。
+      </p>
+
+      <h3>各国固有のナショナルコード（統計細分）</h3>
+      <p>
+        HS条約では6桁までの統一が義務付けられているが、7桁目以降は各国の裁量で独自の細分化が許容されている。日本では輸出時に10桁（輸出統計品目表）、輸入時に9桁（実行関税率表）が使用される。EUでは独自のCNコード（8桁）やTARICコード（10桁）が運用されている。
+      </p>
+      <div class="key-insight">
+        <div class="label">&#9670; 実務のポイント</div>
+        <p>6桁までの「国際基準」と、それ以降の「各国事情」を明確に区別して理解することが、実務上の混乱を避ける鍵となる。</p>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- §4 -->
+    <section class="fade-section" id="sec4">
+      <h2>分類判断の法的基盤：通則（GRI）</h2>
+      <p>
+        HSコードの決定は、品名の類似性で選ぶ作業ではなく、<strong>「HS品目表の解釈に関する通則（GRI）」</strong>という厳格な法的ルールに基づいて行われる。通則は1から6まで存在し、優先順位に従って適用される。
+      </p>
+
+      <h3>通則1：項の規定と注による最優先の原則</h3>
+      <p>
+        分類の基本は、4桁の「項」の規定と、関連する「部」「類」の<strong>「注（Notes）」</strong>に従うことである。部や類のタイトルは検索の便宜上の見出しに過ぎず、法的な分類根拠とはならない。
+      </p>
+      <div class="warning-box">
+        <div class="label">&#9888; 最も多い過ち</div>
+        <p>「注」を精読せずに品名だけで判断すること。注記には除外規定や定義規定など、分類を決定づける情報が含まれている。</p>
+      </div>
+
+      <h3>通則2：未完成品と混合物の分類拡張</h3>
+      <p>
+        <strong>通則2(a):</strong> 完成品としての「重要な特性」を有しているならば、未完成品や分解品であっても完成品と同じ項に分類する。
+      </p>
+      <p>
+        <strong>通則2(b):</strong> ある材料に他の材料が混合されている場合、それらの材料が含まれる項を検討の対象とする。
+      </p>
+
+      <h3>通則3：競合する複数の項がある場合</h3>
+      <p>物品が2つ以上の項に該当しそうな場合、(a)→(b)→(c)の順で検討する。</p>
+
+      <h4>通則3(a)：特殊限定の原則</h4>
+      <p>
+        最も特殊な限定をして記載している項を、一般的な記載の項に優先させる。例えば「自動車用の強化ガラス」は、「ガラス製品」より「自動車の部品（のうちのガラス）」を優先する。
+      </p>
+
+      <h4>通則3(b)：重要な特性の原則</h4>
+      <p>
+        混合物、複合貨物、小売用セット品については、「重要な特性」を与えている材料・構成要素に従って分類する。
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>対象物品</th><th>構成内容</th><th>分類結果と論拠</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>理容セット</td><td>ヘアークリッパー、くし、ハサミ、ブラシ</td><td>クリッパーが主要機能を担うため8510項に分類</td></tr>
+            <tr><td>サンドイッチ</td><td>パン、牛肉、チーズ、野菜</td><td>牛肉が味・価値・栄養で支配的であれば調製食料品に分類</td></tr>
+            <tr><td>リチウム蓄電池</td><td>リチウム、制御基板、ケース</td><td>リチウムが本質的性能を決定するため8507.60号に分類</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        「重要な特性」の判定では、重量・容積・数量・価格といった定量的要素に加え、使用目的という定性的要素も総合的に評価される。
+      </p>
+
+      <h4>通則3(c)：最終項の原則</h4>
+      <p>(a)や(b)で決定できない場合、該当候補の中で番号の順序が最後になる項に分類する。</p>
+
+      <h3>通則4〜6：補完的役割</h3>
+      <p>
+        <strong>通則4：</strong>どの項にも分類できない物品は、最も類似する物品の項に分類する。<br>
+        <strong>通則5：</strong>特定物品を収容するための容器（カメラケース等）は、中身と同じ項に分類する。<br>
+        <strong>通則6：</strong>6桁の号の分類は、号の規定・号の注に従い、同レベルの号同士を比較して決定する。
+      </p>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- §5 -->
+    <section class="fade-section" id="sec5">
+      <h2>実行関税率表（Webタリフ）の検索フロー</h2>
+      <p>
+        日本の税関が提供する<strong>「実行関税率表（Webタリフ）」</strong>は、実務者がHSコードと税率を特定するための最も標準的なツールである。しかし、その操作には独特のルールと慎重さが求められる。
+      </p>
+
+      <div class="step-flow">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h4>商品仕様の完全な把握</h4>
+            <p>原材料、構造、用途、製造工程を整理。情報が欠けるとWebタリフ上の「条件分岐」に対応できない。</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h4>上位分類（部・類）からの絞り込み</h4>
+            <p>キーワード検索でいきなり特定番号に飛びつくのは危険。まず21の「部」から大分類を選択し、「類」へ進む。</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h4>類注・部注の徹底確認</h4>
+            <p>選択した類の冒頭にある「類注」を確認。自分の商品がその類から除外されていないかを必ずチェック。</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <h4>段落ち（インデント）による横並び比較</h4>
+            <p>同じ数のダッシュを持つ項目同士を横並びで比較する。階層構造を無視して深い項目を選ぶのは誤分類の原因。</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <div class="step-content">
+            <h4>他法令と条件文の確認</h4>
+            <p>「～に限る」「～を除く」の条件文を確認。右側の「他法令」欄で規制対象かどうかもチェック。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="warning-box">
+        <div class="label">&#9888; Webタリフで最も多い失敗</div>
+        <p>品名だけを見て類注を読まずに進めること。これが誤分類の最大の原因である。</p>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- §6 -->
+    <section class="fade-section" id="sec6">
+      <h2>JETRO World Tariffの戦略的活用</h2>
+      <p>
+        輸出実務では、日本国内のコードだけでなく、相手国での関税を知る必要がある。<strong>JETRO「World Tariff」</strong>は、日本国内居住者であれば無料で使える強力なデータベースである。
+      </p>
+
+      <h3>主な活用ポイント</h3>
+      <ul>
+        <li><strong>MFN税率：</strong>WTO加盟国に一律適用される通常税率の確認</li>
+        <li><strong>EPA/FTA税率：</strong>特定の協定を利用した場合の減免税率の比較</li>
+        <li><strong>譲許表：</strong>今後数年間にわたる段階的な関税削減スケジュールの確認</li>
+      </ul>
+
+      <div class="key-insight">
+        <div class="label">&#9670; 戦略的価値</div>
+        <p>World Tariffを活用することで、自社製品が競合他国（韓国、ASEAN諸国等）と比べて対象国で関税上の優位性があるか否かを定量的に把握できる。これは輸出価格の設定や市場選定における極めて重要な判断材料となる。</p>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- §7 -->
+    <section class="fade-section" id="sec7">
+      <h2>他法令（非関税障壁）との紐付け</h2>
+      <p>
+        HSコードは関税徴収だけでなく、厚生労働省、農林水産省、経済産業省などが管轄する<strong>「他法令」の規制適用の判断基準</strong>ともなっている。
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>法令コード</th><th>根拠法令</th><th>主な規制対象</th><th>管轄</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>FD</td><td>食品衛生法</td><td>飲食物、添加物、食器、乳幼児用玩具</td><td>厚生労働省</td></tr>
+            <tr><td>PA</td><td>薬機法</td><td>医薬品、化粧品、医療機器</td><td>厚生労働省</td></tr>
+            <tr><td>PL</td><td>植物防疫法</td><td>苗、種子、切り花、野菜、果実</td><td>農林水産省</td></tr>
+            <tr><td>AN</td><td>家畜伝染病予防法</td><td>肉類、卵、乳製品、動物</td><td>農林水産省</td></tr>
+            <tr><td>IQ/WA</td><td>輸入貿易管理令</td><td>輸入割当品、ワシントン条約該当品</td><td>経済産業省</td></tr>
+            <tr><td>FE/ET</td><td>外為法</td><td>武器、高性能機械、特定化学物質</td><td>経済産業省</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="warning-box">
+        <div class="label">&#9888; 実務上の落とし穴</div>
+        <p>他法令の確認を怠り、必要な届出や検査合格証なしに輸入しようとすれば、貨物は保税地域から一歩も出せず、多額の保管料（デマレージ）が発生する。</p>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- §8 -->
+    <section class="fade-section" id="sec8">
+      <h2>事前教示制度：法的確実性を確保する</h2>
+      <p>
+        分類に迷いがある場合や新製品で前例がない場合、自己判断で進めることは大きなリスクを伴う。そこで活用すべきなのが税関の<strong>「事前教示制度（Advance Ruling）」</strong>である。
+      </p>
+
+      <h3>活用メリット</h3>
+      <ul>
+        <li><strong>原価計算の確実性：</strong>事前に正確な税率が判明し、輸入・販売計画の立案が正確に行える</li>
+        <li><strong>通関の迅速化：</strong>回答書の提示により税関審査時間が大幅に短縮</li>
+        <li><strong>全国共通の安定性：</strong>文書回答は原則3年間有効、全国どこの税関でも尊重される</li>
+        <li><strong>不服申立ての権利：</strong>教示内容に不服がある場合、異議申立てが可能</li>
+      </ul>
+
+      <h3>申請の実務ステップ</h3>
+      <ol>
+        <li>照会書（様式C-1000）に品名・成分・製法・用途・包装状態を精緻に記載</li>
+        <li>カタログ、写真、図面、原材料表、製造工程フロー図を添付。可能であれば実物サンプルを提出</li>
+        <li>NACCS（輸出入・港湾関連情報処理システム）を通じたオンライン申請の活用</li>
+      </ol>
+
+      <div class="key-insight">
+        <div class="label">&#9670; 注意点</div>
+        <p>電話やメールによる口頭照会の回答は単なる「参考」であり、実際の通関審査において法的拘束力を持たない。法的確実性を得るには、必ず文書による照会を行うこと。</p>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- §9 -->
+    <section class="fade-section" id="sec9">
+      <h2>EPA運用とHSコードの整合性</h2>
+      <p>
+        EPAを利用して関税メリットを享受するには、HSコードの管理がさらに高度な次元で要求される。
+      </p>
+
+      <h3>関税分類変更基準（CTC）の重要性</h3>
+      <p>
+        原産地規則の一つ「CTCルール」は、非原産材料から完成品を製造した際にHSコードが変化していれば「実質的な変更」とみなすルールである。
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>基準</th><th>要件</th><th>厳格度</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>CC</strong></td><td>上2桁（類）の変化</td><td>厳しい</td></tr>
+            <tr><td><strong>CTH</strong></td><td>上4桁（項）の変化</td><td>標準的</td></tr>
+            <tr><td><strong>CTSH</strong></td><td>上6桁（号）の変化</td><td>比較的緩やか</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="warning-box">
+        <div class="label">&#9888; 重大リスク</div>
+        <p>完成品のHSコードを誤って特定した場合、CTCルールの判定自体が無効となり、事後調査（検認）で特恵関税の適用が否認され、多額の追徴課税を受けるリスクがある。</p>
+      </div>
+
+      <h3>輸入国と輸出国のHSコード不一致問題</h3>
+      <p>
+        輸出者が発行した原産地証明書のHSコードが輸入国の税関見解と異なる場合、原則として<strong>「輸入国の税関の判断」が優先</strong>される。この不一致は特恵関税の適用拒否だけでなく、不実の申告とみなされるリスクもある。事前に相手国のHSコード判定を確認しておくことがプロの実務者としてのリスクヘッジとなる。
+      </p>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- §10 -->
+    <section class="fade-section" id="sec10">
+      <h2>技術革新とHSコードの動的改訂</h2>
+      <p>
+        HSコードはテクノロジーの進化や新産業の誕生に合わせ、通常5年ごとに大規模改訂が行われる。最新の改訂サイクルを把握し、常に最新コードを使用することはコンプライアンスの基本である。
+      </p>
+
+      <h3>HS2022改訂の主要変更点</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>改訂品目</th><th>変更の内容と背景</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>スマートフォン</strong></td><td>専用のサブヘディング（8517.13）が新設</td></tr>
+            <tr><td><strong>ドローン</strong></td><td>「無人航空機」として独立した項（8806）を設定</td></tr>
+            <tr><td><strong>3Dプリンター</strong></td><td>加算製造（AM）のための分類が新設・明確化</td></tr>
+            <tr><td><strong>EV / HV</strong></td><td>電気自動車・ハイブリッド車の構成部品分類を見直し</td></tr>
+            <tr><td><strong>電子タバコ</strong></td><td>健康・規制の観点から独立した分類を設定</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>次期改訂 HS2028の動向</h3>
+      <p>
+        次回改訂は当初「HS2027」として予定されていたが、コロナ禍の影響で見直し作業が遅延し、<strong>2028年1月1日発効</strong>となることがWCOで正式決定されている。サーキュラー・エコノミー関連の再製造品や、デジタル技術製品のさらなる細分化が議論される見通しであり、実務者は数年後の大きな変化に備える必要がある。
+      </p>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- §11 -->
+    <section class="fade-section" id="sec11">
+      <h2>誤分類の典型パターンと回避策</h2>
+
+      <h3>1.「材質」と「用途」の優先順位の取り違え</h3>
+      <p>
+        「プラスチック製の椅子」を分類する場合、材質に注目して第39類（プラスチック製品）を選ぶミスが頻発する。しかし、HS品目表では「家具」としての用途を優先する規定があり、第94類（家具）が正解である。
+      </p>
+      <p><strong>対策：</strong>常に類注を読み、その類から除外されている用途品がないか確認する。</p>
+
+      <h3>2.「部分品」と「付属品」の混同</h3>
+      <p>
+        ある機械の専用部品であっても、汎用性のある「汎用部分品（ネジ、スプリング、ベアリング等）」は、機械の項ではなく、材質や機能に応じた個別の項に分類される。
+      </p>
+      <p><strong>対策：</strong>第15部（卑金属）や第16部（機械類）の部注にある「汎用部分品」の定義を精読する。</p>
+
+      <h3>3. 海外インボイス記載コードの盲信</h3>
+      <p>
+        海外の輸出者がインボイスに記載したHSコードをそのまま使用するケースがある。6桁以降は国により異なり、6桁レベルでも輸出者側の誤解があることが多い。
+      </p>
+      <p><strong>対策：</strong>輸入者が自ら実行関税率表を照合し、日本国内の基準で再分類を行う「再確認プロセス」を社内ワークフローに組み込む。</p>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- §12 -->
+    <section class="fade-section" id="sec12">
+      <h2>結語：品目分類スキルの戦略的価値</h2>
+      <p>
+        HSコードの特定は、数字の割り当て作業ではなく、国際条約、国内法、技術仕様、経済外交の成果（EPA）が交差する<strong>高度に知的で専門的なプロセス</strong>である。
+      </p>
+      <p>
+        正確な品目分類を実践することは、関税コスト削減を通じた価格競争力の強化、他法令の事前確認によるサプライチェーンの強靭化、そしてEPAの戦略的活用によるグローバル展開の加速へと繋がる。
+      </p>
+      <p>
+        目まぐるしく変化する国際情勢と技術革新の中にあって、常に原典（HS条約や最新の実行関税率表）に立ち返り、論理的な裏付けを持って分類を行う姿勢こそが、プロフェッショナルな貿易管理の根幹を成すものである。
+      </p>
+    </section>
+
+    <!-- CTA -->
+    <div class="article-cta">
+      <h3>貿易DXに関する無料相談を実施中</h3>
+      <p>HSコードの管理体制、通関業務の効率化、EPA活用の最適化──<br>貴社の課題に合わせた具体的な改善策をご提案します。</p>
+      <a href="/contact" class="cta-btn">無料相談に申し込む &rarr;</a>
+    </div>
+
+  </article>
+</div>
+
+<!-- ─── Footer ─── -->
+<footer class="site-footer">
+  &copy; 2026 Wings株式会社. All rights reserved.
+</footer>
+
+<!-- ─── Scripts ─── -->
+<script>
+  // Intersection Observer for fade-in sections
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.fade-section').forEach(el => observer.observe(el));
+
+  // Active TOC highlight on scroll
+  const tocLinks = document.querySelectorAll('.toc-sidebar a');
+  const sections = document.querySelectorAll('[id^="sec"]');
+
+  const tocObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        tocLinks.forEach(link => link.classList.remove('active'));
+        const activeLink = document.querySelector(`.toc-sidebar a[href="#${entry.target.id}"]`);
+        if (activeLink) activeLink.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-80px 0px -70% 0px' });
+
+  sections.forEach(sec => tocObserver.observe(sec));
+</script>
+
+</body>
+</html>
