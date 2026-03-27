@@ -140,7 +140,7 @@ html[lang="en"] .ja-only {
       <li><a href="#services" class="nav-link text-[.76rem] tracking-wide transition-colors px-3.5 py-1 border-r border-white/10" data-ja="サービス" data-en="Services">サービス</a></li>
       <li class="ja-only"><a href="#about" class="nav-link text-[.76rem] tracking-wide transition-colors px-3.5 py-1 border-r border-white/10">代表</a></li>
       <li><a href="#products" class="nav-link text-[.76rem] tracking-wide transition-colors px-3.5 py-1 border-r border-white/10" data-ja="AIプロダクト" data-en="AI Products">AIプロダクト</a></li>
-      <li><a href="#resources" class="nav-link text-[.76rem] tracking-wide transition-colors px-3.5 py-1 border-r border-white/10" data-ja="ホワイトペーパー" data-en="Resources">ホワイトペーパー</a></li>
+      <li><a href="#blog" class="nav-link text-[.76rem] tracking-wide transition-colors px-3.5 py-1 border-r border-white/10" data-ja="インサイト" data-en="Insights">インサイト</a></li>
       <li><a href="#flow" class="nav-link text-[.76rem] tracking-wide transition-colors px-3.5 py-1 border-r border-white/10" data-ja="相談の流れ" data-en="Service Menu">相談の流れ</a></li>
       <li><a href="#blog" class="nav-link text-[.76rem] tracking-wide transition-colors px-3.5 py-1 border-r border-white/10" data-ja="コラム" data-en="Insights">コラム</a></li>
       <li>
@@ -165,7 +165,7 @@ html[lang="en"] .ja-only {
     <li><a href="#services" class="text-sm text-ink-mid" data-ja="サービス" data-en="Services">サービス</a></li>
     <li class="ja-only"><a href="#about" class="text-sm text-ink-mid">代表</a></li>
     <li><a href="#products" class="text-sm text-ink-mid" data-ja="AIプロダクト" data-en="AI Products">AIプロダクト</a>
-    <a href="#resources" class="text-sm text-ink-mid" data-ja="ホワイトペーパー" data-en="Resources">ホワイトペーパー</a>
+    <a href="#blog" class="text-sm text-ink-mid" data-ja="インサイト" data-en="Insights">インサイト</a>
     <a href="#flow" class="text-sm text-ink-mid" data-ja="相談の流れ" data-en="Service Menu">相談の流れ</a></li>
     <li><a href="#blog" class="text-sm text-ink-mid" data-ja="コラム" data-en="Insights">コラム</a></li>
     <li><a href="#contact" class="text-sm font-medium text-white bg-navy px-4 py-2 rounded-sm inline-block" data-ja="相談する" data-en="Contact">相談する</a></li>
@@ -809,197 +809,6 @@ html[lang="en"] .ja-only {
 </section>
 
 
-<!-- ─── WHITEPAPER ──────────────────────────────────────── -->
-<section class="reveal py-24 px-6 md:px-10 bg-white border-t border-[#E2E0DA]" id="resources">
-  <div class="max-w-5xl mx-auto">
-    <p class="display text-[.67rem] font-medium tracking-[.2em] uppercase text-gold mb-3">Resources</p>
-    <h2 class="serif text-[clamp(1.6rem,3vw,2.4rem)] font-medium text-ink leading-snug mb-4">
-      <span data-ja="ホワイトペーパー・調査レポート" data-en="Whitepapers &amp; Reports">ホワイトペーパー・調査レポート</span>
-    </h2>
-    <div class="gold-rule mb-6"></div>
-    <p class="text-[.9rem] text-ink-mid leading-[1.85] max-w-xl mb-14" data-ja="DX推進・AI活用・グローバル展開に関する実務知見を体系化したレポートを公開しています。無料でダウンロードいただけます。" data-en="We publish reports based on real-world expertise in DX, AI adoption, and global expansion. Free to download.">
-      DX推進・AI活用・グローバル展開に関する実務知見を体系化したレポートを公開しています。無料でダウンロードいただけます。
-    </p>
-
-    <!-- Category filter -->
-    <div class="flex flex-wrap gap-2 mb-10">
-      <button onclick="filterWP('all')" class="wp-filter active display text-[.68rem] font-medium tracking-wide px-4 py-1.5 border rounded-sm transition-colors" data-ja="すべて" data-en="All">すべて</button>
-      <button onclick="filterWP('dx')" class="wp-filter display text-[.68rem] font-medium tracking-wide px-4 py-1.5 border rounded-sm transition-colors" data-ja="DX推進・IT戦略" data-en="DX &amp; IT Strategy">DX推進・IT戦略</button>
-      <button onclick="filterWP('ai')" class="wp-filter display text-[.68rem] font-medium tracking-wide px-4 py-1.5 border rounded-sm transition-colors" data-ja="AI活用・生成AI" data-en="AI &amp; Generative AI">AI活用・生成AI</button>
-      <button onclick="filterWP('trade')" class="wp-filter display text-[.68rem] font-medium tracking-wide px-4 py-1.5 border rounded-sm transition-colors" data-ja="貿易・サプライチェーン" data-en="Trade &amp; Supply Chain">貿易・サプライチェーン</button>
-      <button onclick="filterWP('global')" class="wp-filter display text-[.68rem] font-medium tracking-wide px-4 py-1.5 border rounded-sm transition-colors" data-ja="グローバル展開" data-en="Global Expansion">グローバル展開</button>
-    </div>
-
-    <!-- Whitepaper cards grid -->
-    <div id="wp-grid" class="grid md:grid-cols-3 gap-5">
-
-      <!-- Placeholder 1: DX -->
-      <article class="wp-card" data-cat="dx"
-        itemscope itemtype="https://schema.org/Article">
-        <div class="bg-white border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors flex flex-col h-full">
-          <div class="bg-[#F0EDE6] aspect-[16/9] flex items-center justify-center border-b border-[#E2E0DA]">
-            <div class="text-center px-6">
-              <p class="display text-[.6rem] font-medium tracking-[.16em] uppercase text-gold/60 mb-2">Coming Soon</p>
-              <p class="serif text-[1.1rem] font-medium text-ink/50 leading-snug" data-ja="DX推進白書 2026" data-en="DX Whitepaper 2026">DX推進白書 2026</p>
-            </div>
-          </div>
-          <div class="p-5 flex flex-col flex-1">
-            <div class="flex items-center gap-2 mb-3">
-              <span class="display text-[.6rem] font-medium tracking-[.1em] uppercase text-gold bg-gold/08 border border-gold/20 px-2 py-0.5 rounded-sm" data-ja="DX推進・IT戦略" data-en="DX &amp; IT Strategy">DX推進・IT戦略</span>
-            </div>
-            <h3 class="text-[.9rem] font-medium text-ink mb-2 leading-snug" itemprop="headline" data-ja="日本企業のDX推進における実態と成功パターン" data-en="DX Adoption in Japanese Companies: Reality and Success Patterns">
-              日本企業のDX推進における実態と成功パターン
-            </h3>
-            <p class="text-[.76rem] text-ink-mid leading-relaxed flex-1 mb-4" itemprop="description" data-ja="大手・中堅企業のDX推進における課題と成功要因を分析。「戦略と実行の断絶」「現場定着の失敗」を防ぐための実践的フレームワークを解説します。" data-en="Analyzing challenges and success factors in DX for large and mid-sized firms. A practical framework to prevent strategy-execution gaps and adoption failures.">
-              大手・中堅企業のDX推進における課題と成功要因を分析。「戦略と実行の断絶」「現場定着の失敗」を防ぐための実践的フレームワークを解説します。
-            </p>
-            <div class="flex items-center justify-between pt-3 border-t border-[#E2E0DA]">
-              <span class="display text-[.62rem] text-ink-light" data-ja="準備中" data-en="In preparation">準備中</span>
-              <span class="display text-[.62rem] text-gold/60 font-medium" data-ja="近日公開" data-en="Coming soon">近日公開</span>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- Placeholder 2: AI -->
-      <article class="wp-card" data-cat="ai"
-        itemscope itemtype="https://schema.org/Article">
-        <div class="bg-white border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors flex flex-col h-full">
-          <div class="bg-[#F0EDE6] aspect-[16/9] flex items-center justify-center border-b border-[#E2E0DA]">
-            <div class="text-center px-6">
-              <p class="display text-[.6rem] font-medium tracking-[.16em] uppercase text-gold/60 mb-2">Coming Soon</p>
-              <p class="serif text-[1.1rem] font-medium text-ink/50 leading-snug" data-ja="生成AI活用ガイド" data-en="Generative AI Guide">生成AI活用ガイド</p>
-            </div>
-          </div>
-          <div class="p-5 flex flex-col flex-1">
-            <div class="flex items-center gap-2 mb-3">
-              <span class="display text-[.6rem] font-medium tracking-[.1em] uppercase text-gold bg-gold/08 border border-gold/20 px-2 py-0.5 rounded-sm" data-ja="AI活用・生成AI" data-en="AI &amp; Generative AI">AI活用・生成AI</span>
-            </div>
-            <h3 class="text-[.9rem] font-medium text-ink mb-2 leading-snug" itemprop="headline" data-ja="エンタープライズにおける生成AI活用の実践ガイド" data-en="Practical Guide to Enterprise Generative AI Adoption">
-              エンタープライズにおける生成AI活用の実践ガイド
-            </h3>
-            <p class="text-[.76rem] text-ink-mid leading-relaxed flex-1 mb-4" itemprop="description" data-ja="ChatGPT・Copilot等の生成AIを業務に定着させるための導入ステップ、リスク管理、ROI測定手法を企業規模別に解説します。" data-en="Implementation steps, risk management, and ROI measurement for adopting ChatGPT, Copilot, and other generative AI tools, by company size.">
-              ChatGPT・Copilot等の生成AIを業務に定着させるための導入ステップ、リスク管理、ROI測定手法を企業規模別に解説します。
-            </p>
-            <div class="flex items-center justify-between pt-3 border-t border-[#E2E0DA]">
-              <span class="display text-[.62rem] text-ink-light" data-ja="準備中" data-en="In preparation">準備中</span>
-              <span class="display text-[.62rem] text-gold/60 font-medium" data-ja="近日公開" data-en="Coming soon">近日公開</span>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- Card 1: Trade DX (Published) -->
-      <article class="wp-card" data-cat="trade"
-        itemscope itemtype="https://schema.org/Article">
-        <a href="trade-dx-lp.html" target="_blank" rel="noopener"
-           class="bg-white border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors flex flex-col h-full group block">
-          <div class="bg-navy aspect-[16/9] flex flex-col items-start justify-end p-5 border-b border-[#E2E0DA] relative overflow-hidden">
-            <div class="absolute inset-0 opacity-10" style="background:radial-gradient(ellipse at 80% 20%,#A8965A 0%,transparent 60%)"></div>
-            <span class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2 relative z-10">White Paper — 貿易オペレーション × DX</span>
-            <p class="serif text-[1.1rem] font-medium text-white leading-snug relative z-10" data-ja-html="貿易DXが止まる<br>本当の理由" data-en-html="Why Trade DX<br>Stalls">貿易DXが止まる<br>本当の理由</p>
-          </div>
-          <div class="p-5 flex flex-col flex-1">
-            <div class="flex items-center gap-2 mb-3">
-              <span class="display text-[.6rem] font-medium tracking-[.1em] uppercase text-gold bg-gold/08 border border-gold/20 px-2 py-0.5 rounded-sm" data-ja="貿易・サプライチェーン" data-en="Trade &amp; Supply Chain">貿易・サプライチェーン</span>
-              <span class="display text-[.6rem] font-medium tracking-[.1em] uppercase text-white bg-navy px-2 py-0.5 rounded-sm" data-ja="公開中" data-en="Published">公開中</span>
-            </div>
-            <h3 class="text-[.9rem] font-medium text-ink mb-2 leading-snug" itemprop="headline" data-ja="貿易DXが止まる本当の理由は、ツールではなく「仕組みの断絶」にある" data-en="Why Trade DX Stalls: It's Not the Tools, It's the Process Gaps">
-              貿易DXが止まる本当の理由は、ツールではなく「仕組みの断絶」にある
-            </h3>
-            <p class="text-[.76rem] text-ink-mid leading-relaxed flex-1 mb-4" itemprop="description" data-ja="総合商社の米州法人で年間30万ドルの物流ペナルティを80%以上削減。SAPの壁を突破した「業務設計ファースト」のアプローチを一次情報をもとに解説します。" data-en="Reduced $300K+ annual logistics penalties by over 80% at a trading company's Americas subsidiary. A first-hand account of the 'process-design-first' approach that overcame SAP barriers.">
-              総合商社の米州法人で年間30万ドルの物流ペナルティを80%以上削減。SAPの壁を突破した「業務設計ファースト」のアプローチを一次情報をもとに解説します。
-            </p>
-            <div class="grid grid-cols-3 gap-2 mb-4">
-              <div class="bg-[#F7F5F0] rounded-sm p-2 text-center">
-                <p class="serif text-[1rem] font-medium text-gold leading-none">80%+</p>
-                <p class="display text-[.58rem] text-ink-mid mt-1 leading-tight" data-ja-html="Demurrage<br>削減率" data-en-html="Demurrage<br>Reduction">Demurrage<br>削減率</p>
-              </div>
-              <div class="bg-[#F7F5F0] rounded-sm p-2 text-center">
-                <p class="serif text-[1rem] font-medium text-gold leading-none">300h</p>
-                <p class="display text-[.58rem] text-ink-mid mt-1 leading-tight" data-ja-html="月間工数<br>削減" data-en-html="Monthly Hours<br>Saved">月間工数<br>削減</p>
-              </div>
-              <div class="bg-[#F7F5F0] rounded-sm p-2 text-center">
-                <p class="serif text-[1rem] font-medium text-gold leading-none" data-ja="初年度" data-en="Year 1">初年度</p>
-                <p class="display text-[.58rem] text-ink-mid mt-1 leading-tight" data-ja-html="IT投資<br>ROI回収" data-en-html="IT Investment<br>ROI Payback">IT投資<br>ROI回収</p>
-              </div>
-            </div>
-            <div class="flex items-center justify-between pt-3 border-t border-[#E2E0DA]">
-              <span class="display text-[.62rem] text-ink-light" data-ja="無料公開" data-en="Free access">無料公開</span>
-              <span class="display text-[.62rem] text-gold font-medium group-hover:underline" data-ja="詳細を読む →" data-en="Read more →">詳細を読む →</span>
-            </div>
-          </div>
-        </a>
-      </article>
-
-      <!-- Placeholder 4: Global -->
-      <article class="wp-card" data-cat="global"
-        itemscope itemtype="https://schema.org/Article">
-        <div class="bg-white border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors flex flex-col h-full">
-          <div class="bg-[#F0EDE6] aspect-[16/9] flex items-center justify-center border-b border-[#E2E0DA]">
-            <div class="text-center px-6">
-              <p class="display text-[.6rem] font-medium tracking-[.16em] uppercase text-gold/60 mb-2">Coming Soon</p>
-              <p class="serif text-[1.1rem] font-medium text-ink/50 leading-snug" data-ja="ASEAN展開ガイド" data-en="ASEAN Expansion Guide">ASEAN展開ガイド</p>
-            </div>
-          </div>
-          <div class="p-5 flex flex-col flex-1">
-            <div class="flex items-center gap-2 mb-3">
-              <span class="display text-[.6rem] font-medium tracking-[.1em] uppercase text-gold bg-gold/08 border border-gold/20 px-2 py-0.5 rounded-sm" data-ja="グローバル展開" data-en="Global Expansion">グローバル展開</span>
-            </div>
-            <h3 class="text-[.9rem] font-medium text-ink mb-2 leading-snug" itemprop="headline" data-ja="日系企業のASEAN拠点DX：標準化と現地適応の両立" data-en="ASEAN DX for Japanese Companies: Balancing Standardization and Local Adaptation">
-              日系企業のASEAN拠点DX：標準化と現地適応の両立
-            </h3>
-            <p class="text-[.76rem] text-ink-mid leading-relaxed flex-1 mb-4" itemprop="description" data-ja="シンガポール・タイ・ベトナム等のASEAN拠点でのシステム統合・業務標準化を進める際の障壁と、グローバルITガバナンスの構築手法を解説します。" data-en="Barriers to system integration and process standardization across ASEAN offices in Singapore, Thailand, Vietnam, and how to build global IT governance.">
-              シンガポール・タイ・ベトナム等のASEAN拠点でのシステム統合・業務標準化を進める際の障壁と、グローバルITガバナンスの構築手法を解説します。
-            </p>
-            <div class="flex items-center justify-between pt-3 border-t border-[#E2E0DA]">
-              <span class="display text-[.62rem] text-ink-light" data-ja="準備中" data-en="In preparation">準備中</span>
-              <span class="display text-[.62rem] text-gold/60 font-medium" data-ja="近日公開" data-en="Coming soon">近日公開</span>
-            </div>
-          </div>
-        </div>
-      </article>
-
-    </div>
-
-    <!-- Email capture for notification -->
-    <div class="mt-12 bg-[#F7F5F0] border border-[#E2E0DA] rounded-sm p-8 flex flex-col md:flex-row items-start md:items-center gap-6">
-      <div class="flex-1">
-        <p class="text-[.9rem] font-medium text-ink mb-1" data-ja="公開通知を受け取る" data-en="Get notified on publication">公開通知を受け取る</p>
-        <p class="text-[.78rem] text-ink-mid" data-ja="新しいホワイトペーパーが公開されたらメールでお知らせします。" data-en="We'll email you when new whitepapers are published.">新しいホワイトペーパーが公開されたらメールでお知らせします。</p>
-      </div>
-      <form id="wp-notify-form" action="https://formspree.io/f/YOUR_NOTIFY_FORM_ID" method="POST" class="flex gap-3 w-full md:w-auto">
-        <input type="hidden" name="_subject" value="【Wing】ホワイトペーパー公開通知登録">
-        <input type="email" name="email" placeholder="your@email.com" class="display text-[.82rem] text-ink bg-white border border-[#E2E0DA] px-4 py-2.5 rounded-sm outline-none focus:border-navy/40 flex-1 md:w-56 placeholder:text-ink-light transition-colors" required>
-        <button type="submit" id="notify-btn" class="display text-[.78rem] font-medium text-white bg-navy px-5 py-2.5 rounded-sm hover:bg-navy-700 transition-colors whitespace-nowrap" data-ja="登録する" data-en="Subscribe">
-          登録する
-        </button>
-      </form>
-    </div>
-  </div>
-</section>
-
-<style>
-.wp-filter { color: var(--color-ink-mid, #4A4A55); border-color: #E2E0DA; background: #fff; }
-.wp-filter:hover { border-color: #B8923A; color: #B8923A; }
-.wp-filter.active { background: #0F2342; color: #fff; border-color: #0F2342; }
-.wp-card { transition: opacity .25s, transform .25s; }
-.wp-card.hidden { display: none; }
-</style>
-
-<script>
-function filterWP(cat) {
-  document.querySelectorAll('.wp-filter').forEach(function(b) { b.classList.remove('active'); });
-  event.target.classList.add('active');
-  document.querySelectorAll('.wp-card').forEach(function(c) {
-    if (cat === 'all' || c.dataset.cat === cat) {
-      c.classList.remove('hidden');
-    } else {
-      c.classList.add('hidden');
-    }
-  });
-}
-</script>
 
 
 <!-- ─── BLOG ──────────────────────────────────────────── -->
@@ -1019,10 +828,29 @@ function filterWP(cat) {
       <button onclick="filterBlog('compliance')" data-cat="compliance" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E2E0DA] text-ink-mid hover:border-gold hover:text-gold transition-all"># コンプライアンス</button>
       <button onclick="filterBlog('logistics')" data-cat="logistics" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E2E0DA] text-ink-mid hover:border-gold hover:text-gold transition-all"># 物流DX</button>
       <button onclick="filterBlog('it-org')" data-cat="it-org" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E2E0DA] text-ink-mid hover:border-gold hover:text-gold transition-all"># IT組織</button>
+      <button onclick="filterBlog('whitepaper')" data-cat="whitepaper" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E2E0DA] text-ink-mid hover:border-gold hover:text-gold transition-all"># ホワイトペーパー</button>
+      <button onclick="filterBlog('other')" data-cat="other" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E2E0DA] text-ink-mid hover:border-gold hover:text-gold transition-all"># その他</button>
     </div>
 
     <!-- Blog Grid -->
     <div class="grid md:grid-cols-3 gap-6 mb-10" id="blog-grid">
+
+      <a href="/trade-dx-lp" data-category="whitepaper" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
+        <div class="bg-navy px-5 py-4">
+          <div class="flex gap-2 flex-wrap mb-2">
+            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># ホワイトペーパー</span>
+            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># 貿易DX</span>
+          </div>
+          <p class="text-[.92rem] font-medium text-white leading-snug group-hover:text-gold transition-colors" data-ja="貿易DXが止まる本当の理由は、ツールではなく「仕組みの断絶」にある" data-en="Why Trade DX Stalls: It's the Process Gap, Not the Tools">貿易DXが止まる本当の理由は、ツールではなく「仕組みの断絶」にある</p>
+        </div>
+        <div class="px-5 py-4">
+          <p class="text-[.75rem] text-ink-mid leading-relaxed">総合商社の米州法人でDemurrage 80%削減・月300h工数削減を実現した「業務設計ファースト」の実践レポート。</p>
+          <div class="flex items-center justify-between mt-3">
+            <span class="display text-[.62rem] text-gold font-medium">White Paper — 無料公開</span>
+            <span class="display text-[.62rem] text-ink-light">2026.03.24</span>
+          </div>
+        </div>
+      </a>
 
       <a href="/blog/poc-death-dx-consulting" data-category="ai-dx" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
         <div class="bg-navy/05 px-5 py-4">
@@ -1335,7 +1163,7 @@ function filterWP(cat) {
       <li><a href="#services" class="text-[.7rem] text-white/55 hover:text-white/90 transition-colors" data-ja="サービス" data-en="Services">サービス</a></li>
       <li class="ja-only"><a href="#about" class="text-[.7rem] text-white/55 hover:text-white/90 transition-colors">代表</a></li>
       <li><a href="#flow" class="text-[.7rem] text-white/55 hover:text-white/90 transition-colors" data-ja="AIプロダクト" data-en="AI Products">AIプロダクト</a></li>
-      <li><a href="#flow" class="text-[.7rem] text-white/55 hover:text-white/90 transition-colors" data-ja="ホワイトペーパー" data-en="Resources">ホワイトペーパー</a></li>
+      <li><a href="#blog" class="text-[.7rem] text-white/55 hover:text-white/90 transition-colors" data-ja="インサイト" data-en="Insights">インサイト</a></li>
       <li><a href="#flow" class="text-[.7rem] text-white/55 hover:text-white/90 transition-colors" data-ja="相談の流れ" data-en="Service Menu">相談の流れ</a></li>
       <li><a href="#blog" class="text-[.7rem] text-white/55 hover:text-white/90 transition-colors" data-ja="コラム" data-en="Insights">コラム</a></li>
       <li><a href="#contact" class="text-[.7rem] text-white/55 hover:text-white/90 transition-colors" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</a></li>
