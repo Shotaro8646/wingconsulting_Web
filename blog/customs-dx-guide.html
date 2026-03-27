@@ -13,6 +13,27 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
+    /* ── Diagram styles ── */
+    .diag-wrap { background:#fff; border:1px solid #E0DDD4; border-top:3px solid #A8965A; padding:1.4rem 1.5rem 1rem; margin:2rem 0 0.5rem; font-size:0.85rem; }
+    .diag-caption { text-align:center; font-size:0.72rem; color:#6B6B6B; margin-top:0.5rem; margin-bottom:2rem; }
+    .diag-pyramid { display:flex; flex-direction:column; align-items:center; gap:0.4rem; margin:0.5rem 0; }
+    .diag-pyr-layer { display:flex; align-items:center; gap:0.8rem; width:100%; max-width:560px; }
+    .diag-pyr-bar { display:flex; align-items:center; justify-content:center; color:#fff; font-size:0.78rem; font-weight:700; padding:0.7rem 1rem; text-align:center; line-height:1.4; flex:1; }
+    .diag-pyr-label { font-size:0.72rem; color:#4A4A4A; line-height:1.4; width:140px; flex-shrink:0; }
+    .diag-ba-row { display:flex; flex-wrap:wrap; gap:1rem; }
+    .diag-ba-col { flex:1 1 200px; border:1px solid #E0DDD4; padding:1rem; }
+    .diag-ba-col .ba-head { font-size:0.7rem; font-weight:700; letter-spacing:0.1em; padding:0.35rem 0.7rem; margin:-1rem -1rem 0.8rem; }
+    .diag-ba-col.before .ba-head { background:#E0DDD4; color:#4A4A4A; }
+    .diag-ba-col.after .ba-head { background:#0B1A2E; color:#A8965A; }
+    .diag-ba-col ul { list-style:none; padding:0; margin:0; }
+    .diag-ba-col li { font-size:0.78rem; color:#4A4A4A; padding:0.25rem 0; border-bottom:1px solid #F0EDE8; line-height:1.5; display:flex; gap:0.4rem; }
+    .diag-ba-col li:last-child { border-bottom:none; }
+    .diag-ba-col li .li-icon { flex-shrink:0; }
+    .diag-ba-arrow { display:flex; align-items:center; justify-content:center; font-size:1.4rem; color:#A8965A; flex-shrink:0; }
+    .diag-checklist { display:flex; flex-direction:column; gap:0.5rem; }
+    .diag-checklist-item { display:flex; align-items:flex-start; gap:0.6rem; background:#FAFAF7; border-left:3px solid #A8965A; padding:0.6rem 0.8rem; font-size:0.8rem; line-height:1.5; color:#1A1A1A; }
+    .diag-checklist-item .chk-num { background:#0B1A2E; color:#A8965A; font-weight:700; font-size:0.7rem; width:22px; height:22px; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:0.05rem; }
+
     :root {
       --navy: #0B1A2E;
       --navy-light: #132742;
@@ -418,6 +439,26 @@
 
     <p>2025年を転換点として、日本の通関を取り巻く環境は<strong>3つの層</strong>で同時に動いている。現場の自動化技術、国家レベルのインフラ刷新、そして国際基準の改定。この3つが連動することで、「通関」は事務処理からサプライチェーン全体の競争力を左右する戦略機能へと変貌しつつある。</p>
 
+    <!-- DIAGRAM: 3-layer pyramid -->
+    <div class="diag-wrap">
+      <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;">通関DXの3つの構造変化レイヤー</div>
+      <div class="diag-pyramid">
+        <div class="diag-pyr-layer" style="justify-content:center;">
+          <div class="diag-pyr-bar" style="background:#A8965A;max-width:200px;">第3層<br>国際ルール改定<br><span style="font-weight:400;font-size:0.68rem;">WCO SAFE 2025</span></div>
+          <div class="diag-pyr-label">競合優位の再定義<br>グリーン・コンプライアンス、データ早期共有の義務化</div>
+        </div>
+        <div class="diag-pyr-layer" style="justify-content:center;">
+          <div class="diag-pyr-bar" style="background:#1A3558;max-width:320px;">第2層：国家インフラの刷新<br><span style="font-weight:400;font-size:0.68rem;">NACCS第7次更改・TradeWaltz・Cyber Port連携</span></div>
+          <div class="diag-pyr-label">データ分断の解消<br>企業間一気通貫のデータ連携</div>
+        </div>
+        <div class="diag-pyr-layer" style="justify-content:center;">
+          <div class="diag-pyr-bar" style="background:#0B1A2E;max-width:480px;">第1層：現場の自動化<br><span style="font-weight:400;font-size:0.68rem;">AI-OCR × RPA による書類処理の自動化</span></div>
+          <div class="diag-pyr-label">DXの入口<br>手入力ゼロ、処理時間を数時間→数分に</div>
+        </div>
+      </div>
+    </div>
+    <p class="diag-caption">[図] 通関DXを構成する3つの構造変化レイヤー</p>
+
     <h2>第1層：現場の自動化 ― AI-OCR × RPAは「入口」に過ぎない</h2>
 
     <p>貿易業務における最大のボトルネックは、いまだに紙やPDFで届くインボイスやパッキングリストをNACCSに手入力する作業だ。AI-OCRは従来のOCRと異なり、取引先ごとに様式が異なる非定型帳票にも対応し、深層学習によって使い込むほど認識精度が向上する。RPAと組み合わせれば、数時間かかっていた入力処理が数分に短縮される。</p>
@@ -425,6 +466,37 @@
     <div class="insight-box">
       <p>ただし、ここで立ち止まってはいけない。AI-OCRとRPAの導入は、あくまでデジタル化の「入口」だ。入力を自動化しただけでは、情報はいまだ自社内に閉じている。真のインパクトは、この先にある「データの接続」によって生まれる。</p>
     </div>
+
+    <!-- DIAGRAM: Before / After AI-OCR -->
+    <div class="diag-wrap">
+      <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;">従来の通関 vs AI-OCR通関</div>
+      <div class="diag-ba-row">
+        <div class="diag-ba-col before">
+          <div class="ba-head">従来の通関（手作業）</div>
+          <ul>
+            <li><span class="li-icon">📄</span>紙・PDFで書類を受取</li>
+            <li><span class="li-icon">👁️</span>担当者が目視で数字を確認</li>
+            <li><span class="li-icon">⌨️</span>NACCSに手作業で入力</li>
+            <li><span class="li-icon">📊</span>Excel でパッキングリストと突合</li>
+            <li><span class="li-icon">⏱️</span>処理時間：数時間〜半日</li>
+            <li><span class="li-icon">❌</span>入力ミスによる修正申告リスクあり</li>
+          </ul>
+        </div>
+        <div class="diag-ba-arrow">→</div>
+        <div class="diag-ba-col after">
+          <div class="ba-head">AI-OCR通関（自動化）</div>
+          <ul>
+            <li><span class="li-icon">🔍</span>AI-OCRが非定型書類を自動読取</li>
+            <li><span class="li-icon">🤖</span>深層学習で精度が継続向上</li>
+            <li><span class="li-icon">⚡</span>RPAがNACCSへ自動転記</li>
+            <li><span class="li-icon">✅</span>担当者は確認のみ（数分で完了）</li>
+            <li><span class="li-icon">⏱️</span>処理時間：数時間 → 数分</li>
+            <li><span class="li-icon">🔒</span>人的ミスを根本的に排除</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="diag-caption">[図] 従来の手作業通関とAI-OCR自動化の比較</p>
 
     <h2>第2層：国家インフラの刷新 ― NACCS第7次更改とプラットフォーム連携</h2>
 
@@ -524,6 +596,26 @@
     <div class="insight-box">
       <p>通関DXの本質は、書類処理の効率化ではない。<strong>「データで信頼をつくり、その信頼がサプライチェーン上の競争優位になる」</strong>という新しいゲームへの参入だ。この構造を正しく理解した企業だけが、次の10年の貿易で主導権を握る。</p>
     </div>
+
+    <!-- DIAGRAM: Action checklist for management -->
+    <div class="diag-wrap">
+      <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;">経営が今着手すべきアクションチェックリスト</div>
+      <div class="diag-checklist">
+        <div class="diag-checklist-item">
+          <div class="chk-num">1</div>
+          <div><strong>AI-OCR × RPAの「実験→定着」への移行</strong><br>手入力ゼロの環境をスモールスタートで構築。通関士を監査・コンサル業務にシフトさせる人材戦略の土台を作る。</div>
+        </div>
+        <div class="diag-checklist-item">
+          <div class="chk-num">2</div>
+          <div><strong>TradeWaltz / Cyber Portへの早期参画判断</strong><br>プラットフォームのネットワーク効果は先行者有利。取引先との接続を早期に確保し、情報の非対称性を回避する。</div>
+        </div>
+        <div class="diag-checklist-item">
+          <div class="chk-num">3</div>
+          <div><strong>製品マスターデータへの環境属性付加</strong><br>WCO SAFE 2025を踏まえ、ESG対応と通関審査での競争優位確保を兼ねた先行投資として今から着手する。</div>
+        </div>
+      </div>
+    </div>
+    <p class="diag-caption">[図] 経営が今すべき3つの判断と具体的アクション</p>
 
     <!-- Author -->
     <div class="author-card">

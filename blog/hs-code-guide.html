@@ -502,6 +502,32 @@
     .content-wrapper { grid-template-columns: 1fr; }
     body { font-size: 11pt; }
   }
+
+  /* ── Diagram styles ── */
+  .diag-wrap { background:#fff; border:1px solid #E8E4DC; border-top:3px solid #A8965A; padding:1.4rem 1.5rem 1rem; margin:1.8rem 0 0.4rem; font-size:0.85rem; }
+  .diag-caption { text-align:center; font-size:0.72rem; color:#8A8A8A; margin-top:0.4rem; margin-bottom:1.6rem; }
+  .diag-hs-row { display:flex; flex-wrap:wrap; align-items:center; gap:0.3rem; margin:0.5rem 0; }
+  .diag-hs-block { padding:0.7rem 1rem; text-align:center; border-radius:2px; }
+  .diag-hs-block .hs-code { font-family:'Source Serif 4',serif; font-size:1.3rem; font-weight:700; line-height:1; margin-bottom:0.3rem; }
+  .diag-hs-block .hs-label { font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; }
+  .diag-hs-block .hs-desc { font-size:0.7rem; margin-top:0.2rem; color:#5A5A5A; }
+  .diag-hs-arrow { color:#A8965A; font-size:1.1rem; flex-shrink:0; }
+  .diag-gri-flow { display:flex; flex-direction:column; gap:0.5rem; }
+  .diag-gri-item { display:flex; gap:0.7rem; align-items:flex-start; }
+  .diag-gri-num { width:32px; height:32px; border-radius:50%; background:#0B1A33; color:#A8965A; font-weight:700; font-size:0.82rem; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:0.05rem; }
+  .diag-gri-body .gri-title { font-size:0.82rem; font-weight:700; color:#0B1A33; margin-bottom:0.15rem; }
+  .diag-gri-body .gri-desc { font-size:0.74rem; color:#5A5A5A; line-height:1.5; }
+  .diag-search-row { display:flex; flex-wrap:wrap; align-items:center; gap:0; }
+  .diag-search-step { flex:1 1 100px; background:#0B1A33; color:#fff; padding:0.7rem 0.7rem; font-size:0.75rem; font-weight:700; text-align:center; line-height:1.4; min-width:80px; }
+  .diag-search-step.highlight { background:#A8965A; color:#0B1A33; }
+  .diag-search-arrow { color:#A8965A; font-size:1rem; padding:0 0.2rem; flex-shrink:0; }
+  @media (max-width:540px) { .diag-search-row { flex-direction:column; } .diag-search-arrow { transform:rotate(90deg); } .diag-hs-row { flex-direction:column; } .diag-hs-arrow { transform:rotate(90deg); } }
+  .diag-adv-tl { position:relative; padding-left:2rem; }
+  .diag-adv-tl::before { content:''; position:absolute; left:0.55rem; top:0.3rem; bottom:0.3rem; width:2px; background:linear-gradient(to bottom,#A8965A,#E8E4DC); }
+  .diag-adv-item { position:relative; margin-bottom:0.9rem; }
+  .diag-adv-item::before { content:''; position:absolute; left:-1.65rem; top:0.35rem; width:10px; height:10px; border-radius:50%; background:#A8965A; border:2px solid #fff; box-shadow:0 0 0 2px #A8965A; }
+  .diag-adv-item .adv-step { font-size:0.68rem; font-weight:700; color:#A8965A; letter-spacing:0.08em; margin-bottom:0.1rem; }
+  .diag-adv-item .adv-desc { font-size:0.78rem; color:#5A5A5A; line-height:1.5; }
 </style>
 </head>
 <body>
@@ -641,6 +667,37 @@
         <div class="label">&#9670; 実務のポイント</div>
         <p>6桁までの「国際基準」と、それ以降の「各国事情」を明確に区別して理解することが、実務上の混乱を避ける鍵となる。</p>
       </div>
+
+      <!-- DIAGRAM: HS code structure breakdown -->
+      <div class="diag-wrap">
+        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;">HSコード階層構造の読み方</div>
+        <div class="diag-hs-row">
+          <div class="diag-hs-block" style="background:#0B1A33;color:#fff;">
+            <div class="hs-code">84</div>
+            <div class="hs-label" style="color:#A8965A;">類（Chapter）</div>
+            <div class="hs-desc" style="color:rgba(255,255,255,0.6);">上2桁<br>原子炉・ボイラー・機器類</div>
+          </div>
+          <div class="diag-hs-arrow">→</div>
+          <div class="diag-hs-block" style="background:#1A3558;color:#fff;">
+            <div class="hs-code">8471</div>
+            <div class="hs-label" style="color:#A8965A;">項（Heading）</div>
+            <div class="hs-desc" style="color:rgba(255,255,255,0.6);">上4桁<br>自動データ処理機械</div>
+          </div>
+          <div class="diag-hs-arrow">→</div>
+          <div class="diag-hs-block" style="background:#A8965A;color:#0B1A33;">
+            <div class="hs-code">847130</div>
+            <div class="hs-label">号（Subheading）</div>
+            <div class="hs-desc">上6桁（国際共通）<br>ノートブック型</div>
+          </div>
+          <div class="diag-hs-arrow">→</div>
+          <div class="diag-hs-block" style="background:#F5F0E4;border:1px solid #E8E4DC;color:#0B1A33;">
+            <div class="hs-code" style="font-size:1rem;">8471.30-000</div>
+            <div class="hs-label">統計細分</div>
+            <div class="hs-desc">9〜10桁（各国独自）<br>日本の実行関税率表</div>
+          </div>
+        </div>
+      </div>
+      <p class="diag-caption">[図] HSコードの階層構造：類→項→号→統計細分（ノートPC例）</p>
     </section>
 
     <hr class="section-divider">
@@ -707,6 +764,38 @@
         <strong>通則5：</strong>特定物品を収容するための容器（カメラケース等）は、中身と同じ項に分類する。<br>
         <strong>通則6：</strong>6桁の号の分類は、号の規定・号の注に従い、同レベルの号同士を比較して決定する。
       </p>
+
+      <!-- DIAGRAM: GRI 1→6 decision flow -->
+      <div class="diag-wrap">
+        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;">通則（GRI）適用フロー — 優先順位に従って判断</div>
+        <div class="diag-gri-flow">
+          <div class="diag-gri-item">
+            <div class="diag-gri-num">1</div>
+            <div class="diag-gri-body"><div class="gri-title">項の規定と注による分類</div><div class="gri-desc">「部・類の注」と「項の規定文」を読み、当てはまる項を特定。これが最優先。</div></div>
+          </div>
+          <div class="diag-gri-item">
+            <div class="diag-gri-num">2</div>
+            <div class="diag-gri-body"><div class="gri-title">未完成品・混合物の分類拡張</div><div class="gri-desc">完成品の特性を持つ未完成品、他材料の混合物もその完成形の項で分類。</div></div>
+          </div>
+          <div class="diag-gri-item">
+            <div class="diag-gri-num">3</div>
+            <div class="diag-gri-body"><div class="gri-title">競合する複数項がある場合 (a)→(b)→(c)</div><div class="gri-desc">(a)特殊限定の優先 → (b)重要な特性 → (c)最終番号の項 の順で判断。</div></div>
+          </div>
+          <div class="diag-gri-item">
+            <div class="diag-gri-num">4</div>
+            <div class="diag-gri-body"><div class="gri-title">最類似品目への分類</div><div class="gri-desc">GRI1〜3で決定できない物品は最も類似する物品の項に分類。</div></div>
+          </div>
+          <div class="diag-gri-item">
+            <div class="diag-gri-num">5</div>
+            <div class="diag-gri-body"><div class="gri-title">容器・包装の取扱い</div><div class="gri-desc">特定物品専用の容器（カメラケース等）は内容物と同じ項に分類。</div></div>
+          </div>
+          <div class="diag-gri-item">
+            <div class="diag-gri-num" style="background:#A8965A;color:#fff;">6</div>
+            <div class="diag-gri-body"><div class="gri-title">号レベルの分類決定</div><div class="gri-desc">6桁の号は号の規定・号の注に従い、同レベルの号同士を比較して決定。</div></div>
+          </div>
+        </div>
+      </div>
+      <p class="diag-caption">[図] HS分類通則（GRI）1〜6の適用フローと優先順位</p>
     </section>
 
     <hr class="section-divider">
@@ -760,6 +849,25 @@
         <div class="label">&#9888; Webタリフで最も多い失敗</div>
         <p>品名だけを見て類注を読まずに進めること。これが誤分類の最大の原因である。</p>
       </div>
+
+      <!-- DIAGRAM: Webtariff search flow -->
+      <div class="diag-wrap">
+        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;">Webタリフ 品目検索フロー</div>
+        <div class="diag-search-row">
+          <div class="diag-search-step">📝<br>商品仕様<br>の把握</div>
+          <div class="diag-search-arrow">→</div>
+          <div class="diag-search-step">📂<br>類の確認<br>（上2桁）</div>
+          <div class="diag-search-arrow">→</div>
+          <div class="diag-search-step">📑<br>類注・部注<br>を精読</div>
+          <div class="diag-search-arrow">→</div>
+          <div class="diag-search-step">🔎<br>項の確認<br>（上4桁）</div>
+          <div class="diag-search-arrow">→</div>
+          <div class="diag-search-step">🔢<br>号の確認<br>（上6桁）</div>
+          <div class="diag-search-arrow">→</div>
+          <div class="diag-search-step highlight">💴<br>税率確認<br>・他法令チェック</div>
+        </div>
+      </div>
+      <p class="diag-caption">[図] Webタリフ（実行関税率表）を使った品目検索の正しいフロー</p>
     </section>
 
     <hr class="section-divider">
@@ -843,6 +951,34 @@
         <div class="label">&#9670; 注意点</div>
         <p>電話やメールによる口頭照会の回答は単なる「参考」であり、実際の通関審査において法的拘束力を持たない。法的確実性を得るには、必ず文書による照会を行うこと。</p>
       </div>
+
+      <!-- DIAGRAM: 事前教示申請プロセス timeline -->
+      <div class="diag-wrap">
+        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;">事前教示申請プロセス</div>
+        <div class="diag-adv-tl">
+          <div class="diag-adv-item">
+            <div class="adv-step">STEP 1 — 照会書の作成</div>
+            <div class="adv-desc">様式C-1000に、品名・成分・製法・用途・包装状態を精緻に記載する。情報が不足すると審査が遅延する原因になる。</div>
+          </div>
+          <div class="diag-adv-item">
+            <div class="adv-step">STEP 2 — 書類・サンプルの準備</div>
+            <div class="adv-desc">カタログ、写真、図面、原材料表、製造工程フロー図を添付。可能であれば実物サンプルも提出する。</div>
+          </div>
+          <div class="diag-adv-item">
+            <div class="adv-step">STEP 3 — NACCSで申請</div>
+            <div class="adv-desc">NACCS（輸出入・港湾関連情報処理システム）を通じたオンライン申請を活用する。</div>
+          </div>
+          <div class="diag-adv-item">
+            <div class="adv-step">STEP 4 — 税関による審査（通常1〜3ヶ月）</div>
+            <div class="adv-desc">税関が品目分類を審査。追加資料の提出を求められる場合がある。口頭照会は法的拘束力を持たないため文書回答を待つ。</div>
+          </div>
+          <div class="diag-adv-item" style="margin-bottom:0;">
+            <div class="adv-step">STEP 5 — 文書回答の受領・活用（有効期間3年）</div>
+            <div class="adv-desc">回答書を通関審査時に提示することで全国の税関で尊重される。内容に不服がある場合は異議申立てが可能。</div>
+          </div>
+        </div>
+      </div>
+      <p class="diag-caption">[図] 事前教示制度（Advance Ruling）の申請から活用までのプロセス</p>
     </section>
 
     <hr class="section-divider">

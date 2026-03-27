@@ -71,6 +71,32 @@ article h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
 article p { margin-bottom: 1.2rem; }
 article ul { margin-bottom: 1.2rem; padding-left: 1.5rem; }
 article li { margin-bottom: 0.5rem; }
+
+/* ── Diagram styles ── */
+.diag-wrap { background:#fff; border:1px solid #E2E0DA; border-top:3px solid #A8965A; padding:1.4rem 1.5rem 1rem; margin:1.6rem 0 0.5rem; font-size:0.85rem; }
+.diag-caption { text-align:center; font-size:0.72rem; color:#8A8A96; margin-top:0.5rem; margin-bottom:1.4rem; }
+.diag-compare-row { display:flex; flex-wrap:wrap; gap:1rem; align-items:stretch; }
+.diag-compare-box { flex:1 1 200px; border:1px solid #E2E0DA; padding:1rem; }
+.diag-compare-box .box-head { font-size:0.7rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:0.35rem 0.6rem; margin:-1rem -1rem 0.8rem; }
+.diag-compare-box.rpa .box-head { background:#E2E0DA; color:#4A4A55; }
+.diag-compare-box.ai .box-head { background:#0F2342; color:#A8965A; }
+.diag-compare-box ul { list-style:none; padding:0; margin:0; }
+.diag-compare-box li { font-size:0.78rem; color:#4A4A55; padding:0.25rem 0; border-bottom:1px solid #F0EDE8; line-height:1.5; }
+.diag-compare-box li:last-child { border-bottom:none; }
+.diag-compare-box .box-badge { font-size:0.65rem; font-weight:700; display:inline-block; padding:0.15rem 0.5rem; border-radius:2px; margin-bottom:0.5rem; }
+.diag-compare-box.rpa .box-badge { background:#E2E0DA; color:#4A4A55; }
+.diag-compare-box.ai .box-badge { background:#A8965A; color:#fff; }
+.diag-arrow-mid { display:flex; align-items:center; justify-content:center; font-size:1.4rem; color:#A8965A; flex-shrink:0; padding:0 0.3rem; }
+.diag-usecase-row { display:flex; flex-wrap:wrap; gap:0.7rem; }
+.diag-usecase-card { flex:1 1 160px; border:1px solid #E2E0DA; padding:1rem; background:#FAFAF7; }
+.diag-usecase-card .uc-icon { font-size:1.5rem; margin-bottom:0.4rem; }
+.diag-usecase-card .uc-title { font-size:0.82rem; font-weight:700; color:#0F2342; margin-bottom:0.4rem; }
+.diag-usecase-card .uc-body { font-size:0.75rem; color:#4A4A55; line-height:1.55; }
+.diag-flow-row { display:flex; flex-wrap:wrap; align-items:center; gap:0; }
+.diag-flow-step { background:#0F2342; color:#fff; padding:0.6rem 0.9rem; font-size:0.78rem; font-weight:700; text-align:center; flex:1 1 100px; min-width:80px; line-height:1.4; }
+.diag-flow-step.done { background:#A8965A; color:#0F2342; }
+.diag-flow-arrow { color:#A8965A; font-size:1.1rem; padding:0 0.2rem; flex-shrink:0; }
+@media (max-width:500px) { .diag-flow-row { flex-direction:column; } .diag-flow-arrow { transform:rotate(90deg); } }
 </style>
 <!-- Google Analytics GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
@@ -123,6 +149,37 @@ article li { margin-bottom: 0.5rem; }
       <p>RPAは事前に定義されたルールに従って定型作業を自動化しますが、ルールから外れた処理には対応できません。一方、AIエージェントは自然言語を理解し、文脈に応じた判断を行えます。たとえば、取引先から届いたメールの内容を解析して適切な対応を判断したり、不定形の書類からデータを抽出したりすることが可能です。</p>
       <p>貿易業務のように例外処理が多くフォーマットが統一されていない領域では、AIエージェントの柔軟性が大きな威力を発揮します。RPAでは自動化率30%が限界だった業務でも、AIエージェントを活用すれば70〜80%まで自動化できるケースもあります。</p>
 
+      <!-- DIAGRAM: RPA vs AIエージェント comparison -->
+      <div class="diag-wrap">
+        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;">RPA vs AIエージェント — 比較</div>
+        <div class="diag-compare-row">
+          <div class="diag-compare-box rpa">
+            <div class="box-head">RPA（従来型）</div>
+            <div class="box-badge">単純ルール</div>
+            <ul>
+              <li>事前定義されたルールのみ実行</li>
+              <li>フォーマット変化に対応できない</li>
+              <li>例外処理は人間が手動対応</li>
+              <li>自然言語の理解は不可</li>
+              <li>自動化率の上限：約30%</li>
+            </ul>
+          </div>
+          <div class="diag-arrow-mid">→</div>
+          <div class="diag-compare-box ai">
+            <div class="box-head">AIエージェント（次世代）</div>
+            <div class="box-badge">判断・実行・学習</div>
+            <ul>
+              <li>自然言語を理解し文脈で判断</li>
+              <li>非定型フォーマットに柔軟対応</li>
+              <li>例外処理を自律的に判断・実行</li>
+              <li>過去データから継続的に学習</li>
+              <li>自動化率：70〜80%まで可能</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p class="diag-caption">[図] RPAとAIエージェントの能力比較</p>
+
       <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">3. 貿易業務におけるAIエージェント活用の具体例</h2>
       <p>AIエージェントは、貿易業務の以下のような場面で活用が進んでいます。</p>
       <ul class="list-disc">
@@ -133,10 +190,50 @@ article li { margin-bottom: 0.5rem; }
         <li><strong>取引先とのコミュニケーション支援：</strong>多言語での問い合わせ対応や、定型的な確認メールの自動生成</li>
       </ul>
 
+      <!-- DIAGRAM: 3 use-cases visual table -->
+      <div class="diag-wrap">
+        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;">代表的なAIエージェント活用シーン</div>
+        <div class="diag-usecase-row">
+          <div class="diag-usecase-card">
+            <div class="uc-icon">📄</div>
+            <div class="uc-title">書類処理の自動化</div>
+            <div class="uc-body">Invoice・PL・B/Lドラフトをメール受信から自動解析し、システムへ登録。取引先ごとのフォーマット差異にも対応。</div>
+          </div>
+          <div class="diag-usecase-card">
+            <div class="uc-icon">🔢</div>
+            <div class="uc-title">HSコード自動判定</div>
+            <div class="uc-body">品目名・仕様・原材料情報からAIが最適なHSコードを候補提示。過去判定データを参照し精度を継続的に向上。</div>
+          </div>
+          <div class="diag-usecase-card">
+            <div class="uc-icon">🌐</div>
+            <div class="uc-title">輸出規制チェック</div>
+            <div class="uc-body">輸出管理規制・安全保障貿易管理・各国輸入規制への適合を自動判定。対象貨物・仕向地・取引先を総合的に評価。</div>
+          </div>
+        </div>
+      </div>
+      <p class="diag-caption">[図] 貿易業務におけるAIエージェントの代表的な活用領域</p>
+
       <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">4. BorderFlow AI による貿易業務自動化の実例</h2>
       <p>Wingが開発した「BorderFlow AI」は、貿易業務に特化したAIエージェントプラットフォームです。商社の実務を深く理解したコンサルタントとAIエンジニアが共同で設計し、貿易実務の現場で実際に使えるレベルの自動化を実現しています。</p>
       <p>BorderFlow AIの特徴は、引合受信から原価計算、見積作成までのフローをエンドツーエンドで自動化できる点にあります。取引先からメールで届いた引合内容をAIが解析し、過去の類似取引データを参照しながら原価を自動算出。担当者は生成された見積ドラフトを確認・微調整するだけで、従来数時間かかっていた作業を数十分に短縮できます。</p>
       <p>ある中堅商社では、BorderFlow AIの導入により引合対応にかかる時間を約60%削減し、見積回答のリードタイムを平均2日から半日に短縮することに成功しました。また、属人化していた原価計算のロジックがシステムに蓄積されることで、担当者の異動・退職リスクにも対応できるようになりました。</p>
+
+      <!-- DIAGRAM: BorderFlow AI process flow -->
+      <div class="diag-wrap">
+        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;">BorderFlow AI — 処理フロー</div>
+        <div class="diag-flow-row">
+          <div class="diag-flow-step">📥<br>書類受取<br><span style="font-weight:400;font-size:0.68rem;">メール・ポータル</span></div>
+          <div class="diag-flow-arrow">→</div>
+          <div class="diag-flow-step">🔍<br>OCR解析<br><span style="font-weight:400;font-size:0.68rem;">非定型フォーマット対応</span></div>
+          <div class="diag-flow-arrow">→</div>
+          <div class="diag-flow-step">🤖<br>AI判断<br><span style="font-weight:400;font-size:0.68rem;">HSコード・規制・原価</span></div>
+          <div class="diag-flow-arrow">→</div>
+          <div class="diag-flow-step">📋<br>通関申請<br><span style="font-weight:400;font-size:0.68rem;">NACCSへ自動入力</span></div>
+          <div class="diag-flow-arrow">→</div>
+          <div class="diag-flow-step done">✅<br>完了<br><span style="font-weight:400;font-size:0.68rem;">担当者が最終確認のみ</span></div>
+        </div>
+      </div>
+      <p class="diag-caption">[図] BorderFlow AIによる貿易書類処理の自動化フロー</p>
 
       <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">5. 導入のステップと注意点</h2>
       <p>貿易業務にAIエージェントを導入する際は、以下のステップを推奨します。</p>

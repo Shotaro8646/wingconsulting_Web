@@ -71,6 +71,35 @@ article h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
 article p { margin-bottom: 1.2rem; }
 article ul { margin-bottom: 1.2rem; padding-left: 1.5rem; }
 article li { margin-bottom: 0.5rem; }
+
+/* ── Diagram styles ── */
+.diag-wrap { background:#fff; border:1px solid #E2E0DA; border-top:3px solid #A8965A; padding:1.4rem 1.5rem 1rem; margin:1.6rem 0 0.5rem; font-size:0.85rem; }
+.diag-caption { text-align:center; font-size:0.72rem; color:#8A8A96; margin-top:0.5rem; margin-bottom:1.4rem; }
+.diag-row { display:flex; flex-wrap:wrap; gap:0.7rem; }
+.diag-checklist-item { display:flex; align-items:flex-start; gap:0.5rem; background:#F8F5ED; border-left:3px solid #A8965A; padding:0.6rem 0.8rem; flex:1 1 220px; font-size:0.8rem; line-height:1.55; }
+.diag-checklist-item .chk { color:#A8965A; font-weight:700; flex-shrink:0; margin-top:0.05rem; }
+.diag-compare-col { flex:1 1 200px; border:1px solid #E2E0DA; padding:1rem; }
+.diag-compare-col .col-head { font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#fff; background:#0F2342; padding:0.4rem 0.6rem; margin:-1rem -1rem 0.8rem; }
+.diag-compare-col.highlight .col-head { background:#A8965A; color:#0F2342; }
+.diag-compare-col ul { padding-left:0; list-style:none; margin:0; }
+.diag-compare-col li { font-size:0.78rem; padding:0.25rem 0; border-bottom:1px solid #F0EDE8; color:#4A4A55; line-height:1.5; }
+.diag-compare-col li:last-child { border-bottom:none; }
+.diag-step-row { display:flex; flex-wrap:wrap; gap:0.7rem; }
+.diag-step-card { flex:1 1 140px; background:#fff; border:1px solid #E2E0DA; padding:0.9rem; position:relative; }
+.diag-step-card .step-num { width:28px; height:28px; background:#0F2342; color:#A8965A; font-size:0.78rem; font-weight:700; display:flex; align-items:center; justify-content:center; margin-bottom:0.55rem; }
+.diag-step-card .step-title { font-size:0.78rem; font-weight:700; color:#0F2342; margin-bottom:0.3rem; line-height:1.4; }
+.diag-step-card .step-body { font-size:0.72rem; color:#4A4A55; line-height:1.5; }
+.diag-fail-row { display:flex; flex-wrap:wrap; gap:0; }
+.diag-fail-col { flex:1 1 130px; padding:0.9rem; border:1px solid #E2E0DA; margin:0 -1px -1px 0; }
+.diag-fail-col:first-child { background:#FFF8F5; border-top:3px solid #C45C3A; }
+.diag-fail-col:nth-child(2) { background:#FAFAF7; border-top:3px solid #A8965A; }
+.diag-fail-col:last-child { background:#F0F7F0; border-top:3px solid #5A9A6A; }
+.diag-fail-col .col-label { font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:0.5rem; }
+.diag-fail-col:first-child .col-label { color:#C45C3A; }
+.diag-fail-col:nth-child(2) .col-label { color:#7A6B3E; }
+.diag-fail-col:last-child .col-label { color:#5A9A6A; }
+.diag-fail-item { font-size:0.75rem; color:#4A4A55; line-height:1.55; padding:0.3rem 0; border-bottom:1px dashed #E2E0DA; }
+.diag-fail-item:last-child { border-bottom:none; }
 </style>
 <!-- Google Analytics GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
@@ -128,10 +157,53 @@ article li { margin-bottom: 0.5rem; }
       </ul>
       <p>こうした課題は、技術的な問題だけでなく、組織・人材・プロセスが複雑に絡み合っています。だからこそ、俯瞰的な視点と実行力の両方を持つDXコンサルティングが有効です。</p>
 
+      <!-- DIAGRAM: 5 symptoms checklist -->
+      <div class="diag-wrap">
+        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;">DXコンサルが必要な企業の5つのサイン</div>
+        <div class="diag-row">
+          <div class="diag-checklist-item"><span class="chk">✓</span><span><strong>DX戦略が描けない</strong><br>経営ビジョンとIT施策が結びついていない</span></div>
+          <div class="diag-checklist-item"><span class="chk">✓</span><span><strong>ツールが定着しない</strong><br>SaaS・AIを入れたが現場で使われない</span></div>
+          <div class="diag-checklist-item"><span class="chk">✓</span><span><strong>DX人材が不足</strong><br>業務とテクノロジーを橋渡しできる人材がいない</span></div>
+          <div class="diag-checklist-item"><span class="chk">✓</span><span><strong>プロジェクトが頓挫</strong><br>開発・BPRが途中で止まってしまう</span></div>
+          <div class="diag-checklist-item"><span class="chk">✓</span><span><strong>グローバル統合が進まない</strong><br>海外拠点との連携・標準化が停滞</span></div>
+        </div>
+      </div>
+      <p class="diag-caption">[図] DXコンサルティング導入を検討すべき企業の特徴</p>
+
       <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">3. 大手ファームと専門ファームの違い</h2>
       <p>DXコンサルティングには、大手総合ファームと専門特化ファームの2つのタイプがあります。</p>
       <p><strong>大手総合コンサルティングファーム</strong>は、グローバルなリソースとブランド力を強みに、大規模なDXプログラムに対応します。一方で、プロジェクト単価が高額になりがちで、現場レベルの実装は下請けに委託するケースも少なくありません。戦略提言は優れていても、実行フェーズで成果が出にくいという声が聞かれることもあります。</p>
       <p><strong>専門特化ファーム</strong>は、特定の業界やテーマに深い知見を持ち、戦略から実装まで一気通貫で対応できる機動力が特徴です。Wingのような専門ファームでは、コンサルタント自身がシステム要件の定義や開発パートナーの管理、現場への定着支援までハンズオンで携わります。経営層への提言と、現場での実行を同じチームが担うため、「戦略と実装の断絶」が起きにくいのが大きな利点です。</p>
+
+      <!-- DIAGRAM: 大手 vs 専門ファーム comparison -->
+      <div class="diag-wrap">
+        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;">ファームタイプ比較</div>
+        <div class="diag-row">
+          <div class="diag-compare-col">
+            <div class="col-head">大手総合ファーム</div>
+            <ul>
+              <li>グローバルネットワーク・ブランド力</li>
+              <li>大規模プロジェクト対応可</li>
+              <li>プロジェクト単価が高額になりがち</li>
+              <li>現場実装は下請けに委託のケースも</li>
+              <li>戦略提言は優秀、実行は別チーム</li>
+              <li>スコープ変更に時間・コストがかかる</li>
+            </ul>
+          </div>
+          <div class="diag-compare-col highlight">
+            <div class="col-head">Wing（専門ファーム）</div>
+            <ul>
+              <li>業界・テーマへの深い専門知識</li>
+              <li>構想〜現場定着まで一気通貫</li>
+              <li>コンサルタント自身が実装に携わる</li>
+              <li>戦略と実装の断絶が起きにくい</li>
+              <li>機動力があり柔軟に対応</li>
+              <li>費用対効果の透明性が高い</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p class="diag-caption">[図] 大手総合ファームと専門特化ファームの特徴比較</p>
 
       <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">4. DXコンサルティング会社の選び方 5つのポイント</h2>
       <p>DXコンサルティングのパートナーを選ぶ際には、以下の5つの視点を重視しましょう。</p>
@@ -143,11 +215,64 @@ article li { margin-bottom: 0.5rem; }
         <li><strong>柔軟なスコープ調整：</strong>DXは進行中に要件が変わることが多いため、スコープの見直しに柔軟に対応できるパートナーが理想です。</li>
       </ul>
 
+      <!-- DIAGRAM: 5 selection points as cards -->
+      <div class="diag-wrap">
+        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;">DXコンサル選定 5つの視点</div>
+        <div class="diag-step-row">
+          <div class="diag-step-card">
+            <div class="step-num">1</div>
+            <div class="step-title">実行力</div>
+            <div class="step-body">戦略だけでなく開発・導入・定着まで伴走できるか</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">2</div>
+            <div class="step-title">業界理解</div>
+            <div class="step-body">貿易・製造・化学品など自社業界の専門知識があるか</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">3</div>
+            <div class="step-title">担当者の経験</div>
+            <div class="step-body">実際に担当するメンバーの実務経験を必ず確認</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">4</div>
+            <div class="step-title">費用対効果の透明性</div>
+            <div class="step-body">成果指標・隠れコストの有無を事前に確認</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">5</div>
+            <div class="step-title">スコープ柔軟性</div>
+            <div class="step-body">要件変化に柔軟に対応できるパートナーか</div>
+          </div>
+        </div>
+      </div>
+      <p class="diag-caption">[図] パートナー選定で重視すべき5つのポイント</p>
+
       <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">5. よくある失敗パターンと対策</h2>
       <p>DXコンサルティングの導入における代表的な失敗パターンを把握しておくことで、同じ轍を踏むリスクを減らせます。</p>
       <p><strong>失敗1：戦略止まりで現場に落ちない</strong><br>立派な戦略報告書はできたが、現場のオペレーションにまで落とし込めないケースです。対策としては、構想段階から現場担当者を巻き込み、実装計画をセットで策定することが有効です。</p>
       <p><strong>失敗2：ツール先行でROIが出ない</strong><br>「とりあえずAIを入れよう」というアプローチでは、業務課題とツールが噛み合わず投資が無駄になります。導入前に業務プロセスを可視化し、ボトルネックを特定してからツールを選定すべきです。</p>
       <p><strong>失敗3：コンサルに丸投げして社内にノウハウが残らない</strong><br>外部依存が強すぎると、コンサルの契約終了後にプロジェクトが止まります。ナレッジトランスファーと内製化の計画を最初から組み込むことが重要です。</p>
+
+      <!-- DIAGRAM: Failure → Cause → Solution -->
+      <div class="diag-wrap">
+        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;">失敗パターン分析</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid #E2E0DA;font-size:0.78rem;">
+          <div style="background:#0F2342;color:#A8965A;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;padding:0.5rem 0.7rem;border-right:1px solid rgba(255,255,255,0.1);">失敗パターン</div>
+          <div style="background:#0F2342;color:#A8965A;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;padding:0.5rem 0.7rem;border-right:1px solid rgba(255,255,255,0.1);">主な原因</div>
+          <div style="background:#0F2342;color:#A8965A;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;padding:0.5rem 0.7rem;">対策・解決策</div>
+          <div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#C45C3A;font-weight:700;line-height:1.5;">戦略止まりで現場に落ちない</div>
+          <div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;">構想と実行を別チームが担当</div>
+          <div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;">構想段階から現場担当者を巻き込む</div>
+          <div style="padding:0.6rem 0.7rem;background:#FAFAF7;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#C45C3A;font-weight:700;line-height:1.5;">ツール先行でROIが出ない</div>
+          <div style="padding:0.6rem 0.7rem;background:#FAFAF7;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;">業務課題特定前にツールを選定</div>
+          <div style="padding:0.6rem 0.7rem;background:#FAFAF7;border-top:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;">業務可視化→ボトルネック特定→ツール選定の順で進める</div>
+          <div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#C45C3A;font-weight:700;line-height:1.5;">丸投げで社内にノウハウが残らない</div>
+          <div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;">外部依存・内製化計画の欠如</div>
+          <div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;">ナレッジトランスファーと内製化計画を最初から組み込む</div>
+        </div>
+      </div>
+      <p class="diag-caption">[図] DXコンサル導入の3大失敗パターンと対策</p>
 
       <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">6. まとめ</h2>
       <p>DXコンサルティングは、単なるIT導入の支援ではなく、企業変革を実現するためのパートナーシップです。自社の課題に適したファームを選ぶことで、DXの成功確率は大きく高まります。</p>

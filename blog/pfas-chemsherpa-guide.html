@@ -71,6 +71,30 @@ article h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
 article p { margin-bottom: 1.2rem; }
 article ul { margin-bottom: 1.2rem; padding-left: 1.5rem; }
 article li { margin-bottom: 0.5rem; }
+
+/* ── Diagram styles ── */
+.diag-wrap { background:#fff; border:1px solid #E2E0DA; border-top:3px solid #A8965A; padding:1.4rem 1.5rem 1rem; margin:1.6rem 0 0.5rem; font-size:0.85rem; }
+.diag-caption { text-align:center; font-size:0.72rem; color:#8A8A96; margin-top:0.5rem; margin-bottom:1.4rem; }
+.diag-timeline { position:relative; padding-left:2rem; }
+.diag-timeline::before { content:''; position:absolute; left:0.6rem; top:0.3rem; bottom:0.3rem; width:2px; background:linear-gradient(to bottom, #A8965A, #E2E0DA); }
+.diag-tl-item { position:relative; margin-bottom:1rem; }
+.diag-tl-item::before { content:''; position:absolute; left:-1.67rem; top:0.35rem; width:10px; height:10px; border-radius:50%; background:#A8965A; border:2px solid #fff; box-shadow:0 0 0 2px #A8965A; }
+.diag-tl-item .tl-year { font-size:0.7rem; font-weight:700; color:#A8965A; letter-spacing:0.1em; margin-bottom:0.1rem; }
+.diag-tl-item .tl-desc { font-size:0.78rem; color:#4A4A55; line-height:1.5; }
+.diag-bn-row { display:flex; flex-wrap:wrap; gap:0.8rem; }
+.diag-bn-col { flex:1 1 160px; border:1px solid #E2E0DA; padding:1rem; border-top:3px solid #C45C3A; background:#FFF8F5; }
+.diag-bn-col .bn-num { font-size:1.4rem; font-weight:700; color:#C45C3A; line-height:1; margin-bottom:0.3rem; }
+.diag-bn-col .bn-title { font-size:0.8rem; font-weight:700; color:#0F2342; margin-bottom:0.4rem; line-height:1.4; }
+.diag-bn-col .bn-body { font-size:0.73rem; color:#4A4A55; line-height:1.55; }
+.diag-vflow { display:flex; flex-direction:column; gap:0; }
+.diag-vflow-step { display:flex; gap:0.8rem; align-items:flex-start; margin-bottom:0; }
+.diag-vflow-left { display:flex; flex-direction:column; align-items:center; flex-shrink:0; width:36px; }
+.diag-vflow-circle { width:32px; height:32px; background:#0F2342; color:#A8965A; font-size:0.78rem; font-weight:700; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.diag-vflow-line { width:2px; background:#E2E0DA; flex:1; min-height:20px; }
+.diag-vflow-step:last-child .diag-vflow-line { display:none; }
+.diag-vflow-content { padding:0.1rem 0 1rem; }
+.diag-vflow-content .vf-title { font-size:0.82rem; font-weight:700; color:#0F2342; margin-bottom:0.2rem; }
+.diag-vflow-content .vf-body { font-size:0.75rem; color:#4A4A55; line-height:1.5; }
 </style>
 <!-- Google Analytics GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
@@ -118,6 +142,30 @@ article li { margin-bottom: 0.5rem; }
       <p>欧州では、ECHA（欧州化学品庁）が約1万種類のPFASを対象とした包括的な使用制限提案を進めており、早ければ2027年にも規制が施行される見通しです。米国でもEPAが飲料水基準を厳格化し、各州レベルでのPFAS規制も拡大しています。日本国内でも、化審法による規制強化の動きが加速しており、PFOS・PFOAに続く規制対象物質の追加が予定されています。</p>
       <p>こうした規制の波は、最終製品メーカーだけでなく、サプライチェーン全体に影響を及ぼします。特にTier2/Tier3の部品・素材メーカーは、顧客からのPFAS含有調査への対応を迫られており、その負荷が急増しています。</p>
 
+      <!-- DIAGRAM: PFAS regulation timeline -->
+      <div class="diag-wrap">
+        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;">PFAS規制 主要マイルストーン</div>
+        <div class="diag-timeline">
+          <div class="diag-tl-item">
+            <div class="tl-year">2024</div>
+            <div class="tl-desc">米国EPA、飲料水中のPFAS基準を大幅厳格化。日本・化審法によるPFAS関連物質の規制強化が加速。chemSHERPA調査対象物質にPFAS追加が本格化。</div>
+          </div>
+          <div class="diag-tl-item">
+            <div class="tl-year">2025</div>
+            <div class="tl-desc">EU・ECHA、約1万種のPFASを対象とした包括的使用制限の最終審議。各国のサプライヤー調査義務が拡大。Tier2/3企業への調査依頼が急増。</div>
+          </div>
+          <div class="diag-tl-item">
+            <div class="tl-year">2026</div>
+            <div class="tl-desc">日本国内でPFOS・PFOA後継物質の規制対象追加が予定。chemSHERPA管理物質リストの大幅更新により既存製品の再調査が必要に。</div>
+          </div>
+          <div class="diag-tl-item" style="margin-bottom:0;">
+            <div class="tl-year">2027〜</div>
+            <div class="tl-desc">EU・PFAS包括規制の施行が見込まれる。対象外とされた用途の例外措置も段階的に廃止予定。全産業でサプライチェーン対応が必須に。</div>
+          </div>
+        </div>
+      </div>
+      <p class="diag-caption">[図] PFAS規制の主要マイルストーン（2024〜2027年）</p>
+
       <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">2. chemSHERPAとは？対応が求められる背景</h2>
       <p>chemSHERPA（ケムシェルパ）は、製品含有化学物質の情報伝達スキームとして、日本の産業界で標準的に使用されている仕組みです。経済産業省の主導で策定され、JAMP（アーティクルマネジメント推進協議会）が管理・運用を行っています。</p>
       <p>chemSHERPAには「chemSHERPA-CI（化学品）」と「chemSHERPA-AI（成形品）」の2種類があり、サプライチェーン上の企業間で製品に含まれる化学物質情報を正確に伝達するための共通フォーマットとして機能します。</p>
@@ -128,6 +176,29 @@ article li { margin-bottom: 0.5rem; }
       <p><strong>ボトルネック1：サプライヤーからの情報収集</strong><br>自社製品に含まれる化学物質情報を把握するには、上流サプライヤーからの情報提供が不可欠です。しかし、サプライヤーの回答率は低く、催促を重ねても期限内に回答が揃わないケースが頻発します。特にPFASのように規制対象が広範な物質では、サプライヤー側の対応能力も追いついていないことが多いです。</p>
       <p><strong>ボトルネック2：データの統合と整合性確保</strong><br>サプライヤーから得た化学物質データを自社製品の構成に紐づけ、chemSHERPAフォーマットに変換する作業は極めて煩雑です。BOM（部品表）とchemSHERPAデータの紐付け、CAS番号の照合、含有率の計算など、専門知識が必要な作業が多く、手作業ではミスのリスクも高まります。</p>
       <p><strong>ボトルネック3：規制改定への追従</strong><br>PFAS規制は現在進行形で変化しており、chemSHERPAの管理対象物質リストも定期的に更新されます。新たに追加された物質について過去の調査データを見直し、再調査が必要かを判断する作業も大きな負担となっています。</p>
+
+      <!-- DIAGRAM: 3 bottlenecks -->
+      <div class="diag-wrap">
+        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;">調査票対応の3大ボトルネック</div>
+        <div class="diag-bn-row">
+          <div class="diag-bn-col">
+            <div class="bn-num">01</div>
+            <div class="bn-title">サプライヤーからの情報収集</div>
+            <div class="bn-body">回答率が低く、催促を重ねても期限内に情報が揃わない。サプライヤー側の対応能力も不足。</div>
+          </div>
+          <div class="diag-bn-col">
+            <div class="bn-num">02</div>
+            <div class="bn-title">データ統合と整合性確保</div>
+            <div class="bn-body">BOMとchemSHERPAデータの紐付け、CAS番号照合、含有率計算など専門知識が必要な手作業が大量発生。</div>
+          </div>
+          <div class="diag-bn-col">
+            <div class="bn-num">03</div>
+            <div class="bn-title">規制改定への追従</div>
+            <div class="bn-body">管理対象物質リストが定期更新。追加物質の影響範囲特定と再調査判断が継続的に必要になる。</div>
+          </div>
+        </div>
+      </div>
+      <p class="diag-caption">[図] chemSHERPA調査票対応における3つの主要ボトルネック</p>
 
       <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">4. ChemOSによる7ステップ自動化</h2>
       <p>Wingが開発した「ChemOS」は、chemSHERPA調査票対応を7つのステップで自動化する化学物質管理プラットフォームです。</p>
@@ -141,6 +212,42 @@ article li { margin-bottom: 0.5rem; }
         <li><strong>規制アップデートの自動反映：</strong>chemSHERPAの管理対象物質リスト更新を自動検知し、影響を受ける製品・部品を特定</li>
       </ul>
       <p>この7ステップの自動化により、担当者は例外的なケースの判断と最終確認に集中できるようになります。データ入力やフォーマット変換といった定型作業から解放されることで、対応品質の向上と大幅な工数削減を両立します。</p>
+
+      <!-- DIAGRAM: 7-step automation vertical flow -->
+      <div class="diag-wrap">
+        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;">ChemOS 7ステップ自動化フロー</div>
+        <div class="diag-vflow">
+          <div class="diag-vflow-step">
+            <div class="diag-vflow-left"><div class="diag-vflow-circle">1</div><div class="diag-vflow-line"></div></div>
+            <div class="diag-vflow-content"><div class="vf-title">調査依頼の自動受付</div><div class="vf-body">メールをAIが解析し、対象製品・物質を自動特定してタスク化</div></div>
+          </div>
+          <div class="diag-vflow-step">
+            <div class="diag-vflow-left"><div class="diag-vflow-circle">2</div><div class="diag-vflow-line"></div></div>
+            <div class="diag-vflow-content"><div class="vf-title">BOMとの自動紐付け</div><div class="vf-body">対象製品のBOMを参照し、回答に必要なサプライヤーと部品を洗い出し</div></div>
+          </div>
+          <div class="diag-vflow-step">
+            <div class="diag-vflow-left"><div class="diag-vflow-circle">3</div><div class="diag-vflow-line"></div></div>
+            <div class="diag-vflow-content"><div class="vf-title">サプライヤーへの自動照会</div><div class="vf-body">不足情報についての照会メールを自動生成・送信</div></div>
+          </div>
+          <div class="diag-vflow-step">
+            <div class="diag-vflow-left"><div class="diag-vflow-circle">4</div><div class="diag-vflow-line"></div></div>
+            <div class="diag-vflow-content"><div class="vf-title">回答の自動取込み</div><div class="vf-body">返送されたchemSHERPAファイルを自動取込み・データベースに格納</div></div>
+          </div>
+          <div class="diag-vflow-step">
+            <div class="diag-vflow-left"><div class="diag-vflow-circle">5</div><div class="diag-vflow-line"></div></div>
+            <div class="diag-vflow-content"><div class="vf-title">含有判定の自動計算</div><div class="vf-body">部品レベルのデータを統合し、製品レベルの含有率・閾値超過を自動判定</div></div>
+          </div>
+          <div class="diag-vflow-step">
+            <div class="diag-vflow-left"><div class="diag-vflow-circle">6</div><div class="diag-vflow-line"></div></div>
+            <div class="diag-vflow-content"><div class="vf-title">chemSHERPAファイルの自動生成</div><div class="vf-body">chemSHERPA-AIフォーマットの回答ファイルを自動生成</div></div>
+          </div>
+          <div class="diag-vflow-step">
+            <div class="diag-vflow-left"><div class="diag-vflow-circle" style="background:#A8965A;color:#fff;">7</div><div class="diag-vflow-line"></div></div>
+            <div class="diag-vflow-content"><div class="vf-title">規制アップデートの自動反映</div><div class="vf-body">管理対象物質リスト更新を自動検知し、影響製品・部品を特定</div></div>
+          </div>
+        </div>
+      </div>
+      <p class="diag-caption">[図] ChemOSによる7ステップ自動化フロー</p>
 
       <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">5. 導入事例と効果</h2>
       <p>ある電子部品メーカー（従業員約300名、年間調査対応件数約1,200件）では、ChemOSの導入により以下の成果を実現しました。</p>

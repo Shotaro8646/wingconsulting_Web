@@ -522,6 +522,28 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* ── Diagram styles ── */
+        .diag-wrap { background:#fff; border:1px solid #e8e6e0; border-top:3px solid #A8965A; padding:1.4rem 1.5rem 1rem; margin:1.8rem 0 0.4rem; font-size:0.85rem; }
+        .diag-caption { text-align:center; font-size:0.72rem; color:#7a7a8a; margin-top:0.4rem; margin-bottom:1.6rem; }
+        .diag-gap-row { display:flex; flex-wrap:wrap; gap:0.8rem; align-items:flex-end; }
+        .diag-gap-bar-wrap { flex:1 1 120px; display:flex; flex-direction:column; align-items:center; gap:0.4rem; }
+        .diag-gap-bar-label { font-size:0.72rem; font-weight:700; text-align:center; line-height:1.4; }
+        .diag-gap-bar { width:100%; border-radius:2px 2px 0 0; display:flex; align-items:flex-end; justify-content:center; padding-bottom:0.3rem; }
+        .diag-gap-bar span { font-size:0.68rem; font-weight:700; color:#fff; }
+        .diag-gap-arrow { display:flex; align-items:center; justify-content:center; font-size:1.6rem; color:#A8965A; flex-shrink:0; padding:0 0.3rem; align-self:center; }
+        .diag-platform-row { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:0.6rem; margin:0.5rem 0; }
+        .diag-platform-node { background:#0a1628; color:#fff; border:1px solid rgba(168,150,90,0.4); padding:0.9rem 1.2rem; text-align:center; font-size:0.78rem; font-weight:700; min-width:110px; line-height:1.4; }
+        .diag-platform-node.center { background:#A8965A; color:#0a1628; border-color:#A8965A; }
+        .diag-platform-node .nd-sub { font-weight:400; font-size:0.68rem; opacity:0.7; display:block; margin-top:0.2rem; }
+        .diag-platform-conn { color:#A8965A; font-size:1.1rem; font-weight:700; }
+        .diag-onboard-row { display:flex; flex-wrap:wrap; align-items:center; gap:0; }
+        .diag-onboard-step { flex:1 1 130px; padding:1rem; border:1px solid #e8e6e0; background:#fff; position:relative; }
+        .diag-onboard-step .os-num { width:28px; height:28px; background:#0a1628; color:#A8965A; font-size:0.72rem; font-weight:700; display:flex; align-items:center; justify-content:center; border-radius:50%; margin-bottom:0.5rem; }
+        .diag-onboard-step .os-title { font-size:0.8rem; font-weight:700; color:#0a1628; margin-bottom:0.3rem; }
+        .diag-onboard-step .os-body { font-size:0.73rem; color:#4a4a5a; line-height:1.5; }
+        .diag-onboard-arrow { color:#A8965A; font-size:1rem; padding:0 0.3rem; flex-shrink:0; display:flex; align-items:center; }
+        @media (max-width:500px) { .diag-onboard-row { flex-direction:column; } .diag-onboard-arrow { transform:rotate(90deg); } }
     </style>
 </head>
 <body>
@@ -575,6 +597,28 @@
                 「今の人数で、今のやり方を続ける」という選択肢が、静かに消えつつある。
             </div>
 
+            <!-- DIAGRAM: 人手減少 vs 業務量増加 gap diagram -->
+            <div class="diag-wrap">
+              <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;">人手 vs 業務量 — 拡大するギャップ</div>
+              <div class="diag-gap-row">
+                <div class="diag-gap-bar-wrap">
+                  <div class="diag-gap-bar-label" style="color:#c4453c;">人手（担当者数）</div>
+                  <div class="diag-gap-bar" style="background:#c4453c;height:60px;"><span>減少傾向</span></div>
+                  <div style="font-size:0.68rem;color:#7a7a8a;text-align:center;">高齢化・採用難・属人化</div>
+                </div>
+                <div class="diag-gap-arrow">↕<br><span style="font-size:0.65rem;font-weight:700;display:block;margin-top:-0.3rem;">ギャップ<br>拡大中</span></div>
+                <div class="diag-gap-bar-wrap">
+                  <div class="diag-gap-bar-label" style="color:#0a1628;">業務量・複雑性</div>
+                  <div class="diag-gap-bar" style="background:#0a1628;height:120px;"><span>増加傾向</span></div>
+                  <div style="font-size:0.68rem;color:#7a7a8a;text-align:center;">少量多品種・多国間取引の増加</div>
+                </div>
+              </div>
+              <div style="margin-top:0.8rem;padding:0.6rem 0.8rem;background:#fdf8ed;border-left:3px solid #A8965A;font-size:0.78rem;color:#4a4a5a;line-height:1.55;">
+                「今の人数で、今のやり方を続ける」という選択肢が消えつつある。DXによる業務自動化が唯一の解だ。
+              </div>
+            </div>
+            <p class="diag-caption">[図] 人手減少と業務量増加による構造的ギャップの拡大</p>
+
             <!-- Section 2 -->
             <div class="section-block fade-up">
                 <div class="section-number">REASON 02</div>
@@ -588,6 +632,46 @@
             <p>つまり、大手商社や大手物流事業者は、もう「手入力」の世界にはいない。デジタルでデータを受け渡す前提でインフラが組まれ始めている。</p>
 
             <p>ここで起きるのは、紙とExcelで業務を回している中小事業者が、<strong>デジタル化されたサプライチェーンの中で「接続できない存在」になるリスク</strong>だ。取引先から「データで送ってほしい」と言われたとき、対応できるかどうか。これは近い将来の話ではなく、今まさに始まっている現実だ。</p>
+
+            <!-- DIAGRAM: NACCS ↔ TradeWaltz ↔ 自社システム platform diagram -->
+            <div class="diag-wrap">
+              <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;">貿易プラットフォーム連携マップ</div>
+              <div class="diag-platform-row">
+                <div class="diag-platform-node">
+                  自社システム<br>
+                  <span class="nd-sub">ERP / WMS / Excel</span>
+                </div>
+                <div class="diag-platform-conn">⇆</div>
+                <div class="diag-platform-node center">
+                  TradeWaltz<br>
+                  <span class="nd-sub">貿易情報連携PF</span>
+                </div>
+                <div class="diag-platform-conn">⇆</div>
+                <div class="diag-platform-node">
+                  NACCS<br>
+                  <span class="nd-sub">第7次更改 2025.10</span>
+                </div>
+              </div>
+              <div class="diag-platform-row" style="margin-top:0.5rem;">
+                <div style="width:100%;height:1px;background:#e8e6e0;"></div>
+              </div>
+              <div class="diag-platform-row" style="margin-top:0.5rem;">
+                <div class="diag-platform-node">
+                  物流業者<br>
+                  <span class="nd-sub">Cyber Port連携</span>
+                </div>
+                <div class="diag-platform-conn">⇆</div>
+                <div class="diag-platform-node center" style="font-size:0.72rem;">
+                  再入力ゼロ<br>データ一気通貫
+                </div>
+                <div class="diag-platform-conn">⇆</div>
+                <div class="diag-platform-node">
+                  税関・通関業者<br>
+                  <span class="nd-sub">申告・許可書連携</span>
+                </div>
+              </div>
+            </div>
+            <p class="diag-caption">[図] NACCS・TradeWaltz・自社システムのプラットフォーム連携イメージ</p>
 
             <!-- Section 3 -->
             <div class="section-block fade-up">
@@ -647,6 +731,31 @@
                 <h3 class="borderflow-title">BorderFlow AI —— 書類を投げ込むだけで、貿易データをデジタル化</h3>
                 <p>Wingが開発を進めている「BorderFlow AI」は、中小商社の貿易実務に特化したAIエージェントです。大手向けプラットフォームへの高額な投資ではなく、「書類を投げ込むだけ」で輸出入データをデジタル化する——最小コストでDXの第一歩を踏み出せる設計になっています。</p>
             </div>
+
+            <!-- DIAGRAM: 3-step onboarding visual -->
+            <div class="diag-wrap">
+              <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;">BorderFlow AI — 3ステップで始めるDX</div>
+              <div class="diag-onboard-row">
+                <div class="diag-onboard-step">
+                  <div class="os-num">1</div>
+                  <div class="os-title">データ接続</div>
+                  <div class="os-body">既存のメール・ポータル・ERP/Excelとの接続設定。書類フォーマットの学習データを登録。大規模なシステム改修は不要。</div>
+                </div>
+                <div class="diag-onboard-arrow">→</div>
+                <div class="diag-onboard-step">
+                  <div class="os-num">2</div>
+                  <div class="os-title">AI学習</div>
+                  <div class="os-body">過去の取引データをもとにAIが品目・税率・規制パターンを学習。自社独自のルールをチューニングし、精度を向上させる。</div>
+                </div>
+                <div class="diag-onboard-arrow">→</div>
+                <div class="diag-onboard-step" style="border-top:3px solid #A8965A;">
+                  <div class="os-num" style="background:#A8965A;color:#fff;">3</div>
+                  <div class="os-title">自動化開始</div>
+                  <div class="os-body">書類の読取・データ化・NACCS連携が自動化。担当者は確認のみ。手入力ゼロの環境が稼働を開始する。</div>
+                </div>
+              </div>
+            </div>
+            <p class="diag-caption">[図] BorderFlow AIによる3ステップ導入・自動化開始フロー</p>
 
             <div class="article-divider"></div>
 
