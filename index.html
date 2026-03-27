@@ -965,147 +965,197 @@ function filterWP(cat) {
 <!-- ─── BLOG ──────────────────────────────────────────── -->
 <section class="reveal py-24 px-6 md:px-10 bg-white border-t border-[#E2E0DA]" id="blog">
   <div class="max-w-5xl mx-auto">
-    <p class="display text-[.67rem] font-medium tracking-[.2em] uppercase text-gold mb-3" data-ja="コラム" data-en="Insights">コラム</p>
+    <p class="display text-[.67rem] font-medium tracking-[.2em] uppercase text-gold mb-3" data-ja="インサイト" data-en="Insights">インサイト</p>
     <h2 class="serif text-[clamp(1.6rem,3vw,2.4rem)] font-medium text-ink leading-snug mb-4">
       <span data-ja="AI・デジタル、貿易に関するトレンド・インサイト" data-en="Trends &amp; Insights on AI, Digital &amp; Trade">AI・デジタル、貿易に関するトレンド・インサイト</span>
     </h2>
-    <div class="gold-rule mb-14"></div>
+    <div class="gold-rule mb-10"></div>
 
-    <div class="grid md:grid-cols-3 gap-6 mb-10">
-      <!-- Article 6 -->
-      <a href="/blog/gafam-ai" class="group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
+    <!-- Category Filter -->
+    <div class="flex flex-wrap gap-2 mb-10" id="blog-filters">
+      <button onclick="filterBlog('all')" data-cat="all" class="blog-filter-btn active display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-gold bg-gold text-navy transition-all">すべて</button>
+      <button onclick="filterBlog('ai-dx')" data-cat="ai-dx" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E2E0DA] text-ink-mid hover:border-gold hover:text-gold transition-all"># AI・DX戦略</button>
+      <button onclick="filterBlog('trade-dx')" data-cat="trade-dx" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E2E0DA] text-ink-mid hover:border-gold hover:text-gold transition-all"># 貿易DX</button>
+      <button onclick="filterBlog('compliance')" data-cat="compliance" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E2E0DA] text-ink-mid hover:border-gold hover:text-gold transition-all"># コンプライアンス</button>
+      <button onclick="filterBlog('logistics')" data-cat="logistics" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E2E0DA] text-ink-mid hover:border-gold hover:text-gold transition-all"># 物流DX</button>
+      <button onclick="filterBlog('it-org')" data-cat="it-org" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E2E0DA] text-ink-mid hover:border-gold hover:text-gold transition-all"># IT組織</button>
+    </div>
+
+    <!-- Blog Grid -->
+    <div class="grid md:grid-cols-3 gap-6 mb-10" id="blog-grid">
+
+      <a href="/blog/gafam-ai" data-category="ai-dx" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
         <div class="bg-navy/05 px-5 py-4">
-          <p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2">AI Strategy</p>
+          <div class="flex gap-2 flex-wrap mb-2">
+            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># AI・DX戦略</span>
+          </div>
           <p class="text-[.92rem] font-medium text-ink leading-snug group-hover:text-gold-muted transition-colors" data-ja="GAFAMの「AI軍拡競争」は、あなたの現場の話だ" data-en="GAFAM's AI Arms Race Is About Your Business">GAFAMの「AI軍拡競争」は、あなたの現場の話だ</p>
         </div>
         <div class="px-5 py-4">
-          <p class="text-[.75rem] text-ink-mid leading-relaxed" data-ja="GAFAM各社のAI投資競争が現場にもたらす影響と、企業が今とるべきアクションを解説。" data-en="How GAFAM's massive AI investments impact your operations, and what actions to take now.">GAFAM各社のAI投資競争が現場にもたらす影響と、企業が今とるべきアクションを解説。</p>
+          <p class="text-[.75rem] text-ink-mid leading-relaxed">GAFAM各社のAI投資競争が現場にもたらす影響と、企業が今とるべきアクションを解説。</p>
           <p class="text-[.68rem] text-ink-light mt-3">2026.03.25</p>
         </div>
       </a>
 
-      <!-- Article 4 -->
-      <a href="/blog/logistics-dx" class="group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
+      <a href="/blog/logistics-dx" data-category="logistics" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
         <div class="bg-navy/05 px-5 py-4">
-          <p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2">Logistics DX</p>
+          <div class="flex gap-2 flex-wrap mb-2">
+            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># 物流DX</span>
+          </div>
           <p class="text-[.92rem] font-medium text-ink leading-snug group-hover:text-gold-muted transition-colors" data-ja="「ロボットが同僚になる日」は、もう来ている" data-en="The Day Robots Become Colleagues Is Already Here">「ロボットが同僚になる日」は、もう来ている</p>
         </div>
         <div class="px-5 py-4">
-          <p class="text-[.75rem] text-ink-mid leading-relaxed" data-ja="物流DXの最前線。ロボティクスとAIが変える倉庫・配送の未来を解説。" data-en="The frontlines of logistics DX. How robotics and AI are transforming warehousing and delivery.">物流DXの最前線。ロボティクスとAIが変える倉庫・配送の未来を解説。</p>
+          <p class="text-[.75rem] text-ink-mid leading-relaxed">物流DXの最前線。ロボティクスとAIが変える倉庫・配送の未来を解説。</p>
           <p class="text-[.68rem] text-ink-light mt-3">2026.03.25</p>
         </div>
       </a>
 
-      <!-- Article 5 -->
-      <a href="/blog/china-logistics-dx" class="group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
+      <a href="/blog/china-logistics-dx" data-category="logistics" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
         <div class="bg-navy/05 px-5 py-4">
-          <p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2">Global DX</p>
+          <div class="flex gap-2 flex-wrap mb-2">
+            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># 物流DX</span>
+            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># AI・DX戦略</span>
+          </div>
           <p class="text-[.92rem] font-medium text-ink leading-snug group-hover:text-gold-muted transition-colors" data-ja="中国物流が「別次元」に入った" data-en="China's Logistics Has Entered a New Dimension">中国物流が「別次元」に入った</p>
         </div>
         <div class="px-5 py-4">
-          <p class="text-[.75rem] text-ink-mid leading-relaxed" data-ja="中国の物流DX最新事情。自動化・データ活用で先を行く中国から日本企業が学ぶべきこと。" data-en="The latest in China's logistics DX. What Japanese companies can learn from China's automation leadership.">中国の物流DX最新事情。自動化・データ活用で先を行く中国から日本企業が学ぶべきこと。</p>
+          <p class="text-[.75rem] text-ink-mid leading-relaxed">中国の物流DX最新事情。自動化・データ活用で先を行く中国から日本企業が学ぶべきこと。</p>
           <p class="text-[.68rem] text-ink-light mt-3">2026.03.25</p>
         </div>
       </a>
 
-      <!-- Article 1 -->
-      <a href="/blog/dx-consulting-guide" class="group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
+      <a href="/blog/dx-consulting-guide" data-category="ai-dx" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
         <div class="bg-navy/05 px-5 py-4">
-          <p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2">DX Strategy</p>
+          <div class="flex gap-2 flex-wrap mb-2">
+            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># AI・DX戦略</span>
+          </div>
           <p class="text-[.92rem] font-medium text-ink leading-snug group-hover:text-gold-muted transition-colors" data-ja="DXコンサルティングとは？失敗しない選び方と成功のポイント" data-en="What is DX Consulting? How to Choose the Right Partner">DXコンサルティングとは？失敗しない選び方と成功のポイント</p>
         </div>
         <div class="px-5 py-4">
-          <p class="text-[.75rem] text-ink-mid leading-relaxed" data-ja="DXコンサルの選び方を10年以上の経験をもとに解説。大手と専門ファームの違い、失敗パターンと成功の秘訣。" data-en="A practical guide to choosing a DX consulting partner, based on 10+ years of experience.">DXコンサルの選び方を10年以上の経験をもとに解説。大手と専門ファームの違い、失敗パターンと成功の秘訣。</p>
+          <p class="text-[.75rem] text-ink-mid leading-relaxed">DXコンサルの選び方を10年以上の経験をもとに解説。大手と専門ファームの違い、失敗パターンと成功の秘訣。</p>
           <p class="text-[.68rem] text-ink-light mt-3">2026.03.25</p>
         </div>
       </a>
 
-      <!-- Article 2 -->
-      <a href="/blog/trade-dx-ai-agent" class="group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
+      <a href="/blog/trade-dx-ai-agent" data-category="trade-dx" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
         <div class="bg-navy/05 px-5 py-4">
-          <p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2">Trade DX</p>
+          <div class="flex gap-2 flex-wrap mb-2">
+            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># 貿易DX</span>
+            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># AI・DX戦略</span>
+          </div>
           <p class="text-[.92rem] font-medium text-ink leading-snug group-hover:text-gold-muted transition-colors" data-ja="貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来" data-en="AI Agents: The Key to Trade DX and the Future of Trading Companies">貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来</p>
         </div>
         <div class="px-5 py-4">
-          <p class="text-[.75rem] text-ink-mid leading-relaxed" data-ja="貿易業務におけるAIエージェント活用法を、BorderFlow AIの事例とともに具体的に解説。" data-en="How AI agents are transforming trade operations, with real examples from BorderFlow AI.">貿易業務におけるAIエージェント活用法を、BorderFlow AIの事例とともに具体的に解説。</p>
+          <p class="text-[.75rem] text-ink-mid leading-relaxed">貿易業務におけるAIエージェント活用法を、BorderFlow AIの事例とともに具体的に解説。</p>
           <p class="text-[.68rem] text-ink-light mt-3">2026.03.25</p>
         </div>
       </a>
 
-      <!-- Article 3 -->
-      <a href="/blog/pfas-chemsherpa-guide" class="group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
+      <a href="/blog/pfas-chemsherpa-guide" data-category="compliance" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
         <div class="bg-navy/05 px-5 py-4">
-          <p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2">Compliance</p>
+          <div class="flex gap-2 flex-wrap mb-2">
+            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># コンプライアンス</span>
+          </div>
           <p class="text-[.92rem] font-medium text-ink leading-snug group-hover:text-gold-muted transition-colors" data-ja="PFAS規制とchemSHERPA対応の実務ガイド" data-en="PFAS Regulation &amp; chemSHERPA: A Practical Compliance Guide">PFAS規制とchemSHERPA対応の実務ガイド</p>
         </div>
         <div class="px-5 py-4">
-          <p class="text-[.75rem] text-ink-mid leading-relaxed" data-ja="PFAS規制の最新動向と調査票対応の効率化。ChemOSによる7ステップ自動化を解説。" data-en="Latest PFAS regulation trends and how to streamline chemSHERPA compliance with ChemOS.">PFAS規制の最新動向と調査票対応の効率化。ChemOSによる7ステップ自動化を解説。</p>
+          <p class="text-[.75rem] text-ink-mid leading-relaxed">PFAS規制の最新動向と調査票対応の効率化。ChemOSによる7ステップ自動化を解説。</p>
           <p class="text-[.68rem] text-ink-light mt-3">2026.03.25</p>
         </div>
       </a>
 
-      <!-- Article 7 -->
-      <a href="/blog/pfas-global-regulation-2026" class="group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
+      <a href="/blog/pfas-global-regulation-2026" data-category="compliance" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
         <div class="bg-navy/05 px-5 py-4">
-          <p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2">Compliance</p>
+          <div class="flex gap-2 flex-wrap mb-2">
+            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># コンプライアンス</span>
+            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># 貿易DX</span>
+          </div>
           <p class="text-[.92rem] font-medium text-ink leading-snug group-hover:text-gold-muted transition-colors" data-ja="グローバル貿易におけるPFAS規制の最前線 2026" data-en="PFAS Regulation in Global Trade 2026">グローバル貿易におけるPFAS規制の最前線 2026</p>
         </div>
         <div class="px-5 py-4">
-          <p class="text-[.75rem] text-ink-mid leading-relaxed" data-ja="米国TSCA・EU PPWR・日本化審法。2026年に集中するPFAS規制の全体像と企業が取るべきアクションを詳解。" data-en="US TSCA, EU PPWR, Japan CSCL. A comprehensive guide to PFAS regulations converging in 2026.">米国TSCA・EU PPWR・日本化審法。2026年に集中するPFAS規制の全体像と企業が取るべきアクションを詳解。</p>
+          <p class="text-[.75rem] text-ink-mid leading-relaxed">米国TSCA・EU PPWR・日本化審法。2026年に集中するPFAS規制の全体像と企業が取るべきアクションを詳解。</p>
           <p class="text-[.68rem] text-ink-light mt-3">2026.03.26</p>
         </div>
       </a>
 
-      <!-- Article 8 -->
-      <a href="/blog/global-it-organization-model" class="group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
+      <a href="/blog/global-it-organization-model" data-category="it-org" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
         <div class="bg-navy/05 px-5 py-4">
-          <p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2">IT Organization</p>
+          <div class="flex gap-2 flex-wrap mb-2">
+            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># IT組織</span>
+            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># AI・DX戦略</span>
+          </div>
           <p class="text-[.92rem] font-medium text-ink leading-snug group-hover:text-gold-muted transition-colors" data-ja="グローバル企業のIT組織モデル｜海外拠点のIT機能をどう設計するか" data-en="Global IT Organization Models: Designing IT for Overseas Subsidiaries">グローバル企業のIT組織モデル｜海外拠点のIT機能をどう設計するか</p>
         </div>
         <div class="px-5 py-4">
-          <p class="text-[.75rem] text-ink-mid leading-relaxed" data-ja="集中型・分担型・自律型の3モデルを比較。海外拠点のITガバナンスと役割分担の最適解を解説。" data-en="Comparing 3 IT organization models. Best practices for IT governance and role allocation across global entities.">集中型・分担型・自律型の3モデルを比較。海外拠点のITガバナンスと役割分担の最適解を解説。</p>
+          <p class="text-[.75rem] text-ink-mid leading-relaxed">集中型・分担型・自律型の3モデルを比較。海外拠点のITガバナンスと役割分担の最適解を解説。</p>
           <p class="text-[.68rem] text-ink-light mt-3">2026.03.26</p>
         </div>
       </a>
 
-      <!-- Article 9 -->
-      <a href="/blog/customs-dx-guide" class="group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
+      <a href="/blog/customs-dx-guide" data-category="trade-dx" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
         <div class="bg-navy/05 px-5 py-4">
-          <p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2">Trade DX</p>
+          <div class="flex gap-2 flex-wrap mb-2">
+            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># 貿易DX</span>
+          </div>
           <p class="text-[.92rem] font-medium text-ink leading-snug group-hover:text-gold-muted transition-colors" data-ja="通関DXの本質は「コスト削減」ではない" data-en="Customs DX: Beyond Cost Reduction">通関DXの本質は「コスト削減」ではない</p>
         </div>
         <div class="px-5 py-4">
-          <p class="text-[.75rem] text-ink-mid leading-relaxed" data-ja="AI-OCR・次世代NACCS・WCO SAFE 2025。通関自動化が貿易の競争ルールそのものを書き換える3つの構造変化を解説。" data-en="AI-OCR, next-gen NACCS, WCO SAFE 2025. Three structural shifts rewriting the rules of trade competition.">AI-OCR・次世代NACCS・WCO SAFE 2025。通関自動化が貿易の競争ルールそのものを書き換える3つの構造変化を解説。</p>
+          <p class="text-[.75rem] text-ink-mid leading-relaxed">AI-OCR・次世代NACCS・WCO SAFE 2025。通関自動化が貿易の競争ルールそのものを書き換える3つの構造変化を解説。</p>
           <p class="text-[.68rem] text-ink-light mt-3">2026.03.26</p>
         </div>
       </a>
 
-      <!-- Article 10 -->
-      <a href="/blog/hs-code-guide" class="group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
+      <a href="/blog/hs-code-guide" data-category="trade-dx" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
         <div class="bg-navy/05 px-5 py-4">
-          <p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2">Trade DX</p>
+          <div class="flex gap-2 flex-wrap mb-2">
+            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># 貿易DX</span>
+          </div>
           <p class="text-[.92rem] font-medium text-ink leading-snug group-hover:text-gold-muted transition-colors" data-ja="HSコード完全ガイド：品目分類を戦略的武器に変える" data-en="HS Code Complete Guide: Turning Classification into Strategy">HSコード完全ガイド：品目分類を戦略的武器に変える</p>
         </div>
         <div class="px-5 py-4">
-          <p class="text-[.75rem] text-ink-mid leading-relaxed" data-ja="HSコードの構造・通則（GRI）・Webタリフ検索・EPA活用・事前教示制度まで。貿易実務者が知るべき品目分類の全体像を徹底解説。" data-en="HS code structure, GRI rules, tariff lookup, EPA strategy, and advance ruling. A complete guide for trade practitioners.">HSコードの構造・通則（GRI）・Webタリフ検索・EPA活用・事前教示制度まで。貿易実務者が知るべき品目分類の全体像を徹底解説。</p>
+          <p class="text-[.75rem] text-ink-mid leading-relaxed">HSコードの構造・通則・Webタリフ検索・EPA活用・事前教示制度まで。貿易実務者が知るべき品目分類の全体像を徹底解説。</p>
           <p class="text-[.68rem] text-ink-light mt-3">2026.03.26</p>
         </div>
       </a>
 
-      <!-- Article 11 -->
-      <a href="/blog/trade-dx-guide" class="group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
+      <a href="/blog/trade-dx-guide" data-category="trade-dx" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
         <div class="bg-navy/05 px-5 py-4">
-          <p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2">Trade DX</p>
+          <div class="flex gap-2 flex-wrap mb-2">
+            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># 貿易DX</span>
+          </div>
           <p class="text-[.92rem] font-medium text-ink leading-snug group-hover:text-gold-muted transition-colors" data-ja="人手が減るのに業務量は減らない｜中小商社の貿易DX入門" data-en="Less Staff, Same Workload: Trade DX for Mid-Size Trading Companies">人手が減るのに業務量は減らない｜中小商社の貿易DX入門</p>
         </div>
         <div class="px-5 py-4">
-          <p class="text-[.75rem] text-ink-mid leading-relaxed" data-ja="2024年問題・NACCS更改・TradeWaltz連携。中小商社が今すぐ始めるべき貿易DXの「軽い入口」を解説。" data-en="Labor shortages, NACCS upgrade, TradeWaltz integration. A practical guide for mid-size trading companies to start trade DX today.">2024年問題・NACCS更改・TradeWaltz連携。中小商社が今すぐ始めるべき貿易DXの「軽い入口」を解説。</p>
+          <p class="text-[.75rem] text-ink-mid leading-relaxed">2024年問題・NACCS更改・TradeWaltz連携。中小商社が今すぐ始めるべき貿易DXの「軽い入口」を解説。</p>
           <p class="text-[.68rem] text-ink-light mt-3">2026.03.26</p>
         </div>
       </a>
 
     </div>
   </div>
+
+  <script>
+  function filterBlog(cat) {
+    var cards = document.querySelectorAll('.blog-card');
+    var btns  = document.querySelectorAll('.blog-filter-btn');
+    btns.forEach(function(b) {
+      if (b.dataset.cat === cat) {
+        b.classList.add('bg-gold', 'text-navy', 'border-gold');
+        b.classList.remove('text-ink-mid');
+      } else {
+        b.classList.remove('bg-gold', 'text-navy', 'border-gold');
+        b.classList.add('text-ink-mid');
+      }
+    });
+    cards.forEach(function(card) {
+      if (cat === 'all' || card.dataset.category === cat) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+  </script>
 </section>
 
 <!-- ─── FINAL CTA ───────────────────────────────────────── -->
