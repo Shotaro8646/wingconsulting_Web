@@ -1050,31 +1050,31 @@ html[lang="en"] .ja-only {
       <form id="contact-form" action="https://formspree.io/f/xpqopzdj" method="POST" class="flex flex-col gap-4">
         <div class="flex flex-col gap-1.5">
           <label class="display text-[.74rem] font-medium text-ink tracking-wide" data-ja-html="お名前 <span class='text-gold text-[.68rem]'>*</span>" data-en-html="Name <span class='text-gold text-[.68rem]'>*</span>">お名前 <span class="text-gold text-[.68rem]">*</span></label>
-          <input type="text" placeholder="山田 太郎" data-ja-placeholder="山田 太郎" data-en-placeholder="Your Name" class="font-sans text-[.85rem] text-ink bg-white border border-[#E2E0DA] px-3.5 py-2.5 rounded-sm outline-none focus:border-navy/40 placeholder:text-ink-light transition-colors">
+          <input type="text" name="name" placeholder="山田 太郎" data-ja-placeholder="山田 太郎" data-en-placeholder="Your Name" class="font-sans text-[.85rem] text-ink bg-white border border-[#E2E0DA] px-3.5 py-2.5 rounded-sm outline-none focus:border-navy/40 placeholder:text-ink-light transition-colors">
         </div>
         <div class="flex flex-col gap-1.5">
           <label class="display text-[.74rem] font-medium text-ink tracking-wide" data-ja="会社名 / 屋号" data-en="Company Name">会社名 / 屋号</label>
-          <input type="text" placeholder="株式会社◯◯◯" data-ja-placeholder="株式会社◯◯◯" data-en-placeholder="Company Name" class="font-sans text-[.85rem] text-ink bg-white border border-[#E2E0DA] px-3.5 py-2.5 rounded-sm outline-none focus:border-navy/40 placeholder:text-ink-light transition-colors">
+          <input type="text" name="company" placeholder="株式会社◯◯◯" data-ja-placeholder="株式会社◯◯◯" data-en-placeholder="Company Name" class="font-sans text-[.85rem] text-ink bg-white border border-[#E2E0DA] px-3.5 py-2.5 rounded-sm outline-none focus:border-navy/40 placeholder:text-ink-light transition-colors">
         </div>
         <div class="flex flex-col gap-1.5">
           <label class="display text-[.74rem] font-medium text-ink tracking-wide" data-ja-html="メールアドレス <span class='text-gold text-[.68rem]'>*</span>" data-en-html="Email <span class='text-gold text-[.68rem]'>*</span>">メールアドレス <span class="text-gold text-[.68rem]">*</span></label>
-          <input type="email" placeholder="your@email.com" class="font-sans text-[.85rem] text-ink bg-white border border-[#E2E0DA] px-3.5 py-2.5 rounded-sm outline-none focus:border-navy/40 placeholder:text-ink-light transition-colors">
+          <input type="email" name="email" placeholder="your@email.com" class="font-sans text-[.85rem] text-ink bg-white border border-[#E2E0DA] px-3.5 py-2.5 rounded-sm outline-none focus:border-navy/40 placeholder:text-ink-light transition-colors">
         </div>
         <div class="flex flex-col gap-1.5">
           <label class="display text-[.74rem] font-medium text-ink tracking-wide" data-ja-html="ご相談内容 <span class='text-gold text-[.68rem]'>*</span>" data-en-html="Message <span class='text-gold text-[.68rem]'>*</span>">ご相談内容 <span class="text-gold text-[.68rem]">*</span></label>
-          <textarea rows="4" placeholder="ご状況・ご検討内容をご記入ください。具体的な依頼内容が決まっていなくても構いません。" data-ja-placeholder="ご状況・ご検討内容をご記入ください。具体的な依頼内容が決まっていなくても構いません。" data-en-placeholder="Please describe your situation or what you're considering. You don't need a specific brief." class="font-sans text-[.85rem] text-ink bg-white border border-[#E2E0DA] px-3.5 py-2.5 rounded-sm outline-none focus:border-navy/40 placeholder:text-ink-light resize-y transition-colors leading-relaxed"></textarea>
+          <textarea name="message" rows="4" placeholder="ご状況・ご検討内容をご記入ください。具体的な依頼内容が決まっていなくても構いません。" data-ja-placeholder="ご状況・ご検討内容をご記入ください。具体的な依頼内容が決まっていなくても構いません。" data-en-placeholder="Please describe your situation or what you're considering. You don't need a specific brief." class="font-sans text-[.85rem] text-ink bg-white border border-[#E2E0DA] px-3.5 py-2.5 rounded-sm outline-none focus:border-navy/40 placeholder:text-ink-light resize-y transition-colors leading-relaxed"></textarea>
         </div>
         <div class="grid grid-cols-2 gap-3">
           <div class="flex flex-col gap-1.5">
             <label class="display text-[.74rem] font-medium text-ink tracking-wide" data-ja="依頼予定時期" data-en="Expected Timeline">依頼予定時期</label>
-            <select class="font-sans text-[.82rem] text-ink bg-white border border-[#E2E0DA] px-3 py-2.5 rounded-sm outline-none focus:border-navy/40 appearance-none cursor-pointer" data-ja-options="選択,1ヶ月以内,1〜3ヶ月,3〜6ヶ月,未定" data-en-options="Select,Within 1 month,1-3 months,3-6 months,TBD">
+            <select name="timeline" class="font-sans text-[.82rem] text-ink bg-white border border-[#E2E0DA] px-3 py-2.5 rounded-sm outline-none focus:border-navy/40 appearance-none cursor-pointer" data-ja-options="選択,1ヶ月以内,1〜3ヶ月,3〜6ヶ月,未定" data-en-options="Select,Within 1 month,1-3 months,3-6 months,TBD">
               <option disabled selected>選択</option>
               <option>1ヶ月以内</option><option>1〜3ヶ月</option><option>3〜6ヶ月</option><option>未定</option>
             </select>
           </div>
           <div class="flex flex-col gap-1.5">
             <label class="display text-[.74rem] font-medium text-ink tracking-wide" data-ja="予算感（任意）" data-en="Budget (optional)">予算感（任意）</label>
-            <select class="font-sans text-[.82rem] text-ink bg-white border border-[#E2E0DA] px-3 py-2.5 rounded-sm outline-none focus:border-navy/40 appearance-none cursor-pointer" data-ja-options="おおよそで,〜50万円,50〜100万,100〜300万,300万〜,未定" data-en-options="Approximate,Up to $5K,5K-10K,$10K-30K,$30K+,TBD">
+            <select name="budget" class="font-sans text-[.82rem] text-ink bg-white border border-[#E2E0DA] px-3 py-2.5 rounded-sm outline-none focus:border-navy/40 appearance-none cursor-pointer" data-ja-options="おおよそで,〜50万円,50〜100万,100〜300万,300万〜,未定" data-en-options="Approximate,Up to $5K,5K-10K,$10K-30K,$30K+,TBD">
               <option disabled selected>おおよそで</option>
               <option>〜50万円</option><option>50〜100万</option><option>100〜300万</option><option>300万〜</option><option>未定</option>
             </select>
