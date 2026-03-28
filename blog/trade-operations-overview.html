@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>商社の貿易事務とは？輸入フローの全体像と担当者が直面する課題 | Wing Blog</title>
+<meta name="description" content="商社の貿易事務担当者が担う輸入フロー7フェーズを解説。属人化・書類工数・法規制対応の3課題と、業務をシステム設計し直すアプローチを紹介。">
+<meta name="keywords" content="商社 貿易事務, 輸入 業務フロー, 輸入通関 手順, 船積書類 照合, HS分類 実務, 信用状 L/C, 貿易事務 課題, 属人化 リスク">
+<meta property="og:title" content="商社の貿易事務とは？輸入フローの全体像と担当者が直面する課題">
+<meta property="og:description" content="商社の輸入フロー7フェーズを解説。属人化・書類工数・法規制対応の3課題と解決アプローチを紹介。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://wingconsulting.org/blog/trade-operations-overview">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://wingconsulting.org/images/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Wing">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="商社の貿易事務とは？輸入フローの全体像と担当者が直面する課題">
+<meta name="twitter:description" content="輸入フロー7フェーズと貿易事務担当者が直面する課題を解説。業務をシステムとして設計し直すアプローチ。">
+<meta name="twitter:image" content="https://wingconsulting.org/images/og-default.png">
+<link rel="canonical" href="https://wingconsulting.org/blog/trade-operations-overview">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "商社の貿易事務とは？輸入フローの全体像と担当者が直面する課題",
+  "description": "商社の貿易事務担当者が担う輸入フロー7フェーズを解説。属人化・書類工数・法規制対応の3課題と、業務をシステム設計し直すアプローチを紹介。",
+  "author": {
+    "@type": "Organization",
+    "name": "Wing編集部",
+    "url": "https://wingconsulting.org"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Wing",
+    "url": "https://wingconsulting.org",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wingconsulting.org/images/logo.png"
+    }
+  },
+  "datePublished": "2026-03-28",
+  "dateModified": "2026-03-28",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://wingconsulting.org/blog/trade-operations-overview"
+  },
+  "image": "https://wingconsulting.org/images/og-default.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Wing", "item": "https://wingconsulting.org"},
+    {"@type": "ListItem", "position": 2, "name": "インサイト", "item": "https://wingconsulting.org/#blog"},
+    {"@type": "ListItem", "position": 3, "name": "商社の貿易事務とは？輸入フローの全体像と担当者が直面する課題", "item": "https://wingconsulting.org/blog/trade-operations-overview"}
+  ]
+}
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        navy: { DEFAULT: '#0F2342', dark: '#081830' },
+        gold: { DEFAULT: '#A8965A', light: '#C4AD72', muted: '#7A6B3E', pale: '#F8F5ED', mid: '#B8A560' },
+        slate: { warm: '#F7F6F3', cool: '#EEECe7' },
+        ink: { DEFAULT: '#1A1A1F', mid: '#4A4A55', light: '#8A8A96' },
+      },
+      fontFamily: {
+        serif: ['"Yu Gothic"', '"YuGothic"', 'sans-serif'],
+        sans: ['"Yu Gothic"', '"YuGothic"', '"Noto Sans JP"', 'sans-serif'],
+        display: ['"Roboto"', 'sans-serif'],
+      },
+    }
+  }
+}
+</script>
+<style>
+body { font-family: 'Yu Gothic', 'YuGothic', 'Noto Sans JP', sans-serif; -webkit-font-smoothing: antialiased; }
+.serif { font-family: 'Roboto', sans-serif; }
+.display { font-family: 'Roboto', sans-serif; }
+.gold-rule { width: 32px; height: 1.5px; background: #A8965A; }
+article h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+article h3 { margin-top: 1.8rem; margin-bottom: 0.8rem; }
+article p { margin-bottom: 1.2rem; }
+article ul { margin-bottom: 1.2rem; padding-left: 1.5rem; }
+article li { margin-bottom: 0.5rem; }
+
+/* ── Diagram styles ── */
+.diag-wrap { background:#fff; border:1px solid #E2E0DA; border-top:3px solid #A8965A; padding:1.4rem 1.5rem 1rem; margin:1.6rem 0 0.5rem; font-size:0.85rem; }
+.diag-caption { text-align:center; font-size:0.72rem; color:#8A8A96; margin-top:0.5rem; margin-bottom:1.4rem; }
+.diag-row { display:flex; flex-wrap:wrap; gap:0.7rem; }
+.diag-label { font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#A8965A; margin-bottom:0.8rem; }
+.diag-step-row { display:flex; flex-wrap:wrap; gap:0.7rem; }
+.diag-step-card { flex:1 1 140px; background:#fff; border:1px solid #E2E0DA; padding:0.9rem; position:relative; }
+.diag-step-card .step-num { width:28px; height:28px; background:#0F2342; color:#A8965A; font-size:0.78rem; font-weight:700; display:flex; align-items:center; justify-content:center; margin-bottom:0.55rem; }
+.diag-step-card .step-title { font-size:0.78rem; font-weight:700; color:#0F2342; margin-bottom:0.3rem; line-height:1.4; }
+.diag-step-card .step-body { font-size:0.72rem; color:#4A4A55; line-height:1.5; }
+.diag-fail-row { display:flex; flex-wrap:wrap; gap:0; }
+.diag-fail-col { flex:1 1 130px; padding:0.9rem; border:1px solid #E2E0DA; margin:0 -1px -1px 0; }
+.diag-fail-col:first-child { background:#FFF8F5; border-top:3px solid #C45C3A; }
+.diag-fail-col:nth-child(2) { background:#FAFAF7; border-top:3px solid #A8965A; }
+.diag-fail-col:last-child { background:#F0F7F0; border-top:3px solid #5A9A6A; }
+.diag-fail-col .col-label { font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:0.5rem; }
+.diag-fail-col:first-child .col-label { color:#C45C3A; }
+.diag-fail-col:nth-child(2) .col-label { color:#7A6B3E; }
+.diag-fail-col:last-child .col-label { color:#5A9A6A; }
+.diag-fail-item { font-size:0.75rem; color:#4A4A55; line-height:1.55; padding:0.3rem 0; border-bottom:1px dashed #E2E0DA; }
+.diag-fail-item:last-child { border-bottom:none; }
+.phase-bar { display:flex; flex-wrap:wrap; gap:0; }
+.phase-item { flex:1 1 100px; text-align:center; padding:0.7rem 0.5rem; border:1px solid #E2E0DA; margin:0 -1px -1px 0; font-size:0.72rem; }
+.phase-item .phase-num { font-size:0.6rem; font-weight:700; color:#A8965A; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.3rem; }
+.phase-item .phase-name { font-weight:700; color:#0F2342; font-size:0.75rem; margin-bottom:0.25rem; line-height:1.3; }
+.phase-item .phase-desc { color:#4A4A55; font-size:0.68rem; line-height:1.4; }
+.phase-item.active { background:#F0F4FA; border-top:3px solid #0F2342; }
+</style>
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KN7NWHFK9G');
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style id="font-override">
+  body, p, li, td, th, span, div {
+    font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif !important;
+  }
+  h1, h2, h3, h4, h5, h6, .serif {
+    font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif !important;
+  }
+  .display, [class*="display"], [class*="font-display"] {
+    font-family: "Roboto", "Yu Gothic", "YuGothic", sans-serif !important;
+  }
+  :lang(en), .en, [lang="en"] {
+    font-family: "Roboto", sans-serif !important;
+  }
+</style>
+</head>
+<body class="bg-slate-warm text-ink">
+
+<!-- ─── HEADER ─────────────────────────────────────────── -->
+<header class="bg-navy h-[60px] flex items-center px-6 md:px-10 sticky top-0 z-50">
+  <div class="max-w-5xl mx-auto w-full flex items-center justify-between">
+    <a href="/" class="leading-none">
+      <svg width="120" height="36" viewBox="0 0 120 36" fill="none" aria-label="Wing">
+        <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff"/>
+        <path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#fff" opacity=".32"/>
+        <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#fff">Wing</text>
+      </svg>
+    </a>
+    <div class="flex items-center gap-4">
+      <span class="display text-[.7rem] font-medium tracking-wider text-white/50">Blog</span>
+      <a href="/" class="text-[.75rem] text-white/70 hover:text-white transition-colors">← Home</a>
+    </div>
+  </div>
+</header>
+
+<!-- ─── ARTICLE ─────────────────────────────────────────── -->
+<main class="py-16 px-6 md:px-10">
+  <div class="max-w-3xl mx-auto">
+    <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3">Trade Operations</p>
+    <h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4">商社の貿易事務とは？<br>輸入フローの全体像と担当者が直面する課題</h1>
+    <div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2">
+      <time datetime="2026-03-28">2026.03.28</time>
+      <span>Wing編集部</span>
+    </div>
+    <div class="gold-rule mb-10"></div>
+
+    <article class="text-[.9rem] text-ink leading-[2] max-w-none">
+
+      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">貿易事務の仕事は「つなぐ」ことだ</h2>
+      <p>商社の貿易事務担当者は、海外サプライヤーと国内顧客をつなぐパイプラインを維持する仕事だ。契約から代金回収まで、一件の取引には多数の関係者が介在する。銀行、保険会社、船会社、通関業者、倉庫業者、税関──これら全員との情報連携を担うのが貿易事務の役割だ。</p>
+      <p>扱う品目によって業務の性格は変わる。化学品なら法規制対応の比重が高く、食品なら検疫・鮮度管理が重要になり、半導体なら安全保障輸出管理が核心業務になる。ただし、どの業種でも共通する「輸入の基本フロー」は存在する。</p>
+
+      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">輸入の基本フロー：7つのフェーズ</h2>
+
+      <!-- DIAGRAM: 輸入フロー7フェーズ -->
+      <div class="diag-wrap">
+        <div class="diag-label">輸入業務の基本フロー</div>
+        <div class="phase-bar">
+          <div class="phase-item active">
+            <div class="phase-num">Phase 1</div>
+            <div class="phase-name">引合・契約</div>
+            <div class="phase-desc">価格・数量・インコタームズ・決済条件の交渉と売買契約締結</div>
+          </div>
+          <div class="phase-item active">
+            <div class="phase-num">Phase 2</div>
+            <div class="phase-name">信用状・決済</div>
+            <div class="phase-desc">L/C開設またはTT送金・為替リスク管理</div>
+          </div>
+          <div class="phase-item active">
+            <div class="phase-num">Phase 3</div>
+            <div class="phase-name">船積書類受領</div>
+            <div class="phase-desc">Invoice・B/L・Packing List等の受領と照合確認</div>
+          </div>
+          <div class="phase-item active">
+            <div class="phase-num">Phase 4</div>
+            <div class="phase-name">海上保険</div>
+            <div class="phase-desc">貨物種類・輸送ルートに応じた担保条件の選択</div>
+          </div>
+          <div class="phase-item active">
+            <div class="phase-num">Phase 5</div>
+            <div class="phase-name">輸入通関</div>
+            <div class="phase-desc">HS分類・NACCSによる税関申告・関税計算</div>
+          </div>
+          <div class="phase-item active">
+            <div class="phase-num">Phase 6</div>
+            <div class="phase-name">法規制確認</div>
+            <div class="phase-desc">品目別の法令チェック（化審法・食品衛生法等）</div>
+          </div>
+          <div class="phase-item active">
+            <div class="phase-num">Phase 7</div>
+            <div class="phase-name">入庫・仕入計上</div>
+            <div class="phase-desc">検品・在庫計上・仕入伝票起票・支払処理</div>
+          </div>
+        </div>
+      </div>
+      <p class="diag-caption">[図] 商社の輸入業務 基本7フェーズ</p>
+
+      <h3 class="text-[1rem] font-medium text-ink">フェーズ1：引合・契約</h3>
+      <p>海外サプライヤーへの発注から始まる。価格・数量・品質・インコタームズ・決済条件を交渉し、売買契約書を締結する。インコタームズ（FOB・CIF・DDP等）は費用負担と危険の移転時点を決定するため、後工程の業務設計に直結する。</p>
+
+      <h3 class="text-[1rem] font-medium text-ink">フェーズ2：信用状・決済手配</h3>
+      <p>L/C（信用状）決済の場合、買取銀行を通じて信用状を開設する。TT送金（電信送金）の場合は送金タイミングと為替リスクの管理が課題になる。大口取引では為替予約によるヘッジが一般的だ。</p>
+
+      <h3 class="text-[1rem] font-medium text-ink">フェーズ3：船積書類の受領と照合</h3>
+      <p>サプライヤーから送付される書類は多岐にわたる。Commercial Invoice、Packing List、Bill of Lading（B/L）を中心に、品目によってはCertificate of Origin、Certificate of Analysis、安全データシート（SDS）等が加わる。これらを契約内容と照合し、数量・金額・品番の一致を確認する。不一致があればサプライヤーへの修正依頼が発生する。</p>
+
+      <h3 class="text-[1rem] font-medium text-ink">フェーズ4：海上保険の手配</h3>
+      <p>CIF条件以外の取引では、輸入者側で海上保険を手配する。貨物の種類・輸送ルート・梱包形態に応じて担保条件（ICC(A)/(B)/(C)）を選択する。</p>
+
+      <h3 class="text-[1rem] font-medium text-ink">フェーズ5：輸入通関</h3>
+      <p>通関業者（乙仲）に依頼し、NACCSシステムを通じて税関に輸入申告を行う。申告には正確なHS（品目分類）コードの決定が必要だ。HSコードは関税率と輸入規制の適用を決定するため、誤分類は追徴課税や通関遅延のリスクになる。</p>
+
+      <h3 class="text-[1rem] font-medium text-ink">フェーズ6：法規制の確認</h3>
+      <p>品目に応じて複数の法令チェックが必要になる。例えば化学物質なら化審法・毒劇法・消防法、食品なら食品衛生法・農薬残留基準、電子機器なら電波法・RoHS指令といった対応が必要だ。この確認作業は品質保証部門・法務部門と連携して行われる場合も多い。</p>
+
+      <h3 class="text-[1rem] font-medium text-ink">フェーズ7：入庫・仕入計上・支払処理</h3>
+      <p>荷物を倉庫で受領し、検品結果を確認して在庫に計上する。仕入伝票を起票し、計上タイミング（B/L基準 or 入庫基準）に従って原価を確定させる。L/C取引では銀行との決済処理が加わる。</p>
+
+      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">担当者が直面する3つの課題</h2>
+
+      <!-- DIAGRAM: 3つの課題 -->
+      <div class="diag-wrap">
+        <div class="diag-label">貿易事務担当者が抱える構造的課題</div>
+        <div class="diag-fail-row">
+          <div class="diag-fail-col">
+            <div class="col-label">課題 1</div>
+            <div class="diag-fail-item" style="font-weight:600;">属人化した知識の継承リスク</div>
+            <div class="diag-fail-item">育成に数年を要する専門知識がドキュメント化されていない</div>
+            <div class="diag-fail-item">担当者の異動・退職が即座に業務リスクに変わる</div>
+          </div>
+          <div class="diag-fail-col">
+            <div class="col-label">課題 2</div>
+            <div class="diag-fail-item" style="font-weight:600;">書類処理工数の削減されない構造</div>
+            <div class="diag-fail-item">取引件数が増えるほど工数が線形に増加する</div>
+            <div class="diag-fail-item">成長の上限が人員数で決まってしまう</div>
+          </div>
+          <div class="diag-fail-col">
+            <div class="col-label">課題 3</div>
+            <div class="diag-fail-item" style="font-weight:600;">法規制の複雑化と改正対応</div>
+            <div class="diag-fail-item">担当者個人の知識依存でチェック漏れリスクが高い</div>
+            <div class="diag-fail-item">複数法令が重なる品目は特に深刻</div>
+          </div>
+        </div>
+      </div>
+      <p class="diag-caption">[図] 貿易事務担当者が直面する3つの構造的課題</p>
+
+      <h3 class="text-[1rem] font-medium text-ink">課題1：属人化した知識の継承リスク</h3>
+      <p>輸入フローを完全に把握し、例外処理まで対応できる担当者は育成に数年を要する。そのノウハウがドキュメント化されていない企業では、担当者の異動・退職が即座に業務リスクに変わる。</p>
+
+      <h3 class="text-[1rem] font-medium text-ink">課題2：書類処理の工数が削減されないまま放置されている</h3>
+      <p>書類の手入力・目視照合は、取引件数が増えるほど工数が線形に増加する。ビジネスが拡大するほど事務負荷が増す構造では、成長の上限が人員数で決まってしまう。</p>
+
+      <h3 class="text-[1rem] font-medium text-ink">課題3：法規制の複雑化と改正対応</h3>
+      <p>輸出入に関わる法規制は年々複雑化している。担当者個人の知識に依存したコンプライアンス管理では、規制改正への対応が遅れるリスクがある。特に複数の法令が重なる品目では、チェック漏れが深刻な問題につながる。</p>
+
+      <p>商社の貿易事務をシステムとして設計し直す──それがBorderFlow AIのアプローチです。</p>
+
+      <!-- CTA -->
+      <div class="mt-14 p-8 bg-navy text-white text-center rounded-sm">
+        <p class="display text-[.65rem] tracking-[.2em] uppercase text-gold mb-3">BorderFlow AI</p>
+        <p class="text-[1.05rem] font-medium leading-snug mb-2">貿易事務をシステムとして<br>設計し直しませんか？</p>
+        <p class="text-[.78rem] text-white/60 mb-6">輸入フロー全体の自動化設計から伴走支援まで、BorderFlow AIが対応します。</p>
+        <a href="/#contact" class="inline-block bg-gold text-navy text-[.78rem] font-medium px-8 py-3 hover:bg-gold-light transition-colors">お問い合わせ・ご相談</a>
+      </div>
+
+    </article>
+  </div>
+</main>
+
+<!-- ─── FOOTER ─────────────────────────────────────────── -->
+<footer class="bg-navy py-10 px-6 md:px-10 mt-16">
+  <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+    <svg width="80" height="28" viewBox="0 0 120 36" fill="none" aria-label="Wing">
+      <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff" opacity=".6"/>
+      <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#fff" opacity=".6">Wing</text>
+    </svg>
+    <p class="text-[.68rem] text-white/30">© 2026 Wing. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
