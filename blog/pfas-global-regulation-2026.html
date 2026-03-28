@@ -3,25 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PFAS規制 2026年最新動向｜米国・EU・日本の規制対応と企業が取るべき戦略 | Wing Blog</title>
-<meta name="description" content="2026年に施行される米国TSCA・州法、EU PPWR、日本の化審法など、グローバルPFAS規制の全体像を解説。輸出企業・製造業が今すぐ取り組むべきPFAS対応戦略と化学品管理のDX化を紹介します。">
-<meta name="keywords" content="PFAS規制 2026, PFAS 輸出 規制, PFAS 対応 方法, TSCA PFAS 報告, EU PFAS 規制, 化審法 PFAS, PFAS サプライチェーン 対応, chemSHERPA PFAS, 化学物質管理 DX">
-<meta property="og:title" content="グローバル貿易におけるPFAS規制の奔流：2026年の戦略的転換点">
-<meta property="og:description" content="米国・EU・アジアのPFAS規制を網羅的に解説。2026年の規制施行ラッシュに向けた企業の戦略的対応とAIソリューションの展望。">
+<title>【2026年版】PFAS規制まとめ｜米国・EU・日本の最新動向と企業がやるべきこと | Wing Blog</title>
+<meta name="description" content="2026年に施行されるPFAS規制を米国・EU・日本ごとにわかりやすく解説。企業が今すぐ取るべき4つのアクションと、AI活用による効率的な対応方法を紹介します。">
+<meta name="keywords" content="PFAS規制, PFAS対応, 永遠の化学物質, TSCA報告義務, EU PPWR, 化審法, PFHxS, REACH制限, chemSHERPA, デジタル製品パスポート, DPP, 貿易DX, HSコード, 化学物質管理, ChemOS">
+<meta property="og:title" content="【2026年版】PFAS規制まとめ｜米国・EU・日本の最新動向と企業がやるべきこと">
+<meta property="og:description" content="2026年に施行されるPFAS規制を米国・EU・日本ごとにわかりやすく解説。企業が今すぐ取るべきアクションとAI活用を紹介。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://wingconsulting.org/blog/pfas-global-regulation-2026">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:site_name" content="Wing">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="グローバル貿易におけるPFAS規制の奔流：2026年の戦略的転換点">
-<meta name="twitter:description" content="米国・EU・アジアのPFAS規制を網羅的に解説。2026年の規制施行ラッシュに向けた企業の戦略的対応とAIソリューションの展望。">
+<meta name="twitter:title" content="【2026年版】PFAS規制まとめ｜米国・EU・日本の最新動向">
+<meta name="twitter:description" content="2026年のPFAS規制を米国・EU・日本ごとにわかりやすく解説。企業が取るべきアクションとAI活用を紹介。">
 <link rel="canonical" href="https://wingconsulting.org/blog/pfas-global-regulation-2026">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "グローバル貿易におけるPFAS規制の奔流：2026年の戦略的転換点",
-  "description": "2026年に施行される米国TSCA・州法、EU PPWR、日本の化審法など、グローバルPFAS規制の全体像と企業が取るべき戦略的対応を解説。",
+  "headline": "【2026年版】PFAS規制まとめ｜米国・EU・日本の最新動向と企業がやるべきこと",
+  "description": "2026年に施行されるPFAS規制を米国・EU・日本ごとにわかりやすく解説。企業が今すぐ取るべきアクションを紹介。",
   "author": {
     "@type": "Organization",
     "name": "Wing編集部",
@@ -41,8 +41,8 @@
 }
 </script>
 <script src="https://cdn.tailwindcss.com"></script>
-
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script>
 tailwind.config = {
   theme: {
@@ -52,33 +52,68 @@ tailwind.config = {
         gold: { DEFAULT: '#A8965A', light: '#C4AD72', muted: '#7A6B3E', pale: '#F8F5ED', mid: '#B8A560' },
         slate: { warm: '#F7F6F3', cool: '#EEECe7' },
         ink: { DEFAULT: '#1A1A1F', mid: '#4A4A55', light: '#8A8A96' },
+        red: { soft: '#E8545420', border: '#E85454' },
+        blue: { soft: '#3B82F620', border: '#3B82F6' },
+        green: { soft: '#10B98120', border: '#10B981' },
+        amber: { soft: '#F59E0B20', border: '#F59E0B' },
       },
       fontFamily: {
-        serif: ['"Yu Gothic"', '"YuGothic"', 'sans-serif'],
-        sans: ['"Yu Gothic"', '"YuGothic"', '"Noto Sans JP"', 'sans-serif'],
-        display: ['"Roboto"', 'sans-serif'],
+        serif: ['"Cormorant Garamond"', 'serif'],
+        sans: ['"Noto Sans JP"', 'sans-serif'],
+        display: ['"Outfit"', 'sans-serif'],
       },
     }
   }
 }
 </script>
 <style>
-body { font-family: 'Yu Gothic', 'YuGothic', 'Noto Sans JP', sans-serif; -webkit-font-smoothing: antialiased; }
-.serif { font-family: 'Roboto', sans-serif; }
-.display { font-family: 'Roboto', sans-serif; }
+body { font-family: 'Noto Sans JP', sans-serif; -webkit-font-smoothing: antialiased; }
+.serif { font-family: 'Cormorant Garamond', serif; }
+.display { font-family: 'Outfit', sans-serif; }
 .gold-rule { width: 32px; height: 1.5px; background: #A8965A; }
-article h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
-article h3 { margin-top: 1.8rem; margin-bottom: 0.8rem; }
+article h2 { margin-top: 3rem; margin-bottom: 1.2rem; }
+article h3 { margin-top: 2rem; margin-bottom: 0.8rem; }
 article p { margin-bottom: 1.2rem; }
 article ul, article ol { margin-bottom: 1.2rem; padding-left: 1.5rem; }
 article li { margin-bottom: 0.5rem; }
+
+/* Tables */
 article table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; font-size: .82rem; }
 article th { background: #0F2342; color: #fff; padding: .6rem .8rem; text-align: left; font-weight: 500; font-size: .75rem; }
 article td { padding: .55rem .8rem; border-bottom: 1px solid #E2E0DA; }
 article tr:nth-child(even) { background: #F7F6F3; }
+
+/* Key Point Box */
 .key-point { background: #F8F5ED; border-left: 3px solid #A8965A; padding: 1rem 1.2rem; margin-bottom: 1.5rem; border-radius: 0 4px 4px 0; }
 .key-point p { margin-bottom: 0.4rem; }
-.section-label { display: inline-block; font-size: .65rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #A8965A; background: #F8F5ED; padding: .2rem .6rem; border-radius: 2px; margin-bottom: .6rem; }
+
+/* Alert / Warning Box */
+.alert-box { background: #FEF3C7; border: 1px solid #F59E0B; padding: 1rem 1.2rem; margin-bottom: 1.5rem; border-radius: 6px; }
+.alert-box p { margin-bottom: 0.3rem; }
+
+/* Info Diagram Cards */
+.diagram-card { background: #fff; border: 1px solid #E2E0DA; border-radius: 8px; padding: 1.2rem; }
+.diagram-card:hover { border-color: #A8965A80; }
+
+/* Timeline */
+.timeline { position: relative; padding-left: 2rem; }
+.timeline::before { content: ''; position: absolute; left: 7px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #A8965A, #0F2342); }
+.timeline-item { position: relative; margin-bottom: 1.5rem; }
+.timeline-item::before { content: ''; position: absolute; left: -2rem; top: 6px; width: 12px; height: 12px; border-radius: 50%; border: 2px solid #A8965A; background: #fff; z-index: 1; }
+.timeline-item.active::before { background: #A8965A; }
+
+/* Flow Diagram */
+.flow-step { position: relative; }
+.flow-step:not(:last-child)::after { content: ''; display: block; width: 2px; height: 20px; background: #A8965A; margin: 0 auto; }
+
+/* Region Badge */
+.region-badge { display: inline-flex; align-items: center; gap: .4rem; font-size: .7rem; font-weight: 600; letter-spacing: .06em; padding: .25rem .7rem; border-radius: 100px; }
+
+/* Stat Card */
+.stat-number { font-family: 'Outfit', sans-serif; font-size: 2rem; font-weight: 600; line-height: 1; }
+
+/* Scroll margin for anchor links */
+[id] { scroll-margin-top: 80px; }
 </style>
 <!-- Google Analytics GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
@@ -88,24 +123,6 @@ article tr:nth-child(even) { background: #F7F6F3; }
   gtag('js', new Date());
   gtag('config', 'G-KN7NWHFK9G');
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
-
-<style id="font-override">
-  body, p, li, td, th, span, div {
-    font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif !important;
-  }
-  h1, h2, h3, h4, h5, h6, .serif {
-    font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif !important;
-  }
-  .display, [class*="display"], [class*="font-display"] {
-    font-family: "Roboto", "Yu Gothic", "YuGothic", sans-serif !important;
-  }
-  /* English text elements */
-  :lang(en), .en, [lang="en"] {
-    font-family: "Roboto", sans-serif !important;
-  }
-</style>
-
 </head>
 <body class="bg-slate-warm text-ink">
 
@@ -130,448 +147,570 @@ article tr:nth-child(even) { background: #F7F6F3; }
 <main class="py-16 px-6 md:px-10">
   <div class="max-w-3xl mx-auto">
     <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3">Global Compliance</p>
-    <h1 class="serif text-[clamp(1.5rem,3.5vw,2.4rem)] font-medium text-ink leading-snug mb-4">グローバル貿易におけるPFAS規制の奔流：<br class="hidden md:block">化学品業務ソリューション開発が直面する戦略的転換点</h1>
+    <h1 class="text-[clamp(1.4rem,3.5vw,2.2rem)] font-bold text-ink leading-snug mb-4">【2026年版】PFAS規制まとめ<br class="hidden md:block">米国・EU・日本の最新動向と<br class="hidden md:block">企業がやるべきこと</h1>
     <div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2">
       <time datetime="2026-03-25">2026.03.25</time>
       <span>Wing編集部</span>
     </div>
-    <div class="gold-rule mb-10"></div>
+    <div class="gold-rule mb-6"></div>
+
+    <!-- Key Visual: 3-second summary -->
+    <div class="bg-navy rounded-lg p-6 md:p-8 mb-10">
+      <p class="display text-[.65rem] font-medium tracking-[.14em] uppercase text-gold/70 mb-4">この記事でわかること</p>
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="text-center">
+          <div class="text-3xl mb-2">&#x1F30D;</div>
+          <p class="text-[.78rem] text-white font-medium mb-1">PFAS規制の全体像</p>
+          <p class="text-[.68rem] text-white/55">なぜ今、世界中で規制が強化されているのか</p>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl mb-2">&#x1F4C5;</div>
+          <p class="text-[.78rem] text-white font-medium mb-1">2026年の主要期限</p>
+          <p class="text-[.68rem] text-white/55">米国・EU・日本で何がいつ施行されるか</p>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl mb-2">&#x2705;</div>
+          <p class="text-[.78rem] text-white font-medium mb-1">今すぐやるべきこと</p>
+          <p class="text-[.68rem] text-white/55">企業が取るべき4つのアクション</p>
+        </div>
+      </div>
+    </div>
 
     <!-- TOC -->
-    <nav class="mb-12 bg-white border border-[#E2E0DA] rounded-sm p-6">
-      <p class="display text-[.7rem] font-medium tracking-[.14em] uppercase text-gold mb-3">Contents</p>
+    <nav class="mb-12 bg-white border border-[#E2E0DA] rounded-lg p-6">
+      <p class="display text-[.7rem] font-medium tracking-[.14em] uppercase text-gold mb-3">目次</p>
       <ol class="text-[.82rem] text-ink-mid leading-relaxed list-decimal pl-5 space-y-1.5">
-        <li><a href="#sec1" class="hover:text-gold-muted transition-colors">PFASの科学的特性と規制の根源的動機</a></li>
-        <li><a href="#sec2" class="hover:text-gold-muted transition-colors">米国におけるPFAS規制の構造</a></li>
-        <li><a href="#sec3" class="hover:text-gold-muted transition-colors">州法による先行規制：ミネソタ州「アマラ法」の衝撃</a></li>
-        <li><a href="#sec4" class="hover:text-gold-muted transition-colors">EU の戦略的アプローチ：包括的制限と循環経済</a></li>
-        <li><a href="#sec5" class="hover:text-gold-muted transition-colors">アジア太平洋地域における規制の同期</a></li>
-        <li><a href="#sec6" class="hover:text-gold-muted transition-colors">貿易実務の技術的課題：HSコードとデータ整合性</a></li>
-        <li><a href="#sec7" class="hover:text-gold-muted transition-colors">ソリューション開発要件と戦略的視点</a></li>
-        <li><a href="#sec8" class="hover:text-gold-muted transition-colors">企業の戦略的対応：2026年アクションプラン</a></li>
+        <li><a href="#sec1" class="hover:text-gold-muted transition-colors">PFASとは？ なぜ「永遠の化学物質」と呼ばれるのか</a></li>
+        <li><a href="#sec2" class="hover:text-gold-muted transition-colors">【米国】連邦と州の「二重規制」を理解する</a></li>
+        <li><a href="#sec3" class="hover:text-gold-muted transition-colors">【EU】世界で最も厳しいPFAS規制が動き出す</a></li>
+        <li><a href="#sec4" class="hover:text-gold-muted transition-colors">【日本・アジア】化審法改正とアジア各国の動き</a></li>
+        <li><a href="#sec5" class="hover:text-gold-muted transition-colors">貿易実務で押さえるべきポイント</a></li>
+        <li><a href="#sec6" class="hover:text-gold-muted transition-colors">AIで変わる化学物質管理のかたち</a></li>
+        <li><a href="#sec7" class="hover:text-gold-muted transition-colors">今すぐ取るべき4つのアクション</a></li>
       </ol>
     </nav>
 
     <article class="text-[.9rem] text-ink leading-[2] max-w-none">
 
-      <!-- Section 1 -->
-      <h2 id="sec1" class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">1. 有機フッ素化合物（PFAS）の科学的特性と規制の根源的動機</h2>
+      <!-- ═══════════════════════════════════════════════════ -->
+      <!-- Section 1: What is PFAS -->
+      <!-- ═══════════════════════════════════════════════════ -->
+      <h2 id="sec1" class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">1. PFASとは？ なぜ「永遠の化学物質」と呼ばれるのか</h2>
 
-      <p>現代の産業界において、ペルフルオロアルキル化合物およびポリフルオロアルキル化合物、総称してPFAS（Per- and Polyfluoroalkyl Substances）ほど、その有用性と環境リスクの乖離が激しい物質群は存在しない。PFASは、炭素とフッ素の間に形成される極めて強力な共有結合をその構造の核としている。</p>
+      <p>PFAS（ピーファス）とは、<strong>撥水・撥油・耐熱性に優れた人工の化学物質群</strong>の総称です。フライパンのコーティング、防水スプレー、半導体の製造工程、食品包装など、私たちの身の回りで幅広く使われています。</p>
 
-      <p>この炭素―フッ素結合（C-F結合）は有機化学において最も強力な結合の一つであり、結合エネルギーが非常に高いため、熱、化学反応、紫外線に対して驚異的な安定性を示す。この安定性こそが、PFASを撥水、撥油、防汚、耐熱、絶縁といった多機能な特性を持つ物質として、半導体製造、航空宇宙、自動車、繊維、食品包装といった広範な産業分野に不可欠なものとした。</p>
+      <p>PFASが問題なのは、<strong>自然界でほとんど分解されない</strong>こと。水や土壌に残り続け、人体にも蓄積します。このため「Forever Chemicals（永遠の化学物質）」と呼ばれ、世界中で規制が急速に進んでいます。</p>
 
-      <div class="key-point">
-        <p><strong>「永遠の化学物質（Forever Chemicals）」</strong></p>
-        <p>PFASは自然界ではほとんど分解されず、水、土壌、空気、生物の体内に蓄積し続ける。世界的に12,000を超えるPFAS化合物が存在すると推定されており、規制当局は個別の物質制限からクラス（群）としての包括的な制限へと舵を切っている。</p>
-      </div>
-
-      <p>科学的研究の進展により、特定のPFAS（特にPFOAやPFOSなどの長鎖PFAS）が、腎臓がん、精巣がん、肝機能障害、免疫系抑制、甲状腺疾患、さらには生殖および発達上の害を含む深刻な健康リスクと関連していることが明らかになってきた。</p>
-
-      <p>貿易上の観点から見ると、PFAS規制はもはや単なる環境規制の枠を超え、製品の<strong>市場アクセス（Market Access）</strong>を左右する決定的な要因となっている。2026年を一つの大きな節目として、米国、欧州、アジアの主要経済圏でこれまでにない規模の法的要件が施行される予定であり、従来の文書管理を中心とした化学品管理業務の限界を露呈させている。</p>
-
-      <!-- Diagram 1: 3 Regions Overview -->
-      <div style="margin:2rem 0;">
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;">
-          <!-- US -->
-          <div style="background:#F8F5ED;border:1.5px solid #A8965A;border-radius:6px;padding:1.2rem 1rem;text-align:center;">
-            <div style="font-size:1.8rem;margin-bottom:0.4rem;">🇺🇸</div>
-            <div style="font-size:0.72rem;font-weight:700;color:#0F2342;letter-spacing:0.05em;margin-bottom:0.3rem;">米国</div>
-            <div style="font-size:0.8rem;font-weight:600;color:#1A1A1F;margin-bottom:0.5rem;">TSCA報告義務</div>
-            <div style="display:inline-block;background:#0F2342;color:#A8965A;font-size:0.7rem;font-weight:600;padding:0.25rem 0.7rem;border-radius:3px;letter-spacing:0.04em;">2026年4月</div>
-          </div>
-          <!-- EU -->
-          <div style="background:#F8F5ED;border:1.5px solid #A8965A;border-radius:6px;padding:1.2rem 1rem;text-align:center;">
-            <div style="font-size:1.8rem;margin-bottom:0.4rem;">🇪🇺</div>
-            <div style="font-size:0.72rem;font-weight:700;color:#0F2342;letter-spacing:0.05em;margin-bottom:0.3rem;">EU</div>
-            <div style="font-size:0.8rem;font-weight:600;color:#1A1A1F;margin-bottom:0.5rem;">PPWR包装規制</div>
-            <div style="display:inline-block;background:#0F2342;color:#A8965A;font-size:0.7rem;font-weight:600;padding:0.25rem 0.7rem;border-radius:3px;letter-spacing:0.04em;">2026年8月</div>
-          </div>
-          <!-- Japan -->
-          <div style="background:#F8F5ED;border:1.5px solid #A8965A;border-radius:6px;padding:1.2rem 1rem;text-align:center;">
-            <div style="font-size:1.8rem;margin-bottom:0.4rem;">🇯🇵</div>
-            <div style="font-size:0.72rem;font-weight:700;color:#0F2342;letter-spacing:0.05em;margin-bottom:0.3rem;">日本</div>
-            <div style="font-size:0.8rem;font-weight:600;color:#1A1A1F;margin-bottom:0.5rem;">化審法PFHxS指定</div>
-            <div style="display:inline-block;background:#0F2342;color:#A8965A;font-size:0.7rem;font-weight:600;padding:0.25rem 0.7rem;border-radius:3px;letter-spacing:0.04em;">2026年6月</div>
+      <!-- Diagram: Why PFAS is a problem -->
+      <div class="grid md:grid-cols-2 gap-4 mb-6">
+        <div class="diagram-card">
+          <p class="text-[.7rem] font-medium text-gold tracking-wide uppercase mb-2">PFASが使われる理由</p>
+          <div class="space-y-2">
+            <div class="flex items-center gap-3 text-[.82rem]"><span class="text-lg">&#x1F4A7;</span> 撥水性 &#8212; 水を弾く</div>
+            <div class="flex items-center gap-3 text-[.82rem]"><span class="text-lg">&#x1F6E2;&#xFE0F;</span> 撥油性 &#8212; 油汚れに強い</div>
+            <div class="flex items-center gap-3 text-[.82rem]"><span class="text-lg">&#x1F525;</span> 耐熱性 &#8212; 高温でも安定</div>
+            <div class="flex items-center gap-3 text-[.82rem]"><span class="text-lg">&#x26A1;</span> 絶縁性 &#8212; 半導体に不可欠</div>
           </div>
         </div>
-        <p style="text-align:center;font-size:0.72rem;color:#8A8A96;margin-top:0.5rem">[図1] 2026年主要3地域PFAS規制施行タイムライン概観</p>
-      </div>
-
-      <!-- Section 2 -->
-      <h2 id="sec2" class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">2. 米国におけるPFAS規制の構造：連邦TSCAと州法による重層的規律</h2>
-
-      <p>米国におけるPFAS規制は、環境保護庁（EPA）による連邦レベルの包括的報告義務と、各州が独自に推進する製品カテゴリー別の販売禁止措置という、二重の構造で進行している。</p>
-
-      <h3 class="text-[1rem] font-medium text-ink/90">TSCA第8条(a)(7)に基づく歴史的報告義務</h3>
-
-      <p>EPAがTSCA第8条(a)(7)に基づき最終化したPFAS報告・記録保持規則は、過去10年以上にわたるPFASの製造および輸入実績を遡及的に調査・報告させるという、前例のない規模の規制である。この規則は、2011年1月1日から2022年12月31日までの間に、PFASそのもの、あるいはPFASを含有する「成形品（Articles）」を製造または輸入したすべての事業者を対象としている。</p>
-
-      <table>
-        <thead>
-          <tr>
-            <th>報告対象カテゴリー</th>
-            <th>報告開始日</th>
-            <th>最終報告期限</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>一般の製造・輸入業者</td>
-            <td>2026年4月13日</td>
-            <td>2026年10月13日</td>
-          </tr>
-          <tr>
-            <td>成形品の輸入のみを行う小規模事業者</td>
-            <td>2026年4月13日</td>
-            <td>2027年4月13日</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <p>この規制の難易度を高めているのは、対象となるPFASの定義が構造ベースであり、特定のリストに限定されない点にある。EPAは少なくとも1,462種類のPFASを特定しているが、実質的には構造定義に合致する数千の物質が対象となる可能性がある。</p>
-
-      <p>報告すべき情報には、化学的識別情報、製造・輸入量、工業用および消費者用の用途、労働者の曝露状況、さらには廃棄方法に至るまで、「合理的に確認可能な（Reasonably Ascertainable）」すべての情報が含まれる。</p>
-
-      <div class="key-point">
-        <p><strong>修正案の動向</strong></p>
-        <p>2025年後半に提出された修正案では、混合物中の濃度が0.1%以下の免除（De minimis）や、輸入成形品そのものの免除、特定の副生成物や不純物の免除などが検討されている。これらの免除規定が最終的に採用されるかどうかは、ソリューション開発におけるデータフィルタリングロジックの設計に直結する重要な要素である。</p>
-      </div>
-
-      <!-- Diagram 2: TSCA Timeline -->
-      <div style="margin:2rem 0;overflow-x:auto;">
-        <div style="min-width:520px;background:#F8F5ED;border-radius:6px;padding:1.4rem 1.2rem;">
-          <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:1rem;">TSCA 8(a)(7) 主要マイルストーン</div>
-          <div style="display:flex;align-items:flex-start;gap:0;">
-            <!-- Step 1 -->
-            <div style="flex:1;text-align:center;position:relative;">
-              <div style="width:36px;height:36px;background:#0F2342;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 0.5rem;z-index:1;position:relative;">
-                <span style="color:#A8965A;font-size:0.7rem;font-weight:700;">1</span>
-              </div>
-              <div style="position:absolute;top:18px;left:50%;right:-50%;height:2px;background:#A8965A;z-index:0;"></div>
-              <div style="font-size:0.68rem;font-weight:700;color:#0F2342;">2011年1月</div>
-              <div style="font-size:0.62rem;color:#4A4A55;margin-top:0.2rem;">対象期間<br>開始</div>
-            </div>
-            <!-- Step 2 -->
-            <div style="flex:1;text-align:center;position:relative;">
-              <div style="width:36px;height:36px;background:#0F2342;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 0.5rem;z-index:1;position:relative;">
-                <span style="color:#A8965A;font-size:0.7rem;font-weight:700;">2</span>
-              </div>
-              <div style="position:absolute;top:18px;left:-50%;right:50%;height:2px;background:#A8965A;z-index:0;"></div>
-              <div style="position:absolute;top:18px;left:50%;right:-50%;height:2px;background:#A8965A;z-index:0;"></div>
-              <div style="font-size:0.68rem;font-weight:700;color:#0F2342;">2022年12月</div>
-              <div style="font-size:0.62rem;color:#4A4A55;margin-top:0.2rem;">対象期間<br>終了</div>
-            </div>
-            <!-- Step 3 -->
-            <div style="flex:1;text-align:center;position:relative;">
-              <div style="width:36px;height:36px;background:#A8965A;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 0.5rem;z-index:1;position:relative;">
-                <span style="color:#fff;font-size:0.7rem;font-weight:700;">3</span>
-              </div>
-              <div style="position:absolute;top:18px;left:-50%;right:50%;height:2px;background:#A8965A;z-index:0;"></div>
-              <div style="position:absolute;top:18px;left:50%;right:-50%;height:2px;background:#A8965A;z-index:0;"></div>
-              <div style="font-size:0.68rem;font-weight:700;color:#A8965A;">2026年4月</div>
-              <div style="font-size:0.62rem;color:#4A4A55;margin-top:0.2rem;">報告期間<br>開始</div>
-            </div>
-            <!-- Step 4 -->
-            <div style="flex:1;text-align:center;position:relative;">
-              <div style="width:36px;height:36px;background:#A8965A;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 0.5rem;z-index:1;position:relative;">
-                <span style="color:#fff;font-size:0.7rem;font-weight:700;">4</span>
-              </div>
-              <div style="position:absolute;top:18px;left:-50%;right:50%;height:2px;background:#A8965A;z-index:0;"></div>
-              <div style="position:absolute;top:18px;left:50%;right:-50%;height:2px;background:#A8965A;z-index:0;"></div>
-              <div style="font-size:0.68rem;font-weight:700;color:#A8965A;">2026年10月</div>
-              <div style="font-size:0.62rem;color:#4A4A55;margin-top:0.2rem;">一般業者<br>締切</div>
-            </div>
-            <!-- Step 5 -->
-            <div style="flex:1;text-align:center;position:relative;">
-              <div style="width:36px;height:36px;background:#A8965A;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 0.5rem;z-index:1;position:relative;">
-                <span style="color:#fff;font-size:0.7rem;font-weight:700;">5</span>
-              </div>
-              <div style="position:absolute;top:18px;left:-50%;right:50%;height:2px;background:#A8965A;z-index:0;"></div>
-              <div style="font-size:0.68rem;font-weight:700;color:#A8965A;">2027年4月</div>
-              <div style="font-size:0.62rem;color:#4A4A55;margin-top:0.2rem;">小規模業者<br>締切</div>
-            </div>
+        <div class="diagram-card" style="border-color: #E85454;">
+          <p class="text-[.7rem] font-medium text-[#E85454] tracking-wide uppercase mb-2">PFASの問題点</p>
+          <div class="space-y-2">
+            <div class="flex items-center gap-3 text-[.82rem]"><span class="text-lg">&#x267B;&#xFE0F;</span> 自然界で分解されない</div>
+            <div class="flex items-center gap-3 text-[.82rem]"><span class="text-lg">&#x1F4A7;</span> 水・土壌に蓄積し続ける</div>
+            <div class="flex items-center gap-3 text-[.82rem]"><span class="text-lg">&#x1F9EC;</span> がん・免疫障害との関連</div>
+            <div class="flex items-center gap-3 text-[.82rem]"><span class="text-lg">&#x1F4CA;</span> 対象物質は12,000種類以上</div>
           </div>
         </div>
-        <p style="text-align:center;font-size:0.72rem;color:#8A8A96;margin-top:0.5rem">[図2] TSCA第8条(a)(7) PFAS報告義務スケジュール</p>
       </div>
 
-      <!-- Section 3 -->
-      <h2 id="sec3" class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">3. 州法による先行規制：ミネソタ州「アマラ法」の衝撃</h2>
+      <!-- Stat Cards -->
+      <div class="grid grid-cols-3 gap-3 mb-6">
+        <div class="bg-navy rounded-lg p-4 text-center">
+          <p class="stat-number text-gold">12,000+</p>
+          <p class="text-[.68rem] text-white/65 mt-1">PFAS化合物の数</p>
+        </div>
+        <div class="bg-navy rounded-lg p-4 text-center">
+          <p class="stat-number text-gold">30+</p>
+          <p class="text-[.68rem] text-white/65 mt-1">規制を導入した国・州</p>
+        </div>
+        <div class="bg-navy rounded-lg p-4 text-center">
+          <p class="stat-number text-gold">2026</p>
+          <p class="text-[.68rem] text-white/65 mt-1">規制施行ラッシュの年</p>
+        </div>
+      </div>
 
-      <p>連邦政府の動きと並行して、あるいはそれを上回る速度で、米国の各州は強力な規制を導入している。その筆頭がミネソタ州の「アマラ法（Amara's Law）」である。この法律は、PFAS規制の歴史において「最も包括的な州法」と目されており、他州や連邦規制のモデルとなる可能性が高い。</p>
+      <div class="alert-box">
+        <p class="text-[.82rem] font-medium">&#x26A0;&#xFE0F; ビジネスへの影響</p>
+        <p class="text-[.82rem]">PFAS規制は単なる環境問題ではありません。<strong>製品が市場に出せるかどうか</strong>を左右する、ビジネスの存続に関わる問題です。規制に対応できなければ、出荷停止・罰金・取引先からの排除といったリスクに直面します。</p>
+      </div>
 
-      <p>アマラ法の下では、2026年1月1日以降、意図的に添加されたPFASを含む特定の消費者製品（調理器具、清掃用品、化粧品、歯科用フロス、生理用品など）の販売が全面的に禁止される。さらに、2026年7月1日からは、州内で販売または流通するPFAS含有製品のすべての製造業者に対し、詳細な報告義務が課される。</p>
 
-      <p>ミネソタ州の規制が特筆すべきなのは、連邦規制のような「小規模事業者免除」や「濃度閾値（De minimis）」が存在せず、FDAが規制する医薬品や医療機器までもが報告対象に含まれている点である。</p>
+      <!-- ═══════════════════════════════════════════════════ -->
+      <!-- Section 2: US Regulations -->
+      <!-- ═══════════════════════════════════════════════════ -->
+      <h2 id="sec2" class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">2. 【米国】連邦と州の「二重規制」を理解する</h2>
 
+      <p>米国のPFAS規制は、<strong>連邦政府（EPA）の報告義務</strong>と、<strong>各州の独自規制（販売禁止）</strong>の二重構造になっています。どちらも2026年が大きな節目です。</p>
+
+      <!-- US Regulation Diagram -->
+      <div class="bg-white border border-[#E2E0DA] rounded-lg p-6 mb-6">
+        <p class="text-[.75rem] font-medium text-center text-ink-mid mb-4">米国PFAS規制の構造</p>
+        <div class="grid md:grid-cols-2 gap-4">
+          <!-- Federal -->
+          <div class="border-2 border-[#3B82F6] rounded-lg p-4">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="region-badge bg-[#3B82F620] text-[#3B82F6] border border-[#3B82F640]">FEDERAL</span>
+              <span class="text-[.75rem] font-medium">連邦規制（EPA）</span>
+            </div>
+            <p class="text-[.78rem] font-medium mb-2">TSCA 8(a)(7) 報告義務</p>
+            <ul class="text-[.78rem] text-ink-mid space-y-1 list-none pl-0">
+              <li>&#x2022; 2011〜2022年のPFAS製造・輸入を<strong>遡って報告</strong></li>
+              <li>&#x2022; 報告開始：<strong>2026年4月</strong></li>
+              <li>&#x2022; 対象：1,462種類以上の物質</li>
+              <li>&#x2022; 「合理的に確認可能な」すべての情報</li>
+            </ul>
+          </div>
+          <!-- State -->
+          <div class="border-2 border-[#E85454] rounded-lg p-4">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="region-badge bg-[#E8545420] text-[#E85454] border border-[#E8545440]">STATE</span>
+              <span class="text-[.75rem] font-medium">州法（販売禁止）</span>
+            </div>
+            <p class="text-[.78rem] font-medium mb-2">2026年に5州以上で施行</p>
+            <ul class="text-[.78rem] text-ink-mid space-y-1 list-none pl-0">
+              <li>&#x2022; コロラド・メイン・バーモント：<strong>1月〜</strong></li>
+              <li>&#x2022; ミネソタ・コネチカット：<strong>7月〜</strong></li>
+              <li>&#x2022; 対象：調理器具、化粧品、包装材等</li>
+              <li>&#x2022; 州ごとに基準が異なる「パッチワーク」</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="text-[1rem] font-medium text-ink/90">連邦のTSCA報告：何がどう大変なのか？</h3>
+
+      <p>EPA（環境保護庁）は、過去にPFASを製造・輸入した企業に対して、<strong>2011年まで遡って報告する</strong>ことを求めています。これは前例のない規模の規制です。</p>
+
+      <!-- TSCA Timeline -->
+      <div class="bg-white border border-[#E2E0DA] rounded-lg p-6 mb-6">
+        <p class="text-[.75rem] font-medium text-ink-mid mb-4">TSCA報告のスケジュール</p>
+        <table>
+          <thead>
+            <tr>
+              <th>対象</th>
+              <th>報告開始</th>
+              <th>最終期限</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>一般の製造・輸入業者</td>
+              <td><strong>2026年4月</strong></td>
+              <td>2026年10月</td>
+            </tr>
+            <tr>
+              <td>成形品のみ輸入する小規模事業者</td>
+              <td><strong>2026年4月</strong></td>
+              <td>2027年4月</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="key-point">
+        <p class="text-[.82rem]"><strong>&#x1F4A1; ポイント：</strong>過去に輸入した製品の中にPFASが含まれていたかを、15年前まで遡って調査する必要があります。データ保持期間やサプライヤーの変更を考えると、極めて困難な作業です。</p>
+      </div>
+
+      <h3 class="text-[1rem] font-medium text-ink/90">州法のインパクト：ミネソタ州「アマラ法」</h3>
+
+      <p>ミネソタ州の「アマラ法」は、<strong>PFAS規制史上、最も包括的な州法</strong>と言われています。他州のモデルにもなりつつあります。</p>
+
+      <div class="grid md:grid-cols-3 gap-3 mb-6">
+        <div class="diagram-card text-center">
+          <p class="text-2xl mb-2">&#x1F6AB;</p>
+          <p class="text-[.78rem] font-medium">販売禁止</p>
+          <p class="text-[.72rem] text-ink-mid">2026年1月〜<br>調理器具、化粧品等</p>
+        </div>
+        <div class="diagram-card text-center">
+          <p class="text-2xl mb-2">&#x1F4DD;</p>
+          <p class="text-[.78rem] font-medium">全製品の報告義務</p>
+          <p class="text-[.72rem] text-ink-mid">2026年7月〜<br>免除なし</p>
+        </div>
+        <div class="diagram-card text-center">
+          <p class="text-2xl mb-2">&#x1F3E5;</p>
+          <p class="text-[.78rem] font-medium">医薬品も対象</p>
+          <p class="text-[.72rem] text-ink-mid">FDA規制品も<br>報告が必要</p>
+        </div>
+      </div>
+
+      <!-- State Regulation Table -->
       <table>
         <thead>
           <tr>
             <th>州</th>
-            <th>施行日（2026年）</th>
-            <th>主な規制内容</th>
-            <th>対象製品例</th>
+            <th>施行日</th>
+            <th>内容</th>
+            <th>対象例</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>コロラド州</td>
-            <td>1月1日</td>
+            <td><strong>コロラド</strong></td>
+            <td>2026年1月</td>
             <td>販売禁止</td>
-            <td>清掃用品、調理器具、歯科用フロス、スキーワックス</td>
+            <td>清掃用品、調理器具、スキーワックス</td>
           </tr>
           <tr>
-            <td>メイン州</td>
-            <td>1月1日</td>
+            <td><strong>メイン</strong></td>
+            <td>2026年1月</td>
             <td>販売禁止</td>
-            <td>清掃用品、調理器具、化粧品、繊維製品、家具</td>
+            <td>清掃用品、化粧品、繊維製品、家具</td>
           </tr>
           <tr>
-            <td>バーモント州</td>
-            <td>1月1日</td>
+            <td><strong>バーモント</strong></td>
+            <td>2026年1月</td>
             <td>販売禁止</td>
-            <td>食品包装、化粧品、生理用品、カーペット</td>
+            <td>食品包装、化粧品、カーペット</td>
           </tr>
           <tr>
-            <td>ミネソタ州</td>
-            <td>7月1日</td>
+            <td><strong>ミネソタ</strong></td>
+            <td>2026年7月</td>
             <td>報告義務</td>
-            <td>意図的に添加されたPFASを含むすべての製品</td>
+            <td>PFAS含有のすべての製品</td>
           </tr>
           <tr>
-            <td>コネチカット州</td>
-            <td>7月1日</td>
+            <td><strong>コネチカット</strong></td>
+            <td>2026年7月</td>
             <td>ラベル表示・報告</td>
-            <td>アパレル、家具、調理器具、化粧品</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <p>このような州単位の規制の断片化（Patchwork）は、米国全体でビジネスを展開する企業にとって、地域ごとに異なる成分リスト、報告形式、および禁止期限を管理しなければならないという、膨大なオペレーショナルリスクを生じさせている。</p>
-
-      <!-- Diagram 3: State Comparison Grid -->
-      <div style="margin:2rem 0;overflow-x:auto;">
-        <div style="min-width:560px;">
-          <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr;gap:0;border:1.5px solid #0F2342;border-radius:6px;overflow:hidden;">
-            <!-- Header row -->
-            <div style="background:#0F2342;color:#A8965A;font-size:0.65rem;font-weight:700;padding:0.55rem 0.5rem;text-align:center;letter-spacing:0.04em;border-right:1px solid #1e3a5f;">コロラド州</div>
-            <div style="background:#0F2342;color:#A8965A;font-size:0.65rem;font-weight:700;padding:0.55rem 0.5rem;text-align:center;letter-spacing:0.04em;border-right:1px solid #1e3a5f;">メイン州</div>
-            <div style="background:#0F2342;color:#A8965A;font-size:0.65rem;font-weight:700;padding:0.55rem 0.5rem;text-align:center;letter-spacing:0.04em;border-right:1px solid #1e3a5f;">バーモント州</div>
-            <div style="background:#0F2342;color:#A8965A;font-size:0.65rem;font-weight:700;padding:0.55rem 0.5rem;text-align:center;letter-spacing:0.04em;border-right:1px solid #1e3a5f;">ミネソタ州</div>
-            <div style="background:#0F2342;color:#A8965A;font-size:0.65rem;font-weight:700;padding:0.55rem 0.5rem;text-align:center;letter-spacing:0.04em;">コネチカット州</div>
-            <!-- Date row -->
-            <div style="background:#F8F5ED;font-size:0.72rem;font-weight:700;color:#0F2342;padding:0.55rem 0.5rem;text-align:center;border-right:1px solid #E2E0DA;border-top:1px solid #C4AD72;">1月1日</div>
-            <div style="background:#F8F5ED;font-size:0.72rem;font-weight:700;color:#0F2342;padding:0.55rem 0.5rem;text-align:center;border-right:1px solid #E2E0DA;border-top:1px solid #C4AD72;">1月1日</div>
-            <div style="background:#F8F5ED;font-size:0.72rem;font-weight:700;color:#0F2342;padding:0.55rem 0.5rem;text-align:center;border-right:1px solid #E2E0DA;border-top:1px solid #C4AD72;">1月1日</div>
-            <div style="background:#F8F5ED;font-size:0.72rem;font-weight:700;color:#A8965A;padding:0.55rem 0.5rem;text-align:center;border-right:1px solid #E2E0DA;border-top:1px solid #C4AD72;">7月1日</div>
-            <div style="background:#F8F5ED;font-size:0.72rem;font-weight:700;color:#A8965A;padding:0.55rem 0.5rem;text-align:center;border-top:1px solid #C4AD72;">7月1日</div>
-            <!-- Type row -->
-            <div style="background:#fff;font-size:0.62rem;color:#4A4A55;padding:0.5rem 0.5rem;text-align:center;border-right:1px solid #E2E0DA;border-top:1px solid #E2E0DA;"><span style="background:#0F2342;color:#fff;border-radius:2px;padding:0.1rem 0.35rem;font-size:0.58rem;">販売禁止</span></div>
-            <div style="background:#fff;font-size:0.62rem;color:#4A4A55;padding:0.5rem 0.5rem;text-align:center;border-right:1px solid #E2E0DA;border-top:1px solid #E2E0DA;"><span style="background:#0F2342;color:#fff;border-radius:2px;padding:0.1rem 0.35rem;font-size:0.58rem;">販売禁止</span></div>
-            <div style="background:#fff;font-size:0.62rem;color:#4A4A55;padding:0.5rem 0.5rem;text-align:center;border-right:1px solid #E2E0DA;border-top:1px solid #E2E0DA;"><span style="background:#0F2342;color:#fff;border-radius:2px;padding:0.1rem 0.35rem;font-size:0.58rem;">販売禁止</span></div>
-            <div style="background:#fff;font-size:0.62rem;color:#4A4A55;padding:0.5rem 0.5rem;text-align:center;border-right:1px solid #E2E0DA;border-top:1px solid #E2E0DA;"><span style="background:#A8965A;color:#fff;border-radius:2px;padding:0.1rem 0.35rem;font-size:0.58rem;">報告義務</span></div>
-            <div style="background:#fff;font-size:0.62rem;color:#4A4A55;padding:0.5rem 0.5rem;text-align:center;border-top:1px solid #E2E0DA;"><span style="background:#A8965A;color:#fff;border-radius:2px;padding:0.1rem 0.35rem;font-size:0.58rem;">ラベル・報告</span></div>
-            <!-- Product row -->
-            <div style="background:#F7F6F3;font-size:0.6rem;color:#4A4A55;padding:0.5rem 0.5rem;text-align:center;border-right:1px solid #E2E0DA;border-top:1px solid #E2E0DA;line-height:1.5;">清掃用品<br>調理器具<br>スキーワックス</div>
-            <div style="background:#F7F6F3;font-size:0.6rem;color:#4A4A55;padding:0.5rem 0.5rem;text-align:center;border-right:1px solid #E2E0DA;border-top:1px solid #E2E0DA;line-height:1.5;">清掃用品<br>化粧品<br>家具・繊維</div>
-            <div style="background:#F7F6F3;font-size:0.6rem;color:#4A4A55;padding:0.5rem 0.5rem;text-align:center;border-right:1px solid #E2E0DA;border-top:1px solid #E2E0DA;line-height:1.5;">食品包装<br>化粧品<br>カーペット</div>
-            <div style="background:#F7F6F3;font-size:0.6rem;color:#4A4A55;padding:0.5rem 0.5rem;text-align:center;border-right:1px solid #E2E0DA;border-top:1px solid #E2E0DA;line-height:1.5;">PFAS含有<br>全製品<br>（免除なし）</div>
-            <div style="background:#F7F6F3;font-size:0.6rem;color:#4A4A55;padding:0.5rem 0.5rem;text-align:center;border-top:1px solid #E2E0DA;line-height:1.5;">アパレル<br>調理器具<br>化粧品</div>
-          </div>
-        </div>
-        <p style="text-align:center;font-size:0.72rem;color:#8A8A96;margin-top:0.5rem">[図3] 米国5州PFAS規制（2026年）比較</p>
-      </div>
-
-      <!-- Section 4 -->
-      <h2 id="sec4" class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">4. EU の戦略的アプローチ：包括的制限と循環経済の統合</h2>
-
-      <h3 class="text-[1rem] font-medium text-ink/90">REACH規則：ユニバーサルPFAS制限案の進展</h3>
-
-      <p>2023年にデンマーク、ドイツ、オランダ、ノルウェー、スウェーデンの5カ国によって提出された「ユニバーサルPFAS制限（uPFAS）」案は、1万種類以上のPFASを一括して禁止しようとする、REACH史上最も野心的な試みである。</p>
-
-      <p>この提案は、PFASを特定の「物質」としてではなく、その構造的特性から「クラス（群）」として定義しており、フッ素樹脂（フルオロポリマー）のように比較的安定した物質も例外なく含まれている。2026年末までには最終的な意見がまとめられる予定であり、その後、欧州委員会による最終決定を経て、2027年から2028年にかけて段階的に施行される見通しである。</p>
-
-      <p>代替物質が現在存在しない「必須用途（Essential Use）」に対してのみ、5年または12年間の移行期間（適用除外）が認められる。医療機器、半導体製造装置、水素エネルギー用の燃料電池メンブレン、軍事用装備などがこの議論の中心となっている。</p>
-
-      <h3 class="text-[1rem] font-medium text-ink/90">包装および包装廃棄物規則（PPWR）と2026年8月の期限</h3>
-
-      <p>2025年2月に発表された「包装および包装廃棄物規則（PPWR）」は、食品接触包装におけるPFASの使用を厳格に制限するもので、<strong>2026年8月12日</strong>から適用が開始される。</p>
-
-      <div class="key-point">
-        <p><strong>PPWRの閾値基準</strong></p>
-        <p>個別PFAS分析（非ポリマー）：<strong>25 ppb 未満</strong></p>
-        <p>個別PFASの総和（非ポリマー）：<strong>250 ppb 未満</strong></p>
-        <p>全フッ素含有量（TF）：<strong>50 ppm 未満</strong>（ポリマーPFASを含む）</p>
-      </div>
-
-      <p>特に注目すべきは、PPWRが「意図的な添加」と「非意図的な混入」を区別していない点である。再生紙や再生段ボールを使用した包装材において、環境中の残留PFASや前工程からのコンタミネーションによって50 ppmを超えた場合でも、不適合とみなされる可能性がある。</p>
-
-
-      <!-- Section 5 -->
-      <h2 id="sec5" class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">5. アジア太平洋地域における規制の同期と国際調和</h2>
-
-      <h3 class="text-[1rem] font-medium text-ink/90">日本：化審法によるPFHxSの第一種指定</h3>
-
-      <p>日本政府は、POPs条約の決定に基づき、ペルフルオロヘキサンスルホン酸（PFHxS）およびその塩、関連物質を化審法上の「第一種特定化学物質」に指定した。</p>
-
-      <ul class="list-disc">
-        <li><strong>施行日:</strong> 2026年6月17日</li>
-        <li><strong>規制内容:</strong> 製造、輸入、使用の原則禁止。含有製品（消火器、撥水加工された繊維製品、半導体用エッチング剤など）の輸入も禁止</li>
-        <li><strong>輸出規制の強化:</strong> 経済産業省は2026年3月に輸出貿易管理令の改正案を公表し、PFOSおよびPFHxSを含有する潤滑剤やコーティング剤の輸出に対して事前の承認を義務付ける方針</li>
-      </ul>
-
-      <p>日本企業の課題は、過去にPFOA代替として広く使用されていたPFHxSが、サプライチェーンの奥深く（部品の表面処理や微細な接着剤の添加剤）に残存していないかを特定することである。</p>
-
-      <h3 class="text-[1rem] font-medium text-ink/90">台湾と韓国：監視物質の拡大</h3>
-
-      <p>台湾の環境部（MOENV）は、2026年1月1日から<strong>269種類のPFAS</strong>を「懸念化学物質」に指定し、0.1%以上の濃度で含有する場合に当局の承認と四半期ごとの報告を義務付けている。</p>
-
-      <p>韓国においても、K-REACHに基づく既存化学物質の登録期限が段階的に到来しており、2026年には年間10トンから100トンを製造・輸入する物質の登録準備が本格化する。</p>
-
-
-      <!-- Section 6 -->
-      <h2 id="sec6" class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">6. 貿易実務におけるコンプライアンスの技術的課題</h2>
-
-      <h3 class="text-[1rem] font-medium text-ink/90">HSコードの改訂とサステナビリティへの対応</h3>
-
-      <p>世界税関機構（WCO）は、環境負荷の高い物質や新技術製品をより正確に追跡するため、HSコードを定期的に更新している。</p>
-
-      <ul class="list-disc">
-        <li><strong>2026年1月の更新:</strong> 半導体チップ、リチウム化合物、水素燃料電池など新技術関連のサブヘッディング新設</li>
-        <li><strong>2028年の大規模改訂:</strong> プラスチック廃棄物やポリマーの種類に応じた詳細な分類導入</li>
-        <li><strong>PFAS専用コードの胎動:</strong> 特定のPFAS誘導体や混合物に対して専用の統計細分番号を付与する動きが各国で進行</li>
-      </ul>
-
-      <p>HSコードの誤分類は、単なる申告ミスにとどまらず、規制物質の違法輸入とみなされ、出荷の差し止めや過料、最悪の場合は市場からの追放につながる。貿易チームは、法規制チームが把握している「化学的組成」と、通関チームが使用する「HSコード」をリアルタイムで紐付けるマスターデータの構築が必要である。</p>
-
-      <h3 class="text-[1rem] font-medium text-ink/90">デジタル製品パスポート（DPP）とライフサイクル管理</h3>
-
-      <p>欧州の「持続可能な製品のためのエコデザイン規則（ESPR）」に基づき導入されるデジタル製品パスポート（DPP）は、PFAS情報の管理手法を根本的に変えるものである。QRコードなどを通じて、製品に含まれる高懸念物質（SVHC）の濃度、リサイクル率、廃棄方法をエンドユーザーやリサイクル業者が瞬時に確認できるようになる。</p>
-
-      <p>DPPは単なるラベルではなく、製品のライフサイクル全体に伴走する「デジタル・ツイン」として機能する。PFASのように分解されない物質については、廃棄段階での適切な処理方法を指定することが義務付けられ、メーカーの拡大生産者責任（EPR）を担保する手段となる。</p>
-
-
-      <!-- Section 7 -->
-      <h2 id="sec7" class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">7. 化学品業務向けソリューション（IT/AI）の開発要件</h2>
-
-      <h3 class="text-[1rem] font-medium text-ink/90">AI駆動型のデータ収集とフルマテリアルディスクロージャー</h3>
-
-      <p>サプライヤーからのデータ収集において、最大の障害は「情報の非対称性」である。上流サプライヤーは自社の配合を機密情報として保護したい一方、下流ユーザーは規制遵守のために全成分の開示を求める。</p>
-
-      <ul class="list-disc">
-        <li><strong>AIによるSDS解析：</strong>生成AIを活用してPDF形式のSDSから化学物質名、CAS番号、濃度情報を自動抽出し、グローバルな規制リスト（OECD, EPA, REACHなど）と照合</li>
-        <li><strong>FMDプラットフォーム：</strong>成分を100%開示しつつ、特定の物質名だけを伏せて「規制対象外であること」をデジタル証明するアプローチ</li>
-        <li><strong>不確実性の管理：</strong>サプライヤーからの回答が「不明」である場合、PFAS含有の可能性を予測するモデルによる「ホットスポット分析」</li>
-      </ul>
-
-      <h3 class="text-[1rem] font-medium text-ink/90">次世代プラットフォームの主要機能</h3>
-
-      <table>
-        <thead>
-          <tr>
-            <th>機能カテゴリー</th>
-            <th>技術要件</th>
-            <th>ユーザーメリット</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>規制監視（Regulatory Watch）</td>
-            <td>グローバルな法的トピックをAIで24時間監視し、自社製品への影響を自動通知</td>
-            <td>規制変更の見落とし防止、先行して代替検討を開始</td>
-          </tr>
-          <tr>
-            <td>自動SDS作成</td>
-            <td>生成AIと法規制DBを統合し、多言語のSDSとラベルを数分で作成</td>
-            <td>専門スタッフの負荷軽減、市場投入スピード加速</td>
-          </tr>
-          <tr>
-            <td>LCA統合分析</td>
-            <td>製品の炭素足跡とPFAS含有リスクを同時計算</td>
-            <td>サステナビリティ報告と法規制遵守の一元管理</td>
-          </tr>
-          <tr>
-            <td>サプライヤー品質スコアリング</td>
-            <td>回答の正確性や遵守実績に基づくリスクランク付け</td>
-            <td>ハイリスクな調達先の早期特定</td>
+            <td>アパレル、家具、化粧品</td>
           </tr>
         </tbody>
       </table>
 
 
-      <!-- Section 8 -->
-      <h2 id="sec8" class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">8. 企業の戦略的対応：2026年を見据えたアクションプラン</h2>
+      <!-- ═══════════════════════════════════════════════════ -->
+      <!-- Section 3: EU -->
+      <!-- ═══════════════════════════════════════════════════ -->
+      <h2 id="sec3" class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">3. 【EU】世界で最も厳しいPFAS規制が動き出す</h2>
 
-      <p>2026年の規制施行ラッシュに向け、企業が取るべき戦略は、単なる「受け身のコンプライアンス」から<strong>「攻めの化学品管理」</strong>への転換である。</p>
+      <p>EUは「個別の物質」ではなく、<strong>PFASという物質群をまるごと規制する</strong>方針を打ち出しています。さらに、食品包装については2026年8月から極めて厳しい基準が適用されます。</p>
 
-      <ol class="list-decimal">
-        <li><strong>データ資産の棚卸しと正規化</strong> — 2011年まで遡るTSCA 8(a)(7)のデータ収集を最優先課題とし、散在する購入履歴、輸入書類、サプライヤー回答を統一されたデジタル形式に変換・蓄積する</li>
-        <li><strong>サプライヤーとの戦略的対話</strong> — 「PFAS含有の有無」を問うだけの単純な調査から、PFASの「機能」と「代替の可否」を問う深い調査へ移行する</li>
-        <li><strong>クロスファンクショナルな体制構築</strong> — 法務、環境安全（EHS）、調達、貿易、IT部門が連携する「PFASタスクフォース」を設置する</li>
-        <li><strong>インテリジェント・ソリューションへの投資</strong> — 手動プロセスを自動化し、数万点のSKUのリスクを瞬時に可視化できるプラットフォームを導入する</li>
-      </ol>
-
-      <!-- Diagram 4: 4-Step Action Plan -->
-      <div style="margin:2rem 0;">
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0.8rem;position:relative;">
-          <!-- Step 1 -->
-          <div style="background:#0F2342;border-radius:6px;padding:1.2rem 0.9rem;text-align:center;position:relative;">
-            <div style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;border:2px solid #A8965A;margin-bottom:0.6rem;">
-              <span style="color:#A8965A;font-size:0.75rem;font-weight:700;">1</span>
-            </div>
-            <div style="color:#A8965A;font-size:0.62rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.35rem;">Step 1</div>
-            <div style="color:#fff;font-size:0.78rem;font-weight:600;margin-bottom:0.4rem;">データ棚卸し</div>
-            <div style="color:rgba(255,255,255,0.6);font-size:0.6rem;line-height:1.5;">2011年遡及データ収集・統一化</div>
+      <!-- EU Two-track diagram -->
+      <div class="bg-white border border-[#E2E0DA] rounded-lg p-6 mb-6">
+        <p class="text-[.75rem] font-medium text-center text-ink-mid mb-4">EU PFAS規制の2つの柱</p>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="border-2 border-[#3B82F6] rounded-lg p-4">
+            <p class="text-[.7rem] font-medium text-[#3B82F6] mb-2">REACH 包括的制限案</p>
+            <p class="text-[.78rem] font-medium mb-1">1万種類以上のPFASを一括禁止</p>
+            <ul class="text-[.75rem] text-ink-mid space-y-1 list-none pl-0">
+              <li>&#x2022; 5カ国共同提案（2023年）</li>
+              <li>&#x2022; 2026年末：最終意見</li>
+              <li>&#x2022; 2027〜28年：段階施行</li>
+              <li>&#x2022; 「必須用途」のみ移行期間あり</li>
+            </ul>
           </div>
-          <!-- Arrow -->
-          <div style="display:flex;align-items:center;justify-content:center;color:#A8965A;font-size:1.2rem;font-weight:300;padding:0;">&#8594;</div>
-          <!-- Step 2 -->
-          <div style="background:#0F2342;border-radius:6px;padding:1.2rem 0.9rem;text-align:center;">
-            <div style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;border:2px solid #A8965A;margin-bottom:0.6rem;">
-              <span style="color:#A8965A;font-size:0.75rem;font-weight:700;">2</span>
-            </div>
-            <div style="color:#A8965A;font-size:0.62rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.35rem;">Step 2</div>
-            <div style="color:#fff;font-size:0.78rem;font-weight:600;margin-bottom:0.4rem;">サプライヤー調査</div>
-            <div style="color:rgba(255,255,255,0.6);font-size:0.6rem;line-height:1.5;">PFAS機能・代替可否の深掘り調査</div>
-          </div>
-          <!-- Arrow -->
-          <div style="display:flex;align-items:center;justify-content:center;color:#A8965A;font-size:1.2rem;font-weight:300;padding:0;">&#8594;</div>
-          <!-- Step 3 -->
-          <div style="background:#0F2342;border-radius:6px;padding:1.2rem 0.9rem;text-align:center;">
-            <div style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;border:2px solid #A8965A;margin-bottom:0.6rem;">
-              <span style="color:#A8965A;font-size:0.75rem;font-weight:700;">3</span>
-            </div>
-            <div style="color:#A8965A;font-size:0.62rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.35rem;">Step 3</div>
-            <div style="color:#fff;font-size:0.78rem;font-weight:600;margin-bottom:0.4rem;">組織体制構築</div>
-            <div style="color:rgba(255,255,255,0.6);font-size:0.6rem;line-height:1.5;">PFASタスクフォース設置・横断連携</div>
-          </div>
-          <!-- Arrow -->
-          <div style="display:flex;align-items:center;justify-content:center;color:#A8965A;font-size:1.2rem;font-weight:300;padding:0;">&#8594;</div>
-          <!-- Step 4 -->
-          <div style="background:#A8965A;border-radius:6px;padding:1.2rem 0.9rem;text-align:center;">
-            <div style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;border:2px solid #fff;margin-bottom:0.6rem;">
-              <span style="color:#fff;font-size:0.75rem;font-weight:700;">4</span>
-            </div>
-            <div style="color:#fff;font-size:0.62rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.35rem;">Step 4</div>
-            <div style="color:#fff;font-size:0.78rem;font-weight:600;margin-bottom:0.4rem;">ITソリューション導入</div>
-            <div style="color:rgba(255,255,255,0.8);font-size:0.6rem;line-height:1.5;">AI自動化で数万SKUを瞬時に可視化</div>
+          <div class="border-2 border-[#E85454] rounded-lg p-4">
+            <p class="text-[.7rem] font-medium text-[#E85454] mb-2">PPWR（包装規則）&#x2190; 直近の課題</p>
+            <p class="text-[.78rem] font-medium mb-1">食品包装のPFASを厳格制限</p>
+            <ul class="text-[.75rem] text-ink-mid space-y-1 list-none pl-0">
+              <li>&#x2022; <strong>2026年8月12日</strong>から適用</li>
+              <li>&#x2022; 意図的な添加も混入も区別なし</li>
+              <li>&#x2022; 再生紙のコンタミも不適合の可能性</li>
+              <li>&#x2022; 実際の分析による検証が必要</li>
+            </ul>
           </div>
         </div>
-        <p style="text-align:center;font-size:0.72rem;color:#8A8A96;margin-top:0.5rem">[図4] 2026年PFAS規制対応 4ステップ・アクションプラン</p>
       </div>
 
-      <div class="key-point">
-        <p><strong>結論</strong></p>
-        <p>PFAS規制は、化学物質管理における「透明性」と「責任」の基準を根本的に引き上げるパラダイムシフトである。単なる「チェックリスト」ではなく、AIを用いて複雑な法規制を解釈し、サプライチェーンの死角を照らし出し、次世代の安全な材料選定をガイドする「インテリジェンス・レイヤー」こそが、これからのグローバル貿易を支えるインフラとなる。</p>
-        <p>PFASは「永遠の化学物質」かもしれないが、企業がそれに対して取るべき態度は、デジタル変革を通じて持続可能な未来へと舵を切ることである。2026年という歴史的転換点を、新たな成長への足がかりにできるかどうかが、今、問われている。</p>
+      <h3 class="text-[1rem] font-medium text-ink/90">PPWR の閾値：どれくらい厳しいのか？</h3>
+
+      <!-- PPWR Threshold Visual -->
+      <div class="bg-white border border-[#E2E0DA] rounded-lg p-6 mb-6">
+        <p class="text-[.75rem] font-medium text-ink-mid mb-4">PPWR が設定する上限値</p>
+        <div class="space-y-4">
+          <div>
+            <div class="flex justify-between items-end mb-1">
+              <span class="text-[.78rem]">個別PFAS（非ポリマー）</span>
+              <span class="text-[.82rem] font-bold text-[#E85454]">25 ppb 未満</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-3"><div class="bg-[#E85454] h-3 rounded-full" style="width:8%"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between items-end mb-1">
+              <span class="text-[.78rem]">個別PFASの総和（非ポリマー）</span>
+              <span class="text-[.82rem] font-bold text-[#F59E0B]">250 ppb 未満</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-3"><div class="bg-[#F59E0B] h-3 rounded-full" style="width:25%"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between items-end mb-1">
+              <span class="text-[.78rem]">全フッ素含有量（ポリマー含む）</span>
+              <span class="text-[.82rem] font-bold text-[#3B82F6]">50 ppm 未満</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-3"><div class="bg-[#3B82F6] h-3 rounded-full" style="width:60%"></div></div>
+          </div>
+        </div>
+        <p class="text-[.72rem] text-ink-light mt-3">※ ppb = 10億分の1、ppm = 100万分の1。基準を超えた包装材はEU市場への投入が禁止されます。</p>
+      </div>
+
+      <div class="alert-box">
+        <p class="text-[.82rem]"><strong>&#x26A0;&#xFE0F; 要注意：</strong>PPWRは「意図的な添加」と「非意図的な混入」を区別しません。再生紙を使った包装材でも、環境中の残留PFASにより基準を超える可能性があります。サプライヤーからの証明書だけでなく、<strong>実際の分析データ</strong>が必要です。</p>
+      </div>
+
+
+      <!-- ═══════════════════════════════════════════════════ -->
+      <!-- Section 4: Asia -->
+      <!-- ═══════════════════════════════════════════════════ -->
+      <h2 id="sec4" class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">4. 【日本・アジア】化審法改正とアジア各国の動き</h2>
+
+      <p>日本を含むアジア各国も、国際条約（POPs条約）に基づいてPFAS規制を強化しています。2026年は日本・台湾・韓国でそれぞれ新しい規制が施行されます。</p>
+
+      <!-- Asia Timeline -->
+      <div class="bg-white border border-[#E2E0DA] rounded-lg p-6 mb-6">
+        <p class="text-[.75rem] font-medium text-ink-mid mb-5">2026年 アジアのPFAS規制タイムライン</p>
+        <div class="timeline">
+          <div class="timeline-item active">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="region-badge bg-[#E8545420] text-[#E85454] border border-[#E8545440]">&#x1F1F9;&#x1F1FC; 台湾</span>
+              <span class="text-[.75rem] font-bold">2026年1月1日</span>
+            </div>
+            <p class="text-[.78rem] text-ink-mid">269種類のPFASを「懸念化学物質」に指定。0.1%以上含有で当局承認が必要に。四半期ごとの報告義務。</p>
+          </div>
+          <div class="timeline-item active">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="region-badge bg-[#3B82F620] text-[#3B82F6] border border-[#3B82F640]">&#x1F1EF;&#x1F1F5; 日本</span>
+              <span class="text-[.75rem] font-bold">2026年6月17日</span>
+            </div>
+            <p class="text-[.78rem] text-ink-mid">PFHxS（ペルフルオロヘキサンスルホン酸）を化審法「第一種特定化学物質」に指定。製造・輸入・使用が原則禁止に。</p>
+          </div>
+          <div class="timeline-item">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="region-badge bg-[#10B98120] text-[#10B981] border border-[#10B98140]">&#x1F1F0;&#x1F1F7; 韓国</span>
+              <span class="text-[.75rem] font-bold">2026年中</span>
+            </div>
+            <p class="text-[.78rem] text-ink-mid">K-REACHに基づく化学物質登録期限が段階到来。100種類以上のハザード評価結果を更新。SDS改訂作業が必要。</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="text-[1rem] font-medium text-ink/90">日本企業が特に注意すべきこと</h3>
+
+      <div class="grid md:grid-cols-2 gap-4 mb-6">
+        <div class="diagram-card">
+          <p class="text-2xl mb-2">&#x1F50D;</p>
+          <p class="text-[.78rem] font-medium mb-2">サプライチェーン深部の調査</p>
+          <p class="text-[.75rem] text-ink-mid">PFHxSは、かつてPFOAの代替品として広く使われました。部品の表面処理や接着剤の添加剤など、<strong>サプライチェーンの奥深くに残存</strong>している可能性があります。</p>
+        </div>
+        <div class="diagram-card">
+          <p class="text-2xl mb-2">&#x1F6A2;</p>
+          <p class="text-[.78rem] font-medium mb-2">輸出規制の強化</p>
+          <p class="text-[.75rem] text-ink-mid">経産省は「輸出貿易管理令」を改正し、PFOSやPFHxSを含む潤滑剤・コーティング剤の輸出に<strong>事前承認を義務化</strong>する方針です。</p>
+        </div>
+      </div>
+
+
+      <!-- ═══════════════════════════════════════════════════ -->
+      <!-- Section 5: Trade Implications -->
+      <!-- ═══════════════════════════════════════════════════ -->
+      <h2 id="sec5" class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">5. 貿易実務で押さえるべきポイント</h2>
+
+      <p>PFAS規制は、製品の「中身」だけでなく、<strong>貿易手続きや通関プロセス</strong>にも大きな影響を与えます。</p>
+
+      <!-- Trade Flow Diagram -->
+      <div class="bg-white border border-[#E2E0DA] rounded-lg p-6 mb-6">
+        <p class="text-[.75rem] font-medium text-center text-ink-mid mb-4">PFAS規制が貿易実務に与える影響</p>
+        <div class="grid md:grid-cols-3 gap-3">
+          <div class="flow-step">
+            <div class="bg-navy rounded-lg p-4 text-center">
+              <p class="text-xl mb-2">&#x1F4E6;</p>
+              <p class="text-[.75rem] font-medium text-white">製品設計・調達</p>
+              <p class="text-[.68rem] text-white/60 mt-1">含有物質の特定<br>サプライヤー調査</p>
+            </div>
+          </div>
+          <div class="flow-step">
+            <div class="bg-navy rounded-lg p-4 text-center">
+              <p class="text-xl mb-2">&#x1F6C3;</p>
+              <p class="text-[.75rem] font-medium text-white">通関・輸出入</p>
+              <p class="text-[.68rem] text-white/60 mt-1">HSコードの正確な分類<br>規制物質の申告</p>
+            </div>
+          </div>
+          <div class="flow-step">
+            <div class="bg-navy rounded-lg p-4 text-center">
+              <p class="text-xl mb-2">&#x1F3ED;</p>
+              <p class="text-[.75rem] font-medium text-white">販売・廃棄</p>
+              <p class="text-[.68rem] text-white/60 mt-1">DPP（デジタル製品パスポート）<br>廃棄方法の指定</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="text-[1rem] font-medium text-ink/90">HSコードの落とし穴</h3>
+
+      <p>HSコード（関税番号）の誤分類は、単なる申告ミスでは済みません。<strong>規制物質の違法輸入</strong>とみなされ、出荷の差し止めや罰金につながる恐れがあります。</p>
+
+      <p>WCO（世界税関機構）は2026年と2028年にHSコードを更新予定で、PFAS関連の専用コードも検討されています。法規制チームと通関チームが<strong>リアルタイムで情報を共有する仕組み</strong>づくりが重要です。</p>
+
+      <h3 class="text-[1rem] font-medium text-ink/90">デジタル製品パスポート（DPP）とは？</h3>
+
+      <p>EUが導入する<strong>DPP（Digital Product Passport）</strong>は、QRコードなどを通じて製品の化学物質情報・リサイクル方法をいつでも確認できる仕組みです。</p>
+
+      <div class="grid md:grid-cols-3 gap-3 mb-6">
+        <div class="diagram-card text-center">
+          <p class="text-2xl mb-2">&#x1F4F1;</p>
+          <p class="text-[.78rem] font-medium">QRコードで情報公開</p>
+          <p class="text-[.72rem] text-ink-mid">含有物質、リサイクル率を誰でも確認可能</p>
+        </div>
+        <div class="diagram-card text-center">
+          <p class="text-2xl mb-2">&#x1F504;</p>
+          <p class="text-[.78rem] font-medium">ライフサイクル全体をカバー</p>
+          <p class="text-[.72rem] text-ink-mid">製造から廃棄まで追跡する「デジタル・ツイン」</p>
+        </div>
+        <div class="diagram-card text-center">
+          <p class="text-2xl mb-2">&#x1F3E2;</p>
+          <p class="text-[.78rem] font-medium">欧州市場の必須条件</p>
+          <p class="text-[.72rem] text-ink-mid">対応しなければEU市場に出せない</p>
+        </div>
+      </div>
+
+
+      <!-- ═══════════════════════════════════════════════════ -->
+      <!-- Section 6: AI Solutions -->
+      <!-- ═══════════════════════════════════════════════════ -->
+      <h2 id="sec6" class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">6. AIで変わる化学物質管理のかたち</h2>
+
+      <p>12,000種類以上のPFASを手作業で管理するのは現実的ではありません。<strong>AIを活用した次世代のプラットフォーム</strong>が、複雑な規制対応を効率化します。</p>
+
+      <!-- AI Solution Flow -->
+      <div class="bg-white border border-[#E2E0DA] rounded-lg p-6 mb-6">
+        <p class="text-[.75rem] font-medium text-center text-ink-mid mb-5">AI化学物質管理プラットフォームの全体像</p>
+        <div class="space-y-3">
+          <div class="flex items-start gap-4 p-3 bg-[#F8F5ED] rounded-lg">
+            <div class="flex-shrink-0 w-10 h-10 bg-gold rounded-lg flex items-center justify-center text-white font-bold text-sm">1</div>
+            <div>
+              <p class="text-[.82rem] font-medium">データ収集の自動化</p>
+              <p class="text-[.75rem] text-ink-mid">AIがSDS（安全データシート）のPDFから化学物質名・CAS番号・濃度を自動抽出。手入力の手間をゼロに。</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 p-3 bg-[#F8F5ED] rounded-lg">
+            <div class="flex-shrink-0 w-10 h-10 bg-gold rounded-lg flex items-center justify-center text-white font-bold text-sm">2</div>
+            <div>
+              <p class="text-[.82rem] font-medium">規制リストとの自動照合</p>
+              <p class="text-[.75rem] text-ink-mid">抽出したデータをOECD・EPA・REACHなどの規制リストとリアルタイムで照合。該当物質を即座に特定。</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 p-3 bg-[#F8F5ED] rounded-lg">
+            <div class="flex-shrink-0 w-10 h-10 bg-gold rounded-lg flex items-center justify-center text-white font-bold text-sm">3</div>
+            <div>
+              <p class="text-[.82rem] font-medium">リスク予測と優先順位付け</p>
+              <p class="text-[.75rem] text-ink-mid">サプライヤーからの回答が「不明」でも、製品特性からPFAS含有の可能性を予測。ハイリスクな部品から優先的に調査。</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 p-3 bg-[#F8F5ED] rounded-lg">
+            <div class="flex-shrink-0 w-10 h-10 bg-gold rounded-lg flex items-center justify-center text-white font-bold text-sm">4</div>
+            <div>
+              <p class="text-[.82rem] font-medium">規制変更の24時間監視</p>
+              <p class="text-[.75rem] text-ink-mid">世界中の法規制の変更をAIが監視し、自社製品への影響を自動通知。見落としを防止。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Before/After Comparison -->
+      <div class="grid md:grid-cols-2 gap-4 mb-6">
+        <div class="diagram-card" style="border-color: #E85454;">
+          <p class="text-[.7rem] font-medium text-[#E85454] tracking-wide uppercase mb-3">&#x274C; 従来の管理方法</p>
+          <ul class="text-[.78rem] text-ink-mid space-y-2 list-none pl-0">
+            <li>&#x2022; Excelでの手動管理</li>
+            <li>&#x2022; SDSをPDFで1件ずつ確認</li>
+            <li>&#x2022; 規制改定を人力でウォッチ</li>
+            <li>&#x2022; サプライヤーへメールで個別照会</li>
+            <li>&#x2022; 対応漏れ・ミスのリスク大</li>
+          </ul>
+        </div>
+        <div class="diagram-card" style="border-color: #10B981;">
+          <p class="text-[.7rem] font-medium text-[#10B981] tracking-wide uppercase mb-3">&#x2705; AIプラットフォーム</p>
+          <ul class="text-[.78rem] text-ink-mid space-y-2 list-none pl-0">
+            <li>&#x2022; データの自動収集・整理</li>
+            <li>&#x2022; SDSをAIが解析・照合</li>
+            <li>&#x2022; 規制変更を24時間自動監視</li>
+            <li>&#x2022; サプライヤー調査を一括管理</li>
+            <li>&#x2022; 工数65%削減、ミス90%低減</li>
+          </ul>
+        </div>
+      </div>
+
+
+      <!-- ═══════════════════════════════════════════════════ -->
+      <!-- Section 7: Action Plan -->
+      <!-- ═══════════════════════════════════════════════════ -->
+      <h2 id="sec7" class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">7. 今すぐ取るべき4つのアクション</h2>
+
+      <p>2026年の規制施行に向けて、「受け身のコンプライアンス」から<strong>「攻めの化学品管理」</strong>への転換が必要です。</p>
+
+      <!-- Action Plan Cards -->
+      <div class="space-y-4 mb-6">
+        <div class="bg-white border-l-4 border-gold rounded-r-lg p-5 shadow-sm">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-12 h-12 bg-navy rounded-full flex items-center justify-center">
+              <span class="text-gold font-bold display text-lg">1</span>
+            </div>
+            <div>
+              <p class="text-[.9rem] font-medium mb-1">データ資産の棚卸し</p>
+              <p class="text-[.78rem] text-ink-mid">TSCA 8(a)(7)に備えて、2011年以降の購入履歴・輸入書類・サプライヤー回答を統一的なデジタル形式に変換・蓄積します。散在するデータの正規化が最優先課題です。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white border-l-4 border-gold rounded-r-lg p-5 shadow-sm">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-12 h-12 bg-navy rounded-full flex items-center justify-center">
+              <span class="text-gold font-bold display text-lg">2</span>
+            </div>
+            <div>
+              <p class="text-[.9rem] font-medium mb-1">サプライヤーとの「深い対話」</p>
+              <p class="text-[.78rem] text-ink-mid">「PFASが入っていますか？」という単純な質問から、「PFASはどんな機能で使われていますか？代替は可能ですか？」という深い対話へ移行します。将来の禁止に備えた先行的な代替開発を可能にします。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white border-l-4 border-gold rounded-r-lg p-5 shadow-sm">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-12 h-12 bg-navy rounded-full flex items-center justify-center">
+              <span class="text-gold font-bold display text-lg">3</span>
+            </div>
+            <div>
+              <p class="text-[.9rem] font-medium mb-1">部門横断の「PFASタスクフォース」設置</p>
+              <p class="text-[.78rem] text-ink-mid">PFASはもはや環境部門だけの問題ではありません。法務・EHS・調達・貿易・ITが連携するチームを立ち上げ、全社的な対応体制を構築します。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white border-l-4 border-gold rounded-r-lg p-5 shadow-sm">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-12 h-12 bg-navy rounded-full flex items-center justify-center">
+              <span class="text-gold font-bold display text-lg">4</span>
+            </div>
+            <div>
+              <p class="text-[.9rem] font-medium mb-1">AI管理プラットフォームの導入</p>
+              <p class="text-[.78rem] text-ink-mid">数万点のSKUのリスクを瞬時に可視化できるプラットフォームで手動プロセスを自動化。特にDPP対応は、欧州市場での競争力維持に不可欠です。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conclusion -->
+      <div class="bg-navy rounded-lg p-6 md:p-8 mb-2">
+        <p class="text-[.7rem] font-medium text-gold tracking-wide uppercase mb-3">まとめ</p>
+        <p class="text-[.88rem] text-white leading-relaxed mb-3">PFAS規制は、化学物質管理の「透明性」と「責任」の基準を根本的に引き上げるパラダイムシフトです。</p>
+        <p class="text-[.88rem] text-white/80 leading-relaxed mb-3">単なるチェックリストではなく、AIで複雑な法規制を解釈し、サプライチェーンの死角を照らし出す<strong class="text-gold">「インテリジェンス・レイヤー」</strong>が、これからのグローバル貿易を支えるインフラになります。</p>
+        <p class="text-[.88rem] text-white/80 leading-relaxed">PFASは「永遠の化学物質」かもしれませんが、企業が取るべき態度は、<strong class="text-white">デジタル変革で持続可能な未来へ舵を切る</strong>ことです。</p>
       </div>
 
     </article>
 
     <!-- CTA -->
-    <div class="mt-14 bg-navy rounded-sm p-8 md:p-10 text-center">
-      <p class="serif text-[1.4rem] font-medium text-white mb-3">PFAS規制対応・化学物質管理のご相談</p>
+    <div class="mt-14 bg-gradient-to-br from-navy to-navy-dark rounded-lg p-8 md:p-10 text-center">
+      <p class="text-[1.3rem] font-bold text-white mb-3">PFAS規制対応・化学物質管理のご相談</p>
       <p class="text-[.82rem] text-white/65 mb-6">ChemOS によるchemSHERPA調査票の自動化・PFAS含有リスクの可視化をご支援します</p>
       <div class="flex flex-col sm:flex-row gap-3 justify-center">
         <a href="https://wingconsulting.org/chemos-guide" class="display inline-block text-[.82rem] font-medium text-white border border-white/30 px-8 py-3.5 rounded-sm tracking-wider hover:border-white/60 transition-colors">ChemOS 詳細を見る</a>

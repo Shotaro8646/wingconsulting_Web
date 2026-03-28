@@ -1047,7 +1047,7 @@ html[lang="en"] .ja-only {
       </div>
 
       <!-- Form -->
-      <form onsubmit="submitContact(event)" class="flex flex-col gap-4">
+      <form id="contact-form" action="https://formspree.io/f/xpqopzdj" method="POST" class="flex flex-col gap-4">
         <div class="flex flex-col gap-1.5">
           <label class="display text-[.74rem] font-medium text-ink tracking-wide" data-ja-html="お名前 <span class='text-gold text-[.68rem]'>*</span>" data-en-html="Name <span class='text-gold text-[.68rem]'>*</span>">お名前 <span class="text-gold text-[.68rem]">*</span></label>
           <input type="text" placeholder="山田 太郎" data-ja-placeholder="山田 太郎" data-en-placeholder="Your Name" class="font-sans text-[.85rem] text-ink bg-white border border-[#E2E0DA] px-3.5 py-2.5 rounded-sm outline-none focus:border-navy/40 placeholder:text-ink-light transition-colors">
@@ -1080,10 +1080,11 @@ html[lang="en"] .ja-only {
             </select>
           </div>
         </div>
-        <button type="submit" class="display w-full text-[.84rem] font-medium text-white bg-navy py-3.5 rounded-sm tracking-wider hover:bg-navy-700 transition-colors flex items-center justify-center gap-2 mt-1">
+        <button type="submit" id="contact-btn" class="display w-full text-[.84rem] font-medium text-white bg-navy py-3.5 rounded-sm tracking-wider hover:bg-navy-700 transition-colors flex items-center justify-center gap-2 mt-1">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <span data-ja="送信する" data-en="Submit">送信する</span>
         </button>
+        <div id="contact-status" style="display:none;padding:12px 16px;border-radius:4px;font-size:.82rem;margin-top:8px"></div>
         <p class="text-[.68rem] text-ink-light text-center leading-relaxed" data-ja-html="送信をもって<a href='#' class='text-gold hover:underline'>プライバシーポリシー</a>に同意したものとみなします" data-en-html="By submitting, you agree to our <a href='#' class='text-gold hover:underline'>Privacy Policy</a>">送信をもって<a href="#" class="text-gold hover:underline">プライバシーポリシー</a>に同意したものとみなします</p>
       </form>
     </div>
@@ -1263,36 +1264,5 @@ handleFormspree(
 </script>
 
 
-<script>
-(function() {
-  var form = document.querySelector('form[onsubmit="submitContact(event)"]');
-  if (!form) return;
-  window.submitContact = function(e) {
-    e.preventDefault();
-    var name = form.querySelector('input[type=text], input[name*=name], input[placeholder*=名前]');
-    var email = form.querySelector('input[type=email]');
-    var msg = form.querySelector('textarea');
-    if (!name || !email || !msg) return;
-    if (!name.value.trim() || !email.value.trim() || !msg.value.trim()) {
-      var err = form.querySelector('#contact-status') || document.createElement('div');
-      err.id = 'contact-status';
-      err.style.cssText = 'padding:12px 16px;border-radius:4px;font-size:.82rem;margin-bottom:8px;background:#FCEBEB;color:#A32D2D;border:1px solid #F09595';
-      err.textContent = 'お名前・メールアドレス・ご相談内容は必須項目です。';
-      if (!form.querySelector('#contact-status')) form.insertBefore(err, form.querySelector('button[type=submit]'));
-      err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      return;
-    }
-    var btn = form.querySelector('button[type=submit]');
-    if (btn) { btn.disabled = true; btn.textContent = '送信しました ✓'; btn.style.background = '#3B6D11'; }
-    var ok = form.querySelector('#contact-status') || document.createElement('div');
-    ok.id = 'contact-status';
-    ok.style.cssText = 'padding:12px 16px;border-radius:4px;font-size:.82rem;margin-bottom:8px;background:#EAF3DE;color:#3B6D11;border:1px solid #C0DD97';
-    ok.textContent = 'お問い合わせを受け付けました。1〜2営業日以内にご返信いたします。';
-    if (!form.querySelector('#contact-status')) form.insertBefore(ok, btn);
-    ok.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    form.querySelectorAll('input, textarea, select').forEach(function(el) { el.disabled = true; });
-  };
-})();
-</script>
 </body>
 </html>
