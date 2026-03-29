@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMP（AIエージェント管理プラットフォーム）：2029年$150億市場を狙うガバナンス基盤の設計 | Wing Blog</title>
+<meta name="description" content="Gartnerが定義するAI Agent Management Platform（AMP）とは何か。2029年に$150億規模に成長する市場の全体像、主要ベンダー比較、日本企業への適用戦略を解説。">
+<meta name="keywords" content="AIエージェント管理, AMP, AI Agent Management Platform, ServiceNow, Salesforce Agentforce, Microsoft Copilot Studio, AIガバナンス, エンタープライズAI">
+<meta property="og:title" content="AMP（AIエージェント管理プラットフォーム）：2029年$150億市場を狙うガバナンス基盤の設計 | Wing Blog">
+<meta property="og:description" content="Gartnerが定義するAMPとは何か。全エージェントを統合管理するプラットフォームの選定と実装を解説。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://wingconsulting.org/blog/ai-agent-management-platform">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://wingconsulting.org/images/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Wing">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AMP（AIエージェント管理プラットフォーム）：2029年$150億市場を狙うガバナンス基盤の設計">
+<meta name="twitter:description" content="Gartnerが定義するAMPの全体像と日本企業向け導入戦略を解説。">
+<meta name="twitter:image" content="https://wingconsulting.org/images/og-default.png">
+<link rel="canonical" href="https://wingconsulting.org/blog/ai-agent-management-platform">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AMP（AIエージェント管理プラットフォーム）：2029年$150億市場を狙うガバナンス基盤の設計",
+  "description": "Gartnerが定義するAI Agent Management Platform（AMP）とは何か。2029年に$150億規模に成長する市場の全体像、主要ベンダー比較、日本企業への適用戦略を解説。",
+  "author": {"@type": "Organization","name": "Wing編集部","url": "https://wingconsulting.org"},
+  "publisher": {"@type": "Organization","name": "Wing","url": "https://wingconsulting.org","logo": {"@type": "ImageObject","url": "https://wingconsulting.org/images/logo.png"}},
+  "datePublished": "2026-03-29",
+  "dateModified": "2026-03-29",
+  "mainEntityOfPage": {"@type": "WebPage","@id": "https://wingconsulting.org/blog/ai-agent-management-platform"},
+  "image": "https://wingconsulting.org/images/og-default.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Wing", "item": "https://wingconsulting.org"},
+    {"@type": "ListItem", "position": 2, "name": "インサイト", "item": "https://wingconsulting.org/#blog"},
+    {"@type": "ListItem", "position": 3, "name": "AMP（AIエージェント管理プラットフォーム）", "item": "https://wingconsulting.org/blog/ai-agent-management-platform"}
+  ]
+}
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        navy: { DEFAULT: '#0F2342', dark: '#081830' },
+        gold: { DEFAULT: '#A8965A', light: '#C4AD72', muted: '#7A6B3E', pale: '#F8F5ED', mid: '#B8A560' },
+        slate: { warm: '#F7F6F3', cool: '#EEECe7' },
+        ink: { DEFAULT: '#1A1A1F', mid: '#4A4A55', light: '#8A8A96' },
+      },
+      fontFamily: {
+        serif: ['"Yu Gothic"', '"YuGothic"', 'sans-serif'],
+        sans: ['"Yu Gothic"', '"YuGothic"', '"Noto Sans JP"', 'sans-serif'],
+        display: ['"Roboto"', 'sans-serif'],
+      },
+    }
+  }
+}
+</script>
+<style>
+body { font-family: 'Yu Gothic', 'YuGothic', 'Noto Sans JP', sans-serif; -webkit-font-smoothing: antialiased; }
+.serif { font-family: 'Roboto', sans-serif; }
+.display { font-family: 'Roboto', sans-serif; }
+.gold-rule { width: 32px; height: 1.5px; background: #A8965A; }
+article h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+article h3 { margin-top: 1.8rem; margin-bottom: 0.8rem; }
+article p { margin-bottom: 1.2rem; }
+article ul { margin-bottom: 1.2rem; padding-left: 1.5rem; }
+article li { margin-bottom: 0.5rem; }
+.diag-wrap { background:#fff; border:1px solid #E2E0DA; border-top:3px solid #A8965A; padding:1.4rem 1.5rem 1rem; margin:1.6rem 0 0.5rem; font-size:0.85rem; }
+.diag-caption { text-align:center; font-size:0.72rem; color:#8A8A96; margin-top:0.5rem; margin-bottom:1.4rem; }
+.diag-label { font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#A8965A; margin-bottom:0.8rem; }
+.diag-step-row { display:flex; flex-wrap:wrap; gap:0.7rem; }
+.diag-step-card { flex:1 1 140px; background:#fff; border:1px solid #E2E0DA; padding:0.9rem; position:relative; }
+.diag-step-card .step-num { width:28px; height:28px; background:#0F2342; color:#A8965A; font-size:0.78rem; font-weight:700; display:flex; align-items:center; justify-content:center; margin-bottom:0.55rem; }
+.diag-step-card .step-title { font-size:0.78rem; font-weight:700; color:#0F2342; margin-bottom:0.3rem; line-height:1.4; }
+.diag-step-card .step-body { font-size:0.72rem; color:#4A4A55; line-height:1.5; }
+.compare-table { width:100%; border-collapse:collapse; font-size:0.82rem; margin:1.2rem 0 0.5rem; }
+.compare-table th { background:#0F2342; color:#fff; padding:0.6rem 0.8rem; text-align:left; font-weight:600; font-size:0.75rem; letter-spacing:0.05em; }
+.compare-table td { padding:0.6rem 0.8rem; border-bottom:1px solid #E2E0DA; vertical-align:top; line-height:1.55; }
+.compare-table tr:nth-child(even) td { background:#F8F5ED; }
+.insight-box { background:#F0F7F0; border-left:3px solid #5A9A6A; padding:1rem 1.2rem; margin:1.4rem 0; font-size:0.83rem; line-height:1.7; }
+.insight-box .insight-label { font-size:0.65rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#5A9A6A; margin-bottom:0.4rem; }
+.warn-box { background:#FFF8F0; border-left:3px solid #C45C3A; padding:1rem 1.2rem; margin:1.4rem 0; font-size:0.83rem; line-height:1.7; }
+.warn-box .warn-label { font-size:0.65rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#C45C3A; margin-bottom:0.4rem; }
+.kpi-row { display:flex; flex-wrap:wrap; gap:0.8rem; margin:1.2rem 0; }
+.kpi-item { flex:1 1 150px; background:#fff; border:1px solid #E2E0DA; border-top:3px solid #A8965A; padding:0.9rem 1rem; }
+.kpi-item .kpi-val { font-size:1.4rem; font-weight:700; color:#0F2342; line-height:1.1; margin-bottom:0.25rem; }
+.kpi-item .kpi-label { font-size:0.7rem; color:#8A8A96; line-height:1.4; }
+</style>
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KN7NWHFK9G');
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style id="font-override">
+  body, p, li, td, th, span, div { font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif !important; }
+  h1, h2, h3, h4, h5, h6, .serif { font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif !important; }
+  .display, [class*="display"], [class*="font-display"] { font-family: "Roboto", "Yu Gothic", "YuGothic", sans-serif !important; }
+  :lang(en), .en, [lang="en"] { font-family: "Roboto", sans-serif !important; }
+</style>
+</head>
+<body class="bg-slate-warm text-ink">
+
+<header class="bg-navy h-[60px] flex items-center px-6 md:px-10 sticky top-0 z-50">
+  <div class="max-w-5xl mx-auto w-full flex items-center justify-between">
+    <a href="/" class="leading-none">
+      <svg width="120" height="36" viewBox="0 0 120 36" fill="none" aria-label="Wing">
+        <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff"/>
+        <path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#fff" opacity=".32"/>
+        <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#fff">Wing</text>
+      </svg>
+    </a>
+    <div class="flex items-center gap-4">
+      <span class="display text-[.7rem] font-medium tracking-wider text-white/50">Blog</span>
+      <a href="/" class="text-[.75rem] text-white/70 hover:text-white transition-colors">← Home</a>
+    </div>
+  </div>
+</header>
+
+<main class="py-16 px-6 md:px-10">
+  <div class="max-w-3xl mx-auto">
+    <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3">AI Platform Strategy / Enterprise Management</p>
+    <h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4">AMP（AIエージェント管理プラットフォーム）：<br>2029年$150億市場を狙うガバナンス基盤の設計</h1>
+    <div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2">
+      <time datetime="2026-03-29">2026.03.29</time>
+      <span>Wing編集部</span>
+    </div>
+    <div class="gold-rule mb-6"></div>
+
+    <!-- Series Navigation -->
+    <div style="background:#fff;border:1px solid #E2E0DA;border-left:4px solid #A8965A;padding:1rem 1.2rem;margin-bottom:2.5rem">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.7rem">
+        <span style="font-size:0.6rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#A8965A">AIエージェント完全ガイド — 7ステップシリーズ</span>
+        <a href="/blog/ai-agent-guide" style="font-size:0.65rem;color:#8A8A96;text-decoration:underline">一覧へ</a>
+      </div>
+      <div style="display:flex;gap:0.3rem;flex-wrap:wrap">
+        <a href="/blog/agentic-ai-b2b-shift" style="flex:1 1 68px;background:#F0F0EC;padding:0.45rem 0.6rem;border-radius:3px;text-decoration:none;display:block">
+          <div style="font-size:0.55rem;color:#8A8A96;font-weight:700;margin-bottom:0.1rem">Lv.1 概念</div>
+          <div style="font-size:0.68rem;color:#4A4A55;line-height:1.3">エージェント革命</div>
+        </a>
+        <a href="/blog/agentic-ai-saas-design-patterns" style="flex:1 1 68px;background:#F0F0EC;padding:0.45rem 0.6rem;border-radius:3px;text-decoration:none;display:block">
+          <div style="font-size:0.55rem;color:#8A8A96;font-weight:700;margin-bottom:0.1rem">Lv.2 設計</div>
+          <div style="font-size:0.68rem;color:#4A4A55;line-height:1.3">設計パターン</div>
+        </a>
+        <a href="/blog/ai-agent-sprawl-governance" style="flex:1 1 68px;background:#F0F0EC;padding:0.45rem 0.6rem;border-radius:3px;text-decoration:none;display:block">
+          <div style="font-size:0.55rem;color:#8A8A96;font-weight:700;margin-bottom:0.1rem">Lv.3 リスク</div>
+          <div style="font-size:0.68rem;color:#4A4A55;line-height:1.3">スプロール</div>
+        </a>
+        <a href="/blog/ai-agent-iam-identity" style="flex:1 1 68px;background:#F0F0EC;padding:0.45rem 0.6rem;border-radius:3px;text-decoration:none;display:block">
+          <div style="font-size:0.55rem;color:#8A8A96;font-weight:700;margin-bottom:0.1rem">Lv.4 ID管理</div>
+          <div style="font-size:0.68rem;color:#4A4A55;line-height:1.3">IAM</div>
+        </a>
+        <a href="/blog/guardian-agents-ai-oversight" style="flex:1 1 68px;background:#F0F0EC;padding:0.45rem 0.6rem;border-radius:3px;text-decoration:none;display:block">
+          <div style="font-size:0.55rem;color:#8A8A96;font-weight:700;margin-bottom:0.1rem">Lv.5 監視</div>
+          <div style="font-size:0.68rem;color:#4A4A55;line-height:1.3">ガーディアン</div>
+        </a>
+        <a href="/blog/universal-orchestrator-ai-agents" style="flex:1 1 68px;background:#F0F0EC;padding:0.45rem 0.6rem;border-radius:3px;text-decoration:none;display:block">
+          <div style="font-size:0.55rem;color:#8A8A96;font-weight:700;margin-bottom:0.1rem">Lv.6 統合</div>
+          <div style="font-size:0.68rem;color:#4A4A55;line-height:1.3">オーケストレーター</div>
+        </a>
+        <div style="flex:1 1 68px;background:#0F2342;padding:0.45rem 0.6rem;border-radius:3px">
+          <div style="font-size:0.55rem;color:#A8965A;font-weight:700;margin-bottom:0.1rem">Lv.7 管理 ◀</div>
+          <div style="font-size:0.68rem;color:#fff;line-height:1.3">AMP</div>
+        </div>
+      </div>
+    </div>
+
+    <article class="text-[.9rem] text-ink leading-[2] max-w-none">
+
+      <p>このシリーズのLv.3からLv.6で学んできた——スプロール対策、IAM、ガーディアンエージェント、ユニバーサルオーケストレーター。これらを統合した「単一のガバナンスハブ」が<strong>AMP（AI Agent Management Platform、AIエージェント管理プラットフォーム）</strong>だ。Gartnerは2025年時点でほぼゼロに近い市場規模が2029年には150億ドル規模に達すると予測する。エンタープライズAIの「管制塔」市場が今、急速に立ち上がっている。</p>
+
+      <!-- DIAGRAM: AMP Capability Map -->
+      <div class="diag-wrap" style="margin-bottom:1.8rem">
+        <div class="diag-label">Figure 1 — AMPの機能マップ：6つのコア機能領域</div>
+        <svg viewBox="0 0 640 240" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;max-width:640px;margin:0 auto" role="img" aria-label="AMPのコア機能領域マップ">
+          <rect x="0" y="0" width="640" height="240" fill="#FAFAF8" rx="6"/>
+          <!-- Center AMP hub -->
+          <circle cx="320" cy="120" r="50" fill="#0F2342"/>
+          <text x="320" y="114" text-anchor="middle" font-size="11" fill="#A8965A" font-family="sans-serif" font-weight="700">AMP</text>
+          <text x="320" y="130" text-anchor="middle" font-size="8" fill="#fff" font-family="sans-serif">AIエージェント</text>
+          <text x="320" y="143" text-anchor="middle" font-size="8" fill="#fff" font-family="sans-serif">管理プラットフォーム</text>
+          <!-- Top: Discovery & Catalog -->
+          <rect x="220" y="8" width="200" height="40" rx="3" fill="#E8F4E8" stroke="#5A9A6A" stroke-width="1.2"/>
+          <text x="320" y="24" text-anchor="middle" font-size="9" fill="#1A1A1F" font-family="sans-serif" font-weight="700">エージェント発見・カタログ管理</text>
+          <text x="320" y="38" text-anchor="middle" font-size="7.5" fill="#4A4A55" font-family="sans-serif">全エージェントの自動検出・台帳一元管理</text>
+          <line x1="320" y1="48" x2="320" y2="70" stroke="#5A9A6A" stroke-width="1.2" stroke-dasharray="3,2"/>
+          <!-- Bottom: Compliance & Audit -->
+          <rect x="220" y="192" width="200" height="40" rx="3" fill="#F0F0FF" stroke="#6A6AB8" stroke-width="1.2"/>
+          <text x="320" y="208" text-anchor="middle" font-size="9" fill="#1A1A1F" font-family="sans-serif" font-weight="700">コンプライアンス・監査</text>
+          <text x="320" y="222" text-anchor="middle" font-size="7.5" fill="#4A4A55" font-family="sans-serif">EU AI Act / SOC2 対応レポート自動生成</text>
+          <line x1="320" y1="170" x2="320" y2="192" stroke="#6A6AB8" stroke-width="1.2" stroke-dasharray="3,2"/>
+          <!-- Left top: IAM Integration -->
+          <rect x="20" y="40" width="170" height="40" rx="3" fill="#FFF8E8" stroke="#A8965A" stroke-width="1.2"/>
+          <text x="105" y="56" text-anchor="middle" font-size="9" fill="#1A1A1F" font-family="sans-serif" font-weight="700">IAM統合・権限管理</text>
+          <text x="105" y="70" text-anchor="middle" font-size="7.5" fill="#4A4A55" font-family="sans-serif">NHI管理・JITアクセス制御</text>
+          <line x1="190" y1="60" x2="270" y2="95" stroke="#A8965A" stroke-width="1.2" stroke-dasharray="3,2"/>
+          <!-- Left bottom: Cost & Performance -->
+          <rect x="20" y="160" width="170" height="40" rx="3" fill="#FFF8E8" stroke="#A8965A" stroke-width="1.2"/>
+          <text x="105" y="176" text-anchor="middle" font-size="9" fill="#1A1A1F" font-family="sans-serif" font-weight="700">コスト・パフォーマンス管理</text>
+          <text x="105" y="190" text-anchor="middle" font-size="7.5" fill="#4A4A55" font-family="sans-serif">APIコスト・稼働率・ROI可視化</text>
+          <line x1="190" y1="180" x2="270" y2="145" stroke="#A8965A" stroke-width="1.2" stroke-dasharray="3,2"/>
+          <!-- Right top: Guardian Integration -->
+          <rect x="450" y="40" width="170" height="40" rx="3" fill="#FFF0F0" stroke="#C45C3A" stroke-width="1.2"/>
+          <text x="535" y="56" text-anchor="middle" font-size="9" fill="#1A1A1F" font-family="sans-serif" font-weight="700">ガーディアン統合・監視</text>
+          <text x="535" y="70" text-anchor="middle" font-size="7.5" fill="#4A4A55" font-family="sans-serif">リアルタイム異常検知・自動対応</text>
+          <line x1="450" y1="60" x2="370" y2="95" stroke="#C45C3A" stroke-width="1.2" stroke-dasharray="3,2"/>
+          <!-- Right bottom: Lifecycle Management -->
+          <rect x="450" y="160" width="170" height="40" rx="3" fill="#FFF0F0" stroke="#C45C3A" stroke-width="1.2"/>
+          <text x="535" y="176" text-anchor="middle" font-size="9" fill="#1A1A1F" font-family="sans-serif" font-weight="700">ライフサイクル管理</text>
+          <text x="535" y="190" text-anchor="middle" font-size="7.5" fill="#4A4A55" font-family="sans-serif">デプロイ・更新・廃棄の自動化</text>
+          <line x1="450" y1="180" x2="370" y2="145" stroke="#C45C3A" stroke-width="1.2" stroke-dasharray="3,2"/>
+        </svg>
+        <p class="diag-caption">AMPはLv.3〜6で学んだ全機能を統合するエンタープライズAIの「管制塔」（出典：Gartner, G00840050 / G00825303）</p>
+      </div>
+
+      <div class="kpi-row">
+        <div class="kpi-item">
+          <div class="kpi-val">$15B</div>
+          <div class="kpi-label">2029年のAMP市場規模予測（2025年時点では$5M未満からの急成長）（Gartner）</div>
+        </div>
+        <div class="kpi-item">
+          <div class="kpi-val">3,000倍</div>
+          <div class="kpi-label">2025〜2029年のAMP市場成長倍率（Gartner予測。史上最速クラスの新市場）</div>
+        </div>
+        <div class="kpi-item">
+          <div class="kpi-val">2026年</div>
+          <div class="kpi-label">エンタープライズの「AMP調達検討」が急増すると予測される年（Gartner）</div>
+        </div>
+      </div>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">AMPとは何か：定義と市場背景</h2>
+
+      <p>Gartnerは AMP（AI Agent Management Platform）を「組織全体のAIエージェントを発見・評価・展開・監視・最適化・廃棄するための統合プラットフォーム」と定義した。一言で言えば、AIエージェントの「DevOpsツールチェーン＋ガバナンス基盤」だ。</p>
+
+      <p>AMP市場が急拡大する背景には、Lv.3で解説したAgent Sprawl問題の深刻化がある。エージェント数が数十から数千に増えると、個別ツールの組み合わせでは管理が破綻する。<strong>専用の統合管理プラットフォームへの需要が臨界点に達した</strong>のが2025〜2026年のタイミングだ。</p>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">AMPの6つのコア機能</h2>
+
+      <div class="diag-wrap">
+        <div class="diag-label">AMP Core Functions — 6機能の詳細</div>
+        <div class="diag-step-row">
+          <div class="diag-step-card">
+            <div class="step-num">F1</div>
+            <div class="step-title">エージェント発見・台帳管理</div>
+            <div class="step-body">社内全エージェントを自動スキャンで発見し、台帳に登録。エージェントごとに所有者・目的・アクセス権・バージョン・コストを一元管理。Lv.3のA1アクションを自動化。</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">F2</div>
+            <div class="step-title">展開・バージョン管理</div>
+            <div class="step-body">エージェントのデプロイ・更新・ロールバックをCI/CDパイプラインと統合。Blue-Greenデプロイ・カナリアリリースでエージェント更新リスクを最小化。</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">F3</div>
+            <div class="step-title">IAM統合・権限管理</div>
+            <div class="step-body">Lv.4で学んだNHI管理をAMPが中央制御。全エージェントのID・権限・アクセスログをAMP経由で一元管理。CyberArk・Okta等IAMツールとAPI連携。</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">F4</div>
+            <div class="step-title">監視・アラート・ガーディアン統合</div>
+            <div class="step-body">Lv.5のガーディアンエージェント機能をAMPに統合。全エージェントの稼働状況・異常検知・インシデント対応をシングルパネルで可視化。</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">F5</div>
+            <div class="step-title">コスト・ROI管理</div>
+            <div class="step-body">APIコスト・インフラコスト・エージェントごとの業務貢献度をトラッキング。ROIが低いエージェントの特定・廃棄勧告を自動化。コスト爆発を事前防止。</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">F6</div>
+            <div class="step-title">コンプライアンス・監査</div>
+            <div class="step-body">EU AI Act・GDPR・SOC2等のコンプライアンス要件に対応した監査レポートを自動生成。規制当局への説明責任を果たすための証跡管理。</div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">主要ベンダーの戦略比較</h2>
+
+      <p>AMP市場は2025〜2026年にかけて急速に形成されており、既存エンタープライズプラットフォームベンダーとAI専業スタートアップが競合している。</p>
+
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>ベンダー</th>
+            <th>AMP戦略</th>
+            <th>強み</th>
+            <th>主なターゲット</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>ServiceNow</strong></td>
+            <td>Now Platform上にAIエージェント管理を統合。Now Assist AIをAMPの中核に</td>
+            <td>既存ITSM/ERP統合、エンタープライズ実績、HITL設計の成熟度</td>
+            <td>IT運用・HR・CSで既にServiceNowを使う大企業</td>
+          </tr>
+          <tr>
+            <td><strong>Salesforce</strong></td>
+            <td>Agentforce Control Planeとして展開。CRMデータとエージェント管理を一体化</td>
+            <td>営業・CS領域でのエージェント活用、Einstein信頼レイヤー</td>
+            <td>Salesforce CRM活用中のB2B企業</td>
+          </tr>
+          <tr>
+            <td><strong>Microsoft</strong></td>
+            <td>Copilot Studio + Azure AIによる統合管理。M365エコシステムを軸に</td>
+            <td>Office統合、Entra IDによるIAM、Azureインフラ</td>
+            <td>Microsoft365環境が中心のエンタープライズ</td>
+          </tr>
+          <tr>
+            <td><strong>LangSmith (LangChain)</strong></td>
+            <td>LangChain/LangGraphエージェントの専用管理・デバッグ・評価プラットフォーム</td>
+            <td>開発者フレンドリー、詳細なトレーシング・デバッグ機能</td>
+            <td>Python/LangChainで開発するAIエンジニアチーム</td>
+          </tr>
+          <tr>
+            <td><strong>Arize AI</strong></td>
+            <td>LLMOps特化のAMP。エージェントのパフォーマンス監視・ドリフト検知・評価に特化</td>
+            <td>モデル品質管理、ハルシネーション検知、A/Bテスト</td>
+            <td>LLMを多用するエージェント開発チーム</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">AMP選定の4つの評価軸</h2>
+
+      <p>AMPを選定する際、ベンダーの売り文句ではなく以下4つの実質的な評価軸で判断することを推奨する。</p>
+
+      <ul>
+        <li><strong>既存スタック統合性</strong>：現在使用しているCRM・ERP・IAM・クラウドプラットフォームとのネイティブ統合度。APIアダプターが豊富かどうかを確認</li>
+        <li><strong>マルチベンダー対応</strong>：OpenAI・Anthropic・Google・MistralなどLLMベンダーを問わず管理できるか。特定LLMへのロックインを避けるために重要</li>
+        <li><strong>スケーラビリティ</strong>：エージェント数が10倍・100倍になった時のパフォーマンス・コスト構造。スタートアップ製品の場合、エンタープライズ規模での実績を確認</li>
+        <li><strong>コンプライアンス対応地域</strong>：日本のデータローカライゼーション要件、EU AI Act、GDPR等への対応状況。グローバル展開を想定する場合は特に重要</li>
+      </ul>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">日本企業向けAMP導入戦略：フェーズ別アプローチ</h2>
+
+      <p>日本のエンタープライズにおいてAMP導入が難航するケースに共通するパターンがある：「ガバナンスのために全部整えてから展開する」という順序のこだわりだ。現実には、<strong>AMPとエージェント展開を並行させながら段階的に整える</strong>アプローチが唯一機能する。</p>
+
+      <div class="diag-wrap">
+        <div class="diag-label">AMP導入ロードマップ — 3フェーズ</div>
+        <div class="diag-step-row">
+          <div class="diag-step-card">
+            <div class="step-num">P1</div>
+            <div class="step-title">Observe Phase（0〜3ヶ月）</div>
+            <div class="step-body">既存エージェントの可視化から始める。AMPの「発見・台帳管理」機能のみを有効化し、現状把握に集中。新規承認フローをAMP経由に切り替え。IAMとの統合を設計。</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">P2</div>
+            <div class="step-title">Control Phase（3〜9ヶ月）</div>
+            <div class="step-body">IAM統合・ガーディアン統合・コスト管理を順次有効化。主要エージェントをAMP経由のライフサイクル管理に移行。コンプライアンスレポートの試行。</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">P3</div>
+            <div class="step-title">Optimize Phase（9ヶ月〜）</div>
+            <div class="step-body">全エージェントをAMP管理下に統合完了。ROIダッシュボードを経営層に提示。低ROIエージェントの廃棄サイクルを確立。AMPを全社AIガバナンスの基盤として制度化。</div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">シリーズ総括：7ステップが完成する意味</h2>
+
+      <p>このシリーズを通じて、AIエージェントの全体像が見えてきたはずだ。概念理解（Lv.1）→設計パターン習得（Lv.2）→リスク認識（Lv.3）→セキュリティ設計（Lv.4）→監視アーキテクチャ（Lv.5）→統合設計（Lv.6）→ガバナンス基盤（Lv.7）。</p>
+
+      <p>これらは独立した知識ではなく、相互に依存するシステムだ。AMPはLv.3〜6の機能を統合するハブとして機能する。ガーディアンエージェントはAMPに監視データを提供し、UOはAMP経由でポリシーを適用し、IAMシステムはAMPから権限情報を受け取る。</p>
+
+      <div class="warn-box">
+        <div class="warn-label">Warning — AMP幻想に陥らないために</div>
+        AMPを「導入すれば全てが解決する魔法のツール」として期待すると必ず失敗する。AMPはあくまで「可視化と管理の自動化を支援するツール」だ。ガバナンスポリシー（Lv.3）、IAM設計（Lv.4）、ガーディアン設計（Lv.5）、オーケストレーション設計（Lv.6）が整っていなければ、AMPはただ「何もない状態を可視化するダッシュボード」にしかならない。ツールの前に設計が先行すること——これがAMP成功の絶対条件だ。
+      </div>
+
+      <div class="insight-box">
+        <div class="insight-label">Wing's View</div>
+        「AIエージェント戦略」と「AIガバナンス戦略」は一枚のコインの表裏だ。AIエージェントをどう活用するかのビジョンと、どう管理するかのガバナンスを同時に設計しなければ、どちらも中途半端になる。WingではこのLv.1〜7を網羅した「AIエージェント戦略ロードマップ」を、組織の現状・規模・業種に合わせて共同設計する支援を提供している。7ステップの知識を「自社の文脈」に変換するパートナーとして、お気軽にご相談ください。
+      </div>
+
+    </article>
+
+    <!-- CTA -->
+    <div class="mt-16 bg-navy text-white px-8 py-10 text-center">
+      <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold/80 mb-3">Consulting</p>
+      <h2 class="text-[1.2rem] font-medium mb-4 leading-snug">AIエージェント戦略の設計から<br>AMP選定・実装まで Wing がご支援します</h2>
+      <p class="text-[.82rem] text-white/70 leading-relaxed mb-6">7ステップのフレームワークを自社の文脈に適用したAIエージェント戦略ロードマップの共同設計から、AMP選定・導入・運用設計まで、包括的な支援を提供します。</p>
+      <a href="/#contact" class="inline-block bg-gold text-white text-[.78rem] font-medium tracking-wider px-7 py-3 hover:bg-gold-light transition-colors">無料相談を予約する →</a>
+    </div>
+
+    <!-- Series Complete -->
+    <div style="margin-top:2.5rem;padding:1.2rem 1.4rem;background:#0F2342;border-radius:4px;text-align:center">
+      <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#A8965A;margin-bottom:0.6rem">Series Complete</div>
+      <div style="font-size:0.9rem;color:#fff;margin-bottom:0.8rem">AIエージェント完全ガイド 7ステップシリーズ、全記事を読了しました</div>
+      <a href="/blog/ai-agent-guide" style="display:inline-block;background:#A8965A;color:#fff;font-size:0.75rem;font-weight:600;padding:0.5rem 1.2rem;border-radius:3px;text-decoration:none">シリーズ一覧ページへ →</a>
+    </div>
+  </div>
+</main>
+<footer class="mt-20 border-t border-[#E2E0DA] py-10 px-6 md:px-10 text-center">
+  <a href="/" class="inline-block mb-4">
+    <svg width="80" height="24" viewBox="0 0 120 36" fill="none">
+      <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#0F2342"/>
+      <path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#0F2342" opacity=".32"/>
+      <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#0F2342">Wing</text>
+    </svg>
+  </a>
+  <p class="text-[.72rem] text-ink-light">© 2026 Wing Consulting. All rights reserved.</p>
+</footer>
+</body>
+</html>

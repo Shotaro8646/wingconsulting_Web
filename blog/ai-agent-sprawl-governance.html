@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIエージェント・スプロール：制御不能な増殖リスクとCIOが今すぐ取るべき5つのアクション | Wing Blog</title>
+<meta name="description" content="Gartnerが警告するAgent Sprawlとは何か。管理されていないAIエージェントが企業内で増殖するリスクと、CIOが2026年に取るべき5つの即時対応策を解説。">
+<meta name="keywords" content="AIエージェント, Agent Sprawl, AIガバナンス, CIO, AIリスク, シャドーAI, エンタープライズAI, AI管理">
+<meta property="og:title" content="AIエージェント・スプロール：制御不能な増殖リスクとCIOが今すぐ取るべき5つのアクション | Wing Blog">
+<meta property="og:description" content="Gartnerが警告するAgent Sprawlとは何か。管理されていないAIエージェントが企業内で増殖するリスクと、CIOが2026年に取るべき5つの即時対応策を解説。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://wingconsulting.org/blog/ai-agent-sprawl-governance">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://wingconsulting.org/images/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Wing">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AIエージェント・スプロール：制御不能な増殖リスクとCIOが今すぐ取るべき5つのアクション">
+<meta name="twitter:description" content="Gartnerが警告するAgent Sprawlとは何か。CIOが今すぐ取るべき5つのアクションを解説。">
+<meta name="twitter:image" content="https://wingconsulting.org/images/og-default.png">
+<link rel="canonical" href="https://wingconsulting.org/blog/ai-agent-sprawl-governance">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AIエージェント・スプロール：制御不能な増殖リスクとCIOが今すぐ取るべき5つのアクション",
+  "description": "Gartnerが警告するAgent Sprawlとは何か。管理されていないAIエージェントが企業内で増殖するリスクと、CIOが2026年に取るべき5つの即時対応策を解説。",
+  "author": {"@type": "Organization","name": "Wing編集部","url": "https://wingconsulting.org"},
+  "publisher": {"@type": "Organization","name": "Wing","url": "https://wingconsulting.org","logo": {"@type": "ImageObject","url": "https://wingconsulting.org/images/logo.png"}},
+  "datePublished": "2026-03-29",
+  "dateModified": "2026-03-29",
+  "mainEntityOfPage": {"@type": "WebPage","@id": "https://wingconsulting.org/blog/ai-agent-sprawl-governance"},
+  "image": "https://wingconsulting.org/images/og-default.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Wing", "item": "https://wingconsulting.org"},
+    {"@type": "ListItem", "position": 2, "name": "インサイト", "item": "https://wingconsulting.org/#blog"},
+    {"@type": "ListItem", "position": 3, "name": "AIエージェント・スプロール", "item": "https://wingconsulting.org/blog/ai-agent-sprawl-governance"}
+  ]
+}
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        navy: { DEFAULT: '#0F2342', dark: '#081830' },
+        gold: { DEFAULT: '#A8965A', light: '#C4AD72', muted: '#7A6B3E', pale: '#F8F5ED', mid: '#B8A560' },
+        slate: { warm: '#F7F6F3', cool: '#EEECe7' },
+        ink: { DEFAULT: '#1A1A1F', mid: '#4A4A55', light: '#8A8A96' },
+      },
+      fontFamily: {
+        serif: ['"Yu Gothic"', '"YuGothic"', 'sans-serif'],
+        sans: ['"Yu Gothic"', '"YuGothic"', '"Noto Sans JP"', 'sans-serif'],
+        display: ['"Roboto"', 'sans-serif'],
+      },
+    }
+  }
+}
+</script>
+<style>
+body { font-family: 'Yu Gothic', 'YuGothic', 'Noto Sans JP', sans-serif; -webkit-font-smoothing: antialiased; }
+.serif { font-family: 'Roboto', sans-serif; }
+.display { font-family: 'Roboto', sans-serif; }
+.gold-rule { width: 32px; height: 1.5px; background: #A8965A; }
+article h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+article h3 { margin-top: 1.8rem; margin-bottom: 0.8rem; }
+article p { margin-bottom: 1.2rem; }
+article ul { margin-bottom: 1.2rem; padding-left: 1.5rem; }
+article li { margin-bottom: 0.5rem; }
+.diag-wrap { background:#fff; border:1px solid #E2E0DA; border-top:3px solid #A8965A; padding:1.4rem 1.5rem 1rem; margin:1.6rem 0 0.5rem; font-size:0.85rem; }
+.diag-caption { text-align:center; font-size:0.72rem; color:#8A8A96; margin-top:0.5rem; margin-bottom:1.4rem; }
+.diag-label { font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#A8965A; margin-bottom:0.8rem; }
+.diag-step-row { display:flex; flex-wrap:wrap; gap:0.7rem; }
+.diag-step-card { flex:1 1 140px; background:#fff; border:1px solid #E2E0DA; padding:0.9rem; position:relative; }
+.diag-step-card .step-num { width:28px; height:28px; background:#0F2342; color:#A8965A; font-size:0.78rem; font-weight:700; display:flex; align-items:center; justify-content:center; margin-bottom:0.55rem; }
+.diag-step-card .step-title { font-size:0.78rem; font-weight:700; color:#0F2342; margin-bottom:0.3rem; line-height:1.4; }
+.diag-step-card .step-body { font-size:0.72rem; color:#4A4A55; line-height:1.5; }
+.compare-table { width:100%; border-collapse:collapse; font-size:0.82rem; margin:1.2rem 0 0.5rem; }
+.compare-table th { background:#0F2342; color:#fff; padding:0.6rem 0.8rem; text-align:left; font-weight:600; font-size:0.75rem; letter-spacing:0.05em; }
+.compare-table td { padding:0.6rem 0.8rem; border-bottom:1px solid #E2E0DA; vertical-align:top; line-height:1.55; }
+.compare-table tr:nth-child(even) td { background:#F8F5ED; }
+.insight-box { background:#F0F7F0; border-left:3px solid #5A9A6A; padding:1rem 1.2rem; margin:1.4rem 0; font-size:0.83rem; line-height:1.7; }
+.insight-box .insight-label { font-size:0.65rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#5A9A6A; margin-bottom:0.4rem; }
+.warn-box { background:#FFF8F0; border-left:3px solid #C45C3A; padding:1rem 1.2rem; margin:1.4rem 0; font-size:0.83rem; line-height:1.7; }
+.warn-box .warn-label { font-size:0.65rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#C45C3A; margin-bottom:0.4rem; }
+.kpi-row { display:flex; flex-wrap:wrap; gap:0.8rem; margin:1.2rem 0; }
+.kpi-item { flex:1 1 150px; background:#fff; border:1px solid #E2E0DA; border-top:3px solid #A8965A; padding:0.9rem 1rem; }
+.kpi-item .kpi-val { font-size:1.4rem; font-weight:700; color:#0F2342; line-height:1.1; margin-bottom:0.25rem; }
+.kpi-item .kpi-label { font-size:0.7rem; color:#8A8A96; line-height:1.4; }
+</style>
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KN7NWHFK9G');
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style id="font-override">
+  body, p, li, td, th, span, div {
+    font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif !important;
+  }
+  h1, h2, h3, h4, h5, h6, .serif {
+    font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif !important;
+  }
+  .display, [class*="display"], [class*="font-display"] {
+    font-family: "Roboto", "Yu Gothic", "YuGothic", sans-serif !important;
+  }
+  :lang(en), .en, [lang="en"] {
+    font-family: "Roboto", sans-serif !important;
+  }
+</style>
+</head>
+<body class="bg-slate-warm text-ink">
+
+<!-- HEADER -->
+<header class="bg-navy h-[60px] flex items-center px-6 md:px-10 sticky top-0 z-50">
+  <div class="max-w-5xl mx-auto w-full flex items-center justify-between">
+    <a href="/" class="leading-none">
+      <svg width="120" height="36" viewBox="0 0 120 36" fill="none" aria-label="Wing">
+        <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff"/>
+        <path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#fff" opacity=".32"/>
+        <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#fff">Wing</text>
+      </svg>
+    </a>
+    <div class="flex items-center gap-4">
+      <span class="display text-[.7rem] font-medium tracking-wider text-white/50">Blog</span>
+      <a href="/" class="text-[.75rem] text-white/70 hover:text-white transition-colors">← Home</a>
+    </div>
+  </div>
+</header>
+
+<!-- ARTICLE -->
+<main class="py-16 px-6 md:px-10">
+  <div class="max-w-3xl mx-auto">
+    <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3">AI Governance / Risk Management</p>
+    <h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4">AIエージェント・スプロール：<br>制御不能な増殖リスクとCIOが今すぐ取るべき5つのアクション</h1>
+    <div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2">
+      <time datetime="2026-03-29">2026.03.29</time>
+      <span>Wing編集部</span>
+    </div>
+    <div class="gold-rule mb-6"></div>
+
+    <!-- Series Navigation -->
+    <div style="background:#fff;border:1px solid #E2E0DA;border-left:4px solid #A8965A;padding:1rem 1.2rem;margin-bottom:2.5rem">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.7rem">
+        <span style="font-size:0.6rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#A8965A">AIエージェント完全ガイド — 7ステップシリーズ</span>
+        <a href="/blog/ai-agent-guide" style="font-size:0.65rem;color:#8A8A96;text-decoration:underline">一覧へ</a>
+      </div>
+      <div style="display:flex;gap:0.3rem;flex-wrap:wrap">
+        <a href="/blog/agentic-ai-b2b-shift" style="flex:1 1 68px;background:#F0F0EC;padding:0.45rem 0.6rem;border-radius:3px;text-decoration:none;display:block">
+          <div style="font-size:0.55rem;color:#8A8A96;font-weight:700;margin-bottom:0.1rem">Lv.1 概念</div>
+          <div style="font-size:0.68rem;color:#4A4A55;line-height:1.3">エージェント革命</div>
+        </a>
+        <a href="/blog/agentic-ai-saas-design-patterns" style="flex:1 1 68px;background:#F0F0EC;padding:0.45rem 0.6rem;border-radius:3px;text-decoration:none;display:block">
+          <div style="font-size:0.55rem;color:#8A8A96;font-weight:700;margin-bottom:0.1rem">Lv.2 設計</div>
+          <div style="font-size:0.68rem;color:#4A4A55;line-height:1.3">設計パターン</div>
+        </a>
+        <div style="flex:1 1 68px;background:#0F2342;padding:0.45rem 0.6rem;border-radius:3px">
+          <div style="font-size:0.55rem;color:#A8965A;font-weight:700;margin-bottom:0.1rem">Lv.3 リスク ◀</div>
+          <div style="font-size:0.68rem;color:#fff;line-height:1.3">スプロール</div>
+        </div>
+        <a href="/blog/ai-agent-iam-identity" style="flex:1 1 68px;background:#F0F0EC;padding:0.45rem 0.6rem;border-radius:3px;text-decoration:none;display:block">
+          <div style="font-size:0.55rem;color:#8A8A96;font-weight:700;margin-bottom:0.1rem">Lv.4 ID管理</div>
+          <div style="font-size:0.68rem;color:#4A4A55;line-height:1.3">IAM</div>
+        </a>
+        <a href="/blog/guardian-agents-ai-oversight" style="flex:1 1 68px;background:#F0F0EC;padding:0.45rem 0.6rem;border-radius:3px;text-decoration:none;display:block">
+          <div style="font-size:0.55rem;color:#8A8A96;font-weight:700;margin-bottom:0.1rem">Lv.5 監視</div>
+          <div style="font-size:0.68rem;color:#4A4A55;line-height:1.3">ガーディアン</div>
+        </a>
+        <a href="/blog/universal-orchestrator-ai-agents" style="flex:1 1 68px;background:#F0F0EC;padding:0.45rem 0.6rem;border-radius:3px;text-decoration:none;display:block">
+          <div style="font-size:0.55rem;color:#8A8A96;font-weight:700;margin-bottom:0.1rem">Lv.6 統合</div>
+          <div style="font-size:0.68rem;color:#4A4A55;line-height:1.3">オーケストレーター</div>
+        </a>
+        <a href="/blog/ai-agent-management-platform" style="flex:1 1 68px;background:#F0F0EC;padding:0.45rem 0.6rem;border-radius:3px;text-decoration:none;display:block">
+          <div style="font-size:0.55rem;color:#8A8A96;font-weight:700;margin-bottom:0.1rem">Lv.7 管理</div>
+          <div style="font-size:0.68rem;color:#4A4A55;line-height:1.3">AMP</div>
+        </a>
+      </div>
+    </div>
+
+    <article class="text-[.9rem] text-ink leading-[2] max-w-none">
+
+      <p>「社内に何個のAIエージェントが稼働しているか把握していますか？」——この問いに自信を持って答えられるCIOは、2026年現在、ほとんど存在しない。Gartnerはこの状況を<strong>Agent Sprawl（エージェント・スプロール）</strong>と命名し、企業が直面する最も緊急のAIガバナンス課題として警告を発した。AIエージェントは有用だが、管理されなければ組織にとって深刻なリスクをもたらす。</p>
+
+      <!-- DIAGRAM: Sprawl Risk Spectrum -->
+      <div class="diag-wrap" style="margin-bottom:1.8rem">
+        <div class="diag-label">Figure 1 — Agent Sprawlのリスク拡大メカニズム</div>
+        <svg viewBox="0 0 640 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;max-width:640px;margin:0 auto" role="img" aria-label="エージェント増殖リスクの段階的拡大図">
+          <rect x="0" y="0" width="640" height="200" fill="#FAFAF8" rx="6"/>
+          <!-- Phase 1 -->
+          <rect x="20" y="40" width="130" height="120" rx="4" fill="#E8F4E8" stroke="#5A9A6A" stroke-width="1.5"/>
+          <text x="85" y="68" text-anchor="middle" font-size="9" fill="#5A9A6A" font-family="sans-serif" font-weight="700">Phase 1</text>
+          <text x="85" y="86" text-anchor="middle" font-size="11" fill="#1A1A1F" font-family="sans-serif" font-weight="700">認可済み展開</text>
+          <text x="85" y="105" text-anchor="middle" font-size="8" fill="#4A4A55" font-family="sans-serif">IT部門管理</text>
+          <text x="85" y="120" text-anchor="middle" font-size="8" fill="#4A4A55" font-family="sans-serif">エージェント数: 数十</text>
+          <text x="85" y="135" text-anchor="middle" font-size="8" fill="#4A4A55" font-family="sans-serif">可視性: 高</text>
+          <!-- Arrow -->
+          <polygon points="155,100 170,94 170,106" fill="#A8965A"/>
+          <line x1="150" y1="100" x2="170" y2="100" stroke="#A8965A" stroke-width="2"/>
+          <!-- Phase 2 -->
+          <rect x="170" y="30" width="140" height="140" rx="4" fill="#FFF8E8" stroke="#A8965A" stroke-width="1.5"/>
+          <text x="240" y="58" text-anchor="middle" font-size="9" fill="#A8965A" font-family="sans-serif" font-weight="700">Phase 2</text>
+          <text x="240" y="76" text-anchor="middle" font-size="11" fill="#1A1A1F" font-family="sans-serif" font-weight="700">部門独自展開</text>
+          <text x="240" y="95" text-anchor="middle" font-size="8" fill="#4A4A55" font-family="sans-serif">ビジネス部門主導</text>
+          <text x="240" y="110" text-anchor="middle" font-size="8" fill="#4A4A55" font-family="sans-serif">エージェント数: 数百</text>
+          <text x="240" y="125" text-anchor="middle" font-size="8" fill="#4A4A55" font-family="sans-serif">可視性: 低</text>
+          <text x="240" y="140" text-anchor="middle" font-size="8" fill="#C45C3A" font-family="sans-serif">重複・競合リスク発生</text>
+          <!-- Arrow -->
+          <polygon points="314,100 329,94 329,106" fill="#C45C3A"/>
+          <line x1="310" y1="100" x2="329" y2="100" stroke="#C45C3A" stroke-width="2"/>
+          <!-- Phase 3 -->
+          <rect x="330" y="18" width="160" height="164" rx="4" fill="#FFF0F0" stroke="#C45C3A" stroke-width="2"/>
+          <text x="410" y="46" text-anchor="middle" font-size="9" fill="#C45C3A" font-family="sans-serif" font-weight="700">Phase 3 — SPRAWL</text>
+          <text x="410" y="66" text-anchor="middle" font-size="11" fill="#1A1A1F" font-family="sans-serif" font-weight="700">制御不能な増殖</text>
+          <text x="410" y="86" text-anchor="middle" font-size="8" fill="#4A4A55" font-family="sans-serif">シャドーAI多発</text>
+          <text x="410" y="101" text-anchor="middle" font-size="8" fill="#4A4A55" font-family="sans-serif">エージェント数: 数千+</text>
+          <text x="410" y="116" text-anchor="middle" font-size="8" fill="#4A4A55" font-family="sans-serif">可視性: ほぼゼロ</text>
+          <text x="410" y="131" text-anchor="middle" font-size="8" fill="#C45C3A" font-family="sans-serif">データ漏洩・誤動作</text>
+          <text x="410" y="146" text-anchor="middle" font-size="8" fill="#C45C3A" font-family="sans-serif">コンプライアンス違反</text>
+          <text x="410" y="161" text-anchor="middle" font-size="8" fill="#C45C3A" font-family="sans-serif">コスト爆発</text>
+        </svg>
+        <p class="diag-caption">管理されないAIエージェントは「シャドーIT」の次世代版として急速に拡大する（出典：Gartner, 2025）</p>
+      </div>
+
+      <div class="kpi-row">
+        <div class="kpi-item">
+          <div class="kpi-val">33%</div>
+          <div class="kpi-label">2028年までにエージェンティックAIを含む企業ソフトウェアの割合（Gartner予測）</div>
+        </div>
+        <div class="kpi-item">
+          <div class="kpi-val">85%</div>
+          <div class="kpi-label">2027年に「AIエージェントの統制が取れていない」と回答するCIOの推定割合</div>
+        </div>
+        <div class="kpi-item">
+          <div class="kpi-val">3倍</div>
+          <div class="kpi-label">無管理エージェントによるセキュリティインシデントの発生率（管理済みと比較）</div>
+        </div>
+      </div>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">Agent Sprawlとは何か</h2>
+
+      <p>Agent Sprawlとは、企業内で<strong>認可されていないAIエージェントが無秩序に増殖し、IT部門や経営層が全体像を把握できなくなる状態</strong>を指す。Gartnerはこれを2025年のAIガバナンス最優先課題として特定した。</p>
+
+      <p>問題の根源は「誰でも使える」環境にある。Microsoft Copilot Studio、Salesforce Agentforce、各種ノーコードAIプラットフォームの普及により、開発スキルなしでもAIエージェントを構築・展開できるようになった。営業部門が独自のリードスコアリングエージェントを、人事部門が採用審査エージェントを、経理部門が支払い承認エージェントを——それぞれ独立して作成するシナリオが現実に起きている。</p>
+
+      <div class="warn-box">
+        <div class="warn-label">Warning — シャドーAIの典型的な発生パターン</div>
+        <ul style="margin:0; padding-left:1.2rem;">
+          <li><strong>部門独自のCopilot拡張</strong>：IT承認なしにMicrosoft Copilot Studioでエージェントを構築し、社内データへのアクセス権を自己付与</li>
+          <li><strong>個人アカウントのAPI連携</strong>：開発者が個人のOpenAI/Anthropicアカウントで業務データを処理するエージェントを構築</li>
+          <li><strong>SaaS内蔵エージェントの野放し</strong>：HubSpot、Salesforce等のSaaSに内蔵されたAIエージェント機能が承認なしで有効化される</li>
+          <li><strong>外部委託先の持ち込み</strong>：システム開発ベンダーがデリバリーの一部としてAIエージェントを組み込み、契約終了後も稼働継続</li>
+        </ul>
+      </div>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">なぜAgent Sprawlは「シャドーIT」より危険なのか</h2>
+
+      <p>過去のシャドーITの問題は「認可されていないソフトウェアが使われている」レベルに留まっていた。しかしAgent Sprawlは質的に異なる危険性を持つ。</p>
+
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>比較軸</th>
+            <th>シャドーIT（従来）</th>
+            <th>Agent Sprawl（現在）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>主体</strong></td>
+            <td>人間がソフトウェアを使う</td>
+            <td>AIが自律的に行動する</td>
+          </tr>
+          <tr>
+            <td><strong>データアクセス</strong></td>
+            <td>認可範囲内のデータ閲覧</td>
+            <td>複数システムをまたぐ自律的なデータ取得・操作</td>
+          </tr>
+          <tr>
+            <td><strong>アクションの範囲</strong></td>
+            <td>ファイル保存・共有等</td>
+            <td>メール送信・契約承認・購買実行等の業務完結</td>
+          </tr>
+          <tr>
+            <td><strong>発見の困難さ</strong></td>
+            <td>ネットワーク監視で検知可能</td>
+            <td>正規のAPIを使うため検知が極めて困難</td>
+          </tr>
+          <tr>
+            <td><strong>被害の速度</strong></td>
+            <td>人間のペースで進行</td>
+            <td>自動化により被害が指数関数的に拡大</td>
+          </tr>
+          <tr>
+            <td><strong>責任の所在</strong></td>
+            <td>個人ユーザーに帰属</td>
+            <td>エージェント・人間・システムが複合的に関与し不明確</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>エージェントは「考えて行動する」。一度誤った指示や設計を受け取ったエージェントが自律動作を開始すれば、人間が介入する前に取り返しのつかない処理を完了させることがある。これが、Agent Sprawlを緊急課題として扱わなければならない理由だ。</p>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">CIOが今すぐ取るべき5つのアクション</h2>
+
+      <p>Gartnerの「Act Now」レポートは、2026年のCIOに向けて5つの即時対応を勧告している。これらは長期戦略を待たずに「今週から」実行できるアクションとして設計されている。</p>
+
+      <div class="diag-wrap">
+        <div class="diag-label">Action Framework — CIOの即時対応5項目</div>
+        <div class="diag-step-row">
+          <div class="diag-step-card">
+            <div class="step-num">A1</div>
+            <div class="step-title">エージェント台帳の作成</div>
+            <div class="step-body">全社で稼働中のAIエージェントをリストアップする。IT申請ルート外のものも含め、各部門への聞き取りと技術ログのスキャンを併用する。「ゼロから把握する」姿勢が出発点。</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">A2</div>
+            <div class="step-title">エージェントIDの付与</div>
+            <div class="step-body">発見した全エージェントに一意のIDを割り当て、IAMシステムに登録する。エージェントを「人間と同等のアイデンティティ」として扱うことがセキュリティの基盤になる（詳細はLv.4記事参照）。</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">A3</div>
+            <div class="step-title">ガバナンスポリシーの制定</div>
+            <div class="step-body">「どのような目的・権限のエージェントは承認するか」を文書化する。ゼロトラスト原則に基づき、最小権限・期限付きアクセスをデフォルトとして設定する。</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">A4</div>
+            <div class="step-title">HITL設計の義務化</div>
+            <div class="step-body">高リスクアクション（金融取引・外部送信・個人データ操作）には必ず人間の確認ステップ（Human-in-the-Loop）を設ける。自律度はリスクに反比例させること。</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">A5</div>
+            <div class="step-title">ガーディアンエージェントの導入</div>
+            <div class="step-body">AIエージェントを監視する専用の「ガーディアンエージェント」を配置する。異常な動作パターンを検知し自動停止する仕組みを整備する（詳細はLv.5記事参照）。</div>
+          </div>
+        </div>
+        <p class="diag-caption">5アクションは相互補完的であり、A1→A2→A3の順で基盤を整えた上でA4・A5を実装することを推奨</p>
+      </div>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">エージェント台帳の作り方：実践的アプローチ</h2>
+
+      <p>最も難しいのは最初のステップ——「どこに何があるか」の把握だ。以下の4レイヤーで段階的にスキャンする。</p>
+
+      <ul>
+        <li><strong>Layer 1 — IT申請記録</strong>：既存のシステム申請・利用申請から「AIエージェント」「Copilot」「Automation」等のキーワードでフィルタリング</li>
+        <li><strong>Layer 2 — クラウドコンソール</strong>：Microsoft 365管理センター、Salesforce設定、AWS/GCP/Azure上のFunction・Lambda等を確認</li>
+        <li><strong>Layer 3 — ネットワークログ</strong>：OpenAI API、Anthropic API、Cohere API等へのトラフィックを確認。部門別の利用量から「隠れたエージェント」を発見</li>
+        <li><strong>Layer 4 — 部門ヒアリング</strong>：各部門長に「AI自動化ツールを使っているか」を直接確認。技術的な検索では見つからないローカルな自動化が露見することが多い</li>
+      </ul>
+
+      <div class="insight-box">
+        <div class="insight-label">Insight — 日本企業に特有の課題</div>
+        日本のエンタープライズでは、Excelマクロ・RPAからAIエージェントへの「自然な進化」が最もリスキーなパターンだ。長年にわたり業務改善の延長として自動化を積み重ねてきた結果、誰も全体を把握していない「ゾンビ自動化」が大量に存在する。AIエージェントの台帳整備は、既存のRPAやAPIインテグレーションの棚卸しと同時に実施することで効率化できる。
+      </div>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">ガバナンスポリシーのフレームワーク</h2>
+
+      <p>エージェント承認ポリシーは、リスクレベルに応じた3階層で設計することが実務的に機能しやすい。</p>
+
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>リスクレベル</th>
+            <th>対象エージェント例</th>
+            <th>承認フロー</th>
+            <th>HITL要件</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong style="color:#5A9A6A">Low</strong></td>
+            <td>内部データの要約・分析・レポート生成</td>
+            <td>部門長承認</td>
+            <td>不要（出力確認のみ）</td>
+          </tr>
+          <tr>
+            <td><strong style="color:#A8965A">Medium</strong></td>
+            <td>社内システムへの書き込み・外部API連携</td>
+            <td>IT部門 + 部門長承認</td>
+            <td>変更前に人間確認</td>
+          </tr>
+          <tr>
+            <td><strong style="color:#C45C3A">High</strong></td>
+            <td>外部送信・金融取引・個人データ操作</td>
+            <td>CIO/CISO承認 + 法務確認</td>
+            <td>全アクションに人間承認必須</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">「今すぐ行動する」ことの意味</h2>
+
+      <p>GartnerがレポートタイトルをあえてAct Now（今すぐ行動せよ）とした背景には、AIエージェントの展開速度への警戒感がある。2024年に「様子見」を選んだ企業は、2026年現在、数百のエージェントが既に野放しになっている状況に直面している。</p>
+
+      <p>重要なのは「完璧なガバナンスを整えてから展開する」のではなく、「展開しながら管理体制を並行して構築する」アプローチだ。AIエージェントのビジネス価値は実証されている。問題は価値ではなくリスク管理——その順序を間違えないことが、2026年のCIOに求められる判断だ。</p>
+
+      <div class="warn-box">
+        <div class="warn-label">Critical — 先送りのコスト</div>
+        Gartnerの分析によると、Agent Sprawlの制御コストは発見が遅れるほど指数関数的に増大する。100エージェント時点で整理するコストを1とすると、1,000エージェント時点では10倍、10,000エージェント時点では100倍以上のコストが必要になる。「あとで整理する」という判断は、実質的に「管理不能にする」判断と同義だ。
+      </div>
+
+      <div class="insight-box">
+        <div class="insight-label">Wing's View</div>
+        WingはAgent Sprawlの対策を、単なるセキュリティ課題ではなく「AIガバナンス設計の最初の一手」として位置づけている。台帳整備とポリシー制定は、同時にエージェント活用の全社ロードマップを描く機会でもある。「管理のための管理」ではなく、ビジネス価値の最大化と統制の両立——これを設計段階から組み込むことが、持続可能なAIエージェント活用の基盤となる。
+      </div>
+
+    </article>
+
+    <!-- CTA -->
+    <div class="mt-16 bg-navy text-white px-8 py-10 text-center">
+      <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold/80 mb-3">Consulting</p>
+      <h2 class="text-[1.2rem] font-medium mb-4 leading-snug">AIエージェントのガバナンス設計から<br>スプロール対策まで Wing がご支援します</h2>
+      <p class="text-[.82rem] text-white/70 leading-relaxed mb-6">エージェント台帳の作成、ポリシー策定、技術的な監視体制の整備まで。Wing はB2B企業の現場に即した実践的なガバナンス設計を提供します。</p>
+      <a href="/#contact" class="inline-block bg-gold text-white text-[.78rem] font-medium tracking-wider px-7 py-3 hover:bg-gold-light transition-colors">無料相談を予約する →</a>
+    </div>
+
+    <!-- Series Next -->
+    <div style="margin-top:2.5rem;padding:1.2rem 1.4rem;background:#F8F5ED;border:1px solid #E2E0DA">
+      <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#A8965A;margin-bottom:0.6rem">Next in Series</div>
+      <a href="/blog/ai-agent-iam-identity" style="text-decoration:none;display:flex;align-items:center;gap:0.8rem">
+        <div style="background:#0F2342;color:#A8965A;font-size:0.65rem;font-weight:700;padding:0.3rem 0.5rem;white-space:nowrap;border-radius:2px">Lv.4</div>
+        <div>
+          <div style="font-size:0.85rem;font-weight:700;color:#0F2342;line-height:1.4">AIエージェントのID管理（IAM）：エンタープライズが直面するアイデンティティ危機と対策</div>
+          <div style="font-size:0.72rem;color:#8A8A96;margin-top:0.2rem">エージェントを「人間と同等のID」として管理する方法を解説 →</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</main>
+<footer class="mt-20 border-t border-[#E2E0DA] py-10 px-6 md:px-10 text-center">
+  <a href="/" class="inline-block mb-4">
+    <svg width="80" height="24" viewBox="0 0 120 36" fill="none">
+      <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#0F2342"/>
+      <path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#0F2342" opacity=".32"/>
+      <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#0F2342">Wing</text>
+    </svg>
+  </a>
+  <p class="text-[.72rem] text-ink-light">© 2026 Wing Consulting. All rights reserved.</p>
+</footer>
+</body>
+</html>

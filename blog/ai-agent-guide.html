@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIエージェント完全ガイド：7ステップで学ぶ自律型AI導入の実践 | Wing Blog</title>
+<meta name="description" content="Gartnerレポートに基づく、AIエージェントの概念から導入・ガバナンスまでを体系的に学べる7ステップ完全ガイド。CIO・IT責任者・AI推進担当者向け。">
+<meta name="keywords" content="AIエージェント, エージェンティックAI, AIガバナンス, ガーディアンエージェント, ユニバーサルオーケストレーター, AMP, IAM, AI導入, DX">
+<meta property="og:title" content="AIエージェント完全ガイド：7ステップで学ぶ自律型AI導入の実践 | Wing Blog">
+<meta property="og:description" content="Gartnerレポートに基づく、AIエージェントの概念から導入・ガバナンスまでを体系的に学べる7ステップ完全ガイド。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://wingconsulting.org/blog/ai-agent-guide">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://wingconsulting.org/images/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Wing">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AIエージェント完全ガイド：7ステップで学ぶ自律型AI導入の実践">
+<meta name="twitter:description" content="Gartnerレポートに基づく、AIエージェントの概念から導入・ガバナンスまでを体系的に学べる7ステップ完全ガイド。">
+<meta name="twitter:image" content="https://wingconsulting.org/images/og-default.png">
+<link rel="canonical" href="https://wingconsulting.org/blog/ai-agent-guide">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AIエージェント完全ガイド：7ステップで学ぶ自律型AI導入の実践",
+  "description": "Gartnerレポートに基づく、AIエージェントの概念から導入・ガバナンスまでを体系的に学べる7ステップ完全ガイド。",
+  "author": {"@type": "Organization","name": "Wing編集部","url": "https://wingconsulting.org"},
+  "publisher": {"@type": "Organization","name": "Wing","url": "https://wingconsulting.org","logo": {"@type": "ImageObject","url": "https://wingconsulting.org/images/logo.png"}},
+  "datePublished": "2026-03-29",
+  "dateModified": "2026-03-29",
+  "mainEntityOfPage": {"@type": "WebPage","@id": "https://wingconsulting.org/blog/ai-agent-guide"},
+  "image": "https://wingconsulting.org/images/og-default.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Wing", "item": "https://wingconsulting.org"},
+    {"@type": "ListItem", "position": 2, "name": "インサイト", "item": "https://wingconsulting.org/#blog"},
+    {"@type": "ListItem", "position": 3, "name": "AIエージェント完全ガイド", "item": "https://wingconsulting.org/blog/ai-agent-guide"}
+  ]
+}
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        navy: { DEFAULT: '#0F2342', dark: '#081830' },
+        gold: { DEFAULT: '#A8965A', light: '#C4AD72', muted: '#7A6B3E', pale: '#F8F5ED', mid: '#B8A560' },
+        slate: { warm: '#F7F6F3', cool: '#EEECe7' },
+        ink: { DEFAULT: '#1A1A1F', mid: '#4A4A55', light: '#8A8A96' },
+      },
+      fontFamily: {
+        serif: ['"Yu Gothic"', '"YuGothic"', 'sans-serif'],
+        sans: ['"Yu Gothic"', '"YuGothic"', '"Noto Sans JP"', 'sans-serif'],
+        display: ['"Roboto"', 'sans-serif'],
+      },
+    }
+  }
+}
+</script>
+<style>
+body { font-family: 'Yu Gothic', 'YuGothic', 'Noto Sans JP', sans-serif; -webkit-font-smoothing: antialiased; }
+.display { font-family: 'Roboto', sans-serif; }
+.gold-rule { width: 32px; height: 1.5px; background: #A8965A; }
+.step-card { background:#fff; border:1px solid #E2E0DA; border-radius:6px; overflow:hidden; transition: border-color 0.2s, box-shadow 0.2s; }
+.step-card:hover { border-color: rgba(168,150,90,0.5); box-shadow: 0 4px 20px rgba(15,35,66,0.08); }
+.step-card .level-bar { height:4px; }
+.tag { display:inline-block; font-size:0.6rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; border:1px solid; padding:0.15rem 0.5rem; border-radius:999px; }
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KN7NWHFK9G');
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style id="font-override">
+  body, p, li, td, th, span, div { font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif !important; }
+  h1, h2, h3 { font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif !important; }
+  .display, [class*="display"] { font-family: "Roboto", "Yu Gothic", sans-serif !important; }
+</style>
+</head>
+<body class="bg-slate-warm text-ink">
+
+<!-- HEADER -->
+<header class="bg-navy h-[60px] flex items-center px-6 md:px-10 sticky top-0 z-50">
+  <div class="max-w-5xl mx-auto w-full flex items-center justify-between">
+    <a href="/" class="leading-none">
+      <svg width="120" height="36" viewBox="0 0 120 36" fill="none" aria-label="Wing">
+        <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff"/>
+        <path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#fff" opacity=".32"/>
+        <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#fff">Wing</text>
+      </svg>
+    </a>
+    <div class="flex items-center gap-4">
+      <span class="display text-[.7rem] font-medium tracking-wider text-white/50">Series</span>
+      <a href="/" class="text-[.75rem] text-white/70 hover:text-white transition-colors">← Home</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="bg-navy py-16 px-6 md:px-10">
+  <div class="max-w-4xl mx-auto">
+    <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold/80 mb-4">Learning Series / AI Strategy</p>
+    <h1 class="text-[clamp(1.8rem,4vw,3rem)] font-medium text-white leading-snug mb-5">
+      AIエージェント完全ガイド<br>
+      <span class="text-gold text-[clamp(1.2rem,2.5vw,1.8rem)] font-normal">7ステップで学ぶ自律型AI導入の実践</span>
+    </h1>
+    <p class="text-white/65 text-[.9rem] leading-relaxed max-w-2xl mb-8">
+      Gartnerの最新レポート（2025〜2026年）に基づく、AIエージェントの基礎概念から設計・ガバナンス・組織管理まで——CIO・IT責任者・AI推進担当者が知るべきすべてを7本の体系的コラムで解説します。
+    </p>
+    <!-- Audience tags -->
+    <div class="flex flex-wrap gap-2 mb-6">
+      <span class="tag text-white/60 border-white/25">CIO / IT責任者</span>
+      <span class="tag text-white/60 border-white/25">AI推進担当者</span>
+      <span class="tag text-white/60 border-white/25">ITアーキテクト</span>
+      <span class="tag text-white/60 border-white/25">セキュリティ担当者</span>
+    </div>
+    <!-- Series progress visual -->
+    <div class="flex gap-1.5 flex-wrap">
+      <div class="h-1.5 flex-1 min-w-[30px] rounded-full bg-gold"></div>
+      <div class="h-1.5 flex-1 min-w-[30px] rounded-full bg-gold"></div>
+      <div class="h-1.5 flex-1 min-w-[30px] rounded-full bg-gold"></div>
+      <div class="h-1.5 flex-1 min-w-[30px] rounded-full bg-gold"></div>
+      <div class="h-1.5 flex-1 min-w-[30px] rounded-full bg-gold"></div>
+      <div class="h-1.5 flex-1 min-w-[30px] rounded-full bg-gold"></div>
+      <div class="h-1.5 flex-1 min-w-[30px] rounded-full bg-gold"></div>
+    </div>
+    <p class="text-white/30 text-[.65rem] mt-2">7本中 7本公開済み（2026.03.29現在）</p>
+  </div>
+</div>
+
+<!-- WHAT YOU WILL LEARN -->
+<div class="py-10 px-6 md:px-10 border-b border-[#E2E0DA] bg-white">
+  <div class="max-w-4xl mx-auto">
+    <p class="text-[.68rem] font-bold tracking-[.15em] uppercase text-gold mb-4">このシリーズで学べること</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="flex gap-3">
+        <div class="w-8 h-8 bg-navy rounded-full flex items-center justify-center shrink-0 mt-0.5">
+          <span class="text-gold text-[.7rem] font-bold">理</span>
+        </div>
+        <div>
+          <p class="text-[.8rem] font-bold text-navy mb-1">理論・概念の理解</p>
+          <p class="text-[.75rem] text-ink-mid leading-relaxed">生成AIとエージェンティックAIの違い、5つの設計パターン、マルチエージェントシステムの基礎</p>
+        </div>
+      </div>
+      <div class="flex gap-3">
+        <div class="w-8 h-8 bg-navy rounded-full flex items-center justify-center shrink-0 mt-0.5">
+          <span class="text-gold text-[.7rem] font-bold">実</span>
+        </div>
+        <div>
+          <p class="text-[.8rem] font-bold text-navy mb-1">実装・導入の実践</p>
+          <p class="text-[.75rem] text-ink-mid leading-relaxed">エージェントスプロールの防止、IAM設計、ユニバーサルオーケストレーターの導入判断</p>
+        </div>
+      </div>
+      <div class="flex gap-3">
+        <div class="w-8 h-8 bg-navy rounded-full flex items-center justify-center shrink-0 mt-0.5">
+          <span class="text-gold text-[.7rem] font-bold">統</span>
+        </div>
+        <div>
+          <p class="text-[.8rem] font-bold text-navy mb-1">組織・ガバナンスの整備</p>
+          <p class="text-[.75rem] text-ink-mid leading-relaxed">ガーディアンエージェント、AMP（エージェント管理プラットフォーム）による組織全体の統制</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERIES ARTICLES -->
+<main class="py-14 px-6 md:px-10">
+  <div class="max-w-4xl mx-auto">
+    <p class="text-[.68rem] font-bold tracking-[.15em] uppercase text-gold mb-8">7ステップ ラーニングパス</p>
+
+    <!-- Step 1 -->
+    <div class="mb-6">
+      <a href="/blog/agentic-ai-b2b-shift" class="step-card block group">
+        <div class="level-bar bg-gold"></div>
+        <div class="p-5 flex gap-4">
+          <div class="shrink-0">
+            <div class="w-12 h-12 bg-navy flex flex-col items-center justify-center rounded">
+              <span class="display text-gold text-[.55rem] font-bold tracking-widest">Lv.</span>
+              <span class="display text-white text-[1.3rem] font-bold leading-none">1</span>
+            </div>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="tag text-gold border-gold/40">概念</span>
+              <span class="text-[.65rem] text-ink-light">推定読了時間 12分</span>
+              <span class="text-[.65rem] text-green-600 font-semibold">✓ 公開済み</span>
+            </div>
+            <p class="text-[.95rem] font-bold text-navy group-hover:text-gold-muted transition-colors leading-snug mb-2">AIエージェント革命：B2Bビジネスを変える自律型AIの実態と導入戦略</p>
+            <p class="text-[.78rem] text-ink-mid leading-relaxed">生成AIとエージェンティックAIの決定的な違い、B2B業務で稼働する5領域、3フェーズ移行ロードマップを解説。「ChatGPTは使っているが変わった実感がない」という組織への処方箋。</p>
+            <p class="text-[.68rem] text-gold mt-3 group-hover:underline">記事を読む →</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="mb-6">
+      <a href="/blog/agentic-ai-saas-design-patterns" class="step-card block group">
+        <div class="level-bar bg-gold"></div>
+        <div class="p-5 flex gap-4">
+          <div class="shrink-0">
+            <div class="w-12 h-12 bg-navy flex flex-col items-center justify-center rounded">
+              <span class="display text-gold text-[.55rem] font-bold tracking-widest">Lv.</span>
+              <span class="display text-white text-[1.3rem] font-bold leading-none">2</span>
+            </div>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="tag text-gold border-gold/40">設計</span>
+              <span class="text-[.65rem] text-ink-light">推定読了時間 15分</span>
+              <span class="text-[.65rem] text-green-600 font-semibold">✓ 公開済み</span>
+            </div>
+            <p class="text-[.95rem] font-bold text-navy group-hover:text-gold-muted transition-colors leading-snug mb-2">AIネイティブSaaS設計パターン：エージェントアーキテクチャ選択の実践ガイド</p>
+            <p class="text-[.78rem] text-ink-mid leading-relaxed">Reflection、Plan+Solve、Tool Use、Multi-Agent、HITLの5パターンを詳解。どのユースケースにどのパターンを選ぶか——選択ミスがプロダクトの成否を左右する理由。</p>
+            <p class="text-[.68rem] text-gold mt-3 group-hover:underline">記事を読む →</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="mb-6">
+      <a href="/blog/ai-agent-sprawl-governance" class="step-card block group">
+        <div class="level-bar bg-gold"></div>
+        <div class="p-5 flex gap-4">
+          <div class="shrink-0">
+            <div class="w-12 h-12 bg-navy flex flex-col items-center justify-center rounded">
+              <span class="display text-gold text-[.55rem] font-bold tracking-widest">Lv.</span>
+              <span class="display text-white text-[1.3rem] font-bold leading-none">3</span>
+            </div>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="tag text-gold border-gold/40">リスク</span>
+              <span class="text-[.65rem] text-ink-light">推定読了時間 12分</span>
+              <span class="text-[.65rem] text-green-600 font-semibold">✓ 公開済み</span>
+            </div>
+            <p class="text-[.95rem] font-bold text-navy leading-snug mb-2">AIエージェント・スプロールという「静かな危機」：制御不能な増殖リスクとCIOが今すぐ取るべき5つのアクション</p>
+            <p class="text-[.78rem] text-ink-mid leading-relaxed">Gartner調査では企業の17%しかエージェントAIを本番導入できていない。80%以上がデータ未整備と回答。無認可エージェントが静かに増殖するスプロール問題と、Gartnerが提示する5ステップ対処法。</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="mb-6">
+      <a href="/blog/ai-agent-iam-identity" class="step-card block group">
+        <div class="level-bar bg-gold"></div>
+        <div class="p-5 flex gap-4">
+          <div class="shrink-0">
+            <div class="w-12 h-12 bg-navy flex flex-col items-center justify-center rounded">
+              <span class="display text-gold text-[.55rem] font-bold tracking-widest">Lv.</span>
+              <span class="display text-white text-[1.3rem] font-bold leading-none">4</span>
+            </div>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="tag text-gold border-gold/40">ID管理</span>
+              <span class="text-[.65rem] text-ink-light">推定読了時間 13分</span>
+              <span class="text-[.65rem] text-green-600 font-semibold">✓ 公開済み</span>
+            </div>
+            <p class="text-[.95rem] font-bold text-navy leading-snug mb-2">AIエージェントのID管理（IAM）：エンタープライズが直面するアイデンティティ危機と対策</p>
+            <p class="text-[.78rem] text-ink-mid leading-relaxed">84%のITリーダーが「より強力な技術的制御が必要」と回答。AIエージェントを第一級エンティティとして扱うIAMの5要件——登録・認証・最小権限・JITアクセス・オフボーディング。</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Step 5 -->
+    <div class="mb-6">
+      <a href="/blog/guardian-agents-ai-oversight" class="step-card block group">
+        <div class="level-bar bg-gold"></div>
+        <div class="p-5 flex gap-4">
+          <div class="shrink-0">
+            <div class="w-12 h-12 bg-navy flex flex-col items-center justify-center rounded">
+              <span class="display text-gold text-[.55rem] font-bold tracking-widest">Lv.</span>
+              <span class="display text-white text-[1.3rem] font-bold leading-none">5</span>
+            </div>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="tag text-gold border-gold/40">監視</span>
+              <span class="text-[.65rem] text-ink-light">推定読了時間 15分</span>
+              <span class="text-[.65rem] text-green-600 font-semibold">✓ 公開済み</span>
+            </div>
+            <p class="text-[.95rem] font-bold text-navy leading-snug mb-2">ガーディアンエージェント：AI監視・制御の新パラダイムとGartner AI TRiSMフレームワーク</p>
+            <p class="text-[.78rem] text-ink-mid leading-relaxed">Gartnerの「Market Guide for Guardian Agents」に基づく新カテゴリー解説。2029年には既存セキュリティシステムの半数を置き換えると予測。AI TRiSMフレームワークとの関係、必須機能と市場動向。</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Step 6 -->
+    <div class="mb-6">
+      <a href="/blog/universal-orchestrator-ai-agents" class="step-card block group">
+        <div class="level-bar bg-gold"></div>
+        <div class="p-5 flex gap-4">
+          <div class="shrink-0">
+            <div class="w-12 h-12 bg-navy flex flex-col items-center justify-center rounded">
+              <span class="display text-gold text-[.55rem] font-bold tracking-widest">Lv.</span>
+              <span class="display text-white text-[1.3rem] font-bold leading-none">6</span>
+            </div>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="tag text-gold border-gold/40">統合</span>
+              <span class="text-[.65rem] text-ink-light">推定読了時間 13分</span>
+              <span class="text-[.65rem] text-green-600 font-semibold">✓ 公開済み</span>
+            </div>
+            <p class="text-[.95rem] font-bold text-navy leading-snug mb-2">ユニバーサルオーケストレーター：マルチベンダーAIエージェント統合の決定版アーキテクチャ</p>
+            <p class="text-[.78rem] text-ink-mid leading-relaxed">「BPA／BOATでは制御できない」マルチベンダーAIエージェント時代の欠けたピース。2029年には90%の企業が導入するとGartnerが予測するUO（ユニバーサルオーケストレーター）の全貌。</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Step 7 -->
+    <div class="mb-10">
+      <a href="/blog/ai-agent-management-platform" class="step-card block group">
+        <div class="level-bar bg-gold"></div>
+        <div class="p-5 flex gap-4">
+          <div class="shrink-0">
+            <div class="w-12 h-12 bg-navy flex flex-col items-center justify-center rounded">
+              <span class="display text-gold text-[.55rem] font-bold tracking-widest">Lv.</span>
+              <span class="display text-white text-[1.3rem] font-bold leading-none">7</span>
+            </div>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="tag text-gold border-gold/40">管理</span>
+              <span class="text-[.65rem] text-ink-light">推定読了時間 14分</span>
+              <span class="text-[.65rem] text-green-600 font-semibold">✓ 公開済み</span>
+            </div>
+            <p class="text-[.95rem] font-bold text-navy leading-snug mb-2">AMP（AIエージェント管理プラットフォーム）：2029年$150億市場を狙うガバナンス基盤の設計</p>
+            <p class="text-[.78rem] text-ink-mid leading-relaxed">Gartnerが「AIで最も価値ある不動産」と呼ぶAMP。$5百万から$150億へ——3000倍の市場拡大の中で、大手SaaSベンダー・ITサービスリーダー・専業スタートアップの三つ巴の戦いを解説。</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Gartner source note -->
+    <div style="background:#F8F5ED; border:1px solid #E2E0DA; border-left:3px solid #A8965A; padding:1rem 1.5rem; font-size:0.8rem; color:#4A4A55; line-height:1.7; margin-bottom:2rem;">
+      <p style="font-size:0.65rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#A8965A; margin-bottom:0.4rem;">Sources</p>
+      本シリーズはGartnerの以下レポートを主要情報源として構成しています：<br>
+      Innovation Guide for AI Agents (G00825303, 2026-01) ／ Act Now: Take These 5 Steps for AI Agent Assurance (G00845539, 2026-01) ／ Market Guide for Guardian Agents (G00836388, 2026-02) ／ Universal Orchestrator (G00841113, 2026-02) ／ AI Vendor Race: AI Agent Management Platform (G00840050, 2025-10)<br>
+      <span style="font-size:0.68rem; color:#8A8A96;">※Gartnerの商標はGartner, Inc.およびその関連会社に帰属します。本シリーズはGartnerが公式に後援・承認するものではありません。</span>
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center py-8 border-t border-[#E2E0DA]">
+      <p class="text-[.75rem] text-ink-mid mb-4">AIエージェント戦略の立案・導入支援はWingにご相談ください</p>
+      <a href="/#contact" class="inline-block bg-navy text-white text-[.8rem] font-medium px-8 py-3 hover:bg-navy/80 transition-colors">お問い合わせ</a>
+    </div>
+  </div>
+</main>
+
+<footer class="bg-navy mt-10 py-10 px-6 text-center">
+  <p class="text-white/40 text-[.72rem]">© 2026 Wing. All rights reserved.</p>
+</footer>
+</body>
+</html>

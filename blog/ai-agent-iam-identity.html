@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIエージェントのID管理（IAM）：エンタープライズが直面するアイデンティティ危機と対策 | Wing Blog</title>
+<meta name="description" content="AIエージェントを「人間と同等のアイデンティティ」として管理する方法。Non-Human Identity（NHI）の概念、JITアクセス、最小権限原則のエージェントへの適用を解説。">
+<meta name="keywords" content="AIエージェント IAM, Non-Human Identity, NHI, ゼロトラスト, JITアクセス, エージェントID管理, AIセキュリティ, CyberArk, Okta">
+<meta property="og:title" content="AIエージェントのID管理（IAM）：エンタープライズが直面するアイデンティティ危機と対策 | Wing Blog">
+<meta property="og:description" content="AIエージェントを「人間と同等のアイデンティティ」として管理する方法。Non-Human Identity（NHI）の概念と実装戦略を解説。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://wingconsulting.org/blog/ai-agent-iam-identity">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://wingconsulting.org/images/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Wing">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AIエージェントのID管理（IAM）：エンタープライズが直面するアイデンティティ危機と対策">
+<meta name="twitter:description" content="AIエージェントをNon-Human Identityとして管理するゼロトラストアプローチを解説。">
+<meta name="twitter:image" content="https://wingconsulting.org/images/og-default.png">
+<link rel="canonical" href="https://wingconsulting.org/blog/ai-agent-iam-identity">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AIエージェントのID管理（IAM）：エンタープライズが直面するアイデンティティ危機と対策",
+  "description": "AIエージェントを「人間と同等のアイデンティティ」として管理する方法。Non-Human Identity（NHI）の概念、JITアクセス、最小権限原則のエージェントへの適用を解説。",
+  "author": {"@type": "Organization","name": "Wing編集部","url": "https://wingconsulting.org"},
+  "publisher": {"@type": "Organization","name": "Wing","url": "https://wingconsulting.org","logo": {"@type": "ImageObject","url": "https://wingconsulting.org/images/logo.png"}},
+  "datePublished": "2026-03-29",
+  "dateModified": "2026-03-29",
+  "mainEntityOfPage": {"@type": "WebPage","@id": "https://wingconsulting.org/blog/ai-agent-iam-identity"},
+  "image": "https://wingconsulting.org/images/og-default.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Wing", "item": "https://wingconsulting.org"},
+    {"@type": "ListItem", "position": 2, "name": "インサイト", "item": "https://wingconsulting.org/#blog"},
+    {"@type": "ListItem", "position": 3, "name": "AIエージェントのID管理（IAM）", "item": "https://wingconsulting.org/blog/ai-agent-iam-identity"}
+  ]
+}
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        navy: { DEFAULT: '#0F2342', dark: '#081830' },
+        gold: { DEFAULT: '#A8965A', light: '#C4AD72', muted: '#7A6B3E', pale: '#F8F5ED', mid: '#B8A560' },
+        slate: { warm: '#F7F6F3', cool: '#EEECe7' },
+        ink: { DEFAULT: '#1A1A1F', mid: '#4A4A55', light: '#8A8A96' },
+      },
+      fontFamily: {
+        serif: ['"Yu Gothic"', '"YuGothic"', 'sans-serif'],
+        sans: ['"Yu Gothic"', '"YuGothic"', '"Noto Sans JP"', 'sans-serif'],
+        display: ['"Roboto"', 'sans-serif'],
+      },
+    }
+  }
+}
+</script>
+<style>
+body { font-family: 'Yu Gothic', 'YuGothic', 'Noto Sans JP', sans-serif; -webkit-font-smoothing: antialiased; }
+.serif { font-family: 'Roboto', sans-serif; }
+.display { font-family: 'Roboto', sans-serif; }
+.gold-rule { width: 32px; height: 1.5px; background: #A8965A; }
+article h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+article h3 { margin-top: 1.8rem; margin-bottom: 0.8rem; }
+article p { margin-bottom: 1.2rem; }
+article ul { margin-bottom: 1.2rem; padding-left: 1.5rem; }
+article li { margin-bottom: 0.5rem; }
+.diag-wrap { background:#fff; border:1px solid #E2E0DA; border-top:3px solid #A8965A; padding:1.4rem 1.5rem 1rem; margin:1.6rem 0 0.5rem; font-size:0.85rem; }
+.diag-caption { text-align:center; font-size:0.72rem; color:#8A8A96; margin-top:0.5rem; margin-bottom:1.4rem; }
+.diag-label { font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#A8965A; margin-bottom:0.8rem; }
+.diag-step-row { display:flex; flex-wrap:wrap; gap:0.7rem; }
+.diag-step-card { flex:1 1 140px; background:#fff; border:1px solid #E2E0DA; padding:0.9rem; position:relative; }
+.diag-step-card .step-num { width:28px; height:28px; background:#0F2342; color:#A8965A; font-size:0.78rem; font-weight:700; display:flex; align-items:center; justify-content:center; margin-bottom:0.55rem; }
+.diag-step-card .step-title { font-size:0.78rem; font-weight:700; color:#0F2342; margin-bottom:0.3rem; line-height:1.4; }
+.diag-step-card .step-body { font-size:0.72rem; color:#4A4A55; line-height:1.5; }
+.compare-table { width:100%; border-collapse:collapse; font-size:0.82rem; margin:1.2rem 0 0.5rem; }
+.compare-table th { background:#0F2342; color:#fff; padding:0.6rem 0.8rem; text-align:left; font-weight:600; font-size:0.75rem; letter-spacing:0.05em; }
+.compare-table td { padding:0.6rem 0.8rem; border-bottom:1px solid #E2E0DA; vertical-align:top; line-height:1.55; }
+.compare-table tr:nth-child(even) td { background:#F8F5ED; }
+.insight-box { background:#F0F7F0; border-left:3px solid #5A9A6A; padding:1rem 1.2rem; margin:1.4rem 0; font-size:0.83rem; line-height:1.7; }
+.insight-box .insight-label { font-size:0.65rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#5A9A6A; margin-bottom:0.4rem; }
+.warn-box { background:#FFF8F0; border-left:3px solid #C45C3A; padding:1rem 1.2rem; margin:1.4rem 0; font-size:0.83rem; line-height:1.7; }
+.warn-box .warn-label { font-size:0.65rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#C45C3A; margin-bottom:0.4rem; }
+.kpi-row { display:flex; flex-wrap:wrap; gap:0.8rem; margin:1.2rem 0; }
+.kpi-item { flex:1 1 150px; background:#fff; border:1px solid #E2E0DA; border-top:3px solid #A8965A; padding:0.9rem 1rem; }
+.kpi-item .kpi-val { font-size:1.4rem; font-weight:700; color:#0F2342; line-height:1.1; margin-bottom:0.25rem; }
+.kpi-item .kpi-label { font-size:0.7rem; color:#8A8A96; line-height:1.4; }
+</style>
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KN7NWHFK9G');
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style id="font-override">
+  body, p, li, td, th, span, div {
+    font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif !important;
+  }
+  h1, h2, h3, h4, h5, h6, .serif {
+    font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif !important;
+  }
+  .display, [class*="display"], [class*="font-display"] {
+    font-family: "Roboto", "Yu Gothic", "YuGothic", sans-serif !important;
+  }
+  :lang(en), .en, [lang="en"] {
+    font-family: "Roboto", sans-serif !important;
+  }
+</style>
+</head>
+<body class="bg-slate-warm text-ink">
+
+<!-- HEADER -->
+<header class="bg-navy h-[60px] flex items-center px-6 md:px-10 sticky top-0 z-50">
+  <div class="max-w-5xl mx-auto w-full flex items-center justify-between">
+    <a href="/" class="leading-none">
+      <svg width="120" height="36" viewBox="0 0 120 36" fill="none" aria-label="Wing">
+        <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff"/>
+        <path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#fff" opacity=".32"/>
+        <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#fff">Wing</text>
+      </svg>
+    </a>
+    <div class="flex items-center gap-4">
+      <span class="display text-[.7rem] font-medium tracking-wider text-white/50">Blog</span>
+      <a href="/" class="text-[.75rem] text-white/70 hover:text-white transition-colors">← Home</a>
+    </div>
+  </div>
+</header>
+
+<!-- ARTICLE -->
+<main class="py-16 px-6 md:px-10">
+  <div class="max-w-3xl mx-auto">
+    <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3">AI Security / Identity Management</p>
+    <h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4">AIエージェントのID管理（IAM）：<br>エンタープライズが直面するアイデンティティ危機と対策</h1>
+    <div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2">
+      <time datetime="2026-03-29">2026.03.29</time>
+      <span>Wing編集部</span>
+    </div>
+    <div class="gold-rule mb-6"></div>
+
+    <!-- Series Navigation -->
+    <div style="background:#fff;border:1px solid #E2E0DA;border-left:4px solid #A8965A;padding:1rem 1.2rem;margin-bottom:2.5rem">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.7rem">
+        <span style="font-size:0.6rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#A8965A">AIエージェント完全ガイド — 7ステップシリーズ</span>
+        <a href="/blog/ai-agent-guide" style="font-size:0.65rem;color:#8A8A96;text-decoration:underline">一覧へ</a>
+      </div>
+      <div style="display:flex;gap:0.3rem;flex-wrap:wrap">
+        <a href="/blog/agentic-ai-b2b-shift" style="flex:1 1 68px;background:#F0F0EC;padding:0.45rem 0.6rem;border-radius:3px;text-decoration:none;display:block">
+          <div style="font-size:0.55rem;color:#8A8A96;font-weight:700;margin-bottom:0.1rem">Lv.1 概念</div>
+          <div style="font-size:0.68rem;color:#4A4A55;line-height:1.3">エージェント革命</div>
+        </a>
+        <a href="/blog/agentic-ai-saas-design-patterns" style="flex:1 1 68px;background:#F0F0EC;padding:0.45rem 0.6rem;border-radius:3px;text-decoration:none;display:block">
+          <div style="font-size:0.55rem;color:#8A8A96;font-weight:700;margin-bottom:0.1rem">Lv.2 設計</div>
+          <div style="font-size:0.68rem;color:#4A4A55;line-height:1.3">設計パターン</div>
+        </a>
+        <a href="/blog/ai-agent-sprawl-governance" style="flex:1 1 68px;background:#F0F0EC;padding:0.45rem 0.6rem;border-radius:3px;text-decoration:none;display:block">
+          <div style="font-size:0.55rem;color:#8A8A96;font-weight:700;margin-bottom:0.1rem">Lv.3 リスク</div>
+          <div style="font-size:0.68rem;color:#4A4A55;line-height:1.3">スプロール</div>
+        </a>
+        <div style="flex:1 1 68px;background:#0F2342;padding:0.45rem 0.6rem;border-radius:3px">
+          <div style="font-size:0.55rem;color:#A8965A;font-weight:700;margin-bottom:0.1rem">Lv.4 ID管理 ◀</div>
+          <div style="font-size:0.68rem;color:#fff;line-height:1.3">IAM</div>
+        </div>
+        <a href="/blog/guardian-agents-ai-oversight" style="flex:1 1 68px;background:#F0F0EC;padding:0.45rem 0.6rem;border-radius:3px;text-decoration:none;display:block">
+          <div style="font-size:0.55rem;color:#8A8A96;font-weight:700;margin-bottom:0.1rem">Lv.5 監視</div>
+          <div style="font-size:0.68rem;color:#4A4A55;line-height:1.3">ガーディアン</div>
+        </a>
+        <a href="/blog/universal-orchestrator-ai-agents" style="flex:1 1 68px;background:#F0F0EC;padding:0.45rem 0.6rem;border-radius:3px;text-decoration:none;display:block">
+          <div style="font-size:0.55rem;color:#8A8A96;font-weight:700;margin-bottom:0.1rem">Lv.6 統合</div>
+          <div style="font-size:0.68rem;color:#4A4A55;line-height:1.3">オーケストレーター</div>
+        </a>
+        <a href="/blog/ai-agent-management-platform" style="flex:1 1 68px;background:#F0F0EC;padding:0.45rem 0.6rem;border-radius:3px;text-decoration:none;display:block">
+          <div style="font-size:0.55rem;color:#8A8A96;font-weight:700;margin-bottom:0.1rem">Lv.7 管理</div>
+          <div style="font-size:0.68rem;color:#4A4A55;line-height:1.3">AMP</div>
+        </a>
+      </div>
+    </div>
+
+    <article class="text-[.9rem] text-ink leading-[2] max-w-none">
+
+      <p>AIエージェントは「誰か」のフリをして動く。メールを送り、データベースを読み書きし、外部APIを呼び出す——しかし既存のIAM（Identity and Access Management）システムは、これらのアクションを「人間が実行した」と記録することが多い。<strong>AIエージェントのアイデンティティが人間のIDに紐付けられたまま管理されている</strong>——これが現在のエンタープライズが直面するアイデンティティ危機の核心だ。</p>
+
+      <!-- DIAGRAM: NHI vs Human Identity -->
+      <div class="diag-wrap" style="margin-bottom:1.8rem">
+        <div class="diag-label">Figure 1 — AIエージェントIDの管理対象と人間IDとの比較</div>
+        <svg viewBox="0 0 640 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;max-width:640px;margin:0 auto" role="img" aria-label="人間IDとAIエージェントNHIの管理比較図">
+          <rect x="0" y="0" width="640" height="220" fill="#FAFAF8" rx="6"/>
+          <!-- Human column -->
+          <rect x="30" y="20" width="270" height="180" rx="4" fill="#E8F4E8" stroke="#5A9A6A" stroke-width="1.5"/>
+          <text x="165" y="44" text-anchor="middle" font-size="11" fill="#5A9A6A" font-family="sans-serif" font-weight="700">Human Identity（人間）</text>
+          <text x="50" y="68" font-size="8.5" fill="#4A4A55" font-family="sans-serif">• 名前・メールアドレスで識別</text>
+          <text x="50" y="86" font-size="8.5" fill="#4A4A55" font-family="sans-serif">• パスワード＋MFAで認証</text>
+          <text x="50" y="104" font-size="8.5" fill="#4A4A55" font-family="sans-serif">• ロールベースのアクセス制御</text>
+          <text x="50" y="122" font-size="8.5" fill="#4A4A55" font-family="sans-serif">• 退職時にアカウント無効化</text>
+          <text x="50" y="140" font-size="8.5" fill="#4A4A55" font-family="sans-serif">• 行動ログが個人に帰属</text>
+          <text x="50" y="158" font-size="8.5" fill="#5A9A6A" font-family="sans-serif">→ 既存IAMツールで対応可能</text>
+          <!-- vs -->
+          <text x="320" y="115" text-anchor="middle" font-size="14" fill="#A8965A" font-family="sans-serif" font-weight="700">vs</text>
+          <!-- Agent column -->
+          <rect x="340" y="20" width="270" height="180" rx="4" fill="#FFF0F0" stroke="#C45C3A" stroke-width="1.5"/>
+          <text x="475" y="44" text-anchor="middle" font-size="11" fill="#C45C3A" font-family="sans-serif" font-weight="700">Non-Human Identity（NHI）</text>
+          <text x="360" y="68" font-size="8.5" fill="#4A4A55" font-family="sans-serif">• APIキー・サービストークンで識別</text>
+          <text x="360" y="86" font-size="8.5" fill="#4A4A55" font-family="sans-serif">• 証明書・OAuth2.0で認証</text>
+          <text x="360" y="104" font-size="8.5" fill="#4A4A55" font-family="sans-serif">• タスク単位の動的アクセス制御</text>
+          <text x="360" y="122" font-size="8.5" fill="#4A4A55" font-family="sans-serif">• タスク完了後にアクセス失効（JIT）</text>
+          <text x="360" y="140" font-size="8.5" fill="#4A4A55" font-family="sans-serif">• エージェント・タスクに帰属するログ</text>
+          <text x="360" y="158" font-size="8.5" fill="#C45C3A" font-family="sans-serif">→ 専用のNHI管理が必要</text>
+        </svg>
+        <p class="diag-caption">NHI（Non-Human Identity）は既存のIAMフレームワークで対応できない特性を持つ（出典：Gartner, 2025）</p>
+      </div>
+
+      <div class="kpi-row">
+        <div class="kpi-item">
+          <div class="kpi-val">45倍</div>
+          <div class="kpi-label">2026年時点でのNHIと人間IDの比率（エンタープライズ平均。Gartner推計）</div>
+        </div>
+        <div class="kpi-item">
+          <div class="kpi-val">68%</div>
+          <div class="kpi-label">2025年のセキュリティ侵害でNHI/サービスアカウントが悪用された割合</div>
+        </div>
+        <div class="kpi-item">
+          <div class="kpi-val">2027年</div>
+          <div class="kpi-label">Gartnerが「NHI管理がIAMの最優先課題」になると予測する年</div>
+        </div>
+      </div>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">Non-Human Identity（NHI）とは何か</h2>
+
+      <p>NHIとは、AIエージェント・ボット・サービスアカウント・APIキー・マシンID等、人間以外が保有するアイデンティティの総称だ。AIエージェントの増殖により、エンタープライズのID管理における最大のボリュームゾーンはすでに人間からNHIに移行している。</p>
+
+      <p>問題の深刻さは「数」だけではない。NHIは<strong>常時稼働し、大量のシステムを横断し、停止しない</strong>。人間ならば「帰宅する」「休暇を取る」というブレークポイントが存在するが、エージェントには休みがない。一つの脆弱なエージェントIDが、24時間365日にわたって攻撃対象になり続ける。</p>
+
+      <div class="warn-box">
+        <div class="warn-label">Warning — 典型的なNHIセキュリティ事故パターン</div>
+        <ul style="margin:0; padding-left:1.2rem;">
+          <li><strong>APIキーのハードコーディング</strong>：開発者がエージェントのソースコードにAPIキーを直接記述。GitHubにプッシュした瞬間に外部に漏洩</li>
+          <li><strong>退職者IDの継承</strong>：退職した従業員のサービスアカウントをエージェントが継続使用。本人のID権限でエージェントが動作し続ける</li>
+          <li><strong>過剰権限の放置</strong>：「とりあえず管理者権限」で設定したエージェントIDが長期間放置され、侵害時の被害範囲が最大化</li>
+          <li><strong>トークンの無期限発行</strong>：有効期限のないアクセストークンがエージェントに発行され、廃棄されたエージェントのトークンが不正利用される</li>
+        </ul>
+      </div>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">AIエージェントIAMの5原則</h2>
+
+      <p>Gartnerが定義するAIエージェントのアイデンティティ管理は、以下の5原則に基づく。これらは、人間向けIAMの原則を「エージェントの特性」に合わせて再解釈したものだ。</p>
+
+      <div class="diag-wrap">
+        <div class="diag-label">IAM Framework — AIエージェント向け5原則</div>
+        <div class="diag-step-row">
+          <div class="diag-step-card">
+            <div class="step-num">P1</div>
+            <div class="step-title">一意ID付与（Unique Identity）</div>
+            <div class="step-body">全エージェントに組織固有の識別子を付与。エージェントの種類・用途・バージョン・担当部門を含む命名規則を制定。「誰が何をしたか」の追跡を可能にする基盤。</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">P2</div>
+            <div class="step-title">最小権限原則（Least Privilege）</div>
+            <div class="step-body">エージェントが必要とするアクセス権は「タスクに必要な最小限」のみ。管理者権限のデフォルト付与を禁止し、権限申請フローを自動化する。</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">P3</div>
+            <div class="step-title">JITアクセス（Just-In-Time）</div>
+            <div class="step-body">アクセス権はタスク実行時のみ一時的に付与し、完了と同時に自動失効。常時アクセス権を持たせない設計により、侵害された場合の被害範囲を最小化。</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">P4</div>
+            <div class="step-title">継続的認証（Continuous Auth）</div>
+            <div class="step-body">エージェントの認証は「起動時一回」ではなく、重要アクション実行前に都度再認証。異常なアクセスパターンを検知した場合は自動で認証を停止する。</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">P5</div>
+            <div class="step-title">廃棄プロセス（Offboarding）</div>
+            <div class="step-body">エージェントの廃棄・バージョンアップ時に全アクセス権を即時失効させる。「使っていないかもしれないがとりあえず残す」が最大のリスク要因。定期的な棚卸しを自動化。</div>
+          </div>
+        </div>
+        <p class="diag-caption">5原則はゼロトラストアーキテクチャの「決して信頼せず、常に検証する」をNHIに適用したもの</p>
+      </div>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">JITアクセスの実装パターン</h2>
+
+      <p>JIT（Just-In-Time）アクセスは、AIエージェントIAMの中で最も効果の高い施策だが、実装には専用の仕組みが必要だ。以下の3パターンが実務で使われている。</p>
+
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>パターン</th>
+            <th>概要</th>
+            <th>適用場面</th>
+            <th>実装複雑度</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Token Expiry</strong></td>
+            <td>アクセストークンに短い有効期限を設定（15分〜1時間）。タスク完了後は再取得が必要</td>
+            <td>API呼び出し・外部サービス連携</td>
+            <td>低（既存OAuthで対応可）</td>
+          </tr>
+          <tr>
+            <td><strong>Dynamic Role Assignment</strong></td>
+            <td>タスク開始時にオーケストレーターが権限を動的付与。タスク終了時に自動剥奪</td>
+            <td>社内システムへの書き込み操作</td>
+            <td>中（オーケストレーター設計要）</td>
+          </tr>
+          <tr>
+            <td><strong>Vault-based Secrets</strong></td>
+            <td>HashiCorp Vault等の秘密情報管理ツールからエージェントが都度認証情報を取得。ハードコーディングを根絶</td>
+            <td>DBアクセス・機密API連携</td>
+            <td>高（Vault導入・運用コスト）</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">主要NHI管理ツールの比較</h2>
+
+      <p>2026年時点で、NHI専用の管理ツールカテゴリが確立しつつある。既存のIAMベンダーも対応を強化しているが、エージェント特有の要件（動的権限・大量のIDライフサイクル管理）に特化したツールが市場をリードしている。</p>
+
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>ベンダー</th>
+            <th>ポジション</th>
+            <th>AIエージェント対応の強み</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>CyberArk</strong></td>
+            <td>PAM（特権ID管理）最大手</td>
+            <td>AI Secrets Manager、エージェント向けVault統合、JITプロビジョニング</td>
+          </tr>
+          <tr>
+            <td><strong>Okta</strong></td>
+            <td>クラウドIAMリーダー</td>
+            <td>Non-Human Identity API、エージェント認証フロー、ライフサイクル自動化</td>
+          </tr>
+          <tr>
+            <td><strong>Microsoft Entra</strong></td>
+            <td>M365統合IAM</td>
+            <td>Copilot向けWorkload Identity、Managed Identity、条件付きアクセス</td>
+          </tr>
+          <tr>
+            <td><strong>HashiCorp Vault</strong></td>
+            <td>シークレット管理専門</td>
+            <td>動的シークレット生成、エージェント向けAPIシークレット管理</td>
+          </tr>
+          <tr>
+            <td><strong>Aembit</strong></td>
+            <td>NHI専業スタートアップ</td>
+            <td>ワークロード間の認証特化、ゼロスタンディングアクセス実装</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">エージェントIDの「オフボーディング」が見落とされる理由</h2>
+
+      <p>人間の退職時にはHRプロセスがトリガーとなりIAMの無効化が自動実行される組織は多い。しかしエージェントの「退役」には同様のトリガーが存在しない。プロジェクトが終わり、担当者が異動し、エージェントは誰にも気づかれないまま稼働し続ける。</p>
+
+      <p>Gartnerの調査によれば、エンタープライズで稼働中のNHIの<strong>平均40%以上は「誰も管理していない」状態</strong>にあるとされる。これらのゾンビIDは攻撃者にとって絶好の侵入経路だ。</p>
+
+      <div class="insight-box">
+        <div class="insight-label">Implementation Guide — エージェントオフボーディングの自動化</div>
+        実用的なオフボーディング自動化には以下が有効だ：(1) エージェントIDに有効期限（最大90日）をデフォルト設定し、延長申請なしに自動失効させる。(2) エージェントの最終アクティビティ日時を記録し、30日間無アクティビティで自動停止する。(3) エージェントを「所有者（Owner）」に紐づけ、所有者の異動・退職時に自動レビューをトリガーする。これらは高度なPAMツールなしでもAWSのIAMポリシーやAzure Managed Identityの機能で実装可能だ。
+      </div>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">マルチエージェント環境でのID設計</h2>
+
+      <p>Lv.2で学んだマルチエージェントアーキテクチャでは、エージェントが別のエージェントを呼び出す「エージェント間認証」が新たな課題となる。人間とシステム間のIAMに加えて、<strong>エージェント対エージェント（A2A）の認証チェーン</strong>を設計する必要がある。</p>
+
+      <p>推奨されるA2A認証パターンは「委任トークン（Delegation Token）」モデルだ。オーケストレーターエージェントが発行するタスク固有のトークンを、サブエージェントが受け取り提示することで認証される。このトークンはタスクスコープを持ち、タスク完了後に自動失効する。MCPやA2Aプロトコルの普及によりこのパターンの標準化が進んでいる。</p>
+
+      <div class="insight-box">
+        <div class="insight-label">Wing's View</div>
+        AIエージェントのIAM整備は「セキュリティ部門の仕事」として委ねることで失敗するケースが多い。エージェントのユースケース・アーキテクチャを設計する段階からIAM要件を組み込む「セキュリティ左シフト」が不可欠だ。Wingでは、エージェント設計フェーズからIAMアーキテクトを関与させるアプローチを推奨している。最小権限・JIT・廃棄の3点セットを設計段階で確定させることが、後工程のリスクと手戻りを最小化する。
+      </div>
+
+    </article>
+
+    <!-- CTA -->
+    <div class="mt-16 bg-navy text-white px-8 py-10 text-center">
+      <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold/80 mb-3">Consulting</p>
+      <h2 class="text-[1.2rem] font-medium mb-4 leading-snug">AIエージェントのID管理設計と<br>ゼロトラスト実装を Wing がご支援します</h2>
+      <p class="text-[.82rem] text-white/70 leading-relaxed mb-6">NHI管理ポリシーの策定からIAMツール選定、JITアクセス実装、オフボーディング自動化まで。エージェントセキュリティの専門家が伴走します。</p>
+      <a href="/#contact" class="inline-block bg-gold text-white text-[.78rem] font-medium tracking-wider px-7 py-3 hover:bg-gold-light transition-colors">無料相談を予約する →</a>
+    </div>
+
+    <!-- Series Next -->
+    <div style="margin-top:2.5rem;padding:1.2rem 1.4rem;background:#F8F5ED;border:1px solid #E2E0DA">
+      <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#A8965A;margin-bottom:0.6rem">Next in Series</div>
+      <a href="/blog/guardian-agents-ai-oversight" style="text-decoration:none;display:flex;align-items:center;gap:0.8rem">
+        <div style="background:#0F2342;color:#A8965A;font-size:0.65rem;font-weight:700;padding:0.3rem 0.5rem;white-space:nowrap;border-radius:2px">Lv.5</div>
+        <div>
+          <div style="font-size:0.85rem;font-weight:700;color:#0F2342;line-height:1.4">ガーディアンエージェント：AI監視・制御の新パラダイムとGartner AI TRiSMフレームワーク</div>
+          <div style="font-size:0.72rem;color:#8A8A96;margin-top:0.2rem">AIエージェントを「別のAI」で監視するアーキテクチャを解説 →</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</main>
+<footer class="mt-20 border-t border-[#E2E0DA] py-10 px-6 md:px-10 text-center">
+  <a href="/" class="inline-block mb-4">
+    <svg width="80" height="24" viewBox="0 0 120 36" fill="none">
+      <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#0F2342"/>
+      <path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#0F2342" opacity=".32"/>
+      <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#0F2342">Wing</text>
+    </svg>
+  </a>
+  <p class="text-[.72rem] text-ink-light">© 2026 Wing Consulting. All rights reserved.</p>
+</footer>
+</body>
+</html>
