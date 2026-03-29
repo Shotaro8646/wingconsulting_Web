@@ -113,9 +113,9 @@ tailwind.config = {
   theme: {
     extend: {
       colors: {
-        navy:    { DEFAULT: '#0F2342', 50: '#F0F4FA', 100: '#D6E2F0', 200: '#A8C0DE', 300: '#6D95BE', 400: '#3D6E9C', 500: '#1E4E7E', 600: '#163B62', 700: '#0F2B48', dark: '#081830' },
-        gold:    { DEFAULT: '#A8965A', light: '#C4AD72', muted: '#7A6B3E', pale: '#F8F5ED', mid: '#B8A560' },
-        slate:   { warm: '#F7F6F3', cool: '#EEECe7' },
+        navy:    { DEFAULT: '#1C2533', 50: '#F0F4FA', 100: '#D6E2F0', 200: '#A8C0DE', 300: '#6D95BE', 400: '#3D6E9C', 500: '#1E4E7E', 600: '#163B62', 700: '#0F2B48', dark: '#111A24' },
+        gold:    { DEFAULT: '#3B82F6', light: '#93C5FD', muted: '#2563EB', pale: '#EFF6FF', mid: '#60A5FA' },
+        slate:   { warm: '#F9FAFB', cool: '#F3F4F6' },
         ink:     { DEFAULT: '#1A1A1F', mid: '#4A4A55', light: '#8A8A96' },
       },
       fontFamily: {
@@ -132,12 +132,12 @@ tailwind.config = {
 body { font-family: 'Noto Sans JP', sans-serif; -webkit-font-smoothing: antialiased; }
 .serif { font-family: 'Cormorant Garamond', serif; }
 .display { font-family: 'Outfit', sans-serif; }
-.gold-rule { width: 32px; height: 1.5px; background: #A8965A; }
+.gold-rule { width: 32px; height: 1.5px; background: #3B82F6; }
 .nav-link { color: #4A4A55; }
 .nav-link:hover { color: #1A1A1F; }
 #navbar .nav-links li a { border-color: rgba(0,0,0,.08); }
-.nav-cta-btn { color: #fff; background: #0F2342; border: 1px solid #0F2342; }
-.nav-cta-btn:hover { background: #16304F; }
+.nav-cta-btn { color: #fff; background: #1C2533; border: 1px solid #1C2533; }
+.nav-cta-btn:hover { background: #253347; }
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
 .reveal.in { opacity: 1; transform: none; }
 
@@ -148,19 +148,19 @@ body { font-family: 'Noto Sans JP', sans-serif; -webkit-font-smoothing: antialia
 /* Hero grid graphic */
 .hgrid { display: grid; grid-template-columns: 1fr 56px 1fr; grid-template-rows: auto 32px auto; gap: 0; }
 .hgrid-box { padding: 18px 20px; border: 1px solid rgba(255,255,255,.12); }
-.hgrid-center-v { display: flex; align-items: center; justify-content: center; border-left: 1px solid rgba(255,255,255,.12); border-right: 1px solid rgba(255,255,255,.12); background: rgba(184,146,58,.12); }
+.hgrid-center-v { display: flex; align-items: center; justify-content: center; border-left: 1px solid rgba(255,255,255,.12); border-right: 1px solid rgba(255,255,255,.12); background: rgba(59,130,246,.15); }
 .hgrid-arrow { display: flex; align-items: center; justify-content: center; grid-column: 2; border-left: 1px solid rgba(255,255,255,.08); border-right: 1px solid rgba(255,255,255,.08); }
 
 /* Hands */
-.hand-card { border-top: 2px solid #A8965A; }
-.hand-card:hover { background: #f0ece3; }
+.hand-card { border-top: 2px solid #3B82F6; }
+.hand-card:hover { background: #EFF6FF; }
 
 /* Stat */
-.stat-num { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 500; color: #A8965A; line-height: 1; }
+.stat-num { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 500; color: #3B82F6; line-height: 1; }
 
 /* Language toggle button */
 .lang-toggle-btn {
-  color: #0F2342;
+  color: #1C2533;
   background: rgba(168,150,90,.1);
   border: 1px solid rgba(168,150,90,.4);
   cursor: pointer;
@@ -216,14 +216,14 @@ html[lang="en"] section p { font-size: 0.95em; }
 <body class="bg-slate-warm text-ink">
 
 <!-- ─── NAVBAR ─────────────────────────────────────────── -->
-<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 h-[60px] flex items-center border-b border-[#E2E0DA]" style="background:rgba(247,246,243,.97);backdrop-filter:blur(12px)">
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 h-[60px] flex items-center border-b border-[#E5E7EB]" style="background:rgba(249,250,251,.97);backdrop-filter:blur(12px)">
   <div class="max-w-5xl mx-auto w-full px-6 md:px-10 flex items-center justify-between">
     <!-- Logo SVG -->
     <a href="#top" class="leading-none">
       <svg width="120" height="36" viewBox="0 0 120 36" fill="none" aria-label="Wing">
-        <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#0F2342"/>
-        <path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#0F2342" opacity=".32"/>
-        <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#0F2342">Wing</text>
+        <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#1C2533"/>
+        <path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#1C2533" opacity=".32"/>
+        <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#1C2533">Wing</text>
       </svg>
     </a>
     <!-- Desktop links -->
@@ -253,7 +253,7 @@ html[lang="en"] section p { font-size: 0.95em; }
     </button>
   </div>
   <!-- Mobile menu -->
-  <ul id="mobileMenu" class="hidden absolute top-[60px] left-0 right-0 bg-slate-warm/97 backdrop-blur-sm border-b border-[#E2E0DA] flex-col gap-5 px-6 py-6 list-none">
+  <ul id="mobileMenu" class="hidden absolute top-[60px] left-0 right-0 bg-slate-warm/97 backdrop-blur-sm border-b border-[#E5E7EB] flex-col gap-5 px-6 py-6 list-none">
     <li><a href="#approach" class="text-sm text-ink-mid" data-ja="提供価値" data-en="Value">提供価値</a></li>
     <li><a href="#industries" class="text-sm text-ink-mid" data-ja="ドメイン" data-en="Domain">ドメイン</a></li>
     <li><a href="#flow" class="text-sm text-ink-mid" data-ja="相談の流れ" data-en="Service Menu">相談の流れ</a></li>
@@ -266,7 +266,7 @@ html[lang="en"] section p { font-size: 0.95em; }
 <!-- ─── HERO ───────────────────────────────────────────── -->
 <section id="top" class="bg-navy flex items-center pt-24 pb-24 px-6 md:px-10 relative overflow-hidden">
   <!-- Subtle background radial -->
-  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 70% 25%, rgba(184,146,58,.12) 0%, transparent 55%)"></div>
+  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 70% 25%, rgba(59,130,246,.15) 0%, transparent 55%)"></div>
 
   <div class="max-w-5xl mx-auto w-full relative z-10">
     <div class="grid md:grid-cols-[1fr_auto] gap-12 md:gap-16 items-center">
@@ -281,8 +281,8 @@ html[lang="en"] section p { font-size: 0.95em; }
           AI・デジタルで、<br>貴社の成長を<br>
           <em class="not-italic text-gold">本気で前に進める。</em>
         </h1>
-        <p class="text-[.9rem] font-light text-white/55 leading-[1.9] max-w-md mb-10" data-ja="戦略構想からAI/DXの現場実装まで。経営・IT・業務の断絶を埋め、デジタル変革を確実な成果とともに実現します。" data-en="From strategic planning to hands-on AI/DX implementation. We bridge the gap between management, IT, and operations to deliver real business outcomes.">
-          戦略構想からAI/DXの現場実装まで。経営・IT・業務の断絶を埋め、デジタル変革を確実な成果とともに実現します。
+        <p class="text-[.9rem] font-light text-white/55 leading-[1.9] max-w-md mb-10" data-ja-html="戦略構想からAI/DXの現場実装まで。<br>経営・IT・業務の断絶を埋め、デジタル変革を確実な成果とともに実現します。" data-en-html="From strategic planning to hands-on AI/DX implementation.<br>We bridge the gap between management, IT, and operations<br>to deliver real business outcomes.">
+          戦略構想からAI/DXの現場実装まで。<br>経営・IT・業務の断絶を埋め、デジタル変革を確実な成果とともに実現します。
         </p>
         <div class="flex items-center flex-wrap gap-5">
           <a href="#contact" class="display text-[.8rem] font-medium text-navy bg-gold px-7 py-3.5 rounded-sm tracking-wider hover:bg-gold-mid transition-colors" data-ja="課題を相談する" data-en="Get in Touch">
@@ -318,13 +318,13 @@ html[lang="en"] section p { font-size: 0.95em; }
 </section>
 
 <!-- ─── PAIN (ISSUES) ──────────────────────────────────── -->
-<section class="reveal bg-white border-b border-[#E2E0DA] py-20 px-6 md:px-10" id="issues">
+<section class="reveal bg-white border-b border-[#E5E7EB] py-20 px-6 md:px-10" id="issues">
   <div class="max-w-5xl mx-auto">
     <p class="display text-[.67rem] font-medium tracking-[.2em] uppercase text-gold mb-3" data-ja="よくある課題" data-en="Common Challenges">よくある課題</p>
     <h2 class="serif text-[clamp(1.6rem,3vw,2.4rem)] font-medium text-ink leading-snug mb-14" data-ja="こんな状況、心当たりはありませんか。" data-en="Do any of these sound familiar?">
       こんな状況、心当たりはありませんか。
     </h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#E2E0DA] border border-[#E2E0DA]">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#E5E7EB] border border-[#E5E7EB]">
       <div class="bg-white p-7 hover:bg-slate-warm transition-colors">
         <p class="serif text-[1.5rem] text-[#9E9B96] leading-none mb-3">01</p>
         <p class="text-[.95rem] text-ink leading-relaxed" data-ja="「提案書は立派、でも誰も動かない」——コンサルが去ったあと、現場には分厚いドキュメントだけが残っている" data-en="'The proposal was impressive — but nothing moved.' The consultants left, and all that remained was a thick document nobody acts on.">"提案書は立派、でも誰も動かない"——コンサルが去ったあと、現場には分厚いドキュメントだけが残っている</p>
@@ -369,7 +369,7 @@ html[lang="en"] section p { font-size: 0.95em; }
     <div class="grid md:grid-cols-3 gap-5">
 
       <!-- Pillar 1: Consulting -->
-      <div class="bg-white border border-[#E2E0DA] rounded-sm overflow-hidden hover:shadow-md transition-shadow">
+      <div class="bg-white border border-[#E5E7EB] rounded-sm overflow-hidden hover:shadow-md transition-shadow">
         <div class="bg-navy px-6 py-5">
           <p class="display text-[.65rem] font-medium tracking-[.2em] uppercase text-gold/70 mb-2">Pillar 01</p>
           <p class="serif text-[1.25rem] font-medium text-white leading-snug" data-ja="コンサルティング" data-en="Consulting">コンサルティング</p>
@@ -409,7 +409,7 @@ html[lang="en"] section p { font-size: 0.95em; }
       </div>
 
       <!-- Pillar 2: Implementation -->
-      <div class="bg-white border border-[#E2E0DA] rounded-sm overflow-hidden hover:shadow-md transition-shadow">
+      <div class="bg-white border border-[#E5E7EB] rounded-sm overflow-hidden hover:shadow-md transition-shadow">
         <div class="bg-navy px-6 py-5">
           <p class="display text-[.65rem] font-medium tracking-[.2em] uppercase text-gold/70 mb-2">Pillar 02</p>
           <p class="serif text-[1.25rem] font-medium text-white leading-snug" data-ja="導入・実行" data-en="Implementation">導入・実行</p>
@@ -443,8 +443,8 @@ html[lang="en"] section p { font-size: 0.95em; }
       </div>
 
       <!-- Pillar 3: AI Products -->
-      <div class="bg-white border border-[#E2E0DA] rounded-sm overflow-hidden hover:shadow-md transition-shadow">
-        <div class="px-6 py-5" style="background:linear-gradient(135deg,#0F2342,#1a3a5c)">
+      <div class="bg-white border border-[#E5E7EB] rounded-sm overflow-hidden hover:shadow-md transition-shadow">
+        <div class="px-6 py-5" style="background:linear-gradient(135deg,#1C2533,#1a3a5c)">
           <p class="display text-[.65rem] font-medium tracking-[.2em] uppercase text-gold/70 mb-2">Pillar 03</p>
           <p class="serif text-[1.25rem] font-medium text-white leading-snug" data-ja="AIプロダクト" data-en="AI Products">AIプロダクト</p>
           <p class="display text-[.72rem] text-white/65 mt-1" data-ja="ベストプラクティスの活用" data-en="Applying Best Practices">ベストプラクティスの活用</p>
@@ -454,14 +454,14 @@ html[lang="en"] section p { font-size: 0.95em; }
             コンサルティングや導入を通じて蓄積した業務知見をAIプロダクトとして提供。特定業種の繰り返し作業を自動化する、業界特化型のSaaSを自社開発・提供します。
           </p>
           <div class="flex flex-col gap-3">
-            <a href="#products" class="flex items-start gap-3 p-3 border border-[#E2E0DA] rounded-sm hover:bg-slate-warm transition-colors">
-              <div class="w-7 h-7 rounded flex items-center justify-center text-xs font-bold text-navy shrink-0 mt-0.5" style="background:linear-gradient(135deg,#B8923A,#D4AF6A)">B</div>
+            <a href="#products" class="flex items-start gap-3 p-3 border border-[#E5E7EB] rounded-sm hover:bg-slate-warm transition-colors">
+              <div class="w-7 h-7 rounded flex items-center justify-center text-xs font-bold text-navy shrink-0 mt-0.5" style="background:linear-gradient(135deg,#3B82F6,#D4AF6A)">B</div>
               <div>
                 <p class="text-[.85rem] font-medium text-ink leading-snug">BorderFlow AI</p>
                 <p class="text-[.75rem] text-ink-mid mt-0.5" data-ja="AIエージェント型 貿易実行・管理プラットフォーム" data-en="AI Agent-Powered Trade Execution &amp; Management Platform">AIエージェント型 貿易実行・管理プラットフォーム</p>
               </div>
             </a>
-            <a href="#products" class="flex items-start gap-3 p-3 border border-[#E2E0DA] rounded-sm hover:bg-slate-warm transition-colors">
+            <a href="#products" class="flex items-start gap-3 p-3 border border-[#E5E7EB] rounded-sm hover:bg-slate-warm transition-colors">
               <div class="w-7 h-7 rounded flex items-center justify-center text-xs font-bold text-white shrink-0 mt-0.5" style="background:linear-gradient(135deg,#3CB97A,#2A8F5C)">C</div>
               <div>
                 <p class="text-[.85rem] font-medium text-ink leading-snug">ChemOS</p>
@@ -489,7 +489,7 @@ html[lang="en"] section p { font-size: 0.95em; }
 
 
 <!-- ─── INDUSTRIES ──────────────────────────────────── -->
-<section class="reveal py-20 px-6 md:px-10 bg-white border-t border-[#E2E0DA]" id="industries">
+<section class="reveal py-20 px-6 md:px-10 bg-white border-t border-[#E5E7EB]" id="industries">
   <div class="max-w-5xl mx-auto">
     <p class="display text-[.67rem] font-medium tracking-[.2em] uppercase text-gold mb-3" data-ja="ドメイン" data-en="Domain">ドメイン</p>
     <h2 class="serif text-[clamp(1.6rem,3vw,2.4rem)] font-medium text-ink leading-snug mb-4" data-ja="知見と技術が交差する、Wingの専門領域。" data-en="Where domain expertise meets technology.">
@@ -531,17 +531,17 @@ html[lang="en"] section p { font-size: 0.95em; }
       <p class="display text-[.56rem] font-medium tracking-[.14em] uppercase text-ink-mid mb-3" data-ja="Domain" data-en="Domain">Domain</p>
       <div class="grid md:grid-cols-3 gap-4 mb-4">
 
-        <div class="bg-slate-warm border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors">
+        <div class="bg-slate-warm border border-[#E5E7EB] rounded-sm p-5 hover:border-gold/40 transition-colors">
           <p class="text-[.92rem] font-medium text-ink mb-2 leading-snug" data-ja="物流・貿易" data-en="Logistics &amp; Trade">物流・貿易</p>
           <p class="text-[.8rem] text-ink-mid leading-relaxed" data-ja="貿易書類・通関・輸送・在庫管理の業務プロセス設計と自動化。BorderFlow AIを中核に、物流データの統合管理を支援します。" data-en="Process design and automation across trade documents, customs, transportation, and inventory management. Supporting integrated logistics data management centered on BorderFlow AI.">貿易書類・通関・輸送・在庫管理の業務プロセス設計と自動化。BorderFlow AIを中核に、物流データの統合管理を支援します。</p>
         </div>
 
-        <div class="bg-slate-warm border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors">
+        <div class="bg-slate-warm border border-[#E5E7EB] rounded-sm p-5 hover:border-gold/40 transition-colors">
           <p class="text-[.92rem] font-medium text-ink mb-2 leading-snug" data-ja="グローバルコンプライアンス" data-en="Global Compliance">グローバルコンプライアンス</p>
           <p class="text-[.8rem] text-ink-mid leading-relaxed" data-ja="輸出規制（外為法・EAR）・化学品規制（PFAS・RoHS・REACH）・内部統制。規制対応の自動化と証跡管理を、業務実態に即して設計します。" data-en="Export regulations (Foreign Exchange Act, EAR), chemical regulations (PFAS, RoHS, REACH), and internal controls — designing compliance automation and audit trails tailored to real operations.">輸出規制（外為法・EAR）・化学品規制（PFAS・RoHS・REACH）・内部統制。規制対応の自動化と証跡管理を、業務実態に即して設計します。</p>
         </div>
 
-        <div class="bg-slate-warm border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors">
+        <div class="bg-slate-warm border border-[#E5E7EB] rounded-sm p-5 hover:border-gold/40 transition-colors">
           <p class="text-[.92rem] font-medium text-ink mb-2 leading-snug" data-ja="営業・マーケティング" data-en="Sales &amp; Marketing">営業・マーケティング</p>
           <p class="text-[.8rem] text-ink-mid leading-relaxed" data-ja="MAツール・CRM連携・データドリブンなデジタル施策の設計と実装。HubSpotをはじめとするツールを活用し、顧客接点のデジタル化と営業プロセスの自動化を推進します。" data-en="Design and implementation of marketing automation, CRM integration, and data-driven digital initiatives. Leveraging HubSpot and other tools to digitalize customer touchpoints and automate sales processes.">MAツール・CRM連携・データドリブンなデジタル施策の設計と実装。HubSpotをはじめとするツールを活用し、顧客接点のデジタル化と営業プロセスの自動化を推進します。</p>
         </div>
@@ -552,22 +552,22 @@ html[lang="en"] section p { font-size: 0.95em; }
       <p class="display text-[.56rem] font-medium tracking-[.14em] uppercase text-ink-mid mb-3" data-ja="Technology" data-en="Technology">Technology</p>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
 
-        <div class="bg-slate-warm border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors">
+        <div class="bg-slate-warm border border-[#E5E7EB] rounded-sm p-5 hover:border-gold/40 transition-colors">
           <p class="text-[.92rem] font-medium text-ink mb-2 leading-snug" data-ja="AI・デジタル技術" data-en="AI &amp; Digital">AI・デジタル技術</p>
           <p class="text-[.8rem] text-ink-mid leading-relaxed" data-ja="生成AI・機械学習・RPAを活用した業務自動化。AIエージェント実装から現場定着まで一貫して推進します。" data-en="Business automation via generative AI, ML, and RPA — end-to-end from AI agent implementation to field adoption.">生成AI・機械学習・RPAを活用した業務自動化。AIエージェント実装から現場定着まで一貫して推進します。</p>
         </div>
 
-        <div class="bg-slate-warm border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors">
+        <div class="bg-slate-warm border border-[#E5E7EB] rounded-sm p-5 hover:border-gold/40 transition-colors">
           <p class="text-[.92rem] font-medium text-ink mb-2 leading-snug" data-ja="データ・分析・可視化" data-en="Data &amp; Analytics">データ・分析・可視化</p>
           <p class="text-[.8rem] text-ink-mid leading-relaxed" data-ja="データ基盤設計・BI構築・ダッシュボード開発。経営判断に直結するデータ活用基盤を構築します。" data-en="Data infrastructure design, BI implementation, and dashboard development — building platforms that directly inform management decisions.">データ基盤設計・BI構築・ダッシュボード開発。経営判断に直結するデータ活用基盤を構築します。</p>
         </div>
 
-        <div class="bg-slate-warm border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors">
+        <div class="bg-slate-warm border border-[#E5E7EB] rounded-sm p-5 hover:border-gold/40 transition-colors">
           <p class="text-[.92rem] font-medium text-ink mb-2 leading-snug" data-ja="ERP・CRM" data-en="ERP &amp; CRM">ERP・CRM</p>
           <p class="text-[.8rem] text-ink-mid leading-relaxed" data-ja="SAP・Oracle・Salesforce等の導入・移行・カスタマイズ支援。業務要件に即した実装と現場定着を推進します。" data-en="Implementation, migration, and customization for SAP, Oracle, Salesforce, and others — driving adoption aligned with real operational requirements.">SAP・Oracle・Salesforce等の導入・移行・カスタマイズ支援。業務要件に即した実装と現場定着を推進します。</p>
         </div>
 
-        <div class="bg-slate-warm border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors">
+        <div class="bg-slate-warm border border-[#E5E7EB] rounded-sm p-5 hover:border-gold/40 transition-colors">
           <p class="text-[.92rem] font-medium text-ink mb-2 leading-snug" data-ja="MAツール・CRM" data-en="MA Tools &amp; CRM">MAツール・CRM</p>
           <p class="text-[.8rem] text-ink-mid leading-relaxed" data-ja="HubSpot・Marketo・Pardot等のMAツール／CRMプラットフォームの導入・設定・定着支援。ベンダーニュートラルな立場で最適ツールを選定し、業務要件に即した実装を行います。" data-en="Implementation, configuration, and adoption of MA/CRM platforms including HubSpot, Marketo, and Pardot. We select the optimal tool from a vendor-neutral stance and implement to fit real operational needs.">HubSpot・Marketo・Pardot等のMAツール／CRMプラットフォームの導入・設定・定着支援。ベンダーニュートラルな立場で最適ツールを選定し、業務要件に即した実装を行います。</p>
         </div>
@@ -680,7 +680,7 @@ html[lang="en"] section p { font-size: 0.95em; }
 </section>
 
 <!-- ─── FLOW ────────────────────────────────────────────── -->
-<section class="reveal py-24 px-6 md:px-10 bg-white border-t border-[#E2E0DA]" id="flow">
+<section class="reveal py-24 px-6 md:px-10 bg-white border-t border-[#E5E7EB]" id="flow">
   <div class="max-w-5xl mx-auto">
     <p class="display text-[.67rem] font-medium tracking-[.2em] uppercase text-gold mb-3" data-ja="サービスメニュー" data-en="Service Menu">サービスメニュー</p>
     <h2 class="serif text-[clamp(1.6rem,3vw,2.4rem)] font-medium text-ink leading-snug mb-4" data-ja-html="何から始めればよいか、<br>わからない方へ。" data-en-html="Not sure where<br>to start?">
@@ -689,7 +689,7 @@ html[lang="en"] section p { font-size: 0.95em; }
     <p class="text-[.88rem] text-ink-mid leading-relaxed max-w-lg mb-14" data-ja="初回のヒアリング・ご相談は無料です。現状をお聞きした上で、最適なサービスをご提案します。" data-en="Initial consultation is free. We'll listen to your situation and propose the right service.">初回のヒアリング・ご相談は無料です。現状をお聞きした上で、最適なサービスをご提案します。</p>
 
     <!-- Service menu -->
-    <div class="grid md:grid-cols-2 gap-px bg-[#E2E0DA] border border-[#E2E0DA] mb-6">
+    <div class="grid md:grid-cols-2 gap-px bg-[#E5E7EB] border border-[#E5E7EB] mb-6">
       <!-- Assessment -->
       <div class="bg-white p-7 flex flex-col">
         <div class="flex items-center gap-3 mb-4">
@@ -698,7 +698,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
         <p class="text-[1rem] font-medium text-ink mb-3" data-ja="現状診断・アセスメント" data-en="Assessment &amp; Diagnosis">現状診断・アセスメント</p>
         <p class="text-[.78rem] text-ink-mid leading-relaxed flex-1" data-ja="IT・業務・組織体制を整理し、DX推進の阻害要因と優先課題を明確にします。「何から始めるか」「何を後回しにするか」が判断できる状態をつくります。" data-en="We clarify DX blockers and priority challenges across IT, operations, and organization. You'll be able to decide what to start first and what to defer.">IT・業務・組織体制を整理し、DX推進の阻害要因と優先課題を明確にします。「何から始めるか」「何を後回しにするか」が判断できる状態をつくります。</p>
-        <div class="mt-5 pt-4 border-t border-[#E2E0DA]">
+        <div class="mt-5 pt-4 border-t border-[#E5E7EB]">
           <p class="text-[.7rem] text-ink-light mb-1" data-ja="含まれる内容" data-en="What's included">含まれる内容</p>
           <ul class="flex flex-col gap-1">
             <li class="text-[.73rem] text-ink-mid pl-3 relative before:content-['-'] before:absolute before:left-0 before:text-[#9E9B96]" data-ja="現状ヒアリング・課題整理" data-en="Current-state interviews &amp; challenge mapping">現状ヒアリング・課題整理</li>
@@ -716,7 +716,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
         <p class="text-[1rem] font-medium text-ink mb-3" data-ja="戦略策定・ロードマップ" data-en="Strategy &amp; Roadmap">戦略策定・ロードマップ</p>
         <p class="text-[.78rem] text-ink-mid leading-relaxed flex-1" data-ja="DXの方向性を整理し、実行可能なロードマップに落とし込みます。経営層の合意形成まで見据え、意思決定が進む資料と論点整理を支援します。" data-en="We translate DX direction into an actionable roadmap. We support executive consensus building with materials and framing that drive decisions forward.">DXの方向性を整理し、実行可能なロードマップに落とし込みます。経営層の合意形成まで見据え、意思決定が進む資料と論点整理を支援します。</p>
-        <div class="mt-5 pt-4 border-t border-[#E2E0DA]">
+        <div class="mt-5 pt-4 border-t border-[#E5E7EB]">
           <p class="text-[.7rem] text-ink-light mb-1" data-ja="含まれる内容" data-en="What's included">含まれる内容</p>
           <ul class="flex flex-col gap-1">
             <li class="text-[.73rem] text-ink-mid pl-3 relative before:content-['-'] before:absolute before:left-0 before:text-[#9E9B96]" data-ja="DXロードマップ策定" data-en="DX roadmap development">DXロードマップ策定</li>
@@ -734,7 +734,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
         <p class="text-[1rem] font-medium text-ink mb-3" data-ja="導入・実行支援" data-en="Implementation &amp; Execution Support">導入・実行支援</p>
         <p class="text-[.78rem] text-ink-mid leading-relaxed flex-1" data-ja="システム導入やAI活用を、計画だけで終わらせず現場運用まで伴走します。PMO・定着支援・効果測定まで一気通貫で支え、成果が出る運用体制をつくります。" data-en="We don't stop at planning — we walk alongside you through go-live and on-site adoption. PMO, adoption support, and impact measurement all in one engagement.">システム導入やAI活用を、計画だけで終わらせず現場運用まで伴走します。PMO・定着支援・効果測定まで一気通貫で支え、成果が出る運用体制をつくります。</p>
-        <div class="mt-5 pt-4 border-t border-[#E2E0DA]">
+        <div class="mt-5 pt-4 border-t border-[#E5E7EB]">
           <p class="text-[.7rem] text-ink-light mb-1" data-ja="含まれる内容" data-en="What's included">含まれる内容</p>
           <ul class="flex flex-col gap-1">
             <li class="text-[.73rem] text-ink-mid pl-3 relative before:content-['-'] before:absolute before:left-0 before:text-[#9E9B96]" data-ja="PMO・プロジェクト推進" data-en="PMO &amp; project management">PMO・プロジェクト推進</li>
@@ -752,22 +752,22 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
         <p class="text-[1rem] font-medium text-ink mb-3" data-ja="研修・ワークショップ" data-en="Training &amp; Workshops">研修・ワークショップ</p>
         <p class="text-[.78rem] text-ink-mid leading-relaxed flex-1" data-ja="「知っている」から「現場で使える」への変化をつくります。実務直結のカリキュラムで、研修後に参加者が自走できる状態を目指します。理論だけで終わる設計はしません。" data-en="We create the shift from 'knowing' to 'using in practice.' With hands-on curricula, participants leave able to act independently. No theory-only sessions.">「知っている」から「現場で使える」への変化をつくります。実務直結のカリキュラムで、研修後に参加者が自走できる状態を目指します。理論だけで終わる設計はしません。</p>
-        <div class="mt-5 pt-4 border-t border-[#E2E0DA]">
+        <div class="mt-5 pt-4 border-t border-[#E5E7EB]">
           <p class="text-[.7rem] text-ink-light mb-2" data-ja="対応テーマ" data-en="Available themes">対応テーマ</p>
           <div class="flex flex-wrap gap-1.5">
-            <span class="display text-[.7rem] text-ink-mid border border-[#E2E0DA] px-2 py-0.5 rounded-sm" data-ja="コンサル・ビジネス思考" data-en="Consulting &amp; Business Thinking">コンサル・ビジネス思考</span>
-            <span class="display text-[.7rem] text-ink-mid border border-[#E2E0DA] px-2 py-0.5 rounded-sm" data-ja="DX・デジタルリテラシー" data-en="DX &amp; Digital Literacy">DX・デジタルリテラシー</span>
-            <span class="display text-[.7rem] text-ink-mid border border-[#E2E0DA] px-2 py-0.5 rounded-sm" data-ja="AI・生成AI活用" data-en="AI &amp; Generative AI">AI・生成AI活用</span>
-            <span class="display text-[.7rem] text-ink-mid border border-[#E2E0DA] px-2 py-0.5 rounded-sm" data-ja="データ分析・可視化" data-en="Data Analysis &amp; Visualization">データ分析・可視化</span>
-            <span class="display text-[.7rem] text-ink-mid border border-[#E2E0DA] px-2 py-0.5 rounded-sm" data-ja="プロジェクトマネジメント" data-en="Project Management">プロジェクトマネジメント</span>
+            <span class="display text-[.7rem] text-ink-mid border border-[#E5E7EB] px-2 py-0.5 rounded-sm" data-ja="コンサル・ビジネス思考" data-en="Consulting &amp; Business Thinking">コンサル・ビジネス思考</span>
+            <span class="display text-[.7rem] text-ink-mid border border-[#E5E7EB] px-2 py-0.5 rounded-sm" data-ja="DX・デジタルリテラシー" data-en="DX &amp; Digital Literacy">DX・デジタルリテラシー</span>
+            <span class="display text-[.7rem] text-ink-mid border border-[#E5E7EB] px-2 py-0.5 rounded-sm" data-ja="AI・生成AI活用" data-en="AI &amp; Generative AI">AI・生成AI活用</span>
+            <span class="display text-[.7rem] text-ink-mid border border-[#E5E7EB] px-2 py-0.5 rounded-sm" data-ja="データ分析・可視化" data-en="Data Analysis &amp; Visualization">データ分析・可視化</span>
+            <span class="display text-[.7rem] text-ink-mid border border-[#E5E7EB] px-2 py-0.5 rounded-sm" data-ja="プロジェクトマネジメント" data-en="Project Management">プロジェクトマネジメント</span>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Free consultation note -->
-    <div class="flex items-center gap-4 bg-navy/04 border border-[#E2E0DA] px-6 py-4 rounded-sm">
-      <svg class="w-4 h-4 text-gold shrink-0" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#B8923A" stroke-width="1.1"/><path d="M8 5v4M8 11v.5" stroke="#B8923A" stroke-width="1.3" stroke-linecap="round"/></svg>
+    <div class="flex items-center gap-4 bg-navy/04 border border-[#E5E7EB] px-6 py-4 rounded-sm">
+      <svg class="w-4 h-4 text-gold shrink-0" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#3B82F6" stroke-width="1.1"/><path d="M8 5v4M8 11v.5" stroke="#3B82F6" stroke-width="1.3" stroke-linecap="round"/></svg>
       <p class="text-[.8rem] text-ink-mid leading-relaxed" data-ja-html="いずれのサービスも、<span class='font-medium text-ink'>初回ヒアリング・ご相談は無料</span>です。どのメニューが適切かわからない場合も、お問い合わせください。" data-en-html="All services include a <span class='font-medium text-ink'>free initial consultation</span>. Contact us even if you're unsure which option fits.">いずれのサービスも、<span class="font-medium text-ink">初回ヒアリング・ご相談は無料</span>です。どのメニューが適切かわからない場合も、お問い合わせください。</p>
     </div>
   </div>
@@ -788,7 +788,7 @@ html[lang="en"] section p { font-size: 0.95em; }
     <div class="grid md:grid-cols-[1fr_1.4fr] gap-10 items-start">
       <div>
         <div class="flex items-center gap-3 mb-5">
-          <div class="w-10 h-10 rounded-lg flex items-center justify-center font-bold text-navy text-sm" style="background:linear-gradient(135deg,#B8923A,#D4AF6A)">B</div>
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center font-bold text-navy text-sm" style="background:linear-gradient(135deg,#3B82F6,#D4AF6A)">B</div>
           <div>
             <p class="display text-lg font-medium text-white tracking-wide">BorderFlow AI</p>
             <p class="display text-[.68rem] text-gold/60 tracking-wider" data-ja="自律型貿易事務エージェント" data-en="Autonomous Trade Operations Agent">自律型貿易事務エージェント</p>
@@ -1100,7 +1100,7 @@ html[lang="en"] section p { font-size: 0.95em; }
 
 
 <!-- ─── BLOG ──────────────────────────────────────────── -->
-<section class="reveal py-24 px-6 md:px-10 bg-white border-t border-[#E2E0DA]" id="blog">
+<section class="reveal py-24 px-6 md:px-10 bg-white border-t border-[#E5E7EB]" id="blog">
   <div class="max-w-5xl mx-auto">
     <p class="display text-[.67rem] font-medium tracking-[.2em] uppercase text-gold mb-3" data-ja="インサイト" data-en="Insights">インサイト</p>
     <h2 class="serif text-[clamp(1.6rem,3vw,2.4rem)] font-medium text-ink leading-snug mb-4">
@@ -1111,18 +1111,18 @@ html[lang="en"] section p { font-size: 0.95em; }
     <!-- Category Filter -->
     <div class="flex flex-wrap gap-2 mb-10" id="blog-filters">
       <button onclick="filterBlog('all')" data-cat="all" class="blog-filter-btn active display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-gold bg-gold text-navy transition-all" data-ja="すべて" data-en="All">すべて</button>
-      <button onclick="filterBlog('ai-dx')" data-cat="ai-dx" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E2E0DA] text-ink-mid hover:border-gold hover:text-gold transition-all" data-ja="# AI・DX戦略" data-en="# AI &amp; DX Strategy"># AI・DX戦略</button>
-      <button onclick="filterBlog('trade-dx')" data-cat="trade-dx" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E2E0DA] text-ink-mid hover:border-gold hover:text-gold transition-all" data-ja="# 貿易DX" data-en="# Trade DX"># 貿易DX</button>
-      <button onclick="filterBlog('compliance')" data-cat="compliance" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E2E0DA] text-ink-mid hover:border-gold hover:text-gold transition-all" data-ja="# コンプライアンス" data-en="# Compliance"># コンプライアンス</button>
-      <button onclick="filterBlog('logistics')" data-cat="logistics" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E2E0DA] text-ink-mid hover:border-gold hover:text-gold transition-all" data-ja="# 物流DX" data-en="# Logistics DX"># 物流DX</button>
-      <button onclick="filterBlog('it-org')" data-cat="it-org" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E2E0DA] text-ink-mid hover:border-gold hover:text-gold transition-all" data-ja="# IT組織" data-en="# IT Organization"># IT組織</button>
-      <button onclick="filterBlog('other')" data-cat="other" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E2E0DA] text-ink-mid hover:border-gold hover:text-gold transition-all" data-ja="# その他" data-en="# Other"># その他</button>
+      <button onclick="filterBlog('ai-dx')" data-cat="ai-dx" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E5E7EB] text-ink-mid hover:border-gold hover:text-gold transition-all" data-ja="# AI・DX戦略" data-en="# AI &amp; DX Strategy"># AI・DX戦略</button>
+      <button onclick="filterBlog('trade-dx')" data-cat="trade-dx" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E5E7EB] text-ink-mid hover:border-gold hover:text-gold transition-all" data-ja="# 貿易DX" data-en="# Trade DX"># 貿易DX</button>
+      <button onclick="filterBlog('compliance')" data-cat="compliance" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E5E7EB] text-ink-mid hover:border-gold hover:text-gold transition-all" data-ja="# コンプライアンス" data-en="# Compliance"># コンプライアンス</button>
+      <button onclick="filterBlog('logistics')" data-cat="logistics" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E5E7EB] text-ink-mid hover:border-gold hover:text-gold transition-all" data-ja="# 物流DX" data-en="# Logistics DX"># 物流DX</button>
+      <button onclick="filterBlog('it-org')" data-cat="it-org" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E5E7EB] text-ink-mid hover:border-gold hover:text-gold transition-all" data-ja="# IT組織" data-en="# IT Organization"># IT組織</button>
+      <button onclick="filterBlog('other')" data-cat="other" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E5E7EB] text-ink-mid hover:border-gold hover:text-gold transition-all" data-ja="# その他" data-en="# Other"># その他</button>
     </div>
 
     <!-- Blog Grid -->
     <div class="grid md:grid-cols-3 gap-6 mb-10" id="blog-grid">
 
-      <a href="/blog/poc-death-dx-consulting" data-category="ai-dx" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
+      <a href="/blog/poc-death-dx-consulting" data-category="ai-dx" class="blog-card group block border border-[#E5E7EB] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
         <div class="bg-navy/05 px-5 py-4">
           <div class="flex gap-2 flex-wrap mb-2">
             <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full" data-ja="# AI・DX戦略" data-en="# AI &amp; DX Strategy"># AI・DX戦略</span>
@@ -1135,7 +1135,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
       </a>
 
-      <a href="/blog/supply-chain-resilience-ai" data-category="trade-dx" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
+      <a href="/blog/supply-chain-resilience-ai" data-category="trade-dx" class="blog-card group block border border-[#E5E7EB] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
         <div class="bg-navy/05 px-5 py-4">
           <div class="flex gap-2 flex-wrap mb-2">
             <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full" data-ja="# 貿易DX" data-en="# Trade DX"># 貿易DX</span>
@@ -1149,7 +1149,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
       </a>
 
-      <a href="/blog/gafam-ai" data-category="other" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
+      <a href="/blog/gafam-ai" data-category="other" class="blog-card group block border border-[#E5E7EB] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
         <div class="bg-navy/05 px-5 py-4">
           <div class="flex gap-2 flex-wrap mb-2">
             <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full" data-ja="# その他" data-en="# Other"># その他</span>
@@ -1162,7 +1162,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
       </a>
 
-      <a href="/blog/logistics-dx" data-category="logistics" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
+      <a href="/blog/logistics-dx" data-category="logistics" class="blog-card group block border border-[#E5E7EB] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
         <div class="bg-navy/05 px-5 py-4">
           <div class="flex gap-2 flex-wrap mb-2">
             <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full" data-ja="# 物流DX" data-en="# Logistics DX"># 物流DX</span>
@@ -1175,7 +1175,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
       </a>
 
-      <a href="/blog/china-logistics-dx" data-category="logistics" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
+      <a href="/blog/china-logistics-dx" data-category="logistics" class="blog-card group block border border-[#E5E7EB] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
         <div class="bg-navy/05 px-5 py-4">
           <div class="flex gap-2 flex-wrap mb-2">
             <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full" data-ja="# 物流DX" data-en="# Logistics DX"># 物流DX</span>
@@ -1189,7 +1189,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
       </a>
 
-      <a href="/blog/dx-consulting-guide" data-category="ai-dx" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
+      <a href="/blog/dx-consulting-guide" data-category="ai-dx" class="blog-card group block border border-[#E5E7EB] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
         <div class="bg-navy/05 px-5 py-4">
           <div class="flex gap-2 flex-wrap mb-2">
             <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full" data-ja="# AI・DX戦略" data-en="# AI &amp; DX Strategy"># AI・DX戦略</span>
@@ -1202,7 +1202,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
       </a>
 
-      <a href="/blog/trade-dx-ai-agent" data-category="trade-dx" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
+      <a href="/blog/trade-dx-ai-agent" data-category="trade-dx" class="blog-card group block border border-[#E5E7EB] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
         <div class="bg-navy/05 px-5 py-4">
           <div class="flex gap-2 flex-wrap mb-2">
             <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full" data-ja="# 貿易DX" data-en="# Trade DX"># 貿易DX</span>
@@ -1216,7 +1216,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
       </a>
 
-      <a href="/blog/pfas-chemsherpa-guide" data-category="compliance" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
+      <a href="/blog/pfas-chemsherpa-guide" data-category="compliance" class="blog-card group block border border-[#E5E7EB] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
         <div class="bg-navy/05 px-5 py-4">
           <div class="flex gap-2 flex-wrap mb-2">
             <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full" data-ja="# コンプライアンス" data-en="# Compliance"># コンプライアンス</span>
@@ -1229,7 +1229,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
       </a>
 
-      <a href="/blog/pfas-global-regulation-2026" data-category="compliance" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
+      <a href="/blog/pfas-global-regulation-2026" data-category="compliance" class="blog-card group block border border-[#E5E7EB] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
         <div class="bg-navy/05 px-5 py-4">
           <div class="flex gap-2 flex-wrap mb-2">
             <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full" data-ja="# コンプライアンス" data-en="# Compliance"># コンプライアンス</span>
@@ -1243,7 +1243,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
       </a>
 
-      <a href="/blog/global-it-organization-model" data-category="it-org" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
+      <a href="/blog/global-it-organization-model" data-category="it-org" class="blog-card group block border border-[#E5E7EB] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
         <div class="bg-navy/05 px-5 py-4">
           <div class="flex gap-2 flex-wrap mb-2">
             <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full" data-ja="# IT組織" data-en="# IT Organization"># IT組織</span>
@@ -1257,7 +1257,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
       </a>
 
-      <a href="/blog/customs-dx-guide" data-category="trade-dx" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
+      <a href="/blog/customs-dx-guide" data-category="trade-dx" class="blog-card group block border border-[#E5E7EB] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
         <div class="bg-navy/05 px-5 py-4">
           <div class="flex gap-2 flex-wrap mb-2">
             <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full" data-ja="# 貿易DX" data-en="# Trade DX"># 貿易DX</span>
@@ -1270,7 +1270,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
       </a>
 
-      <a href="/blog/hs-code-guide" data-category="trade-dx" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
+      <a href="/blog/hs-code-guide" data-category="trade-dx" class="blog-card group block border border-[#E5E7EB] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
         <div class="bg-navy/05 px-5 py-4">
           <div class="flex gap-2 flex-wrap mb-2">
             <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full" data-ja="# 貿易DX" data-en="# Trade DX"># 貿易DX</span>
@@ -1283,7 +1283,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
       </a>
 
-      <a href="/blog/trade-dx-guide" data-category="trade-dx" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
+      <a href="/blog/trade-dx-guide" data-category="trade-dx" class="blog-card group block border border-[#E5E7EB] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
         <div class="bg-navy/05 px-5 py-4">
           <div class="flex gap-2 flex-wrap mb-2">
             <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full" data-ja="# 貿易DX" data-en="# Trade DX"># 貿易DX</span>
@@ -1296,7 +1296,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
       </a>
 
-      <a href="/blog/trade-dx-complete-guide" data-category="trade-dx" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
+      <a href="/blog/trade-dx-complete-guide" data-category="trade-dx" class="blog-card group block border border-[#E5E7EB] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
         <div class="bg-navy/05 px-5 py-4">
           <div class="flex gap-2 flex-wrap mb-2">
             <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full" data-ja="# 貿易DX" data-en="# Trade DX"># 貿易DX</span>
@@ -1309,7 +1309,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
       </a>
 
-      <a href="/blog/trade-operations-overview" data-category="trade-dx" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
+      <a href="/blog/trade-operations-overview" data-category="trade-dx" class="blog-card group block border border-[#E5E7EB] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
         <div class="bg-navy/05 px-5 py-4">
           <div class="flex gap-2 flex-wrap mb-2">
             <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full" data-ja="# 貿易DX" data-en="# Trade DX"># 貿易DX</span>
@@ -1322,7 +1322,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
       </a>
 
-      <a href="/blog/trade-dx-success-failure" data-category="trade-dx" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
+      <a href="/blog/trade-dx-success-failure" data-category="trade-dx" class="blog-card group block border border-[#E5E7EB] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
         <div class="bg-navy/05 px-5 py-4">
           <div class="flex gap-2 flex-wrap mb-2">
             <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full" data-ja="# 貿易DX" data-en="# Trade DX"># 貿易DX</span>
@@ -1336,7 +1336,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
       </a>
 
-      <a href="/blog/ai-trade-automation" data-category="trade-dx" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
+      <a href="/blog/ai-trade-automation" data-category="trade-dx" class="blog-card group block border border-[#E5E7EB] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
         <div class="bg-navy/05 px-5 py-4">
           <div class="flex gap-2 flex-wrap mb-2">
             <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full" data-ja="# 貿易DX" data-en="# Trade DX"># 貿易DX</span>
@@ -1350,7 +1350,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
       </a>
 
-      <a href="/blog/chemical-import-automation" data-category="compliance" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
+      <a href="/blog/chemical-import-automation" data-category="compliance" class="blog-card group block border border-[#E5E7EB] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
         <div class="bg-navy/05 px-5 py-4">
           <div class="flex gap-2 flex-wrap mb-2">
             <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full" data-ja="# コンプライアンス" data-en="# Compliance"># コンプライアンス</span>
@@ -1364,7 +1364,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
       </a>
 
-      <a href="/blog/ai-customs-clearance" data-category="trade-dx" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
+      <a href="/blog/ai-customs-clearance" data-category="trade-dx" class="blog-card group block border border-[#E5E7EB] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
         <div class="bg-navy/05 px-5 py-4">
           <div class="flex gap-2 flex-wrap mb-2">
             <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full" data-ja="# 貿易DX" data-en="# Trade DX"># 貿易DX</span>
@@ -1422,7 +1422,7 @@ html[lang="en"] section p { font-size: 0.95em; }
 </section>
 
 <!-- ─── CONTACT ─────────────────────────────────────────── -->
-<section class="reveal py-24 px-6 md:px-10 bg-slate-warm border-t border-[#E2E0DA]" id="contact">
+<section class="reveal py-24 px-6 md:px-10 bg-slate-warm border-t border-[#E5E7EB]" id="contact">
   <div class="max-w-5xl mx-auto">
     <p class="display text-[.67rem] font-medium tracking-[.2em] uppercase text-gold mb-3" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</p>
     <h2 class="serif text-[clamp(1.6rem,3vw,2.4rem)] font-medium text-ink leading-snug mb-14" data-ja="まずは話してみる" data-en="Let's Talk">まずは話してみる</h2>
@@ -1430,7 +1430,7 @@ html[lang="en"] section p { font-size: 0.95em; }
     <div class="grid md:grid-cols-2 gap-16 items-start">
       <!-- Left info -->
       <div class="flex flex-col gap-6">
-        <div class="bg-white border border-[#E2E0DA] p-6 rounded-sm">
+        <div class="bg-white border border-[#E5E7EB] p-6 rounded-sm">
           <p class="text-[.85rem] text-ink-mid leading-[1.85]" data-ja="依頼内容が具体化していない段階でも対応します。現状をお聞きした上で、適切な支援内容をご提案します。" data-en="We're happy to help even if your requirements aren't fully defined. We'll listen to your situation and recommend the right approach.">依頼内容が具体化していない段階でも対応します。現状をお聞きした上で、適切な支援内容をご提案します。</p>
           <p class="text-[.85rem] text-ink-mid leading-[1.85] mt-3" data-ja="内容を確認の上、通常1〜2営業日以内にご返信します。" data-en="We typically respond within 1-2 business days.">内容を確認の上、通常1〜2営業日以内にご返信します。</p>
         </div>
@@ -1459,31 +1459,31 @@ html[lang="en"] section p { font-size: 0.95em; }
       <form id="contact-form" action="https://formspree.io/f/xpqopzdj" method="POST" class="flex flex-col gap-4">
         <div class="flex flex-col gap-1.5">
           <label class="display text-[.74rem] font-medium text-ink tracking-wide" data-ja-html="お名前 <span class='text-gold text-[.68rem]'>*</span>" data-en-html="Name <span class='text-gold text-[.68rem]'>*</span>">お名前 <span class="text-gold text-[.68rem]">*</span></label>
-          <input type="text" name="name" placeholder="山田 太郎" data-ja-placeholder="山田 太郎" data-en-placeholder="Your Name" class="font-sans text-[.85rem] text-ink bg-white border border-[#E2E0DA] px-3.5 py-2.5 rounded-sm outline-none focus:border-navy/40 placeholder:text-ink-light transition-colors">
+          <input type="text" name="name" placeholder="山田 太郎" data-ja-placeholder="山田 太郎" data-en-placeholder="Your Name" class="font-sans text-[.85rem] text-ink bg-white border border-[#E5E7EB] px-3.5 py-2.5 rounded-sm outline-none focus:border-navy/40 placeholder:text-ink-light transition-colors">
         </div>
         <div class="flex flex-col gap-1.5">
           <label class="display text-[.74rem] font-medium text-ink tracking-wide" data-ja="会社名 / 屋号" data-en="Company Name">会社名 / 屋号</label>
-          <input type="text" name="company" placeholder="株式会社◯◯◯" data-ja-placeholder="株式会社◯◯◯" data-en-placeholder="Company Name" class="font-sans text-[.85rem] text-ink bg-white border border-[#E2E0DA] px-3.5 py-2.5 rounded-sm outline-none focus:border-navy/40 placeholder:text-ink-light transition-colors">
+          <input type="text" name="company" placeholder="株式会社◯◯◯" data-ja-placeholder="株式会社◯◯◯" data-en-placeholder="Company Name" class="font-sans text-[.85rem] text-ink bg-white border border-[#E5E7EB] px-3.5 py-2.5 rounded-sm outline-none focus:border-navy/40 placeholder:text-ink-light transition-colors">
         </div>
         <div class="flex flex-col gap-1.5">
           <label class="display text-[.74rem] font-medium text-ink tracking-wide" data-ja-html="メールアドレス <span class='text-gold text-[.68rem]'>*</span>" data-en-html="Email <span class='text-gold text-[.68rem]'>*</span>">メールアドレス <span class="text-gold text-[.68rem]">*</span></label>
-          <input type="email" name="email" placeholder="your@email.com" class="font-sans text-[.85rem] text-ink bg-white border border-[#E2E0DA] px-3.5 py-2.5 rounded-sm outline-none focus:border-navy/40 placeholder:text-ink-light transition-colors">
+          <input type="email" name="email" placeholder="your@email.com" class="font-sans text-[.85rem] text-ink bg-white border border-[#E5E7EB] px-3.5 py-2.5 rounded-sm outline-none focus:border-navy/40 placeholder:text-ink-light transition-colors">
         </div>
         <div class="flex flex-col gap-1.5">
           <label class="display text-[.74rem] font-medium text-ink tracking-wide" data-ja-html="ご相談内容 <span class='text-gold text-[.68rem]'>*</span>" data-en-html="Message <span class='text-gold text-[.68rem]'>*</span>">ご相談内容 <span class="text-gold text-[.68rem]">*</span></label>
-          <textarea name="message" rows="4" placeholder="ご状況・ご検討内容をご記入ください。具体的な依頼内容が決まっていなくても構いません。" data-ja-placeholder="ご状況・ご検討内容をご記入ください。具体的な依頼内容が決まっていなくても構いません。" data-en-placeholder="Please describe your situation or what you're considering. You don't need a specific brief." class="font-sans text-[.85rem] text-ink bg-white border border-[#E2E0DA] px-3.5 py-2.5 rounded-sm outline-none focus:border-navy/40 placeholder:text-ink-light resize-y transition-colors leading-relaxed"></textarea>
+          <textarea name="message" rows="4" placeholder="ご状況・ご検討内容をご記入ください。具体的な依頼内容が決まっていなくても構いません。" data-ja-placeholder="ご状況・ご検討内容をご記入ください。具体的な依頼内容が決まっていなくても構いません。" data-en-placeholder="Please describe your situation or what you're considering. You don't need a specific brief." class="font-sans text-[.85rem] text-ink bg-white border border-[#E5E7EB] px-3.5 py-2.5 rounded-sm outline-none focus:border-navy/40 placeholder:text-ink-light resize-y transition-colors leading-relaxed"></textarea>
         </div>
         <div class="grid grid-cols-2 gap-3">
           <div class="flex flex-col gap-1.5">
             <label class="display text-[.74rem] font-medium text-ink tracking-wide" data-ja="依頼予定時期" data-en="Expected Timeline">依頼予定時期</label>
-            <select name="timeline" class="font-sans text-[.82rem] text-ink bg-white border border-[#E2E0DA] px-3 py-2.5 rounded-sm outline-none focus:border-navy/40 appearance-none cursor-pointer" data-ja-options="選択,1ヶ月以内,1〜3ヶ月,3〜6ヶ月,未定" data-en-options="Select,Within 1 month,1-3 months,3-6 months,TBD">
+            <select name="timeline" class="font-sans text-[.82rem] text-ink bg-white border border-[#E5E7EB] px-3 py-2.5 rounded-sm outline-none focus:border-navy/40 appearance-none cursor-pointer" data-ja-options="選択,1ヶ月以内,1〜3ヶ月,3〜6ヶ月,未定" data-en-options="Select,Within 1 month,1-3 months,3-6 months,TBD">
               <option disabled selected>選択</option>
               <option>1ヶ月以内</option><option>1〜3ヶ月</option><option>3〜6ヶ月</option><option>未定</option>
             </select>
           </div>
           <div class="flex flex-col gap-1.5">
             <label class="display text-[.74rem] font-medium text-ink tracking-wide" data-ja="予算感（任意）" data-en="Budget (optional)">予算感（任意）</label>
-            <select name="budget" class="font-sans text-[.82rem] text-ink bg-white border border-[#E2E0DA] px-3 py-2.5 rounded-sm outline-none focus:border-navy/40 appearance-none cursor-pointer" data-ja-options="おおよそで,〜50万円,50〜100万,100〜300万,300万〜,未定" data-en-options="Approximate,Up to $5K,5K-10K,$10K-30K,$30K+,TBD">
+            <select name="budget" class="font-sans text-[.82rem] text-ink bg-white border border-[#E5E7EB] px-3 py-2.5 rounded-sm outline-none focus:border-navy/40 appearance-none cursor-pointer" data-ja-options="おおよそで,〜50万円,50〜100万,100〜300万,300万〜,未定" data-en-options="Approximate,Up to $5K,5K-10K,$10K-30K,$30K+,TBD">
               <option disabled selected>おおよそで</option>
               <option>〜50万円</option><option>50〜100万</option><option>100〜300万</option><option>300万〜</option><option>未定</option>
             </select>
