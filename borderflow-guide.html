@@ -7,7 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:"Noto Sans JP",sans-serif;background:#0b1632;color:#f0f2f7;-webkit-font-smoothing:antialiased}
+body{font-family:"Noto Sans JP",sans-serif;background:#0d0f14;color:#f0f2f7;-webkit-font-smoothing:antialiased}
 a{color:#d4b978;text-decoration:none}a:hover{text-decoration:underline}
 .wrap{max-width:920px;margin:0 auto;padding:0 20px}
 
@@ -27,7 +27,7 @@ a{color:#d4b978;text-decoration:none}a:hover{text-decoration:underline}
 
 /* Feature cards */
 .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:16px}
-.feat{background:#161d33;border:1px solid #243050;border-radius:14px;padding:22px 18px;transition:.2s;position:relative;overflow:hidden}
+.feat{background:#16181f;border:1px solid #252830;border-radius:14px;padding:22px 18px;transition:.2s;position:relative;overflow:hidden}
 .feat:hover{border-color:#3a4a70;transform:translateY(-2px)}
 .feat .f-icon{font-size:28px;margin-bottom:10px}
 .feat h3{font-size:14px;font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:6px}
@@ -39,7 +39,7 @@ a{color:#d4b978;text-decoration:none}a:hover{text-decoration:underline}
 
 /* Pattern grid */
 .pat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
-.pat-card{background:#161d33;border:1px solid #243050;border-radius:12px;padding:16px;text-align:center;transition:.15s}
+.pat-card{background:#16181f;border:1px solid #252830;border-radius:12px;padding:16px;text-align:center;transition:.15s}
 .pat-card:hover{border-color:#d4b978}
 .pat-card .p-icon{font-size:24px;margin-bottom:6px}
 .pat-card h4{font-size:13px;font-weight:700;margin-bottom:4px}
@@ -47,43 +47,43 @@ a{color:#d4b978;text-decoration:none}a:hover{text-decoration:underline}
 .pat-card .p-steps{font-size:9px;color:#60a5fa;font-weight:600;margin-top:6px}
 
 /* AI Agent highlight */
-.agent-box{background:linear-gradient(135deg,#0f1d3d,#162040);border:1px solid #d4b97840;border-radius:16px;padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin-bottom:40px}
+.agent-box{background:linear-gradient(135deg,#0e1118,#131720);border:1px solid #d4b97840;border-radius:16px;padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin-bottom:40px}
 .agent-box h3{font-size:20px;font-weight:900;margin-bottom:10px;display:flex;align-items:center;gap:10px}
 .agent-box p{font-size:12px;color:#8892a8;line-height:1.8;margin-bottom:14px}
 .agent-list{list-style:none;display:flex;flex-direction:column;gap:8px}
 .agent-list li{font-size:12px;color:#c8ccd4;display:flex;align-items:flex-start;gap:8px;line-height:1.5}
 .agent-list li::before{content:"→";color:#d4b978;font-weight:700;flex-shrink:0}
-.chat-demo{background:#0b1632;border:1px solid #243050;border-radius:12px;overflow:hidden}
-.chat-demo-head{background:#0C2340;color:#fff;padding:10px 14px;font-size:12px;font-weight:700;display:flex;align-items:center;gap:8px}
+.chat-demo{background:#0d0f14;border:1px solid #252830;border-radius:12px;overflow:hidden}
+.chat-demo-head{background:#0e1120;color:#fff;padding:10px 14px;font-size:12px;font-weight:700;display:flex;align-items:center;gap:8px}
 .chat-demo-msgs{padding:12px}
 .cdm{padding:8px 12px;border-radius:10px;font-size:11px;line-height:1.6;margin-bottom:8px;max-width:85%}
 .cdm-ai{background:rgba(59,130,246,.1);color:#c8ccd4}
-.cdm-user{background:#0C2340;color:#fff;margin-left:auto}
-.cdm-chip{display:inline-block;padding:3px 8px;background:#1c2a48;border:1px solid #3a4a70;border-radius:8px;font-size:9px;color:#60a5fa;margin:2px 3px 2px 0}
+.cdm-user{background:#0e1120;color:#fff;margin-left:auto}
+.cdm-chip{display:inline-block;padding:3px 8px;background:#1c1f28;border:1px solid #3a4a70;border-radius:8px;font-size:9px;color:#60a5fa;margin:2px 3px 2px 0}
 
 /* Impact chart */
 .impact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:32px}
-.impact-card{background:#161d33;border:1px solid #243050;border-radius:14px;padding:24px;text-align:center}
+.impact-card{background:#16181f;border:1px solid #252830;border-radius:14px;padding:24px;text-align:center}
 .impact-card .ic-num{font-size:40px;font-weight:900;color:#d4b978;line-height:1}
 .impact-card .ic-lbl{font-size:12px;color:#8892a8;margin-top:6px}
 .impact-card .ic-sub{font-size:10px;color:#5a6178;margin-top:4px}
 .chart-wrap{margin-bottom:32px}
 .chart-row{display:flex;align-items:center;gap:10px;margin-bottom:6px}
 .chart-label{width:140px;font-size:11px;color:#8892a8;text-align:right;flex-shrink:0}
-.chart-bar-bg{flex:1;height:24px;background:#1c2a48;border-radius:4px;overflow:hidden;position:relative;display:flex}
+.chart-bar-bg{flex:1;height:24px;background:#1c1f28;border-radius:4px;overflow:hidden;position:relative;display:flex}
 .chart-bar-ai{height:100%;background:linear-gradient(90deg,#3b82f6,#60a5fa);border-radius:4px 0 0 4px;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;color:#fff;transition:width .6s ease}
-.chart-bar-manual{height:100%;background:#243050;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:600;color:#5a6178}
+.chart-bar-manual{height:100%;background:#252830;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:600;color:#5a6178}
 .chart-pct{width:40px;font-size:11px;font-weight:700;color:#60a5fa;text-align:right;flex-shrink:0}
 .chart-legend{display:flex;gap:16px;justify-content:center;margin-top:14px;font-size:11px;color:#8892a8}
 .chart-legend span{display:flex;align-items:center;gap:5px}
 .chart-legend .dot{width:10px;height:10px;border-radius:2px}
-.dot-ai{background:linear-gradient(135deg,#3b82f6,#60a5fa)}.dot-manual{background:#243050}
+.dot-ai{background:linear-gradient(135deg,#3b82f6,#60a5fa)}.dot-manual{background:#252830}
 
 .before-after{display:grid;grid-template-columns:1fr auto 1fr;gap:20px;align-items:center;margin-bottom:16px}
-.ba-col{background:#161d33;border:1px solid #243050;border-radius:14px;padding:20px;text-align:center}
+.ba-col{background:#16181f;border:1px solid #252830;border-radius:14px;padding:20px;text-align:center}
 .ba-col h4{font-size:13px;font-weight:700;margin-bottom:12px;color:#8892a8}
 .ba-col.after h4{color:#d4b978}
-.ba-item{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #1c2a48;font-size:11px;color:#8892a8}
+.ba-item{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #1c1f28;font-size:11px;color:#8892a8}
 .ba-item .ba-v{font-weight:700;color:#f0f2f7}
 .ba-col.after .ba-item .ba-v{color:#34d399}
 .ba-arrow{font-size:28px;color:#d4b978;font-weight:900}
@@ -93,14 +93,14 @@ a{color:#d4b978;text-decoration:none}a:hover{text-decoration:underline}
 
 /* Steps accordion (preserved) */
 .tabs{display:flex;gap:8px;margin-bottom:24px;justify-content:center;flex-wrap:wrap}
-.tab{padding:10px 24px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;border:1px solid #243050;background:transparent;color:#8892a8;transition:.15s}
+.tab{padding:10px 24px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;border:1px solid #252830;background:transparent;color:#8892a8;transition:.15s}
 .tab.on{background:#d4b978;color:#0b1632;border-color:#d4b978}
 .steps{display:flex;flex-direction:column;gap:4px}
-.step{background:#161d33;border:1px solid #243050;border-radius:12px;overflow:hidden;transition:.15s}
+.step{background:#16181f;border:1px solid #252830;border-radius:12px;overflow:hidden;transition:.15s}
 .step:hover{border-color:#3a4a70}
 .step-h{padding:12px 16px;cursor:pointer;display:flex;align-items:center;gap:12px}
 .sn{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex-shrink:0}
-.sn-std{background:#1c2a48;color:#8892a8}
+.sn-std{background:#1c1f28;color:#8892a8}
 .sn-ai{background:rgba(59,130,246,.15);color:#60a5fa}
 .sn-new{background:rgba(212,185,120,.12);color:#d4b978}
 .si{flex:1}
@@ -109,10 +109,10 @@ a{color:#d4b978;text-decoration:none}a:hover{text-decoration:underline}
 .badge{font-size:8px;padding:2px 6px;border-radius:3px;font-weight:700}
 .b-ai{background:rgba(59,130,246,.12);color:#60a5fa}
 .b-nw{background:rgba(212,185,120,.12);color:#d4b978}
-.b-lp{font-size:7px;padding:2px 5px;border-radius:3px;background:#1c2a48;color:#5a6178;flex-shrink:0}
+.b-lp{font-size:7px;padding:2px 5px;border-radius:3px;background:#1c1f28;color:#5a6178;flex-shrink:0}
 .arrow{color:#5a6178;font-size:14px;flex-shrink:0;transition:transform .15s}
 .step.open .arrow{transform:rotate(90deg)}
-.step-b{border-top:1px solid #243050;padding:14px 16px 14px 60px;display:none}
+.step-b{border-top:1px solid #252830;padding:14px 16px 14px 60px;display:none}
 .step.open .step-b{display:block}
 .fl{display:grid;grid-template-columns:1fr 1fr;gap:5px 16px}
 .fi{display:flex;align-items:flex-start;gap:6px;font-size:11px;color:#8892a8;line-height:1.5}
@@ -121,10 +121,10 @@ a{color:#d4b978;text-decoration:none}a:hover{text-decoration:underline}
 .iot{font-size:8px;padding:2px 7px;border-radius:4px;font-weight:600}
 .i-in{background:rgba(59,130,246,.1);color:#60a5fa}
 .i-out{background:rgba(29,158,117,.1);color:#34d399}
-.cn{height:10px;display:flex;justify-content:center}.cl{width:1px;height:100%;background:#243050}
+.cn{height:10px;display:flex;justify-content:center}.cl{width:1px;height:100%;background:#252830}
 
 /* Footer CTA */
-.cta-bar{text-align:center;padding:48px 20px;border-top:1px solid #243050}
+.cta-bar{text-align:center;padding:48px 20px;border-top:1px solid #252830}
 .cta-bar h2{font-size:20px;font-weight:900;margin-bottom:8px}
 .cta-bar p{font-size:13px;color:#8892a8;margin-bottom:20px}
 
@@ -191,7 +191,7 @@ a{color:#d4b978;text-decoration:none}a:hover{text-decoration:underline}
       <div class="chat-demo-msgs">
         <div class="cdm cdm-ai">こんにちは！BorderFlow AIアシスタントです。<br>案件の登録・検索・書類作成をお手伝いします。</div>
         <div class="cdm cdm-user">A社の案件を見せて</div>
-        <div class="cdm cdm-ai">🔍 「A Chemical Corp.」の案件が見つかりました。<br><br>TRD-001 | 輸入在庫販売 | USD 284,000<br><button style="margin-top:6px;padding:3px 10px;background:#0C2340;color:#fff;border:none;border-radius:4px;font-size:9px;font-weight:600">→ 画面を開く</button></div>
+        <div class="cdm cdm-ai">🔍 「A Chemical Corp.」の案件が見つかりました。<br><br>TRD-001 | 輸入在庫販売 | USD 284,000<br><button style="margin-top:6px;padding:3px 10px;background:#0e1120;color:#fff;border:none;border-radius:4px;font-size:9px;font-weight:600">→ 画面を開く</button></div>
         <div style="padding:4px 0"><span class="cdm-chip">契約情報</span><span class="cdm-chip">与信情報</span><span class="cdm-chip">損益</span><span class="cdm-chip">書類作成</span></div>
       </div>
     </div>
