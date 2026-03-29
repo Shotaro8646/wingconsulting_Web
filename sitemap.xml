@@ -7,6 +7,13 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <!-- ─── ツール ─── -->
+  <url>
+    <loc>https://wingconsulting.org/dx-assessment</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
   <!-- ─── プロダクト・LP ─── -->
   <url>
     <loc>https://wingconsulting.org/borderflow-guide</loc>
