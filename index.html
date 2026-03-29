@@ -107,7 +107,7 @@
 </script>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Outfit:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Outfit:wght@300;400;500;600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
 <script>
 tailwind.config = {
   theme: {
@@ -122,6 +122,7 @@ tailwind.config = {
         serif:  ['"Cormorant Garamond"', 'serif'],
         sans:   ['"Noto Sans JP"', 'sans-serif'],
         display:['"Outfit"', 'sans-serif'],
+        dmsans: ['"DM Sans"', 'sans-serif'],
       },
     }
   }
@@ -187,9 +188,34 @@ html[lang="en"] .ja-only {
   display: none !important;
 }
 
-/* English font override */
-html[lang="en"] body { font-family: 'Inter', sans-serif; }
-html[lang="en"] .display { font-family: 'Inter', sans-serif; }
+/* ── Japanese typography ── */
+html[lang="ja"] body {
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.85;
+  letter-spacing: .02em;
+}
+html[lang="ja"] p, html[lang="ja"] li { word-break: break-all; }
+
+/* ── English typography ── */
+html[lang="en"] body {
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.65;
+  letter-spacing: -.01em;
+  font-size: 15.5px;
+}
+html[lang="en"] .display { font-family: 'DM Sans', sans-serif; letter-spacing: .02em; }
+html[lang="en"] .serif { font-family: 'Cormorant Garamond', serif; letter-spacing: .02em; }
+/* Tighten large headings in EN */
+html[lang="en"] h1, html[lang="en"] h2 { letter-spacing: -.02em; line-height: 1.2; }
+/* Loosen caps/label tracking */
+html[lang="en"] [class*="tracking-[.2em]"],
+html[lang="en"] [class*="tracking-[.22em]"] { letter-spacing: .15em; }
+/* Slightly larger section body text */
+html[lang="en"] section p { font-size: 0.95em; }
+/* Reduce excessive padding in EN on mobile */
+@media (max-width: 768px) {
+  html[lang="en"] section { padding-top: 4.5rem; padding-bottom: 4.5rem; }
+}
 </style>
 <!-- Google Analytics GA4 | 取得後に G-KN7NWHFK9G を置き換える -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
