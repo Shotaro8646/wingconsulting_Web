@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="ja" class="scroll-smooth">
+
+<html class="scroll-smooth" lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Chemical Import Automation with AI | Wing Blog</title>
-<meta name="description" content="Automate chemical regulatory checks, SDS management with AI.">
-<meta name="keywords" content="化学品 輸入 自動化, 化審法 毒劇法 自動化, SDS 自動読み取り, CAS番号 法規制チェック, HS分類 化学品, 輸入 コンプライアンス 自動化, 化学物質 輸入管理, 消防法 危険物">
-<meta property="og:title" content="Chemical Import Automation: Regulations, SDS & AI">
-<meta property="og:description" content="Automate chemical regulatory checks, SDS management with AI.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://wingconsulting.org/blog/chemical-import-automation">
-<meta property="og:locale" content="ja_JP">
-<meta property="og:image" content="https://wingconsulting.org/images/og-default.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:site_name" content="Wing">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Chemical Import Automation: Regulations, SDS & AI">
-<meta name="twitter:description" content="Automate chemical regulatory checks, SDS management with AI.">
-<meta name="twitter:image" content="https://wingconsulting.org/images/og-default.png">
-<link rel="canonical" href="https://wingconsulting.org/blog/chemical-import-automation">
+<meta content="Automate chemical regulatory checks, SDS management with AI." name="description"/>
+<meta content="化学品 輸入 自動化, 化審法 毒劇法 自動化, SDS 自動読み取り, CAS番号 法規制チェック, HS分類 化学品, 輸入 コンプライアンス 自動化, 化学物質 輸入管理, 消防法 危険物" name="keywords"/>
+<meta content="Chemical Import Automation: Regulations, SDS &amp; AI" property="og:title"/>
+<meta content="Automate chemical regulatory checks, SDS management with AI." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://wingconsulting.org/blog/chemical-import-automation" property="og:url"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="https://wingconsulting.org/images/og-default.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Wing" property="og:site_name"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Chemical Import Automation: Regulations, SDS &amp; AI" name="twitter:title"/>
+<meta content="Automate chemical regulatory checks, SDS management with AI." name="twitter:description"/>
+<meta content="https://wingconsulting.org/images/og-default.png" name="twitter:image"/>
+<link href="https://wingconsulting.org/blog/chemical-import-automation" rel="canonical"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -109,14 +110,14 @@ article tr:nth-child(even) td { background:#F7F6F3; }
 .diag-checklist-item .chk { color:#A8965A; font-weight:700; flex-shrink:0; margin-top:0.05rem; }
 </style>
 <!-- Google Analytics GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-KN7NWHFK9G');
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;family=Noto+Sans+JP:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
 <style id="font-override">
   body, p, li, td, th, span, div {
     font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif !important;
@@ -133,186 +134,382 @@ article tr:nth-child(even) td { background:#F7F6F3; }
 </style>
 </head>
 <body class="bg-slate-warm text-ink">
-
 <!-- ─── HEADER ─────────────────────────────────────────── -->
 <header class="bg-navy h-[60px] flex items-center px-6 md:px-10 sticky top-0 z-50">
-  <div class="max-w-5xl mx-auto w-full flex items-center justify-between">
-    <a href="/" class="leading-none">
-      <svg width="120" height="36" viewBox="0 0 120 36" fill="none" aria-label="Wing">
-        <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff"/>
-        <path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#fff" opacity=".32"/>
-        <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#fff">Wing</text>
-      </svg>
-    </a>
-    <div class="flex items-center gap-4">
-      <span class="display text-[.7rem] font-medium tracking-wider text-white/50">Blog</span>
-      <a href="/" class="text-[.75rem] text-white/70 hover:text-white transition-colors">← Home</a>
-    </div>
-  </div>
+<div class="max-w-5xl mx-auto w-full flex items-center justify-between">
+<a class="leading-none" href="/">
+<svg aria-label="Wing" fill="none" height="36" viewbox="0 0 120 36" width="120">
+<path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff"></path>
+<path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#fff" opacity=".32"></path>
+<text fill="#fff" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" x="46" y="25">Wing</text>
+</svg>
+</a>
+<div class="flex items-center gap-4">
+<span class="display text-[.7rem] font-medium tracking-wider text-white/50">Blog</span>
+<a class="text-[.75rem] text-white/70 hover:text-white transition-colors" href="/">← Home</a>
+</div>
+</div>
 </header>
-
 <!-- ─── ARTICLE ─────────────────────────────────────────── -->
 <main class="py-16 px-6 md:px-10">
-  <div class="max-w-3xl mx-auto">
-    <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3">Chemical Import</p>
-    <h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4">化学品輸入の自動化入門：<br>書類処理から法規制チェックまで</h1>
-    <div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2">
-      <time datetime="2026-03-28">2026.03.28</time>
-      <span>Wing編集部</span>
-    </div>
-    <div class="gold-rule mb-10"></div>
-
-    <article class="text-[.9rem] text-ink leading-[2] max-w-none">
-
-      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">化学品輸入は、なぜ「特に複雑」なのか</h2>
-      <p>化学品輸入は、他の品目カテゴリと比べて業務の複雑さが一段高い。その理由は3つある。</p>
-
-      <!-- DIAGRAM: 複雑性の3要因 -->
-      <div class="diag-wrap">
-        <div class="diag-label">化学品輸入が「特に複雑」な3つの理由</div>
-        <div class="diag-step-row">
-          <div class="diag-step-card">
-            <div class="step-num">01</div>
-            <div class="step-title">法規制の重層性</div>
-            <div class="step-body">一つの化学物質が化審法・毒劇法・消防法・輸入貿易管理令に同時に該当する。異なる根拠法に基づくチェックが並行して走る</div>
-          </div>
-          <div class="diag-step-card">
-            <div class="step-num">02</div>
-            <div class="step-title">物性・成分データの管理</div>
-            <div class="step-body">HS分類・法規制チェックに品目の成分情報・純度・物理化学的性状が必要。SDS・COAの書類ごとにフォーマットが異なり抽出・管理に工数がかかる</div>
-          </div>
-          <div class="diag-step-card">
-            <div class="step-num">03</div>
-            <div class="step-title">HS分類の専門性</div>
-            <div class="step-body">化学品のHS番号は構造・用途・純度で細分化。化学的知識と税関分類の経験が同時に必要で、誤分類は追徴課税・通関遅延のリスクに直結する</div>
-          </div>
-        </div>
-      </div>
-      <p class="diag-caption">[図] 化学品輸入が特に複雑な3つの構造的要因</p>
-
-      <p><strong>理由1：法規制の重層性</strong><br>
+<div class="max-w-3xl mx-auto" data-ja-html='&lt;p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3"&gt;Chemical Import&lt;/p&gt;
+&lt;h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4" data-ja-html="化学品輸入の自動化入門：&amp;lt;br/&amp;gt;書類処理から法規制チェックまで"&gt;化学品輸入の自動化入門：&lt;br/&gt;書類処理から法規制チェックまで&lt;/h1&gt;
+&lt;div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2"&gt;
+&lt;time datetime="2026-03-28"&gt;2026.03.28&lt;/time&gt;
+&lt;span&gt;Wing編集部&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="gold-rule mb-10"&gt;&lt;/div&gt;
+&lt;article class="text-[.9rem] text-ink leading-[2] max-w-none"&gt;
+&lt;h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4"&gt;化学品輸入は、なぜ「特に複雑」なのか&lt;/h2&gt;
+&lt;p data-ja="化学品輸入は、他の品目カテゴリと比べて業務の複雑さが一段高い。その理由は3つある。"&gt;化学品輸入は、他の品目カテゴリと比べて業務の複雑さが一段高い。その理由は3つある。&lt;/p&gt;
+&lt;!-- DIAGRAM: 複雑性の3要因 --&gt;
+&lt;div class="diag-wrap"&gt;
+&lt;div class="diag-label"&gt;化学品輸入が「特に複雑」な3つの理由&lt;/div&gt;
+&lt;div class="diag-step-row"&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;01&lt;/div&gt;
+&lt;div class="step-title"&gt;法規制の重層性&lt;/div&gt;
+&lt;div class="step-body"&gt;一つの化学物質が化審法・毒劇法・消防法・輸入貿易管理令に同時に該当する。異なる根拠法に基づくチェックが並行して走る&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;02&lt;/div&gt;
+&lt;div class="step-title"&gt;物性・成分データの管理&lt;/div&gt;
+&lt;div class="step-body"&gt;HS分類・法規制チェックに品目の成分情報・純度・物理化学的性状が必要。SDS・COAの書類ごとにフォーマットが異なり抽出・管理に工数がかかる&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;03&lt;/div&gt;
+&lt;div class="step-title"&gt;HS分類の専門性&lt;/div&gt;
+&lt;div class="step-body"&gt;化学品のHS番号は構造・用途・純度で細分化。化学的知識と税関分類の経験が同時に必要で、誤分類は追徴課税・通関遅延のリスクに直結する&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class="diag-caption" data-ja="[図] 化学品輸入が特に複雑な3つの構造的要因"&gt;[図] 化学品輸入が特に複雑な3つの構造的要因&lt;/p&gt;
+&lt;p data-ja-html="&amp;lt;strong&amp;gt;理由1：法規制の重層性&amp;lt;/strong&amp;gt;&amp;lt;br/&amp;gt;
+      一つの化学物質が複数の法令に同時に該当する。例えばある有機溶剤を輸入する場合、化審法（化学物質審査規制法）上の既存物質か新規物質かの確認、毒物及び劇物取締法（毒劇法）への該当確認、消防法上の危険物分類確認、場合によっては輸入貿易管理令への対応まで、異なる根拠法に基づくチェックが並行して走る。"&gt;&lt;strong&gt;理由1：法規制の重層性&lt;/strong&gt;&lt;br/&gt;
+      一つの化学物質が複数の法令に同時に該当する。例えばある有機溶剤を輸入する場合、化審法（化学物質審査規制法）上の既存物質か新規物質かの確認、毒物及び劇物取締法（毒劇法）への該当確認、消防法上の危険物分類確認、場合によっては輸入貿易管理令への対応まで、異なる根拠法に基づくチェックが並行して走る。&lt;/p&gt;
+&lt;p data-ja-html="&amp;lt;strong&amp;gt;理由2：物性・成分データの管理&amp;lt;/strong&amp;gt;&amp;lt;br/&amp;gt;
+      HSコード分類や法規制チェックには品目の成分情報・純度・物理化学的性状が必要になる。これらはサプライヤーから取得するSDS（安全データシート）やCOA（品質証明書）に記載されているが、書類ごとに形式が異なるため、データの抽出と管理に工数がかかる。"&gt;&lt;strong&gt;理由2：物性・成分データの管理&lt;/strong&gt;&lt;br/&gt;
+      HSコード分類や法規制チェックには品目の成分情報・純度・物理化学的性状が必要になる。これらはサプライヤーから取得するSDS（安全データシート）やCOA（品質証明書）に記載されているが、書類ごとに形式が異なるため、データの抽出と管理に工数がかかる。&lt;/p&gt;
+&lt;p data-ja-html="&amp;lt;strong&amp;gt;理由3：HS分類の専門性&amp;lt;/strong&amp;gt;&amp;lt;br/&amp;gt;
+      化学品のHS番号は化学物質の構造・用途・純度によって細分化されており、判断には化学的知識と税関分類の経験が同時に必要だ。分類を誤ると関税率の誤適用・追徴課税・通関遅延のリスクが生じる。"&gt;&lt;strong&gt;理由3：HS分類の専門性&lt;/strong&gt;&lt;br/&gt;
+      化学品のHS番号は化学物質の構造・用途・純度によって細分化されており、判断には化学的知識と税関分類の経験が同時に必要だ。分類を誤ると関税率の誤適用・追徴課税・通関遅延のリスクが生じる。&lt;/p&gt;
+&lt;h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4"&gt;自動化で変えられる領域&lt;/h2&gt;
+&lt;h3 class="text-[1rem] font-medium text-ink" data-ja="書類処理の自動化"&gt;書類処理の自動化&lt;/h3&gt;
+&lt;p data-ja-html="&amp;lt;strong&amp;gt;SDS・COAの自動読み取りと成分データ抽出&amp;lt;/strong&amp;gt;&amp;lt;br/&amp;gt;
+      化学品固有の書類であるSDS（安全データシート）とCOA（分析証明書）をAI-OCRで読み取り、成分名・CAS番号・純度・物理化学的性状を自動抽出する。これをシステムに登録することで、後続の法規制チェックへの連携が可能になる。"&gt;&lt;strong&gt;SDS・COAの自動読み取りと成分データ抽出&lt;/strong&gt;&lt;br/&gt;
+      化学品固有の書類であるSDS（安全データシート）とCOA（分析証明書）をAI-OCRで読み取り、成分名・CAS番号・純度・物理化学的性状を自動抽出する。これをシステムに登録することで、後続の法規制チェックへの連携が可能になる。&lt;/p&gt;
+&lt;p data-ja-html="&amp;lt;strong&amp;gt;Invoice・Packing Listの照合自動化&amp;lt;/strong&amp;gt;&amp;lt;br/&amp;gt;
+      数量・重量・品番の三点照合は、ルールが明確なため自動化の効果が高い。液体化学品では比重換算（重量↔容積）が必要な場合があるが、品目マスタに比重データを持たせることで自動計算に対応できる。"&gt;&lt;strong&gt;Invoice・Packing Listの照合自動化&lt;/strong&gt;&lt;br/&gt;
+      数量・重量・品番の三点照合は、ルールが明確なため自動化の効果が高い。液体化学品では比重換算（重量↔容積）が必要な場合があるが、品目マスタに比重データを持たせることで自動計算に対応できる。&lt;/p&gt;
+&lt;h3 class="text-[1rem] font-medium text-ink" data-ja="法規制チェックの自動化"&gt;法規制チェックの自動化&lt;/h3&gt;
+&lt;!-- DIAGRAM: 法規制チェック自動化フロー --&gt;
+&lt;div class="diag-wrap"&gt;
+&lt;div class="diag-label"&gt;化学品輸入 法規制チェック自動化フロー&lt;/div&gt;
+&lt;div class="diag-row"&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;①&lt;/span&gt;&lt;span&gt;&lt;strong&gt;化審法スクリーニング&lt;/strong&gt;&lt;br/&gt;CAS番号をもとに既存化学物質リストと照合。非該当の場合は新規届出フローを自動起動&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;②&lt;/span&gt;&lt;span&gt;&lt;strong&gt;毒劇法・消防法の自動判定&lt;/strong&gt;&lt;br/&gt;品目マスタの毒劇物フラグ・危険物分類をもとにアラートを自動発生。取扱注意事項も自動通知&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;③&lt;/span&gt;&lt;span&gt;&lt;strong&gt;輸出時の安全保障確認&lt;/strong&gt;&lt;br/&gt;外為法・EARに基づく該非判定。品目の規制対象フラグと仕向地・エンドユーザーのスクリーニングを組合せ&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class="diag-caption" data-ja="[図] 化学品輸入における法規制チェックの自動化フロー"&gt;[図] 化学品輸入における法規制チェックの自動化フロー&lt;/p&gt;
+&lt;p data-ja-html="&amp;lt;strong&amp;gt;化審法スクリーニング&amp;lt;/strong&amp;gt;&amp;lt;br/&amp;gt;
+      輸入品目のCAS番号をもとに、既存化学物質リストとの照合を自動実行する。既存物質に該当しない場合は新規化学物質の届出フローを自動起動する。"&gt;&lt;strong&gt;化審法スクリーニング&lt;/strong&gt;&lt;br/&gt;
+      輸入品目のCAS番号をもとに、既存化学物質リストとの照合を自動実行する。既存物質に該当しない場合は新規化学物質の届出フローを自動起動する。&lt;/p&gt;
+&lt;p data-ja-html="&amp;lt;strong&amp;gt;毒劇法・消防法の自動判定&amp;lt;/strong&amp;gt;&amp;lt;br/&amp;gt;
+      品目マスタに毒劇物該当フラグ・危険物分類を持たせ、輸入申告の際に自動でアラートを発生させる。取扱い上の注意事項（保管条件・運搬規制）も担当者に自動通知する。"&gt;&lt;strong&gt;毒劇法・消防法の自動判定&lt;/strong&gt;&lt;br/&gt;
+      品目マスタに毒劇物該当フラグ・危険物分類を持たせ、輸入申告の際に自動でアラートを発生させる。取扱い上の注意事項（保管条件・運搬規制）も担当者に自動通知する。&lt;/p&gt;
+&lt;p data-ja-html="&amp;lt;strong&amp;gt;輸出先への安全保障確認（輸出時）&amp;lt;/strong&amp;gt;&amp;lt;br/&amp;gt;
+      輸出案件では、外為法・EARに基づく該非判定が必要だ。品目の規制対象フラグと仕向地・エンドユーザーのスクリーニングを組み合わせることで、確認漏れを防ぐ。"&gt;&lt;strong&gt;輸出先への安全保障確認（輸出時）&lt;/strong&gt;&lt;br/&gt;
+      輸出案件では、外為法・EARに基づく該非判定が必要だ。品目の規制対象フラグと仕向地・エンドユーザーのスクリーニングを組み合わせることで、確認漏れを防ぐ。&lt;/p&gt;
+&lt;h3 class="text-[1rem] font-medium text-ink" data-ja="HSコード分類の補助"&gt;HSコード分類の補助&lt;/h3&gt;
+&lt;p data-ja="品名・成分・用途・純度をインプットとしてHS番号の候補を提示し、過去の申告実績と組み合わせて精度を高める。最終判断は担当者が行うが、調査工数を大幅に削減できる。"&gt;品名・成分・用途・純度をインプットとしてHS番号の候補を提示し、過去の申告実績と組み合わせて精度を高める。最終判断は担当者が行うが、調査工数を大幅に削減できる。&lt;/p&gt;
+&lt;h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4"&gt;導入にあたって整備すべきマスタデータ&lt;/h2&gt;
+&lt;p data-ja="化学品輸入の自動化を進める前提として、以下のマスタデータの整備が必要だ。"&gt;化学品輸入の自動化を進める前提として、以下のマスタデータの整備が必要だ。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th data-ja="マスタ"&gt;マスタ&lt;/th&gt;
+&lt;th data-ja="必要な項目"&gt;必要な項目&lt;/th&gt;
+&lt;th data-ja="用途"&gt;用途&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td data-ja-html="&amp;lt;strong&amp;gt;品目マスタ&amp;lt;/strong&amp;gt;"&gt;&lt;strong&gt;品目マスタ&lt;/strong&gt;&lt;/td&gt;
+&lt;td data-ja="品名、CAS番号、HSコード、毒劇物フラグ、危険物分類、比重"&gt;品名、CAS番号、HSコード、毒劇物フラグ、危険物分類、比重&lt;/td&gt;
+&lt;td data-ja="法規制チェック・自動分類"&gt;法規制チェック・自動分類&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td data-ja-html="&amp;lt;strong&amp;gt;取引先マスタ&amp;lt;/strong&amp;gt;"&gt;&lt;strong&gt;取引先マスタ&lt;/strong&gt;&lt;/td&gt;
+&lt;td data-ja="与信限度、格付け、制裁対象フラグ"&gt;与信限度、格付け、制裁対象フラグ&lt;/td&gt;
+&lt;td data-ja="与信チェック・輸出スクリーニング"&gt;与信チェック・輸出スクリーニング&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td data-ja-html="&amp;lt;strong&amp;gt;法規制マスタ&amp;lt;/strong&amp;gt;"&gt;&lt;strong&gt;法規制マスタ&lt;/strong&gt;&lt;/td&gt;
+&lt;td data-ja="法令名、チェック項目、対象CAS番号"&gt;法令名、チェック項目、対象CAS番号&lt;/td&gt;
+&lt;td data-ja="法規制チェックリスト自動展開"&gt;法規制チェックリスト自動展開&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p data-ja="既存の管理台帳やERP内のデータを棚卸しし、これらのマスタに変換することが自動化の第一歩になる。"&gt;既存の管理台帳やERP内のデータを棚卸しし、これらのマスタに変換することが自動化の第一歩になる。&lt;/p&gt;
+&lt;!-- DIAGRAM: マスタデータ整備の重要性 --&gt;
+&lt;div class="diag-wrap"&gt;
+&lt;div class="diag-label"&gt;化学品輸入自動化 ── マスタデータ整備の優先順位&lt;/div&gt;
+&lt;div class="diag-step-row"&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;1st&lt;/div&gt;
+&lt;div class="step-title"&gt;品目マスタ整備&lt;/div&gt;
+&lt;div class="step-body"&gt;CAS番号・HS番号・毒劇物フラグ・危険物分類・比重を品目ごとに登録。自動化の基盤となる最重要マスタ&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;2nd&lt;/div&gt;
+&lt;div class="step-title"&gt;法規制マスタ整備&lt;/div&gt;
+&lt;div class="step-body"&gt;化審法・毒劇法・消防法のチェック項目とCAS番号の対応表を構築。チェックリスト自動展開の根拠データ&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;3rd&lt;/div&gt;
+&lt;div class="step-title"&gt;取引先マスタ整備&lt;/div&gt;
+&lt;div class="step-body"&gt;与信情報・制裁対象フラグを付与。輸出スクリーニングと与信チェックの自動化に必要&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class="diag-caption" data-ja="[図] 化学品輸入自動化に必要なマスタデータ整備の優先順位"&gt;[図] 化学品輸入自動化に必要なマスタデータ整備の優先順位&lt;/p&gt;
+&lt;p data-ja="化学品輸入の自動化をゼロから設計したい方へ──BorderFlow AIはSDS読み取りから法規制チェックまで、化学品固有の業務フローに対応しています。"&gt;化学品輸入の自動化をゼロから設計したい方へ──BorderFlow AIはSDS読み取りから法規制チェックまで、化学品固有の業務フローに対応しています。&lt;/p&gt;
+&lt;!-- CTA --&gt;
+&lt;div class="mt-14 p-8 bg-navy text-white text-center rounded-sm"&gt;
+&lt;p class="display text-[.65rem] tracking-[.2em] uppercase text-gold mb-3"&gt;BorderFlow AI&lt;/p&gt;
+&lt;p class="text-[1.05rem] font-medium leading-snug mb-2" data-ja-html="化学品輸入の自動化を、&amp;lt;br/&amp;gt;ゼロから一緒に設計しませんか？"&gt;化学品輸入の自動化を、&lt;br/&gt;ゼロから一緒に設計しませんか？&lt;/p&gt;
+&lt;p class="text-[.78rem] text-white/60 mb-6" data-ja="SDS読み取りから化審法・毒劇法チェックまで、化学品固有の業務フローに対応します。"&gt;SDS読み取りから化審法・毒劇法チェックまで、化学品固有の業務フローに対応します。&lt;/p&gt;
+&lt;a class="inline-block bg-gold text-navy text-[.78rem] font-medium px-8 py-3 hover:bg-gold-light transition-colors" data-en="Contact Us" data-ja="お問い合わせ・ご相談" href="/#contact"&gt;お問い合わせ・ご相談&lt;/a&gt;
+&lt;/div&gt;
+&lt;/article&gt;'>
+<p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3">Chemical Import</p>
+<h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4" data-ja-html="化学品輸入の自動化入門：&lt;br/&gt;書類処理から法規制チェックまで">化学品輸入の自動化入門：<br/>書類処理から法規制チェックまで</h1>
+<div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2" data-ja-html='&lt;time datetime="2026-03-28"&gt;2026.03.28&lt;/time&gt;
+&lt;span&gt;Wing編集部&lt;/span&gt;'>
+<time datetime="2026-03-28">2026.03.28</time>
+<span data-en="Wing Editorial Team" data-ja="Wing編集部">Wing編集部</span>
+</div>
+<div class="gold-rule mb-10"></div>
+<article class="text-[.9rem] text-ink leading-[2] max-w-none">
+<h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4" data-ja="化学品輸入は、なぜ「特に複雑」なのか">化学品輸入は、なぜ「特に複雑」なのか</h2>
+<p data-ja="化学品輸入は、他の品目カテゴリと比べて業務の複雑さが一段高い。その理由は3つある。">化学品輸入は、他の品目カテゴリと比べて業務の複雑さが一段高い。その理由は3つある。</p>
+<!-- DIAGRAM: 複雑性の3要因 -->
+<div class="diag-wrap" data-ja-html='&lt;div class="diag-label"&gt;化学品輸入が「特に複雑」な3つの理由&lt;/div&gt;
+&lt;div class="diag-step-row"&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;01&lt;/div&gt;
+&lt;div class="step-title"&gt;法規制の重層性&lt;/div&gt;
+&lt;div class="step-body"&gt;一つの化学物質が化審法・毒劇法・消防法・輸入貿易管理令に同時に該当する。異なる根拠法に基づくチェックが並行して走る&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;02&lt;/div&gt;
+&lt;div class="step-title"&gt;物性・成分データの管理&lt;/div&gt;
+&lt;div class="step-body"&gt;HS分類・法規制チェックに品目の成分情報・純度・物理化学的性状が必要。SDS・COAの書類ごとにフォーマットが異なり抽出・管理に工数がかかる&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;03&lt;/div&gt;
+&lt;div class="step-title"&gt;HS分類の専門性&lt;/div&gt;
+&lt;div class="step-body"&gt;化学品のHS番号は構造・用途・純度で細分化。化学的知識と税関分類の経験が同時に必要で、誤分類は追徴課税・通関遅延のリスクに直結する&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;'>
+<div class="diag-label" data-ja="化学品輸入が「特に複雑」な3つの理由">化学品輸入が「特に複雑」な3つの理由</div>
+<div class="diag-step-row" data-ja-html='&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;01&lt;/div&gt;
+&lt;div class="step-title"&gt;法規制の重層性&lt;/div&gt;
+&lt;div class="step-body"&gt;一つの化学物質が化審法・毒劇法・消防法・輸入貿易管理令に同時に該当する。異なる根拠法に基づくチェックが並行して走る&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;02&lt;/div&gt;
+&lt;div class="step-title"&gt;物性・成分データの管理&lt;/div&gt;
+&lt;div class="step-body"&gt;HS分類・法規制チェックに品目の成分情報・純度・物理化学的性状が必要。SDS・COAの書類ごとにフォーマットが異なり抽出・管理に工数がかかる&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;03&lt;/div&gt;
+&lt;div class="step-title"&gt;HS分類の専門性&lt;/div&gt;
+&lt;div class="step-body"&gt;化学品のHS番号は構造・用途・純度で細分化。化学的知識と税関分類の経験が同時に必要で、誤分類は追徴課税・通関遅延のリスクに直結する&lt;/div&gt;
+&lt;/div&gt;'>
+<div class="diag-step-card" data-ja-html='&lt;div class="step-num"&gt;01&lt;/div&gt;
+&lt;div class="step-title"&gt;法規制の重層性&lt;/div&gt;
+&lt;div class="step-body"&gt;一つの化学物質が化審法・毒劇法・消防法・輸入貿易管理令に同時に該当する。異なる根拠法に基づくチェックが並行して走る&lt;/div&gt;'>
+<div class="step-num">01</div>
+<div class="step-title" data-ja="法規制の重層性">法規制の重層性</div>
+<div class="step-body" data-ja="一つの化学物質が化審法・毒劇法・消防法・輸入貿易管理令に同時に該当する。異なる根拠法に基づくチェックが並行して走る">一つの化学物質が化審法・毒劇法・消防法・輸入貿易管理令に同時に該当する。異なる根拠法に基づくチェックが並行して走る</div>
+</div>
+<div class="diag-step-card" data-ja-html='&lt;div class="step-num"&gt;02&lt;/div&gt;
+&lt;div class="step-title"&gt;物性・成分データの管理&lt;/div&gt;
+&lt;div class="step-body"&gt;HS分類・法規制チェックに品目の成分情報・純度・物理化学的性状が必要。SDS・COAの書類ごとにフォーマットが異なり抽出・管理に工数がかかる&lt;/div&gt;'>
+<div class="step-num">02</div>
+<div class="step-title" data-ja="物性・成分データの管理">物性・成分データの管理</div>
+<div class="step-body" data-ja="HS分類・法規制チェックに品目の成分情報・純度・物理化学的性状が必要。SDS・COAの書類ごとにフォーマットが異なり抽出・管理に工数がかかる">HS分類・法規制チェックに品目の成分情報・純度・物理化学的性状が必要。SDS・COAの書類ごとにフォーマットが異なり抽出・管理に工数がかかる</div>
+</div>
+<div class="diag-step-card" data-ja-html='&lt;div class="step-num"&gt;03&lt;/div&gt;
+&lt;div class="step-title"&gt;HS分類の専門性&lt;/div&gt;
+&lt;div class="step-body"&gt;化学品のHS番号は構造・用途・純度で細分化。化学的知識と税関分類の経験が同時に必要で、誤分類は追徴課税・通関遅延のリスクに直結する&lt;/div&gt;'>
+<div class="step-num">03</div>
+<div class="step-title" data-ja="HS分類の専門性">HS分類の専門性</div>
+<div class="step-body" data-ja="化学品のHS番号は構造・用途・純度で細分化。化学的知識と税関分類の経験が同時に必要で、誤分類は追徴課税・通関遅延のリスクに直結する">化学品のHS番号は構造・用途・純度で細分化。化学的知識と税関分類の経験が同時に必要で、誤分類は追徴課税・通関遅延のリスクに直結する</div>
+</div>
+</div>
+</div>
+<p class="diag-caption" data-ja="[図] 化学品輸入が特に複雑な3つの構造的要因">[図] 化学品輸入が特に複雑な3つの構造的要因</p>
+<p data-ja-html="&lt;strong&gt;理由1：法規制の重層性&lt;/strong&gt;&lt;br/&gt;
+      一つの化学物質が複数の法令に同時に該当する。例えばある有機溶剤を輸入する場合、化審法（化学物質審査規制法）上の既存物質か新規物質かの確認、毒物及び劇物取締法（毒劇法）への該当確認、消防法上の危険物分類確認、場合によっては輸入貿易管理令への対応まで、異なる根拠法に基づくチェックが並行して走る。"><strong>理由1：法規制の重層性</strong><br/>
       一つの化学物質が複数の法令に同時に該当する。例えばある有機溶剤を輸入する場合、化審法（化学物質審査規制法）上の既存物質か新規物質かの確認、毒物及び劇物取締法（毒劇法）への該当確認、消防法上の危険物分類確認、場合によっては輸入貿易管理令への対応まで、異なる根拠法に基づくチェックが並行して走る。</p>
-
-      <p><strong>理由2：物性・成分データの管理</strong><br>
+<p data-ja-html="&lt;strong&gt;理由2：物性・成分データの管理&lt;/strong&gt;&lt;br/&gt;
+      HSコード分類や法規制チェックには品目の成分情報・純度・物理化学的性状が必要になる。これらはサプライヤーから取得するSDS（安全データシート）やCOA（品質証明書）に記載されているが、書類ごとに形式が異なるため、データの抽出と管理に工数がかかる。"><strong>理由2：物性・成分データの管理</strong><br/>
       HSコード分類や法規制チェックには品目の成分情報・純度・物理化学的性状が必要になる。これらはサプライヤーから取得するSDS（安全データシート）やCOA（品質証明書）に記載されているが、書類ごとに形式が異なるため、データの抽出と管理に工数がかかる。</p>
-
-      <p><strong>理由3：HS分類の専門性</strong><br>
+<p data-ja-html="&lt;strong&gt;理由3：HS分類の専門性&lt;/strong&gt;&lt;br/&gt;
+      化学品のHS番号は化学物質の構造・用途・純度によって細分化されており、判断には化学的知識と税関分類の経験が同時に必要だ。分類を誤ると関税率の誤適用・追徴課税・通関遅延のリスクが生じる。"><strong>理由3：HS分類の専門性</strong><br/>
       化学品のHS番号は化学物質の構造・用途・純度によって細分化されており、判断には化学的知識と税関分類の経験が同時に必要だ。分類を誤ると関税率の誤適用・追徴課税・通関遅延のリスクが生じる。</p>
-
-      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">自動化で変えられる領域</h2>
-
-      <h3 class="text-[1rem] font-medium text-ink">書類処理の自動化</h3>
-
-      <p><strong>SDS・COAの自動読み取りと成分データ抽出</strong><br>
+<h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4" data-ja="自動化で変えられる領域">自動化で変えられる領域</h2>
+<h3 class="text-[1rem] font-medium text-ink" data-ja="書類処理の自動化">書類処理の自動化</h3>
+<p data-ja-html="&lt;strong&gt;SDS・COAの自動読み取りと成分データ抽出&lt;/strong&gt;&lt;br/&gt;
+      化学品固有の書類であるSDS（安全データシート）とCOA（分析証明書）をAI-OCRで読み取り、成分名・CAS番号・純度・物理化学的性状を自動抽出する。これをシステムに登録することで、後続の法規制チェックへの連携が可能になる。"><strong>SDS・COAの自動読み取りと成分データ抽出</strong><br/>
       化学品固有の書類であるSDS（安全データシート）とCOA（分析証明書）をAI-OCRで読み取り、成分名・CAS番号・純度・物理化学的性状を自動抽出する。これをシステムに登録することで、後続の法規制チェックへの連携が可能になる。</p>
-
-      <p><strong>Invoice・Packing Listの照合自動化</strong><br>
+<p data-ja-html="&lt;strong&gt;Invoice・Packing Listの照合自動化&lt;/strong&gt;&lt;br/&gt;
+      数量・重量・品番の三点照合は、ルールが明確なため自動化の効果が高い。液体化学品では比重換算（重量↔容積）が必要な場合があるが、品目マスタに比重データを持たせることで自動計算に対応できる。"><strong>Invoice・Packing Listの照合自動化</strong><br/>
       数量・重量・品番の三点照合は、ルールが明確なため自動化の効果が高い。液体化学品では比重換算（重量↔容積）が必要な場合があるが、品目マスタに比重データを持たせることで自動計算に対応できる。</p>
-
-      <h3 class="text-[1rem] font-medium text-ink">法規制チェックの自動化</h3>
-
-      <!-- DIAGRAM: 法規制チェック自動化フロー -->
-      <div class="diag-wrap">
-        <div class="diag-label">化学品輸入 法規制チェック自動化フロー</div>
-        <div class="diag-row">
-          <div class="diag-checklist-item"><span class="chk">①</span><span><strong>化審法スクリーニング</strong><br>CAS番号をもとに既存化学物質リストと照合。非該当の場合は新規届出フローを自動起動</span></div>
-          <div class="diag-checklist-item"><span class="chk">②</span><span><strong>毒劇法・消防法の自動判定</strong><br>品目マスタの毒劇物フラグ・危険物分類をもとにアラートを自動発生。取扱注意事項も自動通知</span></div>
-          <div class="diag-checklist-item"><span class="chk">③</span><span><strong>輸出時の安全保障確認</strong><br>外為法・EARに基づく該非判定。品目の規制対象フラグと仕向地・エンドユーザーのスクリーニングを組合せ</span></div>
-        </div>
-      </div>
-      <p class="diag-caption">[図] 化学品輸入における法規制チェックの自動化フロー</p>
-
-      <p><strong>化審法スクリーニング</strong><br>
+<h3 class="text-[1rem] font-medium text-ink" data-ja="法規制チェックの自動化">法規制チェックの自動化</h3>
+<!-- DIAGRAM: 法規制チェック自動化フロー -->
+<div class="diag-wrap" data-ja-html='&lt;div class="diag-label"&gt;化学品輸入 法規制チェック自動化フロー&lt;/div&gt;
+&lt;div class="diag-row"&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;①&lt;/span&gt;&lt;span&gt;&lt;strong&gt;化審法スクリーニング&lt;/strong&gt;&lt;br/&gt;CAS番号をもとに既存化学物質リストと照合。非該当の場合は新規届出フローを自動起動&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;②&lt;/span&gt;&lt;span&gt;&lt;strong&gt;毒劇法・消防法の自動判定&lt;/strong&gt;&lt;br/&gt;品目マスタの毒劇物フラグ・危険物分類をもとにアラートを自動発生。取扱注意事項も自動通知&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;③&lt;/span&gt;&lt;span&gt;&lt;strong&gt;輸出時の安全保障確認&lt;/strong&gt;&lt;br/&gt;外為法・EARに基づく該非判定。品目の規制対象フラグと仕向地・エンドユーザーのスクリーニングを組合せ&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;'>
+<div class="diag-label" data-ja="化学品輸入 法規制チェック自動化フロー">化学品輸入 法規制チェック自動化フロー</div>
+<div class="diag-row" data-ja-html='&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;①&lt;/span&gt;&lt;span&gt;&lt;strong&gt;化審法スクリーニング&lt;/strong&gt;&lt;br/&gt;CAS番号をもとに既存化学物質リストと照合。非該当の場合は新規届出フローを自動起動&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;②&lt;/span&gt;&lt;span&gt;&lt;strong&gt;毒劇法・消防法の自動判定&lt;/strong&gt;&lt;br/&gt;品目マスタの毒劇物フラグ・危険物分類をもとにアラートを自動発生。取扱注意事項も自動通知&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;③&lt;/span&gt;&lt;span&gt;&lt;strong&gt;輸出時の安全保障確認&lt;/strong&gt;&lt;br/&gt;外為法・EARに基づく該非判定。品目の規制対象フラグと仕向地・エンドユーザーのスクリーニングを組合せ&lt;/span&gt;&lt;/div&gt;'>
+<div class="diag-checklist-item" data-ja-html='&lt;span class="chk"&gt;①&lt;/span&gt;&lt;span&gt;&lt;strong&gt;化審法スクリーニング&lt;/strong&gt;&lt;br/&gt;CAS番号をもとに既存化学物質リストと照合。非該当の場合は新規届出フローを自動起動&lt;/span&gt;'><span class="chk">①</span><span data-ja-html="&lt;strong&gt;化審法スクリーニング&lt;/strong&gt;&lt;br/&gt;CAS番号をもとに既存化学物質リストと照合。非該当の場合は新規届出フローを自動起動"><strong>化審法スクリーニング</strong><br/>CAS番号をもとに既存化学物質リストと照合。非該当の場合は新規届出フローを自動起動</span></div>
+<div class="diag-checklist-item" data-ja-html='&lt;span class="chk"&gt;②&lt;/span&gt;&lt;span&gt;&lt;strong&gt;毒劇法・消防法の自動判定&lt;/strong&gt;&lt;br/&gt;品目マスタの毒劇物フラグ・危険物分類をもとにアラートを自動発生。取扱注意事項も自動通知&lt;/span&gt;'><span class="chk">②</span><span data-ja-html="&lt;strong&gt;毒劇法・消防法の自動判定&lt;/strong&gt;&lt;br/&gt;品目マスタの毒劇物フラグ・危険物分類をもとにアラートを自動発生。取扱注意事項も自動通知"><strong>毒劇法・消防法の自動判定</strong><br/>品目マスタの毒劇物フラグ・危険物分類をもとにアラートを自動発生。取扱注意事項も自動通知</span></div>
+<div class="diag-checklist-item" data-ja-html='&lt;span class="chk"&gt;③&lt;/span&gt;&lt;span&gt;&lt;strong&gt;輸出時の安全保障確認&lt;/strong&gt;&lt;br/&gt;外為法・EARに基づく該非判定。品目の規制対象フラグと仕向地・エンドユーザーのスクリーニングを組合せ&lt;/span&gt;'><span class="chk">③</span><span data-ja-html="&lt;strong&gt;輸出時の安全保障確認&lt;/strong&gt;&lt;br/&gt;外為法・EARに基づく該非判定。品目の規制対象フラグと仕向地・エンドユーザーのスクリーニングを組合せ"><strong>輸出時の安全保障確認</strong><br/>外為法・EARに基づく該非判定。品目の規制対象フラグと仕向地・エンドユーザーのスクリーニングを組合せ</span></div>
+</div>
+</div>
+<p class="diag-caption" data-ja="[図] 化学品輸入における法規制チェックの自動化フロー">[図] 化学品輸入における法規制チェックの自動化フロー</p>
+<p data-ja-html="&lt;strong&gt;化審法スクリーニング&lt;/strong&gt;&lt;br/&gt;
+      輸入品目のCAS番号をもとに、既存化学物質リストとの照合を自動実行する。既存物質に該当しない場合は新規化学物質の届出フローを自動起動する。"><strong>化審法スクリーニング</strong><br/>
       輸入品目のCAS番号をもとに、既存化学物質リストとの照合を自動実行する。既存物質に該当しない場合は新規化学物質の届出フローを自動起動する。</p>
-
-      <p><strong>毒劇法・消防法の自動判定</strong><br>
+<p data-ja-html="&lt;strong&gt;毒劇法・消防法の自動判定&lt;/strong&gt;&lt;br/&gt;
+      品目マスタに毒劇物該当フラグ・危険物分類を持たせ、輸入申告の際に自動でアラートを発生させる。取扱い上の注意事項（保管条件・運搬規制）も担当者に自動通知する。"><strong>毒劇法・消防法の自動判定</strong><br/>
       品目マスタに毒劇物該当フラグ・危険物分類を持たせ、輸入申告の際に自動でアラートを発生させる。取扱い上の注意事項（保管条件・運搬規制）も担当者に自動通知する。</p>
-
-      <p><strong>輸出先への安全保障確認（輸出時）</strong><br>
+<p data-ja-html="&lt;strong&gt;輸出先への安全保障確認（輸出時）&lt;/strong&gt;&lt;br/&gt;
+      輸出案件では、外為法・EARに基づく該非判定が必要だ。品目の規制対象フラグと仕向地・エンドユーザーのスクリーニングを組み合わせることで、確認漏れを防ぐ。"><strong>輸出先への安全保障確認（輸出時）</strong><br/>
       輸出案件では、外為法・EARに基づく該非判定が必要だ。品目の規制対象フラグと仕向地・エンドユーザーのスクリーニングを組み合わせることで、確認漏れを防ぐ。</p>
-
-      <h3 class="text-[1rem] font-medium text-ink">HSコード分類の補助</h3>
-      <p>品名・成分・用途・純度をインプットとしてHS番号の候補を提示し、過去の申告実績と組み合わせて精度を高める。最終判断は担当者が行うが、調査工数を大幅に削減できる。</p>
-
-      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">導入にあたって整備すべきマスタデータ</h2>
-      <p>化学品輸入の自動化を進める前提として、以下のマスタデータの整備が必要だ。</p>
-
-      <table>
-        <thead>
-          <tr>
-            <th>マスタ</th>
-            <th>必要な項目</th>
-            <th>用途</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>品目マスタ</strong></td>
-            <td>品名、CAS番号、HSコード、毒劇物フラグ、危険物分類、比重</td>
-            <td>法規制チェック・自動分類</td>
-          </tr>
-          <tr>
-            <td><strong>取引先マスタ</strong></td>
-            <td>与信限度、格付け、制裁対象フラグ</td>
-            <td>与信チェック・輸出スクリーニング</td>
-          </tr>
-          <tr>
-            <td><strong>法規制マスタ</strong></td>
-            <td>法令名、チェック項目、対象CAS番号</td>
-            <td>法規制チェックリスト自動展開</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <p>既存の管理台帳やERP内のデータを棚卸しし、これらのマスタに変換することが自動化の第一歩になる。</p>
-
-      <!-- DIAGRAM: マスタデータ整備の重要性 -->
-      <div class="diag-wrap">
-        <div class="diag-label">化学品輸入自動化 ── マスタデータ整備の優先順位</div>
-        <div class="diag-step-row">
-          <div class="diag-step-card">
-            <div class="step-num">1st</div>
-            <div class="step-title">品目マスタ整備</div>
-            <div class="step-body">CAS番号・HS番号・毒劇物フラグ・危険物分類・比重を品目ごとに登録。自動化の基盤となる最重要マスタ</div>
-          </div>
-          <div class="diag-step-card">
-            <div class="step-num">2nd</div>
-            <div class="step-title">法規制マスタ整備</div>
-            <div class="step-body">化審法・毒劇法・消防法のチェック項目とCAS番号の対応表を構築。チェックリスト自動展開の根拠データ</div>
-          </div>
-          <div class="diag-step-card">
-            <div class="step-num">3rd</div>
-            <div class="step-title">取引先マスタ整備</div>
-            <div class="step-body">与信情報・制裁対象フラグを付与。輸出スクリーニングと与信チェックの自動化に必要</div>
-          </div>
-        </div>
-      </div>
-      <p class="diag-caption">[図] 化学品輸入自動化に必要なマスタデータ整備の優先順位</p>
-
-      <p>化学品輸入の自動化をゼロから設計したい方へ──BorderFlow AIはSDS読み取りから法規制チェックまで、化学品固有の業務フローに対応しています。</p>
-
-      <!-- CTA -->
-      <div class="mt-14 p-8 bg-navy text-white text-center rounded-sm">
-        <p class="display text-[.65rem] tracking-[.2em] uppercase text-gold mb-3">BorderFlow AI</p>
-        <p class="text-[1.05rem] font-medium leading-snug mb-2">化学品輸入の自動化を、<br>ゼロから一緒に設計しませんか？</p>
-        <p class="text-[.78rem] text-white/60 mb-6">SDS読み取りから化審法・毒劇法チェックまで、化学品固有の業務フローに対応します。</p>
-        <a href="/#contact" class="inline-block bg-gold text-navy text-[.78rem] font-medium px-8 py-3 hover:bg-gold-light transition-colors">お問い合わせ・ご相談</a>
-      </div>
-
-    </article>
-  </div>
+<h3 class="text-[1rem] font-medium text-ink" data-ja="HSコード分類の補助">HSコード分類の補助</h3>
+<p data-ja="品名・成分・用途・純度をインプットとしてHS番号の候補を提示し、過去の申告実績と組み合わせて精度を高める。最終判断は担当者が行うが、調査工数を大幅に削減できる。">品名・成分・用途・純度をインプットとしてHS番号の候補を提示し、過去の申告実績と組み合わせて精度を高める。最終判断は担当者が行うが、調査工数を大幅に削減できる。</p>
+<h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4" data-ja="導入にあたって整備すべきマスタデータ">導入にあたって整備すべきマスタデータ</h2>
+<p data-ja="化学品輸入の自動化を進める前提として、以下のマスタデータの整備が必要だ。">化学品輸入の自動化を進める前提として、以下のマスタデータの整備が必要だ。</p>
+<table>
+<thead>
+<tr>
+<th data-ja="マスタ">マスタ</th>
+<th data-ja="必要な項目">必要な項目</th>
+<th data-ja="用途">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-ja-html="&lt;strong&gt;品目マスタ&lt;/strong&gt;"><strong>品目マスタ</strong></td>
+<td data-ja="品名、CAS番号、HSコード、毒劇物フラグ、危険物分類、比重">品名、CAS番号、HSコード、毒劇物フラグ、危険物分類、比重</td>
+<td data-ja="法規制チェック・自動分類">法規制チェック・自動分類</td>
+</tr>
+<tr>
+<td data-ja-html="&lt;strong&gt;取引先マスタ&lt;/strong&gt;"><strong>取引先マスタ</strong></td>
+<td data-ja="与信限度、格付け、制裁対象フラグ">与信限度、格付け、制裁対象フラグ</td>
+<td data-ja="与信チェック・輸出スクリーニング">与信チェック・輸出スクリーニング</td>
+</tr>
+<tr>
+<td data-ja-html="&lt;strong&gt;法規制マスタ&lt;/strong&gt;"><strong>法規制マスタ</strong></td>
+<td data-ja="法令名、チェック項目、対象CAS番号">法令名、チェック項目、対象CAS番号</td>
+<td data-ja="法規制チェックリスト自動展開">法規制チェックリスト自動展開</td>
+</tr>
+</tbody>
+</table>
+<p data-ja="既存の管理台帳やERP内のデータを棚卸しし、これらのマスタに変換することが自動化の第一歩になる。">既存の管理台帳やERP内のデータを棚卸しし、これらのマスタに変換することが自動化の第一歩になる。</p>
+<!-- DIAGRAM: マスタデータ整備の重要性 -->
+<div class="diag-wrap" data-ja-html='&lt;div class="diag-label"&gt;化学品輸入自動化 ── マスタデータ整備の優先順位&lt;/div&gt;
+&lt;div class="diag-step-row"&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;1st&lt;/div&gt;
+&lt;div class="step-title"&gt;品目マスタ整備&lt;/div&gt;
+&lt;div class="step-body"&gt;CAS番号・HS番号・毒劇物フラグ・危険物分類・比重を品目ごとに登録。自動化の基盤となる最重要マスタ&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;2nd&lt;/div&gt;
+&lt;div class="step-title"&gt;法規制マスタ整備&lt;/div&gt;
+&lt;div class="step-body"&gt;化審法・毒劇法・消防法のチェック項目とCAS番号の対応表を構築。チェックリスト自動展開の根拠データ&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;3rd&lt;/div&gt;
+&lt;div class="step-title"&gt;取引先マスタ整備&lt;/div&gt;
+&lt;div class="step-body"&gt;与信情報・制裁対象フラグを付与。輸出スクリーニングと与信チェックの自動化に必要&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;'>
+<div class="diag-label" data-ja="化学品輸入自動化 ── マスタデータ整備の優先順位">化学品輸入自動化 ── マスタデータ整備の優先順位</div>
+<div class="diag-step-row" data-ja-html='&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;1st&lt;/div&gt;
+&lt;div class="step-title"&gt;品目マスタ整備&lt;/div&gt;
+&lt;div class="step-body"&gt;CAS番号・HS番号・毒劇物フラグ・危険物分類・比重を品目ごとに登録。自動化の基盤となる最重要マスタ&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;2nd&lt;/div&gt;
+&lt;div class="step-title"&gt;法規制マスタ整備&lt;/div&gt;
+&lt;div class="step-body"&gt;化審法・毒劇法・消防法のチェック項目とCAS番号の対応表を構築。チェックリスト自動展開の根拠データ&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;3rd&lt;/div&gt;
+&lt;div class="step-title"&gt;取引先マスタ整備&lt;/div&gt;
+&lt;div class="step-body"&gt;与信情報・制裁対象フラグを付与。輸出スクリーニングと与信チェックの自動化に必要&lt;/div&gt;
+&lt;/div&gt;'>
+<div class="diag-step-card" data-ja-html='&lt;div class="step-num"&gt;1st&lt;/div&gt;
+&lt;div class="step-title"&gt;品目マスタ整備&lt;/div&gt;
+&lt;div class="step-body"&gt;CAS番号・HS番号・毒劇物フラグ・危険物分類・比重を品目ごとに登録。自動化の基盤となる最重要マスタ&lt;/div&gt;'>
+<div class="step-num">1st</div>
+<div class="step-title" data-ja="品目マスタ整備">品目マスタ整備</div>
+<div class="step-body" data-ja="CAS番号・HS番号・毒劇物フラグ・危険物分類・比重を品目ごとに登録。自動化の基盤となる最重要マスタ">CAS番号・HS番号・毒劇物フラグ・危険物分類・比重を品目ごとに登録。自動化の基盤となる最重要マスタ</div>
+</div>
+<div class="diag-step-card" data-ja-html='&lt;div class="step-num"&gt;2nd&lt;/div&gt;
+&lt;div class="step-title"&gt;法規制マスタ整備&lt;/div&gt;
+&lt;div class="step-body"&gt;化審法・毒劇法・消防法のチェック項目とCAS番号の対応表を構築。チェックリスト自動展開の根拠データ&lt;/div&gt;'>
+<div class="step-num">2nd</div>
+<div class="step-title" data-ja="法規制マスタ整備">法規制マスタ整備</div>
+<div class="step-body" data-ja="化審法・毒劇法・消防法のチェック項目とCAS番号の対応表を構築。チェックリスト自動展開の根拠データ">化審法・毒劇法・消防法のチェック項目とCAS番号の対応表を構築。チェックリスト自動展開の根拠データ</div>
+</div>
+<div class="diag-step-card" data-ja-html='&lt;div class="step-num"&gt;3rd&lt;/div&gt;
+&lt;div class="step-title"&gt;取引先マスタ整備&lt;/div&gt;
+&lt;div class="step-body"&gt;与信情報・制裁対象フラグを付与。輸出スクリーニングと与信チェックの自動化に必要&lt;/div&gt;'>
+<div class="step-num">3rd</div>
+<div class="step-title" data-ja="取引先マスタ整備">取引先マスタ整備</div>
+<div class="step-body" data-ja="与信情報・制裁対象フラグを付与。輸出スクリーニングと与信チェックの自動化に必要">与信情報・制裁対象フラグを付与。輸出スクリーニングと与信チェックの自動化に必要</div>
+</div>
+</div>
+</div>
+<p class="diag-caption" data-ja="[図] 化学品輸入自動化に必要なマスタデータ整備の優先順位">[図] 化学品輸入自動化に必要なマスタデータ整備の優先順位</p>
+<p data-ja="化学品輸入の自動化をゼロから設計したい方へ──BorderFlow AIはSDS読み取りから法規制チェックまで、化学品固有の業務フローに対応しています。">化学品輸入の自動化をゼロから設計したい方へ──BorderFlow AIはSDS読み取りから法規制チェックまで、化学品固有の業務フローに対応しています。</p>
+<!-- CTA -->
+<div class="mt-14 p-8 bg-navy text-white text-center rounded-sm" data-ja-html='&lt;p class="display text-[.65rem] tracking-[.2em] uppercase text-gold mb-3"&gt;BorderFlow AI&lt;/p&gt;
+&lt;p class="text-[1.05rem] font-medium leading-snug mb-2" data-ja-html="化学品輸入の自動化を、&amp;lt;br/&amp;gt;ゼロから一緒に設計しませんか？"&gt;化学品輸入の自動化を、&lt;br/&gt;ゼロから一緒に設計しませんか？&lt;/p&gt;
+&lt;p class="text-[.78rem] text-white/60 mb-6" data-ja="SDS読み取りから化審法・毒劇法チェックまで、化学品固有の業務フローに対応します。"&gt;SDS読み取りから化審法・毒劇法チェックまで、化学品固有の業務フローに対応します。&lt;/p&gt;
+&lt;a class="inline-block bg-gold text-navy text-[.78rem] font-medium px-8 py-3 hover:bg-gold-light transition-colors" data-en="Contact Us" data-ja="お問い合わせ・ご相談" href="/#contact"&gt;お問い合わせ・ご相談&lt;/a&gt;'>
+<p class="display text-[.65rem] tracking-[.2em] uppercase text-gold mb-3">BorderFlow AI</p>
+<p class="text-[1.05rem] font-medium leading-snug mb-2" data-ja-html="化学品輸入の自動化を、&lt;br/&gt;ゼロから一緒に設計しませんか？">化学品輸入の自動化を、<br/>ゼロから一緒に設計しませんか？</p>
+<p class="text-[.78rem] text-white/60 mb-6" data-ja="SDS読み取りから化審法・毒劇法チェックまで、化学品固有の業務フローに対応します。">SDS読み取りから化審法・毒劇法チェックまで、化学品固有の業務フローに対応します。</p>
+<a class="inline-block bg-gold text-navy text-[.78rem] font-medium px-8 py-3 hover:bg-gold-light transition-colors" data-en="Contact Us" data-ja="お問い合わせ・ご相談" href="/#contact">お問い合わせ・ご相談</a>
+</div>
+</article>
+</div>
 </main>
-
 <!-- ─── FOOTER ─────────────────────────────────────────── -->
 <footer class="bg-navy py-10 px-6 md:px-10 mt-16">
-  <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-    <svg width="80" height="28" viewBox="0 0 120 36" fill="none" aria-label="Wing">
-      <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff" opacity=".6"/>
-      <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#fff" opacity=".6">Wing</text>
-    </svg>
-    <p class="text-[.68rem] text-white/30">© 2026 Wing. All rights reserved.</p>
-  </div>
+<div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+<svg aria-label="Wing" fill="none" height="28" viewbox="0 0 120 36" width="80">
+<path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff" opacity=".6"></path>
+<text fill="#fff" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" opacity=".6" x="46" y="25">Wing</text>
+</svg>
+<p class="text-[.68rem] text-white/30">© 2026 Wing. All rights reserved.</p>
+</div>
 </footer>
-
 </body>
 </html>

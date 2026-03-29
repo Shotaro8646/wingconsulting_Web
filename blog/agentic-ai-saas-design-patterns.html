@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="ja" class="scroll-smooth">
+
+<html class="scroll-smooth" lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>AI-Native SaaS Design Patterns | Wing Blog</title>
-<meta name="description" content="Five multi-agent architecture patterns for AI-native SaaS products.">
-<meta name="keywords" content="AIネイティブSaaS, マルチエージェント, LangGraph, AutoGen, エージェント設計パターン, HITL, RAG, B2B SaaS, AIアーキテクチャ">
-<meta property="og:title" content="AI-Native SaaS Design Patterns: 5 Multi-Agent Architectures">
-<meta property="og:description" content="Five multi-agent architecture patterns for AI-native SaaS products.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://wingconsulting.org/blog/agentic-ai-saas-design-patterns">
-<meta property="og:locale" content="ja_JP">
-<meta property="og:image" content="https://wingconsulting.org/images/og-default.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:site_name" content="Wing">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="AI-Native SaaS Design Patterns: 5 Multi-Agent Architectures">
-<meta name="twitter:description" content="Five multi-agent architecture patterns for AI-native SaaS products.">
-<meta name="twitter:image" content="https://wingconsulting.org/images/og-default.png">
-<link rel="canonical" href="https://wingconsulting.org/blog/agentic-ai-saas-design-patterns">
+<meta content="Five multi-agent architecture patterns for AI-native SaaS products." name="description"/>
+<meta content="AIネイティブSaaS, マルチエージェント, LangGraph, AutoGen, エージェント設計パターン, HITL, RAG, B2B SaaS, AIアーキテクチャ" name="keywords"/>
+<meta content="AI-Native SaaS Design Patterns: 5 Multi-Agent Architectures" property="og:title"/>
+<meta content="Five multi-agent architecture patterns for AI-native SaaS products." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://wingconsulting.org/blog/agentic-ai-saas-design-patterns" property="og:url"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="https://wingconsulting.org/images/og-default.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Wing" property="og:site_name"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="AI-Native SaaS Design Patterns: 5 Multi-Agent Architectures" name="twitter:title"/>
+<meta content="Five multi-agent architecture patterns for AI-native SaaS products." name="twitter:description"/>
+<meta content="https://wingconsulting.org/images/og-default.png" name="twitter:image"/>
+<link href="https://wingconsulting.org/blog/agentic-ai-saas-design-patterns" rel="canonical"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -97,14 +98,14 @@ article li { margin-bottom: 0.5rem; }
 .kpi-item .kpi-label { font-size:0.7rem; color:#8A8A96; line-height:1.4; }
 </style>
 <!-- Google Analytics GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-KN7NWHFK9G');
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;family=Noto+Sans+JP:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
 <style id="font-override">
   body, p, li, td, th, span, div { font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif !important; }
   h1, h2, h3, h4, h5, h6, .serif { font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif !important; }
@@ -114,237 +115,220 @@ article li { margin-bottom: 0.5rem; }
 </head>
 <body class="bg-slate-warm text-ink">
 <header class="bg-navy h-[60px] flex items-center px-6 md:px-10 sticky top-0 z-50">
-  <div class="max-w-5xl mx-auto w-full flex items-center justify-between">
-    <a href="/" class="leading-none">
-      <svg width="120" height="36" viewBox="0 0 120 36" fill="none" aria-label="Wing">
-        <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff"/>
-        <path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#fff" opacity=".32"/>
-        <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#fff">Wing</text>
-      </svg>
-    </a>
-    <div class="flex items-center gap-4">
-      <span class="display text-[.7rem] font-medium tracking-wider text-white/50">Blog</span>
-      <a href="/" class="text-[.75rem] text-white/70 hover:text-white transition-colors">← Home</a>
-    </div>
-  </div>
+<div class="max-w-5xl mx-auto w-full flex items-center justify-between">
+<a class="leading-none" href="/">
+<svg aria-label="Wing" fill="none" height="36" viewbox="0 0 120 36" width="120">
+<path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff"></path>
+<path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#fff" opacity=".32"></path>
+<text fill="#fff" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" x="46" y="25">Wing</text>
+</svg>
+</a>
+<div class="flex items-center gap-4">
+<span class="display text-[.7rem] font-medium tracking-wider text-white/50">Blog</span>
+<a class="text-[.75rem] text-white/70 hover:text-white transition-colors" href="/">← Home</a>
+</div>
+</div>
 </header>
 <main class="py-16 px-6 md:px-10">
-  <div class="max-w-3xl mx-auto">
-    <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3">AI Strategy / SaaS Architecture</p>
-    <h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4">AIネイティブSaaS設計パターン：<br>マルチエージェント5つのアーキテクチャと実装戦略</h1>
-    <div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2">
-      <time datetime="2026-03-29">2026.03.29</time>
-      <span>Wing編集部</span>
-    </div>
-    <div class="gold-rule mb-10"></div>
-    <article class="text-[.9rem] text-ink leading-[2] max-w-none">
-
-      <p>「AIをプロダクトに組み込む」ことは2026年においてもはや競争優位ではなく前提条件になりつつある。問題は「どう組み込むか」だ。単一のLLM呼び出しをコードに埋め込むだけなら誰でもできる。しかし、複雑なB2B業務ワークフローを本当に自動化しようとした瞬間、アーキテクチャの選択が製品の成否を左右する。本稿では、AIネイティブSaaSの設計に使われる<strong>5つのエージェントパターン</strong>とその選択基準を解説する。</p>
-
-      <!-- DIAGRAM: 5 Design Patterns Selection Framework -->
-      <div class="diag-wrap" style="margin-bottom:1.8rem">
-        <div class="diag-label">Figure 1 — AIネイティブSaaS 5設計パターン：選択フレームワーク</div>
-        <svg viewBox="0 0 640 270" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;max-width:640px;margin:0 auto" role="img" aria-label="5つのAIエージェント設計パターンの選択フレームワーク">
-          <rect x="0" y="0" width="640" height="270" fill="#FAFAF8" rx="6"/>
-          <!-- Central question -->
-          <rect x="220" y="10" width="200" height="40" rx="4" fill="#0F2342"/>
-          <text x="320" y="27" text-anchor="middle" font-size="10" fill="#A8965A" font-family="sans-serif" font-weight="700">タスクの性質は？</text>
-          <text x="320" y="43" text-anchor="middle" font-size="8.5" fill="#C4AD72" font-family="sans-serif">まずここから設計を始める</text>
-          <!-- Branch 1: 品質を高めたい → Reflection -->
-          <line x1="220" y1="30" x2="100" y2="100" stroke="#A8965A" stroke-width="1.5"/>
-          <rect x="20" y="100" width="160" height="70" rx="4" fill="#1F3A6E"/>
-          <text x="100" y="120" text-anchor="middle" font-size="9.5" fill="#A8965A" font-family="sans-serif" font-weight="700">Reflection</text>
-          <text x="100" y="136" text-anchor="middle" font-size="9" fill="#fff" font-family="sans-serif">品質を自己改善</text>
-          <text x="100" y="150" text-anchor="middle" font-size="8" fill="#BDD0FF" font-family="sans-serif">文書/コード品質担保</text>
-          <text x="100" y="163" text-anchor="middle" font-size="8" fill="#8A9AC0" font-family="sans-serif">複雑度：低〜中</text>
-          <!-- Branch 2: 多段階タスク → Plan+Solve -->
-          <line x1="270" y1="50" x2="200" y2="110" stroke="#A8965A" stroke-width="1.5"/>
-          <rect x="120" y="110" width="160" height="70" rx="4" fill="#2A4A8A"/>
-          <text x="200" y="130" text-anchor="middle" font-size="9.5" fill="#A8965A" font-family="sans-serif" font-weight="700">Plan + Solve</text>
-          <text x="200" y="146" text-anchor="middle" font-size="9" fill="#fff" font-family="sans-serif">計画→実行に分離</text>
-          <text x="200" y="160" text-anchor="middle" font-size="8" fill="#BDD0FF" font-family="sans-serif">リサーチ/RFP対応</text>
-          <text x="200" y="173" text-anchor="middle" font-size="8" fill="#8A9AC0" font-family="sans-serif">複雑度：中</text>
-          <!-- Branch 3: 外部データ必要 → Tool Use -->
-          <line x1="320" y1="50" x2="320" y2="110" stroke="#A8965A" stroke-width="1.5"/>
-          <rect x="240" y="110" width="160" height="70" rx="4" fill="#A8965A"/>
-          <text x="320" y="130" text-anchor="middle" font-size="9.5" fill="#fff" font-family="sans-serif" font-weight="700">Tool Use</text>
-          <text x="320" y="146" text-anchor="middle" font-size="9" fill="#fff" font-family="sans-serif">外部API自律呼び出し</text>
-          <text x="320" y="160" text-anchor="middle" font-size="8" fill="#fff" font-family="sans-serif">データ検索/計算/連携</text>
-          <text x="320" y="173" text-anchor="middle" font-size="8" fill="#fff" font-family="sans-serif">複雑度：中</text>
-          <!-- Branch 4: 並列/専門分化 → Multi-Agent -->
-          <line x1="370" y1="50" x2="440" y2="110" stroke="#A8965A" stroke-width="1.5"/>
-          <rect x="360" y="110" width="160" height="70" rx="4" fill="#0F2342"/>
-          <text x="440" y="130" text-anchor="middle" font-size="9.5" fill="#A8965A" font-family="sans-serif" font-weight="700">Multi-Agent</text>
-          <text x="440" y="146" text-anchor="middle" font-size="9" fill="#fff" font-family="sans-serif">複数エージェント協調</text>
-          <text x="440" y="160" text-anchor="middle" font-size="8" fill="#C4AD72" font-family="sans-serif">並列処理/専門特化</text>
-          <text x="440" y="173" text-anchor="middle" font-size="8" fill="#8A8A96" font-family="sans-serif">複雑度：高</text>
-          <!-- Branch 5: 高リスク → HITL -->
-          <line x1="420" y1="30" x2="540" y2="100" stroke="#A8965A" stroke-width="1.5"/>
-          <rect x="460" y="100" width="160" height="70" rx="4" fill="#5A3A2A"/>
-          <text x="540" y="120" text-anchor="middle" font-size="9.5" fill="#E8C080" font-family="sans-serif" font-weight="700">HITL</text>
-          <text x="540" y="136" text-anchor="middle" font-size="9" fill="#fff" font-family="sans-serif">人間が承認介在</text>
-          <text x="540" y="150" text-anchor="middle" font-size="8" fill="#E8C080" font-family="sans-serif">高リスク/コンプライアンス</text>
-          <text x="540" y="163" text-anchor="middle" font-size="8" fill="#C8A880" font-family="sans-serif">複雑度：中</text>
-          <!-- Branch labels on lines -->
-          <text x="130" y="72" font-size="8" fill="#8A8A96" font-family="sans-serif">品質向上</text>
-          <text x="218" y="88" font-size="8" fill="#8A8A96" font-family="sans-serif">多段階</text>
-          <text x="323" y="86" font-size="8" fill="#8A8A96" font-family="sans-serif">外部連携</text>
-          <text x="400" y="74" font-size="8" fill="#8A8A96" font-family="sans-serif">並列/専門</text>
-          <text x="468" y="65" font-size="8" fill="#8A8A96" font-family="sans-serif">高リスク</text>
-          <!-- Bottom note: combine patterns -->
-          <rect x="80" y="200" width="480" height="52" rx="4" fill="#0F2342" opacity="0.06"/>
-          <text x="320" y="220" text-anchor="middle" font-size="9.5" fill="#0F2342" font-family="sans-serif" font-weight="700">実装のポイント：パターンは組み合わせて使う</text>
-          <text x="320" y="238" text-anchor="middle" font-size="8.5" fill="#4A4A55" font-family="sans-serif">例：Tool Use + Reflection（データ取得後に自己評価）</text>
-          <text x="320" y="252" text-anchor="middle" font-size="8.5" fill="#4A4A55" font-family="sans-serif">例：Multi-Agent + HITL（並列処理→最終承認は人間）</text>
-        </svg>
-        <p class="diag-caption">タスクの複雑さ・リスク・並列性を軸に最適パターンを選択する。過剰な複雑化が最大の失敗要因</p>
-      </div>
-
-      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">なぜ「設計パターン」が重要か</h2>
-
-      <p>AIアプリケーションの失敗事例の多くは「技術力の不足」ではなく「アーキテクチャ選択のミス」に起因する。シンプルな質問応答タスクにマルチエージェントを採用してコストと複雑性が爆発する、逆に複雑なオーケストレーションが必要なタスクを単一エージェントに任せて精度が出ない——こうした問題は設計段階で防げる。</p>
-
-      <div class="diag-wrap">
-        <div class="diag-label">5 Agentic Design Patterns — 概要一覧</div>
-        <table class="compare-table">
-          <thead><tr><th>パターン</th><th>核心メカニズム</th><th>適したユースケース</th><th>複雑度</th></tr></thead>
-          <tbody>
-            <tr><td><strong>Reflection</strong></td><td>出力を自己評価・再生成</td><td>文書作成、コードレビュー</td><td>低〜中</td></tr>
-            <tr><td><strong>Plan + Solve</strong></td><td>計画→実行ステップ分割</td><td>複数ステップのリサーチ・分析</td><td>中</td></tr>
-            <tr><td><strong>Tool Use</strong></td><td>外部API・DBを自律呼び出し</td><td>データ検索、計算、外部連携</td><td>中</td></tr>
-            <tr><td><strong>Multi-Agent</strong></td><td>複数エージェントの役割分担協調</td><td>並列処理、専門特化が必要なタスク</td><td>高</td></tr>
-            <tr><td><strong>HITL</strong></td><td>人間の確認・承認を介在</td><td>高リスク判断、コンプライアンス対応</td><td>中</td></tr>
-          </tbody>
-        </table>
-        <p class="diag-caption">パターンは組み合わせて使う。5つを理解した上でハイブリッド設計を選択する</p>
-      </div>
-
-      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">パターン詳説：5つのアーキテクチャ</h2>
-
-      <div class="diag-wrap">
-        <div class="diag-label">Pattern 1 — Reflection（自己反省）パターン</div>
-        <div class="diag-step-row">
-          <div class="diag-step-card">
-            <div class="step-num">生成</div>
-            <div class="step-title">初期出力</div>
-            <div class="step-body">LLMが与えられたタスクに対して初期回答・文書・コードを生成する</div>
-          </div>
-          <div class="diag-step-card">
-            <div class="step-num">評価</div>
-            <div class="step-title">自己評価</div>
-            <div class="step-body">同一 or 別のLLMが出力の品質・正確さ・要件充足を評価し改善点を指摘</div>
-          </div>
-          <div class="diag-step-card">
-            <div class="step-num">改善</div>
-            <div class="step-title">再生成</div>
-            <div class="step-body">フィードバックを基に改善版を生成。このループを品質基準達成まで繰り返す</div>
-          </div>
-        </div>
-        <p class="diag-caption">B2B適用例：提案書の品質担保、メール文面の自動改善、コードのセルフレビュー</p>
-      </div>
-
-      <div class="diag-wrap">
-        <div class="diag-label">Pattern 2 — Plan + Solve（計画・実行）パターン</div>
-        <p style="font-size:0.82rem; color:#4A4A55; margin-bottom:0.8rem;">複雑なタスクを「計画フェーズ」と「実行フェーズ」に分離する。計画エージェントがサブタスクに分解し、実行エージェントが各ステップを処理する。CoT（Chain-of-Thought）プロンプティングの発展形。</p>
-        <p style="font-size:0.75rem; color:#8A8A96;"><strong>B2B適用例：</strong>市場調査（調査計画→各項目の情報収集→統合レポート作成）、RFP対応（要件分析→各セクション作成→整合確認）</p>
-      </div>
-
-      <div class="diag-wrap">
-        <div class="diag-label">Pattern 3 — Tool Use（ツール利用）パターン</div>
-        <p style="font-size:0.82rem; color:#4A4A55; margin-bottom:0.8rem;">LLMが外部ツール（API、データベース、計算機、ブラウザ等）を自律的に呼び出す。Function Calling / MCP（Model Context Protocol）で実現。エージェントが「実世界に手を伸ばす」ための基盤パターン。</p>
-        <div class="diag-step-row" style="margin-top:0.8rem;">
-          <div class="diag-step-card">
-            <div class="step-num">◎</div>
-            <div class="step-title">Search Tools</div>
-            <div class="step-body">Web検索、社内DB検索、ベクトル検索（RAG）</div>
-          </div>
-          <div class="diag-step-card">
-            <div class="step-num">◎</div>
-            <div class="step-title">Compute Tools</div>
-            <div class="step-body">Python実行、計算、データ変換・集計</div>
-          </div>
-          <div class="diag-step-card">
-            <div class="step-num">◎</div>
-            <div class="step-title">Action Tools</div>
-            <div class="step-body">メール送信、CRM更新、カレンダー作成、Slack通知</div>
-          </div>
-        </div>
-        <p class="diag-caption">ツールの粒度と権限設計が品質とセキュリティの鍵</p>
-      </div>
-
-      <div class="diag-wrap">
-        <div class="diag-label">Pattern 4 — Multi-Agent（マルチエージェント）パターン</div>
-        <p style="font-size:0.82rem; color:#4A4A55; margin-bottom:0.8rem;">複数のエージェントが役割を分担し協調する。「オーケストレーター」が全体を指揮し、「サブエージェント」が専門タスクを実行する。LangGraph、AutoGen、CrewAIで実装。</p>
-        <table class="compare-table" style="margin-top:0.8rem;">
-          <thead><tr><th>構成要素</th><th>役割</th></tr></thead>
-          <tbody>
-            <tr><td>Orchestrator Agent</td><td>タスク分解・サブエージェントへの委任・結果統合</td></tr>
-            <tr><td>Specialist Agents</td><td>リサーチ担当、文書作成担当、コード実行担当など特化型</td></tr>
-            <tr><td>Memory Layer</td><td>セッション間で共有されるコンテキスト・過去の実行ログ</td></tr>
-            <tr><td>Tool Registry</td><td>各エージェントが使えるツールの権限管理</td></tr>
-          </tbody>
-        </table>
-        <p class="diag-caption">複雑性が高いため、単一エージェントで対応できない場合にのみ採用を検討する</p>
-      </div>
-
-      <div class="diag-wrap">
-        <div class="diag-label">Pattern 5 — HITL（Human-in-the-Loop）パターン</div>
-        <p style="font-size:0.82rem; color:#4A4A55; margin-bottom:0.8rem;">エージェントの判断・実行の特定ポイントに人間の確認・承認を挟む。B2B・エンタープライズ向け自動化において最も重要なパターン。「どこに人間を介在させるか」の設計がリスク管理の核心。</p>
-        <div class="diag-step-row" style="margin-top:0.8rem;">
-          <div class="diag-step-card">
-            <div class="step-num">高</div>
-            <div class="step-title">常に確認が必要</div>
-            <div class="step-body">外部送信（メール・API）、高額取引、個人情報アクセス、法的影響があるアクション</div>
-          </div>
-          <div class="diag-step-card">
-            <div class="step-num">中</div>
-            <div class="step-title">閾値超えで確認</div>
-            <div class="step-body">信頼度スコアが低い場合、初回実行時、新規カテゴリのタスク、例外パターン検出時</div>
-          </div>
-          <div class="diag-step-card">
-            <div class="step-num">低</div>
-            <div class="step-title">非同期通知のみ</div>
-            <div class="step-body">定型的な繰り返し作業、既に検証済みのワークフロー、内部のみの影響範囲</div>
-          </div>
-        </div>
-        <p class="diag-caption">HITL は「邪魔な制限」ではなく「信頼を積み上げる段階的自律化の仕組み」</p>
-      </div>
-
-      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">パターン選択のデシジョンツリー</h2>
-
-      <p>どのパターンを選ぶかは以下の3つの問いで決定できる。</p>
-
-      <ul>
-        <li><strong>タスクは単一ステップか複数ステップか？</strong> → 単一：Tool Useで十分。複数：Plan+Solveを検討</li>
-        <li><strong>並列処理・専門特化が必要か？</strong> → Yes：Multi-Agent。No：単一エージェント+パターンの組み合わせ</li>
-        <li><strong>外部への影響（送信・取引）があるか？</strong> → Yes：HITLを必ず組み込む</li>
-      </ul>
-
-      <div class="insight-box">
-        <div class="insight-label">Wing's View</div>
+<div class="max-w-3xl mx-auto">
+<p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3">AI Strategy / SaaS Architecture</p>
+<h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4">AIネイティブSaaS設計パターン：<br/>マルチエージェント5つのアーキテクチャと実装戦略</h1>
+<div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2">
+<time datetime="2026-03-29">2026.03.29</time>
+<span data-en="Wing Editorial Team" data-ja="Wing編集部">Wing編集部</span>
+</div>
+<div class="gold-rule mb-10"></div>
+<article class="text-[.9rem] text-ink leading-[2] max-w-none">
+<p data-en='"Integrating AI into products" is no longer a competitive advantage in 2026 but a prerequisite. The question is "how to integrate." Anyone can embed a single LLM call in code. But the moment you try to truly automate complex B2B workflows, architecture choice determines product success or failure. This article covers five agent patterns used in AI-native SaaS design and their selection criteria.' data-ja="「AIをプロダクトに組み込む」ことは2026年においてもはや競争優位ではなく前提条件になりつつある。問題は「どう組み込むか」だ。単一のLLM呼び出しをコードに埋め込むだけなら誰でもできる。しかし、複雑なB2B業務ワークフローを本当に自動化しようとした瞬間、アーキテクチャの選択が製品の成否を左右する。本稿では、AIネイティブSaaSの設計に使われる5つのエージェントパターンとその選択基準を解説する。">「AIをプロダクトに組み込む」ことは2026年においてもはや競争優位ではなく前提条件になりつつある。問題は「どう組み込むか」だ。単一のLLM呼び出しをコードに埋め込むだけなら誰でもできる。しかし、複雑なB2B業務ワークフローを本当に自動化しようとした瞬間、アーキテクチャの選択が製品の成否を左右する。本稿では、AIネイティブSaaSの設計に使われる<strong>5つのエージェントパターン</strong>とその選択基準を解説する。</p>
+<!-- DIAGRAM: 5 Design Patterns Selection Framework -->
+<div class="diag-wrap" style="margin-bottom:1.8rem">
+<div class="diag-label" data-en="Pattern" data-ja="パターン">Figure 1 — AIネイティブSaaS 5設計パターン：選択フレームワーク</div>
+<svg aria-label="5つのAIエージェント設計パターンの選択フレームワーク" role="img" style="width:100%;display:block;max-width:640px;margin:0 auto" viewbox="0 0 640 270" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#FAFAF8" height="270" rx="6" width="640" x="0" y="0"></rect>
+<!-- Central question -->
+<rect fill="#0F2342" height="40" rx="4" width="200" x="220" y="10"></rect>
+<text fill="#A8965A" font-family="sans-serif" font-size="10" font-weight="700" text-anchor="middle" x="320" y="27">タスクの性質は？</text>
+<text fill="#C4AD72" font-family="sans-serif" font-size="8.5" text-anchor="middle" x="320" y="43">まずここから設計を始める</text>
+<!-- Branch 1: 品質を高めたい → Reflection -->
+<line stroke="#A8965A" stroke-width="1.5" x1="220" x2="100" y1="30" y2="100"></line>
+<rect fill="#1F3A6E" height="70" rx="4" width="160" x="20" y="100"></rect>
+<text fill="#A8965A" font-family="sans-serif" font-size="9.5" font-weight="700" text-anchor="middle" x="100" y="120">Reflection</text>
+<text fill="#fff" font-family="sans-serif" font-size="9" text-anchor="middle" x="100" y="136">品質を自己改善</text>
+<text fill="#BDD0FF" font-family="sans-serif" font-size="8" text-anchor="middle" x="100" y="150">文書/コード品質担保</text>
+<text fill="#8A9AC0" font-family="sans-serif" font-size="8" text-anchor="middle" x="100" y="163">複雑度：低〜中</text>
+<!-- Branch 2: 多段階タスク → Plan+Solve -->
+<line stroke="#A8965A" stroke-width="1.5" x1="270" x2="200" y1="50" y2="110"></line>
+<rect fill="#2A4A8A" height="70" rx="4" width="160" x="120" y="110"></rect>
+<text fill="#A8965A" font-family="sans-serif" font-size="9.5" font-weight="700" text-anchor="middle" x="200" y="130">Plan + Solve</text>
+<text fill="#fff" font-family="sans-serif" font-size="9" text-anchor="middle" x="200" y="146">計画→実行に分離</text>
+<text fill="#BDD0FF" font-family="sans-serif" font-size="8" text-anchor="middle" x="200" y="160">リサーチ/RFP対応</text>
+<text fill="#8A9AC0" font-family="sans-serif" font-size="8" text-anchor="middle" x="200" y="173">複雑度：中</text>
+<!-- Branch 3: 外部データ必要 → Tool Use -->
+<line stroke="#A8965A" stroke-width="1.5" x1="320" x2="320" y1="50" y2="110"></line>
+<rect fill="#A8965A" height="70" rx="4" width="160" x="240" y="110"></rect>
+<text fill="#fff" font-family="sans-serif" font-size="9.5" font-weight="700" text-anchor="middle" x="320" y="130">Tool Use</text>
+<text fill="#fff" font-family="sans-serif" font-size="9" text-anchor="middle" x="320" y="146">外部API自律呼び出し</text>
+<text fill="#fff" font-family="sans-serif" font-size="8" text-anchor="middle" x="320" y="160">データ検索/計算/連携</text>
+<text fill="#fff" font-family="sans-serif" font-size="8" text-anchor="middle" x="320" y="173">複雑度：中</text>
+<!-- Branch 4: 並列/専門分化 → Multi-Agent -->
+<line stroke="#A8965A" stroke-width="1.5" x1="370" x2="440" y1="50" y2="110"></line>
+<rect fill="#0F2342" height="70" rx="4" width="160" x="360" y="110"></rect>
+<text fill="#A8965A" font-family="sans-serif" font-size="9.5" font-weight="700" text-anchor="middle" x="440" y="130">Multi-Agent</text>
+<text fill="#fff" font-family="sans-serif" font-size="9" text-anchor="middle" x="440" y="146">複数エージェント協調</text>
+<text fill="#C4AD72" font-family="sans-serif" font-size="8" text-anchor="middle" x="440" y="160">並列処理/専門特化</text>
+<text fill="#8A8A96" font-family="sans-serif" font-size="8" text-anchor="middle" x="440" y="173">複雑度：高</text>
+<!-- Branch 5: 高リスク → HITL -->
+<line stroke="#A8965A" stroke-width="1.5" x1="420" x2="540" y1="30" y2="100"></line>
+<rect fill="#5A3A2A" height="70" rx="4" width="160" x="460" y="100"></rect>
+<text fill="#E8C080" font-family="sans-serif" font-size="9.5" font-weight="700" text-anchor="middle" x="540" y="120">HITL</text>
+<text fill="#fff" font-family="sans-serif" font-size="9" text-anchor="middle" x="540" y="136">人間が承認介在</text>
+<text fill="#E8C080" font-family="sans-serif" font-size="8" text-anchor="middle" x="540" y="150">高リスク/コンプライアンス</text>
+<text fill="#C8A880" font-family="sans-serif" font-size="8" text-anchor="middle" x="540" y="163">複雑度：中</text>
+<!-- Branch labels on lines -->
+<text fill="#8A8A96" font-family="sans-serif" font-size="8" x="130" y="72">品質向上</text>
+<text fill="#8A8A96" font-family="sans-serif" font-size="8" x="218" y="88">多段階</text>
+<text fill="#8A8A96" font-family="sans-serif" font-size="8" x="323" y="86">外部連携</text>
+<text fill="#8A8A96" font-family="sans-serif" font-size="8" x="400" y="74">並列/専門</text>
+<text fill="#8A8A96" font-family="sans-serif" font-size="8" x="468" y="65">高リスク</text>
+<!-- Bottom note: combine patterns -->
+<rect fill="#0F2342" height="52" opacity="0.06" rx="4" width="480" x="80" y="200"></rect>
+<text fill="#0F2342" font-family="sans-serif" font-size="9.5" font-weight="700" text-anchor="middle" x="320" y="220">実装のポイント：パターンは組み合わせて使う</text>
+<text fill="#4A4A55" font-family="sans-serif" font-size="8.5" text-anchor="middle" x="320" y="238">例：Tool Use + Reflection（データ取得後に自己評価）</text>
+<text fill="#4A4A55" font-family="sans-serif" font-size="8.5" text-anchor="middle" x="320" y="252">例：Multi-Agent + HITL（並列処理→最終承認は人間）</text>
+</svg>
+<p class="diag-caption" data-en="Pattern" data-ja="パターン">タスクの複雑さ・リスク・並列性を軸に最適パターンを選択する。過剰な複雑化が最大の失敗要因</p>
+</div>
+<h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4" data-en='Why "Design Patterns" Matter' data-ja="なぜ「設計パターン」が重要か">なぜ「設計パターン」が重要か</h2>
+<p data-en='Many AI application failures stem not from "lack of technical skills" but from "architecture selection mistakes." Using multi-agent systems for simple Q&amp;A tasks causes cost and complexity to explode, while assigning complex orchestration tasks to a single agent yields poor accuracy. These problems can be prevented at the design stage.' data-ja="AIアプリケーションの失敗事例の多くは「技術力の不足」ではなく「アーキテクチャ選択のミス」に起因する。シンプルな質問応答タスクにマルチエージェントを採用してコストと複雑性が爆発する、逆に複雑なオーケストレーションが必要なタスクを単一エージェントに任せて精度が出ない——こうした問題は設計段階で防げる。">AIアプリケーションの失敗事例の多くは「技術力の不足」ではなく「アーキテクチャ選択のミス」に起因する。シンプルな質問応答タスクにマルチエージェントを採用してコストと複雑性が爆発する、逆に複雑なオーケストレーションが必要なタスクを単一エージェントに任せて精度が出ない——こうした問題は設計段階で防げる。</p>
+<div class="diag-wrap">
+<div class="diag-label">5 Agentic Design Patterns — 概要一覧</div>
+<table class="compare-table">
+<thead><tr><th data-en="Pattern" data-ja="パターン">パターン</th><th data-en="Core Mechanism" data-ja="核心メカニズム">核心メカニズム</th><th data-en="Suitable Use Cases" data-ja="適したユースケース">適したユースケース</th><th data-en="Complexity" data-ja="複雑度">複雑度</th></tr></thead>
+<tbody>
+<tr><td><strong>Reflection</strong></td><td data-en="Self-evaluate and regenerate output" data-ja="出力を自己評価・再生成">出力を自己評価・再生成</td><td data-en="Document creation, code review" data-ja="文書作成、コードレビュー">文書作成、コードレビュー</td><td data-en="Low-Medium" data-ja="低〜中">低〜中</td></tr>
+<tr><td><strong>Plan + Solve</strong></td><td data-en="Plan then execute step-by-step" data-ja="計画→実行ステップ分割">計画→実行ステップ分割</td><td data-en="Multi-step research and analysis" data-ja="複数ステップのリサーチ・分析">複数ステップのリサーチ・分析</td><td data-en="Medium" data-ja="中">中</td></tr>
+<tr><td><strong>Tool Use</strong></td><td data-en="Autonomous external API and DB calls" data-ja="外部API・DBを自律呼び出し">外部API・DBを自律呼び出し</td><td data-en="Data search, computation, external integration" data-ja="データ検索、計算、外部連携">データ検索、計算、外部連携</td><td data-en="Medium" data-ja="中">中</td></tr>
+<tr><td><strong>Multi-Agent</strong></td><td data-en="Multiple agents with role-based collaboration" data-ja="複数エージェントの役割分担協調">複数エージェントの役割分担協調</td><td data-en="Tasks requiring parallel processing or specialization" data-ja="並列処理、専門特化が必要なタスク">並列処理、専門特化が必要なタスク</td><td data-en="High" data-ja="高">高</td></tr>
+<tr><td><strong>HITL</strong></td><td data-en="Human verification and approval" data-ja="人間の確認・承認を介在">人間の確認・承認を介在</td><td data-en="High-risk decisions, compliance requirements" data-ja="高リスク判断、コンプライアンス対応">高リスク判断、コンプライアンス対応</td><td data-en="Medium" data-ja="中">中</td></tr>
+</tbody>
+</table>
+<p class="diag-caption" data-en="Pattern" data-ja="パターン">パターンは組み合わせて使う。5つを理解した上でハイブリッド設計を選択する</p>
+</div>
+<h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4" data-en="Pattern Details: Five Architectures" data-ja="パターン詳説：5つのアーキテクチャ">パターン詳説：5つのアーキテクチャ</h2>
+<div class="diag-wrap">
+<div class="diag-label" data-en="Pattern" data-ja="パターン">Pattern 1 — Reflection（自己反省）パターン</div>
+<div class="diag-step-row">
+<div class="diag-step-card">
+<div class="step-num" data-en="Self-evaluate and regenerate output" data-ja="出力を自己評価・再生成">生成</div>
+<div class="step-title" data-en="Initial Output" data-ja="初期出力">初期出力</div>
+<div class="step-body" data-en="The LLM generates an initial response, document, or code for the given task" data-ja="LLMが与えられたタスクに対して初期回答・文書・コードを生成する">LLMが与えられたタスクに対して初期回答・文書・コードを生成する</div>
+</div>
+<div class="diag-step-card">
+<div class="step-num" data-en="Self-evaluate and regenerate output" data-ja="出力を自己評価・再生成">評価</div>
+<div class="step-title" data-en="Self-Evaluation" data-ja="自己評価">自己評価</div>
+<div class="step-body" data-en="The same or a different LLM evaluates output quality, accuracy, and requirements fulfillment, identifying improvements" data-ja="同一 or 別のLLMが出力の品質・正確さ・要件充足を評価し改善点を指摘">同一 or 別のLLMが出力の品質・正確さ・要件充足を評価し改善点を指摘</div>
+</div>
+<div class="diag-step-card">
+<div class="step-num" data-en="The same or a different LLM evaluates output quality, accuracy, and requirements fulfillment, identifying improvements" data-ja="同一 or 別のLLMが出力の品質・正確さ・要件充足を評価し改善点を指摘">改善</div>
+<div class="step-title" data-en="Regeneration" data-ja="再生成">再生成</div>
+<div class="step-body" data-en="Generate an improved version based on feedback. Repeat this loop until quality standards are met" data-ja="フィードバックを基に改善版を生成。このループを品質基準達成まで繰り返す">フィードバックを基に改善版を生成。このループを品質基準達成まで繰り返す</div>
+</div>
+</div>
+<p class="diag-caption">B2B適用例：提案書の品質担保、メール文面の自動改善、コードのセルフレビュー</p>
+</div>
+<div class="diag-wrap">
+<div class="diag-label" data-en="Pattern" data-ja="パターン">Pattern 2 — Plan + Solve（計画・実行）パターン</div>
+<p style="font-size:0.82rem; color:#4A4A55; margin-bottom:0.8rem;">複雑なタスクを「計画フェーズ」と「実行フェーズ」に分離する。計画エージェントがサブタスクに分解し、実行エージェントが各ステップを処理する。CoT（Chain-of-Thought）プロンプティングの発展形。</p>
+<p style="font-size:0.75rem; color:#8A8A96;"><strong>B2B適用例：</strong>市場調査（調査計画→各項目の情報収集→統合レポート作成）、RFP対応（要件分析→各セクション作成→整合確認）</p>
+</div>
+<div class="diag-wrap">
+<div class="diag-label" data-en="Pattern" data-ja="パターン">Pattern 3 — Tool Use（ツール利用）パターン</div>
+<p data-en="Pattern" data-ja="パターン" style="font-size:0.82rem; color:#4A4A55; margin-bottom:0.8rem;">LLMが外部ツール（API、データベース、計算機、ブラウザ等）を自律的に呼び出す。Function Calling / MCP（Model Context Protocol）で実現。エージェントが「実世界に手を伸ばす」ための基盤パターン。</p>
+<div class="diag-step-row" style="margin-top:0.8rem;">
+<div class="diag-step-card">
+<div class="step-num">◎</div>
+<div class="step-title">Search Tools</div>
+<div class="step-body">Web検索、社内DB検索、ベクトル検索（RAG）</div>
+</div>
+<div class="diag-step-card">
+<div class="step-num">◎</div>
+<div class="step-title">Compute Tools</div>
+<div class="step-body">Python実行、計算、データ変換・集計</div>
+</div>
+<div class="diag-step-card">
+<div class="step-num">◎</div>
+<div class="step-title">Action Tools</div>
+<div class="step-body">メール送信、CRM更新、カレンダー作成、Slack通知</div>
+</div>
+</div>
+<p class="diag-caption">ツールの粒度と権限設計が品質とセキュリティの鍵</p>
+</div>
+<div class="diag-wrap">
+<div class="diag-label" data-en="Pattern" data-ja="パターン">Pattern 4 — Multi-Agent（マルチエージェント）パターン</div>
+<p data-en="Role" data-ja="役割" style="font-size:0.82rem; color:#4A4A55; margin-bottom:0.8rem;">複数のエージェントが役割を分担し協調する。「オーケストレーター」が全体を指揮し、「サブエージェント」が専門タスクを実行する。LangGraph、AutoGen、CrewAIで実装。</p>
+<table class="compare-table" style="margin-top:0.8rem;">
+<thead><tr><th data-en="Component" data-ja="構成要素">構成要素</th><th data-en="Role" data-ja="役割">役割</th></tr></thead>
+<tbody>
+<tr><td>Orchestrator Agent</td><td data-en="Task decomposition, delegation to sub-agents, result integration" data-ja="タスク分解・サブエージェントへの委任・結果統合">タスク分解・サブエージェントへの委任・結果統合</td></tr>
+<tr><td>Specialist Agents</td><td data-en="Specialized types: research, document creation, code execution, etc." data-ja="リサーチ担当、文書作成担当、コード実行担当など特化型">リサーチ担当、文書作成担当、コード実行担当など特化型</td></tr>
+<tr><td>Memory Layer</td><td data-en="Context and past execution logs shared across sessions" data-ja="セッション間で共有されるコンテキスト・過去の実行ログ">セッション間で共有されるコンテキスト・過去の実行ログ</td></tr>
+<tr><td>Tool Registry</td><td data-en="Permission management for tools available to each agent" data-ja="各エージェントが使えるツールの権限管理">各エージェントが使えるツールの権限管理</td></tr>
+</tbody>
+</table>
+<p class="diag-caption" data-en="High" data-ja="高">複雑性が高いため、単一エージェントで対応できない場合にのみ採用を検討する</p>
+</div>
+<div class="diag-wrap">
+<div class="diag-label" data-en="Pattern" data-ja="パターン">Pattern 5 — HITL（Human-in-the-Loop）パターン</div>
+<p data-en="Pattern" data-ja="パターン" style="font-size:0.82rem; color:#4A4A55; margin-bottom:0.8rem;">エージェントの判断・実行の特定ポイントに人間の確認・承認を挟む。B2B・エンタープライズ向け自動化において最も重要なパターン。「どこに人間を介在させるか」の設計がリスク管理の核心。</p>
+<div class="diag-step-row" style="margin-top:0.8rem;">
+<div class="diag-step-card">
+<div class="step-num" data-en="High" data-ja="高">高</div>
+<div class="step-title" data-en="Always Requires Confirmation" data-ja="常に確認が必要">常に確認が必要</div>
+<div class="step-body" data-en="External communications (email/API), high-value transactions, personal data access, legally impactful actions" data-ja="外部送信（メール・API）、高額取引、個人情報アクセス、法的影響があるアクション">外部送信（メール・API）、高額取引、個人情報アクセス、法的影響があるアクション</div>
+</div>
+<div class="diag-step-card">
+<div class="step-num" data-en="Medium" data-ja="中">中</div>
+<div class="step-title" data-en="Confirmation When Threshold Exceeded" data-ja="閾値超えで確認">閾値超えで確認</div>
+<div class="step-body" data-en="Low confidence scores, first-time execution, new task categories, exception pattern detection" data-ja="信頼度スコアが低い場合、初回実行時、新規カテゴリのタスク、例外パターン検出時">信頼度スコアが低い場合、初回実行時、新規カテゴリのタスク、例外パターン検出時</div>
+</div>
+<div class="diag-step-card">
+<div class="step-num" data-en="Low-Medium" data-ja="低〜中">低</div>
+<div class="step-title" data-en="Asynchronous Notification Only" data-ja="非同期通知のみ">非同期通知のみ</div>
+<div class="step-body" data-en="Routine repetitive tasks, already verified workflows, internal-only impact scope" data-ja="定型的な繰り返し作業、既に検証済みのワークフロー、内部のみの影響範囲">定型的な繰り返し作業、既に検証済みのワークフロー、内部のみの影響範囲</div>
+</div>
+</div>
+<p class="diag-caption">HITL は「邪魔な制限」ではなく「信頼を積み上げる段階的自律化の仕組み」</p>
+</div>
+<h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4" data-en="Decision Tree for Pattern Selection" data-ja="パターン選択のデシジョンツリー">パターン選択のデシジョンツリー</h2>
+<p data-en="Which pattern to choose can be determined by the following three questions." data-ja="どのパターンを選ぶかは以下の3つの問いで決定できる。">どのパターンを選ぶかは以下の3つの問いで決定できる。</p>
+<ul>
+<li><strong>タスクは単一ステップか複数ステップか？</strong> → 単一：Tool Useで十分。複数：Plan+Solveを検討</li>
+<li><strong>並列処理・専門特化が必要か？</strong> → Yes：Multi-Agent。No：単一エージェント+パターンの組み合わせ</li>
+<li><strong>外部への影響（送信・取引）があるか？</strong> → Yes：HITLを必ず組み込む</li>
+</ul>
+<div class="insight-box">
+<div class="insight-label">Wing's View</div>
         AIネイティブSaaSの設計で最も見落とされがちなのは「観測可能性（Observability）」だ。エージェントが何を考え・何を実行し・なぜその判断をしたかを追跡できる仕組みがないと、デバッグも品質改善も不可能になる。LangSmith、Arize Phoenix、LangfuseなどのLLM Observabilityツールの組み込みを、アーキテクチャ設計段階から計画することを強く推奨する。
       </div>
-
-    </article>
-
-    <!-- CTA -->
-    <div class="mt-16 bg-navy text-white px-8 py-10 text-center">
-      <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold/80 mb-3">Consulting</p>
-      <h2 class="text-[1.2rem] font-medium mb-4 leading-snug">AIネイティブSaaSのアーキテクチャ設計から<br>実装まで Wing がご支援します</h2>
-      <p class="text-[.82rem] text-white/70 leading-relaxed mb-6">エージェント設計パターンの選択、LLM Observability、B2B業務への最適化まで。Wing がAIプロダクト開発のアーキテクチャ戦略を支援します。</p>
-      <a href="/#contact" class="inline-block bg-gold text-white text-[.78rem] font-medium tracking-wider px-7 py-3 hover:bg-gold-light transition-colors">無料相談を予約する →</a>
-    </div>
-  </div>
+</article>
+<!-- CTA -->
+<div class="mt-16 bg-navy text-white px-8 py-10 text-center">
+<p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold/80 mb-3">Consulting</p>
+<h2 class="text-[1.2rem] font-medium mb-4 leading-snug">AIネイティブSaaSのアーキテクチャ設計から<br/>実装まで Wing がご支援します</h2>
+<p class="text-[.82rem] text-white/70 leading-relaxed mb-6" data-en="From agent design pattern selection to LLM Observability and B2B workflow optimization. Wing supports your AI product development architecture strategy." data-ja="エージェント設計パターンの選択、LLM Observability、B2B業務への最適化まで。Wing がAIプロダクト開発のアーキテクチャ戦略を支援します。">エージェント設計パターンの選択、LLM Observability、B2B業務への最適化まで。Wing がAIプロダクト開発のアーキテクチャ戦略を支援します。</p>
+<a class="inline-block bg-gold text-white text-[.78rem] font-medium tracking-wider px-7 py-3 hover:bg-gold-light transition-colors" data-en="Book a Free Consultation →" data-ja="無料相談を予約する →" href="/#contact">無料相談を予約する →</a>
+</div>
+</div>
 </main>
 <footer class="mt-20 border-t border-[#E2E0DA] py-10 px-6 md:px-10 text-center">
-  <a href="/" class="inline-block mb-4">
-    <svg width="80" height="24" viewBox="0 0 120 36" fill="none">
-      <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#0F2342"/>
-      <path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#0F2342" opacity=".32"/>
-      <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#0F2342">Wing</text>
-    </svg>
-  </a>
-  <p class="text-[.72rem] text-ink-light">© 2026 Wing Consulting. All rights reserved.</p>
+<a class="inline-block mb-4" href="/">
+<svg fill="none" height="24" viewbox="0 0 120 36" width="80">
+<path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#0F2342"></path>
+<path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#0F2342" opacity=".32"></path>
+<text fill="#0F2342" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" x="46" y="25">Wing</text>
+</svg>
+</a>
+<p class="text-[.72rem] text-ink-light">© 2026 Wing Consulting. All rights reserved.</p>
 </footer>
 </body>
 </html>

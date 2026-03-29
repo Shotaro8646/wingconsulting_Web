@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="ja" class="scroll-smooth">
+
+<html class="scroll-smooth" lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Trade DX: Success vs Failure | Wing Blog</title>
-<meta name="description" content="Three factors that separate trade DX success from failure.">
-<meta name="keywords" content="貿易DX 失敗, 商社 DX 事例, 貿易業務 自動化 失敗, DX 成功 失敗 違い, OCR 半自動化 問題, 貿易DX KPI, スモールスタート DX, 書類照合 自動化">
-<meta property="og:title" content="Trade DX: 3 Differences Between Success and Failure">
-<meta property="og:description" content="Three factors that separate trade DX success from failure.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://wingconsulting.org/blog/trade-dx-success-failure">
-<meta property="og:locale" content="ja_JP">
-<meta property="og:image" content="https://wingconsulting.org/images/og-default.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:site_name" content="Wing">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Trade DX: 3 Differences Between Success and Failure">
-<meta name="twitter:description" content="Three factors that separate trade DX success from failure.">
-<meta name="twitter:image" content="https://wingconsulting.org/images/og-default.png">
-<link rel="canonical" href="https://wingconsulting.org/blog/trade-dx-success-failure">
+<meta content="Three factors that separate trade DX success from failure." name="description"/>
+<meta content="貿易DX 失敗, 商社 DX 事例, 貿易業務 自動化 失敗, DX 成功 失敗 違い, OCR 半自動化 問題, 貿易DX KPI, スモールスタート DX, 書類照合 自動化" name="keywords"/>
+<meta content="Trade DX: 3 Differences Between Success and Failure" property="og:title"/>
+<meta content="Three factors that separate trade DX success from failure." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://wingconsulting.org/blog/trade-dx-success-failure" property="og:url"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="https://wingconsulting.org/images/og-default.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Wing" property="og:site_name"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Trade DX: 3 Differences Between Success and Failure" name="twitter:title"/>
+<meta content="Three factors that separate trade DX success from failure." name="twitter:description"/>
+<meta content="https://wingconsulting.org/images/og-default.png" name="twitter:image"/>
+<link href="https://wingconsulting.org/blog/trade-dx-success-failure" rel="canonical"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -120,14 +121,14 @@ article li { margin-bottom: 0.5rem; }
 .diag-checklist-item .chk { color:#A8965A; font-weight:700; flex-shrink:0; margin-top:0.05rem; }
 </style>
 <!-- Google Analytics GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-KN7NWHFK9G');
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;family=Noto+Sans+JP:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
 <style id="font-override">
   body, p, li, td, th, span, div {
     font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif !important;
@@ -144,163 +145,346 @@ article li { margin-bottom: 0.5rem; }
 </style>
 </head>
 <body class="bg-slate-warm text-ink">
-
 <!-- ─── HEADER ─────────────────────────────────────────── -->
 <header class="bg-navy h-[60px] flex items-center px-6 md:px-10 sticky top-0 z-50">
-  <div class="max-w-5xl mx-auto w-full flex items-center justify-between">
-    <a href="/" class="leading-none">
-      <svg width="120" height="36" viewBox="0 0 120 36" fill="none" aria-label="Wing">
-        <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff"/>
-        <path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#fff" opacity=".32"/>
-        <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#fff">Wing</text>
-      </svg>
-    </a>
-    <div class="flex items-center gap-4">
-      <span class="display text-[.7rem] font-medium tracking-wider text-white/50">Blog</span>
-      <a href="/" class="text-[.75rem] text-white/70 hover:text-white transition-colors">← Home</a>
-    </div>
-  </div>
+<div class="max-w-5xl mx-auto w-full flex items-center justify-between">
+<a class="leading-none" href="/">
+<svg aria-label="Wing" fill="none" height="36" viewbox="0 0 120 36" width="120">
+<path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff"></path>
+<path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#fff" opacity=".32"></path>
+<text fill="#fff" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" x="46" y="25">Wing</text>
+</svg>
+</a>
+<div class="flex items-center gap-4">
+<span class="display text-[.7rem] font-medium tracking-wider text-white/50">Blog</span>
+<a class="text-[.75rem] text-white/70 hover:text-white transition-colors" href="/">← Home</a>
+</div>
+</div>
 </header>
-
 <!-- ─── ARTICLE ─────────────────────────────────────────── -->
 <main class="py-16 px-6 md:px-10">
-  <div class="max-w-3xl mx-auto">
-    <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3">Trade DX Strategy</p>
-    <h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4">貿易DXとは何か？<br>失敗企業と成功企業を分ける3つの違い</h1>
-    <div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2">
-      <time datetime="2026-03-28">2026.03.28</time>
-      <span>Wing編集部</span>
-    </div>
-    <div class="gold-rule mb-10"></div>
-
-    <article class="text-[.9rem] text-ink leading-[2] max-w-none">
-
-      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">「貿易DX」に取り組んだが、成果が出ていない企業が多い</h2>
-      <p>「書類をデジタル化した」「クラウドストレージを導入した」「Excelマクロで申告書を自動生成するようにした」。これらはすべて改善であり、意味のある取り組みだ。しかし、<strong>現場の工数が劇的に減った企業と、変わらなかった企業の間には、明確な差がある。</strong></p>
-      <p>その差は、技術の選択ではなく、設計思想の違いから生まれる。</p>
-
-      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">失敗パターン：「ツールの導入」で終わった企業</h2>
-
-      <!-- DIAGRAM: 失敗パターン比較 -->
-      <div class="diag-wrap">
-        <div class="diag-label">貿易DX 失敗の3パターン</div>
-        <div class="diag-step-row">
-          <div class="diag-step-card" style="border-top:3px solid #C45C3A;">
-            <div class="step-num" style="background:#C45C3A;">A</div>
-            <div class="step-title">OCR導入・半自動化止まり</div>
-            <div class="step-body">読み取り結果の確認・再入力と、エラー箇所の目視確認が残り「半自動化」の状態で停止</div>
-          </div>
-          <div class="diag-step-card" style="border-top:3px solid #C45C3A;">
-            <div class="step-num" style="background:#C45C3A;">B</div>
-            <div class="step-title">通関システムが孤立した島に</div>
-            <div class="step-body">申告書作成は効率化されたが、前後工程（書類照合・HS確認・法規制チェック）は従来通り手動のまま</div>
-          </div>
-          <div class="diag-step-card" style="border-top:3px solid #C45C3A;">
-            <div class="step-num" style="background:#C45C3A;">C</div>
-            <div class="step-title">担当者交代でExcelに戻る</div>
-            <div class="step-body">導入担当者の異動後、後任がシステムを把握できずマニュアルも未更新。従来フローに回帰</div>
-          </div>
-        </div>
-      </div>
-      <p class="diag-caption">[図] 貿易DXで成果が出ない3つの失敗パターン</p>
-
-      <h3 class="text-[1rem] font-medium text-ink">パターンA：OCRを導入したが、出力結果の確認に人手がかかる</h3>
-      <p>AI-OCRで書類を読み取ることはできた。しかし、読み取り結果をシステムに入力し直す作業と、エラー箇所を目視で確認する作業が残り、「半自動化」の状態で止まった。</p>
-
-      <h3 class="text-[1rem] font-medium text-ink">パターンB：通関システムを導入したが、前後工程がつながっていない</h3>
-      <p>申告書の作成は効率化された。しかし、書類照合・HS分類確認・法規制チェックは従来通り手動で行われ、通関業者への依頼・回答のやり取りもメールのままだ。「システムが孤立した島」になっている。</p>
-
-      <h3 class="text-[1rem] font-medium text-ink">パターンC：担当者が変わるとシステムが使われなくなる</h3>
-      <p>導入時の担当者が異動し、後任者がシステムの使い方を把握していない。マニュアルも更新されていない。結果として、Excelによる従来フローに戻った。</p>
-
-      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">成功企業の共通点：3つの違い</h2>
-
-      <!-- DIAGRAM: 成功vs失敗の比較 -->
-      <div class="diag-wrap">
-        <div class="diag-label">成功企業 vs 失敗企業 ── 設計思想の違い</div>
-        <div class="diag-row">
-          <div class="diag-compare-col">
-            <div class="col-head">失敗企業の特徴</div>
-            <ul>
-              <li>ツールから入る（「OCRを導入しよう」）</li>
-              <li>KPIが「システム導入件数・利用率」</li>
-              <li>全社一斉展開を最初から狙う</li>
-              <li>例外処理の設計をしていない</li>
-              <li>導入後のマニュアル・引継ぎが不備</li>
-            </ul>
-          </div>
-          <div class="diag-compare-col highlight">
-            <div class="col-head">成功企業の特徴</div>
-            <ul>
-              <li>プロセス全体を設計してからツールを選ぶ</li>
-              <li>KPIが「一件あたり処理時間・ミス件数」</li>
-              <li>最初のスコープを絞り6ヶ月で成果を出す</li>
-              <li>例外処理のエスカレーション設計まで含む</li>
-              <li>ナレッジが組織に蓄積される設計</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <p class="diag-caption">[図] 貿易DX成功・失敗を分ける設計思想の違い</p>
-
-      <h3 class="text-[1rem] font-medium text-ink">違い1：「プロセス全体」を設計してからツールを選んだ</h3>
-      <p>失敗企業はツールから入る。「OCRを導入しよう」「クラウドERPに切り替えよう」。成功企業はプロセスから入る。「契約から代金回収まで、どのステップを自動化し、どこに人間の判断を残すか」を先に設計し、それに合うツールを選ぶ。</p>
-      <p>設計の肝は<strong>「例外処理の設計」</strong>だ。定型業務の自動化は難しくない。難しいのは、書類の数量に不一致があった場合、通関でHSコードに疑義が生じた場合、サプライヤーが納期を変更してきた場合──こうした例外をシステムがどう扱い、誰にエスカレーションするかを設計することだ。</p>
-
-      <h3 class="text-[1rem] font-medium text-ink">違い2：KPIが「ツールの利用率」ではなく「業務工数」だった</h3>
-      <p>失敗企業のプロジェクトKPIは「システム導入件数」「利用率」になりやすい。成功企業が見るのは「一件あたりの処理時間」「ミス・差戻し件数」「担当者一人あたりの取扱案件数」だ。</p>
-      <p>貿易DXの目的は業務変革であり、ツール普及ではない。KPIがずれていると、評価基準がずれ、本質的な改善が起きないまま「導入済み」の報告だけが上がってくる。</p>
-
-      <h3 class="text-[1rem] font-medium text-ink">違い3：最初から「小さく動かして、拡張した」</h3>
-      <p>成功企業は初期スコープを絞る。「まず輸入フローの書類照合だけ自動化する」「最初は特定の品目カテゴリだけ対象にする」。6ヶ月以内に成果を出し、その結果を根拠に次のフェーズへ進む。</p>
-      <p>失敗企業は全社一斉展開を狙う。対象業務が広すぎて要件定義が終わらない。テストが長期化する。組織変更が起きてプロジェクトが凍結する。「貿易DXをやった」が記録に残るだけで、何も変わらない。</p>
-
-      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">成功企業が最初に自動化した領域</h2>
-      <p>複数の商社・メーカーの事例を見ると、最初の自動化対象として効果が出やすい領域には共通点がある。</p>
-
-      <!-- DIAGRAM: 優先自動化領域 -->
-      <div class="diag-wrap">
-        <div class="diag-label">最初に着手すると効果が出やすい自動化領域</div>
-        <div class="diag-row">
-          <div class="diag-checklist-item"><span class="chk">✓</span><span><strong>書類照合（Invoice × B/L × Packing List）</strong><br>ルールが明確で自動化しやすく、工数削減効果が大きい</span></div>
-          <div class="diag-checklist-item"><span class="chk">✓</span><span><strong>HSコード分類の補助</strong><br>品目データベースとの照合を自動化し、分類担当者の作業時間を短縮</span></div>
-          <div class="diag-checklist-item"><span class="chk">✓</span><span><strong>法規制チェックリストの自動適用</strong><br>品目コードに対して適用法令を自動で展開する</span></div>
-        </div>
-      </div>
-      <p class="diag-caption">[図] 貿易DXで最初に成果が出やすい3つの自動化領域</p>
-
-      <ul class="list-disc">
-        <li><strong>書類照合（Invoice × B/L × Packing List）</strong>：ルールが明確で自動化しやすく、工数削減効果が大きい</li>
-        <li><strong>HSコード分類の補助</strong>：品目データベースとの照合を自動化し、分類担当者の作業時間を短縮</li>
-        <li><strong>法規制チェックリストの自動適用</strong>：品目コードに対して適用法令を自動で展開する</li>
-      </ul>
-
-      <p>逆に、最初から手をつけると複雑になりすぎる領域は「サプライヤーとの交渉プロセス」「例外案件の対応フロー」だ。</p>
-
-      <p>貿易DXの設計から実装まで──BorderFlow AIは「プロセス全体の自動化」を前提に設計されています。</p>
-
-      <!-- CTA -->
-      <div class="mt-14 p-8 bg-navy text-white text-center rounded-sm">
-        <p class="display text-[.65rem] tracking-[.2em] uppercase text-gold mb-3">BorderFlow AI</p>
-        <p class="text-[1.05rem] font-medium leading-snug mb-2">プロセス全体の自動化を前提に、<br>BorderFlow AIと設計を始めませんか？</p>
-        <p class="text-[.78rem] text-white/60 mb-6">ツール導入で終わらない、業務変革としての貿易DXを支援します。</p>
-        <a href="/#contact" class="inline-block bg-gold text-navy text-[.78rem] font-medium px-8 py-3 hover:bg-gold-light transition-colors">お問い合わせ・ご相談</a>
-      </div>
-
-    </article>
-  </div>
+<div class="max-w-3xl mx-auto" data-ja-html='&lt;p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3"&gt;Trade DX Strategy&lt;/p&gt;
+&lt;h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4" data-ja-html="貿易DXとは何か？&amp;lt;br/&amp;gt;失敗企業と成功企業を分ける3つの違い"&gt;貿易DXとは何か？&lt;br/&gt;失敗企業と成功企業を分ける3つの違い&lt;/h1&gt;
+&lt;div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2"&gt;
+&lt;time datetime="2026-03-28"&gt;2026.03.28&lt;/time&gt;
+&lt;span&gt;Wing編集部&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="gold-rule mb-10"&gt;&lt;/div&gt;
+&lt;article class="text-[.9rem] text-ink leading-[2] max-w-none"&gt;
+&lt;h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4"&gt;「貿易DX」に取り組んだが、成果が出ていない企業が多い&lt;/h2&gt;
+&lt;p data-ja-html="「書類をデジタル化した」「クラウドストレージを導入した」「Excelマクロで申告書を自動生成するようにした」。これらはすべて改善であり、意味のある取り組みだ。しかし、&amp;lt;strong&amp;gt;現場の工数が劇的に減った企業と、変わらなかった企業の間には、明確な差がある。&amp;lt;/strong&amp;gt;"&gt;「書類をデジタル化した」「クラウドストレージを導入した」「Excelマクロで申告書を自動生成するようにした」。これらはすべて改善であり、意味のある取り組みだ。しかし、&lt;strong&gt;現場の工数が劇的に減った企業と、変わらなかった企業の間には、明確な差がある。&lt;/strong&gt;&lt;/p&gt;
+&lt;p data-ja="その差は、技術の選択ではなく、設計思想の違いから生まれる。"&gt;その差は、技術の選択ではなく、設計思想の違いから生まれる。&lt;/p&gt;
+&lt;h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4"&gt;失敗パターン：「ツールの導入」で終わった企業&lt;/h2&gt;
+&lt;!-- DIAGRAM: 失敗パターン比較 --&gt;
+&lt;div class="diag-wrap"&gt;
+&lt;div class="diag-label"&gt;貿易DX 失敗の3パターン&lt;/div&gt;
+&lt;div class="diag-step-row"&gt;
+&lt;div class="diag-step-card" style="border-top:3px solid #C45C3A;"&gt;
+&lt;div class="step-num" style="background:#C45C3A;"&gt;A&lt;/div&gt;
+&lt;div class="step-title"&gt;OCR導入・半自動化止まり&lt;/div&gt;
+&lt;div class="step-body"&gt;読み取り結果の確認・再入力と、エラー箇所の目視確認が残り「半自動化」の状態で停止&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card" style="border-top:3px solid #C45C3A;"&gt;
+&lt;div class="step-num" style="background:#C45C3A;"&gt;B&lt;/div&gt;
+&lt;div class="step-title"&gt;通関システムが孤立した島に&lt;/div&gt;
+&lt;div class="step-body"&gt;申告書作成は効率化されたが、前後工程（書類照合・HS確認・法規制チェック）は従来通り手動のまま&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card" style="border-top:3px solid #C45C3A;"&gt;
+&lt;div class="step-num" style="background:#C45C3A;"&gt;C&lt;/div&gt;
+&lt;div class="step-title"&gt;担当者交代でExcelに戻る&lt;/div&gt;
+&lt;div class="step-body"&gt;導入担当者の異動後、後任がシステムを把握できずマニュアルも未更新。従来フローに回帰&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class="diag-caption" data-ja="[図] 貿易DXで成果が出ない3つの失敗パターン"&gt;[図] 貿易DXで成果が出ない3つの失敗パターン&lt;/p&gt;
+&lt;h3 class="text-[1rem] font-medium text-ink" data-ja="パターンA：OCRを導入したが、出力結果の確認に人手がかかる"&gt;パターンA：OCRを導入したが、出力結果の確認に人手がかかる&lt;/h3&gt;
+&lt;p data-ja="AI-OCRで書類を読み取ることはできた。しかし、読み取り結果をシステムに入力し直す作業と、エラー箇所を目視で確認する作業が残り、「半自動化」の状態で止まった。"&gt;AI-OCRで書類を読み取ることはできた。しかし、読み取り結果をシステムに入力し直す作業と、エラー箇所を目視で確認する作業が残り、「半自動化」の状態で止まった。&lt;/p&gt;
+&lt;h3 class="text-[1rem] font-medium text-ink" data-ja="パターンB：通関システムを導入したが、前後工程がつながっていない"&gt;パターンB：通関システムを導入したが、前後工程がつながっていない&lt;/h3&gt;
+&lt;p data-ja="申告書の作成は効率化された。しかし、書類照合・HS分類確認・法規制チェックは従来通り手動で行われ、通関業者への依頼・回答のやり取りもメールのままだ。「システムが孤立した島」になっている。"&gt;申告書の作成は効率化された。しかし、書類照合・HS分類確認・法規制チェックは従来通り手動で行われ、通関業者への依頼・回答のやり取りもメールのままだ。「システムが孤立した島」になっている。&lt;/p&gt;
+&lt;h3 class="text-[1rem] font-medium text-ink" data-ja="パターンC：担当者が変わるとシステムが使われなくなる"&gt;パターンC：担当者が変わるとシステムが使われなくなる&lt;/h3&gt;
+&lt;p data-ja="導入時の担当者が異動し、後任者がシステムの使い方を把握していない。マニュアルも更新されていない。結果として、Excelによる従来フローに戻った。"&gt;導入時の担当者が異動し、後任者がシステムの使い方を把握していない。マニュアルも更新されていない。結果として、Excelによる従来フローに戻った。&lt;/p&gt;
+&lt;h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4"&gt;成功企業の共通点：3つの違い&lt;/h2&gt;
+&lt;!-- DIAGRAM: 成功vs失敗の比較 --&gt;
+&lt;div class="diag-wrap"&gt;
+&lt;div class="diag-label"&gt;成功企業 vs 失敗企業 ── 設計思想の違い&lt;/div&gt;
+&lt;div class="diag-row"&gt;
+&lt;div class="diag-compare-col"&gt;
+&lt;div class="col-head"&gt;失敗企業の特徴&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;ツールから入る（「OCRを導入しよう」）&lt;/li&gt;
+&lt;li&gt;KPIが「システム導入件数・利用率」&lt;/li&gt;
+&lt;li&gt;全社一斉展開を最初から狙う&lt;/li&gt;
+&lt;li&gt;例外処理の設計をしていない&lt;/li&gt;
+&lt;li&gt;導入後のマニュアル・引継ぎが不備&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="diag-compare-col highlight"&gt;
+&lt;div class="col-head"&gt;成功企業の特徴&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;プロセス全体を設計してからツールを選ぶ&lt;/li&gt;
+&lt;li&gt;KPIが「一件あたり処理時間・ミス件数」&lt;/li&gt;
+&lt;li&gt;最初のスコープを絞り6ヶ月で成果を出す&lt;/li&gt;
+&lt;li&gt;例外処理のエスカレーション設計まで含む&lt;/li&gt;
+&lt;li&gt;ナレッジが組織に蓄積される設計&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class="diag-caption" data-ja="[図] 貿易DX成功・失敗を分ける設計思想の違い"&gt;[図] 貿易DX成功・失敗を分ける設計思想の違い&lt;/p&gt;
+&lt;h3 class="text-[1rem] font-medium text-ink" data-ja="違い1：「プロセス全体」を設計してからツールを選んだ"&gt;違い1：「プロセス全体」を設計してからツールを選んだ&lt;/h3&gt;
+&lt;p data-ja="失敗企業はツールから入る。「OCRを導入しよう」「クラウドERPに切り替えよう」。成功企業はプロセスから入る。「契約から代金回収まで、どのステップを自動化し、どこに人間の判断を残すか」を先に設計し、それに合うツールを選ぶ。"&gt;失敗企業はツールから入る。「OCRを導入しよう」「クラウドERPに切り替えよう」。成功企業はプロセスから入る。「契約から代金回収まで、どのステップを自動化し、どこに人間の判断を残すか」を先に設計し、それに合うツールを選ぶ。&lt;/p&gt;
+&lt;p data-ja-html="設計の肝は&amp;lt;strong&amp;gt;「例外処理の設計」&amp;lt;/strong&amp;gt;だ。定型業務の自動化は難しくない。難しいのは、書類の数量に不一致があった場合、通関でHSコードに疑義が生じた場合、サプライヤーが納期を変更してきた場合──こうした例外をシステムがどう扱い、誰にエスカレーションするかを設計することだ。"&gt;設計の肝は&lt;strong&gt;「例外処理の設計」&lt;/strong&gt;だ。定型業務の自動化は難しくない。難しいのは、書類の数量に不一致があった場合、通関でHSコードに疑義が生じた場合、サプライヤーが納期を変更してきた場合──こうした例外をシステムがどう扱い、誰にエスカレーションするかを設計することだ。&lt;/p&gt;
+&lt;h3 class="text-[1rem] font-medium text-ink" data-ja="違い2：KPIが「ツールの利用率」ではなく「業務工数」だった"&gt;違い2：KPIが「ツールの利用率」ではなく「業務工数」だった&lt;/h3&gt;
+&lt;p data-ja="失敗企業のプロジェクトKPIは「システム導入件数」「利用率」になりやすい。成功企業が見るのは「一件あたりの処理時間」「ミス・差戻し件数」「担当者一人あたりの取扱案件数」だ。"&gt;失敗企業のプロジェクトKPIは「システム導入件数」「利用率」になりやすい。成功企業が見るのは「一件あたりの処理時間」「ミス・差戻し件数」「担当者一人あたりの取扱案件数」だ。&lt;/p&gt;
+&lt;p data-ja="貿易DXの目的は業務変革であり、ツール普及ではない。KPIがずれていると、評価基準がずれ、本質的な改善が起きないまま「導入済み」の報告だけが上がってくる。"&gt;貿易DXの目的は業務変革であり、ツール普及ではない。KPIがずれていると、評価基準がずれ、本質的な改善が起きないまま「導入済み」の報告だけが上がってくる。&lt;/p&gt;
+&lt;h3 class="text-[1rem] font-medium text-ink" data-ja="違い3：最初から「小さく動かして、拡張した」"&gt;違い3：最初から「小さく動かして、拡張した」&lt;/h3&gt;
+&lt;p data-ja="成功企業は初期スコープを絞る。「まず輸入フローの書類照合だけ自動化する」「最初は特定の品目カテゴリだけ対象にする」。6ヶ月以内に成果を出し、その結果を根拠に次のフェーズへ進む。"&gt;成功企業は初期スコープを絞る。「まず輸入フローの書類照合だけ自動化する」「最初は特定の品目カテゴリだけ対象にする」。6ヶ月以内に成果を出し、その結果を根拠に次のフェーズへ進む。&lt;/p&gt;
+&lt;p data-ja="失敗企業は全社一斉展開を狙う。対象業務が広すぎて要件定義が終わらない。テストが長期化する。組織変更が起きてプロジェクトが凍結する。「貿易DXをやった」が記録に残るだけで、何も変わらない。"&gt;失敗企業は全社一斉展開を狙う。対象業務が広すぎて要件定義が終わらない。テストが長期化する。組織変更が起きてプロジェクトが凍結する。「貿易DXをやった」が記録に残るだけで、何も変わらない。&lt;/p&gt;
+&lt;h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4"&gt;成功企業が最初に自動化した領域&lt;/h2&gt;
+&lt;p data-ja="複数の商社・メーカーの事例を見ると、最初の自動化対象として効果が出やすい領域には共通点がある。"&gt;複数の商社・メーカーの事例を見ると、最初の自動化対象として効果が出やすい領域には共通点がある。&lt;/p&gt;
+&lt;!-- DIAGRAM: 優先自動化領域 --&gt;
+&lt;div class="diag-wrap"&gt;
+&lt;div class="diag-label"&gt;最初に着手すると効果が出やすい自動化領域&lt;/div&gt;
+&lt;div class="diag-row"&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;&lt;strong&gt;書類照合（Invoice × B/L × Packing List）&lt;/strong&gt;&lt;br/&gt;ルールが明確で自動化しやすく、工数削減効果が大きい&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;&lt;strong&gt;HSコード分類の補助&lt;/strong&gt;&lt;br/&gt;品目データベースとの照合を自動化し、分類担当者の作業時間を短縮&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;&lt;strong&gt;法規制チェックリストの自動適用&lt;/strong&gt;&lt;br/&gt;品目コードに対して適用法令を自動で展開する&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class="diag-caption" data-ja="[図] 貿易DXで最初に成果が出やすい3つの自動化領域"&gt;[図] 貿易DXで最初に成果が出やすい3つの自動化領域&lt;/p&gt;
+&lt;ul class="list-disc"&gt;
+&lt;li&gt;&lt;strong&gt;書類照合（Invoice × B/L × Packing List）&lt;/strong&gt;：ルールが明確で自動化しやすく、工数削減効果が大きい&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;HSコード分類の補助&lt;/strong&gt;：品目データベースとの照合を自動化し、分類担当者の作業時間を短縮&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;法規制チェックリストの自動適用&lt;/strong&gt;：品目コードに対して適用法令を自動で展開する&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p data-ja="逆に、最初から手をつけると複雑になりすぎる領域は「サプライヤーとの交渉プロセス」「例外案件の対応フロー」だ。"&gt;逆に、最初から手をつけると複雑になりすぎる領域は「サプライヤーとの交渉プロセス」「例外案件の対応フロー」だ。&lt;/p&gt;
+&lt;p data-ja="貿易DXの設計から実装まで──BorderFlow AIは「プロセス全体の自動化」を前提に設計されています。"&gt;貿易DXの設計から実装まで──BorderFlow AIは「プロセス全体の自動化」を前提に設計されています。&lt;/p&gt;
+&lt;!-- CTA --&gt;
+&lt;div class="mt-14 p-8 bg-navy text-white text-center rounded-sm"&gt;
+&lt;p class="display text-[.65rem] tracking-[.2em] uppercase text-gold mb-3"&gt;BorderFlow AI&lt;/p&gt;
+&lt;p class="text-[1.05rem] font-medium leading-snug mb-2" data-ja-html="プロセス全体の自動化を前提に、&amp;lt;br/&amp;gt;BorderFlow AIと設計を始めませんか？"&gt;プロセス全体の自動化を前提に、&lt;br/&gt;BorderFlow AIと設計を始めませんか？&lt;/p&gt;
+&lt;p class="text-[.78rem] text-white/60 mb-6" data-ja="ツール導入で終わらない、業務変革としての貿易DXを支援します。"&gt;ツール導入で終わらない、業務変革としての貿易DXを支援します。&lt;/p&gt;
+&lt;a class="inline-block bg-gold text-navy text-[.78rem] font-medium px-8 py-3 hover:bg-gold-light transition-colors" data-en="Contact Us" data-ja="お問い合わせ・ご相談" href="/#contact"&gt;お問い合わせ・ご相談&lt;/a&gt;
+&lt;/div&gt;
+&lt;/article&gt;'>
+<p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3">Trade DX Strategy</p>
+<h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4" data-ja-html="貿易DXとは何か？&lt;br/&gt;失敗企業と成功企業を分ける3つの違い">貿易DXとは何か？<br/>失敗企業と成功企業を分ける3つの違い</h1>
+<div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2" data-ja-html='&lt;time datetime="2026-03-28"&gt;2026.03.28&lt;/time&gt;
+&lt;span&gt;Wing編集部&lt;/span&gt;'>
+<time datetime="2026-03-28">2026.03.28</time>
+<span data-en="Wing Editorial Team" data-ja="Wing編集部">Wing編集部</span>
+</div>
+<div class="gold-rule mb-10"></div>
+<article class="text-[.9rem] text-ink leading-[2] max-w-none">
+<h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4" data-ja="「貿易DX」に取り組んだが、成果が出ていない企業が多い">「貿易DX」に取り組んだが、成果が出ていない企業が多い</h2>
+<p data-ja-html="「書類をデジタル化した」「クラウドストレージを導入した」「Excelマクロで申告書を自動生成するようにした」。これらはすべて改善であり、意味のある取り組みだ。しかし、&lt;strong&gt;現場の工数が劇的に減った企業と、変わらなかった企業の間には、明確な差がある。&lt;/strong&gt;">「書類をデジタル化した」「クラウドストレージを導入した」「Excelマクロで申告書を自動生成するようにした」。これらはすべて改善であり、意味のある取り組みだ。しかし、<strong>現場の工数が劇的に減った企業と、変わらなかった企業の間には、明確な差がある。</strong></p>
+<p data-ja="その差は、技術の選択ではなく、設計思想の違いから生まれる。">その差は、技術の選択ではなく、設計思想の違いから生まれる。</p>
+<h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4" data-ja="失敗パターン：「ツールの導入」で終わった企業">失敗パターン：「ツールの導入」で終わった企業</h2>
+<!-- DIAGRAM: 失敗パターン比較 -->
+<div class="diag-wrap" data-ja-html='&lt;div class="diag-label"&gt;貿易DX 失敗の3パターン&lt;/div&gt;
+&lt;div class="diag-step-row"&gt;
+&lt;div class="diag-step-card" style="border-top:3px solid #C45C3A;"&gt;
+&lt;div class="step-num" style="background:#C45C3A;"&gt;A&lt;/div&gt;
+&lt;div class="step-title"&gt;OCR導入・半自動化止まり&lt;/div&gt;
+&lt;div class="step-body"&gt;読み取り結果の確認・再入力と、エラー箇所の目視確認が残り「半自動化」の状態で停止&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card" style="border-top:3px solid #C45C3A;"&gt;
+&lt;div class="step-num" style="background:#C45C3A;"&gt;B&lt;/div&gt;
+&lt;div class="step-title"&gt;通関システムが孤立した島に&lt;/div&gt;
+&lt;div class="step-body"&gt;申告書作成は効率化されたが、前後工程（書類照合・HS確認・法規制チェック）は従来通り手動のまま&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card" style="border-top:3px solid #C45C3A;"&gt;
+&lt;div class="step-num" style="background:#C45C3A;"&gt;C&lt;/div&gt;
+&lt;div class="step-title"&gt;担当者交代でExcelに戻る&lt;/div&gt;
+&lt;div class="step-body"&gt;導入担当者の異動後、後任がシステムを把握できずマニュアルも未更新。従来フローに回帰&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;'>
+<div class="diag-label" data-ja="貿易DX 失敗の3パターン">貿易DX 失敗の3パターン</div>
+<div class="diag-step-row" data-ja-html='&lt;div class="diag-step-card" style="border-top:3px solid #C45C3A;"&gt;
+&lt;div class="step-num" style="background:#C45C3A;"&gt;A&lt;/div&gt;
+&lt;div class="step-title"&gt;OCR導入・半自動化止まり&lt;/div&gt;
+&lt;div class="step-body"&gt;読み取り結果の確認・再入力と、エラー箇所の目視確認が残り「半自動化」の状態で停止&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card" style="border-top:3px solid #C45C3A;"&gt;
+&lt;div class="step-num" style="background:#C45C3A;"&gt;B&lt;/div&gt;
+&lt;div class="step-title"&gt;通関システムが孤立した島に&lt;/div&gt;
+&lt;div class="step-body"&gt;申告書作成は効率化されたが、前後工程（書類照合・HS確認・法規制チェック）は従来通り手動のまま&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card" style="border-top:3px solid #C45C3A;"&gt;
+&lt;div class="step-num" style="background:#C45C3A;"&gt;C&lt;/div&gt;
+&lt;div class="step-title"&gt;担当者交代でExcelに戻る&lt;/div&gt;
+&lt;div class="step-body"&gt;導入担当者の異動後、後任がシステムを把握できずマニュアルも未更新。従来フローに回帰&lt;/div&gt;
+&lt;/div&gt;'>
+<div class="diag-step-card" data-ja-html='&lt;div class="step-num" style="background:#C45C3A;"&gt;A&lt;/div&gt;
+&lt;div class="step-title"&gt;OCR導入・半自動化止まり&lt;/div&gt;
+&lt;div class="step-body"&gt;読み取り結果の確認・再入力と、エラー箇所の目視確認が残り「半自動化」の状態で停止&lt;/div&gt;' style="border-top:3px solid #C45C3A;">
+<div class="step-num" style="background:#C45C3A;">A</div>
+<div class="step-title" data-ja="OCR導入・半自動化止まり">OCR導入・半自動化止まり</div>
+<div class="step-body" data-ja="読み取り結果の確認・再入力と、エラー箇所の目視確認が残り「半自動化」の状態で停止">読み取り結果の確認・再入力と、エラー箇所の目視確認が残り「半自動化」の状態で停止</div>
+</div>
+<div class="diag-step-card" data-ja-html='&lt;div class="step-num" style="background:#C45C3A;"&gt;B&lt;/div&gt;
+&lt;div class="step-title"&gt;通関システムが孤立した島に&lt;/div&gt;
+&lt;div class="step-body"&gt;申告書作成は効率化されたが、前後工程（書類照合・HS確認・法規制チェック）は従来通り手動のまま&lt;/div&gt;' style="border-top:3px solid #C45C3A;">
+<div class="step-num" style="background:#C45C3A;">B</div>
+<div class="step-title" data-ja="通関システムが孤立した島に">通関システムが孤立した島に</div>
+<div class="step-body" data-ja="申告書作成は効率化されたが、前後工程（書類照合・HS確認・法規制チェック）は従来通り手動のまま">申告書作成は効率化されたが、前後工程（書類照合・HS確認・法規制チェック）は従来通り手動のまま</div>
+</div>
+<div class="diag-step-card" data-ja-html='&lt;div class="step-num" style="background:#C45C3A;"&gt;C&lt;/div&gt;
+&lt;div class="step-title"&gt;担当者交代でExcelに戻る&lt;/div&gt;
+&lt;div class="step-body"&gt;導入担当者の異動後、後任がシステムを把握できずマニュアルも未更新。従来フローに回帰&lt;/div&gt;' style="border-top:3px solid #C45C3A;">
+<div class="step-num" style="background:#C45C3A;">C</div>
+<div class="step-title" data-ja="担当者交代でExcelに戻る">担当者交代でExcelに戻る</div>
+<div class="step-body" data-ja="導入担当者の異動後、後任がシステムを把握できずマニュアルも未更新。従来フローに回帰">導入担当者の異動後、後任がシステムを把握できずマニュアルも未更新。従来フローに回帰</div>
+</div>
+</div>
+</div>
+<p class="diag-caption" data-ja="[図] 貿易DXで成果が出ない3つの失敗パターン">[図] 貿易DXで成果が出ない3つの失敗パターン</p>
+<h3 class="text-[1rem] font-medium text-ink" data-ja="パターンA：OCRを導入したが、出力結果の確認に人手がかかる">パターンA：OCRを導入したが、出力結果の確認に人手がかかる</h3>
+<p data-ja="AI-OCRで書類を読み取ることはできた。しかし、読み取り結果をシステムに入力し直す作業と、エラー箇所を目視で確認する作業が残り、「半自動化」の状態で止まった。">AI-OCRで書類を読み取ることはできた。しかし、読み取り結果をシステムに入力し直す作業と、エラー箇所を目視で確認する作業が残り、「半自動化」の状態で止まった。</p>
+<h3 class="text-[1rem] font-medium text-ink" data-ja="パターンB：通関システムを導入したが、前後工程がつながっていない">パターンB：通関システムを導入したが、前後工程がつながっていない</h3>
+<p data-ja="申告書の作成は効率化された。しかし、書類照合・HS分類確認・法規制チェックは従来通り手動で行われ、通関業者への依頼・回答のやり取りもメールのままだ。「システムが孤立した島」になっている。">申告書の作成は効率化された。しかし、書類照合・HS分類確認・法規制チェックは従来通り手動で行われ、通関業者への依頼・回答のやり取りもメールのままだ。「システムが孤立した島」になっている。</p>
+<h3 class="text-[1rem] font-medium text-ink" data-ja="パターンC：担当者が変わるとシステムが使われなくなる">パターンC：担当者が変わるとシステムが使われなくなる</h3>
+<p data-ja="導入時の担当者が異動し、後任者がシステムの使い方を把握していない。マニュアルも更新されていない。結果として、Excelによる従来フローに戻った。">導入時の担当者が異動し、後任者がシステムの使い方を把握していない。マニュアルも更新されていない。結果として、Excelによる従来フローに戻った。</p>
+<h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4" data-ja="成功企業の共通点：3つの違い">成功企業の共通点：3つの違い</h2>
+<!-- DIAGRAM: 成功vs失敗の比較 -->
+<div class="diag-wrap" data-ja-html='&lt;div class="diag-label"&gt;成功企業 vs 失敗企業 ── 設計思想の違い&lt;/div&gt;
+&lt;div class="diag-row"&gt;
+&lt;div class="diag-compare-col"&gt;
+&lt;div class="col-head"&gt;失敗企業の特徴&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;ツールから入る（「OCRを導入しよう」）&lt;/li&gt;
+&lt;li&gt;KPIが「システム導入件数・利用率」&lt;/li&gt;
+&lt;li&gt;全社一斉展開を最初から狙う&lt;/li&gt;
+&lt;li&gt;例外処理の設計をしていない&lt;/li&gt;
+&lt;li&gt;導入後のマニュアル・引継ぎが不備&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="diag-compare-col highlight"&gt;
+&lt;div class="col-head"&gt;成功企業の特徴&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;プロセス全体を設計してからツールを選ぶ&lt;/li&gt;
+&lt;li&gt;KPIが「一件あたり処理時間・ミス件数」&lt;/li&gt;
+&lt;li&gt;最初のスコープを絞り6ヶ月で成果を出す&lt;/li&gt;
+&lt;li&gt;例外処理のエスカレーション設計まで含む&lt;/li&gt;
+&lt;li&gt;ナレッジが組織に蓄積される設計&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;'>
+<div class="diag-label" data-ja="成功企業 vs 失敗企業 ── 設計思想の違い">成功企業 vs 失敗企業 ── 設計思想の違い</div>
+<div class="diag-row" data-ja-html='&lt;div class="diag-compare-col"&gt;
+&lt;div class="col-head"&gt;失敗企業の特徴&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;ツールから入る（「OCRを導入しよう」）&lt;/li&gt;
+&lt;li&gt;KPIが「システム導入件数・利用率」&lt;/li&gt;
+&lt;li&gt;全社一斉展開を最初から狙う&lt;/li&gt;
+&lt;li&gt;例外処理の設計をしていない&lt;/li&gt;
+&lt;li&gt;導入後のマニュアル・引継ぎが不備&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="diag-compare-col highlight"&gt;
+&lt;div class="col-head"&gt;成功企業の特徴&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;プロセス全体を設計してからツールを選ぶ&lt;/li&gt;
+&lt;li&gt;KPIが「一件あたり処理時間・ミス件数」&lt;/li&gt;
+&lt;li&gt;最初のスコープを絞り6ヶ月で成果を出す&lt;/li&gt;
+&lt;li&gt;例外処理のエスカレーション設計まで含む&lt;/li&gt;
+&lt;li&gt;ナレッジが組織に蓄積される設計&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;'>
+<div class="diag-compare-col" data-ja-html='&lt;div class="col-head"&gt;失敗企業の特徴&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;ツールから入る（「OCRを導入しよう」）&lt;/li&gt;
+&lt;li&gt;KPIが「システム導入件数・利用率」&lt;/li&gt;
+&lt;li&gt;全社一斉展開を最初から狙う&lt;/li&gt;
+&lt;li&gt;例外処理の設計をしていない&lt;/li&gt;
+&lt;li&gt;導入後のマニュアル・引継ぎが不備&lt;/li&gt;
+&lt;/ul&gt;'>
+<div class="col-head" data-ja="失敗企業の特徴">失敗企業の特徴</div>
+<ul>
+<li data-ja="ツールから入る（「OCRを導入しよう」）">ツールから入る（「OCRを導入しよう」）</li>
+<li data-ja="KPIが「システム導入件数・利用率」">KPIが「システム導入件数・利用率」</li>
+<li data-ja="全社一斉展開を最初から狙う">全社一斉展開を最初から狙う</li>
+<li data-ja="例外処理の設計をしていない">例外処理の設計をしていない</li>
+<li data-ja="導入後のマニュアル・引継ぎが不備">導入後のマニュアル・引継ぎが不備</li>
+</ul>
+</div>
+<div class="diag-compare-col highlight" data-ja-html='&lt;div class="col-head"&gt;成功企業の特徴&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;プロセス全体を設計してからツールを選ぶ&lt;/li&gt;
+&lt;li&gt;KPIが「一件あたり処理時間・ミス件数」&lt;/li&gt;
+&lt;li&gt;最初のスコープを絞り6ヶ月で成果を出す&lt;/li&gt;
+&lt;li&gt;例外処理のエスカレーション設計まで含む&lt;/li&gt;
+&lt;li&gt;ナレッジが組織に蓄積される設計&lt;/li&gt;
+&lt;/ul&gt;'>
+<div class="col-head" data-ja="成功企業の特徴">成功企業の特徴</div>
+<ul>
+<li data-ja="プロセス全体を設計してからツールを選ぶ">プロセス全体を設計してからツールを選ぶ</li>
+<li data-ja="KPIが「一件あたり処理時間・ミス件数」">KPIが「一件あたり処理時間・ミス件数」</li>
+<li data-ja="最初のスコープを絞り6ヶ月で成果を出す">最初のスコープを絞り6ヶ月で成果を出す</li>
+<li data-ja="例外処理のエスカレーション設計まで含む">例外処理のエスカレーション設計まで含む</li>
+<li data-ja="ナレッジが組織に蓄積される設計">ナレッジが組織に蓄積される設計</li>
+</ul>
+</div>
+</div>
+</div>
+<p class="diag-caption" data-ja="[図] 貿易DX成功・失敗を分ける設計思想の違い">[図] 貿易DX成功・失敗を分ける設計思想の違い</p>
+<h3 class="text-[1rem] font-medium text-ink" data-ja="違い1：「プロセス全体」を設計してからツールを選んだ">違い1：「プロセス全体」を設計してからツールを選んだ</h3>
+<p data-ja="失敗企業はツールから入る。「OCRを導入しよう」「クラウドERPに切り替えよう」。成功企業はプロセスから入る。「契約から代金回収まで、どのステップを自動化し、どこに人間の判断を残すか」を先に設計し、それに合うツールを選ぶ。">失敗企業はツールから入る。「OCRを導入しよう」「クラウドERPに切り替えよう」。成功企業はプロセスから入る。「契約から代金回収まで、どのステップを自動化し、どこに人間の判断を残すか」を先に設計し、それに合うツールを選ぶ。</p>
+<p data-ja-html="設計の肝は&lt;strong&gt;「例外処理の設計」&lt;/strong&gt;だ。定型業務の自動化は難しくない。難しいのは、書類の数量に不一致があった場合、通関でHSコードに疑義が生じた場合、サプライヤーが納期を変更してきた場合──こうした例外をシステムがどう扱い、誰にエスカレーションするかを設計することだ。">設計の肝は<strong>「例外処理の設計」</strong>だ。定型業務の自動化は難しくない。難しいのは、書類の数量に不一致があった場合、通関でHSコードに疑義が生じた場合、サプライヤーが納期を変更してきた場合──こうした例外をシステムがどう扱い、誰にエスカレーションするかを設計することだ。</p>
+<h3 class="text-[1rem] font-medium text-ink" data-ja="違い2：KPIが「ツールの利用率」ではなく「業務工数」だった">違い2：KPIが「ツールの利用率」ではなく「業務工数」だった</h3>
+<p data-ja="失敗企業のプロジェクトKPIは「システム導入件数」「利用率」になりやすい。成功企業が見るのは「一件あたりの処理時間」「ミス・差戻し件数」「担当者一人あたりの取扱案件数」だ。">失敗企業のプロジェクトKPIは「システム導入件数」「利用率」になりやすい。成功企業が見るのは「一件あたりの処理時間」「ミス・差戻し件数」「担当者一人あたりの取扱案件数」だ。</p>
+<p data-ja="貿易DXの目的は業務変革であり、ツール普及ではない。KPIがずれていると、評価基準がずれ、本質的な改善が起きないまま「導入済み」の報告だけが上がってくる。">貿易DXの目的は業務変革であり、ツール普及ではない。KPIがずれていると、評価基準がずれ、本質的な改善が起きないまま「導入済み」の報告だけが上がってくる。</p>
+<h3 class="text-[1rem] font-medium text-ink" data-ja="違い3：最初から「小さく動かして、拡張した」">違い3：最初から「小さく動かして、拡張した」</h3>
+<p data-ja="成功企業は初期スコープを絞る。「まず輸入フローの書類照合だけ自動化する」「最初は特定の品目カテゴリだけ対象にする」。6ヶ月以内に成果を出し、その結果を根拠に次のフェーズへ進む。">成功企業は初期スコープを絞る。「まず輸入フローの書類照合だけ自動化する」「最初は特定の品目カテゴリだけ対象にする」。6ヶ月以内に成果を出し、その結果を根拠に次のフェーズへ進む。</p>
+<p data-ja="失敗企業は全社一斉展開を狙う。対象業務が広すぎて要件定義が終わらない。テストが長期化する。組織変更が起きてプロジェクトが凍結する。「貿易DXをやった」が記録に残るだけで、何も変わらない。">失敗企業は全社一斉展開を狙う。対象業務が広すぎて要件定義が終わらない。テストが長期化する。組織変更が起きてプロジェクトが凍結する。「貿易DXをやった」が記録に残るだけで、何も変わらない。</p>
+<h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4" data-ja="成功企業が最初に自動化した領域">成功企業が最初に自動化した領域</h2>
+<p data-ja="複数の商社・メーカーの事例を見ると、最初の自動化対象として効果が出やすい領域には共通点がある。">複数の商社・メーカーの事例を見ると、最初の自動化対象として効果が出やすい領域には共通点がある。</p>
+<!-- DIAGRAM: 優先自動化領域 -->
+<div class="diag-wrap" data-ja-html='&lt;div class="diag-label"&gt;最初に着手すると効果が出やすい自動化領域&lt;/div&gt;
+&lt;div class="diag-row"&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;&lt;strong&gt;書類照合（Invoice × B/L × Packing List）&lt;/strong&gt;&lt;br/&gt;ルールが明確で自動化しやすく、工数削減効果が大きい&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;&lt;strong&gt;HSコード分類の補助&lt;/strong&gt;&lt;br/&gt;品目データベースとの照合を自動化し、分類担当者の作業時間を短縮&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;&lt;strong&gt;法規制チェックリストの自動適用&lt;/strong&gt;&lt;br/&gt;品目コードに対して適用法令を自動で展開する&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;'>
+<div class="diag-label" data-ja="最初に着手すると効果が出やすい自動化領域">最初に着手すると効果が出やすい自動化領域</div>
+<div class="diag-row" data-ja-html='&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;&lt;strong&gt;書類照合（Invoice × B/L × Packing List）&lt;/strong&gt;&lt;br/&gt;ルールが明確で自動化しやすく、工数削減効果が大きい&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;&lt;strong&gt;HSコード分類の補助&lt;/strong&gt;&lt;br/&gt;品目データベースとの照合を自動化し、分類担当者の作業時間を短縮&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;&lt;strong&gt;法規制チェックリストの自動適用&lt;/strong&gt;&lt;br/&gt;品目コードに対して適用法令を自動で展開する&lt;/span&gt;&lt;/div&gt;'>
+<div class="diag-checklist-item" data-ja-html='&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;&lt;strong&gt;書類照合（Invoice × B/L × Packing List）&lt;/strong&gt;&lt;br/&gt;ルールが明確で自動化しやすく、工数削減効果が大きい&lt;/span&gt;'><span class="chk">✓</span><span data-ja-html="&lt;strong&gt;書類照合（Invoice × B/L × Packing List）&lt;/strong&gt;&lt;br/&gt;ルールが明確で自動化しやすく、工数削減効果が大きい"><strong>書類照合（Invoice × B/L × Packing List）</strong><br/>ルールが明確で自動化しやすく、工数削減効果が大きい</span></div>
+<div class="diag-checklist-item" data-ja-html='&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;&lt;strong&gt;HSコード分類の補助&lt;/strong&gt;&lt;br/&gt;品目データベースとの照合を自動化し、分類担当者の作業時間を短縮&lt;/span&gt;'><span class="chk">✓</span><span data-ja-html="&lt;strong&gt;HSコード分類の補助&lt;/strong&gt;&lt;br/&gt;品目データベースとの照合を自動化し、分類担当者の作業時間を短縮"><strong>HSコード分類の補助</strong><br/>品目データベースとの照合を自動化し、分類担当者の作業時間を短縮</span></div>
+<div class="diag-checklist-item" data-ja-html='&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;&lt;strong&gt;法規制チェックリストの自動適用&lt;/strong&gt;&lt;br/&gt;品目コードに対して適用法令を自動で展開する&lt;/span&gt;'><span class="chk">✓</span><span data-ja-html="&lt;strong&gt;法規制チェックリストの自動適用&lt;/strong&gt;&lt;br/&gt;品目コードに対して適用法令を自動で展開する"><strong>法規制チェックリストの自動適用</strong><br/>品目コードに対して適用法令を自動で展開する</span></div>
+</div>
+</div>
+<p class="diag-caption" data-ja="[図] 貿易DXで最初に成果が出やすい3つの自動化領域">[図] 貿易DXで最初に成果が出やすい3つの自動化領域</p>
+<ul class="list-disc">
+<li data-ja-html="&lt;strong&gt;書類照合（Invoice × B/L × Packing List）&lt;/strong&gt;：ルールが明確で自動化しやすく、工数削減効果が大きい"><strong>書類照合（Invoice × B/L × Packing List）</strong>：ルールが明確で自動化しやすく、工数削減効果が大きい</li>
+<li data-ja-html="&lt;strong&gt;HSコード分類の補助&lt;/strong&gt;：品目データベースとの照合を自動化し、分類担当者の作業時間を短縮"><strong>HSコード分類の補助</strong>：品目データベースとの照合を自動化し、分類担当者の作業時間を短縮</li>
+<li data-ja-html="&lt;strong&gt;法規制チェックリストの自動適用&lt;/strong&gt;：品目コードに対して適用法令を自動で展開する"><strong>法規制チェックリストの自動適用</strong>：品目コードに対して適用法令を自動で展開する</li>
+</ul>
+<p data-ja="逆に、最初から手をつけると複雑になりすぎる領域は「サプライヤーとの交渉プロセス」「例外案件の対応フロー」だ。">逆に、最初から手をつけると複雑になりすぎる領域は「サプライヤーとの交渉プロセス」「例外案件の対応フロー」だ。</p>
+<p data-ja="貿易DXの設計から実装まで──BorderFlow AIは「プロセス全体の自動化」を前提に設計されています。">貿易DXの設計から実装まで──BorderFlow AIは「プロセス全体の自動化」を前提に設計されています。</p>
+<!-- CTA -->
+<div class="mt-14 p-8 bg-navy text-white text-center rounded-sm" data-ja-html='&lt;p class="display text-[.65rem] tracking-[.2em] uppercase text-gold mb-3"&gt;BorderFlow AI&lt;/p&gt;
+&lt;p class="text-[1.05rem] font-medium leading-snug mb-2" data-ja-html="プロセス全体の自動化を前提に、&amp;lt;br/&amp;gt;BorderFlow AIと設計を始めませんか？"&gt;プロセス全体の自動化を前提に、&lt;br/&gt;BorderFlow AIと設計を始めませんか？&lt;/p&gt;
+&lt;p class="text-[.78rem] text-white/60 mb-6" data-ja="ツール導入で終わらない、業務変革としての貿易DXを支援します。"&gt;ツール導入で終わらない、業務変革としての貿易DXを支援します。&lt;/p&gt;
+&lt;a class="inline-block bg-gold text-navy text-[.78rem] font-medium px-8 py-3 hover:bg-gold-light transition-colors" data-en="Contact Us" data-ja="お問い合わせ・ご相談" href="/#contact"&gt;お問い合わせ・ご相談&lt;/a&gt;'>
+<p class="display text-[.65rem] tracking-[.2em] uppercase text-gold mb-3">BorderFlow AI</p>
+<p class="text-[1.05rem] font-medium leading-snug mb-2" data-ja-html="プロセス全体の自動化を前提に、&lt;br/&gt;BorderFlow AIと設計を始めませんか？">プロセス全体の自動化を前提に、<br/>BorderFlow AIと設計を始めませんか？</p>
+<p class="text-[.78rem] text-white/60 mb-6" data-ja="ツール導入で終わらない、業務変革としての貿易DXを支援します。">ツール導入で終わらない、業務変革としての貿易DXを支援します。</p>
+<a class="inline-block bg-gold text-navy text-[.78rem] font-medium px-8 py-3 hover:bg-gold-light transition-colors" data-en="Contact Us" data-ja="お問い合わせ・ご相談" href="/#contact">お問い合わせ・ご相談</a>
+</div>
+</article>
+</div>
 </main>
-
 <!-- ─── FOOTER ─────────────────────────────────────────── -->
 <footer class="bg-navy py-10 px-6 md:px-10 mt-16">
-  <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-    <svg width="80" height="28" viewBox="0 0 120 36" fill="none" aria-label="Wing">
-      <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff" opacity=".6"/>
-      <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#fff" opacity=".6">Wing</text>
-    </svg>
-    <p class="text-[.68rem] text-white/30">© 2026 Wing. All rights reserved.</p>
-  </div>
+<div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+<svg aria-label="Wing" fill="none" height="28" viewbox="0 0 120 36" width="80">
+<path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff" opacity=".6"></path>
+<text fill="#fff" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" opacity=".6" x="46" y="25">Wing</text>
+</svg>
+<p class="text-[.68rem] text-white/30">© 2026 Wing. All rights reserved.</p>
+</div>
 </footer>
-
 </body>
 </html>
