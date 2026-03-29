@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" id="bf-page">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BorderFlow AI — ソリューション詳細 | 自律型貿易事務エージェント</title>
+<title>BorderFlow AI — Solution Overview | Autonomous Trade Operations Agent</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -152,18 +152,25 @@ a{color:#d4b978;text-decoration:none}a:hover{text-decoration:underline}
 </head>
 <body>
 
+<style>
+#bf-lang-btn{position:fixed;top:14px;right:16px;z-index:999;font-size:11px;font-weight:700;letter-spacing:.1em;color:#0d0f14;background:#d4b978;border:none;border-radius:4px;padding:5px 14px;cursor:pointer;transition:.2s}
+#bf-lang-btn:hover{background:#c5a862}
+</style>
+<button id="bf-lang-btn" onclick="bfToggle()">EN</button>
+
+
 <!-- ═══ HERO ═══ -->
 <div class="hero">
   <div class="hero-badge">Autonomous Trade Operations Agent</div>
-  <h1>貿易事務を、<em>AIが自律処理する</em>時代へ</h1>
-  <p>BorderFlow AIは、引合から原価計算まで貿易業務の全ステップをAIエージェントが自動処理。対話するだけで案件登録・書類作成・進捗確認が完結します。</p>
+  <h1 data-ja-html="貿易事務を、<em>AIが自律処理する</em>時代へ" data-en-html="The Era of <em>AI-Autonomous</em><br>Trade Operations">貿易事務を、<em>AIが自律処理する</em>時代へ</h1>
+  <p data-ja="BorderFlow AIは、引合から原価計算まで貿易業務の全ステップをAIエージェントが自動処理。対話するだけで案件登録・書類作成・進捗確認が完結します。" data-en="BorderFlow AI automates every step of trade operations — from purchase requests to cost calculation. Just converse with the AI to register deals, generate documents, and track progress.">BorderFlow AIは、引合から原価計算まで貿易業務の全ステップをAIエージェントが自動処理。対話するだけで案件登録・書類作成・進捗確認が完結します。</p>
   <div class="hero-stats">
-    <div class="hero-stat"><div class="num">90%</div><div class="lbl">入力作業の削減</div></div>
-    <div class="hero-stat"><div class="num">3秒</div><div class="lbl">書類1件のOCR処理</div></div>
-    <div class="hero-stat"><div class="num">7</div><div class="lbl">取引パターンに対応</div></div>
-    <div class="hero-stat"><div class="num">330%</div><div class="lbl">年間ROI</div></div>
+    <div class="hero-stat"><div class="num">90%</div><div class="lbl" data-ja="入力作業の削減" data-en="Reduction in Manual Input">入力作業の削減</div></div>
+    <div class="hero-stat"><div class="num">3秒</div><div class="lbl" data-ja="書類1件のOCR処理" data-en="Per-Doc OCR Processing">書類1件のOCR処理</div></div>
+    <div class="hero-stat"><div class="num">7</div><div class="lbl" data-ja="取引パターンに対応" data-en="Trade Patterns Supported">取引パターンに対応</div></div>
+    <div class="hero-stat"><div class="num">330%</div><div class="lbl" data-ja="年間ROI" data-en="Annual ROI">年間ROI</div></div>
   </div>
-  <a href="https://wingconsulting.org/#contact" class="hero-cta">デモを申し込む</a>
+  <a href="https://wingconsulting.org/#contact" class="hero-cta" data-ja="デモを申し込む" data-en="Request a Demo">デモを申し込む</a>
 </div>
 
 <div class="wrap">
@@ -171,23 +178,23 @@ a{color:#d4b978;text-decoration:none}a:hover{text-decoration:underline}
 <!-- ═══ AI AGENT HIGHLIGHT ═══ -->
 <div class="sec">
   <div class="sec-label">Core Innovation</div>
-  <div class="sec-title">AIチャットエージェント — 対話だけで業務が完結</div>
-  <div class="sec-sub">メニューを操作する必要はありません。自然言語で指示するだけで、案件の登録・検索・書類作成・進捗確認をAIが実行します。</div>
+  <div class="sec-title" data-ja="AIチャットエージェント — 対話だけで業務が完結" data-en="AI Chat Agent — Complete Operations Through Conversation">AIチャットエージェント — 対話だけで業務が完結</div>
+  <div class="sec-sub" data-ja="メニューを操作する必要はありません。自然言語で指示するだけで、案件の登録・検索・書類作成・進捗確認をAIが実行します。" data-en="No menus to navigate. Just give instructions in natural language — the AI handles deal registration, search, document creation, and status tracking.">メニューを操作する必要はありません。自然言語で指示するだけで、案件の登録・検索・書類作成・進捗確認をAIが実行します。</div>
 
   <div class="agent-box">
     <div>
-      <h3>🤖 AIアシスタント</h3>
-      <p>フローティングチャットUIから、いつでもAIに指示できます。案件データベースに直接アクセスし、リアルタイムで回答・操作を実行。</p>
+      <h3 data-ja="🤖 AIアシスタント" data-en="🤖 AI Assistant">🤖 AIアシスタント</h3>
+      <p data-ja="フローティングチャットUIから、いつでもAIに指示できます。案件データベースに直接アクセスし、リアルタイムで回答・操作を実行。" data-en="Issue instructions to the AI at any time from the floating chat UI. It directly accesses the deal database and responds or acts in real time.">フローティングチャットUIから、いつでもAIに指示できます。案件データベースに直接アクセスし、リアルタイムで回答・操作を実行。</p>
       <ul class="agent-list">
-        <li>「○○社からMEG 200MT $900で輸入在庫を登録」→ 即座に案件作成</li>
-        <li>「案件Aの契約番号は？」→ データベースから即答</li>
-        <li>「輸入案件の合計金額は？」→ リアルタイム集計</li>
-        <li>「案件Bの書類を作成して」→ 書類作成画面へ自動遷移</li>
-        <li>不足情報はAIがステップバイステップで質問し補完</li>
+        <li data-ja="「○○社からMEG 200MT $900で輸入在庫を登録」→ 即座に案件作成" data-en="'Register import stock: MEG 200MT at $900 from XX Corp.' → Deal created instantly">「○○社からMEG 200MT $900で輸入在庫を登録」→ 即座に案件作成</li>
+        <li data-ja="「案件Aの契約番号は？」→ データベースから即答" data-en="'What is the contract number for Deal A?' → Instant answer from the database">「案件Aの契約番号は？」→ データベースから即答</li>
+        <li data-ja="「輸入案件の合計金額は？」→ リアルタイム集計" data-en="'What is the total value of import deals?' → Real-time aggregation">「輸入案件の合計金額は？」→ リアルタイム集計</li>
+        <li data-ja="「案件Bの書類を作成して」→ 書類作成画面へ自動遷移" data-en="'Generate documents for Deal B.' → Auto-navigates to document creation">「案件Bの書類を作成して」→ 書類作成画面へ自動遷移</li>
+        <li data-ja="不足情報はAIがステップバイステップで質問し補完" data-en="Missing information is prompted step by step by the AI">不足情報はAIがステップバイステップで質問し補完</li>
       </ul>
     </div>
     <div class="chat-demo">
-      <div class="chat-demo-head">🤖 AIアシスタント</div>
+      <div class="chat-demo-head" data-ja="🤖 AIアシスタント" data-en="🤖 AI Assistant">🤖 AIアシスタント</div>
       <div class="chat-demo-msgs">
         <div class="cdm cdm-ai">こんにちは！BorderFlow AIアシスタントです。<br>案件の登録・検索・書類作成をお手伝いします。</div>
         <div class="cdm cdm-user">A社の案件を見せて</div>
@@ -201,63 +208,63 @@ a{color:#d4b978;text-decoration:none}a:hover{text-decoration:underline}
 <!-- ═══ KEY FEATURES ═══ -->
 <div class="sec">
   <div class="sec-label">Key Features</div>
-  <div class="sec-title">BorderFlow AIの主な機能</div>
-  <div class="sec-sub">貿易業務に必要なすべての機能を、1つのプラットフォームに統合しています。</div>
+  <div class="sec-title" data-ja="BorderFlow AIの主な機能" data-en="Core Features of BorderFlow AI">BorderFlow AIの主な機能</div>
+  <div class="sec-sub" data-ja="貿易業務に必要なすべての機能を、1つのプラットフォームに統合しています。" data-en="Every function required for trade operations, integrated into a single platform.">貿易業務に必要なすべての機能を、1つのプラットフォームに統合しています。</div>
 
   <div class="feat-grid">
     <div class="feat">
       <span class="f-badge f-new">NEW</span>
       <div class="f-icon">📝</div>
-      <h3>書類テンプレート自動生成</h3>
-      <p>案件データから契約書・B/L・Commercial Invoice・Packing Listを自動作成。手入力ゼロでPDF出力。</p>
+      <h3 data-ja="書類テンプレート自動生成" data-en="Auto Document Generation">書類テンプレート自動生成</h3>
+      <p data-ja="案件データから契約書・B/L・Commercial Invoice・Packing Listを自動作成。手入力ゼロでPDF出力。" data-en="Automatically generates contracts, B/L, Commercial Invoices, and Packing Lists from deal data. Zero manual entry — output as PDF.">案件データから契約書・B/L・Commercial Invoice・Packing Listを自動作成。手入力ゼロでPDF出力。</p>
     </div>
     <div class="feat">
       <span class="f-badge f-new">NEW</span>
       <div class="f-icon">🔍</div>
-      <h3>AI書類クロスチェック</h3>
-      <p>Invoice・Packing List・原産地証明書の3点突合をAIが自動実行。金額差異・品目不一致を即座に検出。</p>
+      <h3 data-ja="AI書類クロスチェック" data-en="AI Document Cross-Check">AI書類クロスチェック</h3>
+      <p data-ja="Invoice・Packing List・原産地証明書の3点突合をAIが自動実行。金額差異・品目不一致を即座に検出。" data-en="AI automatically cross-checks Invoice, Packing List, and Certificate of Origin. Instantly detects amount discrepancies and item mismatches.">Invoice・Packing List・原産地証明書の3点突合をAIが自動実行。金額差異・品目不一致を即座に検出。</p>
     </div>
     <div class="feat">
       <span class="f-badge f-new">NEW</span>
       <div class="f-icon">🤖</div>
-      <h3>対話型AIエージェント</h3>
-      <p>自然言語で案件登録・検索・集計・書類作成を指示。一括入力にも対話型ステップにも対応。</p>
+      <h3 data-ja="対話型AIエージェント" data-en="Conversational AI Agent">対話型AIエージェント</h3>
+      <p data-ja="自然言語で案件登録・検索・集計・書類作成を指示。一括入力にも対話型ステップにも対応。" data-en="Issue instructions in natural language for deal registration, search, aggregation, and document creation. Supports both bulk input and step-by-step dialogue.">自然言語で案件登録・検索・集計・書類作成を指示。一括入力にも対話型ステップにも対応。</p>
     </div>
     <div class="feat">
       <span class="f-badge f-ai">AI</span>
       <div class="f-icon">📄</div>
-      <h3>マルチモーダルOCR</h3>
-      <p>PDF・画像・Excelをドラッグ&ドロップするだけで構造化データに変換。信頼度99%以上。</p>
+      <h3 data-ja="マルチモーダルOCR" data-en="Multimodal OCR">マルチモーダルOCR</h3>
+      <p data-ja="PDF・画像・Excelをドラッグ&ドロップするだけで構造化データに変換。信頼度99%以上。" data-en="Drag and drop PDFs, images, or Excel files to convert them into structured data. Accuracy rate: 99%+.">PDF・画像・Excelをドラッグ&ドロップするだけで構造化データに変換。信頼度99%以上。</p>
     </div>
     <div class="feat">
       <span class="f-badge f-ai">AI</span>
       <div class="f-icon">🏷</div>
-      <h3>HSコード自動判定</h3>
-      <p>品目記述からHS10桁コードをAI推定。教示事例による根拠提示。EPA/FTA適用判定にも対応。</p>
+      <h3 data-ja="HSコード自動判定" data-en="HS Code Auto-Classification">HSコード自動判定</h3>
+      <p data-ja="品目記述からHS10桁コードをAI推定。教示事例による根拠提示。EPA/FTA適用判定にも対応。" data-en="AI estimates 10-digit HS codes from product descriptions, with reasoning from reference cases. Also supports EPA/FTA eligibility checks.">品目記述からHS10桁コードをAI推定。教示事例による根拠提示。EPA/FTA適用判定にも対応。</p>
     </div>
     <div class="feat">
       <span class="f-badge f-ai">AI</span>
       <div class="f-icon">📊</div>
-      <h3>リアルタイムダッシュボード</h3>
-      <p>案件別損益・月次トレンド・パターン別分析をリアルタイム表示。経営判断に直結するデータを提供。</p>
+      <h3 data-ja="リアルタイムダッシュボード" data-en="Real-Time Dashboard">リアルタイムダッシュボード</h3>
+      <p data-ja="案件別損益・月次トレンド・パターン別分析をリアルタイム表示。経営判断に直結するデータを提供。" data-en="Real-time display of deal P&L, monthly trends, and pattern analysis. Provides data directly relevant to management decisions.">案件別損益・月次トレンド・パターン別分析をリアルタイム表示。経営判断に直結するデータを提供。</p>
     </div>
     <div class="feat">
       <span class="f-badge f-core">CORE</span>
       <div class="f-icon">🚢</div>
-      <h3>物流・洋上在庫追跡</h3>
-      <p>船積済み貨物のリアルタイム追跡。ETD/ETAから推定位置を算出し、進捗バーで可視化。</p>
+      <h3 data-ja="物流・洋上在庫追跡" data-en="Logistics & In-Transit Tracking">物流・洋上在庫追跡</h3>
+      <p data-ja="船積済み貨物のリアルタイム追跡。ETD/ETAから推定位置を算出し、進捗バーで可視化。" data-en="Real-time tracking of shipped cargo. Calculates estimated position from ETD/ETA and visualizes progress with a status bar.">船積済み貨物のリアルタイム追跡。ETD/ETAから推定位置を算出し、進捗バーで可視化。</p>
     </div>
     <div class="feat">
       <span class="f-badge f-core">CORE</span>
       <div class="f-icon">💳</div>
-      <h3>与信管理・リスクコントロール</h3>
-      <p>取引先ごとの与信枠設定・残枠リアルタイム表示・格付管理。枠超過時は自動アラート。</p>
+      <h3 data-ja="与信管理・リスクコントロール" data-en="Credit Management & Risk Control">与信管理・リスクコントロール</h3>
+      <p data-ja="取引先ごとの与信枠設定・残枠リアルタイム表示・格付管理。枠超過時は自動アラート。" data-en="Set credit limits per counterparty with real-time remaining balance display and rating management. Automatic alerts on limit breach.">取引先ごとの与信枠設定・残枠リアルタイム表示・格付管理。枠超過時は自動アラート。</p>
     </div>
     <div class="feat">
       <span class="f-badge f-core">CORE</span>
       <div class="f-icon">💰</div>
-      <h3>ランデッドコスト自動算出</h3>
-      <p>FOB+運賃+保険+関税を品目別に自動積上。取引採算率を即座に把握。</p>
+      <h3 data-ja="ランデッドコスト自動算出" data-en="Landed Cost Auto-Calculation">ランデッドコスト自動算出</h3>
+      <p data-ja="FOB+運賃+保険+関税を品目別に自動積上。取引採算率を即座に把握。" data-en="Automatically stacks FOB + freight + insurance + duty per item. Instantly calculates deal profitability ratio.">FOB+運賃+保険+関税を品目別に自動積上。取引採算率を即座に把握。</p>
     </div>
   </div>
 </div>
@@ -265,114 +272,114 @@ a{color:#d4b978;text-decoration:none}a:hover{text-decoration:underline}
 <!-- ═══ 7 TRADE PATTERNS ═══ -->
 <div class="sec">
   <div class="sec-label">Trade Patterns</div>
-  <div class="sec-title">7つの取引パターンに完全対応</div>
-  <div class="sec-sub">輸入在庫販売から仲介まで、商社・メーカーが扱う全取引パターンをカバー。パターンに応じて必要なステップが自動構成されます。</div>
+  <div class="sec-title" data-ja="7つの取引パターンに完全対応" data-en="Full Coverage of 7 Trade Patterns">7つの取引パターンに完全対応</div>
+  <div class="sec-sub" data-ja="輸入在庫販売から仲介まで、商社・メーカーが扱う全取引パターンをカバー。パターンに応じて必要なステップが自動構成されます。" data-en="Covers all trade patterns handled by trading companies and manufacturers — from import-stock sales to intermediary deals. Required steps are automatically configured per pattern.">輸入在庫販売から仲介まで、商社・メーカーが扱う全取引パターンをカバー。パターンに応じて必要なステップが自動構成されます。</div>
 
   <div class="pat-grid">
-    <div class="pat-card"><div class="p-icon">📥</div><h4>輸入在庫販売</h4><p>海外仕入 → 国内倉庫 → 国内販売</p><div class="p-steps">14ステップ</div></div>
-    <div class="pat-card"><div class="p-icon">📦</div><h4>輸入直送</h4><p>海外仕入 → 国内顧客に直送</p><div class="p-steps">12ステップ</div></div>
-    <div class="pat-card"><div class="p-icon">📤</div><h4>輸出</h4><p>日本 → 海外顧客に販売</p><div class="p-steps">11ステップ</div></div>
-    <div class="pat-card"><div class="p-icon">🔄</div><h4>三国間(B2B)</h4><p>海外A → 海外B（日本を経由しない）</p><div class="p-steps">10ステップ</div></div>
-    <div class="pat-card"><div class="p-icon">🌐</div><h4>オフショア</h4><p>海外子会社経由の取引</p><div class="p-steps">11ステップ</div></div>
-    <div class="pat-card"><div class="p-icon">🏠</div><h4>国内取引</h4><p>日本国内の仕入販売</p><div class="p-steps">8ステップ</div></div>
-    <div class="pat-card"><div class="p-icon">🤝</div><h4>仲介</h4><p>契約当事者にならず仲介</p><div class="p-steps">5ステップ</div></div>
+    <div class="pat-card"><div class="p-icon">📥</div><h4 data-ja="輸入在庫販売" data-en="Import Stock Sales">輸入在庫販売</h4><p data-ja="海外仕入 → 国内倉庫 → 国内販売" data-en="Overseas Purchase → Warehouse → Domestic Sales">海外仕入 → 国内倉庫 → 国内販売</p><div class="p-steps">14ステップ</div></div>
+    <div class="pat-card"><div class="p-icon">📦</div><h4 data-ja="輸入直送" data-en="Direct Import">輸入直送</h4><p data-ja="海外仕入 → 国内顧客に直送" data-en="Overseas Purchase → Direct to Domestic Customer">海外仕入 → 国内顧客に直送</p><div class="p-steps">12ステップ</div></div>
+    <div class="pat-card"><div class="p-icon">📤</div><h4 data-ja="輸出" data-en="Export">輸出</h4><p data-ja="日本 → 海外顧客に販売" data-en="Japan → Sales to Overseas Customer">日本 → 海外顧客に販売</p><div class="p-steps">11ステップ</div></div>
+    <div class="pat-card"><div class="p-icon">🔄</div><h4 data-ja="三国間(B2B)" data-en="Triangular Trade">三国間(B2B)</h4><p data-ja="海外A → 海外B（日本を経由しない）" data-en="Overseas A → Overseas B (bypassing Japan)">海外A → 海外B（日本を経由しない）</p><div class="p-steps">10ステップ</div></div>
+    <div class="pat-card"><div class="p-icon">🌐</div><h4 data-ja="オフショア" data-en="Offshore">オフショア</h4><p data-ja="海外子会社経由の取引" data-en="Transactions via Overseas Subsidiary">海外子会社経由の取引</p><div class="p-steps">11ステップ</div></div>
+    <div class="pat-card"><div class="p-icon">🏠</div><h4 data-ja="国内取引" data-en="Domestic Trade">国内取引</h4><p data-ja="日本国内の仕入販売" data-en="Domestic Purchase & Sales in Japan">日本国内の仕入販売</p><div class="p-steps">8ステップ</div></div>
+    <div class="pat-card"><div class="p-icon">🤝</div><h4 data-ja="仲介" data-en="Intermediary">仲介</h4><p data-ja="契約当事者にならず仲介" data-en="Brokering Without Being a Contract Party">契約当事者にならず仲介</p><div class="p-steps">5ステップ</div></div>
   </div>
 </div>
 
 <!-- ═══ AI IMPACT CHART ═══ -->
 <div class="sec">
   <div class="sec-label">AI Impact</div>
-  <div class="sec-title">どの工程がAIに置き換わるのか</div>
-  <div class="sec-sub">輸入在庫販売フロー（15ステップ）を例に、各工程のAI自動化率を示します。青い部分がAIによる自動処理、グレーが人の判断が必要な工程です。</div>
+  <div class="sec-title" data-ja="どの工程がAIに置き換わるのか" data-en="Which Steps Does AI Replace?">どの工程がAIに置き換わるのか</div>
+  <div class="sec-sub" data-ja="輸入在庫販売フロー（15ステップ）を例に、各工程のAI自動化率を示します。青い部分がAIによる自動処理、グレーが人の判断が必要な工程です。" data-en="Using the import stock sales flow (15 steps) as an example, this shows the AI automation rate per step. Blue = AI-automated; grey = requires human judgment.">輸入在庫販売フロー（15ステップ）を例に、各工程のAI自動化率を示します。青い部分がAIによる自動処理、グレーが人の判断が必要な工程です。</div>
 
   <div class="chart-wrap">
-    <div class="chart-row"><div class="chart-label">引合・発注</div><div class="chart-bar-bg"><div class="chart-bar-ai" style="width:40%">自動</div><div class="chart-bar-manual" style="width:60%">手動</div></div><div class="chart-pct">40%</div></div>
-    <div class="chart-row"><div class="chart-label">与信管理</div><div class="chart-bar-bg"><div class="chart-bar-ai" style="width:85%">自動</div><div class="chart-bar-manual" style="width:15%"></div></div><div class="chart-pct">85%</div></div>
-    <div class="chart-row"><div class="chart-label">契約・L/C</div><div class="chart-bar-bg"><div class="chart-bar-ai" style="width:60%">自動</div><div class="chart-bar-manual" style="width:40%">承認</div></div><div class="chart-pct">60%</div></div>
-    <div class="chart-row"><div class="chart-label">保険・為替予約</div><div class="chart-bar-bg"><div class="chart-bar-ai" style="width:75%">自動</div><div class="chart-bar-manual" style="width:25%"></div></div><div class="chart-pct">75%</div></div>
-    <div class="chart-row"><div class="chart-label">書類受領・OCR</div><div class="chart-bar-bg"><div class="chart-bar-ai" style="width:95%">AI-OCR</div><div class="chart-bar-manual" style="width:5%"></div></div><div class="chart-pct">95%</div></div>
-    <div class="chart-row"><div class="chart-label">書類照合・チェック</div><div class="chart-bar-bg"><div class="chart-bar-ai" style="width:95%">AI照合</div><div class="chart-bar-manual" style="width:5%"></div></div><div class="chart-pct">95%</div></div>
-    <div class="chart-row"><div class="chart-label">HS・関税計算</div><div class="chart-bar-bg"><div class="chart-bar-ai" style="width:90%">AI判定</div><div class="chart-bar-manual" style="width:10%"></div></div><div class="chart-pct">90%</div></div>
-    <div class="chart-row"><div class="chart-label">許可申請・法規制</div><div class="chart-bar-bg"><div class="chart-bar-ai" style="width:80%">自動</div><div class="chart-bar-manual" style="width:20%">確認</div></div><div class="chart-pct">80%</div></div>
-    <div class="chart-row"><div class="chart-label">輸入通関申告</div><div class="chart-bar-bg"><div class="chart-bar-ai" style="width:85%">AI生成</div><div class="chart-bar-manual" style="width:15%"></div></div><div class="chart-pct">85%</div></div>
-    <div class="chart-row"><div class="chart-label">検品・入庫</div><div class="chart-bar-bg"><div class="chart-bar-ai" style="width:30%">照合</div><div class="chart-bar-manual" style="width:70%">現場</div></div><div class="chart-pct">30%</div></div>
-    <div class="chart-row"><div class="chart-label">在庫管理</div><div class="chart-bar-bg"><div class="chart-bar-ai" style="width:50%">自動</div><div class="chart-bar-manual" style="width:50%">管理</div></div><div class="chart-pct">50%</div></div>
-    <div class="chart-row"><div class="chart-label">仕入伝票作成</div><div class="chart-bar-bg"><div class="chart-bar-ai" style="width:95%">AI仕訳</div><div class="chart-bar-manual" style="width:5%"></div></div><div class="chart-pct">95%</div></div>
-    <div class="chart-row"><div class="chart-label">支払・L/C決済</div><div class="chart-bar-bg"><div class="chart-bar-ai" style="width:70%">自動</div><div class="chart-bar-manual" style="width:30%">承認</div></div><div class="chart-pct">70%</div></div>
-    <div class="chart-row"><div class="chart-label">書類テンプレート生成</div><div class="chart-bar-bg"><div class="chart-bar-ai" style="width:100%">完全自動</div></div><div class="chart-pct">100%</div></div>
-    <div class="chart-row"><div class="chart-label">原価計算</div><div class="chart-bar-bg"><div class="chart-bar-ai" style="width:90%">自動算出</div><div class="chart-bar-manual" style="width:10%"></div></div><div class="chart-pct">90%</div></div>
+    <div class="chart-row"><div class="chart-label" data-ja="引合・発注" data-en="Purchase Request">引合・発注</div><div class="chart-bar-bg"><div class="chart-bar-ai" style="width:40%">自動</div><div class="chart-bar-manual" style="width:60%">手動</div></div><div class="chart-pct">40%</div></div>
+    <div class="chart-row"><div class="chart-label" data-ja="与信管理" data-en="Credit Check">与信管理</div><div class="chart-bar-bg"><div class="chart-bar-ai" style="width:85%">自動</div><div class="chart-bar-manual" style="width:15%"></div></div><div class="chart-pct">85%</div></div>
+    <div class="chart-row"><div class="chart-label" data-ja="契約・L/C" data-en="Contract / L/C">契約・L/C</div><div class="chart-bar-bg"><div class="chart-bar-ai" style="width:60%">自動</div><div class="chart-bar-manual" style="width:40%">承認</div></div><div class="chart-pct">60%</div></div>
+    <div class="chart-row"><div class="chart-label" data-ja="保険・為替予約" data-en="Insurance / FX Hedge">保険・為替予約</div><div class="chart-bar-bg"><div class="chart-bar-ai" style="width:75%">自動</div><div class="chart-bar-manual" style="width:25%"></div></div><div class="chart-pct">75%</div></div>
+    <div class="chart-row"><div class="chart-label" data-ja="書類受領・OCR" data-en="Doc Receipt / OCR">書類受領・OCR</div><div class="chart-bar-bg"><div class="chart-bar-ai" style="width:95%">AI-OCR</div><div class="chart-bar-manual" style="width:5%"></div></div><div class="chart-pct">95%</div></div>
+    <div class="chart-row"><div class="chart-label" data-ja="書類照合・チェック" data-en="Doc Cross-Check">書類照合・チェック</div><div class="chart-bar-bg"><div class="chart-bar-ai" style="width:95%">AI照合</div><div class="chart-bar-manual" style="width:5%"></div></div><div class="chart-pct">95%</div></div>
+    <div class="chart-row"><div class="chart-label" data-ja="HS・関税計算" data-en="HS / Duty Calc">HS・関税計算</div><div class="chart-bar-bg"><div class="chart-bar-ai" style="width:90%">AI判定</div><div class="chart-bar-manual" style="width:10%"></div></div><div class="chart-pct">90%</div></div>
+    <div class="chart-row"><div class="chart-label" data-ja="許可申請・法規制" data-en="Permits / Compliance">許可申請・法規制</div><div class="chart-bar-bg"><div class="chart-bar-ai" style="width:80%">自動</div><div class="chart-bar-manual" style="width:20%">確認</div></div><div class="chart-pct">80%</div></div>
+    <div class="chart-row"><div class="chart-label" data-ja="輸入通関申告" data-en="Import Customs Filing">輸入通関申告</div><div class="chart-bar-bg"><div class="chart-bar-ai" style="width:85%">AI生成</div><div class="chart-bar-manual" style="width:15%"></div></div><div class="chart-pct">85%</div></div>
+    <div class="chart-row"><div class="chart-label" data-ja="検品・入庫" data-en="Inspection / Receipt">検品・入庫</div><div class="chart-bar-bg"><div class="chart-bar-ai" style="width:30%">照合</div><div class="chart-bar-manual" style="width:70%">現場</div></div><div class="chart-pct">30%</div></div>
+    <div class="chart-row"><div class="chart-label" data-ja="在庫管理" data-en="Inventory Mgmt">在庫管理</div><div class="chart-bar-bg"><div class="chart-bar-ai" style="width:50%">自動</div><div class="chart-bar-manual" style="width:50%">管理</div></div><div class="chart-pct">50%</div></div>
+    <div class="chart-row"><div class="chart-label" data-ja="仕入伝票作成" data-en="Purchase Entry">仕入伝票作成</div><div class="chart-bar-bg"><div class="chart-bar-ai" style="width:95%">AI仕訳</div><div class="chart-bar-manual" style="width:5%"></div></div><div class="chart-pct">95%</div></div>
+    <div class="chart-row"><div class="chart-label" data-ja="支払・L/C決済" data-en="Payment / L/C Settlement">支払・L/C決済</div><div class="chart-bar-bg"><div class="chart-bar-ai" style="width:70%">自動</div><div class="chart-bar-manual" style="width:30%">承認</div></div><div class="chart-pct">70%</div></div>
+    <div class="chart-row"><div class="chart-label" data-ja="書類テンプレート生成" data-en="Doc Template Gen">書類テンプレート生成</div><div class="chart-bar-bg"><div class="chart-bar-ai" style="width:100%">完全自動</div></div><div class="chart-pct">100%</div></div>
+    <div class="chart-row"><div class="chart-label" data-ja="原価計算" data-en="Cost Calculation">原価計算</div><div class="chart-bar-bg"><div class="chart-bar-ai" style="width:90%">自動算出</div><div class="chart-bar-manual" style="width:10%"></div></div><div class="chart-pct">90%</div></div>
     <div class="chart-legend">
-      <span><span class="dot dot-ai"></span>AI自動処理</span>
-      <span><span class="dot dot-manual"></span>人の判断・現場作業</span>
+      <span><span class="dot dot-ai"></span><span data-ja="AI自動処理" data-en="AI-Automated">AI自動処理</span></span>
+      <span><span class="dot dot-manual"></span><span data-ja="人の判断・現場作業" data-en="Human Judgment / On-site Work">人の判断・現場作業</span></span>
     </div>
   </div>
 
   <!-- Before / After -->
-  <div class="sec-title" style="margin-top:40px">導入前後の比較</div>
-  <div class="sec-sub">輸入1案件あたりの工数・コスト・リスクの変化</div>
+  <div class="sec-title" style="margin-top:40px" data-ja="導入前後の比較" data-en="Before & After Comparison">導入前後の比較</div>
+  <div class="sec-sub" data-ja="輸入1案件あたりの工数・コスト・リスクの変化" data-en="Change in man-hours, cost, and risk per import deal">輸入1案件あたりの工数・コスト・リスクの変化</div>
 
   <div class="before-after">
     <div class="ba-col">
-      <h4>Before（従来の手作業）</h4>
-      <div class="ba-item"><span>書類入力</span><span class="ba-v">45分 / 件</span></div>
-      <div class="ba-item"><span>書類照合</span><span class="ba-v">30分 / 件</span></div>
-      <div class="ba-item"><span>HS分類</span><span class="ba-v">20分 / 件</span></div>
-      <div class="ba-item"><span>伝票作成</span><span class="ba-v">25分 / 件</span></div>
-      <div class="ba-item"><span>書類作成</span><span class="ba-v">40分 / 件</span></div>
-      <div class="ba-item"><span>合計工数</span><span class="ba-v" style="color:#f87171">160分 / 件</span></div>
-      <div class="ba-item"><span>ヒューマンエラー率</span><span class="ba-v" style="color:#f87171">5〜8%</span></div>
-      <div class="ba-item"><span>追徴課税リスク</span><span class="ba-v" style="color:#f87171">年間 ¥280万</span></div>
+      <h4 data-ja="Before（従来の手作業）" data-en="Before (Manual Operations)">Before（従来の手作業）</h4>
+      <div class="ba-item"><span data-ja="書類入力" data-en="Data Entry">書類入力</span><span class="ba-v">45分 / 件</span></div>
+      <div class="ba-item"><span data-ja="書類照合" data-en="Doc Verification">書類照合</span><span class="ba-v">30分 / 件</span></div>
+      <div class="ba-item"><span data-ja="HS分類" data-en="HS Classification">HS分類</span><span class="ba-v">20分 / 件</span></div>
+      <div class="ba-item"><span data-ja="伝票作成" data-en="Journal Entry">伝票作成</span><span class="ba-v">25分 / 件</span></div>
+      <div class="ba-item"><span data-ja="書類作成" data-en="Doc Creation">書類作成</span><span class="ba-v">40分 / 件</span></div>
+      <div class="ba-item"><span data-ja="合計工数" data-en="Total Man-hours">合計工数</span><span class="ba-v" style="color:#f87171">160分 / 件</span></div>
+      <div class="ba-item"><span data-ja="ヒューマンエラー率" data-en="Human Error Rate">ヒューマンエラー率</span><span class="ba-v" style="color:#f87171">5〜8%</span></div>
+      <div class="ba-item"><span data-ja="追徴課税リスク" data-en="Back-Tax Risk">追徴課税リスク</span><span class="ba-v" style="color:#f87171">年間 ¥280万</span></div>
     </div>
     <div class="ba-arrow">→</div>
     <div class="ba-col after">
-      <h4>After（BorderFlow AI導入後）</h4>
-      <div class="ba-item"><span>書類入力</span><span class="ba-v">3秒（OCR）</span></div>
-      <div class="ba-item"><span>書類照合</span><span class="ba-v">5秒（AI照合）</span></div>
-      <div class="ba-item"><span>HS分類</span><span class="ba-v">2秒（AI判定）</span></div>
-      <div class="ba-item"><span>伝票作成</span><span class="ba-v">1秒（AI仕訳）</span></div>
-      <div class="ba-item"><span>書類作成</span><span class="ba-v">1クリック</span></div>
-      <div class="ba-item"><span>合計工数</span><span class="ba-v">16分 / 件</span></div>
-      <div class="ba-item"><span>ヒューマンエラー率</span><span class="ba-v">0.1%未満</span></div>
-      <div class="ba-item"><span>追徴課税リスク</span><span class="ba-v">大幅低減</span></div>
+      <h4 data-ja="After（BorderFlow AI導入後）" data-en="After (With BorderFlow AI)">After（BorderFlow AI導入後）</h4>
+      <div class="ba-item"><span data-ja="書類入力" data-en="Data Entry">書類入力</span><span class="ba-v">3秒（OCR）</span></div>
+      <div class="ba-item"><span data-ja="書類照合" data-en="Doc Verification">書類照合</span><span class="ba-v">5秒（AI照合）</span></div>
+      <div class="ba-item"><span data-ja="HS分類" data-en="HS Classification">HS分類</span><span class="ba-v">2秒（AI判定）</span></div>
+      <div class="ba-item"><span data-ja="伝票作成" data-en="Journal Entry">伝票作成</span><span class="ba-v">1秒（AI仕訳）</span></div>
+      <div class="ba-item"><span data-ja="書類作成" data-en="Doc Creation">書類作成</span><span class="ba-v">1クリック</span></div>
+      <div class="ba-item"><span data-ja="合計工数" data-en="Total Man-hours">合計工数</span><span class="ba-v">16分 / 件</span></div>
+      <div class="ba-item"><span data-ja="ヒューマンエラー率" data-en="Human Error Rate">ヒューマンエラー率</span><span class="ba-v">0.1%未満</span></div>
+      <div class="ba-item"><span data-ja="追徴課税リスク" data-en="Back-Tax Risk">追徴課税リスク</span><span class="ba-v">大幅低減</span></div>
     </div>
   </div>
 
   <!-- Summary impact cards -->
   <div class="impact-grid">
-    <div class="impact-card"><div class="ic-num">90%</div><div class="ic-lbl">入力作業の削減</div><div class="ic-sub">160分 → 16分 / 案件</div></div>
-    <div class="impact-card"><div class="ic-num">15→11</div><div class="ic-lbl">AI対応ステップ数</div><div class="ic-sub">15工程中11工程をAIが処理</div></div>
-    <div class="impact-card"><div class="ic-num">75%</div><div class="ic-lbl">平均AI自動化率</div><div class="ic-sub">全工程の加重平均</div></div>
-    <div class="impact-card"><div class="ic-num">330%</div><div class="ic-lbl">年間ROI</div><div class="ic-sub">初年度から投資回収</div></div>
+    <div class="impact-card"><div class="ic-num">90%</div><div class="ic-lbl" data-ja="入力作業の削減" data-en="Reduction in Manual Input">入力作業の削減</div><div class="ic-sub" data-ja="160分 → 16分 / 案件" data-en="160 min → 16 min / deal">160分 → 16分 / 案件</div></div>
+    <div class="impact-card"><div class="ic-num">15→11</div><div class="ic-lbl" data-ja="AI対応ステップ数" data-en="AI-Handled Steps">AI対応ステップ数</div><div class="ic-sub" data-ja="15工程中11工程をAIが処理" data-en="11 of 15 steps handled by AI">15工程中11工程をAIが処理</div></div>
+    <div class="impact-card"><div class="ic-num">75%</div><div class="ic-lbl" data-ja="平均AI自動化率" data-en="Avg. AI Automation Rate">平均AI自動化率</div><div class="ic-sub" data-ja="全工程の加重平均" data-en="Weighted avg. across all steps">全工程の加重平均</div></div>
+    <div class="impact-card"><div class="ic-num">330%</div><div class="ic-lbl" data-ja="年間ROI" data-en="Annual ROI">年間ROI</div><div class="ic-sub" data-ja="初年度から投資回収" data-en="Investment recovered in Year 1">初年度から投資回収</div></div>
   </div>
 </div>
 
 <!-- ═══ HR / ORG BENEFITS ═══ -->
 <div class="sec">
   <div class="sec-label">People & Organization</div>
-  <div class="sec-title">「ベテランがいなくても回る組織」を実現する</div>
-  <div class="sec-sub">BorderFlow AIが業務知識を内包することで、人に依存しない安定した貿易オペレーションが可能になります。</div>
+  <div class="sec-title" data-ja="「ベテランがいなくても回る組織」を実現する" data-en="Build an Organization That Runs Without Trade Experts">「ベテランがいなくても回る組織」を実現する</div>
+  <div class="sec-sub" data-ja="BorderFlow AIが業務知識を内包することで、人に依存しない安定した貿易オペレーションが可能になります。" data-en="By embedding domain knowledge into BorderFlow AI, your trade operations become stable and independent of individual expertise.">BorderFlow AIが業務知識を内包することで、人に依存しない安定した貿易オペレーションが可能になります。</div>
 
   <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px">
 
     <div style="background:#16181f;border:1px solid #252830;border-radius:14px;padding:24px;border-top:3px solid #d4b978">
       <div style="font-size:26px;margin-bottom:10px">🎓</div>
-      <div style="font-size:13px;font-weight:700;margin-bottom:8px;color:#f0f2f7">熟練スタッフ不要</div>
-      <p style="font-size:11px;color:#8892a8;line-height:1.8">貿易経験者の採用・確保が不要になります。AIが業務知識を内包しているため、担当者のスキルに関係なく一定の処理精度を維持。経験の浅いスタッフでも即戦力として機能します。</p>
-      <div style="margin-top:14px;padding-top:12px;border-top:1px solid #252830;font-size:11px;color:#d4b978;font-weight:700">→ 採用コスト・待遇コストを大幅削減</div>
+      <div style="font-size:13px;font-weight:700;margin-bottom:8px;color:#f0f2f7" data-ja="熟練スタッフ不要" data-en="No Experienced Staff Required">熟練スタッフ不要</div>
+      <p style="font-size:11px;color:#8892a8;line-height:1.8" data-ja="貿易経験者の採用・確保が不要になります。AIが業務知識を内包しているため、担当者のスキルに関係なく一定の処理精度を維持。経験の浅いスタッフでも即戦力として機能します。" data-en="No need to hire or retain trade specialists. Because AI embeds all domain knowledge, processing accuracy stays constant regardless of staff skill level — even inexperienced staff are effective from day one.">貿易経験者の採用・確保が不要になります。AIが業務知識を内包しているため、担当者のスキルに関係なく一定の処理精度を維持。経験の浅いスタッフでも即戦力として機能します。</p>
+      <div style="margin-top:14px;padding-top:12px;border-top:1px solid #252830;font-size:11px;color:#d4b978;font-weight:700" data-ja="→ 採用コスト・待遇コストを大幅削減" data-en="→ Dramatically reduce hiring and compensation costs">→ 採用コスト・待遇コストを大幅削減</div>
     </div>
 
     <div style="background:#16181f;border:1px solid #252830;border-radius:14px;padding:24px;border-top:3px solid #d4b978">
       <div style="font-size:26px;margin-bottom:10px">📚</div>
-      <div style="font-size:13px;font-weight:700;margin-bottom:8px;color:#f0f2f7">教育・引き継ぎコストゼロ</div>
-      <p style="font-size:11px;color:#8892a8;line-height:1.8">新入社員でもAIの指示に従うだけで、入社初日から貿易実務をこなせます。担当者交代時の引き継ぎ資料作成・口頭説明・ミスのリカバリーにかかる工数も大幅削減。</p>
-      <div style="margin-top:14px;padding-top:12px;border-top:1px solid #252830;font-size:11px;color:#d4b978;font-weight:700">→ OJT期間を数ヶ月から数日へ</div>
+      <div style="font-size:13px;font-weight:700;margin-bottom:8px;color:#f0f2f7" data-ja="教育・引き継ぎコストゼロ" data-en="Zero Training & Handover Cost">教育・引き継ぎコストゼロ</div>
+      <p style="font-size:11px;color:#8892a8;line-height:1.8" data-ja="新入社員でもAIの指示に従うだけで、入社初日から貿易実務をこなせます。担当者交代時の引き継ぎ資料作成・口頭説明・ミスのリカバリーにかかる工数も大幅削減。" data-en="Even a new hire can handle trade operations from day one, simply by following the AI. Handover documentation, verbal explanations, and error recovery when staff changes are all dramatically reduced.">新入社員でもAIの指示に従うだけで、入社初日から貿易実務をこなせます。担当者交代時の引き継ぎ資料作成・口頭説明・ミスのリカバリーにかかる工数も大幅削減。</p>
+      <div style="margin-top:14px;padding-top:12px;border-top:1px solid #252830;font-size:11px;color:#d4b978;font-weight:700" data-ja="→ OJT期間を数ヶ月から数日へ" data-en="→ Cut OJT from months to days">→ OJT期間を数ヶ月から数日へ</div>
     </div>
 
     <div style="background:#16181f;border:1px solid #252830;border-radius:14px;padding:24px;border-top:3px solid #d4b978">
       <div style="font-size:26px;margin-bottom:10px">🔓</div>
-      <div style="font-size:13px;font-weight:700;margin-bottom:8px;color:#f0f2f7">属人化から完全解放</div>
-      <p style="font-size:11px;color:#8892a8;line-height:1.8">「あの人にしかわからない」業務がなくなります。ベテラン担当者の暗黙知・判断基準はAIに蓄積され、退職・異動があっても業務品質は変わりません。</p>
-      <div style="margin-top:14px;padding-top:12px;border-top:1px solid #252830;font-size:11px;color:#d4b978;font-weight:700">→ 担当者リスクをゼロに</div>
+      <div style="font-size:13px;font-weight:700;margin-bottom:8px;color:#f0f2f7" data-ja="属人化から完全解放" data-en="Eliminate Knowledge Silos Completely">属人化から完全解放</div>
+      <p style="font-size:11px;color:#8892a8;line-height:1.8" data-ja="「あの人にしかわからない」業務がなくなります。ベテラン担当者の暗黙知・判断基準はAIに蓄積され、退職・異動があっても業務品質は変わりません。" data-en="No more 'only that person knows how to do it.' Veterans' tacit knowledge and judgment criteria are captured in the AI — quality stays constant regardless of turnover or reassignment.">「あの人にしかわからない」業務がなくなります。ベテラン担当者の暗黙知・判断基準はAIに蓄積され、退職・異動があっても業務品質は変わりません。</p>
+      <div style="margin-top:14px;padding-top:12px;border-top:1px solid #252830;font-size:11px;color:#d4b978;font-weight:700" data-ja="→ 担当者リスクをゼロに" data-en="→ Eliminate key-person risk entirely">→ 担当者リスクをゼロに</div>
     </div>
 
   </div>
@@ -380,21 +387,21 @@ a{color:#d4b978;text-decoration:none}a:hover{text-decoration:underline}
   <!-- HR Before/After -->
   <div class="before-after">
     <div class="ba-col">
-      <h4>Before（従来の体制）</h4>
-      <div class="ba-item"><span>必要なスキル</span><span class="ba-v" style="color:#f87171">貿易実務 3〜5年</span></div>
-      <div class="ba-item"><span>新人の戦力化</span><span class="ba-v" style="color:#f87171">6〜12ヶ月</span></div>
-      <div class="ba-item"><span>引き継ぎ工数</span><span class="ba-v" style="color:#f87171">40〜80時間</span></div>
-      <div class="ba-item"><span>担当者退職リスク</span><span class="ba-v" style="color:#f87171">業務停止の恐れ</span></div>
-      <div class="ba-item"><span>ナレッジの所在</span><span class="ba-v" style="color:#f87171">個人の頭の中</span></div>
+      <h4 data-ja="Before（従来の体制）" data-en="Before (Traditional Setup)">Before（従来の体制）</h4>
+      <div class="ba-item"><span data-ja="必要なスキル" data-en="Skills Required">必要なスキル</span><span class="ba-v" style="color:#f87171">貿易実務 3〜5年</span></div>
+      <div class="ba-item"><span data-ja="新人の戦力化" data-en="Time to Productivity">新人の戦力化</span><span class="ba-v" style="color:#f87171">6〜12ヶ月</span></div>
+      <div class="ba-item"><span data-ja="引き継ぎ工数" data-en="Handover Hours">引き継ぎ工数</span><span class="ba-v" style="color:#f87171">40〜80時間</span></div>
+      <div class="ba-item"><span data-ja="担当者退職リスク" data-en="Staff Turnover Risk">担当者退職リスク</span><span class="ba-v" style="color:#f87171">業務停止の恐れ</span></div>
+      <div class="ba-item"><span data-ja="ナレッジの所在" data-en="Where Knowledge Lives">ナレッジの所在</span><span class="ba-v" style="color:#f87171">個人の頭の中</span></div>
     </div>
     <div class="ba-arrow">→</div>
     <div class="ba-col after">
-      <h4>After（BorderFlow AI導入後）</h4>
-      <div class="ba-item"><span>必要なスキル</span><span class="ba-v">PC操作のみ</span></div>
-      <div class="ba-item"><span>新人の戦力化</span><span class="ba-v">即日〜数日</span></div>
-      <div class="ba-item"><span>引き継ぎ工数</span><span class="ba-v">ほぼゼロ</span></div>
-      <div class="ba-item"><span>担当者退職リスク</span><span class="ba-v">影響なし</span></div>
-      <div class="ba-item"><span>ナレッジの所在</span><span class="ba-v">システムに蓄積</span></div>
+      <h4 data-ja="After（BorderFlow AI導入後）" data-en="After (With BorderFlow AI)">After（BorderFlow AI導入後）</h4>
+      <div class="ba-item"><span data-ja="必要なスキル" data-en="Skills Required">必要なスキル</span><span class="ba-v">PC操作のみ</span></div>
+      <div class="ba-item"><span data-ja="新人の戦力化" data-en="Time to Productivity">新人の戦力化</span><span class="ba-v">即日〜数日</span></div>
+      <div class="ba-item"><span data-ja="引き継ぎ工数" data-en="Handover Hours">引き継ぎ工数</span><span class="ba-v">ほぼゼロ</span></div>
+      <div class="ba-item"><span data-ja="担当者退職リスク" data-en="Staff Turnover Risk">担当者退職リスク</span><span class="ba-v">影響なし</span></div>
+      <div class="ba-item"><span data-ja="ナレッジの所在" data-en="Where Knowledge Lives">ナレッジの所在</span><span class="ba-v">システムに蓄積</span></div>
     </div>
   </div>
 </div>
@@ -402,8 +409,8 @@ a{color:#d4b978;text-decoration:none}a:hover{text-decoration:underline}
 <!-- ═══ STEP-BY-STEP DETAIL ═══ -->
 <div class="sec">
   <div class="sec-label">Workflow Detail</div>
-  <div class="sec-title">すべての業務ステップで、何ができるか</div>
-  <div class="sec-sub">各ステップをクリックすると、機能の詳細とデータの入出力が表示されます。</div>
+  <div class="sec-title" data-ja="すべての業務ステップで、何ができるか" data-en="What Can Be Done at Every Step">すべての業務ステップで、何ができるか</div>
+  <div class="sec-sub" data-ja="各ステップをクリックすると、機能の詳細とデータの入出力が表示されます。" data-en="Click each step to see feature details and data inputs/outputs.">各ステップをクリックすると、機能の詳細とデータの入出力が表示されます。</div>
   <div class="tabs" id="tabs"></div>
   <div class="steps" id="sc"></div>
 </div>
@@ -412,10 +419,10 @@ a{color:#d4b978;text-decoration:none}a:hover{text-decoration:underline}
 
 <!-- ═══ FOOTER CTA ═══ -->
 <div class="cta-bar">
-  <h2>貿易DXを、まずは1ヶ月無料で体験</h2>
-  <p>お客様の業務データを使ったPoCを実施。導入効果を実数で検証いただけます。</p>
-  <a href="https://wingconsulting.org/#contact" class="hero-cta">無料PoCを申し込む</a>
-  <div style="margin-top:16px"><a href="https://wingconsulting.org/" style="font-size:12px;color:#8892a8">← Wing トップページに戻る</a></div>
+  <h2 data-ja="貿易DXを、まずは1ヶ月無料で体験" data-en="Experience Trade DX — Free for 1 Month">貿易DXを、まずは1ヶ月無料で体験</h2>
+  <p data-ja="お客様の業務データを使ったPoCを実施。導入効果を実数で検証いただけます。" data-en="We run a PoC using your actual business data so you can verify the impact with real numbers.">お客様の業務データを使ったPoCを実施。導入効果を実数で検証いただけます。</p>
+  <a href="https://wingconsulting.org/#contact" class="hero-cta" data-ja="無料PoCを申し込む" data-en="Apply for Free PoC">無料PoCを申し込む</a>
+  <div style="margin-top:16px"><a href="https://wingconsulting.org/" style="font-size:12px;color:#8892a8" data-ja="← Wing トップページに戻る" data-en="← Back to Wing Top Page">← Wing トップページに戻る</a></div>
 </div>
 
 <script>
@@ -478,6 +485,30 @@ function rn(){
   document.getElementById("sc").innerHTML=o;
 }
 rn();
+
+// ── Language toggle ──
+var bfLang = (localStorage.getItem('wing-lang') || ((navigator.language||'ja').toLowerCase().startsWith('ja')?'ja':'en'));
+function bfApply(lang){
+  document.getElementById('bf-page').setAttribute('lang', lang);
+  document.getElementById('bf-lang-btn').textContent = lang==='ja'?'EN':'日本語';
+  document.querySelectorAll('[data-ja]').forEach(function(el){
+    el.textContent = lang==='ja'?el.getAttribute('data-ja'):el.getAttribute('data-en');
+  });
+  document.querySelectorAll('[data-ja-html]').forEach(function(el){
+    el.innerHTML = lang==='ja'?el.getAttribute('data-ja-html'):el.getAttribute('data-en-html');
+  });
+  // re-render steps with lang-aware tab labels
+  var imp = lang==='ja'?'📥 輸入フロー（15ステップ）':'📥 Import Flow (15 Steps)';
+  var exp = lang==='ja'?'📤 輸出フロー（11ステップ）':'📤 Export Flow (11 Steps)';
+  document.getElementById('tabs').innerHTML='<div class="tab'+(cur==="import"?" on":"")+'" onclick="sw(\'import\')">' + imp + '</div><div class="tab'+(cur==="export"?" on":"")+'" onclick="sw(\'export\')">' + exp + '</div>';
+}
+function bfToggle(){
+  bfLang = bfLang==='ja'?'en':'ja';
+  localStorage.setItem('wing-lang', bfLang);
+  bfApply(bfLang);
+}
+bfApply(bfLang);
+
 </script>
 </body>
 </html>
