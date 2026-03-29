@@ -622,99 +622,139 @@ html[lang="en"] section p { font-size: 0.95em; }
     <div class="gold-rule mb-12"></div>
 
     <!-- BorderFlow AI -->
-    <div class="mb-6">
-      <!-- Header row -->
-      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6">
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-lg flex items-center justify-center font-bold text-navy text-sm" style="background:linear-gradient(135deg,#B8A882,#D4AF6A)">B</div>
-          <div>
-            <p class="display text-lg font-medium text-white tracking-wide">BorderFlow AI</p>
-            <p class="display text-[.68rem] text-gold/60 tracking-wider" data-ja="自律型貿易事務エージェント" data-en="Autonomous Trade Operations Agent">自律型貿易事務エージェント</p>
-          </div>
-        </div>
-        <p class="text-[.84rem] text-white/50 leading-relaxed max-w-md" data-ja="書類を投げ込むだけで、OCR・照合・通関申告・原価計算までを自動処理。担当者は「確認と判断」だけに集中できます。" data-en="Drop in documents — OCR, matching, customs, and costing run automatically. Your team focuses on review and judgment only.">書類を投げ込むだけで、OCR・照合・通関申告・原価計算までを自動処理。担当者は「確認と判断」だけに集中できます。</p>
-      </div>
-
-      <!-- Stats row -->
-      <div class="grid grid-cols-4 gap-px bg-white/06 border border-white/06 mb-6">
-        <div class="bg-navy/60 px-4 py-3 text-center">
-          <p class="serif text-[1.5rem] font-medium text-gold leading-none">90%</p>
-          <p class="display text-[.62rem] tracking-wider text-white/50 mt-1" data-ja="事務工数削減" data-en="Workload cut">事務工数削減</p>
-        </div>
-        <div class="bg-navy/60 px-4 py-3 text-center">
-          <p class="serif text-[1.5rem] font-medium text-gold leading-none">3<span class="text-[.9rem]">秒</span></p>
-          <p class="display text-[.62rem] tracking-wider text-white/50 mt-1" data-ja="書類1件のOCR" data-en="OCR per doc">書類1件のOCR</p>
-        </div>
-        <div class="bg-navy/60 px-4 py-3 text-center">
-          <p class="serif text-[1.5rem] font-medium text-gold leading-none">¥280<span class="text-[.9rem]">万</span></p>
-          <p class="display text-[.62rem] tracking-wider text-white/50 mt-1" data-ja="追徴課税を回避" data-en="Penalties avoided">追徴課税を回避</p>
-        </div>
-        <div class="bg-navy/60 px-4 py-3 text-center">
-          <p class="serif text-[1.5rem] font-medium text-gold leading-none">330%</p>
-          <p class="display text-[.62rem] tracking-wider text-white/50 mt-1" data-ja="年間ROI" data-en="Annual ROI">年間ROI</p>
+    <div class="mb-8">
+      <!-- Title -->
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-10 h-10 rounded-lg flex items-center justify-center font-bold text-navy text-sm" style="background:linear-gradient(135deg,#B8A882,#D4AF6A)">B</div>
+        <div>
+          <p class="display text-lg font-medium text-white tracking-wide">BorderFlow AI</p>
+          <p class="display text-[.68rem] text-gold/60 tracking-wider" data-ja="自律型貿易事務エージェント" data-en="Autonomous Trade Operations Agent">自律型貿易事務エージェント</p>
         </div>
       </div>
+      <p class="text-[.85rem] text-white/55 leading-relaxed mb-6 max-w-2xl" data-ja="契約書・Invoice・BLをドラッグ＆ドロップするだけで、AI-OCRが書類を読み取り、案件情報を自動入力。取引パターンの自動判定からHS分類・通関申告・原価計算まで、貿易事務の全ステップをAIが自律処理します。" data-en="Simply drag and drop contracts, invoices, and BLs — AI-OCR reads documents and auto-fills deal data. From trade pattern detection to HS classification, customs filing, and cost calculation, AI handles every step of trade operations autonomously.">契約書・Invoice・BLをドラッグ＆ドロップするだけで、AI-OCRが書類を読み取り、案件情報を自動入力。取引パターンの自動判定からHS分類・通関申告・原価計算まで、貿易事務の全ステップをAIが自律処理します。</p>
 
-      <!-- UI Mockups: 2 screens side by side -->
-      <div class="grid md:grid-cols-2 gap-4 mb-6">
-        <!-- Screen 1: Step chevrons + D&D -->
-        <div class="border border-white/10 rounded-lg overflow-hidden shadow-2xl">
-          <div class="bg-[#1a1f2e] px-3 py-1.5 flex items-center gap-1.5 border-b border-white/08">
-            <span class="w-1.5 h-1.5 rounded-full bg-red-400/50"></span><span class="w-1.5 h-1.5 rounded-full bg-yellow-400/50"></span><span class="w-1.5 h-1.5 rounded-full bg-green-400/50"></span>
-            <span class="text-[.5rem] text-white/20 ml-2 font-mono">app.borderflow.ai</span>
-          </div>
-          <div class="bg-[#f5f6f8] p-3">
-            <p class="text-[6px] font-bold text-gray-700 mb-1.5">TRD-041 | Wanhua Chemical — MEG 500MT</p>
-            <div class="flex gap-0 mb-2 overflow-x-auto">
-              <div class="px-1.5 py-0.5 bg-[#CAEEFB] text-[#0C2340] text-[4.5px] font-bold" style="clip-path:polygon(0 0,calc(100% - 5px) 0,100% 50%,calc(100% - 5px) 100%,0 100%)"><span data-ja="引合" data-en="Inq">引合</span></div>
-              <div class="px-1.5 py-0.5 bg-[#CAEEFB] text-[#0C2340] text-[4.5px] font-bold -ml-0.5" style="clip-path:polygon(0 0,calc(100% - 5px) 0,100% 50%,calc(100% - 5px) 100%,0 100%,5px 50%)"><span data-ja="与信" data-en="Cr">与信</span></div>
-              <div class="px-1.5 py-0.5 bg-[#0C2340] text-white text-[4.5px] font-bold -ml-0.5" style="clip-path:polygon(0 0,calc(100% - 5px) 0,100% 50%,calc(100% - 5px) 100%,0 100%,5px 50%)"><span data-ja="OCR" data-en="OCR">OCR</span></div>
-              <div class="px-1.5 py-0.5 bg-gray-200 text-gray-400 text-[4.5px] font-bold -ml-0.5" style="clip-path:polygon(0 0,calc(100% - 5px) 0,100% 50%,calc(100% - 5px) 100%,0 100%,5px 50%)"><span data-ja="照合" data-en="Match">照合</span></div>
-              <div class="px-1.5 py-0.5 bg-gray-200 text-gray-400 text-[4.5px] font-bold -ml-0.5" style="clip-path:polygon(0 0,calc(100% - 5px) 0,100% 50%,calc(100% - 5px) 100%,0 100%,5px 50%)"><span data-ja="HS" data-en="HS">HS</span></div>
-              <div class="px-1.5 py-0.5 bg-gray-200 text-gray-400 text-[4.5px] font-bold -ml-0.5" style="clip-path:polygon(0 0,100% 0,100% 100%,0 100%,5px 50%)"><span data-ja="通関" data-en="Cust">通関</span></div>
+      <!-- 2-col: Left=UI mockup (proper aspect), Right=features+stats -->
+      <div class="grid md:grid-cols-[1.3fr_1fr] gap-8 mb-6">
+        <!-- Left: UI screens stacked -->
+        <div class="flex flex-col gap-3">
+          <!-- Screen 1: Step chevrons + D&D + Auto-fill -->
+          <div class="border border-white/10 rounded-lg overflow-hidden shadow-2xl">
+            <div class="bg-[#1a1f2e] px-3 py-1.5 flex items-center gap-1.5 border-b border-white/08">
+              <span class="w-1.5 h-1.5 rounded-full bg-red-400/50"></span><span class="w-1.5 h-1.5 rounded-full bg-yellow-400/50"></span><span class="w-1.5 h-1.5 rounded-full bg-green-400/50"></span>
+              <span class="text-[.5rem] text-white/20 ml-2 font-mono">app.borderflow.ai</span>
             </div>
-            <div class="grid grid-cols-2 gap-1.5">
-              <div class="border-2 border-dashed border-gray-300 rounded-lg p-2 text-center bg-white">
-                <p class="text-[12px] mb-0.5">📄</p>
-                <p class="text-[6px] font-bold text-gray-600" data-ja="ドラッグ＆ドロップ" data-en="Drag & Drop">ドラッグ＆ドロップ</p>
-                <p class="text-[5px] text-green-600 font-semibold mt-1">✓ Invoice.pdf</p>
-                <p class="text-[5px] text-green-600 font-semibold">✓ BL.pdf</p>
+            <div class="bg-[#f5f6f8] p-3">
+              <p class="text-[7px] font-bold text-gray-700 mb-1.5">TRD-041 | Wanhua Chemical — MEG 500MT</p>
+              <div class="flex gap-0 mb-2.5 overflow-x-auto">
+                <div class="px-2 py-1 bg-[#CAEEFB] text-[#0C2340] text-[5px] font-bold" style="clip-path:polygon(0 0,calc(100% - 6px) 0,100% 50%,calc(100% - 6px) 100%,0 100%)"><span data-ja="引合・PO" data-en="Inquiry">引合・PO</span></div>
+                <div class="px-2 py-1 bg-[#CAEEFB] text-[#0C2340] text-[5px] font-bold -ml-0.5" style="clip-path:polygon(0 0,calc(100% - 6px) 0,100% 50%,calc(100% - 6px) 100%,0 100%,6px 50%)"><span data-ja="与信" data-en="Credit">与信</span></div>
+                <div class="px-2 py-1 bg-[#CAEEFB] text-[#0C2340] text-[5px] font-bold -ml-0.5" style="clip-path:polygon(0 0,calc(100% - 6px) 0,100% 50%,calc(100% - 6px) 100%,0 100%,6px 50%)"><span data-ja="契約" data-en="Contract">契約</span></div>
+                <div class="px-2 py-1 bg-[#0C2340] text-white text-[5px] font-bold -ml-0.5" style="clip-path:polygon(0 0,calc(100% - 6px) 0,100% 50%,calc(100% - 6px) 100%,0 100%,6px 50%)"><span data-ja="書類OCR" data-en="Doc OCR">書類OCR</span></div>
+                <div class="px-2 py-1 bg-gray-200 text-gray-400 text-[5px] font-bold -ml-0.5" style="clip-path:polygon(0 0,calc(100% - 6px) 0,100% 50%,calc(100% - 6px) 100%,0 100%,6px 50%)"><span data-ja="照合" data-en="Match">照合</span></div>
+                <div class="px-2 py-1 bg-gray-200 text-gray-400 text-[5px] font-bold -ml-0.5" style="clip-path:polygon(0 0,calc(100% - 6px) 0,100% 50%,calc(100% - 6px) 100%,0 100%,6px 50%)"><span data-ja="HS分類" data-en="HS Code">HS分類</span></div>
+                <div class="px-2 py-1 bg-gray-200 text-gray-400 text-[5px] font-bold -ml-0.5" style="clip-path:polygon(0 0,calc(100% - 6px) 0,100% 50%,calc(100% - 6px) 100%,0 100%,6px 50%)"><span data-ja="通関" data-en="Customs">通関</span></div>
+                <div class="px-2 py-1 bg-gray-200 text-gray-400 text-[5px] font-bold -ml-0.5" style="clip-path:polygon(0 0,100% 0,100% 100%,0 100%,6px 50%)"><span data-ja="原価" data-en="Cost">原価</span></div>
               </div>
-              <div class="bg-white rounded-lg border border-gray-200 p-2">
-                <div class="flex items-center gap-1 mb-1">
-                  <span class="text-[5px] px-1 py-0.5 rounded bg-blue-100 text-[#1565c0] font-bold">AI</span>
-                  <span class="text-[5px] font-semibold text-gray-600" data-ja="自動入力" data-en="Auto-fill">自動入力</span>
+              <div class="grid grid-cols-2 gap-2">
+                <div class="border-2 border-dashed border-gray-300 rounded-lg p-3 text-center bg-white">
+                  <p class="text-[18px] mb-1">📄</p>
+                  <p class="text-[7px] font-bold text-gray-600" data-ja="書類をドラッグ＆ドロップ" data-en="Drag & Drop Documents">書類をドラッグ＆ドロップ</p>
+                  <p class="text-[5.5px] text-gray-400 mb-1.5">Contract / Invoice / BL</p>
+                  <p class="text-[5.5px] text-green-600 font-semibold">✓ Invoice_MEG_500MT.pdf</p>
+                  <p class="text-[5.5px] text-green-600 font-semibold">✓ BL_SGSIN2403.pdf</p>
                 </div>
-                <div class="text-[5px] flex flex-col gap-0.5">
-                  <div class="flex justify-between"><span class="text-gray-400">Partner</span><span class="font-medium text-gray-700">Wanhua</span></div>
-                  <div class="flex justify-between"><span class="text-gray-400">Item</span><span class="font-medium text-gray-700">MEG 500MT</span></div>
-                  <div class="flex justify-between"><span class="text-gray-400">Amount</span><span class="font-medium text-gray-700">USD 312,500</span></div>
-                  <div class="flex justify-between"><span class="text-gray-400">Pattern</span><span class="px-1 rounded bg-blue-50 text-[#0C2340] font-bold" data-ja="輸入" data-en="Import">輸入</span></div>
+                <div class="bg-white rounded-lg border border-gray-200 p-2.5">
+                  <div class="flex items-center gap-1 mb-1.5">
+                    <span class="text-[6px] px-1 py-0.5 rounded bg-blue-100 text-[#1565c0] font-bold">AI</span>
+                    <span class="text-[6px] font-semibold text-gray-600" data-ja="自動入力完了" data-en="Auto-filled">自動入力完了</span>
+                  </div>
+                  <div class="text-[6px] flex flex-col gap-0.5">
+                    <div class="flex justify-between"><span class="text-gray-400" data-ja="取引先" data-en="Partner">取引先</span><span class="font-medium text-gray-700">Wanhua Chemical</span></div>
+                    <div class="flex justify-between"><span class="text-gray-400" data-ja="品目" data-en="Item">品目</span><span class="font-medium text-gray-700">MEG 500MT</span></div>
+                    <div class="flex justify-between"><span class="text-gray-400" data-ja="金額" data-en="Amount">金額</span><span class="font-medium text-gray-700">USD 312,500</span></div>
+                    <div class="flex justify-between"><span class="text-gray-400">Incoterms</span><span class="font-medium text-gray-700">CIF Yokohama</span></div>
+                    <div class="flex justify-between"><span class="text-gray-400" data-ja="パターン" data-en="Pattern">パターン</span><span class="px-1 rounded bg-blue-50 text-[#0C2340] font-bold" data-ja="輸入(在庫)" data-en="Import(Stock)">輸入(在庫)</span></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <!-- Screen 2: AI Chat -->
+          <div class="border border-white/10 rounded-lg overflow-hidden shadow-xl">
+            <div class="bg-[#0C2340] px-3 py-1.5 flex items-center justify-between">
+              <span class="text-[7px] font-bold text-white flex items-center gap-1">🤖 <span data-ja="BorderFlow AI アシスタント" data-en="BorderFlow AI Assistant">BorderFlow AI アシスタント</span></span>
+              <span class="text-[6px] text-white/40">TRD-041</span>
+            </div>
+            <div class="bg-white p-3 flex flex-col gap-1.5">
+              <div class="self-end bg-[#0C2340] text-white rounded-xl rounded-br-sm px-3 py-1 max-w-[70%]">
+                <p class="text-[6.5px]" data-ja="MEG 500MTの通関状況は？" data-en="Customs status of MEG 500MT?">MEG 500MTの通関状況は？</p>
+              </div>
+              <div class="self-start bg-[#e8f1fb] text-gray-800 rounded-xl rounded-bl-sm px-3 py-1 max-w-[85%]">
+                <p class="text-[6.5px]">TRD-041 | MEG 500MT | Singapore → Yokohama</p>
+                <p class="text-[6px] text-gray-500 mt-0.5" data-ja="B/L原本待ち。2営業日で通関完了見込み。" data-en="Awaiting B/L. Clearing in 2 business days.">B/L原本待ち。2営業日で通関完了見込み。</p>
+              </div>
+              <div class="self-end bg-[#0C2340] text-white rounded-xl rounded-br-sm px-3 py-1 max-w-[70%]">
+                <p class="text-[6.5px]" data-ja="InvoiceとPLの金額チェック" data-en="Check Invoice vs PL amounts">InvoiceとPLの金額チェック</p>
+              </div>
+              <div class="self-start bg-[#e8f1fb] text-gray-800 rounded-xl rounded-bl-sm px-3 py-1 max-w-[85%]">
+                <p class="text-[6.5px] font-semibold text-red-600">⚠️ <span data-ja="差異検出" data-en="Discrepancy Detected">差異検出</span></p>
+                <p class="text-[6px] text-gray-500">Invoice USD 312,500 vs PL USD 311,875</p>
+                <p class="text-[6px] text-red-500 font-semibold" data-ja="差額 USD 625 — 確認が必要です" data-en="Diff USD 625 — review required">差額 USD 625 — 確認が必要です</p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- Screen 2: AI Chat -->
-        <div class="border border-white/10 rounded-lg overflow-hidden shadow-xl">
-          <div class="bg-[#0C2340] px-3 py-1.5 flex items-center justify-between">
-            <span class="text-[6px] font-bold text-white flex items-center gap-1">🤖 AI Assistant</span>
-            <span class="text-[5px] text-white/40">TRD-041</span>
+        <!-- Right: Features + Stats -->
+        <div class="flex flex-col justify-between">
+          <!-- Key features -->
+          <div class="flex flex-col gap-4 mb-6">
+            <div class="flex gap-3 items-start">
+              <span class="text-gold text-sm mt-0.5 shrink-0">✓</span>
+              <div>
+                <p class="text-[.85rem] text-white/80 font-medium leading-snug" data-ja="書類ドロップで案件自動登録" data-en="Auto-register deals from dropped documents">書類ドロップで案件自動登録</p>
+                <p class="text-[.75rem] text-white/40 mt-0.5" data-ja="契約書・Invoice・BLをAI-OCRで即構造化。取引パターンも自動判定。" data-en="AI-OCR instantly structures contracts, invoices, and BLs. Trade pattern auto-detected.">契約書・Invoice・BLをAI-OCRで即構造化。取引パターンも自動判定。</p>
+              </div>
+            </div>
+            <div class="flex gap-3 items-start">
+              <span class="text-gold text-sm mt-0.5 shrink-0">✓</span>
+              <div>
+                <p class="text-[.85rem] text-white/80 font-medium leading-snug" data-ja="HS分類・法規制チェックを自動化" data-en="Automated HS classification and compliance">HS分類・法規制チェックを自動化</p>
+                <p class="text-[.75rem] text-white/40 mt-0.5" data-ja="品目・用途・材質からAIが根拠付きで判定。誤分類リスクをゼロに。" data-en="AI classifies with rationale based on item, use, and material. Zero misclassification risk.">品目・用途・材質からAIが根拠付きで判定。誤分類リスクをゼロに。</p>
+              </div>
+            </div>
+            <div class="flex gap-3 items-start">
+              <span class="text-gold text-sm mt-0.5 shrink-0">✓</span>
+              <div>
+                <p class="text-[.85rem] text-white/80 font-medium leading-snug" data-ja="3点突合・差異検知をリアルタイムで" data-en="Real-time 3-way matching and discrepancy detection">3点突合・差異検知をリアルタイムで</p>
+                <p class="text-[.75rem] text-white/40 mt-0.5" data-ja="PO・Invoice・BLの突合を自動化。差異発生時はAIチャットで即通知。" data-en="Automates PO-Invoice-BL matching. Alerts via AI chat when discrepancies arise.">PO・Invoice・BLの突合を自動化。差異発生時はAIチャットで即通知。</p>
+              </div>
+            </div>
+            <div class="flex gap-3 items-start">
+              <span class="text-gold text-sm mt-0.5 shrink-0">✓</span>
+              <div>
+                <p class="text-[.85rem] text-white/80 font-medium leading-snug" data-ja="AIチャットで案件を即照会" data-en="Instant deal inquiries via AI chat">AIチャットで案件を即照会</p>
+                <p class="text-[.75rem] text-white/40 mt-0.5" data-ja="通関状況・書類整合性・原価計算をチャットで即確認。" data-en="Check customs status, document integrity, and costing instantly via chat.">通関状況・書類整合性・原価計算をチャットで即確認。</p>
+              </div>
+            </div>
           </div>
-          <div class="bg-white p-2.5 flex flex-col gap-1.5" style="min-height:160px">
-            <div class="self-end bg-[#0C2340] text-white rounded-xl rounded-br-sm px-2.5 py-1 max-w-[75%]">
-              <p class="text-[6px]" data-ja="MEG 500MTの通関状況は？" data-en="Customs status of MEG 500MT?">MEG 500MTの通関状況は？</p>
+          <!-- Stats -->
+          <div class="grid grid-cols-2 gap-px bg-white/06 border border-white/06">
+            <div class="bg-navy/60 px-4 py-3 text-center">
+              <p class="serif text-[1.6rem] font-medium text-gold leading-none">90%</p>
+              <p class="display text-[.62rem] tracking-wider text-white/50 mt-1" data-ja="事務工数削減" data-en="Workload cut">事務工数削減</p>
             </div>
-            <div class="self-start bg-[#e8f1fb] text-gray-800 rounded-xl rounded-bl-sm px-2.5 py-1 max-w-[85%]">
-              <p class="text-[6px]" data-ja="B/L原本待ち。2営業日で通関完了見込み。" data-en="Awaiting B/L. Clearing in 2 business days.">B/L原本待ち。2営業日で通関完了見込み。</p>
+            <div class="bg-navy/60 px-4 py-3 text-center">
+              <p class="serif text-[1.6rem] font-medium text-gold leading-none">3<span class="text-[1rem]">秒</span></p>
+              <p class="display text-[.62rem] tracking-wider text-white/50 mt-1" data-ja="書類1件のOCR" data-en="OCR per doc">書類1件のOCR</p>
             </div>
-            <div class="self-end bg-[#0C2340] text-white rounded-xl rounded-br-sm px-2.5 py-1 max-w-[75%]">
-              <p class="text-[6px]" data-ja="Invoice vs PL金額チェック" data-en="Check Invoice vs PL amounts">Invoice vs PL金額チェック</p>
+            <div class="bg-navy/60 px-4 py-3 text-center">
+              <p class="serif text-[1.6rem] font-medium text-gold leading-none">330%</p>
+              <p class="display text-[.62rem] tracking-wider text-white/50 mt-1" data-ja="年間ROI" data-en="Annual ROI">年間ROI</p>
             </div>
-            <div class="self-start bg-[#e8f1fb] text-gray-800 rounded-xl rounded-bl-sm px-2.5 py-1 max-w-[85%]">
-              <p class="text-[6px] font-semibold text-red-600">⚠️ <span data-ja="差異検出" data-en="Discrepancy">差異検出</span></p>
-              <p class="text-[5.5px] text-gray-500">USD 312,500 vs 311,875 (<span class="text-red-500 font-semibold">-$625</span>)</p>
+            <div class="bg-navy/60 px-4 py-3 text-center">
+              <p class="serif text-[1.6rem] font-medium text-gold leading-none">¥30<span class="text-[1rem]">万〜</span></p>
+              <p class="display text-[.62rem] tracking-wider text-white/50 mt-1" data-ja="月額Starter" data-en="/month Starter">月額Starter</p>
             </div>
           </div>
         </div>
@@ -724,115 +764,158 @@ html[lang="en"] section p { font-size: 0.95em; }
       <div class="flex items-center gap-3 flex-wrap">
         <a href="#contact" class="display text-[.78rem] font-medium text-navy bg-gold px-6 py-2.5 rounded-sm tracking-wider hover:bg-gold-mid transition-colors" data-ja="デモを申し込む" data-en="Request a Demo">デモを申し込む</a>
         <span class="display text-[.68rem] text-white/65" data-ja="1ヶ月無料PoC受付中" data-en="Free 1-month PoC available">1ヶ月無料PoC受付中</span>
-        <a href="/borderflow-guide" class="display text-[.68rem] text-white/55 underline underline-offset-4 hover:text-white/80 transition-colors" data-ja="詳細を見る →" data-en="Learn more →">詳細を見る →</a>
+        <a href="/borderflow-guide" class="display text-[.78rem] font-medium text-white border border-white/30 px-6 py-2.5 rounded-sm tracking-wider hover:bg-white/10 transition-colors" data-ja="ソリューション詳細 →" data-en="Solution Details →">ソリューション詳細 →</a>
       </div>
     </div>
 
     <div class="w-full h-px bg-white/08 my-16"></div>
 
     <!-- ChemOS -->
-    <div class="mb-6">
-      <!-- Header row -->
-      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6">
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-lg flex items-center justify-center font-bold text-navy text-sm" style="background:linear-gradient(135deg,#B8A882,#9E8E6E)">C</div>
-          <div>
-            <p class="display text-lg font-medium text-white tracking-wide">ChemOS</p>
-            <p class="display text-[.68rem] text-gold/60 tracking-wider" data-ja="PFAS・chemSHERPA コンプライアンス運用支援" data-en="PFAS &amp; chemSHERPA Compliance Operations">PFAS・chemSHERPA コンプライアンス運用支援</p>
-          </div>
-        </div>
-        <p class="text-[.84rem] text-white/50 leading-relaxed max-w-md" data-ja="chemSHERPAファイルを投げ込むだけで、PFAS判定・照会メール・提出物生成まで自動完走。証跡付きで監査にも即対応。" data-en="Drop in chemSHERPA files — PFAS judgment, supplier inquiries, and deliverable generation run automatically. Audit-ready with full traceability.">chemSHERPAファイルを投げ込むだけで、PFAS判定・照会メール・提出物生成まで自動完走。証跡付きで監査にも即対応。</p>
-      </div>
-
-      <!-- Stats row -->
-      <div class="grid grid-cols-4 gap-px bg-white/06 border border-white/06 mb-6">
-        <div class="bg-navy/60 px-4 py-3 text-center">
-          <p class="serif text-[1.5rem] font-medium text-gold leading-none">7</p>
-          <p class="display text-[.62rem] tracking-wider text-white/50 mt-1" data-ja="ステップ完走" data-en="Steps end-to-end">ステップ完走</p>
-        </div>
-        <div class="bg-navy/60 px-4 py-3 text-center">
-          <p class="serif text-[1.5rem] font-medium text-gold leading-none">3<span class="text-[.9rem]">値</span></p>
-          <p class="display text-[.62rem] tracking-wider text-white/50 mt-1" data-ja="Yes/Suspected/Unknown" data-en="3-tier judgment">Yes/Suspected/Unknown</p>
-        </div>
-        <div class="bg-navy/60 px-4 py-3 text-center">
-          <p class="serif text-[1.5rem] font-medium text-gold leading-none">0</p>
-          <p class="display text-[.62rem] tracking-wider text-white/50 mt-1" data-ja="提出物の空欄" data-en="Blank fields">提出物の空欄</p>
-        </div>
-        <div class="bg-navy/60 px-4 py-3 text-center">
-          <p class="serif text-[1.5rem] font-medium text-gold leading-none">¥30<span class="text-[.9rem]">万〜</span></p>
-          <p class="display text-[.62rem] tracking-wider text-white/50 mt-1" data-ja="月額Starter" data-en="/month Starter">月額Starter</p>
+    <div class="mb-8">
+      <!-- Title -->
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-10 h-10 rounded-lg flex items-center justify-center font-bold text-navy text-sm" style="background:linear-gradient(135deg,#B8A882,#9E8E6E)">C</div>
+        <div>
+          <p class="display text-lg font-medium text-white tracking-wide">ChemOS</p>
+          <p class="display text-[.68rem] text-gold/60 tracking-wider" data-ja="PFAS・chemSHERPA コンプライアンス運用支援" data-en="PFAS &amp; chemSHERPA Compliance Operations">PFAS・chemSHERPA コンプライアンス運用支援</p>
         </div>
       </div>
+      <p class="text-[.85rem] text-white/55 leading-relaxed mb-6 max-w-2xl" data-ja="chemSHERPAファイル（ZIP/XML/SDS）をドロップするだけで、AIが含有物質を自動解析。PFAS該当物質を3段階（Yes/Suspected/Unknown）で判定し、サプライヤーへの照会メール生成から提出物の自動作成まで、7ステップを証跡付きで完走します。" data-en="Just drop chemSHERPA files (ZIP/XML/SDS) — AI auto-parses contained substances. PFAS substances are judged in 3 tiers (Yes/Suspected/Unknown), and the system completes 7 steps end-to-end with full audit trails, from supplier inquiry generation to deliverable creation.">chemSHERPAファイル（ZIP/XML/SDS）をドロップするだけで、AIが含有物質を自動解析。PFAS該当物質を3段階（Yes/Suspected/Unknown）で判定し、サプライヤーへの照会メール生成から提出物の自動作成まで、7ステップを証跡付きで完走します。</p>
 
-      <!-- UI Mockups: 2 screens side by side -->
-      <div class="grid md:grid-cols-2 gap-4 mb-6">
-        <!-- Screen 1: D&D + AI parse -->
-        <div class="border border-white/10 rounded-lg overflow-hidden shadow-2xl">
-          <div class="bg-[#1a1f2e] px-3 py-1.5 flex items-center gap-1.5 border-b border-white/08">
-            <span class="w-1.5 h-1.5 rounded-full bg-red-400/50"></span><span class="w-1.5 h-1.5 rounded-full bg-yellow-400/50"></span><span class="w-1.5 h-1.5 rounded-full bg-green-400/50"></span>
-            <span class="text-[.5rem] text-white/20 ml-2 font-mono">app.chemos.ai</span>
-          </div>
-          <div class="bg-[#f5f6f8] p-3">
-            <div class="flex gap-0 mb-2 overflow-x-auto">
-              <div class="px-1.5 py-0.5 bg-[#CAEEFB] text-[#0C2340] text-[4.5px] font-bold" style="clip-path:polygon(0 0,calc(100% - 5px) 0,100% 50%,calc(100% - 5px) 100%,0 100%)"><span data-ja="登録" data-en="Reg">登録</span></div>
-              <div class="px-1.5 py-0.5 bg-[#0C2340] text-white text-[4.5px] font-bold -ml-0.5" style="clip-path:polygon(0 0,calc(100% - 5px) 0,100% 50%,calc(100% - 5px) 100%,0 100%,5px 50%)"><span data-ja="解析" data-en="Parse">解析</span></div>
-              <div class="px-1.5 py-0.5 bg-gray-200 text-gray-400 text-[4.5px] font-bold -ml-0.5" style="clip-path:polygon(0 0,calc(100% - 5px) 0,100% 50%,calc(100% - 5px) 100%,0 100%,5px 50%)">PFAS</div>
-              <div class="px-1.5 py-0.5 bg-gray-200 text-gray-400 text-[4.5px] font-bold -ml-0.5" style="clip-path:polygon(0 0,calc(100% - 5px) 0,100% 50%,calc(100% - 5px) 100%,0 100%,5px 50%)"><span data-ja="照会" data-en="Inq">照会</span></div>
-              <div class="px-1.5 py-0.5 bg-gray-200 text-gray-400 text-[4.5px] font-bold -ml-0.5" style="clip-path:polygon(0 0,100% 0,100% 100%,0 100%,5px 50%)"><span data-ja="提出" data-en="Sub">提出</span></div>
+      <!-- 2-col: Left=UI mockup, Right=features+stats -->
+      <div class="grid md:grid-cols-[1.3fr_1fr] gap-8 mb-6">
+        <!-- Left: UI screens stacked -->
+        <div class="flex flex-col gap-3">
+          <!-- Screen 1: D&D + AI parse with step chevrons -->
+          <div class="border border-white/10 rounded-lg overflow-hidden shadow-2xl">
+            <div class="bg-[#1a1f2e] px-3 py-1.5 flex items-center gap-1.5 border-b border-white/08">
+              <span class="w-1.5 h-1.5 rounded-full bg-red-400/50"></span><span class="w-1.5 h-1.5 rounded-full bg-yellow-400/50"></span><span class="w-1.5 h-1.5 rounded-full bg-green-400/50"></span>
+              <span class="text-[.5rem] text-white/20 ml-2 font-mono">app.chemos.ai</span>
             </div>
-            <div class="grid grid-cols-2 gap-1.5">
-              <div class="border-2 border-dashed border-gray-300 rounded-lg p-2 text-center bg-white">
-                <p class="text-[12px] mb-0.5">📁</p>
-                <p class="text-[6px] font-bold text-gray-600" data-ja="chemSHERPAをドロップ" data-en="Drop chemSHERPA">chemSHERPAをドロップ</p>
-                <p class="text-[5px] text-green-600 font-semibold mt-1">✓ chemSHERPA_CI.xml</p>
-                <p class="text-[5px] text-green-600 font-semibold">✓ SDS_product.pdf</p>
+            <div class="bg-[#f5f6f8] p-3">
+              <div class="flex gap-0 mb-2.5 overflow-x-auto">
+                <div class="px-2 py-1 bg-[#CAEEFB] text-[#0C2340] text-[5px] font-bold" style="clip-path:polygon(0 0,calc(100% - 6px) 0,100% 50%,calc(100% - 6px) 100%,0 100%)"><span data-ja="案件登録" data-en="Register">案件登録</span></div>
+                <div class="px-2 py-1 bg-[#0C2340] text-white text-[5px] font-bold -ml-0.5" style="clip-path:polygon(0 0,calc(100% - 6px) 0,100% 50%,calc(100% - 6px) 100%,0 100%,6px 50%)"><span data-ja="自動解析" data-en="AI Parse">自動解析</span></div>
+                <div class="px-2 py-1 bg-gray-200 text-gray-400 text-[5px] font-bold -ml-0.5" style="clip-path:polygon(0 0,calc(100% - 6px) 0,100% 50%,calc(100% - 6px) 100%,0 100%,6px 50%)"><span data-ja="PFAS判定" data-en="PFAS">PFAS判定</span></div>
+                <div class="px-2 py-1 bg-gray-200 text-gray-400 text-[5px] font-bold -ml-0.5" style="clip-path:polygon(0 0,calc(100% - 6px) 0,100% 50%,calc(100% - 6px) 100%,0 100%,6px 50%)"><span data-ja="照会" data-en="Inquiry">照会</span></div>
+                <div class="px-2 py-1 bg-gray-200 text-gray-400 text-[5px] font-bold -ml-0.5" style="clip-path:polygon(0 0,calc(100% - 6px) 0,100% 50%,calc(100% - 6px) 100%,0 100%,6px 50%)"><span data-ja="検証" data-en="Verify">検証</span></div>
+                <div class="px-2 py-1 bg-gray-200 text-gray-400 text-[5px] font-bold -ml-0.5" style="clip-path:polygon(0 0,calc(100% - 6px) 0,100% 50%,calc(100% - 6px) 100%,0 100%,6px 50%)"><span data-ja="提出物" data-en="Output">提出物</span></div>
+                <div class="px-2 py-1 bg-gray-200 text-gray-400 text-[5px] font-bold -ml-0.5" style="clip-path:polygon(0 0,100% 0,100% 100%,0 100%,6px 50%)"><span data-ja="証跡" data-en="Audit">証跡</span></div>
               </div>
-              <div class="bg-white rounded-lg border border-gray-200 p-2">
+              <div class="grid grid-cols-2 gap-2">
+                <div class="border-2 border-dashed border-gray-300 rounded-lg p-3 text-center bg-white">
+                  <p class="text-[18px] mb-1">📁</p>
+                  <p class="text-[7px] font-bold text-gray-600" data-ja="chemSHERPAファイルをドロップ" data-en="Drop chemSHERPA Files">chemSHERPAファイルをドロップ</p>
+                  <p class="text-[5.5px] text-gray-400 mb-1.5">ZIP / XML / SDS</p>
+                  <p class="text-[5.5px] text-green-600 font-semibold">✓ chemSHERPA_CI_202403.xml</p>
+                  <p class="text-[5.5px] text-green-600 font-semibold">✓ SDS_product_A.pdf</p>
+                </div>
+                <div class="bg-white rounded-lg border border-gray-200 p-2.5">
+                  <div class="flex items-center gap-1 mb-1.5">
+                    <span class="text-[6px] px-1 py-0.5 rounded bg-blue-100 text-[#1565c0] font-bold">AI</span>
+                    <span class="text-[6px] font-semibold text-gray-600" data-ja="解析完了" data-en="Parsed">解析完了</span>
+                  </div>
+                  <div class="text-[6px] flex flex-col gap-0.5">
+                    <div class="flex justify-between"><span class="text-gray-400" data-ja="含有物質数" data-en="Substances">含有物質数</span><span class="font-medium text-gray-700">1,247</span></div>
+                    <div class="flex justify-between"><span class="text-gray-400" data-ja="PFAS候補" data-en="PFAS Flagged">PFAS候補</span><span class="font-medium text-red-500">18</span></div>
+                    <div class="flex justify-between"><span class="text-gray-400" data-ja="自動判定率" data-en="Auto-Judged">自動判定率</span><span class="font-medium text-green-600">94%</span></div>
+                    <div class="flex justify-between"><span class="text-gray-400" data-ja="要手動確認" data-en="Manual Review">要手動確認</span><span class="font-medium text-yellow-600">3</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Screen 2: PFAS 3-tier + Auto inquiry -->
+          <div class="border border-white/10 rounded-lg overflow-hidden shadow-xl">
+            <div class="bg-[#1a1f2e] px-3 py-1.5 flex items-center gap-1.5 border-b border-white/08">
+              <span class="w-1.5 h-1.5 rounded-full bg-red-400/50"></span><span class="w-1.5 h-1.5 rounded-full bg-yellow-400/50"></span><span class="w-1.5 h-1.5 rounded-full bg-green-400/50"></span>
+              <span class="text-[.5rem] text-white/20 ml-2 font-mono" data-ja="PFAS判定 — 3段階AI判定" data-en="PFAS — 3-Tier AI Judgment">PFAS判定 — 3段階AI判定</span>
+            </div>
+            <div class="bg-[#f5f6f8] p-3">
+              <div class="bg-white rounded-lg border border-gray-200 overflow-hidden mb-2">
+                <div class="text-[6px]">
+                  <div class="grid grid-cols-[1fr_auto_auto_auto] gap-2 px-2.5 py-1 bg-gray-50 text-[5.5px] text-gray-400 font-semibold border-b border-gray-100">
+                    <span data-ja="物質名" data-en="Substance">物質名</span><span>CAS</span><span data-ja="判定" data-en="Judgment">判定</span><span data-ja="根拠" data-en="Basis">根拠</span>
+                  </div>
+                  <div class="grid grid-cols-[1fr_auto_auto_auto] gap-2 px-2.5 py-1 border-b border-gray-100 items-center bg-red-50/30">
+                    <span class="text-gray-700 font-medium">PFOA</span><span class="font-mono text-gray-400">335-67-1</span><span class="px-1.5 py-0.5 rounded bg-red-100 text-red-700 font-bold">Yes</span><span class="text-[5px] text-gray-400">EU REACH Annex XVII</span>
+                  </div>
+                  <div class="grid grid-cols-[1fr_auto_auto_auto] gap-2 px-2.5 py-1 border-b border-gray-100 items-center bg-yellow-50/30">
+                    <span class="text-gray-700 font-medium">PFOS</span><span class="font-mono text-gray-400">1763-23-1</span><span class="px-1.5 py-0.5 rounded bg-yellow-100 text-yellow-700 font-bold">Suspected</span><span class="text-[5px] text-gray-400" data-ja="C-F結合検出" data-en="C-F bond">C-F結合検出</span>
+                  </div>
+                  <div class="grid grid-cols-[1fr_auto_auto_auto] gap-2 px-2.5 py-1 items-center">
+                    <span class="text-gray-700">Ethylene Oxide</span><span class="font-mono text-gray-400">75-21-8</span><span class="px-1.5 py-0.5 rounded bg-green-100 text-green-700 font-bold">Unknown</span><span class="text-[5px] text-gray-400" data-ja="PFAS定義外" data-en="Not PFAS">PFAS定義外</span>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white rounded-lg border border-gray-200 p-2.5">
                 <div class="flex items-center gap-1 mb-1">
-                  <span class="text-[5px] px-1 py-0.5 rounded bg-blue-100 text-[#1565c0] font-bold">AI</span>
-                  <span class="text-[5px] font-semibold text-gray-600" data-ja="1,247物質検出" data-en="1,247 detected">1,247物質検出</span>
+                  <span class="text-[6px] px-1 py-0.5 rounded bg-purple-100 text-purple-700 font-bold">AI</span>
+                  <span class="text-[6px] font-semibold text-gray-600" data-ja="照会メール自動生成" data-en="Auto-Generated Inquiry">照会メール自動生成</span>
                 </div>
-                <div class="text-[5px] flex flex-col gap-0.5">
-                  <div class="flex justify-between"><span class="text-gray-400">PFAS</span><span class="font-medium text-red-500">18</span></div>
-                  <div class="flex justify-between"><span class="text-gray-400" data-ja="自動判定" data-en="Auto">自動判定</span><span class="font-medium text-green-600">94%</span></div>
-                  <div class="flex justify-between"><span class="text-gray-400" data-ja="要確認" data-en="Review">要確認</span><span class="font-medium text-yellow-600">3</span></div>
+                <div class="bg-gray-50 rounded p-2 text-[6px] text-gray-500 border border-gray-100">
+                  <p class="font-semibold text-gray-700">To: supplier-A@example.com</p>
+                  <p class="italic mt-0.5" data-ja="PFOA（CAS 335-67-1）の含有確認..." data-en="PFOA (CAS 335-67-1) content inquiry...">PFOA（CAS 335-67-1）の含有確認...</p>
+                </div>
+                <div class="flex gap-1.5 mt-1.5">
+                  <span class="text-[5.5px] px-2 py-0.5 rounded bg-[#0C2340] text-white font-semibold" data-ja="送信する" data-en="Send">送信する</span>
+                  <span class="text-[5.5px] px-2 py-0.5 rounded bg-gray-100 text-gray-500 font-semibold" data-ja="編集" data-en="Edit">編集</span>
+                  <span class="text-[5.5px] text-gray-400 ml-auto" data-ja="日英対応・督促自動" data-en="JA/EN · Auto follow-up">日英対応・督促自動</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Screen 2: PFAS judgment + auto inquiry -->
-        <div class="border border-white/10 rounded-lg overflow-hidden shadow-xl">
-          <div class="bg-[#1a1f2e] px-3 py-1.5 flex items-center gap-1.5 border-b border-white/08">
-            <span class="w-1.5 h-1.5 rounded-full bg-red-400/50"></span><span class="w-1.5 h-1.5 rounded-full bg-yellow-400/50"></span><span class="w-1.5 h-1.5 rounded-full bg-green-400/50"></span>
-            <span class="text-[.5rem] text-white/20 ml-2 font-mono">PFAS 3-Tier Judgment</span>
-          </div>
-          <div class="bg-[#f5f6f8] p-2.5">
-            <div class="bg-white rounded-lg border border-gray-200 overflow-hidden mb-2 text-[5px]">
-              <div class="grid grid-cols-[1fr_auto_auto] gap-1 px-2 py-1 bg-gray-50 text-gray-400 font-semibold border-b border-gray-100">
-                <span>Substance</span><span>CAS</span><span>Status</span>
-              </div>
-              <div class="grid grid-cols-[1fr_auto_auto] gap-1 px-2 py-0.5 border-b border-gray-100 bg-red-50/30 items-center">
-                <span class="text-gray-700 font-medium">PFOA</span><span class="font-mono text-gray-400">335-67-1</span><span class="px-1 rounded bg-red-100 text-red-700 font-bold">Yes</span>
-              </div>
-              <div class="grid grid-cols-[1fr_auto_auto] gap-1 px-2 py-0.5 border-b border-gray-100 bg-yellow-50/30 items-center">
-                <span class="text-gray-700 font-medium">PFOS</span><span class="font-mono text-gray-400">1763-23-1</span><span class="px-1 rounded bg-yellow-100 text-yellow-700 font-bold">Suspected</span>
-              </div>
-              <div class="grid grid-cols-[1fr_auto_auto] gap-1 px-2 py-0.5 items-center">
-                <span class="text-gray-700">Ethylene Oxide</span><span class="font-mono text-gray-400">75-21-8</span><span class="px-1 rounded bg-green-100 text-green-700 font-bold">Unknown</span>
+        <!-- Right: Features + Stats -->
+        <div class="flex flex-col justify-between">
+          <div class="flex flex-col gap-4 mb-6">
+            <div class="flex gap-3 items-start">
+              <span class="text-gold text-sm mt-0.5 shrink-0">✓</span>
+              <div>
+                <p class="text-[.85rem] text-white/80 font-medium leading-snug" data-ja="chemSHERPAをそのまま読み込み" data-en="Reads chemSHERPA files as-is">chemSHERPAをそのまま読み込み</p>
+                <p class="text-[.75rem] text-white/40 mt-0.5" data-ja="ZIP/XML/SDSを自動解析・構造化。手入力ゼロ。" data-en="Auto-parses ZIP/XML/SDS. Zero manual input.">ZIP/XML/SDSを自動解析・構造化。手入力ゼロ。</p>
               </div>
             </div>
-            <div class="bg-white rounded border border-gray-200 p-2">
-              <div class="flex items-center gap-1 mb-1">
-                <span class="text-[5px] px-1 py-0.5 rounded bg-purple-100 text-purple-700 font-bold">AI</span>
-                <span class="text-[5px] font-semibold text-gray-600" data-ja="照会メール自動生成" data-en="Auto Inquiry Email">照会メール自動生成</span>
+            <div class="flex gap-3 items-start">
+              <span class="text-gold text-sm mt-0.5 shrink-0">✓</span>
+              <div>
+                <p class="text-[.85rem] text-white/80 font-medium leading-snug" data-ja="PFAS 3段階判定で過剰申告を防止" data-en="3-tier PFAS judgment prevents over-declaration">PFAS 3段階判定で過剰申告を防止</p>
+                <p class="text-[.75rem] text-white/40 mt-0.5" data-ja="Yes / Suspected / Unknown。根拠付きで誤判定リスクを最小化。" data-en="Yes/Suspected/Unknown with rationale. Minimizes false judgment risk.">Yes / Suspected / Unknown。根拠付きで誤判定リスクを最小化。</p>
               </div>
-              <p class="text-[5px] text-gray-500 italic" data-ja="PFOA含有確認のお願い..." data-en="PFAS Content Inquiry...">PFOA含有確認のお願い...</p>
-              <div class="flex gap-1 mt-1">
-                <span class="text-[4.5px] px-1 py-0.5 rounded bg-[#0C2340] text-white font-semibold" data-ja="送信" data-en="Send">送信</span>
-                <span class="text-[4.5px] text-gray-400 ml-auto" data-ja="日英・督促自動" data-en="JA/EN · Auto follow-up">日英・督促自動</span>
+            </div>
+            <div class="flex gap-3 items-start">
+              <span class="text-gold text-sm mt-0.5 shrink-0">✓</span>
+              <div>
+                <p class="text-[.85rem] text-white/80 font-medium leading-snug" data-ja="照会メール自動生成・追跡" data-en="Auto-generates and tracks supplier inquiries">照会メール自動生成・追跡</p>
+                <p class="text-[.75rem] text-white/40 mt-0.5" data-ja="日英対応。督促ログも自動記録し、属人化を排除。" data-en="Bilingual JA/EN. Auto-logs follow-ups, eliminating knowledge silos.">日英対応。督促ログも自動記録し、属人化を排除。</p>
               </div>
+            </div>
+            <div class="flex gap-3 items-start">
+              <span class="text-gold text-sm mt-0.5 shrink-0">✓</span>
+              <div>
+                <p class="text-[.85rem] text-white/80 font-medium leading-snug" data-ja="提出物生成・証跡管理を自動化" data-en="Automated deliverables and audit trail">提出物生成・証跡管理を自動化</p>
+                <p class="text-[.75rem] text-white/40 mt-0.5" data-ja="顧客フォーマットへの変換も自動。「根拠は？」に完全トレーサビリティで回答。" data-en="Auto-converts to customer formats. Full traceability for 'what's the basis?' questions.">顧客フォーマットへの変換も自動。「根拠は？」に完全トレーサビリティで回答。</p>
+              </div>
+            </div>
+          </div>
+          <!-- Stats -->
+          <div class="grid grid-cols-2 gap-px bg-white/06 border border-white/06">
+            <div class="bg-navy/60 px-4 py-3 text-center">
+              <p class="serif text-[1.6rem] font-medium text-gold leading-none">7</p>
+              <p class="display text-[.62rem] tracking-wider text-white/50 mt-1" data-ja="ステップ完走" data-en="Steps end-to-end">ステップ完走</p>
+            </div>
+            <div class="bg-navy/60 px-4 py-3 text-center">
+              <p class="serif text-[1.6rem] font-medium text-gold leading-none">3<span class="text-[1rem]">値</span></p>
+              <p class="display text-[.62rem] tracking-wider text-white/50 mt-1">Yes/Suspected/Unknown</p>
+            </div>
+            <div class="bg-navy/60 px-4 py-3 text-center">
+              <p class="serif text-[1.6rem] font-medium text-gold leading-none">0</p>
+              <p class="display text-[.62rem] tracking-wider text-white/50 mt-1" data-ja="提出物の空欄" data-en="Blank fields">提出物の空欄</p>
+            </div>
+            <div class="bg-navy/60 px-4 py-3 text-center">
+              <p class="serif text-[1.6rem] font-medium text-gold leading-none">¥30<span class="text-[1rem]">万〜</span></p>
+              <p class="display text-[.62rem] tracking-wider text-white/50 mt-1" data-ja="月額Starter" data-en="/month Starter">月額Starter</p>
             </div>
           </div>
         </div>
@@ -841,8 +924,8 @@ html[lang="en"] section p { font-size: 0.95em; }
       <!-- CTA -->
       <div class="flex items-center gap-3 flex-wrap">
         <a href="#contact" class="display text-[.78rem] font-medium text-navy bg-gold px-6 py-2.5 rounded-sm tracking-wider hover:bg-gold-mid transition-colors" data-ja="デモを申し込む" data-en="Request a Demo">デモを申し込む</a>
-        <span class="display text-[.68rem] text-white/65" data-ja="初回相談無料" data-en="Free initial consultation">初回相談無料</span>
-        <a href="/chemos-guide" class="display text-[.68rem] text-white/55 underline underline-offset-4 hover:text-white/80 transition-colors" data-ja="詳細を見る →" data-en="Learn more →">詳細を見る →</a>
+        <a href="/chemos-guide" class="display text-[.78rem] font-medium text-white border border-white/30 px-6 py-2.5 rounded-sm tracking-wider hover:bg-white/10 transition-colors" data-ja="ソリューション詳細 →" data-en="Solution Details →">ソリューション詳細 →</a>
+        <span class="display text-[.68rem] text-white/50" data-ja="初回相談無料" data-en="Free initial consultation">初回相談無料</span>
       </div>
     </div>
 
