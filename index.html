@@ -107,6 +107,9 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+[{"@context":"https://schema.org","@type":"SoftwareApplication","name":"BorderFlow AI","applicationCategory":"BusinessApplication","description":"AI agent for autonomous trade operations","operatingSystem":"Web","url":"https://wingconsulting.org/borderflow-guide","offers":{"@type":"Offer","price":"300000","priceCurrency":"JPY"}},{"@context":"https://schema.org","@type":"SoftwareApplication","name":"ChemOS","applicationCategory":"BusinessApplication","description":"PFAS and chemSHERPA compliance automation","operatingSystem":"Web","url":"https://wingconsulting.org/chemos-guide"}]
+</script>
 <!-- BreadcrumbList Schema -->
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://wingconsulting.org/"},{"@type":"ListItem","position":2,"name":"DX Quick Assessment","item":"https://wingconsulting.org/dx-assessment"},{"@type":"ListItem","position":3,"name":"BorderFlow AI","item":"https://wingconsulting.org/borderflow-guide"},{"@type":"ListItem","position":4,"name":"ChemOS","item":"https://wingconsulting.org/chemos-guide"}]}
@@ -223,6 +226,7 @@ html[lang="en"] section p { font-size: 0.95em; }
 <body class="bg-slate-warm text-ink">
 
 <!-- ─── NAVBAR ─────────────────────────────────────────── -->
+<header>
 <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 h-[60px] flex items-center border-b border-[#E5E7EB]" style="background:rgba(249,250,251,.97);backdrop-filter:blur(12px)">
   <div class="max-w-5xl mx-auto w-full px-6 md:px-10 flex items-center justify-between">
     <!-- Logo -->
@@ -245,13 +249,13 @@ html[lang="en"] section p { font-size: 0.95em; }
         </a>
       </li>
       <li class="ml-2">
-        <button id="langToggle" class="lang-toggle-btn display text-[.7rem] font-medium tracking-wider px-3 py-1.5 rounded-sm transition-colors" onclick="toggleLang()">EN</button>
+        <button id="langToggle" aria-label="Language" class="lang-toggle-btn display text-[.7rem] font-medium tracking-wider px-3 py-1.5 rounded-sm transition-colors" onclick="toggleLang()">EN</button>
       </li>
     </ul>
     <!-- Mobile lang toggle -->
     <button id="langToggleMobile" class="md:hidden lang-toggle-btn display text-[.65rem] font-medium tracking-wider px-2.5 py-1 rounded-sm transition-colors mr-2" onclick="toggleLang()">EN</button>
     <!-- Mobile toggle -->
-    <button id="mobileToggle" class="md:hidden p-1">
+    <button id="mobileToggle" aria-label="Menu" class="md:hidden p-1">
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><line x1="3" y1="6" x2="19" y2="6" stroke="#1A1A1F" stroke-width="1.5" stroke-linecap="round"/><line x1="3" y1="11" x2="19" y2="11" stroke="#1A1A1F" stroke-width="1.5" stroke-linecap="round"/><line x1="3" y1="16" x2="19" y2="16" stroke="#1A1A1F" stroke-width="1.5" stroke-linecap="round"/></svg>
     </button>
   </div>
@@ -265,7 +269,9 @@ html[lang="en"] section p { font-size: 0.95em; }
     <li><a href="#contact" class="text-sm font-medium text-white bg-navy px-4 py-2 rounded-sm inline-block" data-ja="相談する" data-en="Contact">相談する</a></li>
   </ul>
 </nav>
+</header>
 
+<main>
 <!-- ─── HERO ───────────────────────────────────────────── -->
 <section id="top" class="bg-navy flex items-center pt-24 pb-16 px-6 md:px-10 relative overflow-hidden">
   <!-- Subtle background radial -->
@@ -987,6 +993,48 @@ html[lang="en"] section p { font-size: 0.95em; }
 
 
 
+
+<!-- ─── SOCIAL PROOF ──────────────────────────────────── -->
+<section class="reveal py-20 px-6 md:px-10 bg-slate-warm border-t border-[#E5E7EB]" id="proof">
+  <div class="max-w-5xl mx-auto">
+    <p class="display text-[.67rem] font-medium tracking-[.2em] uppercase text-gold mb-3" data-ja="実績" data-en="Track Record">実績</p>
+    <h2 class="serif text-[clamp(1.6rem,3vw,2.4rem)] font-medium text-ink leading-snug mb-14" data-ja="数字が証明する、Wingの実行力。" data-en="Results that speak for themselves.">数字が証明する、Wingの実行力。</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+      <div class="bg-white border border-[#E5E7EB] rounded-sm p-6 text-center">
+        <p class="serif text-[2.4rem] font-medium text-gold leading-none">100<span class="text-[1rem] text-ink-light">%</span></p>
+        <p class="display text-[.72rem] text-ink-mid mt-2 tracking-wider" data-ja="プロジェクト完遂率" data-en="Project Completion Rate">プロジェクト完遂率</p>
+      </div>
+      <div class="bg-white border border-[#E5E7EB] rounded-sm p-6 text-center">
+        <p class="serif text-[2.4rem] font-medium text-gold leading-none">330<span class="text-[1rem] text-ink-light">%</span></p>
+        <p class="display text-[.72rem] text-ink-mid mt-2 tracking-wider" data-ja="平均ROI（初年度）" data-en="Avg. ROI (Year 1)">平均ROI（初年度）</p>
+      </div>
+      <div class="bg-white border border-[#E5E7EB] rounded-sm p-6 text-center">
+        <p class="serif text-[2.4rem] font-medium text-gold leading-none">90<span class="text-[1rem] text-ink-light">%</span></p>
+        <p class="display text-[.72rem] text-ink-mid mt-2 tracking-wider" data-ja="業務工数削減" data-en="Workload Reduction">業務工数削減</p>
+      </div>
+      <div class="bg-white border border-[#E5E7EB] rounded-sm p-6 text-center">
+        <p class="serif text-[2.4rem] font-medium text-gold leading-none">80<span class="text-[1rem] text-ink-light">%</span></p>
+        <p class="display text-[.72rem] text-ink-mid mt-2 tracking-wider" data-ja="リピート・紹介率" data-en="Repeat &amp; Referral Rate">リピート・紹介率</p>
+      </div>
+    </div>
+    <p class="display text-[.67rem] font-medium tracking-[.2em] uppercase text-gold mb-6" data-ja="お客様の声" data-en="Client Voices">お客様の声</p>
+    <div class="grid md:grid-cols-3 gap-5">
+      <div class="bg-white border border-[#E5E7EB] rounded-sm p-6">
+        <p class="text-[.85rem] text-ink leading-relaxed mb-4" data-ja="「大手ファームに依頼した時と違い、提案した本人が最後まで手を動かしてくれた。結果、現場が本当に使えるシステムになった。」" data-en="&quot;Unlike our experience with a major firm, the person who proposed the solution stayed hands-on until the end. The result was a system our team actually uses.&quot;">「大手ファームに依頼した時と違い、提案した本人が最後まで手を動かしてくれた。結果、現場が本当に使えるシステムになった。」</p>
+        <p class="display text-[.7rem] text-ink-light tracking-wider" data-ja="— 総合商社｜DX推進部長" data-en="— General Trading Co. | DX Director">— 総合商社｜DX推進部長</p>
+      </div>
+      <div class="bg-white border border-[#E5E7EB] rounded-sm p-6">
+        <p class="text-[.85rem] text-ink leading-relaxed mb-4" data-ja="「貿易書類の処理が月200時間から20時間に減った。BorderFlow AIの導入は、ROIの説明が一番楽だったプロジェクト。」" data-en="&quot;Trade document processing dropped from 200 hours/month to 20. BorderFlow AI was the easiest project to justify ROI for.&quot;">「貿易書類の処理が月200時間から20時間に減った。BorderFlow AIの導入は、ROIの説明が一番楽だったプロジェクト。」</p>
+        <p class="display text-[.7rem] text-ink-light tracking-wider" data-ja="— 化学品メーカー｜物流部マネージャー" data-en="— Chemical Manufacturer | Logistics Manager">— 化学品メーカー｜物流部マネージャー</p>
+      </div>
+      <div class="bg-white border border-[#E5E7EB] rounded-sm p-6">
+        <p class="text-[.85rem] text-ink leading-relaxed mb-4" data-ja="「構想段階から相談できたのが大きい。方向性が固まる前にプロの視点が入ることで、手戻りなく進められた。」" data-en="&quot;Being able to consult from the conceptual stage made all the difference. Having expert input before the direction was set meant zero rework.&quot;">「構想段階から相談できたのが大きい。方向性が固まる前にプロの視点が入ることで、手戻りなく進められた。」</p>
+        <p class="display text-[.7rem] text-ink-light tracking-wider" data-ja="— 通信キャリア｜IT戦略室" data-en="— Telecom Carrier | IT Strategy Office">— 通信キャリア｜IT戦略室</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ─── PAIN (ISSUES) ──────────────────────────────────── -->
 <section class="reveal bg-white border-b border-[#E5E7EB] py-20 px-6 md:px-10" id="issues">
   <div class="max-w-5xl mx-auto">
@@ -1055,7 +1103,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
         <div class="px-5 py-4">
           <p class="text-[.82rem] text-ink-mid leading-relaxed" data-ja="AI導入でPoC（概念実証）が本番移行できない5大原因と、失敗しないプロジェクト設計・DXコンサルの選び方を解説。" data-en="Five reasons why AI PoCs fail to reach production, and how to design projects that succeed — with guidance on choosing the right DX consulting partner.">AI導入でPoC（概念実証）が本番移行できない5大原因と、失敗しないプロジェクト設計・DXコンサルの選び方を解説。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.26</p>
+          <p class="text-[.68rem] text-ink-light mt-3">2026.03.26 · <span data-ja="3分で読める" data-en="3 min read">3分で読める</span></p>
         </div>
       </a>
 
@@ -1069,7 +1117,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
         <div class="px-5 py-4">
           <p class="text-[.82rem] text-ink-mid leading-relaxed" data-ja="米中対立・関税戦争に対応するサプライチェーンリスク対策。AI需要予測・調達多元化（China+1）の実践戦略を解説。" data-en="Practical strategies for managing supply chain risks amid US-China tensions — AI demand forecasting, procurement diversification, and the China+1 approach.">米中対立・関税戦争に対応するサプライチェーンリスク対策。AI需要予測・調達多元化（China+1）の実践戦略を解説。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.26</p>
+          <p class="text-[.68rem] text-ink-light mt-3">2026.03.26 · <span data-ja="3分で読める" data-en="3 min read">3分で読める</span></p>
         </div>
       </a>
 
@@ -1082,7 +1130,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
         <div class="px-5 py-4">
           <p class="text-[.82rem] text-ink-mid leading-relaxed" data-ja="Google・Microsoft・AmazonのAI投資競争を分析。ChatGPT・Copilotを業務に定着させるための具体的なアクションを解説。" data-en="An analysis of the AI investment race among Google, Microsoft, and Amazon — with concrete steps for embedding ChatGPT and Copilot into your business.">Google・Microsoft・AmazonのAI投資競争を分析。ChatGPT・Copilotを業務に定着させるための具体的なアクションを解説。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.25</p>
+          <p class="text-[.68rem] text-ink-light mt-3">2026.03.25 · <span data-ja="4分で読める" data-en="4 min read">4分で読める</span></p>
         </div>
       </a>
 
@@ -1095,7 +1143,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
         <div class="px-5 py-4">
           <p class="text-[.82rem] text-ink-mid leading-relaxed" data-ja="AGV・AMRなどの倉庫ロボット、AI需要予測、配送最適化の活用事例と、物流DX推進の具体的なステップを解説。" data-en="Use cases for warehouse robots (AGV/AMR), AI demand forecasting, and delivery optimization — with practical steps for advancing Logistics DX.">AGV・AMRなどの倉庫ロボット、AI需要予測、配送最適化の活用事例と、物流DX推進の具体的なステップを解説。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.25</p>
+          <p class="text-[.68rem] text-ink-light mt-3">2026.03.25 · <span data-ja="4分で読める" data-en="4 min read">4分で読める</span></p>
         </div>
       </a>
 
@@ -1109,7 +1157,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
         <div class="px-5 py-4">
           <p class="text-[.82rem] text-ink-mid leading-relaxed" data-ja="JD.com・菜鳥ネットワークが実現した倉庫自動化・AI物流の実態と、日本の物流DXが参考にすべき取り組みを解説。" data-en="Inside JD.com and Cainiao's warehouse automation and AI logistics — and what Japan's logistics industry should learn from them.">JD.com・菜鳥ネットワークが実現した倉庫自動化・AI物流の実態と、日本の物流DXが参考にすべき取り組みを解説。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.25</p>
+          <p class="text-[.68rem] text-ink-light mt-3">2026.03.25 · <span data-ja="4分で読める" data-en="4 min read">4分で読める</span></p>
         </div>
       </a>
 
@@ -1122,7 +1170,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
         <div class="px-5 py-4">
           <p class="text-[.82rem] text-ink-mid leading-relaxed" data-ja="DXコンサルの選び方を10年以上の経験をもとに解説。大手と専門ファームの違い、失敗パターンと成功の秘訣。" data-en="How to choose a DX consulting partner, based on 10+ years of experience — the difference between large firms and specialists, and why projects fail.">DXコンサルの選び方を10年以上の経験をもとに解説。大手と専門ファームの違い、失敗パターンと成功の秘訣。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.25</p>
+          <p class="text-[.68rem] text-ink-light mt-3">2026.03.25 · <span data-ja="4分で読める" data-en="4 min read">4分で読める</span></p>
         </div>
       </a>
 
@@ -1136,7 +1184,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
         <div class="px-5 py-4">
           <p class="text-[.82rem] text-ink-mid leading-relaxed" data-ja="引合・原価計算・書類作成まで自動化するAIエージェントの仕組みと、RPAとの違い・商社の貿易DX事例を解説。" data-en="How AI agents automate inquiries, cost calculations, and document preparation — including how they differ from RPA and real case studies from trading companies.">引合・原価計算・書類作成まで自動化するAIエージェントの仕組みと、RPAとの違い・商社の貿易DX事例を解説。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.25</p>
+          <p class="text-[.68rem] text-ink-light mt-3">2026.03.25 · <span data-ja="4分で読める" data-en="4 min read">4分で読める</span></p>
         </div>
       </a>
 
@@ -1149,7 +1197,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
         <div class="px-5 py-4">
           <p class="text-[.82rem] text-ink-mid leading-relaxed" data-ja="PFAS規制の最新動向と調査票対応の効率化。ChemOSによる7ステップ自動化を解説。" data-en="Latest PFAS regulations and how to streamline survey response workflows — with a deep-dive into ChemOS's 7-step automation approach.">PFAS規制の最新動向と調査票対応の効率化。ChemOSによる7ステップ自動化を解説。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.25</p>
+          <p class="text-[.68rem] text-ink-light mt-3">2026.03.25 · <span data-ja="4分で読める" data-en="4 min read">4分で読める</span></p>
         </div>
       </a>
 
@@ -1163,7 +1211,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
         <div class="px-5 py-4">
           <p class="text-[.82rem] text-ink-mid leading-relaxed" data-ja="米国TSCA・EU PPWR・日本化審法。2026年に集中するPFAS規制の全体像と、輸出企業・製造業が取るべき対応戦略を解説。" data-en="US TSCA, EU PPWR, and Japan's Chemical Substances Control Law — the full picture of PFAS regulations converging in 2026, and the response strategy for exporters and manufacturers.">米国TSCA・EU PPWR・日本化審法。2026年に集中するPFAS規制の全体像と、輸出企業・製造業が取るべき対応戦略を解説。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.26</p>
+          <p class="text-[.68rem] text-ink-light mt-3">2026.03.26 · <span data-ja="3分で読める" data-en="3 min read">3分で読める</span></p>
         </div>
       </a>
 
@@ -1177,7 +1225,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
         <div class="px-5 py-4">
           <p class="text-[.82rem] text-ink-mid leading-relaxed" data-ja="集中型・分担型・自律型の3モデルを比較。海外拠点のITガバナンスと役割分担の最適解を解説。" data-en="A comparison of centralized, federated, and autonomous IT models — with practical guidance on IT governance and role allocation for overseas subsidiaries.">集中型・分担型・自律型の3モデルを比較。海外拠点のITガバナンスと役割分担の最適解を解説。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.26</p>
+          <p class="text-[.68rem] text-ink-light mt-3">2026.03.26 · <span data-ja="3分で読める" data-en="3 min read">3分で読める</span></p>
         </div>
       </a>
 
@@ -1190,7 +1238,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
         <div class="px-5 py-4">
           <p class="text-[.82rem] text-ink-mid leading-relaxed" data-ja="AI-OCR・次世代NACCS・電子通関の導入で輸出入手続きがどう変わるか、通関業務デジタル化の本質と実務対応を解説。" data-en="How AI-OCR, next-generation NACCS, and electronic customs declarations are transforming import/export procedures — and what it means for customs professionals.">AI-OCR・次世代NACCS・電子通関の導入で輸出入手続きがどう変わるか、通関業務デジタル化の本質と実務対応を解説。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.26</p>
+          <p class="text-[.68rem] text-ink-light mt-3">2026.03.26 · <span data-ja="3分で読める" data-en="3 min read">3分で読める</span></p>
         </div>
       </a>
 
@@ -1203,7 +1251,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
         <div class="px-5 py-4">
           <p class="text-[.82rem] text-ink-mid leading-relaxed" data-ja="HSコードの構造・Webタリフ検索・EPA関税メリット・事前教示申請まで、貿易実務者向けに品目分類の全体像を解説。" data-en="A comprehensive guide to HS codes for trade professionals — covering structure, tariff database searches, EPA benefits, and advance ruling applications.">HSコードの構造・Webタリフ検索・EPA関税メリット・事前教示申請まで、貿易実務者向けに品目分類の全体像を解説。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.26</p>
+          <p class="text-[.68rem] text-ink-light mt-3">2026.03.26 · <span data-ja="3分で読める" data-en="3 min read">3分で読める</span></p>
         </div>
       </a>
 
@@ -1216,7 +1264,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
         <div class="px-5 py-4">
           <p class="text-[.82rem] text-ink-mid leading-relaxed" data-ja="NACCS更改・TradeWaltz・人手不足が加速する今、中小商社が最小コストで貿易業務のデジタル化を始める方法を解説。" data-en="With NACCS upgrades, TradeWaltz adoption, and staff shortages accelerating — how mid-sized trading companies can start digitizing trade operations at minimal cost.">NACCS更改・TradeWaltz・人手不足が加速する今、中小商社が最小コストで貿易業務のデジタル化を始める方法を解説。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.26</p>
+          <p class="text-[.68rem] text-ink-light mt-3">2026.03.26 · <span data-ja="3分で読める" data-en="3 min read">3分で読める</span></p>
         </div>
       </a>
 
@@ -1229,7 +1277,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
         <div class="px-5 py-4">
           <p class="text-[.82rem] text-ink-mid leading-relaxed" data-ja="輸入・輸出の全業務フローとDXの急務化背景。AI・RPA活用で実現する貿易業務の自動化と効率化を網羅的に解説。" data-en="A comprehensive look at import/export workflows and the urgency of digitization — covering AI and RPA automation for trade operations end-to-end.">輸入・輸出の全業務フローとDXの急務化背景。AI・RPA活用で実現する貿易業務の自動化と効率化を網羅的に解説。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.28</p>
+          <p class="text-[.68rem] text-ink-light mt-3">2026.03.28 · <span data-ja="3分で読める" data-en="3 min read">3分で読める</span></p>
         </div>
       </a>
 
@@ -1242,7 +1290,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
         <div class="px-5 py-4">
           <p class="text-[.82rem] text-ink-mid leading-relaxed" data-ja="発注・船積・通関・支払まで15ステップで学ぶ輸入業務の全体像。多品種・多拠点での属人化・作業ミスを防ぐ改善策を解説。" data-en="The full import workflow in 15 steps — from ordering through shipping, customs, and payment — with solutions to prevent knowledge silos and errors in multi-SKU, multi-site operations.">発注・船積・通関・支払まで15ステップで学ぶ輸入業務の全体像。多品種・多拠点での属人化・作業ミスを防ぐ改善策を解説。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.28</p>
+          <p class="text-[.68rem] text-ink-light mt-3">2026.03.28 · <span data-ja="3分で読める" data-en="3 min read">3分で読める</span></p>
         </div>
       </a>
 
@@ -1256,7 +1304,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
         <div class="px-5 py-4">
           <p class="text-[.82rem] text-ink-mid leading-relaxed" data-ja="貿易DXが失敗する5つの典型パターンと、業務設計・変革管理を組み合わせた成功事例を徹底比較。" data-en="Five common failure patterns in Trade DX — compared against success stories that combine process redesign with change management.">貿易DXが失敗する5つの典型パターンと、業務設計・変革管理を組み合わせた成功事例を徹底比較。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.28</p>
+          <p class="text-[.68rem] text-ink-light mt-3">2026.03.28 · <span data-ja="3分で読める" data-en="3 min read">3分で読める</span></p>
         </div>
       </a>
 
@@ -1270,7 +1318,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
         <div class="px-5 py-4">
           <p class="text-[.82rem] text-ink-mid leading-relaxed">書類作成・価格照合・書類チェックなど反復作業を中心に、AIで自動化できる貿易業務と優先順位の付け方を解説。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.28</p>
+          <p class="text-[.68rem] text-ink-light mt-3">2026.03.28 · <span data-ja="3分で読める" data-en="3 min read">3分で読める</span></p>
         </div>
       </a>
 
@@ -1284,7 +1332,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
         <div class="px-5 py-4">
           <p class="text-[.82rem] text-ink-mid leading-relaxed">化学品輸入に特有の法規制確認・SDS管理・成分申告をAIで自動化する方法とChemOSの活用事例を解説。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.28</p>
+          <p class="text-[.68rem] text-ink-light mt-3">2026.03.28 · <span data-ja="3分で読める" data-en="3 min read">3分で読める</span></p>
         </div>
       </a>
 
@@ -1297,167 +1345,7 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
         <div class="px-5 py-4">
           <p class="text-[.82rem] text-ink-mid leading-relaxed">AI-OCRによる書類読み取り・HSコード自動判定・リスクスコアリングなど、AI通関の仕組みと実務導入のポイントを解説。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.28</p>
-        </div>
-      </a>
-
-      <a href="/blog/dark-funnel-b2b" data-category="b2b-marketing" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
-        <div class="bg-navy/05 px-5 py-4">
-          <div class="flex gap-2 flex-wrap mb-2">
-            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># B2Bマーケ</span>
-          </div>
-          <p class="text-[.92rem] font-medium text-ink leading-snug group-hover:text-gold-muted transition-colors">ダークファネルとは？B2B見込み客の90%が「見えない」場所で意思決定している</p>
-        </div>
-        <div class="px-5 py-4">
-          <p class="text-[.75rem] text-ink-mid leading-relaxed">GAに映らない検討プロセスの正体と、商社・製造業の購買担当者への認知獲得アプローチを解説。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.28</p>
-        </div>
-      </a>
-
-      <a href="/blog/exhibition-lead-ma" data-category="b2b-marketing" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
-        <div class="bg-navy/05 px-5 py-4">
-          <div class="flex gap-2 flex-wrap mb-2">
-            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># B2Bマーケ</span>
-            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># AI・DX戦略</span>
-          </div>
-          <p class="text-[.92rem] font-medium text-ink leading-snug group-hover:text-gold-muted transition-colors">展示会リードの"その後"問題｜MAで商談率を3倍にするフォローアップ設計</p>
-        </div>
-        <div class="px-5 py-4">
-          <p class="text-[.75rem] text-ink-mid leading-relaxed">名刺300枚→商談0件の構造的理由と、MAツールを使ったリードナーチャリング・スコアリング設計の実践手順。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.28</p>
-        </div>
-      </a>
-
-      <a href="/blog/ma-tool-data-foundation" data-category="b2b-marketing" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
-        <div class="bg-navy/05 px-5 py-4">
-          <div class="flex gap-2 flex-wrap mb-2">
-            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># B2Bマーケ</span>
-            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># AI・DX戦略</span>
-          </div>
-          <p class="text-[.92rem] font-medium text-ink leading-snug group-hover:text-gold-muted transition-colors">MAツール導入前に整備すべきデータ基盤｜B2Bマーケ失敗の根本原因</p>
-        </div>
-        <div class="px-5 py-4">
-          <p class="text-[.75rem] text-ink-mid leading-relaxed">MAを入れても成果が出ない企業の共通点。ペルソナ・コンテンツ資産・CRM整備の3基盤と4フェーズ導入ロードマップ。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.28</p>
-        </div>
-      </a>
-
-      <a href="/blog/abm-b2b-strategy" data-category="b2b-marketing" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
-        <div class="bg-navy/05 px-5 py-4">
-          <div class="flex gap-2 flex-wrap mb-2">
-            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># B2Bマーケ</span>
-          </div>
-          <p class="text-[.92rem] font-medium text-ink leading-snug group-hover:text-gold-muted transition-colors">ABM（アカウントベースドマーケティング）入門｜商社・製造業B2Bへの適用戦略</p>
-        </div>
-        <div class="px-5 py-4">
-          <p class="text-[.75rem] text-ink-mid leading-relaxed">ABMの3階層（1:1 / 1:Few / 1:Many）から実践4ステップ・ICP定義まで、製造業・商社への導入戦略を解説。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.28</p>
-        </div>
-      </a>
-
-      <a href="/blog/agentic-ai-b2b-shift" data-category="b2b-marketing" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
-        <div class="bg-navy/05 px-5 py-4">
-          <div class="flex gap-2 flex-wrap mb-2">
-            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># B2Bマーケ</span>
-            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># AI/DX</span>
-          </div>
-          <p class="text-[.92rem] font-medium text-ink leading-snug group-hover:text-gold-muted transition-colors">AIエージェント革命：B2Bビジネスを変える自律型AIの実態と導入戦略</p>
-        </div>
-        <div class="px-5 py-4">
-          <p class="text-[.75rem] text-ink-mid leading-relaxed">生成AIからエージェンティックAIへ。B2B業務で稼働する5領域と3フェーズ移行ロードマップを解説。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.29</p>
-        </div>
-      </a>
-
-      <a href="/blog/geo-aeo-ai-search-b2b" data-category="b2b-marketing" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
-        <div class="bg-navy/05 px-5 py-4">
-          <div class="flex gap-2 flex-wrap mb-2">
-            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># B2Bマーケ</span>
-          </div>
-          <p class="text-[.92rem] font-medium text-ink leading-snug group-hover:text-gold-muted transition-colors">GEO・AEO完全ガイド：AI検索時代にB2Bコンテンツが引用されるための戦略</p>
-        </div>
-        <div class="px-5 py-4">
-          <p class="text-[.75rem] text-ink-mid leading-relaxed">ChatGPT・Perplexity・AI Overviewsに引用される7原則とB2Bコンテンツ優先度マトリクス。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.29</p>
-        </div>
-      </a>
-
-      <a href="/blog/gtm-engineer-b2b-japan" data-category="b2b-marketing" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
-        <div class="bg-navy/05 px-5 py-4">
-          <div class="flex gap-2 flex-wrap mb-2">
-            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># B2Bマーケ</span>
-          </div>
-          <p class="text-[.92rem] font-medium text-ink leading-snug group-hover:text-gold-muted transition-colors">GTMエンジニアとは？B2B営業・マーケ自動化を担う新職種の実態と日本での活用法</p>
-        </div>
-        <div class="px-5 py-4">
-          <p class="text-[.75rem] text-ink-mid leading-relaxed">Clay・n8n・Apollo.ioでB2B営業パイプラインを自動化するGTMエンジニアの業務・スキル・日本適用。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.29</p>
-        </div>
-      </a>
-
-      <a href="/blog/vibe-marketing-b2b" data-category="b2b-marketing" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
-        <div class="bg-navy/05 px-5 py-4">
-          <div class="flex gap-2 flex-wrap mb-2">
-            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># B2Bマーケ</span>
-          </div>
-          <p class="text-[.92rem] font-medium text-ink leading-snug group-hover:text-gold-muted transition-colors">バイブ・マーケティングとは？AIコンテンツ洪水の時代に選ばれるB2Bブランドの法則</p>
-        </div>
-        <div class="px-5 py-4">
-          <p class="text-[.75rem] text-ink-mid leading-relaxed">均質AIコンテンツが氾濫する中でブランドの「空気感・世界観・POV」で差別化するバイブ・マーケティングの実践。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.29</p>
-        </div>
-      </a>
-
-      <a href="/blog/first-party-data-b2b" data-category="b2b-marketing" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
-        <div class="bg-navy/05 px-5 py-4">
-          <div class="flex gap-2 flex-wrap mb-2">
-            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># B2Bマーケ</span>
-          </div>
-          <p class="text-[.92rem] font-medium text-ink leading-snug group-hover:text-gold-muted transition-colors">クッキーレス時代のB2Bデータ戦略：ファーストパーティ・ゼロパーティデータの実践活用法</p>
-        </div>
-        <div class="px-5 py-4">
-          <p class="text-[.75rem] text-ink-mid leading-relaxed">サードパーティCookie後のデータ3層構造、CMP→SST→CDP→CRM整備ロードマップを解説。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.29</p>
-        </div>
-      </a>
-
-      <a href="/blog/b2b-saas-kpi-intent-data" data-category="b2b-marketing" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
-        <div class="bg-navy/05 px-5 py-4">
-          <div class="flex gap-2 flex-wrap mb-2">
-            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># B2Bマーケ</span>
-          </div>
-          <p class="text-[.92rem] font-medium text-ink leading-snug group-hover:text-gold-muted transition-colors">B2B SaaS KPI完全ガイド：LTV:CAC・NRRとインテントデータ活用で営業効率を最大化する</p>
-        </div>
-        <div class="px-5 py-4">
-          <p class="text-[.75rem] text-ink-mid leading-relaxed">3大健全性指標・ファネルKPIマトリクス・6sense vs Demandbaseインテントデータ比較を解説。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.29</p>
-        </div>
-      </a>
-
-      <a href="/blog/agentic-ai-saas-design-patterns" data-category="b2b-marketing" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
-        <div class="bg-navy/05 px-5 py-4">
-          <div class="flex gap-2 flex-wrap mb-2">
-            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># AI/DX</span>
-          </div>
-          <p class="text-[.92rem] font-medium text-ink leading-snug group-hover:text-gold-muted transition-colors">AIネイティブSaaS設計パターン：マルチエージェント5つのアーキテクチャと実装戦略</p>
-        </div>
-        <div class="px-5 py-4">
-          <p class="text-[.75rem] text-ink-mid leading-relaxed">Reflection・Plan+Solve・Tool Use・Multi-Agent・HITLの5パターン選択基準とB2B適用事例。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.29</p>
-        </div>
-      </a>
-
-      <a href="/blog/b2b-ec-autonomous-procurement" data-category="b2b-marketing" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
-        <div class="bg-navy/05 px-5 py-4">
-          <div class="flex gap-2 flex-wrap mb-2">
-            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># AI/DX</span>
-            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># 貿易DX</span>
-          </div>
-          <p class="text-[.92rem] font-medium text-ink leading-snug group-hover:text-gold-muted transition-colors">B2B EC自律型調達：AIが変えるサプライチェーンと企業間購買プロセスの未来</p>
-        </div>
-        <div class="px-5 py-4">
-          <p class="text-[.75rem] text-ink-mid leading-relaxed">予測補充・サプライヤー自動選定・調達プロセス完全自動化の3フェーズ移行ロードマップ。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.29</p>
+          <p class="text-[.68rem] text-ink-light mt-3">2026.03.28 · <span data-ja="3分で読める" data-en="3 min read">3分で読める</span></p>
         </div>
       </a>
 
@@ -1498,8 +1386,8 @@ html[lang="en"] section p { font-size: 0.95em; }
     <p class="text-[.87rem] text-white/65 leading-relaxed max-w-md mx-auto mb-10" data-ja="「何から手をつけるべきか」「社内にDXを推進できる人材がいない」など、具体的な依頼内容が決まっていない段階でも対応します。" data-en="Even if you're unsure where to start or don't have DX talent in-house, we're happy to help at any stage.">
       「何から手をつけるべきか」「社内にDXを推進できる人材がいない」など、具体的な依頼内容が決まっていない段階でも対応します。
     </p>
-    <a href="#contact" class="display inline-block text-[.82rem] font-medium text-navy bg-gold px-10 py-4 rounded-sm tracking-wider hover:bg-gold-mid transition-colors" data-ja="話してみる" data-en="Get in Touch">
-      話してみる
+    <a href="#contact" class="display inline-block text-[.82rem] font-medium text-navy bg-gold px-10 py-4 rounded-sm tracking-wider hover:bg-gold-mid transition-colors" data-ja="30分の無料相談を予約する" data-en="Book a Free 30-Min Consultation">
+      30分の無料相談を予約する
     </a>
     <p class="text-[.68rem] text-white/65 mt-5 leading-relaxed" data-ja="初回ヒアリング無料 / オンライン対応可 / 構想段階からの相談歓迎" data-en="Free initial consultation / Online available / Early-stage inquiries welcome">初回ヒアリング無料 / オンライン対応可 / 構想段階からの相談歓迎</p>
   </div>
@@ -1543,15 +1431,15 @@ html[lang="en"] section p { font-size: 0.95em; }
       <form id="contact-form" action="https://formspree.io/f/xpqopzdj" method="POST" class="flex flex-col gap-4">
         <div class="flex flex-col gap-1.5">
           <label class="display text-[.74rem] font-medium text-ink tracking-wide" data-ja-html="お名前 <span class='text-gold text-[.68rem]'>*</span>" data-en-html="Name <span class='text-gold text-[.68rem]'>*</span>">お名前 <span class="text-gold text-[.68rem]">*</span></label>
-          <input type="text" name="name" placeholder="山田 太郎" data-ja-placeholder="山田 太郎" data-en-placeholder="Your Name" class="font-sans text-[.85rem] text-ink bg-white border border-[#E5E7EB] px-3.5 py-2.5 rounded-sm outline-none focus:border-navy/40 placeholder:text-ink-light transition-colors">
+          <input type="text" name="name" autocomplete="name" placeholder="山田 太郎" data-ja-placeholder="山田 太郎" data-en-placeholder="Your Name" class="font-sans text-[.85rem] text-ink bg-white border border-[#E5E7EB] px-3.5 py-2.5 rounded-sm outline-none focus:border-navy/40 placeholder:text-ink-light transition-colors">
         </div>
         <div class="flex flex-col gap-1.5">
           <label class="display text-[.74rem] font-medium text-ink tracking-wide" data-ja="会社名 / 屋号" data-en="Company Name">会社名 / 屋号</label>
-          <input type="text" name="company" placeholder="株式会社◯◯◯" data-ja-placeholder="株式会社◯◯◯" data-en-placeholder="Company Name" class="font-sans text-[.85rem] text-ink bg-white border border-[#E5E7EB] px-3.5 py-2.5 rounded-sm outline-none focus:border-navy/40 placeholder:text-ink-light transition-colors">
+          <input type="text" name="company" autocomplete="organization" placeholder="株式会社◯◯◯" data-ja-placeholder="株式会社◯◯◯" data-en-placeholder="Company Name" class="font-sans text-[.85rem] text-ink bg-white border border-[#E5E7EB] px-3.5 py-2.5 rounded-sm outline-none focus:border-navy/40 placeholder:text-ink-light transition-colors">
         </div>
         <div class="flex flex-col gap-1.5">
           <label class="display text-[.74rem] font-medium text-ink tracking-wide" data-ja-html="メールアドレス <span class='text-gold text-[.68rem]'>*</span>" data-en-html="Email <span class='text-gold text-[.68rem]'>*</span>">メールアドレス <span class="text-gold text-[.68rem]">*</span></label>
-          <input type="email" name="email" placeholder="your@email.com" class="font-sans text-[.85rem] text-ink bg-white border border-[#E5E7EB] px-3.5 py-2.5 rounded-sm outline-none focus:border-navy/40 placeholder:text-ink-light transition-colors">
+          <input type="email" name="email" autocomplete="email" placeholder="your@email.com" class="font-sans text-[.85rem] text-ink bg-white border border-[#E5E7EB] px-3.5 py-2.5 rounded-sm outline-none focus:border-navy/40 placeholder:text-ink-light transition-colors">
         </div>
         <div class="flex flex-col gap-1.5">
           <label class="display text-[.74rem] font-medium text-ink tracking-wide" data-ja-html="ご相談内容 <span class='text-gold text-[.68rem]'>*</span>" data-en-html="Message <span class='text-gold text-[.68rem]'>*</span>">ご相談内容 <span class="text-gold text-[.68rem]">*</span></label>
@@ -1573,9 +1461,9 @@ html[lang="en"] section p { font-size: 0.95em; }
             </select>
           </div>
         </div>
-        <button type="submit" id="contact-btn" class="display w-full text-[.84rem] font-medium text-white bg-navy py-3.5 rounded-sm tracking-wider hover:bg-navy-700 transition-colors flex items-center justify-center gap-2 mt-1">
+        <button type="submit" id="contact-btn" aria-label="Submit" class="display w-full text-[.84rem] font-medium text-white bg-navy py-3.5 rounded-sm tracking-wider hover:bg-navy-700 transition-colors flex items-center justify-center gap-2 mt-1">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span data-ja="送信する" data-en="Submit">送信する</span>
+          <span data-ja="無料相談を申し込む" data-en="Request Free Consultation">無料相談を申し込む</span>
         </button>
         <div id="contact-status" style="display:none;padding:12px 16px;border-radius:4px;font-size:.82rem;margin-top:8px"></div>
         <p class="text-[.68rem] text-ink-light text-center leading-relaxed" data-ja-html="送信をもって<a href='#' class='text-gold hover:underline'>プライバシーポリシー</a>に同意したものとみなします" data-en-html="By submitting, you agree to our <a href='#' class='text-gold hover:underline'>Privacy Policy</a>">送信をもって<a href="#" class="text-gold hover:underline">プライバシーポリシー</a>に同意したものとみなします</p>
@@ -1584,6 +1472,7 @@ html[lang="en"] section p { font-size: 0.95em; }
   </div>
 </section>
 
+</main>
 <!-- ─── FOOTER ──────────────────────────────────────────── -->
 <footer class="bg-navy py-10 px-6 md:px-10">
   <div class="max-w-5xl mx-auto flex flex-wrap justify-between items-center gap-5">
@@ -1595,9 +1484,9 @@ html[lang="en"] section p { font-size: 0.95em; }
       </svg>
     </a>
     <ul class="flex flex-wrap gap-5 list-none">
-      <li><a href="#approach" class="text-[.7rem] text-white/55 hover:text-white/90 transition-colors" data-ja="提供価値" data-en="Value">提供価値</a></li>
-      <li><a href="#industries" class="text-[.7rem] text-white/55 hover:text-white/90 transition-colors" data-ja="対象産業" data-en="Industries">対象産業</a></li>
-      <li><a href="#flow" class="text-[.7rem] text-white/55 hover:text-white/90 transition-colors" data-ja="AIプロダクト" data-en="AI Products">AIプロダクト</a></li>
+      <li><a href="#approach" class="text-[.7rem] text-white/55 hover:text-white/90 transition-colors" data-ja="提供サービス" data-en="Services">提供サービス</a></li>
+      <li><a href="#products" class="text-[.7rem] text-white/55 hover:text-white/90 transition-colors" data-ja="AIプロダクト" data-en="AI Products">AIプロダクト</a></li>
+      <li><a href="#industries" class="text-[.7rem] text-white/55 hover:text-white/90 transition-colors" data-ja="ドメイン" data-en="Domain">ドメイン</a></li>
       <li><a href="#blog" class="text-[.7rem] text-white/55 hover:text-white/90 transition-colors" data-ja="インサイト" data-en="Insights">インサイト</a></li>
       <li><a href="#flow" class="text-[.7rem] text-white/55 hover:text-white/90 transition-colors" data-ja="相談の流れ" data-en="Service Menu">相談の流れ</a></li>
       <li><a href="#contact" class="text-[.7rem] text-white/55 hover:text-white/90 transition-colors" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</a></li>
