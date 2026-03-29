@@ -277,31 +277,54 @@ html[lang="en"] section p { font-size: 0.95em; }
 </nav>
 
 <!-- ─── HERO ───────────────────────────────────────────── -->
-<section id="top" class="bg-navy min-h-screen flex items-center pt-24 pb-20 px-6 md:px-10 relative overflow-hidden">
+<section id="top" class="bg-navy flex items-center pt-24 pb-24 px-6 md:px-10 relative overflow-hidden">
   <!-- Subtle background radial -->
-  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 70% 30%, rgba(184,146,58,.1) 0%, transparent 55%)"></div>
+  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 70% 25%, rgba(184,146,58,.12) 0%, transparent 55%)"></div>
 
-  <div class="max-w-3xl mx-auto w-full relative z-10">
-    <div>
-      <p class="display text-[.65rem] font-medium tracking-[.22em] uppercase text-white/50 flex items-center gap-3 mb-5">
-        <span class="block w-5 h-px bg-white/20"></span>
-        IT / DX Consulting &amp; Execution
-      </p>
-      <h1 id="hero-heading" class="serif text-[clamp(2.4rem,5vw,4rem)] font-medium text-white leading-[1.2] tracking-[.01em] mb-6" data-ja-html="AI・デジタルで、<br>貴社の成長を<br><em class='not-italic text-gold'>本気で前に進める。</em>" data-en-html="Driving Your Growth<br>with AI &amp; Digital<br><em class='not-italic text-gold'>Transformation.</em>">
-        AI・デジタルで、<br>貴社の成長を<br>
-        <em class="not-italic text-gold">本気で前に進める。</em>
-      </h1>
-      <p class="text-[.92rem] font-light text-white/55 leading-[1.9] max-w-md mb-10" data-ja="戦略構想からAI/DXの現場実装まで。経営・IT・業務の断絶を埋め、デジタル変革を確実な成果とともに実現します。" data-en="From strategic planning to hands-on AI/DX implementation. We bridge the gap between management, IT, and operations to deliver real business outcomes.">
-        戦略構想からAI/DXの現場実装まで。経営・IT・業務の断絶を埋め、デジタル変革を確実な成果とともに実現します。
-      </p>
-      <div class="flex items-center flex-wrap gap-5">
-        <a href="#contact" class="display text-[.8rem] font-medium text-navy bg-gold px-7 py-3.5 rounded-sm tracking-wider hover:bg-gold-mid transition-colors" data-ja="課題を相談する" data-en="Get in Touch">
-          課題を相談する
-        </a>
-        <span class="text-[.7rem] text-white/65 tracking-wide" data-ja="構想段階からの相談も歓迎" data-en="Early-stage inquiries welcome">構想段階からの相談も歓迎</span>
-        <span class="display text-[.6rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2.5 py-1 rounded-sm" data-ja="日英バイリンガル対応" data-en="Bilingual JA / EN">日英バイリンガル対応</span>
+  <div class="max-w-5xl mx-auto w-full relative z-10">
+    <div class="grid md:grid-cols-[1fr_auto] gap-12 md:gap-16 items-center">
+
+      <!-- Left: headline + CTA -->
+      <div>
+        <p class="display text-[.65rem] font-medium tracking-[.22em] uppercase text-white/50 flex items-center gap-3 mb-5">
+          <span class="block w-5 h-px bg-white/20"></span>
+          IT / DX Consulting &amp; Execution
+        </p>
+        <h1 id="hero-heading" class="serif text-[clamp(2rem,4vw,3.4rem)] font-medium text-white leading-[1.2] tracking-[.01em] mb-6" data-ja-html="AI・デジタルで、<br>貴社の成長を<br><em class='not-italic text-gold'>本気で前に進める。</em>" data-en-html="Driving Your Growth<br>with AI &amp; Digital<br><em class='not-italic text-gold'>Transformation.</em>">
+          AI・デジタルで、<br>貴社の成長を<br>
+          <em class="not-italic text-gold">本気で前に進める。</em>
+        </h1>
+        <p class="text-[.9rem] font-light text-white/55 leading-[1.9] max-w-md mb-10" data-ja="戦略構想からAI/DXの現場実装まで。経営・IT・業務の断絶を埋め、デジタル変革を確実な成果とともに実現します。" data-en="From strategic planning to hands-on AI/DX implementation. We bridge the gap between management, IT, and operations to deliver real business outcomes.">
+          戦略構想からAI/DXの現場実装まで。経営・IT・業務の断絶を埋め、デジタル変革を確実な成果とともに実現します。
+        </p>
+        <div class="flex items-center flex-wrap gap-5">
+          <a href="#contact" class="display text-[.8rem] font-medium text-navy bg-gold px-7 py-3.5 rounded-sm tracking-wider hover:bg-gold-mid transition-colors" data-ja="課題を相談する" data-en="Get in Touch">
+            課題を相談する
+          </a>
+          <span class="text-[.7rem] text-white/65 tracking-wide" data-ja="構想段階からの相談も歓迎" data-en="Early-stage inquiries welcome">構想段階からの相談も歓迎</span>
+          <span class="display text-[.6rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2.5 py-1 rounded-sm" data-ja="日英バイリンガル対応" data-en="Bilingual JA / EN">日英バイリンガル対応</span>
+        </div>
       </div>
-    </div>
+
+      <!-- Right: key highlights panel -->
+      <div class="hidden md:flex flex-col gap-3 min-w-[200px]">
+        <div class="border border-white/10 rounded-sm px-5 py-4 hover:border-gold/30 transition-colors">
+          <p class="serif text-[2rem] font-medium text-gold leading-none">10<span class="text-[1rem] text-white/40 ml-1">+</span></p>
+          <p class="display text-[.63rem] tracking-wider text-white/45 mt-1.5" data-ja="年の実務経験" data-en="Years of experience">年の実務経験</p>
+        </div>
+        <div class="border border-white/10 rounded-sm px-5 py-4 hover:border-gold/30 transition-colors">
+          <p class="serif text-[2rem] font-medium text-gold leading-none">2<span class="text-[1rem] text-white/40 ml-1">社</span></p>
+          <p class="display text-[.63rem] tracking-wider text-white/45 mt-1.5" data-ja="大手グローバルファーム出身" data-en="Top global consulting firms">大手グローバルファーム出身</p>
+        </div>
+        <div class="border border-white/10 rounded-sm px-5 py-4 hover:border-gold/30 transition-colors">
+          <p class="serif text-[2rem] font-medium text-gold leading-none">JA<span class="text-gold">/</span>EN</p>
+          <p class="display text-[.63rem] tracking-wider text-white/45 mt-1.5" data-ja="バイリンガル対応" data-en="Bilingual consulting">バイリンガル対応</p>
+        </div>
+        <div class="border border-white/10 rounded-sm px-5 py-4 hover:border-gold/30 transition-colors">
+          <p class="serif text-[2rem] font-medium text-gold leading-none">PoC<span class="text-[1rem] text-white/40 ml-1">→本番</span></p>
+          <p class="display text-[.63rem] tracking-wider text-white/45 mt-1.5" data-ja="現場定着まで一貫支援" data-en="PoC to production, end-to-end">現場定着まで一貫支援</p>
+        </div>
+      </div>
 
     </div>
   </div>
