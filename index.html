@@ -1710,6 +1710,11 @@ handleFormspree(
     if (dt) dt.textContent = label;
     if (mt) mt.textContent = label;
 
+    // Update page title
+    document.title = lang === 'ja'
+      ? 'Wing | IT/DXコンサルティング・AI導入支援｜戦略から現場実装まで一気通貫'
+      : 'Wing | IT/DX Consulting & AI Implementation — Strategy to Execution';
+
     // Translate elements with data-ja / data-en (text content)
     document.querySelectorAll('[data-ja][data-en]').forEach(function(el) {
       el.textContent = el.getAttribute('data-' + lang);
