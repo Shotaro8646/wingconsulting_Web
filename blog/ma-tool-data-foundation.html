@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAツール導入前に整備すべきデータ基盤｜B2Bマーケ失敗の根本原因 | Wing Blog</title>
+<meta name="description" content="MAツールを導入したのに成果が出ない。その原因はツールではなくデータ基盤にある。ペルソナ設計・コンテンツ資産・CRM統合の3つの基盤整備を解説。">
+<meta name="keywords" content="MAツール 導入 失敗, マーケティングオートメーション 前提条件, HubSpot 導入 準備, B2Bマーケ データ基盤, CRM MA 連携, リードナーチャリング 設計, ペルソナ B2B, コンテンツマーケティング 製造業">
+<meta property="og:title" content="MAツール導入前に整備すべきデータ基盤｜B2Bマーケ失敗の根本原因">
+<meta property="og:description" content="MAツールを導入したのに成果が出ない。その原因はツールではなくデータ基盤にある。ペルソナ設計・コンテンツ資産・CRM統合の3つの基盤整備を解説。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://wingconsulting.org/blog/ma-tool-data-foundation">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://wingconsulting.org/images/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Wing">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MAツール導入前に整備すべきデータ基盤｜B2Bマーケ失敗の根本原因">
+<meta name="twitter:description" content="MAツールを導入したのに成果が出ない。その原因はツールではなくデータ基盤にある。ペルソナ設計・コンテンツ資産・CRM統合の3つの基盤整備を解説。">
+<meta name="twitter:image" content="https://wingconsulting.org/images/og-default.png">
+<link rel="canonical" href="https://wingconsulting.org/blog/ma-tool-data-foundation">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "MAツール導入前に整備すべきデータ基盤｜B2Bマーケ失敗の根本原因",
+  "description": "MAツールを導入したのに成果が出ない。その原因はツールではなくデータ基盤にある。ペルソナ設計・コンテンツ資産・CRM統合の3つの基盤整備を解説。",
+  "author": {"@type": "Organization","name": "Wing編集部","url": "https://wingconsulting.org"},
+  "publisher": {"@type": "Organization","name": "Wing","url": "https://wingconsulting.org","logo": {"@type": "ImageObject","url": "https://wingconsulting.org/images/logo.png"}},
+  "datePublished": "2026-03-28",
+  "dateModified": "2026-03-28",
+  "mainEntityOfPage": {"@type": "WebPage","@id": "https://wingconsulting.org/blog/ma-tool-data-foundation"},
+  "image": "https://wingconsulting.org/images/og-default.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Wing", "item": "https://wingconsulting.org"},
+    {"@type": "ListItem", "position": 2, "name": "インサイト", "item": "https://wingconsulting.org/#blog"},
+    {"@type": "ListItem", "position": 3, "name": "MAツール導入前に整備すべきデータ基盤｜B2Bマーケ失敗の根本原因", "item": "https://wingconsulting.org/blog/ma-tool-data-foundation"}
+  ]
+}
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        navy: { DEFAULT: '#0F2342', dark: '#081830' },
+        gold: { DEFAULT: '#A8965A', light: '#C4AD72', muted: '#7A6B3E', pale: '#F8F5ED', mid: '#B8A560' },
+        slate: { warm: '#F7F6F3', cool: '#EEECe7' },
+        ink: { DEFAULT: '#1A1A1F', mid: '#4A4A55', light: '#8A8A96' },
+      },
+      fontFamily: {
+        serif: ['"Yu Gothic"', '"YuGothic"', 'sans-serif'],
+        sans: ['"Yu Gothic"', '"YuGothic"', '"Noto Sans JP"', 'sans-serif'],
+        display: ['"Roboto"', 'sans-serif'],
+      },
+    }
+  }
+}
+</script>
+<style>
+body { font-family: 'Yu Gothic', 'YuGothic', 'Noto Sans JP', sans-serif; -webkit-font-smoothing: antialiased; }
+.serif { font-family: 'Roboto', sans-serif; }
+.display { font-family: 'Roboto', sans-serif; }
+.gold-rule { width: 32px; height: 1.5px; background: #A8965A; }
+article h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+article h3 { margin-top: 1.8rem; margin-bottom: 0.8rem; }
+article p { margin-bottom: 1.2rem; }
+article ul { margin-bottom: 1.2rem; padding-left: 1.5rem; }
+article li { margin-bottom: 0.5rem; }
+.diag-wrap { background:#fff; border:1px solid #E2E0DA; border-top:3px solid #A8965A; padding:1.4rem 1.5rem 1rem; margin:1.6rem 0 0.5rem; font-size:0.85rem; }
+.diag-caption { text-align:center; font-size:0.72rem; color:#8A8A96; margin-top:0.5rem; margin-bottom:1.4rem; }
+.diag-label { font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#A8965A; margin-bottom:0.8rem; }
+.diag-step-row { display:flex; flex-wrap:wrap; gap:0.7rem; }
+.diag-step-card { flex:1 1 140px; background:#fff; border:1px solid #E2E0DA; padding:0.9rem; position:relative; }
+.diag-step-card .step-num { width:28px; height:28px; background:#0F2342; color:#A8965A; font-size:0.78rem; font-weight:700; display:flex; align-items:center; justify-content:center; margin-bottom:0.55rem; }
+.diag-step-card .step-title { font-size:0.78rem; font-weight:700; color:#0F2342; margin-bottom:0.3rem; line-height:1.4; }
+.diag-step-card .step-body { font-size:0.72rem; color:#4A4A55; line-height:1.5; }
+.diag-checklist-item { display:flex; align-items:flex-start; gap:0.5rem; background:#F8F5ED; border-left:3px solid #A8965A; padding:0.6rem 0.8rem; flex:1 1 220px; font-size:0.8rem; line-height:1.55; }
+.diag-checklist-item .chk { color:#A8965A; font-weight:700; flex-shrink:0; margin-top:0.05rem; }
+.priority-row { display:flex; flex-wrap:wrap; gap:0; }
+.priority-item { flex:1 1 160px; padding:0.9rem; border:1px solid #E2E0DA; margin:0 -1px -1px 0; }
+.priority-item.a { background:#F0F7F0; border-top:3px solid #5A9A6A; }
+.priority-item.a .p-label { color:#5A9A6A; }
+.priority-item.b { background:#FBF8F0; border-top:3px solid #A8965A; }
+.priority-item.b .p-label { color:#7A6B3E; }
+.priority-item.c { background:#FFF8F5; border-top:3px solid #C45C3A; }
+.priority-item.c .p-label { color:#C45C3A; }
+.p-label { font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:0.4rem; }
+.p-title { font-size:0.78rem; font-weight:700; color:#0F2342; margin-bottom:0.3rem; line-height:1.4; }
+.p-body { font-size:0.72rem; color:#4A4A55; line-height:1.5; }
+</style>
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KN7NWHFK9G');
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style id="font-override">
+  body, p, li, td, th, span, div {
+    font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif !important;
+  }
+  h1, h2, h3, h4, h5, h6, .serif {
+    font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif !important;
+  }
+  .display, [class*="display"], [class*="font-display"] {
+    font-family: "Roboto", "Yu Gothic", "YuGothic", sans-serif !important;
+  }
+  :lang(en), .en, [lang="en"] {
+    font-family: "Roboto", sans-serif !important;
+  }
+</style>
+</head>
+<body class="bg-slate-warm text-ink">
+
+<!-- HEADER -->
+<header class="bg-navy h-[60px] flex items-center px-6 md:px-10 sticky top-0 z-50">
+  <div class="max-w-5xl mx-auto w-full flex items-center justify-between">
+    <a href="/" class="leading-none">
+      <svg width="120" height="36" viewBox="0 0 120 36" fill="none" aria-label="Wing">
+        <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff"/>
+        <path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#fff" opacity=".32"/>
+        <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#fff">Wing</text>
+      </svg>
+    </a>
+    <div class="flex items-center gap-4">
+      <span class="display text-[.7rem] font-medium tracking-wider text-white/50">Blog</span>
+      <a href="/" class="text-[.75rem] text-white/70 hover:text-white transition-colors">← Home</a>
+    </div>
+  </div>
+</header>
+
+<!-- ARTICLE -->
+<main class="py-16 px-6 md:px-10">
+  <div class="max-w-3xl mx-auto">
+    <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3">Marketing Automation</p>
+    <h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4">MAツール導入前に整備すべきデータ基盤｜<br>B2Bマーケ失敗の根本原因</h1>
+    <div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2">
+      <time datetime="2026-03-28">2026.03.28</time>
+      <span>Wing編集部</span>
+    </div>
+    <div class="gold-rule mb-10"></div>
+
+    <article class="text-[.9rem] text-ink leading-[2] max-w-none">
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-b border-[#E2E0DA] pb-2">MAツールを入れても何も変わらなかった企業の共通点</h2>
+
+      <p>「HubSpotを導入したが、6ヶ月後にはほとんど誰も使っていない」——B2Bマーケティングの現場でよく聞かれる声だ。MA（マーケティングオートメーション）ツールへの投資は決して安くない。にもかかわらず、導入後に成果を出せている企業は一部にとどまる。</p>
+
+      <p>失敗した企業が口をそろえて言うのは「ツールが複雑すぎた」「担当者がITリテラシーを持っていなかった」というものだ。しかし、本当の原因はそこではない。問題の根本は、MAを導入する前の「準備」が抜け落ちていたことにある。</p>
+
+      <p>MAは「マーケ施策の自動化ツール」だ。もともと存在しないマーケ施策を生み出す魔法ではない。自動化できるのは、すでに機能しているプロセスだけだ。ペルソナが曖昧で、コンテンツがなく、リードデータが整理されていない状態でMAを稼働させても、空のパイプラインが自動で回り続けるだけになる。</p>
+
+      <p>本稿では、MAツールを機能させるために必要な3つの前提条件と、段階的な導入ロードマップ、そして主要ツールの選定基準を解説する。</p>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-b border-[#E2E0DA] pb-2">MAが機能するために必要な3つの前提条件</h2>
+
+      <p>MAツールを「動くもの」にするには、以下の3つの基盤が整っている必要がある。この3本柱が揃って初めて、MAは投資対効果を生み出す。</p>
+
+      <!-- 図解：3つの柱 -->
+      <div class="diag-wrap">
+        <div class="diag-label">MA成功の3つの前提条件</div>
+        <div class="diag-step-row">
+          <div class="diag-step-card">
+            <div class="step-num">1</div>
+            <div class="step-title">ペルソナ・バイヤージャーニー設計</div>
+            <div class="step-body">誰が・何に悩み・どう意思決定するかを定義する。ターゲットが曖昧ではシナリオが設計できない。</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">2</div>
+            <div class="step-title">コンテンツ資産の整備</div>
+            <div class="step-body">MAシナリオで配信するコンテンツが存在するか。認知から決定まで各フェーズに対応するコンテンツが必要。</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">3</div>
+            <div class="step-title">CRM・リードデータの整備</div>
+            <div class="step-body">既存リードが正確に入力され、リードソースが記録されているか。MA×CRMの双方向同期が前提。</div>
+          </div>
+        </div>
+      </div>
+      <p class="diag-caption">図1：MAツールが機能するための3本柱（Wing作成）</p>
+
+      <h3 class="text-[1rem] font-bold text-navy">1. ペルソナ・バイヤージャーニー設計</h3>
+
+      <p>MAシナリオの出発点は、「誰が」「何に悩んでいて」「どのように意思決定するか」という問いだ。この定義がなければ、誰に何を送るかが決まらず、シナリオは設計不可能になる。</p>
+
+      <p>製造業や商社のB2Bにおけるバイヤーは、業界や企業規模によって異なる。購買部が決定権を持つ企業もあれば、IT部門が主導し経営層が最終承認するケースもある。「とりあえず代表メールに送っておく」という発想では、どれほど精緻なシナリオも意味をなさない。</p>
+
+      <p>B2Bの特殊性として見落とせないのが、「意思決定者」と「情報収集者」が異なるケースが多いことだ。現場の担当者がホワイトペーパーをダウンロードし、導入判断は部長・役員が行う。MAシナリオはこの構造を前提に設計されなければならない。ペルソナは1つではなく、役割ごとに複数設定することが基本だ。</p>
+
+      <h3 class="text-[1rem] font-bold text-navy">2. コンテンツ資産の整備</h3>
+
+      <p>MAの核心はシナリオ配信だ。シナリオを動かすには、各ステップで配信するコンテンツが実在しなければならない。「事例集がない」「導入ガイドがない」「比較資料がない」という状態のまま、MA設定を進めても空振りに終わる。</p>
+
+      <p>バイヤージャーニーは一般的に「認知 → 検討 → 比較 → 決定」の4フェーズに分けられる。各フェーズに適したコンテンツの例を整理すると以下のようになる。</p>
+
+      <div class="diag-wrap">
+        <div class="diag-label">バイヤージャーニー × コンテンツマッピング</div>
+        <div class="diag-step-row">
+          <div class="diag-step-card">
+            <div class="step-num" style="font-size:0.65rem;">認知</div>
+            <div class="step-title">課題啓発コンテンツ</div>
+            <div class="step-body">業界課題ブログ、調査レポート、セミナー資料</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num" style="font-size:0.65rem;">検討</div>
+            <div class="step-title">ソリューション紹介</div>
+            <div class="step-body">ホワイトペーパー、製品概要資料、ウェビナー録画</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num" style="font-size:0.65rem;">比較</div>
+            <div class="step-title">導入根拠の提供</div>
+            <div class="step-body">導入事例、ROI試算シート、競合比較表</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num" style="font-size:0.65rem;">決定</div>
+            <div class="step-title">クロージング支援</div>
+            <div class="step-body">デモ申込み案内、無料トライアル、個別提案資料</div>
+          </div>
+        </div>
+      </div>
+      <p class="diag-caption">図2：各フェーズで必要なコンテンツ（Wing作成）</p>
+
+      <p>コンテンツ資産がゼロの状態でMAツールを導入した場合、シナリオの各ステップに「配信するものがない」という事態が続く。結果として、最初のメール1通だけ設定して終わりになりがちだ。MA導入前にコンテンツ在庫を棚卸しし、不足しているフェーズのコンテンツを優先的に制作することが先決だ。</p>
+
+      <h3 class="text-[1rem] font-bold text-navy">3. CRM・リードデータの整備</h3>
+
+      <p>MAが機能するには、動かすべきリードデータが存在し、正確に管理されている必要がある。既存のCRMに「会社名と担当者名しか入っていない」「どこから来たリードか分からない」という状況では、スコアリングもセグメンテーションもできない。</p>
+
+      <p>最低限確認すべきデータ整備の項目は以下の通りだ。</p>
+
+      <div class="diag-wrap">
+        <div class="diag-label">CRM整備チェックリスト</div>
+        <div class="diag-step-row">
+          <div class="diag-checklist-item"><span class="chk">✓</span><span>リードの連絡先情報（メールアドレス・部署・役職）が正確に入力されているか</span></div>
+          <div class="diag-checklist-item"><span class="chk">✓</span><span>リードソース（展示会・Web・紹介・広告）が記録されているか</span></div>
+          <div class="diag-checklist-item"><span class="chk">✓</span><span>重複レコードや退職者データが除去されているか</span></div>
+          <div class="diag-checklist-item"><span class="chk">✓</span><span>案件ステータス・商談フェーズがCRMに反映されているか</span></div>
+          <div class="diag-checklist-item"><span class="chk">✓</span><span>MAとCRMの双方向同期設定が完了しているか</span></div>
+          <div class="diag-checklist-item"><span class="chk">✓</span><span>メール配信への同意（オプトイン）状況が記録されているか</span></div>
+        </div>
+      </div>
+      <p class="diag-caption">図3：MA導入前のCRMデータ整備チェックリスト（Wing作成）</p>
+
+      <p>特に重要なのがMAとCRMの統合設定だ。MAでのリードの行動（メール開封・ページ閲覧・資料ダウンロード）がCRMに反映され、営業担当者がリアルタイムで把握できる状態になって初めて、マーケと営業の連携が生まれる。この双方向同期がなければ、MAは「マーケだけが使うツール」で終わる。</p>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-b border-[#E2E0DA] pb-2">MA導入ロードマップ：4フェーズで進める</h2>
+
+      <p>MAは一度に全てを構築しようとすると必ず失敗する。正しいアプローチは、基盤整備から段階的に進める4フェーズのロードマップだ。</p>
+
+      <!-- 図解：4フェーズ -->
+      <div class="diag-wrap">
+        <div class="diag-label">MA導入ロードマップ（4フェーズ）</div>
+        <div class="diag-step-row">
+          <div class="diag-step-card">
+            <div class="step-num">Ph.0</div>
+            <div class="step-title">基盤整備<br><span style="font-size:0.65rem;color:#8A8A96;">1〜3ヶ月</span></div>
+            <div class="step-body">ペルソナ定義、コンテンツ棚卸・制作、CRMデータクレンジング、リードソース整理</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">Ph.1</div>
+            <div class="step-title">MAセットアップ<br><span style="font-size:0.65rem;color:#8A8A96;">1〜2ヶ月</span></div>
+            <div class="step-body">ツール選定・契約、CRM連携設定、フォーム・LP設置、リード取込みフロー構築</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">Ph.2</div>
+            <div class="step-title">シナリオ稼働<br><span style="font-size:0.65rem;color:#8A8A96;">1〜2ヶ月</span></div>
+            <div class="step-body">ナーチャリングシナリオ設計・稼働、スコアリングルール設定、HOT Lead通知設定</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">Ph.3</div>
+            <div class="step-title">最適化<br><span style="font-size:0.65rem;color:#8A8A96;">継続</span></div>
+            <div class="step-body">開封率・CVR分析、ABテスト実施、シナリオの改善・拡張、営業連携の強化</div>
+          </div>
+        </div>
+      </div>
+      <p class="diag-caption">図4：MA導入4フェーズロードマップ（Wing作成）</p>
+
+      <p>多くの企業がPhase 0を飛ばしていきなりPhase 1（ツール導入）から始める。その結果、ツールを入れた後に「送るコンテンツがない」「誰をターゲットにすればいいか分からない」という状況に陥る。Phase 0は退屈に見えるが、最も重要な工程だ。</p>
+
+      <p>Phase 0の期間は企業規模や現在の整備状況によって異なるが、一般的には1〜3ヶ月を見込むべきだ。この期間を惜しんでツール導入を急ぐと、後に数倍のコストをかけてやり直すことになる。</p>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-b border-[#E2E0DA] pb-2">MAツール3選と選定基準（HubSpot・Pardot・Marketo）</h2>
+
+      <p>基盤整備の目処が立ったら、いよいよツール選定だ。製造業・商社向けB2Bマーケの観点から、代表的な3ツールを比較する。</p>
+
+      <div class="diag-wrap">
+        <div class="diag-label">主要MAツール比較（製造業・商社 B2B視点）</div>
+        <div class="priority-row">
+          <div class="priority-item a">
+            <div class="p-label">HubSpot</div>
+            <div class="p-title">SMB〜中堅向け<br>CRM込みで手軽</div>
+            <div class="p-body">CRMが無料プランから付属。MA・CMS・セールスツールが一体化。日本語サポートも充実しており、初めてMAを導入する企業に最適。月額費用の透明性が高い。</div>
+          </div>
+          <div class="priority-item b">
+            <div class="p-label">Pardot（MCAE）</div>
+            <div class="p-title">Salesforceユーザー向け<br>深いCRM連携</div>
+            <div class="p-body">Salesforceとのネイティブ連携が最大の強み。すでにSalesforceをCRMとして使っている企業はデータ連携の手間が最小化される。ただしコストは高め。</div>
+          </div>
+          <div class="priority-item c">
+            <div class="p-label">Marketo Engage</div>
+            <div class="p-title">大企業向け<br>柔軟性高・習熟コスト高</div>
+            <div class="p-body">複雑なシナリオ設計・マルチブランド管理に強い。カスタマイズ自由度が高い反面、専任担当者なしでの運用は難しい。エンタープライズ向けの選択肢。</div>
+          </div>
+        </div>
+      </div>
+      <p class="diag-caption">図5：主要MAツール3選の特徴比較（Wing作成）</p>
+
+      <p>ツール選定の基準は「機能の多さ」ではない。最も重要なのは「今のCRM環境」と「MAチームのリソース」の2点だ。Salesforceを既に使っているならPardotの連携コストは低い。一方、CRMが整備されておらずMAも初挑戦という場合は、HubSpotのオールインワン構成が現実的だ。</p>
+
+      <p>高機能なツールを選んでも、運用できる人材がいなければ宝の持ち腐れになる。特に製造業・商社では専任マーケ担当者が少ないケースが多い。小さく始めて実績を積み、段階的に拡張していく戦略が現実解だ。</p>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-b border-[#E2E0DA] pb-2">データ基盤整備を自社でやるか、外部支援を使うか</h2>
+
+      <p>ここまで読んで、「基盤整備だけで3〜6ヶ月もかかるのか」と感じた方もいるだろう。実際、その認識は正しい。ペルソナ定義には営業部門との対話が必要であり、CRMのデータクレンジングは既存業務の棚卸しを伴う。コンテンツ制作は短期間で大量には進まない。</p>
+
+      <p>自社のみで取り組む場合、最大のハードルは「誰がこの整備を主導するか」という問題だ。マーケ担当者が少ない企業では、日常業務をこなしながら基盤整備を推進するのは現実的に難しい。</p>
+
+      <p>外部のDXコンサルタントに支援を求めるメリットは3つある。第一に、ツールベンダーに依存しない中立的な視点でのツール選定が可能になる。第二に、業務プロセスとマーケ施策の整合性を取った設計ができる。第三に、期間を定めてプロジェクト化することで、社内推進力が生まれる。</p>
+
+      <p>Wing Consultingでは、MA導入を単体のツール導入プロジェクトとして捉えるのではなく、営業・マーケの業務設計と一体で進めるアプローチを取っている。「MAを入れたいが何から始めればいいか分からない」という段階から、基盤診断・設計・ツール選定・稼働支援まで一気通貫で対応する体制を持っている。</p>
+
+      <p>重要なのは、MAは「魔法のツール」ではなく「仕組みの自動化装置」だという認識だ。仕組みが先にあり、ツールはそれを加速させる手段に過ぎない。正しい順序で基盤を整えれば、MAはB2Bマーケの強力な武器になる。逆に順序を間違えれば、高額な月額費用だけが出続ける消耗戦になる。</p>
+
+    </article>
+
+    <!-- CTA -->
+    <div class="mt-16 border border-[#E2E0DA] bg-navy/[.03] p-8 rounded-sm">
+      <p class="display text-[.6rem] font-medium tracking-[.18em] uppercase text-gold mb-3">Contact Wing</p>
+      <p class="text-[1rem] font-medium text-ink mb-2">MAツール導入の前に、まずデータ基盤の診断を</p>
+      <p class="text-[.82rem] text-ink-mid leading-relaxed mb-6">「MAを入れたが効果が出ない」「何から手をつければいいか分からない」という企業向けに、Wingがマーケティング基盤の現状診断と改善ロードマップをご提供します。</p>
+      <a href="/#contact" class="inline-block bg-navy text-white text-[.78rem] font-medium tracking-wider px-7 py-3 hover:bg-navy-dark transition-colors">無料相談を予約する →</a>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="mt-20 border-t border-[#E2E0DA] py-10 px-6 md:px-10 text-center">
+  <a href="/" class="inline-block mb-4">
+    <svg width="80" height="24" viewBox="0 0 120 36" fill="none">
+      <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#0F2342"/>
+      <path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#0F2342" opacity=".32"/>
+      <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#0F2342">Wing</text>
+    </svg>
+  </a>
+  <p class="text-[.72rem] text-ink-light">© 2026 Wing Consulting. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

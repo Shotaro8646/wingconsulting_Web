@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>展示会リードの"その後"問題｜MAで商談率を3倍にするフォローアップ設計 | Wing Blog</title>
+<meta name="description" content="展示会で集めた名刺がなぜ商談に繋がらないのか。MAツールを使ったリードナーチャリング設計と、展示会後72時間のフォローアップシナリオを解説。">
+<meta name="keywords" content="展示会 リード獲得, 展示会後 フォローアップ, MAツール リードナーチャリング, 展示会 商談化, HubSpot 展示会, リードスコアリング, 展示会 MA連携, B2B営業 展示会">
+<meta property="og:title" content="展示会リードの"その後"問題｜MAで商談率を3倍にするフォローアップ設計 | Wing Blog">
+<meta property="og:description" content="展示会で集めた名刺がなぜ商談に繋がらないのか。MAツールを使ったリードナーチャリング設計と、展示会後72時間のフォローアップシナリオを解説。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://wingconsulting.org/blog/exhibition-lead-ma">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://wingconsulting.org/images/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Wing">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="展示会リードの"その後"問題｜MAで商談率を3倍にするフォローアップ設計">
+<meta name="twitter:description" content="展示会で集めた名刺がなぜ商談に繋がらないのか。MAツールを使ったリードナーチャリング設計と、展示会後72時間のフォローアップシナリオを解説。">
+<meta name="twitter:image" content="https://wingconsulting.org/images/og-default.png">
+<link rel="canonical" href="https://wingconsulting.org/blog/exhibition-lead-ma">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "展示会リードの\"その後\"問題｜MAで商談率を3倍にするフォローアップ設計",
+  "description": "展示会で集めた名刺がなぜ商談に繋がらないのか。MAツールを使ったリードナーチャリング設計と、展示会後72時間のフォローアップシナリオを解説。",
+  "author": {"@type": "Organization","name": "Wing編集部","url": "https://wingconsulting.org"},
+  "publisher": {"@type": "Organization","name": "Wing","url": "https://wingconsulting.org","logo": {"@type": "ImageObject","url": "https://wingconsulting.org/images/logo.png"}},
+  "datePublished": "2026-03-28",
+  "dateModified": "2026-03-28",
+  "mainEntityOfPage": {"@type": "WebPage","@id": "https://wingconsulting.org/blog/exhibition-lead-ma"},
+  "image": "https://wingconsulting.org/images/og-default.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Wing", "item": "https://wingconsulting.org"},
+    {"@type": "ListItem", "position": 2, "name": "インサイト", "item": "https://wingconsulting.org/#blog"},
+    {"@type": "ListItem", "position": 3, "name": "展示会リードの\"その後\"問題｜MAで商談率を3倍にするフォローアップ設計", "item": "https://wingconsulting.org/blog/exhibition-lead-ma"}
+  ]
+}
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        navy: { DEFAULT: '#0F2342', dark: '#081830' },
+        gold: { DEFAULT: '#A8965A', light: '#C4AD72', muted: '#7A6B3E', pale: '#F8F5ED', mid: '#B8A560' },
+        slate: { warm: '#F7F6F3', cool: '#EEECe7' },
+        ink: { DEFAULT: '#1A1A1F', mid: '#4A4A55', light: '#8A8A96' },
+      },
+      fontFamily: {
+        serif: ['"Yu Gothic"', '"YuGothic"', 'sans-serif'],
+        sans: ['"Yu Gothic"', '"YuGothic"', '"Noto Sans JP"', 'sans-serif'],
+        display: ['"Roboto"', 'sans-serif'],
+      },
+    }
+  }
+}
+</script>
+<style>
+body { font-family: 'Yu Gothic', 'YuGothic', 'Noto Sans JP', sans-serif; -webkit-font-smoothing: antialiased; }
+.serif { font-family: 'Roboto', sans-serif; }
+.display { font-family: 'Roboto', sans-serif; }
+.gold-rule { width: 32px; height: 1.5px; background: #A8965A; }
+article h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+article h3 { margin-top: 1.8rem; margin-bottom: 0.8rem; }
+article p { margin-bottom: 1.2rem; }
+article ul { margin-bottom: 1.2rem; padding-left: 1.5rem; }
+article li { margin-bottom: 0.5rem; }
+.diag-wrap { background:#fff; border:1px solid #E2E0DA; border-top:3px solid #A8965A; padding:1.4rem 1.5rem 1rem; margin:1.6rem 0 0.5rem; font-size:0.85rem; }
+.diag-caption { text-align:center; font-size:0.72rem; color:#8A8A96; margin-top:0.5rem; margin-bottom:1.4rem; }
+.diag-label { font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#A8965A; margin-bottom:0.8rem; }
+.diag-step-row { display:flex; flex-wrap:wrap; gap:0.7rem; }
+.diag-step-card { flex:1 1 140px; background:#fff; border:1px solid #E2E0DA; padding:0.9rem; position:relative; }
+.diag-step-card .step-num { width:28px; height:28px; background:#0F2342; color:#A8965A; font-size:0.78rem; font-weight:700; display:flex; align-items:center; justify-content:center; margin-bottom:0.55rem; }
+.diag-step-card .step-title { font-size:0.78rem; font-weight:700; color:#0F2342; margin-bottom:0.3rem; line-height:1.4; }
+.diag-step-card .step-body { font-size:0.72rem; color:#4A4A55; line-height:1.5; }
+.diag-checklist-item { display:flex; align-items:flex-start; gap:0.5rem; background:#F8F5ED; border-left:3px solid #A8965A; padding:0.6rem 0.8rem; flex:1 1 220px; font-size:0.8rem; line-height:1.55; }
+.diag-checklist-item .chk { color:#A8965A; font-weight:700; flex-shrink:0; margin-top:0.05rem; }
+.priority-row { display:flex; flex-wrap:wrap; gap:0; }
+.priority-item { flex:1 1 160px; padding:0.9rem; border:1px solid #E2E0DA; margin:0 -1px -1px 0; }
+.priority-item.a { background:#F0F7F0; border-top:3px solid #5A9A6A; }
+.priority-item.a .p-label { color:#5A9A6A; }
+.priority-item.b { background:#FBF8F0; border-top:3px solid #A8965A; }
+.priority-item.b .p-label { color:#7A6B3E; }
+.priority-item.c { background:#FFF8F5; border-top:3px solid #C45C3A; }
+.priority-item.c .p-label { color:#C45C3A; }
+.p-label { font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:0.4rem; }
+.p-title { font-size:0.78rem; font-weight:700; color:#0F2342; margin-bottom:0.3rem; line-height:1.4; }
+.p-body { font-size:0.72rem; color:#4A4A55; line-height:1.5; }
+</style>
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KN7NWHFK9G');
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style id="font-override">
+  body, p, li, td, th, span, div {
+    font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif !important;
+  }
+  h1, h2, h3, h4, h5, h6, .serif {
+    font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif !important;
+  }
+  .display, [class*="display"], [class*="font-display"] {
+    font-family: "Roboto", "Yu Gothic", "YuGothic", sans-serif !important;
+  }
+  :lang(en), .en, [lang="en"] {
+    font-family: "Roboto", sans-serif !important;
+  }
+</style>
+</head>
+<body class="bg-slate-warm text-ink">
+
+<!-- HEADER -->
+<header class="bg-navy h-[60px] flex items-center px-6 md:px-10 sticky top-0 z-50">
+  <div class="max-w-5xl mx-auto w-full flex items-center justify-between">
+    <a href="/" class="leading-none">
+      <svg width="120" height="36" viewBox="0 0 120 36" fill="none" aria-label="Wing">
+        <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff"/>
+        <path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#fff" opacity=".32"/>
+        <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#fff">Wing</text>
+      </svg>
+    </a>
+    <div class="flex items-center gap-4">
+      <span class="display text-[.7rem] font-medium tracking-wider text-white/50">Blog</span>
+      <a href="/" class="text-[.75rem] text-white/70 hover:text-white transition-colors">← Home</a>
+    </div>
+  </div>
+</header>
+
+<!-- ARTICLE -->
+<main class="py-16 px-6 md:px-10">
+  <div class="max-w-3xl mx-auto">
+    <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3">Lead Generation</p>
+    <h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4">展示会リードの"その後"問題｜<br>MAで商談率を3倍にするフォローアップ設計</h1>
+    <div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2">
+      <time datetime="2026-03-28">2026.03.28</time>
+      <span>Wing編集部</span>
+    </div>
+    <div class="gold-rule mb-10"></div>
+
+    <article class="text-[.9rem] text-ink leading-[2] max-w-none">
+
+      <p>展示会に出展するたびに、マーケティング・営業チームは数百枚の名刺と引き合いカードを持ち帰る。ブース設営から接客まで費やした工数と費用は決して少なくない。それなのに、3ヶ月後に「あの展示会のリード、どれだけ商談になった？」と聞かれると、答えに詰まる担当者が多い。展示会リードの"その後"は、多くの企業にとって未解決の問題であり続けている。</p>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">展示会で300枚の名刺を集めて、商談が0件だった話</h2>
+
+      <p>ある製造業の営業マネージャーから聞いた話だ。大型のIT系展示会に2日間出展し、担当者3名で300枚を超える名刺を交換した。初日の夜、「今回は手応えがある」とチームで乾杯した。ところが展示会終了から2週間後、誰も本格的なフォローができていなかった。名刺はスキャンされないまま積み上がり、「そのうちやる」が「忘れた」に変わっていた。3ヶ月後の商談件数はゼロ。出展費用の約200万円は、ほぼ丸ごと埋没コストになった。</p>
+
+      <p>これは特殊なケースではない。業界調査によれば、展示会で収集されたリードの<strong>80%は一度もフォロー連絡されない</strong>とされる。営業担当者が展示会から帰社した翌日から、通常業務の波に飲み込まれ、展示会リードはそのまま冷却されていく。連絡が来ないベンダーのことを、見込み客は2週間後にはほぼ忘れている。</p>
+
+      <p>この問題の本質は、営業個人の怠慢でも意識の低さでもない。<strong>仕組みの不在</strong>だ。「誰が、いつ、何を、どの順番で送るか」が設計されていないまま展示会に出展しているかぎり、リードの大半は死に続ける。</p>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">展示会リードが死ぬ5つの理由</h2>
+
+      <p>展示会リードが商談に繋がらない原因を分解すると、構造的な問題が5つのパターンに集約される。</p>
+
+      <ul class="list-disc text-[.88rem]">
+        <li><strong>フォローまでの時間が長すぎる。</strong>展示会終了から72時間を超えると、見込み客の記憶とモチベーションは急速に低下する。「あのブースの人から連絡が来た」という体験そのものに価値があるのに、それが2週間後では文脈が消えている。</li>
+        <li><strong>全員に同じメールを送る。</strong>「●●展示会にご来場ありがとうございました」という一斉送信は、温度感の違いを完全に無視している。「今すぐ導入を検討している」人と「とりあえず情報収集」の人に同じメッセージを送ることは、前者に対する機会損失であり、後者にとっては的外れなプッシュになる。</li>
+        <li><strong>名刺情報がCRM・MAに入力されない。</strong>Excelや名刺管理アプリで終わってしまい、MAのシナリオに乗らないリードは自動フォローの対象外になる。スキャンから入力、セグメント付与までの一連のオペレーションが設計されていなければ、MAを導入していても意味がない。</li>
+        <li><strong>「また連絡します」で終わる。</strong>ブースでの会話を「ご興味あれば連絡します」で終わらせると、次のアクションが相手任せになる。具体的な次のステップ（「来週水曜に事例資料をお送りします」など）をその場で約束することが、フォローの起点になる。</li>
+        <li><strong>営業とマーケで展示会リードの扱いが違う。</strong>マーケは「全員にメールを送ったから、あとは営業の仕事」と思い、営業は「マーケが送ったメールで温まった人だけ対応する」と思っている。この分断がリードを放置する最大の温床だ。</li>
+      </ul>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">MAと連携した展示会フォローアップ設計</h2>
+
+      <p>これらの問題を解決するのが、MAツールを軸にした展示会フォローアップの仕組み化だ。重要なのは「MAを導入する」ことではなく、「展示会の前後のオペレーションをMA前提で設計する」ことだ。</p>
+
+      <!-- フロー図 -->
+      <div class="diag-wrap">
+        <div class="diag-label">Figure — 展示会 → MA → 商談の4ステップフロー</div>
+        <div class="diag-step-row">
+          <div class="diag-step-card">
+            <div class="step-num">1</div>
+            <div class="step-title">展示会当日<br>名刺→CRM入力</div>
+            <div class="step-body">名刺スキャン＋温度感メモを即日入力。「今すぐ」「そのうち」「情報収集」の3分類でタグ付け。担当営業名も必ず記録。</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">2</div>
+            <div class="step-title">翌日〜72時間<br>サンクスメール送付</div>
+            <div class="step-body">MA経由で自動配信。会話内容に触れたパーソナライズ文＋関連コンテンツのリンクを添付。CTAは「資料DL」か「日程調整URL」のみ。</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">3</div>
+            <div class="step-title">1〜2週間後<br>スコアに応じた分岐</div>
+            <div class="step-body">メール開封・コンテンツ閲覧スコアが閾値超え→営業にアラート通知。閾値未達→ナーチャリングシナリオへ自動投入。</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">4</div>
+            <div class="step-title">商談アポ or<br>ナーチャリング継続</div>
+            <div class="step-body">ホットリードは担当営業がコールまたはメール。コールドリードは月次コンテンツ配信で長期育成。四半期ごとに再スコアリング。</div>
+          </div>
+        </div>
+        <p class="diag-caption">展示会終了後72時間以内にSTEP 1〜2を完了させることが商談化率向上の最重要条件</p>
+      </div>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">リードスコアリング設計：「今すぐ客」と「そのうち客」を分ける</h2>
+
+      <p>MAを活用したフォローアップの核心は<strong>リードスコアリング</strong>だ。全リードを平等に扱うのではなく、購買確度に応じてアプローチを変えることで、営業リソースを最も効果的に配分できる。</p>
+
+      <p>スコアリングの軸は大きく2つある。<strong>属性スコア</strong>（その人が誰か）と<strong>行動スコア</strong>（その人が何をしたか）だ。属性スコアは役職（部長以上＋15点、課長＋10点など）、会社規模（従業員1000人以上＋20点など）、業種マッチ度で構成する。行動スコアはメール開封（＋3点）、コンテンツDL（＋10点）、価格ページ閲覧（＋15点）、デモ申込ページ閲覧（＋20点）などで加算する。</p>
+
+      <p>展示会特有のポイントとして、<strong>名刺メモ情報のスコア反映</strong>がある。ブースでの会話の中で「●月に稟議が通る予定」「現在3社を比較検討中」「予算は●百万円を確保済み」といった情報が得られた場合、これは属性スコアとして高く評価すべき情報だ。名刺スキャン時のメモ欄に入力し、タグとしてCRMに反映する運用を展示会前に設計しておく。</p>
+
+      <!-- スコアリング表 -->
+      <div class="diag-wrap">
+        <div class="diag-label">リードスコアリング設計例 — 展示会リード向け</div>
+        <div style="display:flex;flex-wrap:wrap;gap:1rem;">
+          <div style="flex:1 1 200px;">
+            <div style="font-size:0.72rem;font-weight:700;color:#0F2342;border-bottom:1px solid #E2E0DA;padding-bottom:0.4rem;margin-bottom:0.6rem;">属性スコア（最大50点）</div>
+            <div style="font-size:0.75rem;color:#4A4A55;line-height:1.8;">
+              役職：部長以上 +20pt<br>
+              役職：課長・マネージャー +12pt<br>
+              会社規模：1000人以上 +15pt<br>
+              業種マッチ +10pt<br>
+              予算・検討時期メモあり +15pt
+            </div>
+          </div>
+          <div style="flex:1 1 200px;">
+            <div style="font-size:0.72rem;font-weight:700;color:#0F2342;border-bottom:1px solid #E2E0DA;padding-bottom:0.4rem;margin-bottom:0.6rem;">行動スコア（加算式）</div>
+            <div style="font-size:0.75rem;color:#4A4A55;line-height:1.8;">
+              サンクスメール開封 +3pt<br>
+              資料・事例DL +10pt<br>
+              Webサイト2回以上訪問 +8pt<br>
+              価格・プラン页閲覧 +15pt<br>
+              デモ・相談ページ訪問 +20pt
+            </div>
+          </div>
+          <div style="flex:1 1 200px;">
+            <div style="font-size:0.72rem;font-weight:700;color:#0F2342;border-bottom:1px solid #E2E0DA;padding-bottom:0.4rem;margin-bottom:0.6rem;">スコア別アクション</div>
+            <div style="font-size:0.75rem;line-height:1.8;">
+              <span style="color:#5A9A6A;font-weight:700;">80点以上</span>：即日営業アラート・コール<br>
+              <span style="color:#A8965A;font-weight:700;">50〜79点</span>：営業メール＋1週間以内コール<br>
+              <span style="color:#C45C3A;font-weight:700;">50点未満</span>：MAナーチャリングシナリオへ
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="diag-caption">スコアの閾値は自社の商談化率データを元に定期的に見直すことを推奨</p>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">シナリオ設計の実例：製造業向け4ステップ</h2>
+
+      <p>実際のメールシナリオを時系列で設計した例を示す。製造業向けのシステム導入を想定したケースだ。</p>
+
+      <!-- タイムラインシナリオ -->
+      <div class="diag-wrap">
+        <div class="diag-label">展示会フォローアップ メールシナリオ — 製造業向け</div>
+        <div style="display:flex;flex-direction:column;gap:0.8rem;">
+          <div style="display:flex;gap:1rem;align-items:flex-start;">
+            <div style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;">Day 0<br>当日</div>
+            <div style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;">
+              <span style="font-weight:700;color:#0F2342;">件名：</span>本日はご来場いただきありがとうございました（[担当者名]より）<br>
+              <span style="font-weight:700;color:#0F2342;">内容：</span>会話内容に触れた1〜2文のパーソナライズ文＋「お話しした●●についての資料をお送りします」。添付は1点のみ。CTAは資料DLか日程調整URLのどちらか一つ。
+            </div>
+          </div>
+          <div style="display:flex;gap:1rem;align-items:flex-start;">
+            <div style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;">Day 3<br>3日後</div>
+            <div style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;">
+              <span style="font-weight:700;color:#0F2342;">件名：</span>【事例】製造業での導入効果と3ヶ月の変化<br>
+              <span style="font-weight:700;color:#0F2342;">内容：</span>類似業界の導入事例を1件紹介。「御社の状況に当てはめると…」という具体的な文脈付け。資料DLまたはウェビナー案内。Day0メール開封者に限定送信することで開封率向上。
+            </div>
+          </div>
+          <div style="display:flex;gap:1rem;align-items:flex-start;">
+            <div style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;">Day 14<br>2週間後</div>
+            <div style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;">
+              <span style="font-weight:700;color:#0F2342;">件名：</span>他社との比較資料をご用意しました<br>
+              <span style="font-weight:700;color:#0F2342;">内容：</span>競合比較マトリクスまたはROI試算テンプレートを提供。「検討の整理にお役立てください」という姿勢で。押しつけない。スコアが閾値を超えていれば、この時点で営業からのパーソナルメールに切り替える。
+            </div>
+          </div>
+          <div style="display:flex;gap:1rem;align-items:flex-start;">
+            <div style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;">Day 30<br>1ヶ月後</div>
+            <div style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;">
+              <span style="font-weight:700;color:#0F2342;">件名：</span>30分のオンラインデモを無料でご提供しています<br>
+              <span style="font-weight:700;color:#0F2342;">内容：</span>具体的なアクション（デモ申込）への誘導。「もし時期が合わなければ、引き続き情報をお送りします」という逃げ道を用意する。無反応リードはナーチャリングシナリオに移行。
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="diag-caption">各ステップのメール本文は200〜300文字を目安に。読むのに10秒かからない長さが開封後の離脱を防ぐ</p>
+
+      <p>シナリオのポイントは「段階的に温度を上げる」構造だ。最初から「デモを見てください」と言わず、事例→比較資料→デモ申込という順番で、見込み客が自然に購買プロセスを進められる設計にする。各ステップで「読まれた」「クリックされた」かを計測し、スコアに反映させることで、営業が介入すべきタイミングを自動で判定できるようになる。</p>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">MAツール選定の前に確認すること</h2>
+
+      <p>「展示会のフォローアップを改善したい」という相談を受けると、最初にMAツールの選定から始めようとするケースが多い。しかし多くの場合、問題の本質はツールではなく、その前段のオペレーション設計にある。MAを導入する前に確認すべきことが3つある。</p>
+
+      <p><strong>まずCRMが正しく機能しているか確認する。</strong>MAはCRMのデータを前提に動く。リードの入力ルールが統一されていない、重複データが多い、担当者情報が古いといった状態のままMAを導入しても、シナリオは正しく動作しない。CRMのデータクレンジングとルール整備が最初のステップだ。</p>
+
+      <p><strong>展示会専用のリードソース設定を行う。</strong>どの展示会から来たリードかを区別しないと、施策ごとのROIが計測できない。HubSpotであれば「リードソース」カスタムプロパティ、Salesforceであれば「キャンペーン」オブジェクトを使って、展示会名・開催年月を必ず記録する設計にする。これにより「●●展示会リードの商談転換率は●%」という分析が可能になり、次回出展判断の根拠を持てるようになる。</p>
+
+      <p><strong>営業とマーケのSLA（サービスレベル合意）を先に決める。</strong>「MAから渡されたホットリードに対して営業は24時間以内に対応する」「対応後5営業日以内にステータスを更新する」といったルールを文書化し、双方が合意していることがMAを機能させる前提条件だ。どんなに精緻なスコアリングを設計しても、営業がアラートを無視すれば意味がない。</p>
+
+      <!-- チェックリスト -->
+      <div class="diag-wrap">
+        <div class="diag-label">MA導入前チェックリスト — 展示会フォローアップ向け</div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
+          <div class="diag-checklist-item"><span class="chk">✓</span><span>CRMへのリード入力ルールが全社で統一されているか</span></div>
+          <div class="diag-checklist-item"><span class="chk">✓</span><span>展示会ごとのリードソース分類が設定されているか</span></div>
+          <div class="diag-checklist-item"><span class="chk">✓</span><span>名刺スキャン→CRM入力の当日オペレーションが設計されているか</span></div>
+          <div class="diag-checklist-item"><span class="chk">✓</span><span>温度感メモ（今すぐ/そのうち/情報収集）の分類基準が共有されているか</span></div>
+          <div class="diag-checklist-item"><span class="chk">✓</span><span>営業とマーケのSLA（対応時間・ステータス更新ルール）が合意されているか</span></div>
+          <div class="diag-checklist-item"><span class="chk">✓</span><span>ホットリードアラートの通知先・通知方法が決まっているか</span></div>
+          <div class="diag-checklist-item"><span class="chk">✓</span><span>各シナリオメールの承認フローと送信者名設定が完了しているか</span></div>
+          <div class="diag-checklist-item"><span class="chk">✓</span><span>商談転換率を計測するためのパイプラインステージが設定されているか</span></div>
+        </div>
+      </div>
+      <p class="diag-caption">これらが整備されていない状態でのMA導入は、複雑さを増すだけで効果は出ない</p>
+
+      <p>展示会リードの問題は「集める」ことではなく「活かす」仕組みにある。MAツールはその仕組みを自動化する道具だ。ツールの前に設計があり、設計の前に組織の合意がある。この順序を守ることが、展示会投資を本当のビジネス成果に変換する唯一の道だ。</p>
+
+    </article>
+
+    <!-- CTA -->
+    <div class="mt-16 border border-[#E2E0DA] bg-navy/[.03] p-8 rounded-sm">
+      <p class="display text-[.6rem] font-medium tracking-[.18em] uppercase text-gold mb-3">Contact Wing</p>
+      <p class="text-[1rem] font-medium text-ink mb-2">展示会リードの活用設計、MA導入もWingにご相談ください</p>
+      <p class="text-[.82rem] text-ink-mid leading-relaxed mb-6">展示会後のフォローアップ体制からMAツール選定・設定・CRM連携まで、Wingが一貫してご支援します。営業プロセスを「仕組み化」するDXコンサルとしての実績をご活用ください。</p>
+      <a href="/#contact" class="inline-block bg-navy text-white text-[.78rem] font-medium tracking-wider px-7 py-3 hover:bg-navy-dark transition-colors">無料相談を予約する →</a>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="mt-20 border-t border-[#E2E0DA] py-10 px-6 md:px-10 text-center">
+  <a href="/" class="inline-block mb-4">
+    <svg width="80" height="24" viewBox="0 0 120 36" fill="none">
+      <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#0F2342"/>
+      <path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#0F2342" opacity=".32"/>
+      <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#0F2342">Wing</text>
+    </svg>
+  </a>
+  <p class="text-[.72rem] text-ink-light">© 2026 Wing Consulting. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

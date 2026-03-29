@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ABM（アカウントベースドマーケティング）入門｜商社・製造業B2Bへの適用戦略 | Wing Blog</title>
+<meta name="description" content="ABMとは何か、なぜ製造業・商社のB2Bに向いているのか。ターゲットアカウント選定から1:1マーケティングまで、ABM実践の全体像と日本企業への導入ステップを解説。">
+<meta name="keywords" content="ABM アカウントベースドマーケティング, ABM 製造業, B2B マーケティング 戦略, ターゲットアカウント, 1対1マーケティング, ABM ツール, インテントデータ, ABM 日本 導入">
+<meta property="og:title" content="ABM（アカウントベースドマーケティング）入門｜商社・製造業B2Bへの適用戦略">
+<meta property="og:description" content="ABMとは何か、なぜ製造業・商社のB2Bに向いているのか。ターゲットアカウント選定から1:1マーケティングまで、ABM実践の全体像と日本企業への導入ステップを解説。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://wingconsulting.org/blog/abm-b2b-strategy">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://wingconsulting.org/images/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Wing">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ABM（アカウントベースドマーケティング）入門｜商社・製造業B2Bへの適用戦略">
+<meta name="twitter:description" content="ABMとは何か、なぜ製造業・商社のB2Bに向いているのか。ターゲットアカウント選定から1:1マーケティングまで、ABM実践の全体像と日本企業への導入ステップを解説。">
+<meta name="twitter:image" content="https://wingconsulting.org/images/og-default.png">
+<link rel="canonical" href="https://wingconsulting.org/blog/abm-b2b-strategy">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ABM（アカウントベースドマーケティング）入門｜商社・製造業B2Bへの適用戦略",
+  "description": "ABMとは何か、なぜ製造業・商社のB2Bに向いているのか。ターゲットアカウント選定から1:1マーケティングまで、ABM実践の全体像と日本企業への導入ステップを解説。",
+  "author": {"@type": "Organization","name": "Wing編集部","url": "https://wingconsulting.org"},
+  "publisher": {"@type": "Organization","name": "Wing","url": "https://wingconsulting.org","logo": {"@type": "ImageObject","url": "https://wingconsulting.org/images/logo.png"}},
+  "datePublished": "2026-03-28",
+  "dateModified": "2026-03-28",
+  "mainEntityOfPage": {"@type": "WebPage","@id": "https://wingconsulting.org/blog/abm-b2b-strategy"},
+  "image": "https://wingconsulting.org/images/og-default.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Wing", "item": "https://wingconsulting.org"},
+    {"@type": "ListItem", "position": 2, "name": "インサイト", "item": "https://wingconsulting.org/#blog"},
+    {"@type": "ListItem", "position": 3, "name": "ABM（アカウントベースドマーケティング）入門｜商社・製造業B2Bへの適用戦略", "item": "https://wingconsulting.org/blog/abm-b2b-strategy"}
+  ]
+}
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        navy: { DEFAULT: '#0F2342', dark: '#081830' },
+        gold: { DEFAULT: '#A8965A', light: '#C4AD72', muted: '#7A6B3E', pale: '#F8F5ED', mid: '#B8A560' },
+        slate: { warm: '#F7F6F3', cool: '#EEECe7' },
+        ink: { DEFAULT: '#1A1A1F', mid: '#4A4A55', light: '#8A8A96' },
+      },
+      fontFamily: {
+        serif: ['"Yu Gothic"', '"YuGothic"', 'sans-serif'],
+        sans: ['"Yu Gothic"', '"YuGothic"', '"Noto Sans JP"', 'sans-serif'],
+        display: ['"Roboto"', 'sans-serif'],
+      },
+    }
+  }
+}
+</script>
+<style>
+body { font-family: 'Yu Gothic', 'YuGothic', 'Noto Sans JP', sans-serif; -webkit-font-smoothing: antialiased; }
+.serif { font-family: 'Roboto', sans-serif; }
+.display { font-family: 'Roboto', sans-serif; }
+.gold-rule { width: 32px; height: 1.5px; background: #A8965A; }
+article h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+article h3 { margin-top: 1.8rem; margin-bottom: 0.8rem; }
+article p { margin-bottom: 1.2rem; }
+article ul { margin-bottom: 1.2rem; padding-left: 1.5rem; }
+article li { margin-bottom: 0.5rem; }
+.diag-wrap { background:#fff; border:1px solid #E2E0DA; border-top:3px solid #A8965A; padding:1.4rem 1.5rem 1rem; margin:1.6rem 0 0.5rem; font-size:0.85rem; }
+.diag-caption { text-align:center; font-size:0.72rem; color:#8A8A96; margin-top:0.5rem; margin-bottom:1.4rem; }
+.diag-label { font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#A8965A; margin-bottom:0.8rem; }
+.diag-step-row { display:flex; flex-wrap:wrap; gap:0.7rem; }
+.diag-step-card { flex:1 1 140px; background:#fff; border:1px solid #E2E0DA; padding:0.9rem; position:relative; }
+.diag-step-card .step-num { width:28px; height:28px; background:#0F2342; color:#A8965A; font-size:0.78rem; font-weight:700; display:flex; align-items:center; justify-content:center; margin-bottom:0.55rem; }
+.diag-step-card .step-title { font-size:0.78rem; font-weight:700; color:#0F2342; margin-bottom:0.3rem; line-height:1.4; }
+.diag-step-card .step-body { font-size:0.72rem; color:#4A4A55; line-height:1.5; }
+.diag-checklist-item { display:flex; align-items:flex-start; gap:0.5rem; background:#F8F5ED; border-left:3px solid #A8965A; padding:0.6rem 0.8rem; flex:1 1 220px; font-size:0.8rem; line-height:1.55; }
+.diag-checklist-item .chk { color:#A8965A; font-weight:700; flex-shrink:0; margin-top:0.05rem; }
+.priority-row { display:flex; flex-wrap:wrap; gap:0; }
+.priority-item { flex:1 1 160px; padding:0.9rem; border:1px solid #E2E0DA; margin:0 -1px -1px 0; }
+.priority-item.a { background:#F0F7F0; border-top:3px solid #5A9A6A; }
+.priority-item.a .p-label { color:#5A9A6A; }
+.priority-item.b { background:#FBF8F0; border-top:3px solid #A8965A; }
+.priority-item.b .p-label { color:#7A6B3E; }
+.priority-item.c { background:#FFF8F5; border-top:3px solid #C45C3A; }
+.priority-item.c .p-label { color:#C45C3A; }
+.p-label { font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:0.4rem; }
+.p-title { font-size:0.78rem; font-weight:700; color:#0F2342; margin-bottom:0.3rem; line-height:1.4; }
+.p-body { font-size:0.72rem; color:#4A4A55; line-height:1.5; }
+/* ABM pyramid */
+.abm-pyramid { display:flex; flex-direction:column; gap:0.5rem; }
+.abm-tier { display:flex; align-items:stretch; gap:0.8rem; }
+.abm-tier-bar { display:flex; align-items:center; justify-content:center; writing-mode:vertical-rl; font-size:0.6rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#fff; border-radius:2px; min-width:28px; padding:0.4rem 0; }
+.abm-tier-bar.t1 { background:#0F2342; }
+.abm-tier-bar.t2 { background:#3A5A8A; }
+.abm-tier-bar.t3 { background:#7A96C0; }
+.abm-tier-content { flex:1; border:1px solid #E2E0DA; padding:0.75rem 1rem; }
+.abm-tier-title { font-size:0.8rem; font-weight:700; color:#0F2342; margin-bottom:0.2rem; }
+.abm-tier-sub { font-size:0.68rem; color:#A8965A; font-weight:700; margin-bottom:0.3rem; }
+.abm-tier-body { font-size:0.7rem; color:#4A4A55; line-height:1.5; }
+</style>
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KN7NWHFK9G');
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style id="font-override">
+  body, p, li, td, th, span, div {
+    font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif !important;
+  }
+  h1, h2, h3, h4, h5, h6, .serif {
+    font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif !important;
+  }
+  .display, [class*="display"], [class*="font-display"] {
+    font-family: "Roboto", "Yu Gothic", "YuGothic", sans-serif !important;
+  }
+  :lang(en), .en, [lang="en"] {
+    font-family: "Roboto", sans-serif !important;
+  }
+</style>
+</head>
+<body class="bg-slate-warm text-ink">
+
+<!-- HEADER -->
+<header class="bg-navy h-[60px] flex items-center px-6 md:px-10 sticky top-0 z-50">
+  <div class="max-w-5xl mx-auto w-full flex items-center justify-between">
+    <a href="/" class="leading-none">
+      <svg width="120" height="36" viewBox="0 0 120 36" fill="none" aria-label="Wing">
+        <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff"/>
+        <path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#fff" opacity=".32"/>
+        <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#fff">Wing</text>
+      </svg>
+    </a>
+    <div class="flex items-center gap-4">
+      <span class="display text-[.7rem] font-medium tracking-wider text-white/50">Blog</span>
+      <a href="/" class="text-[.75rem] text-white/70 hover:text-white transition-colors">← Home</a>
+    </div>
+  </div>
+</header>
+
+<!-- ARTICLE -->
+<main class="py-16 px-6 md:px-10">
+  <div class="max-w-3xl mx-auto">
+    <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3">B2B Marketing</p>
+    <h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4">ABM（アカウントベースドマーケティング）入門｜<br>商社・製造業B2Bへの適用戦略</h1>
+    <div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2">
+      <time datetime="2026-03-28">2026.03.28</time>
+      <span>Wing編集部</span>
+    </div>
+    <div class="gold-rule mb-10"></div>
+
+    <article class="text-[.9rem] text-ink leading-[2] max-w-none">
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-b border-[#E2E0DA] pb-2">「網を広く張る」B2Bマーケの限界</h2>
+
+      <p>展示会に出展し、SEOコンテンツを増やし、Web広告を回し続ける。多くのB2B企業が採用するこのアプローチは、確かにリードを増やす。しかし集まったリードの大半が、自社のソリューションとまったく関係のない業種・規模・課題を持つ企業からの問い合わせになってはいないだろうか。</p>
+
+      <p>特に製造業や商社のB2Bにおいては、「誰でもいい顧客」はそもそも存在しない。長期的なパートナーシップが前提の取引構造において、受注できたとしても成果を出せない顧客は双方にとって不幸になる。取引先の「質」こそが事業継続の根幹だ。</p>
+
+      <p>ABM（Account Based Marketing：アカウントベースドマーケティング）の基本思想はシンプルだ。「魚がいない海で網を張るな、魚がいる場所に釣り糸を垂らせ」——あらかじめ狙うべき企業（アカウント）を定め、そのアカウントに集中してリソースを投下する。量ではなく質の戦略だ。</p>
+
+      <p>本稿では、ABMの概念と3つのアプローチ、製造業・商社のB2Bへの適合性、実践の4ステップ、ICP（理想顧客プロファイル）の定義方法、そして日本企業が取るべき現実的な始め方を解説する。</p>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-b border-[#E2E0DA] pb-2">ABMとは何か：3つのアプローチ</h2>
+
+      <p>ABMは一つの手法ではなく、ターゲットの規模と投下リソースに応じた3つのアプローチに分かれる。この3階層を理解することが、ABM戦略設計の第一歩だ。</p>
+
+      <!-- ABM 3階層図 -->
+      <div class="diag-wrap">
+        <div class="diag-label">ABMの3階層アプローチ</div>
+        <div class="abm-pyramid">
+          <div class="abm-tier">
+            <div class="abm-tier-bar t1">1:1</div>
+            <div class="abm-tier-content">
+              <div class="abm-tier-sub">Strategic ABM</div>
+              <div class="abm-tier-title">最重要アカウント 〜10社に完全カスタマイズ</div>
+              <div class="abm-tier-body">専用のコンテンツ・提案資料・カスタムLPを個社単位で制作。営業とマーケが一体で動き、経営層へのアプローチまで設計する。投資対象は既存最重要顧客や超優先ターゲット。</div>
+            </div>
+          </div>
+          <div class="abm-tier">
+            <div class="abm-tier-bar t2">1:Few</div>
+            <div class="abm-tier-content">
+              <div class="abm-tier-sub">ABM Lite</div>
+              <div class="abm-tier-title">クラスター単位 30〜50社に調整コンテンツ</div>
+              <div class="abm-tier-body">業種・規模・課題が似た企業群をクラスターとして束ね、共通コンテンツをベースに微調整して展開。製造業・商社の新規開拓に最も現実的なアプローチ。</div>
+            </div>
+          </div>
+          <div class="abm-tier">
+            <div class="abm-tier-bar t3">1:Many</div>
+            <div class="abm-tier-content">
+              <div class="abm-tier-sub">Programmatic ABM</div>
+              <div class="abm-tier-title">大規模ターゲット 500社以上をデータ駆動で自動化</div>
+              <div class="abm-tier-body">インテントデータ（購買意図シグナル）と広告・MAを組み合わせて大規模展開。ツール依存度が高く、日本では未成熟な領域。まずは1:Fewから始めることを推奨。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="diag-caption">図1：ABMの3階層アプローチ（Wing作成）</p>
+
+      <p>日本の製造業・商社における新規開拓には、<strong>1:Few（ABM Lite）</strong>または<strong>Strategic ABM</strong>が最も効果的だ。大量リードを処理するインフラが整っていない状況では、絞り込んだターゲットに深く関与する方が投資対効果は高い。Programmatic ABMは、1:FewのABMで成果が出た後の拡張フェーズとして検討すればよい。</p>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-b border-[#E2E0DA] pb-2">なぜ製造業・商社のB2BにABMが向いているか</h2>
+
+      <p>ABMが製造業・商社のB2Bに特に向いている理由は、この業界特有の取引構造にある。</p>
+
+      <p>第一に、取引単価が高く意思決定期間が長い。数百万〜数億円規模の取引において、購買は複数の関与者が数ヶ月にわたって検討を続ける。この構造では、不特定多数に薄くアプローチするよりも、特定アカウントの複数の関与者に継続的に接触し続ける方が合理的だ。</p>
+
+      <p>第二に、意思決定者が複数存在する。製造業の設備投資であれば、現場エンジニア・購買部・IT部門・経営層が関与する。商社の新規仕入れ先選定であれば、担当バイヤー・品質管理・経営企画が絡む。ABMは、このマルチステークホルダー構造を前提に、それぞれへのアプローチを設計できる。</p>
+
+      <p>第三に、新規開拓の従来手法が機能しにくくなっている。展示会・紹介ルートに依存してきた多くの企業が、コロナ禍以降にその限界を感じている。一方でWeb広告・SEOでの大量リード獲得は、業界特化型の商材では効率が悪い。ABMはその中間解として機能する。</p>
+
+      <p>さらに、ABMは新規獲得だけでなく既存顧客の深耕にも有効だ。既存取引先に対して、追加の製品・サービスを提案するクロスセル・アップセルの文脈でも、アカウント単位でのアプローチ設計は機能する。「既存顧客の解約防止とLTV向上」という課題を抱える企業にとっても、ABMの考え方は応用できる。</p>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-b border-[#E2E0DA] pb-2">ABM実践の4ステップ</h2>
+
+      <p>ABMを実践するプロセスは、以下の4ステップに整理できる。各ステップの詳細を順に見ていこう。</p>
+
+      <!-- 図解：4ステップ -->
+      <div class="diag-wrap">
+        <div class="diag-label">ABM実践の4ステップ</div>
+        <div class="diag-step-row">
+          <div class="diag-step-card">
+            <div class="step-num">1</div>
+            <div class="step-title">ターゲットアカウント選定</div>
+            <div class="step-body">ICP（理想顧客プロファイル）を定義し、優先アカウントリストを作成。業種・規模・課題・地域で絞り込む。</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">2</div>
+            <div class="step-title">意思決定者・インフルエンサーの特定</div>
+            <div class="step-body">各アカウントの意思決定構造を把握。LinkedIn・展示会参加者・公開情報からキーパーソンを特定する。</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">3</div>
+            <div class="step-title">アカウント別コンテンツ・アプローチ設計</div>
+            <div class="step-body">カスタムLP、個別提案資料、業界特化コンテンツを設計。ペルソナごとに異なるメッセージを用意する。</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">4</div>
+            <div class="step-title">マルチチャネル実行とエンゲージメント測定</div>
+            <div class="step-body">メール・LinkedIn・展示会・営業訪問を組み合わせて接点を作る。アカウント単位のエンゲージメントスコアを追う。</div>
+          </div>
+        </div>
+      </div>
+      <p class="diag-caption">図2：ABM実践の4ステップ（Wing作成）</p>
+
+      <p>STEP1のターゲットアカウント選定が全ての起点だ。「狙うべき会社」が曖昧なままでは、後続のステップが全て空振りになる。ここに最も時間をかけるべきだ。</p>
+
+      <p>STEP2の意思決定者特定では、日本企業の場合に注意が必要だ。LinkedInの普及率が欧米と比べて低いため、展示会参加者リスト・業界誌・プレスリリース・OB/OAネットワークなど複数の情報ソースを組み合わせて調査する必要がある。</p>
+
+      <p>STEP4の測定では、ABMにおける指標がリード数ではなくアカウント単位のエンゲージメントになる点が重要だ。「このアカウントからWebサイトへのアクセスが増えた」「役員からメールの返信があった」「展示会で名刺交換できた」といった接触の積み重ねをスコア化して追跡する。</p>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-b border-[#E2E0DA] pb-2">ICP（理想顧客プロファイル）の作り方</h2>
+
+      <p>ABMの成否を分けるのは、ICP（Ideal Customer Profile：理想顧客プロファイル）の精度だ。ICPとは「自社が最も成果を出せる顧客の特徴を定義したプロファイル」だ。「売りたい顧客」ではなく「成功させられる顧客」を定義するのがポイントだ。</p>
+
+      <p>ICPを作るための最も効果的な方法は、既存の優良顧客3〜5社の共通点を洗い出すことだ。以下の観点で分析する。</p>
+
+      <div class="diag-wrap">
+        <div class="diag-label">ICP定義のための分析フレームワーク</div>
+        <div class="diag-step-row">
+          <div class="diag-checklist-item"><span class="chk">▶</span><span><strong>ファーモグラフィクス：</strong>業種・従業員規模・売上規模・本社所在地・上場/非上場</span></div>
+          <div class="diag-checklist-item"><span class="chk">▶</span><span><strong>テクノグラフィクス：</strong>使用しているシステム（ERP・CRM・WMS）・DX成熟度</span></div>
+          <div class="diag-checklist-item"><span class="chk">▶</span><span><strong>課題構造：</strong>どのような業務課題を抱えているか・優先度の高い経営テーマは何か</span></div>
+          <div class="diag-checklist-item"><span class="chk">▶</span><span><strong>意思決定構造：</strong>誰が決裁するか・何人が関与するか・決定までの期間</span></div>
+          <div class="diag-checklist-item"><span class="chk">▶</span><span><strong>成功要因：</strong>なぜ自社と取引して成果が出たか・継続している理由は何か</span></div>
+        </div>
+      </div>
+      <p class="diag-caption">図3：ICP定義のための5つの分析軸（Wing作成）</p>
+
+      <p>Wing Consultingの場合を例に挙げると、ICPの典型例は「貿易DX・化学品コンプライアンス対応を経営課題として抱える、売上100億〜1,000億円規模の専門商社または製造業（化学・電子材料・自動車部品）」となる。このプロファイルに当てはまる企業は、Wing Consultingのソリューション（貿易業務自動化・HSコード管理・PFAS規制対応）によって具体的な成果を出せる可能性が高い。</p>
+
+      <p>ICPを定義したら、そこからターゲットアカウントリストを作成する。日本国内であれば、帝国データバンク・東京商工リサーチ・業界団体の会員名簿・展示会出展者リストなどを活用して、ICPに合致する企業を100〜200社程度ピックアップし、優先度を付けて絞り込む。</p>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-b border-[#E2E0DA] pb-2">ABMツールの概要と日本での現実</h2>
+
+      <p>ABMの文脈では、6sense・Demandbase・RollWorksなど専用ツールが海外では普及している。これらのツールはインテントデータ（企業がどのキーワードを検索しているかを示す購買意図シグナル）をもとに、今まさに購買を検討している企業を特定する機能を持つ。</p>
+
+      <p>しかし現実として、これらのツールの日本語対応は限定的だ。インテントデータのカバレッジも日本市場では薄く、数百万円単位の年間ライセンスを払っても期待したROIが得られないケースが多い。</p>
+
+      <p>日本企業にとって現実的な出発点は、以下の3ツールの組み合わせだ。</p>
+
+      <div class="priority-row" style="margin-bottom:0.5rem;">
+        <div class="priority-item a">
+          <div class="p-label">HubSpot</div>
+          <div class="p-title">ABMの実行基盤</div>
+          <div class="p-body">アカウント単位でのトラッキング・スコアリング・シナリオ実行が可能。ABM機能はProfessional以上のプランで利用可能。CRM・MAが一体化しているため、アカウントごとの全接点を一元管理できる。</div>
+        </div>
+        <div class="priority-item b">
+          <div class="p-label">LinkedIn Sales Navigator</div>
+          <div class="p-title">意思決定者の特定と接触</div>
+          <div class="p-body">ターゲットアカウントのキーパーソン調査・InMailでの直接接触に最適。日本でのLinkedIn普及は限られるが、上場企業や外資系との取引を狙う場合は有効。</div>
+        </div>
+        <div class="priority-item c" style="border-top-color:#7A96C0;">
+          <div class="p-label" style="color:#3A5A8A;">Salesforce</div>
+          <div class="p-title">エンタープライズ向け管理</div>
+          <div class="p-body">すでにSalesforceを利用している場合は、Account Engagementと組み合わせることでアカウント単位の商談管理とMAシナリオを統合できる。</div>
+        </div>
+      </div>
+      <p class="diag-caption">図4：日本企業のABM推奨ツールスタック（Wing作成）</p>
+
+      <p>ただし、ツールの前に強調したいことがある。ABMの第一歩はツール導入ではなく、「ターゲットリストの作成とカスタムアプローチの実行」だ。Excelでターゲット100社をリストアップし、各社に合わせたメール文面・提案資料を用意して営業がアプローチを始める——これだけでもABMは始められる。ツールは成果が見えてきてから拡張すればよい。</p>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-b border-[#E2E0DA] pb-2">ABMはマーケと営業の共同作業</h2>
+
+      <p>ABMが失敗する最大の理由は、マーケが一人でやろうとすることだ。従来のマーケティングは「リードを生成して営業に渡す」という分業モデルだったが、ABMはそのモデルを根本的に変える。</p>
+
+      <p>ABMでは、「このアカウントに入りたい」「このキーパーソンと接点を作りたい」という営業の意図をマーケが受け取り、コンテンツ・チャネル・タイミングを設計する。逆にマーケが「このアカウントのWebエンゲージメントが高まっている」というシグナルを営業に渡し、訪問のタイミングを教える。この双方向のループがABMの本質だ。</p>
+
+      <p>Wing Consultingでは、コンサルティング営業の実践においてこのアプローチを取っている。ターゲットアカウントを業種・課題軸で絞り込み、業界レポート・ブログコンテンツ・ウェビナーを通じた認知形成と、LinkedInや業界イベントでの直接接点づくりを組み合わせる。「マーケがリードを作り、営業が受け取る」ではなく、「マーケと営業が同じアカウントに対して並行してアプローチする」構造だ。</p>
+
+      <p>ABMの導入を検討する際、最初に取り組むべきは「営業とマーケが同じターゲットリストを見ながら話し合う」という場を作ることだ。どのアカウントを優先するか、そのアカウントのどのキーパーソンに接触したいか、現在の関係性はどうか——この対話なくして、ABMは始まらない。</p>
+
+      <p>B2Bマーケティングの主戦場は、量から質へと移行している。製造業・商社において「正しい会社」に「正しいメッセージ」を「正しいタイミング」で届けるABMの考え方は、今後ますます重要性を増す戦略だ。</p>
+
+    </article>
+
+    <!-- CTA -->
+    <div class="mt-16 border border-[#E2E0DA] bg-navy/[.03] p-8 rounded-sm">
+      <p class="display text-[.6rem] font-medium tracking-[.18em] uppercase text-gold mb-3">Contact Wing</p>
+      <p class="text-[1rem] font-medium text-ink mb-2">ABM戦略の設計・実行をWingと共に</p>
+      <p class="text-[.82rem] text-ink-mid leading-relaxed mb-6">ターゲットアカウント選定からコンテンツ設計・MAツール連携まで、WingがB2B営業・マーケティングの仕組みを一気通貫で構築します。まずは現状の営業・マーケ体制の診断からお気軽にご相談ください。</p>
+      <a href="/#contact" class="inline-block bg-navy text-white text-[.78rem] font-medium tracking-wider px-7 py-3 hover:bg-navy-dark transition-colors">無料相談を予約する →</a>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="mt-20 border-t border-[#E2E0DA] py-10 px-6 md:px-10 text-center">
+  <a href="/" class="inline-block mb-4">
+    <svg width="80" height="24" viewBox="0 0 120 36" fill="none">
+      <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#0F2342"/>
+      <path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#0F2342" opacity=".32"/>
+      <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#0F2342">Wing</text>
+    </svg>
+  </a>
+  <p class="text-[.72rem] text-ink-light">© 2026 Wing Consulting. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
