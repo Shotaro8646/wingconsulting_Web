@@ -141,6 +141,41 @@ article li { margin-bottom: 0.5rem; }
 
       <p>「SaaS KPIを追っているが、どれが本当に重要かわからない」——B2B SaaSの経営者・マーケターからこうした声をよく聞く。ARR、MRR、Churn Rate、NPS、CAC、LTV……指標が多すぎて何に集中すべきかが見えにくい。本稿では、ビジネスステージ別に「見るべきKPI」を整理し、インテントデータとの組み合わせによる営業効率最大化の実践方法を解説する。</p>
 
+      <!-- DIAGRAM: SaaS Growth Funnel -->
+      <div class="diag-wrap" style="margin-bottom:1.8rem">
+        <div class="diag-label">Figure 1 — B2B SaaSグロースエンジン：ファネルKPI全体マップ</div>
+        <svg viewBox="0 0 620 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;max-width:620px;margin:0 auto" role="img" aria-label="B2B SaaSのファネルKPI全体マップ：認知からNRRまでの6ステージ">
+          <rect x="0" y="0" width="620" height="260" fill="#FAFAF8" rx="6"/>
+          <!-- Funnel stages (top to bottom, getting narrower = funnel shape simulated with trapezoids) -->
+          <!-- Stage 1: 認知・流入 (MQL) -->
+          <polygon points="60,20 560,20 530,62 90,62" fill="#0F2342"/>
+          <text x="310" y="43" text-anchor="middle" font-size="11" fill="#A8965A" font-family="sans-serif" font-weight="700">認知・流入</text>
+          <text x="310" y="58" text-anchor="middle" font-size="8.5" fill="#C4AD72" font-family="sans-serif">KPI: MQL数 / 指名検索数 / 有機流入  |  目標: MQL +15%/月</text>
+          <!-- Stage 2: MQL→SQL -->
+          <polygon points="90,66 530,66 505,106 115,106" fill="#1F3A6E"/>
+          <text x="310" y="87" text-anchor="middle" font-size="11" fill="#fff" font-family="sans-serif" font-weight="700">MQL→SQL転換</text>
+          <text x="310" y="102" text-anchor="middle" font-size="8.5" fill="#BDD0FF" font-family="sans-serif">KPI: MQL-to-SQL転換率  |  ベンチマーク: 20〜40%（業界平均25%）</text>
+          <!-- Stage 3: SQL→商談 -->
+          <polygon points="115,110 505,110 480,150 140,150" fill="#2A4A8A"/>
+          <text x="310" y="131" text-anchor="middle" font-size="11" fill="#fff" font-family="sans-serif" font-weight="700">SQL→商談化</text>
+          <text x="310" y="146" text-anchor="middle" font-size="8.5" fill="#BDD0FF" font-family="sans-serif">KPI: SQL-to-Opp率  |  ベンチマーク: 40〜60%</text>
+          <!-- Stage 4: 商談→成約 -->
+          <polygon points="140,154 480,154 455,194 165,194" fill="#A8965A"/>
+          <text x="310" y="175" text-anchor="middle" font-size="11" fill="#fff" font-family="sans-serif" font-weight="700">商談→成約</text>
+          <text x="310" y="190" text-anchor="middle" font-size="8.5" fill="#fff" font-family="sans-serif">KPI: Win Rate / 商談期間  |  ベンチマーク: Win Rate 20〜35%</text>
+          <!-- Stage 5: 継続・拡張 -->
+          <polygon points="165,198 455,198 430,238 190,238" fill="#2A5A3A"/>
+          <text x="310" y="219" text-anchor="middle" font-size="11" fill="#fff" font-family="sans-serif" font-weight="700">継続・拡張（NRR）</text>
+          <text x="310" y="234" text-anchor="middle" font-size="8.5" fill="#8FD9A0" font-family="sans-serif">KPI: NRR ≥ 120% / 月次チャーン ≤ 2%  |  ★ここが「第二のエンジン」</text>
+          <!-- LTV:CAC ratio indicator -->
+          <rect x="430" y="10" width="180" height="54" rx="4" fill="#0F2342" opacity="0.9"/>
+          <text x="520" y="28" text-anchor="middle" font-size="9" fill="#A8965A" font-family="sans-serif" font-weight="700">健全性の統合指標</text>
+          <text x="520" y="44" text-anchor="middle" font-size="11" fill="#fff" font-family="sans-serif" font-weight="700">LTV : CAC ≥ 3</text>
+          <text x="520" y="58" text-anchor="middle" font-size="8" fill="#C4AD72" font-family="sans-serif">理想値は 5 以上</text>
+        </svg>
+        <p class="diag-caption">ファネルのボトルネックを1つ特定して集中改善するのが最短成長ルート。NRRが120%超なら既存顧客だけで事業成長する</p>
+      </div>
+
       <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">B2B SaaSの3大健全性指標</h2>
 
       <p>投資家・経営者・現場が共通言語で議論できる3つの核心KPIがある。これらは「ビジネスが持続可能かどうか」を端的に示す。</p>

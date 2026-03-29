@@ -154,6 +154,60 @@ article li { margin-bottom: 0.5rem; }
 
       <p>B2Bバイヤーの情報収集行動が静かに、しかし劇的に変わっている。かつては「Google検索→上位サイトを複数閲覧→比較検討」というプロセスが標準だった。今は「ChatGPTやPerplexityに直接質問→AI回答を参照→必要な時だけ出典URLをクリック」というパターンが急速に普及している。この変化はB2Bマーケターにとって何を意味するか。<strong>SEOだけでは不十分</strong>——それが答えだ。</p>
 
+      <!-- DIAGRAM: Search Ecosystem Evolution -->
+      <div class="diag-wrap" style="margin-bottom:1.8rem">
+        <div class="diag-label">Figure 1 — 検索エコシステムの進化：SEO → AEO → GEO</div>
+        <svg viewBox="0 0 640 230" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;max-width:640px;margin:0 auto" role="img" aria-label="SEO AEO GEO 検索最適化の3層構造図">
+          <rect x="0" y="0" width="640" height="230" fill="#FAFAF8" rx="6"/>
+          <!-- Three columns -->
+          <!-- Column 1: SEO -->
+          <rect x="20" y="20" width="185" height="180" rx="6" fill="#E8E6E0" stroke="#C8C5BC" stroke-width="1"/>
+          <rect x="20" y="20" width="185" height="38" rx="6" fill="#4A4A55"/>
+          <rect x="20" y="44" width="185" height="14" rx="0" fill="#4A4A55"/>
+          <text x="113" y="44" text-anchor="middle" font-size="12" fill="#fff" font-family="sans-serif" font-weight="700">SEO</text>
+          <text x="113" y="58" text-anchor="middle" font-size="8.5" fill="#ccc" font-family="sans-serif">従来の検索最適化</text>
+          <text x="113" y="88" text-anchor="middle" font-size="10" fill="#4A4A55" font-family="sans-serif" font-weight="700">対象：Google検索ランキング</text>
+          <text x="113" y="108" text-anchor="middle" font-size="9" fill="#4A4A55" font-family="sans-serif">クリック流入が主目的</text>
+          <text x="113" y="124" text-anchor="middle" font-size="9" fill="#4A4A55" font-family="sans-serif">被リンク・長文コンテンツ</text>
+          <text x="113" y="140" text-anchor="middle" font-size="9" fill="#4A4A55" font-family="sans-serif">Googleアルゴリズムが評価</text>
+          <rect x="40" y="162" width="145" height="26" rx="3" fill="#4A4A55" opacity="0.15"/>
+          <text x="113" y="179" text-anchor="middle" font-size="9" fill="#4A4A55" font-family="sans-serif">引き続き必要・基盤技術</text>
+          <!-- Arrow 1→2 -->
+          <line x1="205" y1="110" x2="225" y2="110" stroke="#A8965A" stroke-width="2.5"/>
+          <polygon points="223,105 235,110 223,115" fill="#A8965A"/>
+          <!-- Column 2: AEO -->
+          <rect x="235" y="20" width="170" height="180" rx="6" fill="#EFF4FF" stroke="#A8B8D8" stroke-width="1"/>
+          <rect x="235" y="20" width="170" height="38" rx="6" fill="#2A4A8A"/>
+          <rect x="235" y="44" width="170" height="14" rx="0" fill="#2A4A8A"/>
+          <text x="320" y="44" text-anchor="middle" font-size="12" fill="#fff" font-family="sans-serif" font-weight="700">AEO</text>
+          <text x="320" y="58" text-anchor="middle" font-size="8.5" fill="#BDD0FF" font-family="sans-serif">回答エンジン最適化</text>
+          <text x="320" y="88" text-anchor="middle" font-size="10" fill="#2A4A8A" font-family="sans-serif" font-weight="700">対象：Google AI Overview</text>
+          <text x="320" y="108" text-anchor="middle" font-size="9" fill="#2A4A8A" font-family="sans-serif">検索内AI回答枠への採用</text>
+          <text x="320" y="124" text-anchor="middle" font-size="9" fill="#2A4A8A" font-family="sans-serif">FAQ・構造化データ重視</text>
+          <text x="320" y="140" text-anchor="middle" font-size="9" fill="#2A4A8A" font-family="sans-serif">ゼロクリック or 流入</text>
+          <rect x="255" y="162" width="130" height="26" rx="3" fill="#2A4A8A" opacity="0.12"/>
+          <text x="320" y="179" text-anchor="middle" font-size="9" fill="#2A4A8A" font-family="sans-serif">Schema.org マークアップ必須</text>
+          <!-- Arrow 2→3 -->
+          <line x1="405" y1="110" x2="425" y2="110" stroke="#A8965A" stroke-width="2.5"/>
+          <polygon points="423,105 435,110 423,115" fill="#A8965A"/>
+          <!-- Column 3: GEO -->
+          <rect x="435" y="20" width="185" height="180" rx="6" fill="#FBF8F0" stroke="#C8A85A" stroke-width="1.5"/>
+          <rect x="435" y="20" width="185" height="38" rx="6" fill="#0F2342"/>
+          <rect x="435" y="44" width="185" height="14" rx="0" fill="#0F2342"/>
+          <text x="528" y="44" text-anchor="middle" font-size="12" fill="#A8965A" font-family="sans-serif" font-weight="700">GEO</text>
+          <text x="528" y="58" text-anchor="middle" font-size="8.5" fill="#C4AD72" font-family="sans-serif">生成エンジン最適化 ★New</text>
+          <text x="528" y="88" text-anchor="middle" font-size="10" fill="#0F2342" font-family="sans-serif" font-weight="700">対象：ChatGPT・Perplexity等</text>
+          <text x="528" y="108" text-anchor="middle" font-size="9" fill="#0F2342" font-family="sans-serif">AI回答への引用・参照獲得</text>
+          <text x="528" y="124" text-anchor="middle" font-size="9" fill="#0F2342" font-family="sans-serif">権威性・具体データが鍵</text>
+          <text x="528" y="140" text-anchor="middle" font-size="9" fill="#0F2342" font-family="sans-serif">指名検索・ブランド認知増加</text>
+          <rect x="455" y="162" width="145" height="26" rx="3" fill="#A8965A" opacity="0.18"/>
+          <text x="528" y="179" text-anchor="middle" font-size="9" fill="#7A6B3E" font-family="sans-serif" font-weight="700">2026年の最重要取り組み</text>
+          <!-- Bottom label -->
+          <text x="320" y="218" text-anchor="middle" font-size="9" fill="#8A8A96" font-family="sans-serif">3つは競合しない。SEO基盤の上にAEO・GEOを重ねる「三位一体」戦略が必要</text>
+        </svg>
+        <p class="diag-caption">バイヤーの情報収集がAI経由に移行するにつれ、GEOの戦略的重要性が急上昇している</p>
+      </div>
+
       <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">GEO・AEOとは何か：定義と違い</h2>
 
       <p><strong>GEO（Generative Engine Optimization：生成エンジン最適化）</strong>は、ChatGPT・Gemini・Claude・Perplexityなどの生成AIが回答を生成する際に自社コンテンツが引用・参照されるよう最適化するアプローチだ。</p>

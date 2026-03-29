@@ -141,6 +141,50 @@ article li { margin-bottom: 0.5rem; }
 
       <p>2024年、Googleはサードパーティ Cookie の廃止計画を事実上撤回し「ユーザー選択型」への移行を発表した。しかしこれは「問題が解決された」ことを意味しない。Safari・Firefox は既に数年前からサードパーティ Cookie をブロックしており、B2Bサイト訪問者の30〜50%はすでにトラッキング不能な状態にある。<strong>クッキーレス対応は先延ばしにできない現実だ。</strong></p>
 
+      <!-- DIAGRAM: Data Strategy Stack -->
+      <div class="diag-wrap" style="margin-bottom:1.8rem">
+        <div class="diag-label">Figure 1 — データ戦略の移行：サードパーティ依存からゼロパーティ中心へ</div>
+        <svg viewBox="0 0 620 240" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;max-width:620px;margin:0 auto" role="img" aria-label="データ種別の価値とトレンドを示す比較図">
+          <rect x="0" y="0" width="620" height="240" fill="#FAFAF8" rx="6"/>
+          <!-- Horizontal bar chart (4 data types stacked, with value and trend indicators) -->
+          <!-- Row labels on left -->
+          <text x="8" y="60" font-size="10" fill="#0F2342" font-family="sans-serif" font-weight="700">ゼロパーティ</text>
+          <text x="8" y="74" font-size="8" fill="#8A8A96" font-family="sans-serif">Zero-Party</text>
+          <text x="8" y="110" font-size="10" fill="#0F2342" font-family="sans-serif" font-weight="700">ファーストパーティ</text>
+          <text x="8" y="124" font-size="8" fill="#8A8A96" font-family="sans-serif">First-Party</text>
+          <text x="8" y="160" font-size="10" fill="#4A4A55" font-family="sans-serif">セカンドパーティ</text>
+          <text x="8" y="174" font-size="8" fill="#8A8A96" font-family="sans-serif">Second-Party</text>
+          <text x="8" y="210" font-size="10" fill="#8A8A96" font-family="sans-serif">サードパーティ</text>
+          <text x="8" y="224" font-size="8" fill="#8A8A96" font-family="sans-serif">Third-Party</text>
+          <!-- Bars -->
+          <!-- Zero-party: Full width, gold, "顧客が自発的に提供" -->
+          <rect x="160" y="42" width="340" height="38" rx="3" fill="#0F2342"/>
+          <text x="330" y="58" text-anchor="middle" font-size="9.5" fill="#A8965A" font-family="sans-serif" font-weight="700">顧客が自発提供・最高精度・プライバシー完全合法</text>
+          <text x="330" y="74" text-anchor="middle" font-size="9" fill="#C4AD72" font-family="sans-serif">アンケート／診断ツール／プリファレンスセンター</text>
+          <text x="510" y="60" font-size="10" fill="#A8965A" font-family="sans-serif" font-weight="700">↑↑ 最重要</text>
+          <!-- First-party: Wide, navy -->
+          <rect x="160" y="92" width="280" height="38" rx="3" fill="#1F3A6E"/>
+          <text x="300" y="108" text-anchor="middle" font-size="9.5" fill="#fff" font-family="sans-serif" font-weight="700">自社直接収集・CRM・サイト行動・メール開封</text>
+          <text x="300" y="124" text-anchor="middle" font-size="9" fill="#BDD0FF" font-family="sans-serif">Server-Side Tag + CDP 基盤が急務</text>
+          <text x="450" y="110" font-size="10" fill="#5A9A6A" font-family="sans-serif" font-weight="700">↑ 基盤整備</text>
+          <!-- Second-party: Medium, mid-gray -->
+          <rect x="160" y="142" width="180" height="38" rx="3" fill="#8A8A96" opacity="0.6"/>
+          <text x="250" y="158" text-anchor="middle" font-size="9" fill="#fff" font-family="sans-serif">パートナー共有データ</text>
+          <text x="250" y="174" text-anchor="middle" font-size="8.5" fill="#fff" font-family="sans-serif">展示会リスト等</text>
+          <text x="350" y="162" font-size="9" fill="#8A8A96" font-family="sans-serif">→ 限定活用</text>
+          <!-- Third-party: Short, faded out -->
+          <rect x="160" y="192" width="80" height="38" rx="3" fill="#C8C5BC" opacity="0.5"/>
+          <text x="200" y="211" text-anchor="middle" font-size="8.5" fill="#8A8A96" font-family="sans-serif">外部DMP</text>
+          <text x="200" y="225" text-anchor="middle" font-size="8" fill="#8A8A96" font-family="sans-serif">Cookie依存</text>
+          <text x="250" y="212" font-size="9" fill="#C45C3A" font-family="sans-serif">↓↓ 急速に価値低下</text>
+          <!-- Value axis indicator -->
+          <text x="160" y="18" font-size="8" fill="#8A8A96" font-family="sans-serif">データ価値・利用可能期間 →</text>
+          <line x1="160" y1="22" x2="500" y2="22" stroke="#E2E0DA" stroke-width="1"/>
+          <polygon points="498,18 508,22 498,26" fill="#E2E0DA"/>
+        </svg>
+        <p class="diag-caption">戦略の重心を右から左へ移行する——ゼロ・ファーストパーティデータ基盤の構築が急務</p>
+      </div>
+
       <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">データの「3層構造」を理解する</h2>
 
       <p>マーケティングデータは取得方法によって3つの層に分類される。2026年以降の戦略は、この3層の役割を明確に定義することから始まる。</p>

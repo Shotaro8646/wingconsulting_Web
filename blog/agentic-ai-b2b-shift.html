@@ -154,6 +154,52 @@ article li { margin-bottom: 0.5rem; }
 
       <p>「ChatGPTは使っているが、業務が本当に変わった実感がない」——B2B企業の経営層からこうした声が相次いでいる。それは当然かもしれない。生成AIへの問答は「賢い検索」に過ぎず、業務プロセスそのものを変えるものではないからだ。2026年のAI活用の焦点は、問いに答えるAIから、自ら目標を設定し行動するAI——<strong>エージェンティックAI</strong>へ完全に移行している。</p>
 
+      <!-- DIAGRAM: Agentic AI Cycle -->
+      <div class="diag-wrap" style="margin-bottom:1.8rem">
+        <div class="diag-label">Figure 1 — エージェンティックAIの自律動作サイクル</div>
+        <svg viewBox="0 0 640 190" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;max-width:640px;margin:0 auto" role="img" aria-label="エージェンティックAIの4ステップ自律ループ図">
+          <!-- Background -->
+          <rect x="0" y="0" width="640" height="190" fill="#FAFAF8" rx="6"/>
+          <!-- Box 1: 目標設定 -->
+          <rect x="30" y="60" width="118" height="56" rx="4" fill="#0F2342"/>
+          <text x="89" y="83" text-anchor="middle" font-size="9" fill="#A8965A" font-family="sans-serif" font-weight="700" letter-spacing="1">STEP 1</text>
+          <text x="89" y="102" text-anchor="middle" font-size="13" fill="#fff" font-family="sans-serif" font-weight="700">目標設定</text>
+          <!-- Arrow 1→2 -->
+          <line x1="148" y1="88" x2="170" y2="88" stroke="#A8965A" stroke-width="2.5"/>
+          <polygon points="168,83 180,88 168,93" fill="#A8965A"/>
+          <!-- Box 2: 計画立案 -->
+          <rect x="180" y="60" width="118" height="56" rx="4" fill="#0F2342"/>
+          <text x="239" y="83" text-anchor="middle" font-size="9" fill="#A8965A" font-family="sans-serif" font-weight="700" letter-spacing="1">STEP 2</text>
+          <text x="239" y="102" text-anchor="middle" font-size="13" fill="#fff" font-family="sans-serif" font-weight="700">計画立案</text>
+          <!-- Arrow 2→3 -->
+          <line x1="298" y1="88" x2="320" y2="88" stroke="#A8965A" stroke-width="2.5"/>
+          <polygon points="318,83 330,88 318,93" fill="#A8965A"/>
+          <!-- Box 3: ツール実行 -->
+          <rect x="330" y="60" width="118" height="56" rx="4" fill="#A8965A"/>
+          <text x="389" y="83" text-anchor="middle" font-size="9" fill="#fff" font-family="sans-serif" font-weight="700" letter-spacing="1" opacity="0.85">STEP 3</text>
+          <text x="389" y="102" text-anchor="middle" font-size="13" fill="#fff" font-family="sans-serif" font-weight="700">ツール実行</text>
+          <!-- Arrow 3→4 -->
+          <line x1="448" y1="88" x2="470" y2="88" stroke="#A8965A" stroke-width="2.5"/>
+          <polygon points="468,83 480,88 468,93" fill="#A8965A"/>
+          <!-- Box 4: 結果評価 -->
+          <rect x="480" y="60" width="118" height="56" rx="4" fill="#1F3A6E"/>
+          <text x="539" y="83" text-anchor="middle" font-size="9" fill="#A8965A" font-family="sans-serif" font-weight="700" letter-spacing="1">STEP 4</text>
+          <text x="539" y="102" text-anchor="middle" font-size="13" fill="#fff" font-family="sans-serif" font-weight="700">結果評価</text>
+          <!-- Loopback arrow (dashed): 4 → 2 -->
+          <path d="M539 116 C539 148, 239 148, 239 116" stroke="#C4AD72" stroke-width="2" fill="none" stroke-dasharray="6,4"/>
+          <polygon points="234,116 239,106 244,116" fill="#C4AD72"/>
+          <!-- Loop label -->
+          <text x="390" y="168" text-anchor="middle" font-size="9" fill="#8A8A96" font-family="sans-serif">未完了の場合 — 自律的に再計画へフィードバック</text>
+          <!-- Done arrow from box 4 -->
+          <line x1="598" y1="88" x2="624" y2="88" stroke="#5A9A6A" stroke-width="2" stroke-dasharray="4,3"/>
+          <text x="630" y="85" font-size="9" fill="#5A9A6A" font-family="sans-serif" font-weight="700">✓</text>
+          <text x="626" y="96" font-size="8" fill="#5A9A6A" font-family="sans-serif">完了</text>
+          <!-- Human label under box 1 -->
+          <text x="89" y="132" text-anchor="middle" font-size="8" fill="#A8965A" font-family="sans-serif">← 人間が指示</text>
+        </svg>
+        <p class="diag-caption">生成AIは「答える」ツール。エージェンティックAIは目標達成まで4ステップを自律的に繰り返す</p>
+      </div>
+
       <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">生成AIとエージェンティックAIの決定的な違い</h2>
 
       <p>生成AIは「入力→出力」の一往復で完結する。一方、エージェンティックAIは<strong>ゴール設定→計画→ツール実行→結果評価→再計画</strong>というループを自律的に回す。人間が介在するのは最初の目標指定と最終確認だけ、あるいはそれすら不要になりつつある。</p>
