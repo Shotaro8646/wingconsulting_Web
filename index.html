@@ -637,8 +637,57 @@ html[lang="en"] section p { font-size: 0.95em; }
       <div class="grid md:grid-cols-[1.3fr_1fr] gap-8 mb-6">
         <!-- Left: UI screens stacked -->
         <div class="flex flex-col gap-3">
+          <!-- Screen 0: Email integration -->
+          <p class="display text-[.7rem] font-medium text-gold/70 mb-2" data-ja="✉️ メールから直接案件登録 — Gmail/Outlookからワンクリック" data-en="✉️ Register deals from email — one click from Gmail/Outlook">✉️ メールから直接案件登録 — Gmail/Outlookからワンクリック</p>
+          <div class="border border-white/10 rounded-lg overflow-hidden shadow-2xl">
+            <div class="bg-[#1a1f2e] px-3 py-1.5 flex items-center gap-1.5 border-b border-white/08">
+              <span class="w-1.5 h-1.5 rounded-full bg-red-400/50"></span><span class="w-1.5 h-1.5 rounded-full bg-yellow-400/50"></span><span class="w-1.5 h-1.5 rounded-full bg-green-400/50"></span>
+              <span class="text-[.5rem] text-white/20 ml-2 font-mono">Gmail — Chrome Extension</span>
+            </div>
+            <div class="bg-white p-3">
+              <!-- Email preview -->
+              <div class="bg-gray-50 rounded-lg border border-gray-200 p-2.5 mb-2">
+                <div class="flex items-center justify-between mb-1.5">
+                  <div>
+                    <p class="text-[7px] font-bold text-gray-700">From: trading@wanhua.com</p>
+                    <p class="text-[6px] text-gray-500">Subject: <span data-ja="MEG 500MT — PO確認のお願い" data-en="MEG 500MT — PO Confirmation Request">MEG 500MT — PO確認のお願い</span></p>
+                  </div>
+                  <span class="text-[5px] text-gray-400">10:34 AM</span>
+                </div>
+                <p class="text-[6px] text-gray-500 leading-relaxed" data-ja="添付のPOをご確認ください。MEG 500MT, CIF Yokohama, USD 312,500。船積予定は4月15日です。" data-en="Please confirm the attached PO. MEG 500MT, CIF Yokohama, USD 312,500. ETD April 15.">添付のPOをご確認ください。MEG 500MT, CIF Yokohama, USD 312,500。船積予定は4月15日です。</p>
+                <div class="flex gap-1 mt-1.5">
+                  <span class="text-[5px] px-1.5 py-0.5 rounded bg-gray-100 text-gray-500">📎 PO_MEG_500MT.pdf</span>
+                  <span class="text-[5px] px-1.5 py-0.5 rounded bg-gray-100 text-gray-500">📎 Draft_Contract.pdf</span>
+                </div>
+              </div>
+              <!-- Chrome extension button + AI parse result -->
+              <div class="grid grid-cols-[auto_1fr] gap-2 items-start">
+                <div class="bg-[#0C2340] rounded-lg px-3 py-2 text-center">
+                  <p class="text-[8px] font-bold text-white mb-0.5">B</p>
+                  <p class="text-[5px] text-white/70 font-semibold whitespace-nowrap" data-ja="BorderFlowに登録" data-en="Register to BF">BorderFlowに登録</p>
+                </div>
+                <div class="bg-blue-50 rounded-lg border border-blue-200 p-2">
+                  <div class="flex items-center gap-1 mb-1">
+                    <span class="text-[5.5px] px-1 py-0.5 rounded bg-blue-100 text-[#1565c0] font-bold">AI</span>
+                    <span class="text-[5.5px] font-semibold text-gray-600" data-ja="メール解析完了" data-en="Email parsed">メール解析完了</span>
+                  </div>
+                  <div class="text-[5.5px] flex flex-col gap-0.5">
+                    <div class="flex justify-between"><span class="text-gray-400" data-ja="取引先" data-en="Partner">取引先</span><span class="font-medium text-gray-700">Wanhua Chemical</span></div>
+                    <div class="flex justify-between"><span class="text-gray-400" data-ja="品目" data-en="Item">品目</span><span class="font-medium text-gray-700">MEG 500MT</span></div>
+                    <div class="flex justify-between"><span class="text-gray-400" data-ja="金額" data-en="Amount">金額</span><span class="font-medium text-gray-700">USD 312,500</span></div>
+                    <div class="flex justify-between"><span class="text-gray-400" data-ja="船積" data-en="ETD">船積</span><span class="font-medium text-gray-700">2026-04-15</span></div>
+                  </div>
+                  <div class="flex gap-1 mt-1.5">
+                    <span class="text-[5px] px-1.5 py-0.5 rounded bg-[#0C2340] text-white font-semibold" data-ja="案件登録する" data-en="Register Deal">案件登録する</span>
+                    <span class="text-[5px] px-1.5 py-0.5 rounded bg-gray-100 text-gray-500 font-semibold" data-ja="編集" data-en="Edit">編集</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <!-- Screen 1: Step chevrons + D&D + Auto-fill -->
-          <p class="display text-[.7rem] font-medium text-gold/70 mb-2 flex items-center gap-2" data-ja="📄 書類ドロップ → AI自動入力 — 案件登録がワンアクションで完了" data-en="📄 Drop docs → AI auto-fill — deal registration in one action">📄 書類ドロップ → AI自動入力 — 案件登録がワンアクションで完了</p>
+          <p class="display text-[.7rem] font-medium text-gold/70 mb-2 mt-2" data-ja="📄 書類ドロップ → AI自動入力 — 案件登録がワンアクションで完了" data-en="📄 Drop docs → AI auto-fill — deal registration in one action">📄 書類ドロップ → AI自動入力 — 案件登録がワンアクションで完了</p>
           <div class="border border-white/10 rounded-lg overflow-hidden shadow-2xl">
             <div class="bg-[#1a1f2e] px-3 py-1.5 flex items-center gap-1.5 border-b border-white/08">
               <span class="w-1.5 h-1.5 rounded-full bg-red-400/50"></span><span class="w-1.5 h-1.5 rounded-full bg-yellow-400/50"></span><span class="w-1.5 h-1.5 rounded-full bg-green-400/50"></span>
@@ -723,8 +772,15 @@ html[lang="en"] section p { font-size: 0.95em; }
             <div class="flex gap-3 items-start">
               <span class="text-gold text-sm mt-0.5 shrink-0">✓</span>
               <div>
-                <p class="text-[.85rem] text-white/80 font-medium leading-snug" data-ja="書類ドロップで案件自動登録" data-en="Auto-register deals from dropped documents">書類ドロップで案件自動登録</p>
-                <p class="text-[.75rem] text-white/40 mt-0.5" data-ja="契約書・Invoice・BLをAI-OCRで即構造化。取引パターンも自動判定。" data-en="AI-OCR instantly structures contracts, invoices, and BLs. Trade pattern auto-detected.">契約書・Invoice・BLをAI-OCRで即構造化。取引パターンも自動判定。</p>
+                <p class="text-[.85rem] text-white/80 font-medium leading-snug" data-ja="メールからワンクリックで案件登録" data-en="One-click deal registration from email">メールからワンクリックで案件登録</p>
+                <p class="text-[.75rem] text-white/40 mt-0.5" data-ja="Gmail/OutlookのメールをAIが解析し、取引先・品目・金額・船積日を自動抽出。Chrome拡張からそのまま案件登録。" data-en="AI parses emails from Gmail/Outlook, auto-extracting partner, items, amounts, and ETD. Register deals directly from the Chrome extension.">Gmail/OutlookのメールをAIが解析し、取引先・品目・金額・船積日を自動抽出。Chrome拡張からそのまま案件登録。</p>
+              </div>
+            </div>
+            <div class="flex gap-3 items-start">
+              <span class="text-gold text-sm mt-0.5 shrink-0">✓</span>
+              <div>
+                <p class="text-[.85rem] text-white/80 font-medium leading-snug" data-ja="書類ドロップでもAI自動入力" data-en="AI auto-fill from dropped documents too">書類ドロップでもAI自動入力</p>
+                <p class="text-[.75rem] text-white/40 mt-0.5" data-ja="契約書・Invoice・BLをドラッグ＆ドロップでOCR構造化。取引パターンも自動判定。" data-en="Drag & drop contracts, invoices, and BLs for OCR structuring. Trade pattern auto-detected.">契約書・Invoice・BLをドラッグ＆ドロップでOCR構造化。取引パターンも自動判定。</p>
               </div>
             </div>
             <div class="flex gap-3 items-start">
