@@ -107,7 +107,7 @@
 </script>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Outfit:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script>
 tailwind.config = {
   theme: {
@@ -186,6 +186,10 @@ body { font-family: 'Noto Sans JP', sans-serif; -webkit-font-smoothing: antialia
 html[lang="en"] .ja-only {
   display: none !important;
 }
+
+/* English font override */
+html[lang="en"] body { font-family: 'Inter', sans-serif; }
+html[lang="en"] .display { font-family: 'Inter', sans-serif; }
 </style>
 <!-- Google Analytics GA4 | 取得後に G-KN7NWHFK9G を置き換える -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
@@ -312,12 +316,12 @@ html[lang="en"] .ja-only {
 <!-- ─── APPROACH (1 BRAIN / 4 HANDS) ─────────────────── -->
 <section class="reveal py-24 px-6 md:px-10 bg-slate-warm" id="approach">
   <div class="max-w-5xl mx-auto">
-    <p class="display text-[.67rem] font-medium tracking-[.2em] uppercase text-gold mb-3">提供サービス</p>
-    <h2 class="serif text-[clamp(1.6rem,3vw,2.4rem)] font-medium text-ink leading-snug mb-4">
+    <p class="display text-[.67rem] font-medium tracking-[.2em] uppercase text-gold mb-3" data-ja="提供サービス" data-en="Services">提供サービス</p>
+    <h2 class="serif text-[clamp(1.6rem,3vw,2.4rem)] font-medium text-ink leading-snug mb-4" data-ja="3つの柱で、DX・AIを確実な成果へ。" data-en="Three Pillars for Reliable DX &amp; AI Outcomes.">
       3つの柱で、DX・AIを確実な成果へ。
     </h2>
     <div class="gold-rule mb-6"></div>
-    <p class="text-[.9rem] text-ink-mid leading-[1.9] max-w-2xl mb-14">
+    <p class="text-[.9rem] text-ink-mid leading-[1.9] max-w-2xl mb-14" data-ja="構想・実行・自社プロダクトの3領域を一気通貫で提供し、貴社の変革をお約束します。" data-en="Strategy, Execution, and AI Products — delivered end-to-end to make your transformation real.">
       構想・実行・自社プロダクトの3領域を一気通貫で提供し、貴社の変革をお約束します。
     </p>
 
@@ -328,34 +332,34 @@ html[lang="en"] .ja-only {
       <div class="bg-white border border-[#E2E0DA] rounded-sm overflow-hidden hover:shadow-md transition-shadow">
         <div class="bg-navy px-6 py-5">
           <p class="display text-[.6rem] font-medium tracking-[.2em] uppercase text-gold/70 mb-2">Pillar 01</p>
-          <p class="serif text-[1.25rem] font-medium text-white leading-snug">コンサルティング</p>
-          <p class="display text-[.68rem] text-white/50 mt-1">戦略を描く</p>
+          <p class="serif text-[1.25rem] font-medium text-white leading-snug" data-ja="コンサルティング" data-en="Consulting">コンサルティング</p>
+          <p class="display text-[.68rem] text-white/50 mt-1" data-ja="戦略を描く" data-en="Strategy Design">戦略を描く</p>
         </div>
         <div class="px-6 py-5">
-          <p class="text-[.78rem] text-ink-mid leading-relaxed mb-4">
+          <p class="text-[.78rem] text-ink-mid leading-relaxed mb-4" data-ja="経営・IT・業務の三視点から現状を診断し、実行可能なDX・AI戦略を策定します。「何から手をつけるか」を明確にすることが出発点です。" data-en="We diagnose your current state across management, IT, and operations, then build an actionable DX/AI strategy. Clarifying where to start is the foundation.">
             経営・IT・業務の三視点から現状を診断し、実行可能なDX・AI戦略を策定します。「何から手をつけるか」を明確にすることが出発点です。
           </p>
           <ul class="flex flex-col gap-2">
             <li class="flex gap-2 items-start text-[.76rem] text-ink-mid">
-              <span class="text-gold text-xs mt-0.5 shrink-0">—</span>DX現状診断・課題定義
+              <span class="text-gold text-xs mt-0.5 shrink-0">—</span><span data-ja="DX現状診断・課題定義" data-en="DX Assessment &amp; Problem Definition">DX現状診断・課題定義</span>
             </li>
             <li class="flex gap-2 items-start text-[.76rem] text-ink-mid">
-              <span class="text-gold text-xs mt-0.5 shrink-0">—</span>AI活用ロードマップ策定
+              <span class="text-gold text-xs mt-0.5 shrink-0">—</span><span data-ja="AI活用ロードマップ策定" data-en="AI Utilization Roadmap">AI活用ロードマップ策定</span>
             </li>
             <li class="flex gap-2 items-start text-[.76rem] text-ink-mid">
-              <span class="text-gold text-xs mt-0.5 shrink-0">—</span>グローバル・ASEAN展開支援
+              <span class="text-gold text-xs mt-0.5 shrink-0">—</span><span data-ja="グローバル・ASEAN展開支援" data-en="Global &amp; ASEAN Expansion Support">グローバル・ASEAN展開支援</span>
             </li>
             <li class="flex gap-2 items-start text-[.76rem] text-ink-mid">
-              <span class="text-gold text-xs mt-0.5 shrink-0">—</span>ベンダー選定・要件定義支援
+              <span class="text-gold text-xs mt-0.5 shrink-0">—</span><span data-ja="ベンダー選定・要件定義支援" data-en="Vendor Selection &amp; Requirements Definition">ベンダー選定・要件定義支援</span>
             </li>
             <li class="flex gap-2 items-start text-[.76rem] text-ink-mid">
-              <span class="text-gold text-xs mt-0.5 shrink-0">—</span>ITデューデリジェンス（M&amp;A・投資判断支援）
+              <span class="text-gold text-xs mt-0.5 shrink-0">—</span><span data-ja="ITデューデリジェンス（M&amp;A・投資判断支援）" data-en="IT Due Diligence (M&amp;A &amp; Investment Advisory)">ITデューデリジェンス（M&amp;A・投資判断支援）</span>
             </li>
             <li class="flex gap-2 items-start text-[.76rem] text-ink-mid">
-              <span class="text-gold text-xs mt-0.5 shrink-0">—</span>PMI計画・実行支援
+              <span class="text-gold text-xs mt-0.5 shrink-0">—</span><span data-ja="PMI計画・実行支援" data-en="PMI Planning &amp; Execution Support">PMI計画・実行支援</span>
             </li>
             <li class="flex gap-2 items-start text-[.76rem] text-ink-mid">
-              <span class="text-gold text-xs mt-0.5 shrink-0">—</span>CxO・経営層へのDX・AI戦略アドバイザリー
+              <span class="text-gold text-xs mt-0.5 shrink-0">—</span><span data-ja="CxO・経営層へのDX・AI戦略アドバイザリー" data-en="DX &amp; AI Strategy Advisory for CxO &amp; Executives">CxO・経営層へのDX・AI戦略アドバイザリー</span>
             </li>
           </ul>
         </div>
@@ -365,28 +369,28 @@ html[lang="en"] .ja-only {
       <div class="bg-white border border-[#E2E0DA] rounded-sm overflow-hidden hover:shadow-md transition-shadow">
         <div class="bg-navy px-6 py-5">
           <p class="display text-[.6rem] font-medium tracking-[.2em] uppercase text-gold/70 mb-2">Pillar 02</p>
-          <p class="serif text-[1.25rem] font-medium text-white leading-snug">導入・実行</p>
-          <p class="display text-[.68rem] text-white/50 mt-1">現場に落とす</p>
+          <p class="serif text-[1.25rem] font-medium text-white leading-snug" data-ja="導入・実行" data-en="Implementation">導入・実行</p>
+          <p class="display text-[.68rem] text-white/50 mt-1" data-ja="現場に落とす" data-en="Hands-on Execution">現場に落とす</p>
         </div>
         <div class="px-6 py-5">
-          <p class="text-[.78rem] text-ink-mid leading-relaxed mb-4">
+          <p class="text-[.78rem] text-ink-mid leading-relaxed mb-4" data-ja="戦略を「絵に描いた餅」で終わらせません。要件定義から現場への定着まで、導入経験豊富なコンサルタントが一貫して関与し、ROIを実現する効果を生む変革を推進します。" data-en="We never let strategy gather dust. Our experienced consultants stay hands-on from requirements through field adoption — driving change that delivers real ROI.">
             戦略を「絵に描いた餅」で終わらせません。要件定義から現場への定着まで、導入経験豊富なコンサルタントが一貫して関与し、ROIを実現する効果を生む変革を推進します。
           </p>
           <ul class="flex flex-col gap-2">
             <li class="flex gap-2 items-start text-[.76rem] text-ink-mid">
-              <span class="text-gold text-xs mt-0.5 shrink-0">—</span>PMO・プロジェクト推進
+              <span class="text-gold text-xs mt-0.5 shrink-0">—</span><span data-ja="PMO・プロジェクト推進" data-en="PMO &amp; Project Execution">PMO・プロジェクト推進</span>
             </li>
             <li class="flex gap-2 items-start text-[.76rem] text-ink-mid">
-              <span class="text-gold text-xs mt-0.5 shrink-0">—</span>システム実装・開発管理
+              <span class="text-gold text-xs mt-0.5 shrink-0">—</span><span data-ja="システム実装・開発管理" data-en="System Implementation &amp; Development Management">システム実装・開発管理</span>
             </li>
             <li class="flex gap-2 items-start text-[.76rem] text-ink-mid">
-              <span class="text-gold text-xs mt-0.5 shrink-0">—</span>業務プロセス改善・BPO
+              <span class="text-gold text-xs mt-0.5 shrink-0">—</span><span data-ja="業務プロセス改善・BPO" data-en="Business Process Improvement &amp; BPO">業務プロセス改善・BPO</span>
             </li>
             <li class="flex gap-2 items-start text-[.76rem] text-ink-mid">
-              <span class="text-gold text-xs mt-0.5 shrink-0">—</span>DX人材育成・組織変革
+              <span class="text-gold text-xs mt-0.5 shrink-0">—</span><span data-ja="DX人材育成・組織変革" data-en="DX Talent Development &amp; Organizational Change">DX人材育成・組織変革</span>
             </li>
             <li class="flex gap-2 items-start text-[.76rem] text-ink-mid">
-              <span class="text-gold text-xs mt-0.5 shrink-0">—</span>現場定着・効果測定
+              <span class="text-gold text-xs mt-0.5 shrink-0">—</span><span data-ja="現場定着・効果測定" data-en="Field Adoption &amp; Impact Measurement">現場定着・効果測定</span>
             </li>
           </ul>
         </div>
@@ -396,11 +400,11 @@ html[lang="en"] .ja-only {
       <div class="bg-white border border-[#E2E0DA] rounded-sm overflow-hidden hover:shadow-md transition-shadow">
         <div class="px-6 py-5" style="background:linear-gradient(135deg,#0F2342,#1a3a5c)">
           <p class="display text-[.6rem] font-medium tracking-[.2em] uppercase text-gold/70 mb-2">Pillar 03</p>
-          <p class="serif text-[1.25rem] font-medium text-white leading-snug">AIプロダクト</p>
-          <p class="display text-[.68rem] text-white/50 mt-1">自社開発ツール</p>
+          <p class="serif text-[1.25rem] font-medium text-white leading-snug" data-ja="AIプロダクト" data-en="AI Products">AIプロダクト</p>
+          <p class="display text-[.68rem] text-white/50 mt-1" data-ja="自社開発ツール" data-en="Proprietary SaaS Tools">自社開発ツール</p>
         </div>
         <div class="px-6 py-5">
-          <p class="text-[.78rem] text-ink-mid leading-relaxed mb-4">
+          <p class="text-[.78rem] text-ink-mid leading-relaxed mb-4" data-ja="コンサルティングや導入を通じて蓄積した業務知見をAIプロダクトとして提供。特定業種の繰り返し作業を自動化する、業界特化型のSaaSを自社開発・提供します。" data-en="We turn domain knowledge gained through consulting and implementation into AI products — industry-specific SaaS that automates repetitive workflows.">
             コンサルティングや導入を通じて蓄積した業務知見をAIプロダクトとして提供。特定業種の繰り返し作業を自動化する、業界特化型のSaaSを自社開発・提供します。
           </p>
           <div class="flex flex-col gap-3">
@@ -408,14 +412,14 @@ html[lang="en"] .ja-only {
               <div class="w-7 h-7 rounded flex items-center justify-center text-xs font-bold text-navy shrink-0 mt-0.5" style="background:linear-gradient(135deg,#B8923A,#D4AF6A)">B</div>
               <div>
                 <p class="text-[.78rem] font-medium text-ink leading-snug">BorderFlow AI</p>
-                <p class="text-[.68rem] text-ink-mid mt-0.5">貿易業務を自律型AIで自動処理</p>
+                <p class="text-[.68rem] text-ink-mid mt-0.5" data-ja="貿易業務を自律型AIで自動処理" data-en="Automates trade operations with autonomous AI">貿易業務を自律型AIで自動処理</p>
               </div>
             </a>
             <a href="#products" class="flex items-start gap-3 p-3 border border-[#E2E0DA] rounded-sm hover:bg-slate-warm transition-colors">
               <div class="w-7 h-7 rounded flex items-center justify-center text-xs font-bold text-white shrink-0 mt-0.5" style="background:linear-gradient(135deg,#3CB97A,#2A8F5C)">C</div>
               <div>
                 <p class="text-[.78rem] font-medium text-ink leading-snug">ChemOS</p>
-                <p class="text-[.68rem] text-ink-mid mt-0.5">PFAS・chemSHERPA対応を7ステップで完走</p>
+                <p class="text-[.68rem] text-ink-mid mt-0.5" data-ja="PFAS・chemSHERPA対応を7ステップで完走" data-en="PFAS &amp; chemSHERPA compliance in 7 steps">PFAS・chemSHERPA対応を7ステップで完走</p>
               </div>
             </a>
           </div>
@@ -426,10 +430,10 @@ html[lang="en"] .ja-only {
     <!-- Positioning statement -->
     <div class="mt-10 p-6 bg-navy rounded-sm flex flex-col md:flex-row items-center justify-between gap-4">
       <p class="text-[.85rem] text-white/75 leading-relaxed">
-        <span class="text-white font-medium">3つを組み合わせて使うこともできます。</span><br>
-        戦略だけ、実行だけ、プロダクトだけ——どこからでも入れます。
+        <span class="text-white font-medium" data-ja="3つを組み合わせて使うこともできます。" data-en="Mix and match, or start with just one.">3つを組み合わせて使うこともできます。</span><br>
+        <span data-ja="戦略だけ、実行だけ、プロダクトだけ——どこからでも入れます。" data-en="Strategy only. Execution only. Product only — enter at any point.">戦略だけ、実行だけ、プロダクトだけ——どこからでも入れます。</span>
       </p>
-      <a href="#contact" class="shrink-0 display text-[.78rem] font-medium text-navy bg-gold px-6 py-2.5 rounded-sm tracking-wider hover:bg-gold-mid transition-colors whitespace-nowrap">
+      <a href="#contact" class="shrink-0 display text-[.78rem] font-medium text-navy bg-gold px-6 py-2.5 rounded-sm tracking-wider hover:bg-gold-mid transition-colors whitespace-nowrap" data-ja="まず相談する →" data-en="Get in Touch →">
         まず相談する →
       </a>
     </div>
@@ -494,47 +498,47 @@ html[lang="en"] .ja-only {
 <section class="reveal py-24 px-6 md:px-10 bg-slate-warm border-t border-[#E2E0DA]">
   <div class="max-w-5xl mx-auto">
     <p class="display text-[.67rem] font-medium tracking-[.2em] uppercase text-gold mb-3">Who We Serve</p>
-    <h2 class="serif text-[clamp(1.6rem,3vw,2.4rem)] font-medium text-ink leading-snug mb-4">Wingが特に力を発揮するケース</h2>
+    <h2 class="serif text-[clamp(1.6rem,3vw,2.4rem)] font-medium text-ink leading-snug mb-4" data-ja="Wingが特に力を発揮するケース" data-en="Where Wing Makes the Biggest Impact">Wingが特に力を発揮するケース</h2>
     <div class="gold-rule mb-14"></div>
     <div class="grid md:grid-cols-2 gap-4">
       <div class="flex gap-4 bg-white border border-[#E2E0DA] rounded-sm p-6 hover:border-gold/40 transition-colors">
         <div class="flex-shrink-0 w-8 h-8 rounded-full bg-navy flex items-center justify-center text-white display text-[.7rem] font-semibold">01</div>
         <div>
-          <p class="text-[.9rem] font-medium text-ink mb-1.5">DXの方向性はあるが、実行計画と推進体制が固まっていない</p>
-          <p class="text-[.75rem] text-ink-mid leading-relaxed">「何をすべきか」の議論は終わっているが、誰が・いつ・どう動くかが決まっていない。構想を実行に変える設計を支援します。</p>
+          <p class="text-[.9rem] font-medium text-ink mb-1.5" data-ja="DXの方向性はあるが、実行計画と推進体制が固まっていない" data-en="DX direction exists, but execution planning and governance are not in place">DXの方向性はあるが、実行計画と推進体制が固まっていない</p>
+          <p class="text-[.75rem] text-ink-mid leading-relaxed" data-ja="「何をすべきか」の議論は終わっているが、誰が・いつ・どう動くかが決まっていない。構想を実行に変える設計を支援します。" data-en="The "what" is settled, but not the "who, when, or how." We design the bridge from concept to action.">「何をすべきか」の議論は終わっているが、誰が・いつ・どう動くかが決まっていない。構想を実行に変える設計を支援します。</p>
         </div>
       </div>
       <div class="flex gap-4 bg-white border border-[#E2E0DA] rounded-sm p-6 hover:border-gold/40 transition-colors">
         <div class="flex-shrink-0 w-8 h-8 rounded-full bg-navy flex items-center justify-center text-white display text-[.7rem] font-semibold">02</div>
         <div>
-          <p class="text-[.9rem] font-medium text-ink mb-1.5">システム導入を進めているが、現場定着や効果創出に不安がある</p>
-          <p class="text-[.75rem] text-ink-mid leading-relaxed">ツールは入ったが、現場で使われていない・ROIが出ていない。業務変革と定着支援を組み合わせ、投資を成果につなげます。</p>
+          <p class="text-[.9rem] font-medium text-ink mb-1.5" data-ja="システム導入を進めているが、現場定着や効果創出に不安がある" data-en="Systems are being rolled out, but adoption and ROI are uncertain">システム導入を進めているが、現場定着や効果創出に不安がある</p>
+          <p class="text-[.75rem] text-ink-mid leading-relaxed" data-ja="ツールは入ったが、現場で使われていない・ROIが出ていない。業務変革と定着支援を組み合わせ、投資を成果につなげます。" data-en="Tools are deployed but underused and ROI-less. We combine process change with adoption support to turn investment into results.">ツールは入ったが、現場で使われていない・ROIが出ていない。業務変革と定着支援を組み合わせ、投資を成果につなげます。</p>
         </div>
       </div>
       <div class="flex gap-4 bg-white border border-[#E2E0DA] rounded-sm p-6 hover:border-gold/40 transition-colors">
         <div class="flex-shrink-0 w-8 h-8 rounded-full bg-navy flex items-center justify-center text-white display text-[.7rem] font-semibold">03</div>
         <div>
-          <p class="text-[.9rem] font-medium text-ink mb-1.5">経営・業務・ITのあいだで認識がずれ、意思決定が進まない</p>
-          <p class="text-[.75rem] text-ink-mid leading-relaxed">三者の言語が違うため、議論が噛み合わない。それぞれの論点を整理し、意思決定が動く場をつくります。</p>
+          <p class="text-[.9rem] font-medium text-ink mb-1.5" data-ja="経営・業務・ITのあいだで認識がずれ、意思決定が進まない" data-en="Misalignment between management, operations, and IT is stalling decisions">経営・業務・ITのあいだで認識がずれ、意思決定が進まない</p>
+          <p class="text-[.75rem] text-ink-mid leading-relaxed" data-ja="三者の言語が違うため、議論が噛み合わない。それぞれの論点を整理し、意思決定が動く場をつくります。" data-en="When the three sides speak different languages, discussions stall. We align perspectives and create conditions for decisions to move.">三者の言語が違うため、議論が噛み合わない。それぞれの論点を整理し、意思決定が動く場をつくります。</p>
         </div>
       </div>
       <div class="flex gap-4 bg-white border border-[#E2E0DA] rounded-sm p-6 hover:border-gold/40 transition-colors">
         <div class="flex-shrink-0 w-8 h-8 rounded-full bg-navy flex items-center justify-center text-white display text-[.7rem] font-semibold">04</div>
         <div>
-          <p class="text-[.9rem] font-medium text-ink mb-1.5">海外拠点を含む業務標準化やシステム連携を進めたい</p>
-          <p class="text-[.75rem] text-ink-mid leading-relaxed">日本本社と海外拠点でシステムや業務がバラバラ。米国・アジアの現地実務を知る視点から、グローバル標準化を設計します。</p>
+          <p class="text-[.9rem] font-medium text-ink mb-1.5" data-ja="海外拠点を含む業務標準化やシステム連携を進めたい" data-en="You want to standardize operations and integrate systems across overseas offices">海外拠点を含む業務標準化やシステム連携を進めたい</p>
+          <p class="text-[.75rem] text-ink-mid leading-relaxed" data-ja="日本本社と海外拠点でシステムや業務がバラバラ。米国・アジアの現地実務を知る視点から、グローバル標準化を設計します。" data-en="Systems and processes are fragmented across HQ and overseas. We design global standardization from real on-the-ground experience in the US and Asia.">日本本社と海外拠点でシステムや業務がバラバラ。米国・アジアの現地実務を知る視点から、グローバル標準化を設計します。</p>
         </div>
       </div>
     </div>
-    <p class="text-[.78rem] text-ink-light text-center mt-10">上記に当てはまらない場合も、まずはご相談ください。構想段階・壁打ちからでも対応します。</p>
+    <p class="text-[.78rem] text-ink-light text-center mt-10" data-ja="上記に当てはまらない場合も、まずはご相談ください。構想段階・壁打ちからでも対応します。" data-en="Even if none of the above apply, feel free to reach out. We are happy to engage from the earliest conceptual stage.">上記に当てはまらない場合も、まずはご相談ください。構想段階・壁打ちからでも対応します。</p>
   </div>
 </section>
 
 <section class="reveal py-24 px-6 md:px-10 bg-white border-b border-[#E2E0DA]" id="services">
   <div class="max-w-5xl mx-auto">
-    <p class="display text-[.67rem] font-medium tracking-[.2em] uppercase text-gold mb-3" data-ja="サービス" data-en="Services">サービス</p>
-    <h2 class="serif text-[clamp(1.6rem,3vw,2.4rem)] font-medium text-ink leading-snug mb-4" data-ja-html="構想立案から現場実装まで、<br>一気通貫で対応します。" data-en-html="End-to-end support<br>from strategy to implementation.">
-      構想立案から現場実装まで、<br>一気通貫で対応します。
+    <p class="display text-[.67rem] font-medium tracking-[.2em] uppercase text-gold mb-3" data-ja="実行プロセス" data-en="How We Work">実行プロセス</p>
+    <h2 class="serif text-[clamp(1.6rem,3vw,2.4rem)] font-medium text-ink leading-snug mb-4" data-ja-html="変革を「確実に動く形」に<br>仕上げる5ステップ。" data-en-html="Five steps that turn<br>transformation into results.">
+      変革を「確実に動く形」に<br>仕上げる5ステップ。
     </h2>
     <div class="gold-rule mb-14"></div>
 
@@ -684,7 +688,7 @@ html[lang="en"] .ja-only {
     <h2 class="serif text-[clamp(1.6rem,3vw,2.4rem)] font-medium text-white leading-snug mb-2">
       <span data-ja="Wingが開発するAIプロダクト" data-en="AI Products by Wing">Wingが開発するAIプロダクト</span>
     </h2>
-    <p class="text-[.88rem] text-white/50 leading-relaxed mb-8">現場の「繰り返し作業」をAIに任せ、担当者が本来の判断業務に集中できる環境をつくります。</p>
+    <p class="text-[.88rem] text-white/50 leading-relaxed mb-8" data-ja="現場の「繰り返し作業」をAIに任せ、担当者が本来の判断業務に集中できる環境をつくります。" data-en="Delegate repetitive field tasks to AI, so your team can focus on the judgment work that actually matters.">現場の「繰り返し作業」をAIに任せ、担当者が本来の判断業務に集中できる環境をつくります。</p>
     <div class="gold-rule mb-12"></div>
 
     <!-- BorderFlow AI -->
@@ -699,82 +703,82 @@ html[lang="en"] .ja-only {
         </div>
 
         <div class="border-l-2 border-gold/40 pl-4 mb-6">
-          <p class="text-[.78rem] text-white/40 leading-relaxed mb-1">毎月、書類の照合・転記・申告書作成に何時間かけていますか？</p>
-          <p class="text-[.9rem] text-white/80 font-medium leading-relaxed">その作業、AIが3秒で終わらせます。</p>
+          <p class="text-[.78rem] text-white/40 leading-relaxed mb-1" data-ja="毎月、書類の照合・転記・申告書作成に何時間かけていますか？" data-en="How many hours each month do you spend matching, transcribing, and filing trade documents?">毎月、書類の照合・転記・申告書作成に何時間かけていますか？</p>
+          <p class="text-[.9rem] text-white/80 font-medium leading-relaxed" data-ja="その作業、AIが3秒で終わらせます。" data-en="AI handles it in 3 seconds.">その作業、AIが3秒で終わらせます。</p>
         </div>
 
-        <p class="text-[.84rem] text-white/50 leading-[1.85] mb-8">書類を投げ込むだけで、OCR・照合・通関申告・原価計算までを自動処理。担当者は「確認と判断」だけに集中できます。</p>
+        <p class="text-[.84rem] text-white/50 leading-[1.85] mb-8" data-ja="書類を投げ込むだけで、OCR・照合・通関申告・原価計算までを自動処理。担当者は「確認と判断」だけに集中できます。" data-en="Just drop in documents — OCR, matching, customs filing, and cost calculation are handled automatically. Your team focuses on review and judgment only.">書類を投げ込むだけで、OCR・照合・通関申告・原価計算までを自動処理。担当者は「確認と判断」だけに集中できます。</p>
 
         <div class="grid grid-cols-2 gap-px bg-white/06 border border-white/06 mb-8">
           <div class="bg-navy/60 px-5 py-5 text-center">
             <p class="serif text-[2rem] font-medium text-gold leading-none">90%</p>
-            <p class="display text-[.62rem] tracking-wider text-white/50 mt-1.5">事務工数の削減</p>
+            <p class="display text-[.62rem] tracking-wider text-white/50 mt-1.5" data-ja="事務工数の削減" data-en="Reduction in admin workload">事務工数の削減</p>
           </div>
           <div class="bg-navy/60 px-5 py-5 text-center">
             <p class="serif text-[2rem] font-medium text-gold leading-none">3秒</p>
-            <p class="display text-[.62rem] tracking-wider text-white/50 mt-1.5">書類1件のOCR・構造化</p>
+            <p class="display text-[.62rem] tracking-wider text-white/50 mt-1.5" data-ja="書類1件のOCR・構造化" data-en="OCR &amp; structure per document">書類1件のOCR・構造化</p>
           </div>
           <div class="bg-navy/60 px-5 py-5 text-center">
             <p class="serif text-[2rem] font-medium text-gold leading-none">¥280万</p>
-            <p class="display text-[.62rem] tracking-wider text-white/50 mt-1.5">HS誤分類による追徴課税を回避</p>
+            <p class="display text-[.62rem] tracking-wider text-white/50 mt-1.5" data-ja="HS誤分類による追徴課税を回避" data-en="Avoided in HS misclassification penalties">HS誤分類による追徴課税を回避</p>
           </div>
           <div class="bg-navy/60 px-5 py-5 text-center">
             <p class="serif text-[2rem] font-medium text-gold leading-none">330%</p>
-            <p class="display text-[.62rem] tracking-wider text-white/50 mt-1.5">年間ROI（実績ベース）</p>
+            <p class="display text-[.62rem] tracking-wider text-white/50 mt-1.5" data-ja="年間ROI（実績ベース）" data-en="Annual ROI (proven results)">年間ROI（実績ベース）</p>
           </div>
         </div>
 
         <div class="flex items-center gap-3 flex-wrap">
           <a href="#contact" class="display text-[.78rem] font-medium text-navy bg-gold px-6 py-2.5 rounded-sm tracking-wider hover:bg-gold-mid transition-colors" data-ja="デモを申し込む" data-en="Request a Demo">デモを申し込む</a>
-          <span class="display text-[.68rem] text-white/65">1ヶ月無料PoC受付中</span>
+          <span class="display text-[.68rem] text-white/65" data-ja="1ヶ月無料PoC受付中" data-en="Free 1-month PoC available">1ヶ月無料PoC受付中</span>
           <a href="/borderflow-guide" class="display text-[.68rem] text-white/55 underline underline-offset-4 hover:text-white/80 transition-colors">詳細を見る →</a>
         </div>
       </div>
 
       <div class="flex flex-col gap-4">
         <div class="border border-white/08 rounded-sm p-6">
-          <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold/50 mb-4">できること</p>
+          <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold/50 mb-4" data-ja="できること" data-en="What It Does">できること</p>
           <div class="flex flex-col gap-3.5">
             <div class="flex gap-3 items-start">
               <span class="text-gold/60 text-xs mt-1 shrink-0">✓</span>
               <div>
-                <p class="text-[.8rem] text-white/75 font-medium leading-snug">書類を投げ込むだけで自動データ化</p>
-                <p class="text-[.7rem] text-white/40 mt-0.5">契約書・Invoice・BLをOCRで即構造化</p>
+                <p class="text-[.8rem] text-white/75 font-medium leading-snug" data-ja="書類を投げ込むだけで自動データ化" data-en="Auto-digitizes documents — just drop them in">書類を投げ込むだけで自動データ化</p>
+                <p class="text-[.7rem] text-white/40 mt-0.5" data-ja="契約書・Invoice・BLをOCRで即構造化" data-en="Contracts, Invoices, and BLs structured instantly via OCR">契約書・Invoice・BLをOCRで即構造化</p>
               </div>
             </div>
             <div class="flex gap-3 items-start">
               <span class="text-gold/60 text-xs mt-1 shrink-0">✓</span>
               <div>
-                <p class="text-[.8rem] text-white/75 font-medium leading-snug">HSコードの誤分類リスクをゼロへ</p>
-                <p class="text-[.7rem] text-white/40 mt-0.5">品目・用途・材質からAIが自動判定・根拠付与</p>
+                <p class="text-[.8rem] text-white/75 font-medium leading-snug" data-ja="HSコードの誤分類リスクをゼロへ" data-en="Eliminates HS code misclassification risk">HSコードの誤分類リスクをゼロへ</p>
+                <p class="text-[.7rem] text-white/40 mt-0.5" data-ja="品目・用途・材質からAIが自動判定・根拠付与" data-en="AI auto-classifies by item, use, and material — with rationale">品目・用途・材質からAIが自動判定・根拠付与</p>
               </div>
             </div>
             <div class="flex gap-3 items-start">
               <span class="text-gold/60 text-xs mt-1 shrink-0">✓</span>
               <div>
-                <p class="text-[.8rem] text-white/75 font-medium leading-snug">PO・Invoice・BLの3点突合を自動化</p>
-                <p class="text-[.7rem] text-white/40 mt-0.5">差異をリアルタイム検知して担当者に即通知</p>
+                <p class="text-[.8rem] text-white/75 font-medium leading-snug" data-ja="PO・Invoice・BLの3点突合を自動化" data-en="Automates 3-way matching of PO, Invoice, and BL">PO・Invoice・BLの3点突合を自動化</p>
+                <p class="text-[.7rem] text-white/40 mt-0.5" data-ja="差異をリアルタイム検知して担当者に即通知" data-en="Detects discrepancies in real time and alerts staff immediately">差異をリアルタイム検知して担当者に即通知</p>
               </div>
             </div>
             <div class="flex gap-3 items-start">
               <span class="text-gold/60 text-xs mt-1 shrink-0">✓</span>
               <div>
-                <p class="text-[.8rem] text-white/75 font-medium leading-snug">伝票・仕訳・通関申告書を自動生成</p>
-                <p class="text-[.7rem] text-white/40 mt-0.5">既存ERP・NACCSへのデータ連携対応</p>
+                <p class="text-[.8rem] text-white/75 font-medium leading-snug" data-ja="伝票・仕訳・通関申告書を自動生成" data-en="Auto-generates vouchers, journal entries, and customs declarations">伝票・仕訳・通関申告書を自動生成</p>
+                <p class="text-[.7rem] text-white/40 mt-0.5" data-ja="既存ERP・NACCSへのデータ連携対応" data-en="Integrates with existing ERP and NACCS systems">既存ERP・NACCSへのデータ連携対応</p>
               </div>
             </div>
             <div class="flex gap-3 items-start">
               <span class="text-gold/60 text-xs mt-1 shrink-0">✓</span>
               <div>
-                <p class="text-[.8rem] text-white/75 font-medium leading-snug">品目別ランデッドコストを自動レポート</p>
-                <p class="text-[.7rem] text-white/40 mt-0.5">関税・輸送費を含む真のコストを即可視化</p>
+                <p class="text-[.8rem] text-white/75 font-medium leading-snug" data-ja="品目別ランデッドコストを自動レポート" data-en="Auto-reports landed cost by item">品目別ランデッドコストを自動レポート</p>
+                <p class="text-[.7rem] text-white/40 mt-0.5" data-ja="関税・輸送費を含む真のコストを即可視化" data-en="Instantly visualizes true cost including duties and freight">関税・輸送費を含む真のコストを即可視化</p>
               </div>
             </div>
           </div>
         </div>
 
         <div class="border border-white/08 rounded-sm p-6">
-          <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold/50 mb-4">輸入業務フロー（全10ステップ）</p>
+          <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold/50 mb-4" data-ja="輸入業務フロー（全10ステップ）" data-en="Import Workflow (10 steps)">輸入業務フロー（全10ステップ）</p>
           <div class="flex flex-wrap gap-1.5 items-center">
             <span class="display text-[.65rem] text-white/40 px-2 py-1 border border-white/08 rounded-sm">引合</span>
             <span class="text-white/15 text-xs">→</span>
@@ -793,7 +797,7 @@ html[lang="en"] .ja-only {
             <span class="display text-[.65rem] text-gold/70 px-2 py-1 border border-gold/20 rounded-sm bg-gold/05 font-medium">原価</span>
           </div>
           <p class="display text-[.65rem] text-gold/40 mt-3">
-            <span class="inline-block w-2 h-2 rounded-full bg-gold/60 mr-1.5"></span>ゴールド = AIが自動処理するステップ
+            <span class="inline-block w-2 h-2 rounded-full bg-gold/60 mr-1.5"></span><span data-ja="ゴールド = AIが自動処理するステップ" data-en="Gold = steps automated by AI">ゴールド = AIが自動処理するステップ</span>
           </p>
         </div>
       </div>
@@ -808,87 +812,87 @@ html[lang="en"] .ja-only {
           <div class="w-10 h-10 rounded-lg flex items-center justify-center font-bold text-white text-sm" style="background:linear-gradient(135deg,#3CB97A,#2A8F5C)">C</div>
           <div>
             <p class="display text-lg font-medium text-white tracking-wide">ChemOS</p>
-            <p class="display text-[.68rem] text-gold/60 tracking-wider">PFAS・chemSHERPA コンプライアンス運用支援</p>
+            <p class="display text-[.68rem] text-gold/60 tracking-wider" data-ja="PFAS・chemSHERPA コンプライアンス運用支援" data-en="PFAS &amp; chemSHERPA Compliance Operations">PFAS・chemSHERPA コンプライアンス運用支援</p>
           </div>
         </div>
 
         <div class="border-l-2 border-gold/40 pl-4 mb-6">
-          <p class="text-[.78rem] text-white/40 leading-relaxed mb-1">OEMから調査票が届くたびに、また同じ作業が始まる——</p>
-          <p class="text-[.9rem] text-white/80 font-medium leading-relaxed">その繰り返しを、7ステップで断ち切ります。</p>
+          <p class="text-[.78rem] text-white/40 leading-relaxed mb-1" data-ja="OEMから調査票が届くたびに、また同じ作業が始まる——" data-en="Every time a survey form arrives from an OEM, the same work starts all over again —">OEMから調査票が届くたびに、また同じ作業が始まる——</p>
+          <p class="text-[.9rem] text-white/80 font-medium leading-relaxed" data-ja="その繰り返しを、7ステップで断ち切ります。" data-en="We break that cycle in 7 steps.">その繰り返しを、7ステップで断ち切ります。</p>
         </div>
 
-        <p class="text-[.84rem] text-white/50 leading-[1.85] mb-8">chemSHERPA・PFAS対応を期限内に・証跡付きで完走。サプライヤーへの照会から提出物の生成まで、電子部品業界の実務フローに特化した専用基盤です。</p>
+        <p class="text-[.84rem] text-white/50 leading-[1.85] mb-8" data-ja="chemSHERPA・PFAS対応を期限内に・証跡付きで完走。サプライヤーへの照会から提出物の生成まで、電子部品業界の実務フローに特化した専用基盤です。" data-en="Complete chemSHERPA and PFAS compliance on time, with full audit trails. From supplier inquiries to deliverable generation — purpose-built for electronics industry workflows.">chemSHERPA・PFAS対応を期限内に・証跡付きで完走。サプライヤーへの照会から提出物の生成まで、電子部品業界の実務フローに特化した専用基盤です。</p>
 
         <div class="grid grid-cols-2 gap-px bg-white/06 border border-white/06 mb-8">
           <div class="bg-navy/60 px-5 py-5 text-center">
             <p class="serif text-[2rem] font-medium text-gold leading-none">7</p>
-            <p class="display text-[.62rem] tracking-wider text-white/50 mt-1.5">ステップで受領〜提出まで完走</p>
+            <p class="display text-[.62rem] tracking-wider text-white/50 mt-1.5" data-ja="ステップで受領〜提出まで完走" data-en="Steps from intake to submission">ステップで受領〜提出まで完走</p>
           </div>
           <div class="bg-navy/60 px-5 py-5 text-center">
             <p class="serif text-[2rem] font-medium text-gold leading-none">0</p>
-            <p class="display text-[.62rem] tracking-wider text-white/50 mt-1.5">提出物の空欄。Unknownも根拠で補完</p>
+            <p class="display text-[.62rem] tracking-wider text-white/50 mt-1.5" data-ja="提出物の空欄。Unknownも根拠で補完" data-en="Blank fields — Unknowns backed by rationale">提出物の空欄。Unknownも根拠で補完</p>
           </div>
           <div class="bg-navy/60 px-5 py-5 text-center">
             <p class="serif text-[2rem] font-medium text-gold leading-none">3値</p>
-            <p class="display text-[.62rem] tracking-wider text-white/50 mt-1.5">断定しない判定設計（Yes / Suspected / Unknown）</p>
+            <p class="display text-[.62rem] tracking-wider text-white/50 mt-1.5" data-ja="断定しない判定設計（Yes / Suspected / Unknown）" data-en="3-tier judgment (Yes / Suspected / Unknown)">断定しない判定設計（Yes / Suspected / Unknown）</p>
           </div>
           <div class="bg-navy/60 px-5 py-5 text-center">
             <p class="serif text-[2rem] font-medium text-gold leading-none">¥30万〜</p>
-            <p class="display text-[.62rem] tracking-wider text-white/50 mt-1.5">月額（PoC含む Starter プラン）</p>
+            <p class="display text-[.62rem] tracking-wider text-white/50 mt-1.5" data-ja="月額（PoC含む Starter プラン）" data-en="/month (Starter plan incl. PoC)">月額（PoC含む Starter プラン）</p>
           </div>
         </div>
 
         <div class="flex items-center gap-3 flex-wrap">
-          <a href="#contact" class="display text-[.78rem] font-medium text-navy bg-gold px-6 py-2.5 rounded-sm tracking-wider hover:bg-gold-mid transition-colors">デモを申し込む</a>
-          <span class="display text-[.68rem] text-white/65">初回相談無料</span>
+          <a href="#contact" class="display text-[.78rem] font-medium text-navy bg-gold px-6 py-2.5 rounded-sm tracking-wider hover:bg-gold-mid transition-colors" data-ja="デモを申し込む" data-en="Request a Demo">デモを申し込む</a>
+          <span class="display text-[.68rem] text-white/65" data-ja="初回相談無料" data-en="Free initial consultation">初回相談無料</span>
           <a href="/chemos-guide" class="display text-[.68rem] text-white/55 underline underline-offset-4 hover:text-white/80 transition-colors">詳細を見る →</a>
         </div>
       </div>
 
       <div class="flex flex-col gap-4">
         <div class="border border-white/08 rounded-sm p-6">
-          <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold/50 mb-4">できること</p>
+          <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold/50 mb-4" data-ja="できること" data-en="What It Does">できること</p>
           <div class="flex flex-col gap-3.5">
             <div class="flex gap-3 items-start">
               <span class="text-gold/60 text-xs mt-1 shrink-0">✓</span>
               <div>
-                <p class="text-[.8rem] text-white/75 font-medium leading-snug">chemSHERPAファイルをそのまま読み込める</p>
-                <p class="text-[.7rem] text-white/40 mt-0.5">ZIP / XML / SDS を自動解析・構造化</p>
+                <p class="text-[.8rem] text-white/75 font-medium leading-snug" data-ja="chemSHERPAファイルをそのまま読み込める" data-en="Reads chemSHERPA files as-is">chemSHERPAファイルをそのまま読み込める</p>
+                <p class="text-[.7rem] text-white/40 mt-0.5" data-ja="ZIP / XML / SDS を自動解析・構造化" data-en="Auto-parses and structures ZIP / XML / SDS files">ZIP / XML / SDS を自動解析・構造化</p>
               </div>
             </div>
             <div class="flex gap-3 items-start">
               <span class="text-gold/60 text-xs mt-1 shrink-0">✓</span>
               <div>
-                <p class="text-[.8rem] text-white/75 font-medium leading-snug">PFAS含有を3段階で判定、誤判定リスクを低減</p>
-                <p class="text-[.7rem] text-white/40 mt-0.5">Yes / Suspected / Unknown で過剰申告を防ぐ</p>
+                <p class="text-[.8rem] text-white/75 font-medium leading-snug" data-ja="PFAS含有を3段階で判定、誤判定リスクを低減" data-en="Detects PFAS in 3 tiers, reducing false judgment risk">PFAS含有を3段階で判定、誤判定リスクを低減</p>
+                <p class="text-[.7rem] text-white/40 mt-0.5" data-ja="Yes / Suspected / Unknown で過剰申告を防ぐ" data-en="Prevents over-declaration with Yes / Suspected / Unknown">Yes / Suspected / Unknown で過剰申告を防ぐ</p>
               </div>
             </div>
             <div class="flex gap-3 items-start">
               <span class="text-gold/60 text-xs mt-1 shrink-0">✓</span>
               <div>
-                <p class="text-[.8rem] text-white/75 font-medium leading-snug">サプライヤーへの照会メールを自動生成・追跡</p>
-                <p class="text-[.7rem] text-white/40 mt-0.5">英語対応・督促ログを自動記録、属人化を排除</p>
+                <p class="text-[.8rem] text-white/75 font-medium leading-snug" data-ja="サプライヤーへの照会メールを自動生成・追跡" data-en="Auto-generates and tracks supplier inquiry emails">サプライヤーへの照会メールを自動生成・追跡</p>
+                <p class="text-[.7rem] text-white/40 mt-0.5" data-ja="英語対応・督促ログを自動記録、属人化を排除" data-en="English-capable, auto-logs follow-ups, eliminates knowledge silos">英語対応・督促ログを自動記録、属人化を排除</p>
               </div>
             </div>
             <div class="flex gap-3 items-start">
               <span class="text-gold/60 text-xs mt-1 shrink-0">✓</span>
               <div>
-                <p class="text-[.8rem] text-white/75 font-medium leading-snug">顧客フォーマットへの変換を自動化</p>
-                <p class="text-[.7rem] text-white/40 mt-0.5">毎回Excelを作り直す作業がゼロになる</p>
+                <p class="text-[.8rem] text-white/75 font-medium leading-snug" data-ja="顧客フォーマットへの変換を自動化" data-en="Automates conversion to customer formats">顧客フォーマットへの変換を自動化</p>
+                <p class="text-[.7rem] text-white/40 mt-0.5" data-ja="毎回Excelを作り直す作業がゼロになる" data-en="Eliminates rebuilding Excel files every time">毎回Excelを作り直す作業がゼロになる</p>
               </div>
             </div>
             <div class="flex gap-3 items-start">
               <span class="text-gold/60 text-xs mt-1 shrink-0">✓</span>
               <div>
-                <p class="text-[.8rem] text-white/75 font-medium leading-snug">証跡・版管理で監査にも即対応</p>
-                <p class="text-[.7rem] text-white/40 mt-0.5">「この判断の根拠は？」に完全トレーサビリティで答える</p>
+                <p class="text-[.8rem] text-white/75 font-medium leading-snug" data-ja="証跡・版管理で監査にも即対応" data-en="Audit-ready with full evidence and version control">証跡・版管理で監査にも即対応</p>
+                <p class="text-[.7rem] text-white/40 mt-0.5" data-ja="「この判断の根拠は？」に完全トレーサビリティで答える" data-en="Answers judgement questions with full traceability">「この判断の根拠は？」に完全トレーサビリティで答える</p>
               </div>
             </div>
           </div>
         </div>
 
         <div class="border border-white/08 rounded-sm p-6">
-          <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold/50 mb-4">コンプライアンスワークフロー（全7ステップ）</p>
+          <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold/50 mb-4" data-ja="コンプライアンスワークフロー（全7ステップ）" data-en="Compliance Workflow (7 steps)">コンプライアンスワークフロー（全7ステップ）</p>
           <div class="flex flex-wrap gap-1.5 items-center">
             <span class="display text-[.65rem] text-gold/70 px-2 py-1 border border-gold/20 rounded-sm bg-gold/05 font-medium">案件登録</span>
             <span class="text-white/15 text-xs">→</span>
@@ -905,7 +909,7 @@ html[lang="en"] .ja-only {
             <span class="display text-[.65rem] text-gold/70 px-2 py-1 border border-gold/20 rounded-sm bg-gold/05 font-medium">証跡保管</span>
           </div>
           <p class="display text-[.65rem] text-gold/40 mt-3">
-            <span class="inline-block w-2 h-2 rounded-full bg-gold/60 mr-1.5"></span>全ステップAI支援 — 担当者の判断が必要な箇所のみ通知
+            <span class="inline-block w-2 h-2 rounded-full bg-gold/60 mr-1.5"></span><span data-ja="全ステップAI支援 — 担当者の判断が必要な箇所のみ通知" data-en="AI-assisted at every step — alerts only when human judgment is needed">全ステップAI支援 — 担当者の判断が必要な箇所のみ通知</span>
           </p>
         </div>
       </div>
@@ -1432,7 +1436,8 @@ handleFormspree(
 <script>
 /* ── Language Toggle (JA/EN) ── */
 (function() {
-  var savedLang = localStorage.getItem('wing-lang') || 'ja';
+  var browserLang = (navigator.language || navigator.userLanguage || 'ja').toLowerCase().startsWith('ja') ? 'ja' : 'en';
+  var savedLang = localStorage.getItem('wing-lang') || browserLang;
 
   function applyLang(lang) {
     document.documentElement.lang = lang;
