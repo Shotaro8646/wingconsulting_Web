@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DX・AI クイックアセスメント | Wing Consulting</title>
+  <meta name="description" content="5分で完了。あなたの企業のDX成熟度・AI活用状況を診断し、パーソナライズされたレポートを生成します。">
+  <link rel="canonical" href="https://wingconsulting.org/dx-assessment">
+  <meta property="og:title" content="DX・AI クイックアセスメント | Wing Consulting">
+  <meta property="og:description" content="5分で完了。あなたの企業のDX成熟度・AI活用状況を診断し、パーソナライズされたレポートを生成します。">
+  <meta property="og:url" content="https://wingconsulting.org/dx-assessment">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0F2342;
+      --navy-mid: #1a3660;
+      --gold: #B8923A;
+      --gold-light: #D4AF6A;
+      --gold-pale: #f5ead4;
+      --ink: #1C1917;
+      --ink-mid: #6B6560;
+      --bg: #FAFAF8;
+      --card-border: #E2E0DA;
+      --card-hover: #F3F1EB;
+      --selected-bg: #EBF0F8;
+      --selected-border: #0F2342;
+      --white: #ffffff;
+      --red: #C0392B;
+      --amber: #D4860B;
+      --green: #2E7D57;
+      --radius: 10px;
+      --shadow: 0 2px 12px rgba(15,35,66,0.08);
+      --shadow-md: 0 4px 24px rgba(15,35,66,0.12);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: var(--navy);
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.25);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .nav-logo-mark {
+      width: 32px;
+      height: 32px;
+      background: var(--gold);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--white);
+      letter-spacing: -0.5px;
+    }
+
+    .nav-logo-text {
+      color: var(--white);
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-back {
+      color: var(--gold-light);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+
+    .nav-back:hover { color: var(--white); }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      padding: 120px 24px 64px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 70% 30%, rgba(184,146,58,0.12) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(184,146,58,0.18);
+      border: 1px solid rgba(184,146,58,0.4);
+      color: var(--gold-light);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      color: var(--white);
+      font-size: clamp(26px, 5vw, 38px);
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+
+    .hero h1 span {
+      color: var(--gold-light);
+    }
+
+    .hero p {
+      color: rgba(255,255,255,0.72);
+      font-size: 15px;
+      max-width: 520px;
+      margin: 0 auto 32px;
+      line-height: 1.8;
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .hero-stat {
+      text-align: center;
+    }
+
+    .hero-stat strong {
+      display: block;
+      color: var(--gold-light);
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .hero-stat span {
+      color: rgba(255,255,255,0.55);
+      font-size: 12px;
+    }
+
+    /* MAIN CONTAINER */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* PROGRESS BAR */
+    .progress-wrap {
+      margin-bottom: 36px;
+    }
+
+    .progress-steps {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      margin-bottom: 8px;
+    }
+
+    .step-indicator {
+      display: flex;
+      align-items: center;
+      gap: 0;
+    }
+
+    .step-dot {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 2px solid var(--card-border);
+      background: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink-mid);
+      transition: all 0.3s;
+      position: relative;
+      z-index: 1;
+    }
+
+    .step-dot.active {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: var(--white);
+    }
+
+    .step-dot.done {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--white);
+    }
+
+    .step-line {
+      flex: 1;
+      height: 2px;
+      background: var(--card-border);
+      width: 80px;
+      transition: background 0.3s;
+    }
+
+    .step-line.done { background: var(--gold); }
+
+    .step-labels {
+      display: flex;
+      justify-content: space-between;
+      max-width: 380px;
+      margin: 8px auto 0;
+    }
+
+    .step-label {
+      font-size: 11px;
+      color: var(--ink-mid);
+      text-align: center;
+      width: 80px;
+    }
+
+    .step-label.active { color: var(--navy); font-weight: 600; }
+
+    /* FORM SECTIONS */
+    .form-step {
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .form-step.active { display: block; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .section-subtitle {
+      font-size: 14px;
+      color: var(--ink-mid);
+      margin-bottom: 28px;
+    }
+
+    .field-group {
+      margin-bottom: 28px;
+    }
+
+    .field-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .field-label .req {
+      font-size: 11px;
+      color: var(--white);
+      background: var(--gold);
+      padding: 1px 6px;
+      border-radius: 3px;
+      font-weight: 600;
+    }
+
+    /* RADIO CARDS */
+    .radio-cards {
+      display: grid;
+      gap: 8px;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+
+    .radio-cards.wide {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .radio-cards.full {
+      grid-template-columns: 1fr;
+    }
+
+    .radio-card {
+      position: relative;
+    }
+
+    .radio-card input[type="radio"],
+    .radio-card input[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .radio-card label {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 12px 16px;
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      cursor: pointer;
+      background: var(--white);
+      transition: all 0.18s;
+      user-select: none;
+    }
+
+    .radio-card label:hover {
+      border-color: var(--navy);
+      background: var(--card-hover);
+    }
+
+    .radio-card input:checked + label {
+      border-color: var(--navy);
+      background: var(--selected-bg);
+      box-shadow: 0 0 0 1px var(--navy);
+    }
+
+    .radio-card .card-main {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .radio-card .card-sub {
+      font-size: 11px;
+      color: var(--ink-mid);
+      line-height: 1.5;
+    }
+
+    .radio-card input:checked + label .card-main {
+      color: var(--navy);
+    }
+
+    /* CHECKBOX CARDS */
+    .checkbox-cards {
+      display: grid;
+      gap: 8px;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .checkbox-card {
+      position: relative;
+    }
+
+    .checkbox-card input[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .checkbox-card label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 11px 14px;
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      cursor: pointer;
+      background: var(--white);
+      transition: all 0.18s;
+      user-select: none;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    .checkbox-card label:hover {
+      border-color: var(--navy);
+      background: var(--card-hover);
+    }
+
+    .checkbox-card input:checked + label {
+      border-color: var(--gold);
+      background: var(--gold-pale);
+      box-shadow: 0 0 0 1px var(--gold);
+      color: var(--ink);
+    }
+
+    .checkbox-icon {
+      width: 18px;
+      height: 18px;
+      border-radius: 4px;
+      border: 1.5px solid var(--card-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.18s;
+    }
+
+    .checkbox-card input:checked + label .checkbox-icon {
+      background: var(--gold);
+      border-color: var(--gold);
+    }
+
+    .checkbox-icon::after {
+      content: '';
+      width: 9px;
+      height: 5px;
+      border-left: 2px solid var(--white);
+      border-bottom: 2px solid var(--white);
+      transform: rotate(-45deg) translateY(-1px);
+      opacity: 0;
+      transition: opacity 0.15s;
+    }
+
+    .checkbox-card input:checked + label .checkbox-icon::after { opacity: 1; }
+
+    /* BUTTONS */
+    .btn-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 32px;
+      gap: 12px;
+    }
+
+    .btn {
+      padding: 12px 28px;
+      border-radius: var(--radius);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--white);
+      box-shadow: 0 2px 8px rgba(184,146,58,0.35);
+    }
+
+    .btn-primary:hover {
+      background: #a07d2e;
+      box-shadow: 0 4px 16px rgba(184,146,58,0.45);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--ink-mid);
+      border: 1.5px solid var(--card-border);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--navy);
+      color: var(--navy);
+    }
+
+    .btn-navy {
+      background: var(--navy);
+      color: var(--white);
+      box-shadow: 0 2px 8px rgba(15,35,66,0.25);
+    }
+
+    .btn-navy:hover {
+      background: var(--navy-mid);
+      box-shadow: 0 4px 16px rgba(15,35,66,0.3);
+      transform: translateY(-1px);
+    }
+
+    /* VALIDATION */
+    .error-msg {
+      display: none;
+      font-size: 12px;
+      color: var(--red);
+      margin-top: 8px;
+      padding: 8px 12px;
+      background: rgba(192,57,43,0.06);
+      border-radius: 6px;
+      border-left: 3px solid var(--red);
+    }
+
+    .error-msg.show { display: block; }
+
+    /* RESULTS */
+    #results {
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+
+    #results.active { display: block; }
+
+    .results-header {
+      text-align: center;
+      padding: 32px 0 24px;
+    }
+
+    .results-header h2 {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .results-header p {
+      color: var(--ink-mid);
+      font-size: 14px;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 560px) {
+      .metrics-grid { grid-template-columns: 1fr; }
+    }
+
+    .metric-card {
+      background: var(--white);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .metric-card.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .metric-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-mid);
+      margin-bottom: 12px;
+    }
+
+    .metric-value {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.1;
+    }
+
+    .metric-value small {
+      font-size: 14px;
+      color: var(--ink-mid);
+      font-weight: 400;
+    }
+
+    .metric-sub {
+      font-size: 12px;
+      color: var(--ink-mid);
+      margin-top: 6px;
+    }
+
+    /* GAUGE BAR */
+    .gauge-wrap {
+      margin-top: 12px;
+    }
+
+    .gauge-track {
+      height: 10px;
+      background: var(--card-border);
+      border-radius: 5px;
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 6px;
+    }
+
+    .gauge-fill {
+      height: 100%;
+      border-radius: 5px;
+      transition: width 1s ease;
+    }
+
+    .gauge-fill.red { background: var(--red); }
+    .gauge-fill.amber { background: var(--amber); }
+    .gauge-fill.green { background: var(--green); }
+
+    .gauge-markers {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      color: var(--ink-mid);
+    }
+
+    .benchmark-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 10px;
+      font-size: 12px;
+      color: var(--ink-mid);
+    }
+
+    .bench-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* MATURITY BAR */
+    .maturity-bar-wrap {
+      margin-top: 12px;
+    }
+
+    .maturity-track {
+      height: 14px;
+      background: linear-gradient(to right, #e8f4ea, #2E7D57);
+      border-radius: 7px;
+      position: relative;
+      margin-bottom: 8px;
+    }
+
+    .maturity-pointer {
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 20px;
+      height: 20px;
+      background: var(--navy);
+      border: 2px solid var(--white);
+      border-radius: 50%;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+      transition: left 1s ease;
+    }
+
+    .maturity-level {
+      display: inline-block;
+      background: var(--navy);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 12px;
+      margin-top: 4px;
+    }
+
+    /* STARS */
+    .stars {
+      display: flex;
+      gap: 4px;
+      margin-top: 10px;
+    }
+
+    .star {
+      font-size: 22px;
+      transition: all 0.3s;
+    }
+
+    .star.filled { color: var(--gold); }
+    .star.empty { color: var(--card-border); }
+
+    .complexity-label {
+      font-size: 12px;
+      color: var(--ink-mid);
+      margin-top: 6px;
+    }
+
+    /* PATTERN CARD */
+    .pattern-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .pattern-desc {
+      font-size: 13px;
+      color: var(--ink-mid);
+      line-height: 1.7;
+    }
+
+    /* RECOMMENDATIONS */
+    .reco-section {
+      background: var(--white);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .reco-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .reco-title::before {
+      content: '';
+      display: block;
+      width: 4px;
+      height: 18px;
+      background: var(--gold);
+      border-radius: 2px;
+    }
+
+    .reco-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .reco-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .reco-num {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      background: var(--gold-pale);
+      border: 1px solid var(--gold-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--gold);
+      margin-top: 2px;
+    }
+
+    .reco-text {
+      font-size: 14px;
+      color: var(--ink);
+      line-height: 1.7;
+    }
+
+    /* FOOTER CTA */
+    .footer-cta {
+      background: var(--navy);
+      border-radius: 14px;
+      padding: 36px 32px;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .footer-cta h3 {
+      color: var(--white);
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    .footer-cta p {
+      color: rgba(255,255,255,0.65);
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    .footer-cta .btn {
+      font-size: 15px;
+      padding: 14px 36px;
+    }
+
+    /* DISCLAIMER */
+    .disclaimer {
+      text-align: center;
+      font-size: 11px;
+      color: var(--ink-mid);
+      line-height: 1.8;
+      padding: 0 20px 40px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      .radio-cards {
+        grid-template-columns: 1fr 1fr;
+      }
+      .radio-cards.wide {
+        grid-template-columns: 1fr;
+      }
+      .checkbox-cards {
+        grid-template-columns: 1fr;
+      }
+      .hero { padding: 96px 20px 48px; }
+      .hero-stats { gap: 20px; }
+      .btn-row { flex-direction: column-reverse; }
+      .btn-row .btn { width: 100%; justify-content: center; }
+      .footer-cta { padding: 28px 20px; }
+      .step-line { width: 48px; }
+    }
+
+    @media (max-width: 400px) {
+      .radio-cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="https://wingconsulting.org" class="nav-logo">
+    <div class="nav-logo-mark">W</div>
+    <span class="nav-logo-text">Wing Consulting</span>
+  </a>
+  <a href="https://wingconsulting.org" class="nav-back">
+    ← トップページ
+  </a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">Free Assessment Tool</div>
+  <h1>DX・AI <span>クイックアセスメント</span></h1>
+  <p>3ステップ、約5分で完了。あなたの企業のDX成熟度・AI活用状況を診断し、パーソナライズされた推奨アクションを生成します。</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><strong>3</strong><span>ステップ</span></div>
+    <div class="hero-stat"><strong>約5分</strong><span>所要時間</span></div>
+    <div class="hero-stat"><strong>無料</strong><span>診断結果</span></div>
+  </div>
+</section>
+
+<!-- MAIN -->
+<main class="container">
+
+  <!-- PROGRESS -->
+  <div class="progress-wrap" id="progressWrap">
+    <div class="progress-steps">
+      <div class="step-indicator">
+        <div class="step-dot active" id="dot1">1</div>
+        <div class="step-line" id="line1"></div>
+        <div class="step-dot" id="dot2">2</div>
+        <div class="step-line" id="line2"></div>
+        <div class="step-dot" id="dot3">3</div>
+      </div>
+    </div>
+    <div class="step-labels">
+      <div class="step-label active" id="lbl1">会社プロフィール</div>
+      <div class="step-label" id="lbl2">テクノロジー現状</div>
+      <div class="step-label" id="lbl3">課題・優先事項</div>
+    </div>
+  </div>
+
+  <!-- STEP 1 -->
+  <div class="form-step active" id="step1">
+    <div class="section-title">会社プロフィール</div>
+    <div class="section-subtitle">貴社の基本情報をご選択ください。</div>
+
+    <div class="field-group">
+      <div class="field-label">業種 <span class="req">必須</span></div>
+      <div class="radio-cards" id="industry-cards">
+        <div class="radio-card"><input type="radio" name="industry" value="商社・貿易業" id="ind1"><label for="ind1"><span class="card-main">商社・貿易業</span></label></div>
+        <div class="radio-card"><input type="radio" name="industry" value="製造業" id="ind2"><label for="ind2"><span class="card-main">製造業</span></label></div>
+        <div class="radio-card"><input type="radio" name="industry" value="物流・流通" id="ind3"><label for="ind3"><span class="card-main">物流・流通</span></label></div>
+        <div class="radio-card"><input type="radio" name="industry" value="通信・ハイテク" id="ind4"><label for="ind4"><span class="card-main">通信・ハイテク</span></label></div>
+        <div class="radio-card"><input type="radio" name="industry" value="その他" id="ind5"><label for="ind5"><span class="card-main">その他</span></label></div>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <div class="field-label">従業員規模 <span class="req">必須</span></div>
+      <div class="radio-cards" id="headcount-cards">
+        <div class="radio-card"><input type="radio" name="headcount" value="0" id="hc1"><label for="hc1"><span class="card-main">〜100名</span></label></div>
+        <div class="radio-card"><input type="radio" name="headcount" value="1" id="hc2"><label for="hc2"><span class="card-main">100〜500名</span></label></div>
+        <div class="radio-card"><input type="radio" name="headcount" value="2" id="hc3"><label for="hc3"><span class="card-main">500〜1,000名</span></label></div>
+        <div class="radio-card"><input type="radio" name="headcount" value="3" id="hc4"><label for="hc4"><span class="card-main">1,000〜5,000名</span></label></div>
+        <div class="radio-card"><input type="radio" name="headcount" value="4" id="hc5"><label for="hc5"><span class="card-main">5,000名以上</span></label></div>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <div class="field-label">海外拠点 <span class="req">必須</span></div>
+      <div class="radio-cards wide" id="overseas-cards">
+        <div class="radio-card"><input type="radio" name="overseas" value="なし" id="ov1"><label for="ov1"><span class="card-main">なし</span></label></div>
+        <div class="radio-card"><input type="radio" name="overseas" value="アジア" id="ov2"><label for="ov2"><span class="card-main">アジア</span><span class="card-sub">ASEAN・中国</span></label></div>
+        <div class="radio-card"><input type="radio" name="overseas" value="北米欧州" id="ov3"><label for="ov3"><span class="card-main">北米・欧州</span></label></div>
+        <div class="radio-card"><input type="radio" name="overseas" value="多地域" id="ov4"><label for="ov4"><span class="card-main">多地域</span><span class="card-sub">複数リージョン</span></label></div>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <div class="field-label">売上規模 <span class="req">必須</span></div>
+      <div class="radio-cards" id="revenue-cards">
+        <div class="radio-card"><input type="radio" name="revenue" value="0" id="rev1"><label for="rev1"><span class="card-main">〜10億円</span></label></div>
+        <div class="radio-card"><input type="radio" name="revenue" value="1" id="rev2"><label for="rev2"><span class="card-main">10〜50億円</span></label></div>
+        <div class="radio-card"><input type="radio" name="revenue" value="2" id="rev3"><label for="rev3"><span class="card-main">50〜100億円</span></label></div>
+        <div class="radio-card"><input type="radio" name="revenue" value="3" id="rev4"><label for="rev4"><span class="card-main">100〜500億円</span></label></div>
+        <div class="radio-card"><input type="radio" name="revenue" value="4" id="rev5"><label for="rev5"><span class="card-main">500億円以上</span></label></div>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <div class="field-label">年間ITコスト <span class="req">必須</span></div>
+      <div class="radio-cards" id="itcost-cards">
+        <div class="radio-card"><input type="radio" name="itcost" value="0" id="itc1"><label for="itc1"><span class="card-main">〜1,000万円</span></label></div>
+        <div class="radio-card"><input type="radio" name="itcost" value="1" id="itc2"><label for="itc2"><span class="card-main">1,000〜5,000万円</span></label></div>
+        <div class="radio-card"><input type="radio" name="itcost" value="2" id="itc3"><label for="itc3"><span class="card-main">5,000万〜2億円</span></label></div>
+        <div class="radio-card"><input type="radio" name="itcost" value="3" id="itc4"><label for="itc4"><span class="card-main">2〜10億円</span></label></div>
+        <div class="radio-card"><input type="radio" name="itcost" value="4" id="itc5"><label for="itc5"><span class="card-main">10億円以上</span></label></div>
+      </div>
+    </div>
+
+    <div id="err1" class="error-msg">すべての項目を選択してください。</div>
+    <div class="btn-row">
+      <span></span>
+      <button class="btn btn-primary" onclick="nextStep(1)">次へ ›</button>
+    </div>
+  </div>
+
+  <!-- STEP 2 -->
+  <div class="form-step" id="step2">
+    <div class="section-title">テクノロジー現状</div>
+    <div class="section-subtitle">現在のシステム環境とデジタル化の状況をお聞かせください。</div>
+
+    <div class="field-group">
+      <div class="field-label">基幹システム <span class="req">必須</span></div>
+      <div class="radio-cards wide" id="erp-cards">
+        <div class="radio-card"><input type="radio" name="erp" value="Excel" id="erp1"><label for="erp1"><span class="card-main">Excel中心</span><span class="card-sub">システムなし</span></label></div>
+        <div class="radio-card"><input type="radio" name="erp" value="国産ERP" id="erp2"><label for="erp2"><span class="card-main">国産ERP</span><span class="card-sub">奉行・弥生 等</span></label></div>
+        <div class="radio-card"><input type="radio" name="erp" value="SAP" id="erp3"><label for="erp3"><span class="card-main">SAP</span></label></div>
+        <div class="radio-card"><input type="radio" name="erp" value="Oracle" id="erp4"><label for="erp4"><span class="card-main">Oracle</span></label></div>
+        <div class="radio-card"><input type="radio" name="erp" value="その他クラウドERP" id="erp5"><label for="erp5"><span class="card-main">その他クラウドERP</span><span class="card-sub">NetSuite・Dynamics 等</span></label></div>
+        <div class="radio-card"><input type="radio" name="erp" value="不明" id="erp6"><label for="erp6"><span class="card-main">不明</span></label></div>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <div class="field-label">貿易業務のデジタル化度合い <span class="req">必須</span></div>
+      <div class="radio-cards full" id="tradedigital-cards">
+        <div class="radio-card"><input type="radio" name="tradedigital" value="手作業" id="td1"><label for="td1"><span class="card-main">手作業中心（Excel・メール）</span><span class="card-sub">ほぼアナログ。書類・データ管理が担当者依存</span></label></div>
+        <div class="radio-card"><input type="radio" name="tradedigital" value="一部" id="td2"><label for="td2"><span class="card-main">一部システム化（部分的）</span><span class="card-sub">特定業務はシステム化済。全体の連携は不十分</span></label></div>
+        <div class="radio-card"><input type="radio" name="tradedigital" value="高度" id="td3"><label for="td3"><span class="card-main">高度にデジタル化（統合システム）</span><span class="card-sub">受発注・通関・物流が一元管理されている</span></label></div>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <div class="field-label">AI活用状況 <span class="req">必須</span></div>
+      <div class="radio-cards wide" id="ai-cards">
+        <div class="radio-card"><input type="radio" name="ai" value="未着手" id="ai1"><label for="ai1"><span class="card-main">未着手</span><span class="card-sub">AI活用の検討なし</span></label></div>
+        <div class="radio-card"><input type="radio" name="ai" value="検討中" id="ai2"><label for="ai2"><span class="card-main">検討中・情報収集段階</span><span class="card-sub">勉強会・情報収集中</span></label></div>
+        <div class="radio-card"><input type="radio" name="ai" value="一部" id="ai3"><label for="ai3"><span class="card-main">一部業務で導入済み</span><span class="card-sub">限定的なPoC・試験運用</span></label></div>
+        <div class="radio-card"><input type="radio" name="ai" value="本格" id="ai4"><label for="ai4"><span class="card-main">本格的に活用中</span><span class="card-sub">複数業務で実運用</span></label></div>
+      </div>
+    </div>
+
+    <div id="err2" class="error-msg">すべての項目を選択してください。</div>
+    <div class="btn-row">
+      <button class="btn btn-secondary" onclick="prevStep(2)">‹ 戻る</button>
+      <button class="btn btn-primary" onclick="nextStep(2)">次へ ›</button>
+    </div>
+  </div>
+
+  <!-- STEP 3 -->
+  <div class="form-step" id="step3">
+    <div class="section-title">課題・優先事項</div>
+    <div class="section-subtitle">現在の課題感と、直近の優先事項をお聞かせください。</div>
+
+    <div class="field-group">
+      <div class="field-label">DXの最大ボトルネック（1つ選択）<span class="req">必須</span></div>
+      <div class="radio-cards full" id="bottleneck-cards">
+        <div class="radio-card"><input type="radio" name="bottleneck" value="人材不足" id="bn1"><label for="bn1"><span class="card-main">DX人材の不足</span></label></div>
+        <div class="radio-card"><input type="radio" name="bottleneck" value="予算" id="bn2"><label for="bn2"><span class="card-main">予算・投資対効果の不明確さ</span></label></div>
+        <div class="radio-card"><input type="radio" name="bottleneck" value="経営理解" id="bn3"><label for="bn3"><span class="card-main">経営層の理解・コミット不足</span></label></div>
+        <div class="radio-card"><input type="radio" name="bottleneck" value="技術選定" id="bn4"><label for="bn4"><span class="card-main">技術選定・ベンダー評価の難しさ</span></label></div>
+        <div class="radio-card"><input type="radio" name="bottleneck" value="現場抵抗" id="bn5"><label for="bn5"><span class="card-main">現場の抵抗・変化への慣れの薄さ</span></label></div>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <div class="field-label">直近1年の優先課題（2〜3つ選択）<span class="req">必須</span></div>
+      <div class="checkbox-cards" id="priority-cards">
+        <div class="checkbox-card"><input type="checkbox" name="priority" value="業務効率化" id="pr1"><label for="pr1"><span class="checkbox-icon"></span>業務効率化・コスト削減</label></div>
+        <div class="checkbox-card"><input type="checkbox" name="priority" value="AI自動化" id="pr2"><label for="pr2"><span class="checkbox-icon"></span>AI・自動化の導入</label></div>
+        <div class="checkbox-card"><input type="checkbox" name="priority" value="データ活用" id="pr3"><label for="pr3"><span class="checkbox-icon"></span>データ活用・可視化</label></div>
+        <div class="checkbox-card"><input type="checkbox" name="priority" value="グローバル標準化" id="pr4"><label for="pr4"><span class="checkbox-icon"></span>グローバル標準化</label></div>
+        <div class="checkbox-card"><input type="checkbox" name="priority" value="コンプライアンス" id="pr5"><label for="pr5"><span class="checkbox-icon"></span>コンプライアンス対応</label></div>
+        <div class="checkbox-card"><input type="checkbox" name="priority" value="新規事業" id="pr6"><label for="pr6"><span class="checkbox-icon"></span>新規事業・デジタルサービス</label></div>
+        <div class="checkbox-card"><input type="checkbox" name="priority" value="人材育成" id="pr7"><label for="pr7"><span class="checkbox-icon"></span>人材育成・内製化</label></div>
+        <div class="checkbox-card"><input type="checkbox" name="priority" value="ERP移行" id="pr8"><label for="pr8"><span class="checkbox-icon"></span>システム刷新・ERP移行</label></div>
+      </div>
+    </div>
+
+    <div id="err3" class="error-msg">ボトルネックを1つ選択し、優先課題を2〜3つ選択してください。</div>
+    <div class="btn-row">
+      <button class="btn btn-secondary" onclick="prevStep(3)">‹ 戻る</button>
+      <button class="btn btn-primary" onclick="submitForm()">診断結果を見る ›</button>
+    </div>
+  </div>
+
+  <!-- RESULTS -->
+  <div id="results">
+    <div class="results-header">
+      <h2>診断レポート</h2>
+      <p id="results-subtitle">診断が完了しました。以下に貴社のDX現状分析をお届けします。</p>
+    </div>
+
+    <div class="metrics-grid">
+      <!-- IT投資比率 -->
+      <div class="metric-card">
+        <div class="metric-label">IT投資比率</div>
+        <div class="metric-value" id="res-it-ratio">—%</div>
+        <div class="metric-sub" id="res-it-sub">業界平均と比較</div>
+        <div class="gauge-wrap">
+          <div class="gauge-track">
+            <div class="gauge-fill" id="gauge-fill" style="width:0%"></div>
+          </div>
+          <div class="gauge-markers">
+            <span>0%</span>
+            <span id="gauge-mid">—</span>
+            <span id="gauge-max">10%</span>
+          </div>
+          <div class="benchmark-row">
+            <div class="bench-dot" style="background:var(--gold)"></div>
+            <span id="bench-label">業界平均 —%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- デジタル成熟度 -->
+      <div class="metric-card">
+        <div class="metric-label">デジタル成熟度スコア</div>
+        <div class="metric-value" id="res-maturity-score">—<small>/100</small></div>
+        <div class="maturity-bar-wrap">
+          <div class="maturity-track">
+            <div class="maturity-pointer" id="maturity-pointer" style="left:0%"></div>
+          </div>
+          <span class="maturity-level" id="maturity-level">—</span>
+        </div>
+      </div>
+
+      <!-- 組織パターン -->
+      <div class="metric-card">
+        <div class="metric-label">組織パターン</div>
+        <div class="pattern-name" id="res-pattern">—</div>
+        <div class="pattern-desc" id="res-pattern-desc"></div>
+      </div>
+
+      <!-- 業務複雑度 -->
+      <div class="metric-card">
+        <div class="metric-label">業務複雑度</div>
+        <div class="stars" id="res-stars"></div>
+        <div class="complexity-label" id="res-complexity-label"></div>
+      </div>
+    </div>
+
+    <!-- Recommendations -->
+    <div class="reco-section">
+      <div class="reco-title">推奨アクション</div>
+      <ul class="reco-list" id="reco-list"></ul>
+    </div>
+
+    <!-- CTA -->
+    <div class="footer-cta">
+      <h3>Wingの専門家が<br>詳細な診断レポートを作成します</h3>
+      <p>この自動診断の3〜5倍の深さで、業界・規模・課題に即した具体的な変革シナリオをご提案します。</p>
+      <a href="https://wingconsulting.org/#contact" class="btn btn-primary">無料相談を予約する →</a>
+    </div>
+
+    <div class="btn-row" style="justify-content:center;margin-top:0;">
+      <button class="btn btn-secondary" onclick="resetForm()">診断をやり直す</button>
+    </div>
+  </div>
+
+</main>
+
+<p class="disclaimer">
+  本診断ツールは、入力情報に基づく自動生成レポートです。<br>
+  個人情報は収集しておりません。専門家診断の代替を保証するものではありません。<br>
+  © 2024 Wing Consulting. All rights reserved.
+</p>
+
+<script>
+  // ── Step navigation ──────────────────────────────────────────
+  let currentStep = 1;
+
+  function updateProgress(step) {
+    for (let i = 1; i <= 3; i++) {
+      const dot = document.getElementById('dot' + i);
+      const lbl = document.getElementById('lbl' + i);
+      dot.classList.remove('active', 'done');
+      lbl.classList.remove('active');
+      if (i < step) { dot.classList.add('done'); dot.textContent = '✓'; }
+      else if (i === step) { dot.classList.add('active'); dot.textContent = i; }
+      else { dot.textContent = i; }
+      if (i === step) lbl.classList.add('active');
+    }
+    for (let i = 1; i <= 2; i++) {
+      const line = document.getElementById('line' + i);
+      line.classList.toggle('done', i < step);
+    }
+  }
+
+  function showStep(n) {
+    document.querySelectorAll('.form-step').forEach(el => el.classList.remove('active'));
+    document.getElementById('step' + n).classList.add('active');
+    document.getElementById('results').classList.remove('active');
+    document.getElementById('progressWrap').style.display = '';
+    updateProgress(n);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    currentStep = n;
+  }
+
+  function validateStep(n) {
+    if (n === 1) {
+      const fields = ['industry', 'headcount', 'overseas', 'revenue', 'itcost'];
+      return fields.every(f => document.querySelector('input[name="' + f + '"]:checked'));
+    }
+    if (n === 2) {
+      const fields = ['erp', 'tradedigital', 'ai'];
+      return fields.every(f => document.querySelector('input[name="' + f + '"]:checked'));
+    }
+    if (n === 3) {
+      const bn = document.querySelector('input[name="bottleneck"]:checked');
+      const pr = document.querySelectorAll('input[name="priority"]:checked');
+      return bn && pr.length >= 2 && pr.length <= 3;
+    }
+    return true;
+  }
+
+  function nextStep(n) {
+    const errEl = document.getElementById('err' + n);
+    if (!validateStep(n)) {
+      errEl.classList.add('show');
+      return;
+    }
+    errEl.classList.remove('show');
+    if (n < 3) showStep(n + 1);
+    else submitForm();
+  }
+
+  function prevStep(n) {
+    document.getElementById('err' + n).classList.remove('show');
+    showStep(n - 1);
+  }
+
+  // ── Scoring ──────────────────────────────────────────────────
+  const REVENUE_MID = [5, 30, 75, 300, 750]; // 億円
+  const IT_MID_OKU = [0.0005, 0.0025, 0.0125, 0.06, 0.15]; // 万円 → 億円 (×0.0001)
+  // Corrected: 万円 to 億円: 1万円 = 0.0001億円
+  // midpoints: 500万, 3000万, 12500万, 60000万, 150000万
+  // in 億円: 0.05, 0.30, 1.25, 6.0, 15.0... let's use correct values
+  const IT_MID = [0.05, 0.30, 1.25, 6.0, 15.0]; // 億円
+
+  const BENCHMARKS = {
+    '商社・貿易業': { avg: 2.2, low: 1.3, high: 3.8 },
+    '製造業':       { avg: 2.6, low: 1.5, high: 4.2 },
+    '物流・流通':   { avg: 1.8, low: 1.0, high: 3.2 },
+    '通信・ハイテク': { avg: 4.5, low: 2.5, high: 7.0 },
+    'その他':       { avg: 2.5, low: 1.2, high: 4.5 }
+  };
+
+  const MATURITY_LEVELS = [
+    { max: 25, label: '初期段階' },
+    { max: 45, label: '基盤整備中' },
+    { max: 65, label: 'デジタル活用期' },
+    { max: 80, label: 'AI活用期' },
+    { max: 100, label: '変革リーダー' }
+  ];
+
+  const PATTERN_MAP = {
+    '人材不足': {
+      name: 'DX人材育成型',
+      desc: 'DX推進の核心は人材です。外部パートナーとの協業で短期成果を確保しながら、内製化ロードマップを段階的に設計することが効果的です。'
+    },
+    '予算': {
+      name: '投資対効果最大化型',
+      desc: '投資判断に厳密さが求められる組織です。小さなPoC → ROI実証 → 本格投資のサイクルを設計し、経営に対して数字で語ることが鍵です。'
+    },
+    '経営理解_large': {
+      name: 'トップダウン型変革',
+      desc: '経営層のコミットを確保した上で、全社横断のDX推進体制を設計することが大規模組織での成功要件です。'
+    },
+    '経営理解_small': {
+      name: '経営巻き込み型',
+      desc: '現場の成功事例を可視化しながら経営層への「DXの勝ちパターン提示」を繰り返すことで変革の機運を醸成します。'
+    },
+    '技術選定': {
+      name: 'テクノロジー最適化型',
+      desc: 'ベンダー評価の客観的フレームワーク構築が急務です。自社の要件定義能力を高め、ベンダーロックインリスクを最小化した選定プロセスが重要です。'
+    },
+    '現場抵抗': {
+      name: 'チェンジマネジメント型',
+      desc: '技術よりも人・プロセス・文化の変革が先決です。現場を巻き込んだ設計と、クイックウィンによるモチベーション維持が変革成功の鍵です。'
+    }
+  };
+
+  function computeResults() {
+    const industry = document.querySelector('input[name="industry"]:checked').value;
+    const headcount = parseInt(document.querySelector('input[name="headcount"]:checked').value);
+    const overseas = document.querySelector('input[name="overseas"]:checked').value;
+    const revenue = parseInt(document.querySelector('input[name="revenue"]:checked').value);
+    const itcost = parseInt(document.querySelector('input[name="itcost"]:checked').value);
+    const erp = document.querySelector('input[name="erp"]:checked').value;
+    const tradedigital = document.querySelector('input[name="tradedigital"]:checked').value;
+    const ai = document.querySelector('input[name="ai"]:checked').value;
+    const bottleneck = document.querySelector('input[name="bottleneck"]:checked').value;
+    const priorities = Array.from(document.querySelectorAll('input[name="priority"]:checked')).map(el => el.value);
+
+    // IT Investment Ratio
+    const rev = REVENUE_MID[revenue];
+    const it = IT_MID[itcost];
+    const ratio = (it / rev) * 100;
+
+    const bench = BENCHMARKS[industry] || BENCHMARKS['その他'];
+
+    // Digital Maturity Score
+    const tradeScore = { '手作業': 10, '一部': 40, '高度': 70 }[tradedigital] || 10;
+    const aiScore = { '未着手': 0, '検討中': 10, '一部': 25, '本格': 40 }[ai] || 0;
+    const erpScore = { 'Excel': -5, '国産ERP': 5, 'SAP': 15, 'Oracle': 15, 'その他クラウドERP': 8, '不明': 0 }[erp] || 0;
+    const maturityRaw = tradeScore + aiScore + erpScore;
+    const maturityScore = Math.max(0, Math.min(100, maturityRaw));
+    const maturityLevel = MATURITY_LEVELS.find(l => maturityScore <= l.max) || MATURITY_LEVELS[4];
+
+    // Pattern
+    let patternKey;
+    if (bottleneck === '経営理解') {
+      patternKey = headcount >= 3 ? '経営理解_large' : '経営理解_small';
+    } else {
+      patternKey = bottleneck;
+    }
+    const pattern = PATTERN_MAP[patternKey] || { name: '変革推進型', desc: '貴社固有の課題に合わせたDX戦略の策定が求められます。' };
+
+    // Complexity Index
+    const overseasScore = { 'なし': 1, 'アジア': 2, '北米欧州': 3, '多地域': 4 }[overseas] || 1;
+    let complexity = overseasScore;
+    if (industry === '商社・貿易業' && overseas === '多地域') complexity = Math.min(5, complexity + 1);
+    complexity = Math.min(5, complexity);
+
+    // Recommendations
+    const recos = [];
+
+    if (ai === '未着手') {
+      recos.push('AI活用ロードマップの策定から着手することを推奨します。まず生成AIを使った業務プロセス棚卸しと、効果が高い業務の特定から始めてください。');
+    } else if (ai === '検討中') {
+      recos.push('AI活用の検討から実証フェーズへの移行を推奨します。1つの業務に絞ったPoC（概念実証）を3ヶ月以内に実施し、定量的な効果を計測してください。');
+    } else if (ai === '一部') {
+      recos.push('部分的なAI活用から全社展開フェーズへの移行を検討してください。成功したユースケースを横展開し、AI活用の標準的なプレイブックを整備することが重要です。');
+    }
+
+    if (tradedigital === '手作業') {
+      recos.push('貿易業務のデジタル化は最優先課題です。クラウド型の貿易管理システム導入で、処理速度・精度・コンプライアンス対応を同時に改善できます。');
+    } else if (tradedigital === '一部') {
+      recos.push('部分的なシステム化から統合管理へのステップアップを推奨します。受発注・在庫・通関データの一元化により、リードタイム短縮と可視性向上が期待できます。');
+    }
+
+    if (erp === 'Excel' || erp === '国産ERP') {
+      recos.push('基幹システムの現代化を中期計画に組み込んでください。グローバル展開・データ活用・AIとの連携を見据えると、クラウドERPへの移行検討が競争力維持の鍵です。');
+    }
+
+    if (ratio < bench.low) {
+      recos.push(`貴社のIT投資比率（約${ratio.toFixed(1)}%）は業界水準（平均${bench.avg}%）を下回っています。戦略的なIT投資の見直しにより、デジタル競争力の強化が可能です。`);
+    } else if (ratio > bench.high) {
+      recos.push(`IT投資比率は業界水準を上回っています。投資効果の最大化に向けて、ポートフォリオ最適化と不要システムの統廃合を検討することを推奨します。`);
+    } else {
+      recos.push(`IT投資水準は業界平均（${bench.avg}%）に近い水準です。現状維持ではなく、AI・データ領域への戦略的な重点投資への配分見直しを検討してください。`);
+    }
+
+    if (priorities.includes('データ活用')) {
+      recos.push('データ活用・可視化を優先課題とされています。まずデータ基盤（データレイク・BIツール）の整備から着手し、経営ダッシュボードの構築で即時の意思決定品質改善を狙います。');
+    }
+
+    if (priorities.includes('グローバル標準化') || overseas !== 'なし') {
+      recos.push('海外拠点を持つ組織では、グローバル統一の業務プロセス標準とシステムプラットフォームの整備が不可欠です。地域ごとの独自化を最小化する設計が中長期コスト削減に直結します。');
+    }
+
+    if (priorities.includes('人材育成')) {
+      recos.push('DX内製化に向けた人材育成計画を策定してください。外部ベンダー依存を減らし、自社にDX推進の核となる人材（DXアーキテクト・データサイエンティスト）を育成・確保することが競争優位の源泉です。');
+    }
+
+    if (priorities.includes('ERP移行')) {
+      recos.push('ERP刷新は事業継続リスクにも関わる重要プロジェクトです。要件定義・ベンダー選定・移行リスク管理の3点において、経験豊富な外部専門家の関与が成功確率を大きく高めます。');
+    }
+
+    // Limit to 5
+    const finalRecos = recos.slice(0, 5);
+    if (finalRecos.length < 3) {
+      finalRecos.push('DX戦略の策定にあたっては、経営戦略・IT戦略・組織変革を統合した全体設計が重要です。Wing Consultingでは貴社固有の課題に応じた変革シナリオをご提案します。');
+    }
+
+    return { ratio, bench, maturityScore, maturityLevel, pattern, complexity, recos: finalRecos, industry, ai, overseas };
+  }
+
+  function submitForm() {
+    if (!validateStep(3)) {
+      document.getElementById('err3').classList.add('show');
+      return;
+    }
+    document.getElementById('err3').classList.remove('show');
+
+    const r = computeResults();
+
+    // Hide form steps
+    document.querySelectorAll('.form-step').forEach(el => el.classList.remove('active'));
+    document.getElementById('progressWrap').style.display = 'none';
+    const resultsEl = document.getElementById('results');
+    resultsEl.classList.add('active');
+
+    // IT Ratio
+    const ratioText = r.ratio.toFixed(1) + '%';
+    document.getElementById('res-it-ratio').textContent = ratioText;
+    let ratioColor, ratioStatus;
+    if (r.ratio < r.bench.low) { ratioColor = 'red'; ratioStatus = '業界水準を下回っています'; }
+    else if (r.ratio > r.bench.high) { ratioColor = 'amber'; ratioStatus = '業界水準を上回っています'; }
+    else { ratioColor = 'green'; ratioStatus = '業界標準水準です'; }
+    document.getElementById('res-it-sub').textContent = ratioStatus;
+
+    const maxRatio = r.bench.high * 1.5;
+    const fillPct = Math.min(100, (r.ratio / maxRatio) * 100);
+    const fill = document.getElementById('gauge-fill');
+    fill.className = 'gauge-fill ' + ratioColor;
+    setTimeout(() => { fill.style.width = fillPct + '%'; }, 100);
+    document.getElementById('gauge-mid').textContent = r.bench.avg + '%';
+    document.getElementById('gauge-max').textContent = maxRatio.toFixed(1) + '%';
+    document.getElementById('bench-label').textContent = '業界平均 ' + r.bench.avg + '%（' + document.querySelector('input[name="industry"]:checked').value + '）';
+
+    // Maturity
+    document.getElementById('res-maturity-score').innerHTML = r.maturityScore + '<small>/100</small>';
+    document.getElementById('maturity-level').textContent = r.maturityLevel.label;
+    setTimeout(() => {
+      document.getElementById('maturity-pointer').style.left = Math.min(95, Math.max(5, r.maturityScore)) + '%';
+    }, 100);
+
+    // Pattern
+    document.getElementById('res-pattern').textContent = r.pattern.name;
+    document.getElementById('res-pattern-desc').textContent = r.pattern.desc;
+
+    // Stars
+    const starsEl = document.getElementById('res-stars');
+    starsEl.innerHTML = '';
+    for (let i = 1; i <= 5; i++) {
+      const s = document.createElement('span');
+      s.className = 'star ' + (i <= r.complexity ? 'filled' : 'empty');
+      s.textContent = '★';
+      starsEl.appendChild(s);
+    }
+    const complexityLabels = ['', '低（国内シンプル）', '低〜中（アジア展開）', '中（北米・欧州）', '高（多地域展開）', '最高（大規模グローバル）'];
+    document.getElementById('res-complexity-label').textContent = complexityLabels[r.complexity] || '';
+
+    // Recommendations
+    const recoList = document.getElementById('reco-list');
+    recoList.innerHTML = '';
+    r.recos.forEach((text, i) => {
+      const li = document.createElement('li');
+      li.className = 'reco-item';
+      li.innerHTML = '<div class="reco-num">' + (i + 1) + '</div><div class="reco-text">' + text + '</div>';
+      recoList.appendChild(li);
+    });
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function resetForm() {
+    // Clear all inputs
+    document.querySelectorAll('input[type="radio"]').forEach(el => el.checked = false);
+    document.querySelectorAll('input[type="checkbox"]').forEach(el => el.checked = false);
+    document.querySelectorAll('.error-msg').forEach(el => el.classList.remove('show'));
+
+    // Reset gauges
+    document.getElementById('gauge-fill').style.width = '0%';
+    document.getElementById('maturity-pointer').style.left = '0%';
+
+    document.getElementById('results').classList.remove('active');
+    document.getElementById('progressWrap').style.display = '';
+    showStep(1);
+  }
+
+  // Checkbox limit enforcement (max 3)
+  document.querySelectorAll('input[name="priority"]').forEach(cb => {
+    cb.addEventListener('change', function() {
+      const checked = document.querySelectorAll('input[name="priority"]:checked');
+      if (checked.length > 3) {
+        this.checked = false;
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
