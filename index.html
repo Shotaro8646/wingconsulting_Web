@@ -114,7 +114,7 @@ tailwind.config = {
     extend: {
       colors: {
         navy:    { DEFAULT: '#1C2533', 50: '#F0F4FA', 100: '#D6E2F0', 200: '#A8C0DE', 300: '#6D95BE', 400: '#3D6E9C', 500: '#1E4E7E', 600: '#163B62', 700: '#0F2B48', dark: '#111A24' },
-        gold:    { DEFAULT: '#3B82F6', light: '#93C5FD', muted: '#2563EB', pale: '#EFF6FF', mid: '#60A5FA' },
+        gold:    { DEFAULT: '#C9A854', light: '#E0D09A', muted: '#A8883E', pale: '#FAF6EC', mid: '#D4BC72' },
         slate:   { warm: '#F9FAFB', cool: '#F3F4F6' },
         ink:     { DEFAULT: '#1A1A1F', mid: '#4A4A55', light: '#8A8A96' },
       },
@@ -132,7 +132,7 @@ tailwind.config = {
 body { font-family: 'Noto Sans JP', sans-serif; -webkit-font-smoothing: antialiased; }
 .serif { font-family: 'Cormorant Garamond', serif; }
 .display { font-family: 'Outfit', sans-serif; }
-.gold-rule { width: 32px; height: 1.5px; background: #3B82F6; }
+.gold-rule { width: 32px; height: 1.5px; background: #C9A854; }
 .nav-link { color: #4A4A55; }
 .nav-link:hover { color: #1A1A1F; }
 #navbar .nav-links li a { border-color: rgba(0,0,0,.08); }
@@ -148,15 +148,15 @@ body { font-family: 'Noto Sans JP', sans-serif; -webkit-font-smoothing: antialia
 /* Hero grid graphic */
 .hgrid { display: grid; grid-template-columns: 1fr 56px 1fr; grid-template-rows: auto 32px auto; gap: 0; }
 .hgrid-box { padding: 18px 20px; border: 1px solid rgba(255,255,255,.12); }
-.hgrid-center-v { display: flex; align-items: center; justify-content: center; border-left: 1px solid rgba(255,255,255,.12); border-right: 1px solid rgba(255,255,255,.12); background: rgba(59,130,246,.15); }
+.hgrid-center-v { display: flex; align-items: center; justify-content: center; border-left: 1px solid rgba(255,255,255,.12); border-right: 1px solid rgba(255,255,255,.12); background: rgba(201,168,84,.12); }
 .hgrid-arrow { display: flex; align-items: center; justify-content: center; grid-column: 2; border-left: 1px solid rgba(255,255,255,.08); border-right: 1px solid rgba(255,255,255,.08); }
 
 /* Hands */
-.hand-card { border-top: 2px solid #3B82F6; }
-.hand-card:hover { background: #EFF6FF; }
+.hand-card { border-top: 2px solid #C9A854; }
+.hand-card:hover { background: #FAF6EC; }
 
 /* Stat */
-.stat-num { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 500; color: #3B82F6; line-height: 1; }
+.stat-num { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 500; color: #C9A854; line-height: 1; }
 
 /* Language toggle button */
 .lang-toggle-btn {
@@ -266,7 +266,7 @@ html[lang="en"] section p { font-size: 0.95em; }
 <!-- ─── HERO ───────────────────────────────────────────── -->
 <section id="top" class="bg-navy flex items-center pt-24 pb-24 px-6 md:px-10 relative overflow-hidden">
   <!-- Subtle background radial -->
-  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 70% 25%, rgba(59,130,246,.15) 0%, transparent 55%)"></div>
+  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 70% 25%, rgba(201,168,84,.12) 0%, transparent 55%)"></div>
 
   <div class="max-w-5xl mx-auto w-full relative z-10">
     <div class="grid md:grid-cols-[1fr_auto] gap-12 md:gap-16 items-center">
@@ -289,7 +289,6 @@ html[lang="en"] section p { font-size: 0.95em; }
             課題を相談する
           </a>
           <span class="text-[.7rem] text-white/65 tracking-wide" data-ja="構想段階からの相談も歓迎" data-en="Early-stage inquiries welcome">構想段階からの相談も歓迎</span>
-          <span class="display text-[.6rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2.5 py-1 rounded-sm" data-ja="日英バイリンガル対応" data-en="Bilingual JA / EN">日英バイリンガル対応</span>
         </div>
       </div>
 
@@ -302,10 +301,6 @@ html[lang="en"] section p { font-size: 0.95em; }
         <div class="border border-white/10 rounded-sm px-5 py-4 hover:border-gold/30 transition-colors">
           <p class="serif text-[2rem] font-medium text-gold leading-none">2<span class="text-[1rem] text-white/40 ml-1">社</span></p>
           <p class="display text-[.63rem] tracking-wider text-white/45 mt-1.5" data-ja="大手グローバルファーム出身" data-en="Top global consulting firms">大手グローバルファーム出身</p>
-        </div>
-        <div class="border border-white/10 rounded-sm px-5 py-4 hover:border-gold/30 transition-colors">
-          <p class="serif text-[2rem] font-medium text-gold leading-none">JA<span class="text-gold">/</span>EN</p>
-          <p class="display text-[.63rem] tracking-wider text-white/45 mt-1.5" data-ja="バイリンガル対応" data-en="Bilingual consulting">バイリンガル対応</p>
         </div>
         <div class="border border-white/10 rounded-sm px-5 py-4 hover:border-gold/30 transition-colors">
           <p class="serif text-[2rem] font-medium text-gold leading-none">PoC<span class="text-[1rem] text-white/40 ml-1">→本番</span></p>
@@ -455,7 +450,7 @@ html[lang="en"] section p { font-size: 0.95em; }
           </p>
           <div class="flex flex-col gap-3">
             <a href="#products" class="flex items-start gap-3 p-3 border border-[#E5E7EB] rounded-sm hover:bg-slate-warm transition-colors">
-              <div class="w-7 h-7 rounded flex items-center justify-center text-xs font-bold text-navy shrink-0 mt-0.5" style="background:linear-gradient(135deg,#3B82F6,#D4AF6A)">B</div>
+              <div class="w-7 h-7 rounded flex items-center justify-center text-xs font-bold text-navy shrink-0 mt-0.5" style="background:linear-gradient(135deg,#C9A854,#D4AF6A)">B</div>
               <div>
                 <p class="text-[.85rem] font-medium text-ink leading-snug">BorderFlow AI</p>
                 <p class="text-[.75rem] text-ink-mid mt-0.5" data-ja="AIエージェント型 貿易実行・管理プラットフォーム" data-en="AI Agent-Powered Trade Execution &amp; Management Platform">AIエージェント型 貿易実行・管理プラットフォーム</p>
@@ -767,7 +762,7 @@ html[lang="en"] section p { font-size: 0.95em; }
 
     <!-- Free consultation note -->
     <div class="flex items-center gap-4 bg-navy/04 border border-[#E5E7EB] px-6 py-4 rounded-sm">
-      <svg class="w-4 h-4 text-gold shrink-0" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#3B82F6" stroke-width="1.1"/><path d="M8 5v4M8 11v.5" stroke="#3B82F6" stroke-width="1.3" stroke-linecap="round"/></svg>
+      <svg class="w-4 h-4 text-gold shrink-0" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#C9A854" stroke-width="1.1"/><path d="M8 5v4M8 11v.5" stroke="#C9A854" stroke-width="1.3" stroke-linecap="round"/></svg>
       <p class="text-[.8rem] text-ink-mid leading-relaxed" data-ja-html="いずれのサービスも、<span class='font-medium text-ink'>初回ヒアリング・ご相談は無料</span>です。どのメニューが適切かわからない場合も、お問い合わせください。" data-en-html="All services include a <span class='font-medium text-ink'>free initial consultation</span>. Contact us even if you're unsure which option fits.">いずれのサービスも、<span class="font-medium text-ink">初回ヒアリング・ご相談は無料</span>です。どのメニューが適切かわからない場合も、お問い合わせください。</p>
     </div>
   </div>
@@ -788,7 +783,7 @@ html[lang="en"] section p { font-size: 0.95em; }
     <div class="grid md:grid-cols-[1fr_1.4fr] gap-10 items-start">
       <div>
         <div class="flex items-center gap-3 mb-5">
-          <div class="w-10 h-10 rounded-lg flex items-center justify-center font-bold text-navy text-sm" style="background:linear-gradient(135deg,#3B82F6,#D4AF6A)">B</div>
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center font-bold text-navy text-sm" style="background:linear-gradient(135deg,#C9A854,#D4AF6A)">B</div>
           <div>
             <p class="display text-lg font-medium text-white tracking-wide">BorderFlow AI</p>
             <p class="display text-[.68rem] text-gold/60 tracking-wider" data-ja="自律型貿易事務エージェント" data-en="Autonomous Trade Operations Agent">自律型貿易事務エージェント</p>
