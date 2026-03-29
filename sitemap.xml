@@ -149,7 +149,58 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <!-- ─── B2Bマーケティング記事（2026-03-29追加） ─── -->
+  <!-- ─── B2B戦略・AIエージェント記事（2026-03-29追加） ─── -->
+  <url>
+    <loc>https://wingconsulting.org/blog/agentic-ai-b2b-shift</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wingconsulting.org/blog/geo-aeo-ai-search-b2b</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wingconsulting.org/blog/gtm-engineer-b2b-japan</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wingconsulting.org/blog/vibe-marketing-b2b</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wingconsulting.org/blog/first-party-data-b2b</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wingconsulting.org/blog/b2b-saas-kpi-intent-data</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wingconsulting.org/blog/agentic-ai-saas-design-patterns</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wingconsulting.org/blog/b2b-ec-autonomous-procurement</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- ─── B2Bマーケティング記事（2026-03-28追加） ─── -->
   <url>
     <loc>https://wingconsulting.org/blog/dark-funnel-b2b</loc>
     <lastmod>2026-03-29</lastmod>

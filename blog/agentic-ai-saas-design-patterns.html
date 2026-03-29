@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIネイティブSaaS設計パターン：マルチエージェント5つのアーキテクチャと実装戦略 | Wing Blog</title>
+<meta name="description" content="Reflection、Plan+Solve、Tool Use、Multi-Agent、HITLの5設計パターンによるAIネイティブSaaS開発の実践ガイド。B2B向けエージェント設計の選択基準と実装考慮点を解説。">
+<meta name="keywords" content="AIネイティブSaaS, マルチエージェント, LangGraph, AutoGen, エージェント設計パターン, HITL, RAG, B2B SaaS, AIアーキテクチャ">
+<meta property="og:title" content="AIネイティブSaaS設計パターン：マルチエージェント5つのアーキテクチャと実装戦略 | Wing Blog">
+<meta property="og:description" content="Reflection、Plan+Solve、Tool Use、Multi-Agent、HITLの5設計パターンによるAIネイティブSaaS開発の実践ガイド。B2B向けエージェント設計の選択基準と実装考慮点を解説。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://wingconsulting.org/blog/agentic-ai-saas-design-patterns">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://wingconsulting.org/images/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Wing">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AIネイティブSaaS設計パターン：マルチエージェント5つのアーキテクチャと実装戦略">
+<meta name="twitter:description" content="Reflection、Plan+Solve、Tool Use、Multi-Agent、HITLの5設計パターンによるAIネイティブSaaS開発の実践ガイド。">
+<meta name="twitter:image" content="https://wingconsulting.org/images/og-default.png">
+<link rel="canonical" href="https://wingconsulting.org/blog/agentic-ai-saas-design-patterns">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AIネイティブSaaS設計パターン：マルチエージェント5つのアーキテクチャと実装戦略",
+  "description": "Reflection、Plan+Solve、Tool Use、Multi-Agent、HITLの5設計パターンによるAIネイティブSaaS開発の実践ガイド。B2B向けエージェント設計の選択基準と実装考慮点を解説。",
+  "author": {"@type": "Organization","name": "Wing編集部","url": "https://wingconsulting.org"},
+  "publisher": {"@type": "Organization","name": "Wing","url": "https://wingconsulting.org","logo": {"@type": "ImageObject","url": "https://wingconsulting.org/images/logo.png"}},
+  "datePublished": "2026-03-29",
+  "dateModified": "2026-03-29",
+  "mainEntityOfPage": {"@type": "WebPage","@id": "https://wingconsulting.org/blog/agentic-ai-saas-design-patterns"},
+  "image": "https://wingconsulting.org/images/og-default.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Wing", "item": "https://wingconsulting.org"},
+    {"@type": "ListItem", "position": 2, "name": "インサイト", "item": "https://wingconsulting.org/#blog"},
+    {"@type": "ListItem", "position": 3, "name": "AIネイティブSaaS設計パターン", "item": "https://wingconsulting.org/blog/agentic-ai-saas-design-patterns"}
+  ]
+}
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        navy: { DEFAULT: '#0F2342', dark: '#081830' },
+        gold: { DEFAULT: '#A8965A', light: '#C4AD72', muted: '#7A6B3E', pale: '#F8F5ED', mid: '#B8A560' },
+        slate: { warm: '#F7F6F3', cool: '#EEECe7' },
+        ink: { DEFAULT: '#1A1A1F', mid: '#4A4A55', light: '#8A8A96' },
+      },
+      fontFamily: {
+        serif: ['"Yu Gothic"', '"YuGothic"', 'sans-serif'],
+        sans: ['"Yu Gothic"', '"YuGothic"', '"Noto Sans JP"', 'sans-serif'],
+        display: ['"Roboto"', 'sans-serif'],
+      },
+    }
+  }
+}
+</script>
+<style>
+body { font-family: 'Yu Gothic', 'YuGothic', 'Noto Sans JP', sans-serif; -webkit-font-smoothing: antialiased; }
+.serif { font-family: 'Roboto', sans-serif; }
+.display { font-family: 'Roboto', sans-serif; }
+.gold-rule { width: 32px; height: 1.5px; background: #A8965A; }
+article h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+article h3 { margin-top: 1.8rem; margin-bottom: 0.8rem; }
+article p { margin-bottom: 1.2rem; }
+article ul { margin-bottom: 1.2rem; padding-left: 1.5rem; }
+article li { margin-bottom: 0.5rem; }
+.diag-wrap { background:#fff; border:1px solid #E2E0DA; border-top:3px solid #A8965A; padding:1.4rem 1.5rem 1rem; margin:1.6rem 0 0.5rem; font-size:0.85rem; }
+.diag-caption { text-align:center; font-size:0.72rem; color:#8A8A96; margin-top:0.5rem; margin-bottom:1.4rem; }
+.diag-label { font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#A8965A; margin-bottom:0.8rem; }
+.diag-step-row { display:flex; flex-wrap:wrap; gap:0.7rem; }
+.diag-step-card { flex:1 1 140px; background:#fff; border:1px solid #E2E0DA; padding:0.9rem; position:relative; }
+.diag-step-card .step-num { width:28px; height:28px; background:#0F2342; color:#A8965A; font-size:0.78rem; font-weight:700; display:flex; align-items:center; justify-content:center; margin-bottom:0.55rem; }
+.diag-step-card .step-title { font-size:0.78rem; font-weight:700; color:#0F2342; margin-bottom:0.3rem; line-height:1.4; }
+.diag-step-card .step-body { font-size:0.72rem; color:#4A4A55; line-height:1.5; }
+.compare-table { width:100%; border-collapse:collapse; font-size:0.82rem; margin:1.2rem 0 0.5rem; }
+.compare-table th { background:#0F2342; color:#fff; padding:0.6rem 0.8rem; text-align:left; font-weight:600; font-size:0.75rem; letter-spacing:0.05em; }
+.compare-table td { padding:0.6rem 0.8rem; border-bottom:1px solid #E2E0DA; vertical-align:top; line-height:1.55; }
+.compare-table tr:nth-child(even) td { background:#F8F5ED; }
+.insight-box { background:#F0F7F0; border-left:3px solid #5A9A6A; padding:1rem 1.2rem; margin:1.4rem 0; font-size:0.83rem; line-height:1.7; }
+.insight-box .insight-label { font-size:0.65rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#5A9A6A; margin-bottom:0.4rem; }
+.warn-box { background:#FFF8F0; border-left:3px solid #C45C3A; padding:1rem 1.2rem; margin:1.4rem 0; font-size:0.83rem; line-height:1.7; }
+.warn-box .warn-label { font-size:0.65rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#C45C3A; margin-bottom:0.4rem; }
+.kpi-row { display:flex; flex-wrap:wrap; gap:0.8rem; margin:1.2rem 0; }
+.kpi-item { flex:1 1 150px; background:#fff; border:1px solid #E2E0DA; border-top:3px solid #A8965A; padding:0.9rem 1rem; }
+.kpi-item .kpi-val { font-size:1.4rem; font-weight:700; color:#0F2342; line-height:1.1; margin-bottom:0.25rem; }
+.kpi-item .kpi-label { font-size:0.7rem; color:#8A8A96; line-height:1.4; }
+</style>
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KN7NWHFK9G');
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style id="font-override">
+  body, p, li, td, th, span, div { font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif !important; }
+  h1, h2, h3, h4, h5, h6, .serif { font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif !important; }
+  .display, [class*="display"], [class*="font-display"] { font-family: "Roboto", "Yu Gothic", "YuGothic", sans-serif !important; }
+  :lang(en), .en, [lang="en"] { font-family: "Roboto", sans-serif !important; }
+</style>
+</head>
+<body class="bg-slate-warm text-ink">
+<header class="bg-navy h-[60px] flex items-center px-6 md:px-10 sticky top-0 z-50">
+  <div class="max-w-5xl mx-auto w-full flex items-center justify-between">
+    <a href="/" class="leading-none">
+      <svg width="120" height="36" viewBox="0 0 120 36" fill="none" aria-label="Wing">
+        <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff"/>
+        <path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#fff" opacity=".32"/>
+        <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#fff">Wing</text>
+      </svg>
+    </a>
+    <div class="flex items-center gap-4">
+      <span class="display text-[.7rem] font-medium tracking-wider text-white/50">Blog</span>
+      <a href="/" class="text-[.75rem] text-white/70 hover:text-white transition-colors">← Home</a>
+    </div>
+  </div>
+</header>
+<main class="py-16 px-6 md:px-10">
+  <div class="max-w-3xl mx-auto">
+    <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3">AI Strategy / SaaS Architecture</p>
+    <h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4">AIネイティブSaaS設計パターン：<br>マルチエージェント5つのアーキテクチャと実装戦略</h1>
+    <div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2">
+      <time datetime="2026-03-29">2026.03.29</time>
+      <span>Wing編集部</span>
+    </div>
+    <div class="gold-rule mb-10"></div>
+    <article class="text-[.9rem] text-ink leading-[2] max-w-none">
+
+      <p>「AIをプロダクトに組み込む」ことは2026年においてもはや競争優位ではなく前提条件になりつつある。問題は「どう組み込むか」だ。単一のLLM呼び出しをコードに埋め込むだけなら誰でもできる。しかし、複雑なB2B業務ワークフローを本当に自動化しようとした瞬間、アーキテクチャの選択が製品の成否を左右する。本稿では、AIネイティブSaaSの設計に使われる<strong>5つのエージェントパターン</strong>とその選択基準を解説する。</p>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">なぜ「設計パターン」が重要か</h2>
+
+      <p>AIアプリケーションの失敗事例の多くは「技術力の不足」ではなく「アーキテクチャ選択のミス」に起因する。シンプルな質問応答タスクにマルチエージェントを採用してコストと複雑性が爆発する、逆に複雑なオーケストレーションが必要なタスクを単一エージェントに任せて精度が出ない——こうした問題は設計段階で防げる。</p>
+
+      <div class="diag-wrap">
+        <div class="diag-label">5 Agentic Design Patterns — 概要一覧</div>
+        <table class="compare-table">
+          <thead><tr><th>パターン</th><th>核心メカニズム</th><th>適したユースケース</th><th>複雑度</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Reflection</strong></td><td>出力を自己評価・再生成</td><td>文書作成、コードレビュー</td><td>低〜中</td></tr>
+            <tr><td><strong>Plan + Solve</strong></td><td>計画→実行ステップ分割</td><td>複数ステップのリサーチ・分析</td><td>中</td></tr>
+            <tr><td><strong>Tool Use</strong></td><td>外部API・DBを自律呼び出し</td><td>データ検索、計算、外部連携</td><td>中</td></tr>
+            <tr><td><strong>Multi-Agent</strong></td><td>複数エージェントの役割分担協調</td><td>並列処理、専門特化が必要なタスク</td><td>高</td></tr>
+            <tr><td><strong>HITL</strong></td><td>人間の確認・承認を介在</td><td>高リスク判断、コンプライアンス対応</td><td>中</td></tr>
+          </tbody>
+        </table>
+        <p class="diag-caption">パターンは組み合わせて使う。5つを理解した上でハイブリッド設計を選択する</p>
+      </div>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">パターン詳説：5つのアーキテクチャ</h2>
+
+      <div class="diag-wrap">
+        <div class="diag-label">Pattern 1 — Reflection（自己反省）パターン</div>
+        <div class="diag-step-row">
+          <div class="diag-step-card">
+            <div class="step-num">生成</div>
+            <div class="step-title">初期出力</div>
+            <div class="step-body">LLMが与えられたタスクに対して初期回答・文書・コードを生成する</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">評価</div>
+            <div class="step-title">自己評価</div>
+            <div class="step-body">同一 or 別のLLMが出力の品質・正確さ・要件充足を評価し改善点を指摘</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">改善</div>
+            <div class="step-title">再生成</div>
+            <div class="step-body">フィードバックを基に改善版を生成。このループを品質基準達成まで繰り返す</div>
+          </div>
+        </div>
+        <p class="diag-caption">B2B適用例：提案書の品質担保、メール文面の自動改善、コードのセルフレビュー</p>
+      </div>
+
+      <div class="diag-wrap">
+        <div class="diag-label">Pattern 2 — Plan + Solve（計画・実行）パターン</div>
+        <p style="font-size:0.82rem; color:#4A4A55; margin-bottom:0.8rem;">複雑なタスクを「計画フェーズ」と「実行フェーズ」に分離する。計画エージェントがサブタスクに分解し、実行エージェントが各ステップを処理する。CoT（Chain-of-Thought）プロンプティングの発展形。</p>
+        <p style="font-size:0.75rem; color:#8A8A96;"><strong>B2B適用例：</strong>市場調査（調査計画→各項目の情報収集→統合レポート作成）、RFP対応（要件分析→各セクション作成→整合確認）</p>
+      </div>
+
+      <div class="diag-wrap">
+        <div class="diag-label">Pattern 3 — Tool Use（ツール利用）パターン</div>
+        <p style="font-size:0.82rem; color:#4A4A55; margin-bottom:0.8rem;">LLMが外部ツール（API、データベース、計算機、ブラウザ等）を自律的に呼び出す。Function Calling / MCP（Model Context Protocol）で実現。エージェントが「実世界に手を伸ばす」ための基盤パターン。</p>
+        <div class="diag-step-row" style="margin-top:0.8rem;">
+          <div class="diag-step-card">
+            <div class="step-num">◎</div>
+            <div class="step-title">Search Tools</div>
+            <div class="step-body">Web検索、社内DB検索、ベクトル検索（RAG）</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">◎</div>
+            <div class="step-title">Compute Tools</div>
+            <div class="step-body">Python実行、計算、データ変換・集計</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">◎</div>
+            <div class="step-title">Action Tools</div>
+            <div class="step-body">メール送信、CRM更新、カレンダー作成、Slack通知</div>
+          </div>
+        </div>
+        <p class="diag-caption">ツールの粒度と権限設計が品質とセキュリティの鍵</p>
+      </div>
+
+      <div class="diag-wrap">
+        <div class="diag-label">Pattern 4 — Multi-Agent（マルチエージェント）パターン</div>
+        <p style="font-size:0.82rem; color:#4A4A55; margin-bottom:0.8rem;">複数のエージェントが役割を分担し協調する。「オーケストレーター」が全体を指揮し、「サブエージェント」が専門タスクを実行する。LangGraph、AutoGen、CrewAIで実装。</p>
+        <table class="compare-table" style="margin-top:0.8rem;">
+          <thead><tr><th>構成要素</th><th>役割</th></tr></thead>
+          <tbody>
+            <tr><td>Orchestrator Agent</td><td>タスク分解・サブエージェントへの委任・結果統合</td></tr>
+            <tr><td>Specialist Agents</td><td>リサーチ担当、文書作成担当、コード実行担当など特化型</td></tr>
+            <tr><td>Memory Layer</td><td>セッション間で共有されるコンテキスト・過去の実行ログ</td></tr>
+            <tr><td>Tool Registry</td><td>各エージェントが使えるツールの権限管理</td></tr>
+          </tbody>
+        </table>
+        <p class="diag-caption">複雑性が高いため、単一エージェントで対応できない場合にのみ採用を検討する</p>
+      </div>
+
+      <div class="diag-wrap">
+        <div class="diag-label">Pattern 5 — HITL（Human-in-the-Loop）パターン</div>
+        <p style="font-size:0.82rem; color:#4A4A55; margin-bottom:0.8rem;">エージェントの判断・実行の特定ポイントに人間の確認・承認を挟む。B2B・エンタープライズ向け自動化において最も重要なパターン。「どこに人間を介在させるか」の設計がリスク管理の核心。</p>
+        <div class="diag-step-row" style="margin-top:0.8rem;">
+          <div class="diag-step-card">
+            <div class="step-num">高</div>
+            <div class="step-title">常に確認が必要</div>
+            <div class="step-body">外部送信（メール・API）、高額取引、個人情報アクセス、法的影響があるアクション</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">中</div>
+            <div class="step-title">閾値超えで確認</div>
+            <div class="step-body">信頼度スコアが低い場合、初回実行時、新規カテゴリのタスク、例外パターン検出時</div>
+          </div>
+          <div class="diag-step-card">
+            <div class="step-num">低</div>
+            <div class="step-title">非同期通知のみ</div>
+            <div class="step-body">定型的な繰り返し作業、既に検証済みのワークフロー、内部のみの影響範囲</div>
+          </div>
+        </div>
+        <p class="diag-caption">HITL は「邪魔な制限」ではなく「信頼を積み上げる段階的自律化の仕組み」</p>
+      </div>
+
+      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">パターン選択のデシジョンツリー</h2>
+
+      <p>どのパターンを選ぶかは以下の3つの問いで決定できる。</p>
+
+      <ul>
+        <li><strong>タスクは単一ステップか複数ステップか？</strong> → 単一：Tool Useで十分。複数：Plan+Solveを検討</li>
+        <li><strong>並列処理・専門特化が必要か？</strong> → Yes：Multi-Agent。No：単一エージェント+パターンの組み合わせ</li>
+        <li><strong>外部への影響（送信・取引）があるか？</strong> → Yes：HITLを必ず組み込む</li>
+      </ul>
+
+      <div class="insight-box">
+        <div class="insight-label">Wing's View</div>
+        AIネイティブSaaSの設計で最も見落とされがちなのは「観測可能性（Observability）」だ。エージェントが何を考え・何を実行し・なぜその判断をしたかを追跡できる仕組みがないと、デバッグも品質改善も不可能になる。LangSmith、Arize Phoenix、LangfuseなどのLLM Observabilityツールの組み込みを、アーキテクチャ設計段階から計画することを強く推奨する。
+      </div>
+
+    </article>
+
+    <!-- CTA -->
+    <div class="mt-16 bg-navy text-white px-8 py-10 text-center">
+      <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold/80 mb-3">Consulting</p>
+      <h2 class="text-[1.2rem] font-medium mb-4 leading-snug">AIネイティブSaaSのアーキテクチャ設計から<br>実装まで Wing がご支援します</h2>
+      <p class="text-[.82rem] text-white/70 leading-relaxed mb-6">エージェント設計パターンの選択、LLM Observability、B2B業務への最適化まで。Wing がAIプロダクト開発のアーキテクチャ戦略を支援します。</p>
+      <a href="/#contact" class="inline-block bg-gold text-white text-[.78rem] font-medium tracking-wider px-7 py-3 hover:bg-gold-light transition-colors">無料相談を予約する →</a>
+    </div>
+  </div>
+</main>
+<footer class="mt-20 border-t border-[#E2E0DA] py-10 px-6 md:px-10 text-center">
+  <a href="/" class="inline-block mb-4">
+    <svg width="80" height="24" viewBox="0 0 120 36" fill="none">
+      <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#0F2342"/>
+      <path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#0F2342" opacity=".32"/>
+      <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#0F2342">Wing</text>
+    </svg>
+  </a>
+  <p class="text-[.72rem] text-ink-light">© 2026 Wing Consulting. All rights reserved.</p>
+</footer>
+</body>
+</html>
