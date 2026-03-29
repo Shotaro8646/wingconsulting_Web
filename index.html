@@ -270,8 +270,10 @@ html[lang="en"] section p { font-size: 0.95em; }
   <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 70% 25%, rgba(184,168,130,.10) 0%, transparent 55%)"></div>
 
   <div class="max-w-5xl mx-auto w-full relative z-10">
-    <div>
-      <!-- Headline + CTA -->
+    <div class="grid md:grid-cols-[1fr_280px] gap-12 md:gap-14 items-center">
+
+      <!-- Left: Headline + CTA -->
+      <div>
         <p class="display text-[.65rem] font-medium tracking-[.22em] uppercase text-white/50 flex items-center gap-3 mb-5">
           <span class="block w-5 h-px bg-white/20"></span>
           IT / DX Consulting &amp; Execution
@@ -280,7 +282,7 @@ html[lang="en"] section p { font-size: 0.95em; }
           AI・デジタルで、<br>貴社の成長を<br>
           <em class="not-italic text-gold">本気で前に進める。</em>
         </h1>
-        <p class="text-[.9rem] font-light text-white/55 leading-[1.9] max-w-2xl mb-10" data-ja-html="戦略構想からAI/DXの現場実装まで。経営・IT・業務のギャップを埋め、<br>デジタル変革を確実な成果とともに実現します。" data-en="From strategic planning to hands-on AI/DX implementation. We bridge the gap between management, IT, and operations to deliver real business outcomes.">
+        <p class="text-[.9rem] font-light text-white/55 leading-[1.9] max-w-lg mb-10" data-ja-html="戦略構想からAI/DXの現場実装まで。経営・IT・業務のギャップを埋め、<br>デジタル変革を確実な成果とともに実現します。" data-en="From strategic planning to hands-on AI/DX implementation. We bridge the gap between management, IT, and operations to deliver real business outcomes.">
           戦略構想からAI/DXの現場実装まで。経営・IT・業務のギャップを埋め、<br>デジタル変革を確実な成果とともに実現します。
         </p>
         <div class="flex items-center flex-wrap gap-5">
@@ -291,6 +293,29 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
       </div>
 
+      <!-- Right: News -->
+      <div class="hidden md:block">
+        <p class="display text-[.6rem] font-medium tracking-[.2em] uppercase text-gold/60 mb-4">News</p>
+        <div class="flex flex-col gap-0 border-t border-white/10">
+          <a href="/blog/poc-death-dx-consulting" class="block py-3.5 border-b border-white/08 hover:bg-white/03 transition-colors group">
+            <p class="display text-[.55rem] text-white/30 mb-1">2026.03.26</p>
+            <p class="text-[.75rem] text-white/70 leading-snug group-hover:text-white transition-colors" data-ja="AI導入が本番稼働に届かない理由｜PoC失敗の原因と対策" data-en="Why AI Adoption Fails to Reach Production">AI導入が本番稼働に届かない理由｜PoC失敗の原因と対策</p>
+          </a>
+          <a href="/blog/supply-chain-resilience-ai" class="block py-3.5 border-b border-white/08 hover:bg-white/03 transition-colors group">
+            <p class="display text-[.55rem] text-white/30 mb-1">2026.03.26</p>
+            <p class="text-[.75rem] text-white/70 leading-snug group-hover:text-white transition-colors" data-ja="サプライチェーンにおけるAI活用と強靭化戦略" data-en="AI-Driven Supply Chain Resilience">サプライチェーンにおけるAI活用と強靭化戦略</p>
+          </a>
+          <a href="/blog/trade-dx-complete-guide" class="block py-3.5 border-b border-white/08 hover:bg-white/03 transition-colors group">
+            <p class="display text-[.55rem] text-white/30 mb-1">2026.03.28</p>
+            <p class="text-[.75rem] text-white/70 leading-snug group-hover:text-white transition-colors" data-ja="貿易DX完全ガイド｜戦略から実装まで" data-en="Trade DX Complete Guide">貿易DX完全ガイド｜戦略から実装まで</p>
+          </a>
+          <a href="/blog/ai-trade-automation" class="block py-3.5 border-b border-white/08 hover:bg-white/03 transition-colors group">
+            <p class="display text-[.55rem] text-white/30 mb-1">2026.03.28</p>
+            <p class="text-[.75rem] text-white/70 leading-snug group-hover:text-white transition-colors" data-ja="AIによる貿易業務自動化の最前線" data-en="AI Trade Automation Frontier">AIによる貿易業務自動化の最前線</p>
+          </a>
+        </div>
+        <a href="#blog" class="display text-[.65rem] text-gold/60 hover:text-gold transition-colors mt-3 inline-block" data-ja="すべてのインサイト →" data-en="All Insights →">すべてのインサイト →</a>
+      </div>
 
     </div>
   </div>
@@ -1007,14 +1032,13 @@ html[lang="en"] section p { font-size: 0.95em; }
 
     <!-- Category Filter -->
     <div class="flex flex-wrap gap-2 mb-10" id="blog-filters">
-      <button onclick="filterBlog('all')" data-cat="all" class="blog-filter-btn active display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-gold bg-gold text-navy transition-all">すべて</button>
-      <button onclick="filterBlog('ai-dx')" data-cat="ai-dx" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E2E0DA] text-ink-mid hover:border-gold hover:text-gold transition-all"># AI・DX戦略</button>
-      <button onclick="filterBlog('trade-dx')" data-cat="trade-dx" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E2E0DA] text-ink-mid hover:border-gold hover:text-gold transition-all"># 貿易DX</button>
-      <button onclick="filterBlog('compliance')" data-cat="compliance" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E2E0DA] text-ink-mid hover:border-gold hover:text-gold transition-all"># コンプライアンス</button>
-      <button onclick="filterBlog('logistics')" data-cat="logistics" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E2E0DA] text-ink-mid hover:border-gold hover:text-gold transition-all"># 物流DX</button>
-      <button onclick="filterBlog('it-org')" data-cat="it-org" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E2E0DA] text-ink-mid hover:border-gold hover:text-gold transition-all"># IT組織</button>
-      <button onclick="filterBlog('b2b-marketing')" data-cat="b2b-marketing" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E2E0DA] text-ink-mid hover:border-gold hover:text-gold transition-all"># B2Bマーケ</button>
-      <button onclick="filterBlog('other')" data-cat="other" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E2E0DA] text-ink-mid hover:border-gold hover:text-gold transition-all"># その他</button>
+      <button onclick="filterBlog('all')" data-cat="all" class="blog-filter-btn active display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-gold bg-gold text-navy transition-all" data-ja="すべて" data-en="All">すべて</button>
+      <button onclick="filterBlog('ai-dx')" data-cat="ai-dx" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E5E7EB] text-ink-mid hover:border-gold hover:text-gold transition-all" data-ja="# AI・DX戦略" data-en="# AI &amp; DX Strategy"># AI・DX戦略</button>
+      <button onclick="filterBlog('trade-dx')" data-cat="trade-dx" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E5E7EB] text-ink-mid hover:border-gold hover:text-gold transition-all" data-ja="# 貿易DX" data-en="# Trade DX"># 貿易DX</button>
+      <button onclick="filterBlog('compliance')" data-cat="compliance" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E5E7EB] text-ink-mid hover:border-gold hover:text-gold transition-all" data-ja="# コンプライアンス" data-en="# Compliance"># コンプライアンス</button>
+      <button onclick="filterBlog('logistics')" data-cat="logistics" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E5E7EB] text-ink-mid hover:border-gold hover:text-gold transition-all" data-ja="# 物流DX" data-en="# Logistics DX"># 物流DX</button>
+      <button onclick="filterBlog('it-org')" data-cat="it-org" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E5E7EB] text-ink-mid hover:border-gold hover:text-gold transition-all" data-ja="# IT組織" data-en="# IT Organization"># IT組織</button>
+      <button onclick="filterBlog('other')" data-cat="other" class="blog-filter-btn display text-[.68rem] font-medium tracking-wider px-4 py-1.5 rounded-full border border-[#E5E7EB] text-ink-mid hover:border-gold hover:text-gold transition-all" data-ja="# その他" data-en="# Other"># その他</button>
     </div>
 
     <!-- Blog Grid -->
@@ -1271,60 +1295,6 @@ html[lang="en"] section p { font-size: 0.95em; }
         </div>
         <div class="px-5 py-4">
           <p class="text-[.82rem] text-ink-mid leading-relaxed">AI-OCRによる書類読み取り・HSコード自動判定・リスクスコアリングなど、AI通関の仕組みと実務導入のポイントを解説。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.28</p>
-        </div>
-      </a>
-
-      <a href="/blog/dark-funnel-b2b" data-category="b2b-marketing" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
-        <div class="bg-navy/05 px-5 py-4">
-          <div class="flex gap-2 flex-wrap mb-2">
-            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># B2Bマーケ</span>
-          </div>
-          <p class="text-[.92rem] font-medium text-ink leading-snug group-hover:text-gold-muted transition-colors">ダークファネルとは？B2B見込み客の90%が「見えない」場所で意思決定している</p>
-        </div>
-        <div class="px-5 py-4">
-          <p class="text-[.75rem] text-ink-mid leading-relaxed">GAに映らない検討プロセスの正体と、商社・製造業の購買担当者への認知獲得アプローチを解説。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.28</p>
-        </div>
-      </a>
-
-      <a href="/blog/exhibition-lead-ma" data-category="b2b-marketing" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
-        <div class="bg-navy/05 px-5 py-4">
-          <div class="flex gap-2 flex-wrap mb-2">
-            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># B2Bマーケ</span>
-            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># AI・DX戦略</span>
-          </div>
-          <p class="text-[.92rem] font-medium text-ink leading-snug group-hover:text-gold-muted transition-colors">展示会リードの"その後"問題｜MAで商談率を3倍にするフォローアップ設計</p>
-        </div>
-        <div class="px-5 py-4">
-          <p class="text-[.75rem] text-ink-mid leading-relaxed">名刺300枚→商談0件の構造的理由と、MAツールを使ったリードナーチャリング・スコアリング設計の実践手順。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.28</p>
-        </div>
-      </a>
-
-      <a href="/blog/ma-tool-data-foundation" data-category="b2b-marketing" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
-        <div class="bg-navy/05 px-5 py-4">
-          <div class="flex gap-2 flex-wrap mb-2">
-            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># B2Bマーケ</span>
-            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># AI・DX戦略</span>
-          </div>
-          <p class="text-[.92rem] font-medium text-ink leading-snug group-hover:text-gold-muted transition-colors">MAツール導入前に整備すべきデータ基盤｜B2Bマーケ失敗の根本原因</p>
-        </div>
-        <div class="px-5 py-4">
-          <p class="text-[.75rem] text-ink-mid leading-relaxed">MAを入れても成果が出ない企業の共通点。ペルソナ・コンテンツ資産・CRM整備の3基盤と4フェーズ導入ロードマップ。</p>
-          <p class="text-[.68rem] text-ink-light mt-3">2026.03.28</p>
-        </div>
-      </a>
-
-      <a href="/blog/abm-b2b-strategy" data-category="b2b-marketing" class="blog-card group block border border-[#E2E0DA] rounded-sm overflow-hidden hover:border-gold/40 transition-colors">
-        <div class="bg-navy/05 px-5 py-4">
-          <div class="flex gap-2 flex-wrap mb-2">
-            <span class="display text-[.55rem] font-medium tracking-[.14em] uppercase text-gold/70 border border-gold/30 px-2 py-0.5 rounded-full"># B2Bマーケ</span>
-          </div>
-          <p class="text-[.92rem] font-medium text-ink leading-snug group-hover:text-gold-muted transition-colors">ABM（アカウントベースドマーケティング）入門｜商社・製造業B2Bへの適用戦略</p>
-        </div>
-        <div class="px-5 py-4">
-          <p class="text-[.75rem] text-ink-mid leading-relaxed">ABMの3階層（1:1 / 1:Few / 1:Many）から実践4ステップ・ICP定義まで、製造業・商社への導入戦略を解説。</p>
           <p class="text-[.68rem] text-ink-light mt-3">2026.03.28</p>
         </div>
       </a>
