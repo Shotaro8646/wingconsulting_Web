@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="ja" class="scroll-smooth">
+
+<html class="scroll-smooth" lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI通関とは？HS分類・申告業務の自動化が変えるもの | Wing Blog</title>
-<meta name="description" content="AI通関の実態を解説。HS分類の自動化・申告書類の自動作成・NACCS連携の仕組みと、AIが得意なこと・人間の判断が必要なことの正確な線引きを紹介。">
-<meta name="keywords" content="通関 AI, HS分類 自動化, NACCS 連携, AI通関 仕組み, 申告書 自動作成, 通関業務 効率化, HS番号 自動分類, 輸入申告 自動化">
-<meta property="og:title" content="AI通関とは？HS分類・申告業務の自動化が変えるもの">
-<meta property="og:description" content="AI通関の実態を解説。HS分類自動化・申告書自動作成・NACCS連携と、AIの限界・人間の判断領域の正確な整理。">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://wingconsulting.org/blog/ai-customs-clearance">
-<meta property="og:locale" content="ja_JP">
-<meta property="og:image" content="https://wingconsulting.org/images/og-default.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:site_name" content="Wing">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="AI通関とは？HS分類・申告業務の自動化が変えるもの">
-<meta name="twitter:description" content="AI通関でHS分類・申告書作成・NACCS連携がどう変わるか。AIの限界と人間の判断領域も正確に解説。">
-<meta name="twitter:image" content="https://wingconsulting.org/images/og-default.png">
-<link rel="canonical" href="https://wingconsulting.org/blog/ai-customs-clearance">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>What is AI Customs? HS Classification Automation | Wing Blog</title>
+<meta content="AI-OCR document reading, automated HS classification, and risk scoring." name="description"/>
+<meta content="通関 AI, HS分類 自動化, NACCS 連携, AI通関 仕組み, 申告書 自動作成, 通関業務 効率化, HS番号 自動分類, 輸入申告 自動化" name="keywords"/>
+<meta content="What is AI Customs? AI-OCR &amp; Automation in Trade Filing" property="og:title"/>
+<meta content="AI-OCR document reading, automated HS classification, and risk scoring." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://wingconsulting.org/blog/ai-customs-clearance" property="og:url"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="https://wingconsulting.org/images/og-default.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Wing" property="og:site_name"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="What is AI Customs? AI-OCR &amp; Automation in Trade Filing" name="twitter:title"/>
+<meta content="AI-OCR document reading, automated HS classification, and risk scoring." name="twitter:description"/>
+<meta content="https://wingconsulting.org/images/og-default.png" name="twitter:image"/>
+<link href="https://wingconsulting.org/blog/ai-customs-clearance" rel="canonical"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -111,14 +112,14 @@ article li { margin-bottom: 0.5rem; }
 .diag-checklist-item .chk { color:#A8965A; font-weight:700; flex-shrink:0; margin-top:0.05rem; }
 </style>
 <!-- Google Analytics GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-KN7NWHFK9G');
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;family=Noto+Sans+JP:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
 <style id="font-override">
   body, p, li, td, th, span, div {
     font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif !important;
@@ -135,179 +136,158 @@ article li { margin-bottom: 0.5rem; }
 </style>
 </head>
 <body class="bg-slate-warm text-ink">
-
 <!-- ─── HEADER ─────────────────────────────────────────── -->
 <header class="bg-navy h-[60px] flex items-center px-6 md:px-10 sticky top-0 z-50">
-  <div class="max-w-5xl mx-auto w-full flex items-center justify-between">
-    <a href="/" class="leading-none">
-      <svg width="120" height="36" viewBox="0 0 120 36" fill="none" aria-label="Wing">
-        <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff"/>
-        <path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#fff" opacity=".32"/>
-        <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#fff">Wing</text>
-      </svg>
-    </a>
-    <div class="flex items-center gap-4">
-      <span class="display text-[.7rem] font-medium tracking-wider text-white/50">Blog</span>
-      <a href="/" class="text-[.75rem] text-white/70 hover:text-white transition-colors">← Home</a>
-    </div>
-  </div>
+<div class="max-w-5xl mx-auto w-full flex items-center justify-between">
+<a class="leading-none" href="/">
+<svg aria-label="Wing" fill="none" height="36" viewbox="0 0 120 36" width="120">
+<path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff"></path>
+<path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#fff" opacity=".32"></path>
+<text fill="#fff" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" x="46" y="25">Wing</text>
+</svg>
+</a>
+<div class="flex items-center gap-4">
+<span class="display text-[.7rem] font-medium tracking-wider text-white/50">Blog</span>
+<a class="text-[.75rem] text-white/70 hover:text-white transition-colors" href="/">← Home</a>
+</div>
+</div>
 </header>
-
 <!-- ─── ARTICLE ─────────────────────────────────────────── -->
 <main class="py-16 px-6 md:px-10">
-  <div class="max-w-3xl mx-auto">
-    <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3">AI Customs</p>
-    <h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4">AI通関とは？<br>HS分類・申告業務の自動化が変えるもの</h1>
-    <div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2">
-      <time datetime="2026-03-28">2026.03.28</time>
-      <span>Wing編集部</span>
-    </div>
-    <div class="gold-rule mb-10"></div>
-
-    <article class="text-[.9rem] text-ink leading-[2] max-w-none">
-
-      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">通関業務の現実：専門性と工数の塊</h2>
-      <p>輸入通関は、貿易フローの中で最も専門性が要求されるプロセスの一つだ。税関に対して申告書類を正確に作成し、適切なHSコードで品目を申告し、関税額を計算し、NACCSシステムを通じて申告を行う。これを取引ごとに繰り返す。</p>
-      <p>通関業者（乙仲）に委託している企業でも、申告に必要な情報の提供・確認、HS分類の最終判断、申告内容の事後確認は輸入者側に責任がある。「通関業者に任せているから関係ない」は通用しない。</p>
-      <p>AI通関とは、この一連の業務においてAIが担える部分を代替し、専門担当者の判断工数を削減する取り組みだ。</p>
-
-      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">AI通関が変える3つの領域</h2>
-
-      <!-- DIAGRAM: AI通関の3領域 -->
-      <div class="diag-wrap">
-        <div class="diag-label">AI通関が自動化する3つの領域</div>
-        <div class="diag-step-row">
-          <div class="diag-step-card">
-            <div class="step-num">01</div>
-            <div class="step-title">HSコード分類の自動化</div>
-            <div class="step-body">品名・成分・用途からHS番号候補を提示。過去申告実績との照合と関税改正アラートで一貫性を担保</div>
-          </div>
-          <div class="diag-step-card">
-            <div class="step-num">02</div>
-            <div class="step-title">申告書類の自動作成</div>
-            <div class="step-body">AI-OCRで受領書類を読み取り、申告書フォームへ自動マッピング。転記ミスゼロ・元書類との自動照合</div>
-          </div>
-          <div class="diag-step-card">
-            <div class="step-num">03</div>
-            <div class="step-title">NACCSとの連携自動化</div>
-            <div class="step-body">申告から許可通知の受領、関税・消費税の納付指示までシステム内で完結。手動操作を最小化</div>
-          </div>
-        </div>
-      </div>
-      <p class="diag-caption">[図] AI通関が自動化する3つの領域</p>
-
-      <h3 class="text-[1rem] font-medium text-ink">1. HSコード分類の自動化</h3>
-      <p>HS（Harmonized System）コードは品目ごとに割り当てられる6〜9桁の分類番号で、関税率・輸入規制の適用を決定する。世界共通の上位6桁に加え、日本では9桁（統計細分）まで細分化されている。</p>
-      <p>化学品・食品・電子部品など、専門知識が必要な品目のHS分類は、経験のある担当者でも調査に時間を要する。AIはこれを以下の方法で補助する。</p>
-      <ul class="list-disc">
-        <li><strong>品名・成分・用途からの候補番号提示</strong>：自然言語の品名説明からHS番号の候補リストを生成し、関税率・適用注釈とともに提示する</li>
-        <li><strong>過去申告実績との照合</strong>：同一品目または類似品目の過去の申告実績を参照し、分類の一貫性を担保する</li>
-        <li><strong>関税率・税番変更アラート</strong>：年次関税改正や品目分類の変更を自動検知し、影響を受ける品目を担当者に通知する</li>
-      </ul>
-      <p>最終的な申告判断は担当者が行うが、調査・検索工数が大幅に削減される。</p>
-
-      <h3 class="text-[1rem] font-medium text-ink">2. 申告書類の自動作成</h3>
-      <p>通関申告に必要な情報は、すでに受領した書類（Invoice、Packing List、B/L等）の中に存在している。AI-OCRでこれらを読み取り、申告書のフォームに自動マッピングする。</p>
-      <p>手動入力が不要になるだけでなく、転記ミスによる申告誤りも防止できる。申告書の作成後、元書類との自動照合を実行し、差異がある場合のみ担当者の確認を求める設計が効果的だ。</p>
-
-      <h3 class="text-[1rem] font-medium text-ink">3. NACCSとの連携自動化</h3>
-      <p>NACCSは日本の輸出入通関手続きを電子化するシステムで、税関・通関業者・輸入者をつなぐインフラだ。このNACCSとの連携を自動化することで、申告から許可通知の受領、関税・消費税の納付指示までのフローをシステム内で完結させることができる。</p>
-
-      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">AI通関の「限界」を正しく理解する</h2>
-      <p>AI通関に期待できることと、そうでないことを区別することが重要だ。</p>
-
-      <!-- DIAGRAM: AIの得意/不得意の比較 -->
-      <div class="diag-wrap">
-        <div class="diag-label">AI通関 ── できること・できないことの正確な整理</div>
-        <div class="diag-row">
-          <div class="diag-compare-col highlight">
-            <div class="col-head">AIが得意なこと</div>
-            <ul>
-              <li>定型的な品目のHS分類候補の生成</li>
-              <li>書類からの情報抽出とフォームへの転記</li>
-              <li>過去事例の参照と一貫性チェック</li>
-              <li>申告期限・書類不備のアラート</li>
-            </ul>
-          </div>
-          <div class="diag-compare-col">
-            <div class="col-head">人間の判断が引き続き必要なこと</div>
-            <ul>
-              <li>新規品目・複合品目の分類判断（法的責任は申告者にある）</li>
-              <li>税関への照会・交渉</li>
-              <li>輸入禁制品・輸入規制品への対応</li>
-              <li>申告誤りが発覚した場合の修正申告手続き</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <p class="diag-caption">[図] AI通関でできること・人間の判断が必要なことの整理</p>
-
-      <p>AIは専門担当者の「作業補助」として機能する。AIが分類を決定し、人間はそれを承認するだけ──という設計は、現時点ではリスクが高い。AIの提示する候補を根拠とともに確認し、担当者が最終判断を下す設計が現実的だ。</p>
-
-      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">通関自動化の効果：何が変わるか</h2>
-      <p>通関業務でAIを活用している企業からの報告では、以下のような変化が見られる。</p>
-
-      <!-- DIAGRAM: 効果数値 -->
-      <div class="diag-wrap">
-        <div class="diag-label">AI通関 導入効果の実績値</div>
-        <div class="diag-step-row">
-          <div class="diag-step-card">
-            <div class="step-num" style="width:auto;padding:0 6px;font-size:0.65rem;">HS</div>
-            <div class="step-title">HS分類の調査時間</div>
-            <div class="step-body" style="font-size:0.85rem;font-weight:700;color:#5A9A6A;">一品目あたり平均<br>40〜60%短縮</div>
-          </div>
-          <div class="diag-step-card">
-            <div class="step-num" style="width:auto;padding:0 6px;font-size:0.65rem;">入力</div>
-            <div class="step-title">申告書の手入力作業</div>
-            <div class="step-body" style="font-size:0.85rem;font-weight:700;color:#5A9A6A;">書類読み取り自動化で<br>80%以上削減</div>
-          </div>
-          <div class="diag-step-card">
-            <div class="step-num" style="width:auto;padding:0 6px;font-size:0.65rem;">精度</div>
-            <div class="step-title">申告誤り・差戻し率</div>
-            <div class="step-body" style="font-size:0.85rem;font-weight:700;color:#5A9A6A;">照合自動化により<br>大幅に減少</div>
-          </div>
-          <div class="diag-step-card">
-            <div class="step-num" style="width:auto;padding:0 6px;font-size:0.65rem;">生産性</div>
-            <div class="step-title">担当者一人あたりの処理件数</div>
-            <div class="step-body" style="font-size:0.85rem;font-weight:700;color:#5A9A6A;">1.5〜2倍に増加</div>
-          </div>
-        </div>
-      </div>
-      <p class="diag-caption">[図] AI通関導入による業務効果（実績参考値）</p>
-
-      <ul class="list-disc">
-        <li><strong>HS分類の調査時間：一品目あたり平均40%〜60%短縮</strong></li>
-        <li><strong>申告書の手入力作業：書類読み取り自動化により80%以上削減</strong></li>
-        <li><strong>申告誤り・差戻し率：照合自動化により大幅に減少</strong></li>
-        <li><strong>通関担当者一人あたりの処理件数：1.5〜2倍に増加</strong></li>
-      </ul>
-
-      <p>特に取扱品目が多く、HS分類の専門知識が必要な商社・メーカーほど、効果が大きく出る傾向がある。</p>
-
-      <p>AI通関とその前後工程を一体で自動化する──BorderFlow AIはNACCS連携からHS分類補助まで、通関業務を包括的にサポートします。</p>
-
-      <!-- CTA -->
-      <div class="mt-14 p-8 bg-navy text-white text-center rounded-sm">
-        <p class="display text-[.65rem] tracking-[.2em] uppercase text-gold mb-3">BorderFlow AI</p>
-        <p class="text-[1.05rem] font-medium leading-snug mb-2">通関業務の前後工程まで一体で、<br>BorderFlow AIが自動化を支援します。</p>
-        <p class="text-[.78rem] text-white/60 mb-6">NACCS連携からHS分類補助まで、通関業務を包括的にカバーします。</p>
-        <a href="/#contact" class="inline-block bg-gold text-navy text-[.78rem] font-medium px-8 py-3 hover:bg-gold-light transition-colors">お問い合わせ・ご相談</a>
-      </div>
-
-    </article>
-  </div>
+<div class="max-w-3xl mx-auto">
+<p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3">AI Customs</p>
+<h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4">AI通関とは？<br/>HS分類・申告業務の自動化が変えるもの</h1>
+<div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2">
+<time datetime="2026-03-28">2026.03.28</time>
+<span data-en="Wing Editorial Team" data-ja="Wing編集部">Wing編集部</span>
+</div>
+<div class="gold-rule mb-10"></div>
+<article class="text-[.9rem] text-ink leading-[2] max-w-none">
+<h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4" data-en="The Reality of Customs Operations: A Bundle of Expertise and Workload" data-ja="通関業務の現実：専門性と工数の塊">通関業務の現実：専門性と工数の塊</h2>
+<p data-en="Import customs clearance is one of the most expertise-intensive processes in the trade flow. Accurately preparing declaration documents for customs, classifying goods with proper HS codes, calculating duty amounts, and filing through NACCS. This is repeated for every transaction." data-ja="輸入通関は、貿易フローの中で最も専門性が要求されるプロセスの一つだ。税関に対して申告書類を正確に作成し、適切なHSコードで品目を申告し、関税額を計算し、NACCSシステムを通じて申告を行う。これを取引ごとに繰り返す。">輸入通関は、貿易フローの中で最も専門性が要求されるプロセスの一つだ。税関に対して申告書類を正確に作成し、適切なHSコードで品目を申告し、関税額を計算し、NACCSシステムを通じて申告を行う。これを取引ごとに繰り返す。</p>
+<p data-en="Even for companies outsourcing to customs brokers, the importer is responsible for providing and confirming the information needed for declarations, making final HS classification decisions, and post-verification of filing contents. &quot;It's not our concern because we outsource to a broker&quot; does not hold." data-ja="通関業者（乙仲）に委託している企業でも、申告に必要な情報の提供・確認、HS分類の最終判断、申告内容の事後確認は輸入者側に責任がある。「通関業者に任せているから関係ない」は通用しない。">通関業者（乙仲）に委託している企業でも、申告に必要な情報の提供・確認、HS分類の最終判断、申告内容の事後確認は輸入者側に責任がある。「通関業者に任せているから関係ない」は通用しない。</p>
+<p data-en="AI customs refers to the initiative of having AI take over the automatable portions of this workflow, reducing the decision-making workload of specialist staff." data-ja="AI通関とは、この一連の業務においてAIが担える部分を代替し、専門担当者の判断工数を削減する取り組みだ。">AI通関とは、この一連の業務においてAIが担える部分を代替し、専門担当者の判断工数を削減する取り組みだ。</p>
+<h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4" data-en="Three Areas AI Customs Is Transforming" data-ja="AI通関が変える3つの領域">AI通関が変える3つの領域</h2>
+<!-- DIAGRAM: AI通関の3領域 -->
+<div class="diag-wrap">
+<div class="diag-label" data-en="Three Areas AI Customs Automates" data-ja="AI通関が自動化する3つの領域">AI通関が自動化する3つの領域</div>
+<div class="diag-step-row">
+<div class="diag-step-card">
+<div class="step-num">01</div>
+<div class="step-title" data-en="HS Code Classification Automation" data-ja="HSコード分類の自動化">HSコード分類の自動化</div>
+<div class="step-body" data-en="Presents HS code candidates based on item name, composition, and usage. Ensures consistency through past filing cross-reference and tariff revision alerts" data-ja="品名・成分・用途からHS番号候補を提示。過去申告実績との照合と関税改正アラートで一貫性を担保">品名・成分・用途からHS番号候補を提示。過去申告実績との照合と関税改正アラートで一貫性を担保</div>
+</div>
+<div class="diag-step-card">
+<div class="step-num">02</div>
+<div class="step-title" data-en="Automated Declaration Document Preparation" data-ja="申告書類の自動作成">申告書類の自動作成</div>
+<div class="step-body" data-en="AI-OCR reads received documents and auto-maps to declaration forms. Zero transcription errors with automatic cross-checking against source documents" data-ja="AI-OCRで受領書類を読み取り、申告書フォームへ自動マッピング。転記ミスゼロ・元書類との自動照合">AI-OCRで受領書類を読み取り、申告書フォームへ自動マッピング。転記ミスゼロ・元書類との自動照合</div>
+</div>
+<div class="diag-step-card">
+<div class="step-num">03</div>
+<div class="step-title" data-en="NACCS Integration Automation" data-ja="NACCSとの連携自動化">NACCSとの連携自動化</div>
+<div class="step-body" data-en="From filing to receiving clearance notices and duty/tax payment instructions, completed within the system. Manual operations minimized" data-ja="申告から許可通知の受領、関税・消費税の納付指示までシステム内で完結。手動操作を最小化">申告から許可通知の受領、関税・消費税の納付指示までシステム内で完結。手動操作を最小化</div>
+</div>
+</div>
+</div>
+<p class="diag-caption" data-en="Three Areas AI Customs Automates" data-ja="AI通関が自動化する3つの領域">[図] AI通関が自動化する3つの領域</p>
+<h3 class="text-[1rem] font-medium text-ink" data-en="1. HS Code Classification Automation" data-ja="1. HSコード分類の自動化">1. HSコード分類の自動化</h3>
+<p data-en="HS (Harmonized System) codes are 6-9 digit classification numbers assigned to each item, determining applicable tariff rates and import regulations. In addition to the globally common first 6 digits, Japan further subdivides to 9 digits (statistical subdivisions)." data-ja="HS（Harmonized System）コードは品目ごとに割り当てられる6〜9桁の分類番号で、関税率・輸入規制の適用を決定する。世界共通の上位6桁に加え、日本では9桁（統計細分）まで細分化されている。">HS（Harmonized System）コードは品目ごとに割り当てられる6〜9桁の分類番号で、関税率・輸入規制の適用を決定する。世界共通の上位6桁に加え、日本では9桁（統計細分）まで細分化されている。</p>
+<p data-en="HS classification of items requiring specialized knowledge, such as chemicals, food, and electronic components, takes time even for experienced staff. AI assists with this through the following methods." data-ja="化学品・食品・電子部品など、専門知識が必要な品目のHS分類は、経験のある担当者でも調査に時間を要する。AIはこれを以下の方法で補助する。">化学品・食品・電子部品など、専門知識が必要な品目のHS分類は、経験のある担当者でも調査に時間を要する。AIはこれを以下の方法で補助する。</p>
+<ul class="list-disc">
+<li><strong>品名・成分・用途からの候補番号提示</strong>：自然言語の品名説明からHS番号の候補リストを生成し、関税率・適用注釈とともに提示する</li>
+<li><strong>過去申告実績との照合</strong>：同一品目または類似品目の過去の申告実績を参照し、分類の一貫性を担保する</li>
+<li><strong>関税率・税番変更アラート</strong>：年次関税改正や品目分類の変更を自動検知し、影響を受ける品目を担当者に通知する</li>
+</ul>
+<p data-en="The final filing decision is made by staff, but research and search workload is significantly reduced." data-ja="最終的な申告判断は担当者が行うが、調査・検索工数が大幅に削減される。">最終的な申告判断は担当者が行うが、調査・検索工数が大幅に削減される。</p>
+<h3 class="text-[1rem] font-medium text-ink" data-en="2. Automated Declaration Document Preparation" data-ja="2. 申告書類の自動作成">2. 申告書類の自動作成</h3>
+<p data-en="The information needed for customs filings already exists in received documents (Invoice, Packing List, B/L, etc.). AI-OCR reads these and automatically maps them to declaration forms." data-ja="通関申告に必要な情報は、すでに受領した書類（Invoice、Packing List、B/L等）の中に存在している。AI-OCRでこれらを読み取り、申告書のフォームに自動マッピングする。">通関申告に必要な情報は、すでに受領した書類（Invoice、Packing List、B/L等）の中に存在している。AI-OCRでこれらを読み取り、申告書のフォームに自動マッピングする。</p>
+<p data-en="Not only does it eliminate the need for manual entry, it also prevents filing errors caused by transcription mistakes. An effective design automatically cross-checks against source documents after preparation, requesting staff review only when discrepancies exist." data-ja="手動入力が不要になるだけでなく、転記ミスによる申告誤りも防止できる。申告書の作成後、元書類との自動照合を実行し、差異がある場合のみ担当者の確認を求める設計が効果的だ。">手動入力が不要になるだけでなく、転記ミスによる申告誤りも防止できる。申告書の作成後、元書類との自動照合を実行し、差異がある場合のみ担当者の確認を求める設計が効果的だ。</p>
+<h3 class="text-[1rem] font-medium text-ink" data-en="3. NACCS Integration Automation" data-ja="3. NACCSとの連携自動化">3. NACCSとの連携自動化</h3>
+<p data-en="NACCS is the system that digitizes Japanese import/export customs procedures, serving as the infrastructure connecting customs, brokers, and importers. By automating NACCS integration, the entire flow from filing to receiving clearance notices and duty/tax payment instructions can be completed within the system." data-ja="NACCSは日本の輸出入通関手続きを電子化するシステムで、税関・通関業者・輸入者をつなぐインフラだ。このNACCSとの連携を自動化することで、申告から許可通知の受領、関税・消費税の納付指示までのフローをシステム内で完結させることができる。">NACCSは日本の輸出入通関手続きを電子化するシステムで、税関・通関業者・輸入者をつなぐインフラだ。このNACCSとの連携を自動化することで、申告から許可通知の受領、関税・消費税の納付指示までのフローをシステム内で完結させることができる。</p>
+<h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4" data-en="Properly Understanding the Limitations of AI Customs" data-ja="AI通関の「限界」を正しく理解する">AI通関の「限界」を正しく理解する</h2>
+<p data-en="It is important to distinguish between what AI customs can deliver and what it cannot." data-ja="AI通関に期待できることと、そうでないことを区別することが重要だ。">AI通関に期待できることと、そうでないことを区別することが重要だ。</p>
+<!-- DIAGRAM: AIの得意/不得意の比較 -->
+<div class="diag-wrap">
+<div class="diag-label">AI通関 ── できること・できないことの正確な整理</div>
+<div class="diag-row">
+<div class="diag-compare-col highlight">
+<div class="col-head" data-en="What AI Does Well" data-ja="AIが得意なこと">AIが得意なこと</div>
+<ul>
+<li data-en="Generating HS classification candidates for standard items" data-ja="定型的な品目のHS分類候補の生成">定型的な品目のHS分類候補の生成</li>
+<li data-en="Extracting information from documents and mapping to forms" data-ja="書類からの情報抽出とフォームへの転記">書類からの情報抽出とフォームへの転記</li>
+<li data-en="Referencing past cases and consistency checking" data-ja="過去事例の参照と一貫性チェック">過去事例の参照と一貫性チェック</li>
+<li data-en="Alerts for filing deadlines and document deficiencies" data-ja="申告期限・書類不備のアラート">申告期限・書類不備のアラート</li>
+</ul>
+</div>
+<div class="diag-compare-col">
+<div class="col-head" data-en="What Still Requires Human Judgment" data-ja="人間の判断が引き続き必要なこと">人間の判断が引き続き必要なこと</div>
+<ul>
+<li data-en="Classification decisions for new or composite items (legal liability rests with the filer)" data-ja="新規品目・複合品目の分類判断（法的責任は申告者にある）">新規品目・複合品目の分類判断（法的責任は申告者にある）</li>
+<li data-en="Inquiries and negotiations with customs authorities" data-ja="税関への照会・交渉">税関への照会・交渉</li>
+<li data-en="Handling prohibited and restricted import items" data-ja="輸入禁制品・輸入規制品への対応">輸入禁制品・輸入規制品への対応</li>
+<li data-en="Amended filing procedures when errors are discovered" data-ja="申告誤りが発覚した場合の修正申告手続き">申告誤りが発覚した場合の修正申告手続き</li>
+</ul>
+</div>
+</div>
+</div>
+<p class="diag-caption">[図] AI通関でできること・人間の判断が必要なことの整理</p>
+<p data-en="AI functions as a work assistant for specialist staff. A design where AI makes the classification and humans simply approve carries high risk at present. The realistic approach is a design where staff review AI-proposed candidates along with supporting rationale and make the final decision." data-ja="AIは専門担当者の「作業補助」として機能する。AIが分類を決定し、人間はそれを承認するだけ──という設計は、現時点ではリスクが高い。AIの提示する候補を根拠とともに確認し、担当者が最終判断を下す設計が現実的だ。">AIは専門担当者の「作業補助」として機能する。AIが分類を決定し、人間はそれを承認するだけ──という設計は、現時点ではリスクが高い。AIの提示する候補を根拠とともに確認し、担当者が最終判断を下す設計が現実的だ。</p>
+<h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4" data-en="Effects of Customs Automation: What Changes" data-ja="通関自動化の効果：何が変わるか">通関自動化の効果：何が変わるか</h2>
+<p data-en="Reports from companies using AI in customs operations show the following changes." data-ja="通関業務でAIを活用している企業からの報告では、以下のような変化が見られる。">通関業務でAIを活用している企業からの報告では、以下のような変化が見られる。</p>
+<!-- DIAGRAM: 効果数値 -->
+<div class="diag-wrap">
+<div class="diag-label">AI通関 導入効果の実績値</div>
+<div class="diag-step-row">
+<div class="diag-step-card">
+<div class="step-num" style="width:auto;padding:0 6px;font-size:0.65rem;">HS</div>
+<div class="step-title" data-en="HS Classification Research Time" data-ja="HS分類の調査時間">HS分類の調査時間</div>
+<div class="step-body" style="font-size:0.85rem;font-weight:700;color:#5A9A6A;">一品目あたり平均<br/>40〜60%短縮</div>
+</div>
+<div class="diag-step-card">
+<div class="step-num" data-en="Manual Declaration Data Entry" data-ja="申告書の手入力作業" style="width:auto;padding:0 6px;font-size:0.65rem;">入力</div>
+<div class="step-title" data-en="Manual Declaration Data Entry" data-ja="申告書の手入力作業">申告書の手入力作業</div>
+<div class="step-body" style="font-size:0.85rem;font-weight:700;color:#5A9A6A;">書類読み取り自動化で<br/>80%以上削減</div>
+</div>
+<div class="diag-step-card">
+<div class="step-num" style="width:auto;padding:0 6px;font-size:0.65rem;">精度</div>
+<div class="step-title" data-en="Filing Error and Rejection Rate" data-ja="申告誤り・差戻し率">申告誤り・差戻し率</div>
+<div class="step-body" style="font-size:0.85rem;font-weight:700;color:#5A9A6A;">照合自動化により<br/>大幅に減少</div>
+</div>
+<div class="diag-step-card">
+<div class="step-num" style="width:auto;padding:0 6px;font-size:0.65rem;">生産性</div>
+<div class="step-title" data-en="Cases Processed Per Staff Member" data-ja="担当者一人あたりの処理件数">担当者一人あたりの処理件数</div>
+<div class="step-body" style="font-size:0.85rem;font-weight:700;color:#5A9A6A;">1.5〜2倍に増加</div>
+</div>
+</div>
+</div>
+<p class="diag-caption">[図] AI通関導入による業務効果（実績参考値）</p>
+<ul class="list-disc">
+<li><strong>HS分類の調査時間：一品目あたり平均40%〜60%短縮</strong></li>
+<li><strong>申告書の手入力作業：書類読み取り自動化により80%以上削減</strong></li>
+<li><strong>申告誤り・差戻し率：照合自動化により大幅に減少</strong></li>
+<li><strong>通関担当者一人あたりの処理件数：1.5〜2倍に増加</strong></li>
+</ul>
+<p data-en="The effect tends to be greatest for trading companies and manufacturers with many product types requiring specialized HS classification knowledge." data-ja="特に取扱品目が多く、HS分類の専門知識が必要な商社・メーカーほど、効果が大きく出る傾向がある。">特に取扱品目が多く、HS分類の専門知識が必要な商社・メーカーほど、効果が大きく出る傾向がある。</p>
+<p data-en="Automating AI customs together with upstream and downstream processes. BorderFlow AI comprehensively supports customs operations from NACCS integration to HS classification assistance." data-ja="AI通関とその前後工程を一体で自動化する──BorderFlow AIはNACCS連携からHS分類補助まで、通関業務を包括的にサポートします。">AI通関とその前後工程を一体で自動化する──BorderFlow AIはNACCS連携からHS分類補助まで、通関業務を包括的にサポートします。</p>
+<!-- CTA -->
+<div class="mt-14 p-8 bg-navy text-white text-center rounded-sm">
+<p class="display text-[.65rem] tracking-[.2em] uppercase text-gold mb-3">BorderFlow AI</p>
+<p class="text-[1.05rem] font-medium leading-snug mb-2">通関業務の前後工程まで一体で、<br/>BorderFlow AIが自動化を支援します。</p>
+<p class="text-[.78rem] text-white/60 mb-6" data-en="Comprehensive coverage from NACCS integration to HS classification assistance." data-ja="NACCS連携からHS分類補助まで、通関業務を包括的にカバーします。">NACCS連携からHS分類補助まで、通関業務を包括的にカバーします。</p>
+<a class="inline-block bg-gold text-navy text-[.78rem] font-medium px-8 py-3 hover:bg-gold-light transition-colors" data-en="Contact Us" data-ja="お問い合わせ・ご相談" href="/#contact">お問い合わせ・ご相談</a>
+</div>
+</article>
+</div>
 </main>
-
 <!-- ─── FOOTER ─────────────────────────────────────────── -->
 <footer class="bg-navy py-10 px-6 md:px-10 mt-16">
-  <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-    <svg width="80" height="28" viewBox="0 0 120 36" fill="none" aria-label="Wing">
-      <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff" opacity=".6"/>
-      <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#fff" opacity=".6">Wing</text>
-    </svg>
-    <p class="text-[.68rem] text-white/30">© 2026 Wing. All rights reserved.</p>
-  </div>
+<div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+<svg aria-label="Wing" fill="none" height="28" viewbox="0 0 120 36" width="80">
+<path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff" opacity=".6"></path>
+<text fill="#fff" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" opacity=".6" x="46" y="25">Wing</text>
+</svg>
+<p class="text-[.68rem] text-white/30">© 2026 Wing. All rights reserved.</p>
+</div>
 </footer>
-
 </body>
 </html>

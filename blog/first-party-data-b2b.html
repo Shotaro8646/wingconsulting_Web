@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="ja" class="scroll-smooth">
+
+<html class="scroll-smooth" lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>クッキーレス時代のB2Bデータ戦略：ファーストパーティ・ゼロパーティデータの実践活用法 | Wing Blog</title>
-<meta name="description" content="サードパーティCookie廃止後のB2Bマーケティングデータ戦略。ゼロパーティ・ファーストパーティデータの収集設計、サーバーサイドトラッキング、CMP実装を解説。">
-<meta name="keywords" content="クッキーレス, ファーストパーティデータ, ゼロパーティデータ, サードパーティCookie, B2Bデータ戦略, サーバーサイドトラッキング, CMP, CDP, データ基盤">
-<meta property="og:title" content="クッキーレス時代のB2Bデータ戦略：ファーストパーティ・ゼロパーティデータの実践活用法 | Wing Blog">
-<meta property="og:description" content="サードパーティCookie廃止後のB2Bマーケティングデータ戦略。ゼロパーティ・ファーストパーティデータの収集設計、サーバーサイドトラッキング、CMP実装を解説。">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://wingconsulting.org/blog/first-party-data-b2b">
-<meta property="og:locale" content="ja_JP">
-<meta property="og:image" content="https://wingconsulting.org/images/og-default.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:site_name" content="Wing">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="クッキーレス時代のB2Bデータ戦略：ファーストパーティ・ゼロパーティデータの実践活用法">
-<meta name="twitter:description" content="サードパーティCookie廃止後のB2Bマーケティングデータ戦略。ゼロパーティ・ファーストパーティデータの収集設計、サーバーサイドトラッキング、CMP実装を解説。">
-<meta name="twitter:image" content="https://wingconsulting.org/images/og-default.png">
-<link rel="canonical" href="https://wingconsulting.org/blog/first-party-data-b2b">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cookieless B2B Data Strategy | Wing Blog</title>
+<meta content="Practical guide to first-party and zero-party data." name="description"/>
+<meta content="クッキーレス, ファーストパーティデータ, ゼロパーティデータ, サードパーティCookie, B2Bデータ戦略, サーバーサイドトラッキング, CMP, CDP, データ基盤" name="keywords"/>
+<meta content="Cookieless B2B Data Strategy: First &amp; Zero-Party Data" property="og:title"/>
+<meta content="Practical guide to first-party and zero-party data." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://wingconsulting.org/blog/first-party-data-b2b" property="og:url"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="https://wingconsulting.org/images/og-default.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Wing" property="og:site_name"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Cookieless B2B Data Strategy: First &amp; Zero-Party Data" name="twitter:title"/>
+<meta content="Practical guide to first-party and zero-party data." name="twitter:description"/>
+<meta content="https://wingconsulting.org/images/og-default.png" name="twitter:image"/>
+<link href="https://wingconsulting.org/blog/first-party-data-b2b" rel="canonical"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -97,14 +98,14 @@ article li { margin-bottom: 0.5rem; }
 .kpi-item .kpi-label { font-size:0.7rem; color:#8A8A96; line-height:1.4; }
 </style>
 <!-- Google Analytics GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-KN7NWHFK9G');
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;family=Noto+Sans+JP:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
 <style id="font-override">
   body, p, li, td, th, span, div { font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif !important; }
   h1, h2, h3, h4, h5, h6, .serif { font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif !important; }
@@ -114,202 +115,812 @@ article li { margin-bottom: 0.5rem; }
 </head>
 <body class="bg-slate-warm text-ink">
 <header class="bg-navy h-[60px] flex items-center px-6 md:px-10 sticky top-0 z-50">
-  <div class="max-w-5xl mx-auto w-full flex items-center justify-between">
-    <a href="/" class="leading-none">
-      <svg width="120" height="36" viewBox="0 0 120 36" fill="none" aria-label="Wing">
-        <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff"/>
-        <path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#fff" opacity=".32"/>
-        <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#fff">Wing</text>
-      </svg>
-    </a>
-    <div class="flex items-center gap-4">
-      <span class="display text-[.7rem] font-medium tracking-wider text-white/50">Blog</span>
-      <a href="/" class="text-[.75rem] text-white/70 hover:text-white transition-colors">← Home</a>
-    </div>
-  </div>
+<div class="max-w-5xl mx-auto w-full flex items-center justify-between">
+<a class="leading-none" href="/">
+<svg aria-label="Wing" fill="none" height="36" viewbox="0 0 120 36" width="120">
+<path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff"></path>
+<path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#fff" opacity=".32"></path>
+<text fill="#fff" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" x="46" y="25">Wing</text>
+</svg>
+</a>
+<div class="flex items-center gap-4">
+<span class="display text-[.7rem] font-medium tracking-wider text-white/50">Blog</span>
+<a class="text-[.75rem] text-white/70 hover:text-white transition-colors" href="/">← Home</a>
+</div>
+</div>
 </header>
 <main class="py-16 px-6 md:px-10">
-  <div class="max-w-3xl mx-auto">
-    <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3">B2B Marketing / Data Strategy</p>
-    <h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4">クッキーレス時代のB2Bデータ戦略：<br>ファーストパーティ・ゼロパーティデータの実践活用法</h1>
-    <div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2">
-      <time datetime="2026-03-29">2026.03.29</time>
-      <span>Wing編集部</span>
-    </div>
-    <div class="gold-rule mb-10"></div>
-    <article class="text-[.9rem] text-ink leading-[2] max-w-none">
-
-      <p>2024年、Googleはサードパーティ Cookie の廃止計画を事実上撤回し「ユーザー選択型」への移行を発表した。しかしこれは「問題が解決された」ことを意味しない。Safari・Firefox は既に数年前からサードパーティ Cookie をブロックしており、B2Bサイト訪問者の30〜50%はすでにトラッキング不能な状態にある。<strong>クッキーレス対応は先延ばしにできない現実だ。</strong></p>
-
-      <!-- DIAGRAM: Data Strategy Stack -->
-      <div class="diag-wrap" style="margin-bottom:1.8rem">
-        <div class="diag-label">Figure 1 — データ戦略の移行：サードパーティ依存からゼロパーティ中心へ</div>
-        <svg viewBox="0 0 620 240" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;max-width:620px;margin:0 auto" role="img" aria-label="データ種別の価値とトレンドを示す比較図">
-          <rect x="0" y="0" width="620" height="240" fill="#FAFAF8" rx="6"/>
-          <!-- Horizontal bar chart (4 data types stacked, with value and trend indicators) -->
-          <!-- Row labels on left -->
-          <text x="8" y="60" font-size="10" fill="#0F2342" font-family="sans-serif" font-weight="700">ゼロパーティ</text>
-          <text x="8" y="74" font-size="8" fill="#8A8A96" font-family="sans-serif">Zero-Party</text>
-          <text x="8" y="110" font-size="10" fill="#0F2342" font-family="sans-serif" font-weight="700">ファーストパーティ</text>
-          <text x="8" y="124" font-size="8" fill="#8A8A96" font-family="sans-serif">First-Party</text>
-          <text x="8" y="160" font-size="10" fill="#4A4A55" font-family="sans-serif">セカンドパーティ</text>
-          <text x="8" y="174" font-size="8" fill="#8A8A96" font-family="sans-serif">Second-Party</text>
-          <text x="8" y="210" font-size="10" fill="#8A8A96" font-family="sans-serif">サードパーティ</text>
-          <text x="8" y="224" font-size="8" fill="#8A8A96" font-family="sans-serif">Third-Party</text>
-          <!-- Bars -->
-          <!-- Zero-party: Full width, gold, "顧客が自発的に提供" -->
-          <rect x="160" y="42" width="340" height="38" rx="3" fill="#0F2342"/>
-          <text x="330" y="58" text-anchor="middle" font-size="9.5" fill="#A8965A" font-family="sans-serif" font-weight="700">顧客が自発提供・最高精度・プライバシー完全合法</text>
-          <text x="330" y="74" text-anchor="middle" font-size="9" fill="#C4AD72" font-family="sans-serif">アンケート／診断ツール／プリファレンスセンター</text>
-          <text x="510" y="60" font-size="10" fill="#A8965A" font-family="sans-serif" font-weight="700">↑↑ 最重要</text>
-          <!-- First-party: Wide, navy -->
-          <rect x="160" y="92" width="280" height="38" rx="3" fill="#1F3A6E"/>
-          <text x="300" y="108" text-anchor="middle" font-size="9.5" fill="#fff" font-family="sans-serif" font-weight="700">自社直接収集・CRM・サイト行動・メール開封</text>
-          <text x="300" y="124" text-anchor="middle" font-size="9" fill="#BDD0FF" font-family="sans-serif">Server-Side Tag + CDP 基盤が急務</text>
-          <text x="450" y="110" font-size="10" fill="#5A9A6A" font-family="sans-serif" font-weight="700">↑ 基盤整備</text>
-          <!-- Second-party: Medium, mid-gray -->
-          <rect x="160" y="142" width="180" height="38" rx="3" fill="#8A8A96" opacity="0.6"/>
-          <text x="250" y="158" text-anchor="middle" font-size="9" fill="#fff" font-family="sans-serif">パートナー共有データ</text>
-          <text x="250" y="174" text-anchor="middle" font-size="8.5" fill="#fff" font-family="sans-serif">展示会リスト等</text>
-          <text x="350" y="162" font-size="9" fill="#8A8A96" font-family="sans-serif">→ 限定活用</text>
-          <!-- Third-party: Short, faded out -->
-          <rect x="160" y="192" width="80" height="38" rx="3" fill="#C8C5BC" opacity="0.5"/>
-          <text x="200" y="211" text-anchor="middle" font-size="8.5" fill="#8A8A96" font-family="sans-serif">外部DMP</text>
-          <text x="200" y="225" text-anchor="middle" font-size="8" fill="#8A8A96" font-family="sans-serif">Cookie依存</text>
-          <text x="250" y="212" font-size="9" fill="#C45C3A" font-family="sans-serif">↓↓ 急速に価値低下</text>
-          <!-- Value axis indicator -->
-          <text x="160" y="18" font-size="8" fill="#8A8A96" font-family="sans-serif">データ価値・利用可能期間 →</text>
-          <line x1="160" y1="22" x2="500" y2="22" stroke="#E2E0DA" stroke-width="1"/>
-          <polygon points="498,18 508,22 498,26" fill="#E2E0DA"/>
-        </svg>
-        <p class="diag-caption">戦略の重心を右から左へ移行する——ゼロ・ファーストパーティデータ基盤の構築が急務</p>
-      </div>
-
-      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">データの「3層構造」を理解する</h2>
-
-      <p>マーケティングデータは取得方法によって3つの層に分類される。2026年以降の戦略は、この3層の役割を明確に定義することから始まる。</p>
-
-      <div class="diag-wrap">
-        <div class="diag-label">Data Taxonomy — 3層構造</div>
-        <table class="compare-table">
-          <thead><tr><th>種別</th><th>定義</th><th>例</th><th>2026年の位置づけ</th></tr></thead>
-          <tbody>
-            <tr><td><strong>ゼロパーティデータ</strong></td><td>顧客が自ら積極的に提供した情報</td><td>アンケート回答、プリファレンスセンター設定、コンテンツ選好申告</td><td>最高価値・増大中</td></tr>
-            <tr><td><strong>ファーストパーティデータ</strong></td><td>自社が直接収集した行動・属性データ</td><td>サイト閲覧履歴、メール開封・クリック、CRM登録情報</td><td>基盤・整備が急務</td></tr>
-            <tr><td><strong>セカンドパーティデータ</strong></td><td>パートナー企業が収集・共有したデータ</td><td>メディアパートナーの閲覧データ、展示会主催者のリスト</td><td>限定的に活用</td></tr>
-            <tr><td><strong>サードパーティデータ</strong></td><td>外部データブローカーが収集・販売</td><td>デモグラフィックセグメント、行動ターゲティングCookie</td><td>急速に価値低下</td></tr>
-          </tbody>
-        </table>
-        <p class="diag-caption">戦略の重心をサード→ゼロ・ファーストへ移行することが最優先課題</p>
-      </div>
-
-      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">ゼロパーティデータをB2Bで収集する5つの方法</h2>
-
-      <p>ゼロパーティデータは「渡したい」と思った時だけ渡される。そのため収集設計は「情報提供と引き換えの価値」を明示することが必須だ。</p>
-
-      <div class="diag-wrap">
-        <div class="diag-label">Zero-Party Data — B2B収集設計</div>
-        <div class="diag-step-row">
-          <div class="diag-step-card">
-            <div class="step-num">01</div>
-            <div class="step-title">プリファレンスセンター</div>
-            <div class="step-body">「どのテーマの情報を受け取りたいか」を登録者自身が設定。スパム率低下＋セグメント精度向上の一石二鳥。</div>
-          </div>
-          <div class="diag-step-card">
-            <div class="step-num">02</div>
-            <div class="step-title">インタラクティブ診断ツール</div>
-            <div class="step-body">「自社のDX成熟度を測る」「コスト削減余地を診断する」などの無料ツール提供と引き換えに課題・規模情報を収集。</div>
-          </div>
-          <div class="diag-step-card">
-            <div class="step-num">03</div>
-            <div class="step-title">ウェビナー事前アンケート</div>
-            <div class="step-body">参加申込時に「現在の課題」「検討中の施策」を任意回答。回答率60〜70%が一般的で質の高いデータが得られる。</div>
-          </div>
-          <div class="diag-step-card">
-            <div class="step-num">04</div>
-            <div class="step-title">コンテンツレコメンド設定</div>
-            <div class="step-body">「あなたの役職・業界・関心領域を教えてください」でパーソナライズドコンテンツを提供。価値交換が明確。</div>
-          </div>
-          <div class="diag-step-card">
-            <div class="step-num">05</div>
-            <div class="step-title">CS定例ヒアリング構造化</div>
-            <div class="step-body">既存顧客との定例MTGを「データ収集の場」として構造化。構造化フォームで入力しCRMに自動同期。</div>
-          </div>
-        </div>
-        <p class="diag-caption">「何かの見返りに情報をもらう」という設計が、ゼロパーティデータ収集の大原則</p>
-      </div>
-
-      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">ファーストパーティデータ基盤の技術構成</h2>
-
-      <p>ファーストパーティデータを正確に収集・管理するためには、従来のクライアントサイドタグ（Google Tag Manager等）に依存した構成から脱却する必要がある。</p>
-
-      <div class="diag-wrap">
-        <div class="diag-label">Tech Stack — ファーストパーティデータ基盤</div>
-        <div class="diag-step-row">
-          <div class="diag-step-card">
-            <div class="step-num">CMP</div>
-            <div class="step-title">同意管理プラットフォーム</div>
-            <div class="step-body">OneTrust、Cookiebot等。GDPR・個人情報保護法対応の同意取得・記録。GAM/GTMと連携して同意に応じたタグ制御。</div>
-          </div>
-          <div class="diag-step-card">
-            <div class="step-num">SST</div>
-            <div class="step-title">サーバーサイドトラッキング</div>
-            <div class="step-body">GTM Server-side Container等。クライアントからサーバーにデータを送り各ツールへ転送。AdBlockerとCookie制限を回避。</div>
-          </div>
-          <div class="diag-step-card">
-            <div class="step-num">CDP</div>
-            <div class="step-title">顧客データプラットフォーム</div>
-            <div class="step-body">Segment、RudderStack等。複数チャネルのデータを統合し単一顧客IDで管理。MAやCRMへの一元配信基盤。</div>
-          </div>
-          <div class="diag-step-card">
-            <div class="step-num">CRM</div>
-            <div class="step-title">CRMとの統合</div>
-            <div class="step-body">HubSpot/Salesforce。CDPで統合されたデータをCRMに反映し、営業・CSへのインテリジェンス提供とパーソナライズ実行。</div>
-          </div>
-        </div>
-        <p class="diag-caption">CMP→SST→CDP→CRMの順に整備するのが推奨ロードマップ</p>
-      </div>
-
-      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">日本のB2B企業が直面するデータ基盤整備の現実</h2>
-
-      <p>多くの日本のB2B企業では、マーケティングデータが「MAのメール行動ログ」「CRMの商談情報」「Webアナリティクス（GA4）」の3つにサイロ化されていて、それらが統合されていない。この状態では、たとえゼロパーティデータを収集しても活用できない。</p>
-
-      <div class="warn-box">
-        <div class="warn-label">よくある失敗：先にツール導入してしまうケース</div>
+<div class="max-w-3xl mx-auto" data-ja-html="&lt;p class=&quot;display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3&quot;&gt;B2B Marketing / Data Strategy&lt;/p&gt;
+&lt;h1 class=&quot;serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4&quot; data-ja-html=&quot;クッキーレス時代のB2Bデータ戦略：&amp;lt;br/&amp;gt;ファーストパーティ・ゼロパーティデータの実践活用法&quot;&gt;クッキーレス時代のB2Bデータ戦略：&lt;br/&gt;ファーストパーティ・ゼロパーティデータの実践活用法&lt;/h1&gt;
+&lt;div class=&quot;flex items-center gap-4 text-[.75rem] text-ink-light mb-2&quot;&gt;
+&lt;time datetime=&quot;2026-03-29&quot;&gt;2026.03.29&lt;/time&gt;
+&lt;span&gt;Wing編集部&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gold-rule mb-10&quot;&gt;&lt;/div&gt;
+&lt;article class=&quot;text-[.9rem] text-ink leading-[2] max-w-none&quot;&gt;
+&lt;p data-ja-html=&quot;2024年、Googleはサードパーティ Cookie の廃止計画を事実上撤回し「ユーザー選択型」への移行を発表した。しかしこれは「問題が解決された」ことを意味しない。Safari・Firefox は既に数年前からサードパーティ Cookie をブロックしており、B2Bサイト訪問者の30〜50%はすでにトラッキング不能な状態にある。&amp;lt;strong&amp;gt;クッキーレス対応は先延ばしにできない現実だ。&amp;lt;/strong&amp;gt;&quot;&gt;2024年、Googleはサードパーティ Cookie の廃止計画を事実上撤回し「ユーザー選択型」への移行を発表した。しかしこれは「問題が解決された」ことを意味しない。Safari・Firefox は既に数年前からサードパーティ Cookie をブロックしており、B2Bサイト訪問者の30〜50%はすでにトラッキング不能な状態にある。&lt;strong&gt;クッキーレス対応は先延ばしにできない現実だ。&lt;/strong&gt;&lt;/p&gt;
+&lt;!-- DIAGRAM: Data Strategy Stack --&gt;
+&lt;div class=&quot;diag-wrap&quot; style=&quot;margin-bottom:1.8rem&quot;&gt;
+&lt;div class=&quot;diag-label&quot;&gt;Figure 1 — データ戦略の移行：サードパーティ依存からゼロパーティ中心へ&lt;/div&gt;
+&lt;svg aria-label=&quot;データ種別の価値とトレンドを示す比較図&quot; role=&quot;img&quot; style=&quot;width:100%;display:block;max-width:620px;margin:0 auto&quot; viewbox=&quot;0 0 620 240&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;rect fill=&quot;#FAFAF8&quot; height=&quot;240&quot; rx=&quot;6&quot; width=&quot;620&quot; x=&quot;0&quot; y=&quot;0&quot;&gt;&lt;/rect&gt;
+&lt;!-- Horizontal bar chart (4 data types stacked, with value and trend indicators) --&gt;
+&lt;!-- Row labels on left --&gt;
+&lt;text fill=&quot;#0F2342&quot; font-family=&quot;sans-serif&quot; font-size=&quot;10&quot; font-weight=&quot;700&quot; x=&quot;8&quot; y=&quot;60&quot;&gt;ゼロパーティ&lt;/text&gt;
+&lt;text fill=&quot;#8A8A96&quot; font-family=&quot;sans-serif&quot; font-size=&quot;8&quot; x=&quot;8&quot; y=&quot;74&quot;&gt;Zero-Party&lt;/text&gt;
+&lt;text fill=&quot;#0F2342&quot; font-family=&quot;sans-serif&quot; font-size=&quot;10&quot; font-weight=&quot;700&quot; x=&quot;8&quot; y=&quot;110&quot;&gt;ファーストパーティ&lt;/text&gt;
+&lt;text fill=&quot;#8A8A96&quot; font-family=&quot;sans-serif&quot; font-size=&quot;8&quot; x=&quot;8&quot; y=&quot;124&quot;&gt;First-Party&lt;/text&gt;
+&lt;text fill=&quot;#4A4A55&quot; font-family=&quot;sans-serif&quot; font-size=&quot;10&quot; x=&quot;8&quot; y=&quot;160&quot;&gt;セカンドパーティ&lt;/text&gt;
+&lt;text fill=&quot;#8A8A96&quot; font-family=&quot;sans-serif&quot; font-size=&quot;8&quot; x=&quot;8&quot; y=&quot;174&quot;&gt;Second-Party&lt;/text&gt;
+&lt;text fill=&quot;#8A8A96&quot; font-family=&quot;sans-serif&quot; font-size=&quot;10&quot; x=&quot;8&quot; y=&quot;210&quot;&gt;サードパーティ&lt;/text&gt;
+&lt;text fill=&quot;#8A8A96&quot; font-family=&quot;sans-serif&quot; font-size=&quot;8&quot; x=&quot;8&quot; y=&quot;224&quot;&gt;Third-Party&lt;/text&gt;
+&lt;!-- Bars --&gt;
+&lt;!-- Zero-party: Full width, gold, &quot;顧客が自発的に提供&quot; --&gt;
+&lt;rect fill=&quot;#0F2342&quot; height=&quot;38&quot; rx=&quot;3&quot; width=&quot;340&quot; x=&quot;160&quot; y=&quot;42&quot;&gt;&lt;/rect&gt;
+&lt;text fill=&quot;#A8965A&quot; font-family=&quot;sans-serif&quot; font-size=&quot;9.5&quot; font-weight=&quot;700&quot; text-anchor=&quot;middle&quot; x=&quot;330&quot; y=&quot;58&quot;&gt;顧客が自発提供・最高精度・プライバシー完全合法&lt;/text&gt;
+&lt;text fill=&quot;#C4AD72&quot; font-family=&quot;sans-serif&quot; font-size=&quot;9&quot; text-anchor=&quot;middle&quot; x=&quot;330&quot; y=&quot;74&quot;&gt;アンケート／診断ツール／プリファレンスセンター&lt;/text&gt;
+&lt;text fill=&quot;#A8965A&quot; font-family=&quot;sans-serif&quot; font-size=&quot;10&quot; font-weight=&quot;700&quot; x=&quot;510&quot; y=&quot;60&quot;&gt;↑↑ 最重要&lt;/text&gt;
+&lt;!-- First-party: Wide, navy --&gt;
+&lt;rect fill=&quot;#1F3A6E&quot; height=&quot;38&quot; rx=&quot;3&quot; width=&quot;280&quot; x=&quot;160&quot; y=&quot;92&quot;&gt;&lt;/rect&gt;
+&lt;text fill=&quot;#fff&quot; font-family=&quot;sans-serif&quot; font-size=&quot;9.5&quot; font-weight=&quot;700&quot; text-anchor=&quot;middle&quot; x=&quot;300&quot; y=&quot;108&quot;&gt;自社直接収集・CRM・サイト行動・メール開封&lt;/text&gt;
+&lt;text fill=&quot;#BDD0FF&quot; font-family=&quot;sans-serif&quot; font-size=&quot;9&quot; text-anchor=&quot;middle&quot; x=&quot;300&quot; y=&quot;124&quot;&gt;Server-Side Tag + CDP 基盤が急務&lt;/text&gt;
+&lt;text fill=&quot;#5A9A6A&quot; font-family=&quot;sans-serif&quot; font-size=&quot;10&quot; font-weight=&quot;700&quot; x=&quot;450&quot; y=&quot;110&quot;&gt;↑ 基盤整備&lt;/text&gt;
+&lt;!-- Second-party: Medium, mid-gray --&gt;
+&lt;rect fill=&quot;#8A8A96&quot; height=&quot;38&quot; opacity=&quot;0.6&quot; rx=&quot;3&quot; width=&quot;180&quot; x=&quot;160&quot; y=&quot;142&quot;&gt;&lt;/rect&gt;
+&lt;text fill=&quot;#fff&quot; font-family=&quot;sans-serif&quot; font-size=&quot;9&quot; text-anchor=&quot;middle&quot; x=&quot;250&quot; y=&quot;158&quot;&gt;パートナー共有データ&lt;/text&gt;
+&lt;text fill=&quot;#fff&quot; font-family=&quot;sans-serif&quot; font-size=&quot;8.5&quot; text-anchor=&quot;middle&quot; x=&quot;250&quot; y=&quot;174&quot;&gt;展示会リスト等&lt;/text&gt;
+&lt;text fill=&quot;#8A8A96&quot; font-family=&quot;sans-serif&quot; font-size=&quot;9&quot; x=&quot;350&quot; y=&quot;162&quot;&gt;→ 限定活用&lt;/text&gt;
+&lt;!-- Third-party: Short, faded out --&gt;
+&lt;rect fill=&quot;#C8C5BC&quot; height=&quot;38&quot; opacity=&quot;0.5&quot; rx=&quot;3&quot; width=&quot;80&quot; x=&quot;160&quot; y=&quot;192&quot;&gt;&lt;/rect&gt;
+&lt;text fill=&quot;#8A8A96&quot; font-family=&quot;sans-serif&quot; font-size=&quot;8.5&quot; text-anchor=&quot;middle&quot; x=&quot;200&quot; y=&quot;211&quot;&gt;外部DMP&lt;/text&gt;
+&lt;text fill=&quot;#8A8A96&quot; font-family=&quot;sans-serif&quot; font-size=&quot;8&quot; text-anchor=&quot;middle&quot; x=&quot;200&quot; y=&quot;225&quot;&gt;Cookie依存&lt;/text&gt;
+&lt;text fill=&quot;#C45C3A&quot; font-family=&quot;sans-serif&quot; font-size=&quot;9&quot; x=&quot;250&quot; y=&quot;212&quot;&gt;↓↓ 急速に価値低下&lt;/text&gt;
+&lt;!-- Value axis indicator --&gt;
+&lt;text fill=&quot;#8A8A96&quot; font-family=&quot;sans-serif&quot; font-size=&quot;8&quot; x=&quot;160&quot; y=&quot;18&quot;&gt;データ価値・利用可能期間 →&lt;/text&gt;
+&lt;line stroke=&quot;#E2E0DA&quot; stroke-width=&quot;1&quot; x1=&quot;160&quot; x2=&quot;500&quot; y1=&quot;22&quot; y2=&quot;22&quot;&gt;&lt;/line&gt;
+&lt;polygon fill=&quot;#E2E0DA&quot; points=&quot;498,18 508,22 498,26&quot;&gt;&lt;/polygon&gt;
+&lt;/svg&gt;
+&lt;p class=&quot;diag-caption&quot; data-ja=&quot;戦略の重心を右から左へ移行する——ゼロ・ファーストパーティデータ基盤の構築が急務&quot;&gt;戦略の重心を右から左へ移行する——ゼロ・ファーストパーティデータ基盤の構築が急務&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 class=&quot;text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4&quot;&gt;データの「3層構造」を理解する&lt;/h2&gt;
+&lt;p data-ja=&quot;マーケティングデータは取得方法によって3つの層に分類される。2026年以降の戦略は、この3層の役割を明確に定義することから始まる。&quot;&gt;マーケティングデータは取得方法によって3つの層に分類される。2026年以降の戦略は、この3層の役割を明確に定義することから始まる。&lt;/p&gt;
+&lt;div class=&quot;diag-wrap&quot;&gt;
+&lt;div class=&quot;diag-label&quot;&gt;Data Taxonomy — 3層構造&lt;/div&gt;
+&lt;table class=&quot;compare-table&quot;&gt;
+&lt;thead&gt;&lt;tr&gt;&lt;th data-ja=&quot;種別&quot;&gt;種別&lt;/th&gt;&lt;th data-ja=&quot;定義&quot;&gt;定義&lt;/th&gt;&lt;th data-ja=&quot;例&quot;&gt;例&lt;/th&gt;&lt;th data-ja=&quot;2026年の位置づけ&quot;&gt;2026年の位置づけ&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;td data-ja-html=&quot;&amp;lt;strong&amp;gt;ゼロパーティデータ&amp;lt;/strong&amp;gt;&quot;&gt;&lt;strong&gt;ゼロパーティデータ&lt;/strong&gt;&lt;/td&gt;&lt;td data-ja=&quot;顧客が自ら積極的に提供した情報&quot;&gt;顧客が自ら積極的に提供した情報&lt;/td&gt;&lt;td data-ja=&quot;アンケート回答、プリファレンスセンター設定、コンテンツ選好申告&quot;&gt;アンケート回答、プリファレンスセンター設定、コンテンツ選好申告&lt;/td&gt;&lt;td data-ja=&quot;最高価値・増大中&quot;&gt;最高価値・増大中&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td data-ja-html=&quot;&amp;lt;strong&amp;gt;ファーストパーティデータ&amp;lt;/strong&amp;gt;&quot;&gt;&lt;strong&gt;ファーストパーティデータ&lt;/strong&gt;&lt;/td&gt;&lt;td data-ja=&quot;自社が直接収集した行動・属性データ&quot;&gt;自社が直接収集した行動・属性データ&lt;/td&gt;&lt;td data-ja=&quot;サイト閲覧履歴、メール開封・クリック、CRM登録情報&quot;&gt;サイト閲覧履歴、メール開封・クリック、CRM登録情報&lt;/td&gt;&lt;td data-ja=&quot;基盤・整備が急務&quot;&gt;基盤・整備が急務&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td data-ja-html=&quot;&amp;lt;strong&amp;gt;セカンドパーティデータ&amp;lt;/strong&amp;gt;&quot;&gt;&lt;strong&gt;セカンドパーティデータ&lt;/strong&gt;&lt;/td&gt;&lt;td data-ja=&quot;パートナー企業が収集・共有したデータ&quot;&gt;パートナー企業が収集・共有したデータ&lt;/td&gt;&lt;td data-ja=&quot;メディアパートナーの閲覧データ、展示会主催者のリスト&quot;&gt;メディアパートナーの閲覧データ、展示会主催者のリスト&lt;/td&gt;&lt;td data-ja=&quot;限定的に活用&quot;&gt;限定的に活用&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td data-ja-html=&quot;&amp;lt;strong&amp;gt;サードパーティデータ&amp;lt;/strong&amp;gt;&quot;&gt;&lt;strong&gt;サードパーティデータ&lt;/strong&gt;&lt;/td&gt;&lt;td data-ja=&quot;外部データブローカーが収集・販売&quot;&gt;外部データブローカーが収集・販売&lt;/td&gt;&lt;td data-ja=&quot;デモグラフィックセグメント、行動ターゲティングCookie&quot;&gt;デモグラフィックセグメント、行動ターゲティングCookie&lt;/td&gt;&lt;td data-ja=&quot;急速に価値低下&quot;&gt;急速に価値低下&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p class=&quot;diag-caption&quot; data-ja=&quot;戦略の重心をサード→ゼロ・ファーストへ移行することが最優先課題&quot;&gt;戦略の重心をサード→ゼロ・ファーストへ移行することが最優先課題&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 class=&quot;text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4&quot;&gt;ゼロパーティデータをB2Bで収集する5つの方法&lt;/h2&gt;
+&lt;p data-ja=&quot;ゼロパーティデータは「渡したい」と思った時だけ渡される。そのため収集設計は「情報提供と引き換えの価値」を明示することが必須だ。&quot;&gt;ゼロパーティデータは「渡したい」と思った時だけ渡される。そのため収集設計は「情報提供と引き換えの価値」を明示することが必須だ。&lt;/p&gt;
+&lt;div class=&quot;diag-wrap&quot;&gt;
+&lt;div class=&quot;diag-label&quot;&gt;Zero-Party Data — B2B収集設計&lt;/div&gt;
+&lt;div class=&quot;diag-step-row&quot;&gt;
+&lt;div class=&quot;diag-step-card&quot;&gt;
+&lt;div class=&quot;step-num&quot;&gt;01&lt;/div&gt;
+&lt;div class=&quot;step-title&quot;&gt;プリファレンスセンター&lt;/div&gt;
+&lt;div class=&quot;step-body&quot;&gt;「どのテーマの情報を受け取りたいか」を登録者自身が設定。スパム率低下＋セグメント精度向上の一石二鳥。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;diag-step-card&quot;&gt;
+&lt;div class=&quot;step-num&quot;&gt;02&lt;/div&gt;
+&lt;div class=&quot;step-title&quot;&gt;インタラクティブ診断ツール&lt;/div&gt;
+&lt;div class=&quot;step-body&quot;&gt;「自社のDX成熟度を測る」「コスト削減余地を診断する」などの無料ツール提供と引き換えに課題・規模情報を収集。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;diag-step-card&quot;&gt;
+&lt;div class=&quot;step-num&quot;&gt;03&lt;/div&gt;
+&lt;div class=&quot;step-title&quot;&gt;ウェビナー事前アンケート&lt;/div&gt;
+&lt;div class=&quot;step-body&quot;&gt;参加申込時に「現在の課題」「検討中の施策」を任意回答。回答率60〜70%が一般的で質の高いデータが得られる。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;diag-step-card&quot;&gt;
+&lt;div class=&quot;step-num&quot;&gt;04&lt;/div&gt;
+&lt;div class=&quot;step-title&quot;&gt;コンテンツレコメンド設定&lt;/div&gt;
+&lt;div class=&quot;step-body&quot;&gt;「あなたの役職・業界・関心領域を教えてください」でパーソナライズドコンテンツを提供。価値交換が明確。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;diag-step-card&quot;&gt;
+&lt;div class=&quot;step-num&quot;&gt;05&lt;/div&gt;
+&lt;div class=&quot;step-title&quot;&gt;CS定例ヒアリング構造化&lt;/div&gt;
+&lt;div class=&quot;step-body&quot;&gt;既存顧客との定例MTGを「データ収集の場」として構造化。構造化フォームで入力しCRMに自動同期。&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class=&quot;diag-caption&quot; data-ja=&quot;「何かの見返りに情報をもらう」という設計が、ゼロパーティデータ収集の大原則&quot;&gt;「何かの見返りに情報をもらう」という設計が、ゼロパーティデータ収集の大原則&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 class=&quot;text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4&quot;&gt;ファーストパーティデータ基盤の技術構成&lt;/h2&gt;
+&lt;p data-ja=&quot;ファーストパーティデータを正確に収集・管理するためには、従来のクライアントサイドタグ（Google Tag Manager等）に依存した構成から脱却する必要がある。&quot;&gt;ファーストパーティデータを正確に収集・管理するためには、従来のクライアントサイドタグ（Google Tag Manager等）に依存した構成から脱却する必要がある。&lt;/p&gt;
+&lt;div class=&quot;diag-wrap&quot;&gt;
+&lt;div class=&quot;diag-label&quot;&gt;Tech Stack — ファーストパーティデータ基盤&lt;/div&gt;
+&lt;div class=&quot;diag-step-row&quot;&gt;
+&lt;div class=&quot;diag-step-card&quot;&gt;
+&lt;div class=&quot;step-num&quot;&gt;CMP&lt;/div&gt;
+&lt;div class=&quot;step-title&quot;&gt;同意管理プラットフォーム&lt;/div&gt;
+&lt;div class=&quot;step-body&quot;&gt;OneTrust、Cookiebot等。GDPR・個人情報保護法対応の同意取得・記録。GAM/GTMと連携して同意に応じたタグ制御。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;diag-step-card&quot;&gt;
+&lt;div class=&quot;step-num&quot;&gt;SST&lt;/div&gt;
+&lt;div class=&quot;step-title&quot;&gt;サーバーサイドトラッキング&lt;/div&gt;
+&lt;div class=&quot;step-body&quot;&gt;GTM Server-side Container等。クライアントからサーバーにデータを送り各ツールへ転送。AdBlockerとCookie制限を回避。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;diag-step-card&quot;&gt;
+&lt;div class=&quot;step-num&quot;&gt;CDP&lt;/div&gt;
+&lt;div class=&quot;step-title&quot;&gt;顧客データプラットフォーム&lt;/div&gt;
+&lt;div class=&quot;step-body&quot;&gt;Segment、RudderStack等。複数チャネルのデータを統合し単一顧客IDで管理。MAやCRMへの一元配信基盤。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;diag-step-card&quot;&gt;
+&lt;div class=&quot;step-num&quot;&gt;CRM&lt;/div&gt;
+&lt;div class=&quot;step-title&quot;&gt;CRMとの統合&lt;/div&gt;
+&lt;div class=&quot;step-body&quot;&gt;HubSpot/Salesforce。CDPで統合されたデータをCRMに反映し、営業・CSへのインテリジェンス提供とパーソナライズ実行。&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class=&quot;diag-caption&quot; data-ja=&quot;CMP→SST→CDP→CRMの順に整備するのが推奨ロードマップ&quot;&gt;CMP→SST→CDP→CRMの順に整備するのが推奨ロードマップ&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 class=&quot;text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4&quot;&gt;日本のB2B企業が直面するデータ基盤整備の現実&lt;/h2&gt;
+&lt;p data-ja=&quot;多くの日本のB2B企業では、マーケティングデータが「MAのメール行動ログ」「CRMの商談情報」「Webアナリティクス（GA4）」の3つにサイロ化されていて、それらが統合されていない。この状態では、たとえゼロパーティデータを収集しても活用できない。&quot;&gt;多くの日本のB2B企業では、マーケティングデータが「MAのメール行動ログ」「CRMの商談情報」「Webアナリティクス（GA4）」の3つにサイロ化されていて、それらが統合されていない。この状態では、たとえゼロパーティデータを収集しても活用できない。&lt;/p&gt;
+&lt;div class=&quot;warn-box&quot;&gt;
+&lt;div class=&quot;warn-label&quot;&gt;よくある失敗：先にツール導入してしまうケース&lt;/div&gt;
+        CDPを導入する前に「どのデータを統合して、何のために使うか」の設計がないまま進めると、高額のCDPが「データの倉庫」になるだけで終わる。データ戦略の設計→必要データの棚卸し→ツール選定の順序が重要だ。ツールは手段であり、戦略が先だ。
+      &lt;/div&gt;
+&lt;p data-ja=&quot;Wing では、ツール導入の前に「データ活用シナリオ設計」を必ず実施する。「誰のどの行動データを使って、どのアクションを引き起こしたいか」を明文化した上でツール選定・実装に移行する。これにより導入後の活用率と ROI が大幅に改善する。&quot;&gt;Wing では、ツール導入の前に「データ活用シナリオ設計」を必ず実施する。「誰のどの行動データを使って、どのアクションを引き起こしたいか」を明文化した上でツール選定・実装に移行する。これにより導入後の活用率と ROI が大幅に改善する。&lt;/p&gt;
+&lt;h2 class=&quot;text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4&quot;&gt;プライバシーファーストは差別化の機会&lt;/h2&gt;
+&lt;p data-ja=&quot;クッキーレス対応を「コンプライアンス対応コスト」と捉えるか「顧客信頼構築の機会」と捉えるかで、戦略の質が変わる。プライバシーを尊重し、透明性の高いデータ収集を行うブランドは、B2Bバイヤーからの信頼度が測定可能なほど高い。データの扱い方は、ブランドの価値観そのものだ。&quot;&gt;クッキーレス対応を「コンプライアンス対応コスト」と捉えるか「顧客信頼構築の機会」と捉えるかで、戦略の質が変わる。プライバシーを尊重し、透明性の高いデータ収集を行うブランドは、B2Bバイヤーからの信頼度が測定可能なほど高い。データの扱い方は、ブランドの価値観そのものだ。&lt;/p&gt;
+&lt;div class=&quot;insight-box&quot;&gt;
+&lt;div class=&quot;insight-label&quot;&gt;Wing's View&lt;/div&gt;
+        WingではB2Bクライアントのデータ基盤整備を「マーケティングのデータ活用シナリオ設計→CMP設置→サーバーサイドトラッキング導入→CDP選定・実装→CRM連携」という一気通貫のロードマップで支援している。各フェーズで「このデータで何ができるようになるか」を可視化しながら進めることで、現場の納得感と経営の投資判断を同時に得ることができる。
+      &lt;/div&gt;
+&lt;/article&gt;
+ CTA 
+&lt;div class=&quot;mt-16 bg-navy text-white px-8 py-10 text-center&quot;&gt;
+&lt;p class=&quot;display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold/80 mb-3&quot;&gt;Consulting&lt;/p&gt;
+&lt;h2 class=&quot;text-[1.2rem] font-medium mb-4 leading-snug&quot;&gt;B2Bマーケティングのデータ基盤構築から&lt;br/&gt;MA連携まで Wing がご支援します&lt;/h2&gt;
+&lt;p class=&quot;text-[.82rem] text-white/70 leading-relaxed mb-6&quot; data-ja=&quot;サーバーサイドトラッキング導入、CMP設置、ゼロパーティデータ収集設計、CDP・CRM統合まで。Wing がデータ戦略の設計から実装を一気通貫でご支援します。&quot;&gt;サーバーサイドトラッキング導入、CMP設置、ゼロパーティデータ収集設計、CDP・CRM統合まで。Wing がデータ戦略の設計から実装を一気通貫でご支援します。&lt;/p&gt;
+&lt;a class=&quot;inline-block bg-gold text-white text-[.78rem] font-medium tracking-wider px-7 py-3 hover:bg-gold-light transition-colors&quot; data-en=&quot;Book a Free Consultation →&quot; data-ja=&quot;無料相談を予約する →&quot; href=&quot;/#contact&quot;&gt;無料相談を予約する →&lt;/a&gt;
+&lt;/div&gt;" data-en-html="&lt;p class=&quot;display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3&quot;&gt;B2B Marketing / Data Strategy&lt;/p&gt;
+&lt;h1 class=&quot;serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4&quot; data-ja-html=&quot;クッキーレス時代のB2Bデータ戦略：&amp;lt;br/&amp;gt;ファーストパーティ・ゼロパーティデータの実践活用法&quot;&gt;クッキーレス時代のB2Bデータ戦略：&lt;br/&gt;ファーストパーティ・ゼロパーティデータの実践活用法&lt;/h1&gt;
+&lt;div class=&quot;flex items-center gap-4 text-[.75rem] text-ink-light mb-2&quot;&gt;
+&lt;time datetime=&quot;2026-03-29&quot;&gt;2026.03.29&lt;/time&gt;
+&lt;span&gt;Wing編集部&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gold-rule mb-10&quot;&gt;&lt;/div&gt;
+&lt;article class=&quot;text-[.9rem] text-ink leading-[2] max-w-none&quot;&gt;
+&lt;p data-ja-html=&quot;2024年、Googleはサードパーティ Cookie の廃止計画を事実上撤回し「ユーザー選択型」への移行を発表した。しかしこれは「問題が解決された」ことを意味しない。Safari・Firefox は既に数年前からサードパーティ Cookie をブロックしており、B2Bサイト訪問者の30〜50%はすでにトラッキング不能な状態にある。&amp;lt;strong&amp;gt;クッキーレス対応は先延ばしにできない現実だ。&amp;lt;/strong&amp;gt;&quot;&gt;2024年、Googleはサードパーティ Cookie の廃止計画を事実上撤回し「ユーザー選択型」への移行を発表した。しかしこれは「問題が解決された」ことを意味しない。Safari・Firefox は既に数年前からサードパーティ Cookie をブロックしており、B2Bサイト訪問者の30〜50%はすでにトラッキング不能な状態にある。&lt;strong&gt;クッキーレス対応は先延ばしにできない現実だ。&lt;/strong&gt;&lt;/p&gt;
+&lt;!-- DIAGRAM: Data Strategy Stack --&gt;
+&lt;div class=&quot;diag-wrap&quot; style=&quot;margin-bottom:1.8rem&quot;&gt;
+&lt;div class=&quot;diag-label&quot;&gt;Figure 1 — データ戦略の移行：サードパーティ依存からゼロパーティ中心へ&lt;/div&gt;
+&lt;svg aria-label=&quot;データ種別の価値とトレンドを示す比較図&quot; role=&quot;img&quot; style=&quot;width:100%;display:block;max-width:620px;margin:0 auto&quot; viewbox=&quot;0 0 620 240&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;rect fill=&quot;#FAFAF8&quot; height=&quot;240&quot; rx=&quot;6&quot; width=&quot;620&quot; x=&quot;0&quot; y=&quot;0&quot;&gt;&lt;/rect&gt;
+&lt;!-- Horizontal bar chart (4 data types stacked, with value and trend indicators) --&gt;
+&lt;!-- Row labels on left --&gt;
+&lt;text fill=&quot;#0F2342&quot; font-family=&quot;sans-serif&quot; font-size=&quot;10&quot; font-weight=&quot;700&quot; x=&quot;8&quot; y=&quot;60&quot;&gt;ゼロパーティ&lt;/text&gt;
+&lt;text fill=&quot;#8A8A96&quot; font-family=&quot;sans-serif&quot; font-size=&quot;8&quot; x=&quot;8&quot; y=&quot;74&quot;&gt;Zero-Party&lt;/text&gt;
+&lt;text fill=&quot;#0F2342&quot; font-family=&quot;sans-serif&quot; font-size=&quot;10&quot; font-weight=&quot;700&quot; x=&quot;8&quot; y=&quot;110&quot;&gt;ファーストパーティ&lt;/text&gt;
+&lt;text fill=&quot;#8A8A96&quot; font-family=&quot;sans-serif&quot; font-size=&quot;8&quot; x=&quot;8&quot; y=&quot;124&quot;&gt;First-Party&lt;/text&gt;
+&lt;text fill=&quot;#4A4A55&quot; font-family=&quot;sans-serif&quot; font-size=&quot;10&quot; x=&quot;8&quot; y=&quot;160&quot;&gt;セカンドパーティ&lt;/text&gt;
+&lt;text fill=&quot;#8A8A96&quot; font-family=&quot;sans-serif&quot; font-size=&quot;8&quot; x=&quot;8&quot; y=&quot;174&quot;&gt;Second-Party&lt;/text&gt;
+&lt;text fill=&quot;#8A8A96&quot; font-family=&quot;sans-serif&quot; font-size=&quot;10&quot; x=&quot;8&quot; y=&quot;210&quot;&gt;サードパーティ&lt;/text&gt;
+&lt;text fill=&quot;#8A8A96&quot; font-family=&quot;sans-serif&quot; font-size=&quot;8&quot; x=&quot;8&quot; y=&quot;224&quot;&gt;Third-Party&lt;/text&gt;
+&lt;!-- Bars --&gt;
+&lt;!-- Zero-party: Full width, gold, &quot;顧客が自発的に提供&quot; --&gt;
+&lt;rect fill=&quot;#0F2342&quot; height=&quot;38&quot; rx=&quot;3&quot; width=&quot;340&quot; x=&quot;160&quot; y=&quot;42&quot;&gt;&lt;/rect&gt;
+&lt;text fill=&quot;#A8965A&quot; font-family=&quot;sans-serif&quot; font-size=&quot;9.5&quot; font-weight=&quot;700&quot; text-anchor=&quot;middle&quot; x=&quot;330&quot; y=&quot;58&quot;&gt;顧客が自発提供・最高精度・プライバシー完全合法&lt;/text&gt;
+&lt;text fill=&quot;#C4AD72&quot; font-family=&quot;sans-serif&quot; font-size=&quot;9&quot; text-anchor=&quot;middle&quot; x=&quot;330&quot; y=&quot;74&quot;&gt;アンケート／診断ツール／プリファレンスセンター&lt;/text&gt;
+&lt;text fill=&quot;#A8965A&quot; font-family=&quot;sans-serif&quot; font-size=&quot;10&quot; font-weight=&quot;700&quot; x=&quot;510&quot; y=&quot;60&quot;&gt;↑↑ 最重要&lt;/text&gt;
+&lt;!-- First-party: Wide, navy --&gt;
+&lt;rect fill=&quot;#1F3A6E&quot; height=&quot;38&quot; rx=&quot;3&quot; width=&quot;280&quot; x=&quot;160&quot; y=&quot;92&quot;&gt;&lt;/rect&gt;
+&lt;text fill=&quot;#fff&quot; font-family=&quot;sans-serif&quot; font-size=&quot;9.5&quot; font-weight=&quot;700&quot; text-anchor=&quot;middle&quot; x=&quot;300&quot; y=&quot;108&quot;&gt;自社直接収集・CRM・サイト行動・メール開封&lt;/text&gt;
+&lt;text fill=&quot;#BDD0FF&quot; font-family=&quot;sans-serif&quot; font-size=&quot;9&quot; text-anchor=&quot;middle&quot; x=&quot;300&quot; y=&quot;124&quot;&gt;Server-Side Tag + CDP 基盤が急務&lt;/text&gt;
+&lt;text fill=&quot;#5A9A6A&quot; font-family=&quot;sans-serif&quot; font-size=&quot;10&quot; font-weight=&quot;700&quot; x=&quot;450&quot; y=&quot;110&quot;&gt;↑ 基盤整備&lt;/text&gt;
+&lt;!-- Second-party: Medium, mid-gray --&gt;
+&lt;rect fill=&quot;#8A8A96&quot; height=&quot;38&quot; opacity=&quot;0.6&quot; rx=&quot;3&quot; width=&quot;180&quot; x=&quot;160&quot; y=&quot;142&quot;&gt;&lt;/rect&gt;
+&lt;text fill=&quot;#fff&quot; font-family=&quot;sans-serif&quot; font-size=&quot;9&quot; text-anchor=&quot;middle&quot; x=&quot;250&quot; y=&quot;158&quot;&gt;パートナー共有データ&lt;/text&gt;
+&lt;text fill=&quot;#fff&quot; font-family=&quot;sans-serif&quot; font-size=&quot;8.5&quot; text-anchor=&quot;middle&quot; x=&quot;250&quot; y=&quot;174&quot;&gt;展示会リスト等&lt;/text&gt;
+&lt;text fill=&quot;#8A8A96&quot; font-family=&quot;sans-serif&quot; font-size=&quot;9&quot; x=&quot;350&quot; y=&quot;162&quot;&gt;→ 限定活用&lt;/text&gt;
+&lt;!-- Third-party: Short, faded out --&gt;
+&lt;rect fill=&quot;#C8C5BC&quot; height=&quot;38&quot; opacity=&quot;0.5&quot; rx=&quot;3&quot; width=&quot;80&quot; x=&quot;160&quot; y=&quot;192&quot;&gt;&lt;/rect&gt;
+&lt;text fill=&quot;#8A8A96&quot; font-family=&quot;sans-serif&quot; font-size=&quot;8.5&quot; text-anchor=&quot;middle&quot; x=&quot;200&quot; y=&quot;211&quot;&gt;外部DMP&lt;/text&gt;
+&lt;text fill=&quot;#8A8A96&quot; font-family=&quot;sans-serif&quot; font-size=&quot;8&quot; text-anchor=&quot;middle&quot; x=&quot;200&quot; y=&quot;225&quot;&gt;Cookie依存&lt;/text&gt;
+&lt;text fill=&quot;#C45C3A&quot; font-family=&quot;sans-serif&quot; font-size=&quot;9&quot; x=&quot;250&quot; y=&quot;212&quot;&gt;↓↓ 急速に価値低下&lt;/text&gt;
+&lt;!-- Value axis indicator --&gt;
+&lt;text fill=&quot;#8A8A96&quot; font-family=&quot;sans-serif&quot; font-size=&quot;8&quot; x=&quot;160&quot; y=&quot;18&quot;&gt;データ価値・利用可能期間 →&lt;/text&gt;
+&lt;line stroke=&quot;#E2E0DA&quot; stroke-width=&quot;1&quot; x1=&quot;160&quot; x2=&quot;500&quot; y1=&quot;22&quot; y2=&quot;22&quot;&gt;&lt;/line&gt;
+&lt;polygon fill=&quot;#E2E0DA&quot; points=&quot;498,18 508,22 498,26&quot;&gt;&lt;/polygon&gt;
+&lt;/svg&gt;
+&lt;p class=&quot;diag-caption&quot; data-ja=&quot;戦略の重心を右から左へ移行する——ゼロ・ファーストパーティデータ基盤の構築が急務&quot;&gt;戦略の重心を右から左へ移行する——ゼロ・ファーストパーティデータ基盤の構築が急務&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 class=&quot;text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4&quot;&gt;データの「3層構造」を理解する&lt;/h2&gt;
+&lt;p data-ja=&quot;マーケティングデータは取得方法によって3つの層に分類される。2026年以降の戦略は、この3層の役割を明確に定義することから始まる。&quot;&gt;マーケティングデータは取得方法によって3つの層に分類される。2026年以降の戦略は、この3層の役割を明確に定義することから始まる。&lt;/p&gt;
+&lt;div class=&quot;diag-wrap&quot;&gt;
+&lt;div class=&quot;diag-label&quot;&gt;Data Taxonomy — 3層構造&lt;/div&gt;
+&lt;table class=&quot;compare-table&quot;&gt;
+&lt;thead&gt;&lt;tr&gt;&lt;th data-ja=&quot;種別&quot;&gt;種別&lt;/th&gt;&lt;th data-ja=&quot;定義&quot;&gt;定義&lt;/th&gt;&lt;th data-ja=&quot;例&quot;&gt;例&lt;/th&gt;&lt;th data-ja=&quot;2026年の位置づけ&quot;&gt;2026年の位置づけ&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;td data-ja-html=&quot;&amp;lt;strong&amp;gt;ゼロパーティデータ&amp;lt;/strong&amp;gt;&quot;&gt;&lt;strong&gt;ゼロパーティデータ&lt;/strong&gt;&lt;/td&gt;&lt;td data-ja=&quot;顧客が自ら積極的に提供した情報&quot;&gt;顧客が自ら積極的に提供した情報&lt;/td&gt;&lt;td data-ja=&quot;アンケート回答、プリファレンスセンター設定、コンテンツ選好申告&quot;&gt;アンケート回答、プリファレンスセンター設定、コンテンツ選好申告&lt;/td&gt;&lt;td data-ja=&quot;最高価値・増大中&quot;&gt;最高価値・増大中&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td data-ja-html=&quot;&amp;lt;strong&amp;gt;ファーストパーティデータ&amp;lt;/strong&amp;gt;&quot;&gt;&lt;strong&gt;ファーストパーティデータ&lt;/strong&gt;&lt;/td&gt;&lt;td data-ja=&quot;自社が直接収集した行動・属性データ&quot;&gt;自社が直接収集した行動・属性データ&lt;/td&gt;&lt;td data-ja=&quot;サイト閲覧履歴、メール開封・クリック、CRM登録情報&quot;&gt;サイト閲覧履歴、メール開封・クリック、CRM登録情報&lt;/td&gt;&lt;td data-ja=&quot;基盤・整備が急務&quot;&gt;基盤・整備が急務&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td data-ja-html=&quot;&amp;lt;strong&amp;gt;セカンドパーティデータ&amp;lt;/strong&amp;gt;&quot;&gt;&lt;strong&gt;セカンドパーティデータ&lt;/strong&gt;&lt;/td&gt;&lt;td data-ja=&quot;パートナー企業が収集・共有したデータ&quot;&gt;パートナー企業が収集・共有したデータ&lt;/td&gt;&lt;td data-ja=&quot;メディアパートナーの閲覧データ、展示会主催者のリスト&quot;&gt;メディアパートナーの閲覧データ、展示会主催者のリスト&lt;/td&gt;&lt;td data-ja=&quot;限定的に活用&quot;&gt;限定的に活用&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td data-ja-html=&quot;&amp;lt;strong&amp;gt;サードパーティデータ&amp;lt;/strong&amp;gt;&quot;&gt;&lt;strong&gt;サードパーティデータ&lt;/strong&gt;&lt;/td&gt;&lt;td data-ja=&quot;外部データブローカーが収集・販売&quot;&gt;外部データブローカーが収集・販売&lt;/td&gt;&lt;td data-ja=&quot;デモグラフィックセグメント、行動ターゲティングCookie&quot;&gt;デモグラフィックセグメント、行動ターゲティングCookie&lt;/td&gt;&lt;td data-ja=&quot;急速に価値低下&quot;&gt;急速に価値低下&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p class=&quot;diag-caption&quot; data-ja=&quot;戦略の重心をサード→ゼロ・ファーストへ移行することが最優先課題&quot;&gt;戦略の重心をサード→ゼロ・ファーストへ移行することが最優先課題&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 class=&quot;text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4&quot;&gt;ゼロパーティデータをB2Bで収集する5つの方法&lt;/h2&gt;
+&lt;p data-ja=&quot;ゼロパーティデータは「渡したい」と思った時だけ渡される。そのため収集設計は「情報提供と引き換えの価値」を明示することが必須だ。&quot;&gt;ゼロパーティデータは「渡したい」と思った時だけ渡される。そのため収集設計は「情報提供と引き換えの価値」を明示することが必須だ。&lt;/p&gt;
+&lt;div class=&quot;diag-wrap&quot;&gt;
+&lt;div class=&quot;diag-label&quot;&gt;Zero-Party Data — B2B収集設計&lt;/div&gt;
+&lt;div class=&quot;diag-step-row&quot;&gt;
+&lt;div class=&quot;diag-step-card&quot;&gt;
+&lt;div class=&quot;step-num&quot;&gt;01&lt;/div&gt;
+&lt;div class=&quot;step-title&quot;&gt;プリファレンスセンター&lt;/div&gt;
+&lt;div class=&quot;step-body&quot;&gt;「どのテーマの情報を受け取りたいか」を登録者自身が設定。スパム率低下＋セグメント精度向上の一石二鳥。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;diag-step-card&quot;&gt;
+&lt;div class=&quot;step-num&quot;&gt;02&lt;/div&gt;
+&lt;div class=&quot;step-title&quot;&gt;インタラクティブ診断ツール&lt;/div&gt;
+&lt;div class=&quot;step-body&quot;&gt;「自社のDX成熟度を測る」「コスト削減余地を診断する」などの無料ツール提供と引き換えに課題・規模情報を収集。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;diag-step-card&quot;&gt;
+&lt;div class=&quot;step-num&quot;&gt;03&lt;/div&gt;
+&lt;div class=&quot;step-title&quot;&gt;ウェビナー事前アンケート&lt;/div&gt;
+&lt;div class=&quot;step-body&quot;&gt;参加申込時に「現在の課題」「検討中の施策」を任意回答。回答率60〜70%が一般的で質の高いデータが得られる。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;diag-step-card&quot;&gt;
+&lt;div class=&quot;step-num&quot;&gt;04&lt;/div&gt;
+&lt;div class=&quot;step-title&quot;&gt;コンテンツレコメンド設定&lt;/div&gt;
+&lt;div class=&quot;step-body&quot;&gt;「あなたの役職・業界・関心領域を教えてください」でパーソナライズドコンテンツを提供。価値交換が明確。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;diag-step-card&quot;&gt;
+&lt;div class=&quot;step-num&quot;&gt;05&lt;/div&gt;
+&lt;div class=&quot;step-title&quot;&gt;CS定例ヒアリング構造化&lt;/div&gt;
+&lt;div class=&quot;step-body&quot;&gt;既存顧客との定例MTGを「データ収集の場」として構造化。構造化フォームで入力しCRMに自動同期。&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class=&quot;diag-caption&quot; data-ja=&quot;「何かの見返りに情報をもらう」という設計が、ゼロパーティデータ収集の大原則&quot;&gt;「何かの見返りに情報をもらう」という設計が、ゼロパーティデータ収集の大原則&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 class=&quot;text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4&quot;&gt;ファーストパーティデータ基盤の技術構成&lt;/h2&gt;
+&lt;p data-ja=&quot;ファーストパーティデータを正確に収集・管理するためには、従来のクライアントサイドタグ（Google Tag Manager等）に依存した構成から脱却する必要がある。&quot;&gt;ファーストパーティデータを正確に収集・管理するためには、従来のクライアントサイドタグ（Google Tag Manager等）に依存した構成から脱却する必要がある。&lt;/p&gt;
+&lt;div class=&quot;diag-wrap&quot;&gt;
+&lt;div class=&quot;diag-label&quot;&gt;Tech Stack — ファーストパーティデータ基盤&lt;/div&gt;
+&lt;div class=&quot;diag-step-row&quot;&gt;
+&lt;div class=&quot;diag-step-card&quot;&gt;
+&lt;div class=&quot;step-num&quot;&gt;CMP&lt;/div&gt;
+&lt;div class=&quot;step-title&quot;&gt;同意管理プラットフォーム&lt;/div&gt;
+&lt;div class=&quot;step-body&quot;&gt;OneTrust、Cookiebot等。GDPR・個人情報保護法対応の同意取得・記録。GAM/GTMと連携して同意に応じたタグ制御。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;diag-step-card&quot;&gt;
+&lt;div class=&quot;step-num&quot;&gt;SST&lt;/div&gt;
+&lt;div class=&quot;step-title&quot;&gt;サーバーサイドトラッキング&lt;/div&gt;
+&lt;div class=&quot;step-body&quot;&gt;GTM Server-side Container等。クライアントからサーバーにデータを送り各ツールへ転送。AdBlockerとCookie制限を回避。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;diag-step-card&quot;&gt;
+&lt;div class=&quot;step-num&quot;&gt;CDP&lt;/div&gt;
+&lt;div class=&quot;step-title&quot;&gt;顧客データプラットフォーム&lt;/div&gt;
+&lt;div class=&quot;step-body&quot;&gt;Segment、RudderStack等。複数チャネルのデータを統合し単一顧客IDで管理。MAやCRMへの一元配信基盤。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;diag-step-card&quot;&gt;
+&lt;div class=&quot;step-num&quot;&gt;CRM&lt;/div&gt;
+&lt;div class=&quot;step-title&quot;&gt;CRMとの統合&lt;/div&gt;
+&lt;div class=&quot;step-body&quot;&gt;HubSpot/Salesforce。CDPで統合されたデータをCRMに反映し、営業・CSへのインテリジェンス提供とパーソナライズ実行。&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class=&quot;diag-caption&quot; data-ja=&quot;CMP→SST→CDP→CRMの順に整備するのが推奨ロードマップ&quot;&gt;CMP→SST→CDP→CRMの順に整備するのが推奨ロードマップ&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 class=&quot;text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4&quot;&gt;日本のB2B企業が直面するデータ基盤整備の現実&lt;/h2&gt;
+&lt;p data-ja=&quot;多くの日本のB2B企業では、マーケティングデータが「MAのメール行動ログ」「CRMの商談情報」「Webアナリティクス（GA4）」の3つにサイロ化されていて、それらが統合されていない。この状態では、たとえゼロパーティデータを収集しても活用できない。&quot;&gt;多くの日本のB2B企業では、マーケティングデータが「MAのメール行動ログ」「CRMの商談情報」「Webアナリティクス（GA4）」の3つにサイロ化されていて、それらが統合されていない。この状態では、たとえゼロパーティデータを収集しても活用できない。&lt;/p&gt;
+&lt;div class=&quot;warn-box&quot;&gt;
+&lt;div class=&quot;warn-label&quot;&gt;よくある失敗：先にツール導入してしまうケース&lt;/div&gt;
+        CDPを導入する前に「どのデータを統合して、何のために使うか」の設計がないまま進めると、高額のCDPが「データの倉庫」になるだけで終わる。データ戦略の設計→必要データの棚卸し→ツール選定の順序が重要だ。ツールは手段であり、戦略が先だ。
+      &lt;/div&gt;
+&lt;p data-ja=&quot;Wing では、ツール導入の前に「データ活用シナリオ設計」を必ず実施する。「誰のどの行動データを使って、どのアクションを引き起こしたいか」を明文化した上でツール選定・実装に移行する。これにより導入後の活用率と ROI が大幅に改善する。&quot;&gt;Wing では、ツール導入の前に「データ活用シナリオ設計」を必ず実施する。「誰のどの行動データを使って、どのアクションを引き起こしたいか」を明文化した上でツール選定・実装に移行する。これにより導入後の活用率と ROI が大幅に改善する。&lt;/p&gt;
+&lt;h2 class=&quot;text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4&quot;&gt;プライバシーファーストは差別化の機会&lt;/h2&gt;
+&lt;p data-ja=&quot;クッキーレス対応を「コンプライアンス対応コスト」と捉えるか「顧客信頼構築の機会」と捉えるかで、戦略の質が変わる。プライバシーを尊重し、透明性の高いデータ収集を行うブランドは、B2Bバイヤーからの信頼度が測定可能なほど高い。データの扱い方は、ブランドの価値観そのものだ。&quot;&gt;クッキーレス対応を「コンプライアンス対応コスト」と捉えるか「顧客信頼構築の機会」と捉えるかで、戦略の質が変わる。プライバシーを尊重し、透明性の高いデータ収集を行うブランドは、B2Bバイヤーからの信頼度が測定可能なほど高い。データの扱い方は、ブランドの価値観そのものだ。&lt;/p&gt;
+&lt;div class=&quot;insight-box&quot;&gt;
+&lt;div class=&quot;insight-label&quot;&gt;Wing's View&lt;/div&gt;
+        WingではB2Bクライアントのデータ基盤整備を「マーケティングのデータ活用シナリオ設計→CMP設置→サーバーサイドトラッキング導入→CDP選定・実装→CRM連携」という一気通貫のロードマップで支援している。各フェーズで「このデータで何ができるようになるか」を可視化しながら進めることで、現場の納得感と経営の投資判断を同時に得ることができる。
+      &lt;/div&gt;
+&lt;/article&gt;
+ CTA 
+&lt;div class=&quot;mt-16 bg-navy text-white px-8 py-10 text-center&quot;&gt;
+&lt;p class=&quot;display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold/80 mb-3&quot;&gt;Consulting&lt;/p&gt;
+&lt;h2 class=&quot;text-[1.2rem] font-medium mb-4 leading-snug&quot;&gt;B2Bマーケティングのデータ基盤構築から&lt;br/&gt;MA連携まで Wing がご支援します&lt;/h2&gt;
+&lt;p class=&quot;text-[.82rem] text-white/70 leading-relaxed mb-6&quot; data-ja=&quot;サーバーサイドトラッキング導入、CMP設置、ゼロパーティデータ収集設計、CDP・CRM統合まで。Wing がデータ戦略の設計から実装を一気通貫でご支援します。&quot;&gt;サーバーサイドトラッキング導入、CMP設置、ゼロパーティデータ収集設計、CDP・CRM統合まで。Wing がデータ戦略の設計から実装を一気通貫でご支援します。&lt;/p&gt;
+&lt;a class=&quot;inline-block bg-gold text-white text-[.78rem] font-medium tracking-wider px-7 py-3 hover:bg-gold-light transition-colors&quot; data-en=&quot;Book a Free Consultation →&quot; data-ja=&quot;無料相談を予約する →&quot; href=&quot;/#contact&quot;&gt;無料相談を予約する →&lt;/a&gt;
+&lt;/div&gt;">
+<p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3">B2B Marketing / Data Strategy</p>
+<h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4" data-ja-html="クッキーレス時代のB2Bデータ戦略：&lt;br/&gt;ファーストパーティ・ゼロパーティデータの実践活用法" data-en-html="クッキーレス時代のB2Bデータ戦略：&lt;br/&gt;ファーストパーティ・ゼロパーティデータの実践活用法">クッキーレス時代のB2Bデータ戦略：<br/>ファーストパーティ・ゼロパーティデータの実践活用法</h1>
+<div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2" data-ja-html='&lt;time datetime="2026-03-29"&gt;2026.03.29&lt;/time&gt;
+&lt;span&gt;Wing編集部&lt;/span&gt;' data-en-html='&lt;time datetime="2026-03-29"&gt;2026.03.29&lt;/time&gt;
+&lt;span&gt;Wing編集部&lt;/span&gt;'>
+<time datetime="2026-03-29">2026.03.29</time>
+<span data-en="Wing Editorial Team" data-ja="Wing編集部" data-en="Wing Editorial">Wing編集部</span>
+</div>
+<div class="gold-rule mb-10"></div>
+<article class="text-[.9rem] text-ink leading-[2] max-w-none">
+<p data-ja-html="2024年、Googleはサードパーティ Cookie の廃止計画を事実上撤回し「ユーザー選択型」への移行を発表した。しかしこれは「問題が解決された」ことを意味しない。Safari・Firefox は既に数年前からサードパーティ Cookie をブロックしており、B2Bサイト訪問者の30〜50%はすでにトラッキング不能な状態にある。&lt;strong&gt;クッキーレス対応は先延ばしにできない現実だ。&lt;/strong&gt;" data-en-html="2024年、Googleはサードパーティ Cookie の廃止計画を事実上撤回し「ユーザー選択型」への移行を発表した。しかしこれは「問題が解決された」ことを意味しない。Safari・Firefox は既に数年前からサードパーティ Cookie をブロックしており、B2Bサイト訪問者の30〜50%はすでにトラッキング不能な状態にある。&lt;strong&gt;クッキーレス対応は先延ばしにできない現実だ。&lt;/strong&gt;">2024年、Googleはサードパーティ Cookie の廃止計画を事実上撤回し「ユーザー選択型」への移行を発表した。しかしこれは「問題が解決された」ことを意味しない。Safari・Firefox は既に数年前からサードパーティ Cookie をブロックしており、B2Bサイト訪問者の30〜50%はすでにトラッキング不能な状態にある。<strong>クッキーレス対応は先延ばしにできない現実だ。</strong></p>
+<!-- DIAGRAM: Data Strategy Stack -->
+<div class="diag-wrap" data-ja-html='&lt;div class="diag-label"&gt;Figure 1 — データ戦略の移行：サードパーティ依存からゼロパーティ中心へ&lt;/div&gt;
+&lt;svg aria-label="データ種別の価値とトレンドを示す比較図" role="img" style="width:100%;display:block;max-width:620px;margin:0 auto" viewbox="0 0 620 240" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;rect fill="#FAFAF8" height="240" rx="6" width="620" x="0" y="0"&gt;&lt;/rect&gt;
+&lt;!-- Horizontal bar chart (4 data types stacked, with value and trend indicators) --&gt;
+&lt;!-- Row labels on left --&gt;
+&lt;text fill="#0F2342" font-family="sans-serif" font-size="10" font-weight="700" x="8" y="60"&gt;ゼロパーティ&lt;/text&gt;
+&lt;text fill="#8A8A96" font-family="sans-serif" font-size="8" x="8" y="74"&gt;Zero-Party&lt;/text&gt;
+&lt;text fill="#0F2342" font-family="sans-serif" font-size="10" font-weight="700" x="8" y="110"&gt;ファーストパーティ&lt;/text&gt;
+&lt;text fill="#8A8A96" font-family="sans-serif" font-size="8" x="8" y="124"&gt;First-Party&lt;/text&gt;
+&lt;text fill="#4A4A55" font-family="sans-serif" font-size="10" x="8" y="160"&gt;セカンドパーティ&lt;/text&gt;
+&lt;text fill="#8A8A96" font-family="sans-serif" font-size="8" x="8" y="174"&gt;Second-Party&lt;/text&gt;
+&lt;text fill="#8A8A96" font-family="sans-serif" font-size="10" x="8" y="210"&gt;サードパーティ&lt;/text&gt;
+&lt;text fill="#8A8A96" font-family="sans-serif" font-size="8" x="8" y="224"&gt;Third-Party&lt;/text&gt;
+&lt;!-- Bars --&gt;
+&lt;!-- Zero-party: Full width, gold, "顧客が自発的に提供" --&gt;
+&lt;rect fill="#0F2342" height="38" rx="3" width="340" x="160" y="42"&gt;&lt;/rect&gt;
+&lt;text fill="#A8965A" font-family="sans-serif" font-size="9.5" font-weight="700" text-anchor="middle" x="330" y="58"&gt;顧客が自発提供・最高精度・プライバシー完全合法&lt;/text&gt;
+&lt;text fill="#C4AD72" font-family="sans-serif" font-size="9" text-anchor="middle" x="330" y="74"&gt;アンケート／診断ツール／プリファレンスセンター&lt;/text&gt;
+&lt;text fill="#A8965A" font-family="sans-serif" font-size="10" font-weight="700" x="510" y="60"&gt;↑↑ 最重要&lt;/text&gt;
+&lt;!-- First-party: Wide, navy --&gt;
+&lt;rect fill="#1F3A6E" height="38" rx="3" width="280" x="160" y="92"&gt;&lt;/rect&gt;
+&lt;text fill="#fff" font-family="sans-serif" font-size="9.5" font-weight="700" text-anchor="middle" x="300" y="108"&gt;自社直接収集・CRM・サイト行動・メール開封&lt;/text&gt;
+&lt;text fill="#BDD0FF" font-family="sans-serif" font-size="9" text-anchor="middle" x="300" y="124"&gt;Server-Side Tag + CDP 基盤が急務&lt;/text&gt;
+&lt;text fill="#5A9A6A" font-family="sans-serif" font-size="10" font-weight="700" x="450" y="110"&gt;↑ 基盤整備&lt;/text&gt;
+&lt;!-- Second-party: Medium, mid-gray --&gt;
+&lt;rect fill="#8A8A96" height="38" opacity="0.6" rx="3" width="180" x="160" y="142"&gt;&lt;/rect&gt;
+&lt;text fill="#fff" font-family="sans-serif" font-size="9" text-anchor="middle" x="250" y="158"&gt;パートナー共有データ&lt;/text&gt;
+&lt;text fill="#fff" font-family="sans-serif" font-size="8.5" text-anchor="middle" x="250" y="174"&gt;展示会リスト等&lt;/text&gt;
+&lt;text fill="#8A8A96" font-family="sans-serif" font-size="9" x="350" y="162"&gt;→ 限定活用&lt;/text&gt;
+&lt;!-- Third-party: Short, faded out --&gt;
+&lt;rect fill="#C8C5BC" height="38" opacity="0.5" rx="3" width="80" x="160" y="192"&gt;&lt;/rect&gt;
+&lt;text fill="#8A8A96" font-family="sans-serif" font-size="8.5" text-anchor="middle" x="200" y="211"&gt;外部DMP&lt;/text&gt;
+&lt;text fill="#8A8A96" font-family="sans-serif" font-size="8" text-anchor="middle" x="200" y="225"&gt;Cookie依存&lt;/text&gt;
+&lt;text fill="#C45C3A" font-family="sans-serif" font-size="9" x="250" y="212"&gt;↓↓ 急速に価値低下&lt;/text&gt;
+&lt;!-- Value axis indicator --&gt;
+&lt;text fill="#8A8A96" font-family="sans-serif" font-size="8" x="160" y="18"&gt;データ価値・利用可能期間 →&lt;/text&gt;
+&lt;line stroke="#E2E0DA" stroke-width="1" x1="160" x2="500" y1="22" y2="22"&gt;&lt;/line&gt;
+&lt;polygon fill="#E2E0DA" points="498,18 508,22 498,26"&gt;&lt;/polygon&gt;
+&lt;/svg&gt;
+&lt;p class="diag-caption" data-ja="戦略の重心を右から左へ移行する——ゼロ・ファーストパーティデータ基盤の構築が急務" data-en="戦略の重心を右から左へ移行する——ゼロ・ファーストパーティデータ基盤の構築が急務"&gt;戦略の重心を右から左へ移行する——ゼロ・ファーストパーティデータ基盤の構築が急務&lt;/p&gt;' data-en-html='&lt;div class="diag-label"&gt;Figure 1 — データ戦略の移行：サードパーティ依存からゼロパーティ中心へ&lt;/div&gt;
+&lt;svg aria-label="データ種別の価値とトレンドを示す比較図" role="img" style="width:100%;display:block;max-width:620px;margin:0 auto" viewbox="0 0 620 240" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;rect fill="#FAFAF8" height="240" rx="6" width="620" x="0" y="0"&gt;&lt;/rect&gt;
+&lt;!-- Horizontal bar chart (4 data types stacked, with value and trend indicators) --&gt;
+&lt;!-- Row labels on left --&gt;
+&lt;text fill="#0F2342" font-family="sans-serif" font-size="10" font-weight="700" x="8" y="60"&gt;ゼロパーティ&lt;/text&gt;
+&lt;text fill="#8A8A96" font-family="sans-serif" font-size="8" x="8" y="74"&gt;Zero-Party&lt;/text&gt;
+&lt;text fill="#0F2342" font-family="sans-serif" font-size="10" font-weight="700" x="8" y="110"&gt;ファーストパーティ&lt;/text&gt;
+&lt;text fill="#8A8A96" font-family="sans-serif" font-size="8" x="8" y="124"&gt;First-Party&lt;/text&gt;
+&lt;text fill="#4A4A55" font-family="sans-serif" font-size="10" x="8" y="160"&gt;セカンドパーティ&lt;/text&gt;
+&lt;text fill="#8A8A96" font-family="sans-serif" font-size="8" x="8" y="174"&gt;Second-Party&lt;/text&gt;
+&lt;text fill="#8A8A96" font-family="sans-serif" font-size="10" x="8" y="210"&gt;サードパーティ&lt;/text&gt;
+&lt;text fill="#8A8A96" font-family="sans-serif" font-size="8" x="8" y="224"&gt;Third-Party&lt;/text&gt;
+&lt;!-- Bars --&gt;
+&lt;!-- Zero-party: Full width, gold, "顧客が自発的に提供" --&gt;
+&lt;rect fill="#0F2342" height="38" rx="3" width="340" x="160" y="42"&gt;&lt;/rect&gt;
+&lt;text fill="#A8965A" font-family="sans-serif" font-size="9.5" font-weight="700" text-anchor="middle" x="330" y="58"&gt;顧客が自発提供・最高精度・プライバシー完全合法&lt;/text&gt;
+&lt;text fill="#C4AD72" font-family="sans-serif" font-size="9" text-anchor="middle" x="330" y="74"&gt;アンケート／診断ツール／プリファレンスセンター&lt;/text&gt;
+&lt;text fill="#A8965A" font-family="sans-serif" font-size="10" font-weight="700" x="510" y="60"&gt;↑↑ 最重要&lt;/text&gt;
+&lt;!-- First-party: Wide, navy --&gt;
+&lt;rect fill="#1F3A6E" height="38" rx="3" width="280" x="160" y="92"&gt;&lt;/rect&gt;
+&lt;text fill="#fff" font-family="sans-serif" font-size="9.5" font-weight="700" text-anchor="middle" x="300" y="108"&gt;自社直接収集・CRM・サイト行動・メール開封&lt;/text&gt;
+&lt;text fill="#BDD0FF" font-family="sans-serif" font-size="9" text-anchor="middle" x="300" y="124"&gt;Server-Side Tag + CDP 基盤が急務&lt;/text&gt;
+&lt;text fill="#5A9A6A" font-family="sans-serif" font-size="10" font-weight="700" x="450" y="110"&gt;↑ 基盤整備&lt;/text&gt;
+&lt;!-- Second-party: Medium, mid-gray --&gt;
+&lt;rect fill="#8A8A96" height="38" opacity="0.6" rx="3" width="180" x="160" y="142"&gt;&lt;/rect&gt;
+&lt;text fill="#fff" font-family="sans-serif" font-size="9" text-anchor="middle" x="250" y="158"&gt;パートナー共有データ&lt;/text&gt;
+&lt;text fill="#fff" font-family="sans-serif" font-size="8.5" text-anchor="middle" x="250" y="174"&gt;展示会リスト等&lt;/text&gt;
+&lt;text fill="#8A8A96" font-family="sans-serif" font-size="9" x="350" y="162"&gt;→ 限定活用&lt;/text&gt;
+&lt;!-- Third-party: Short, faded out --&gt;
+&lt;rect fill="#C8C5BC" height="38" opacity="0.5" rx="3" width="80" x="160" y="192"&gt;&lt;/rect&gt;
+&lt;text fill="#8A8A96" font-family="sans-serif" font-size="8.5" text-anchor="middle" x="200" y="211"&gt;外部DMP&lt;/text&gt;
+&lt;text fill="#8A8A96" font-family="sans-serif" font-size="8" text-anchor="middle" x="200" y="225"&gt;Cookie依存&lt;/text&gt;
+&lt;text fill="#C45C3A" font-family="sans-serif" font-size="9" x="250" y="212"&gt;↓↓ 急速に価値低下&lt;/text&gt;
+&lt;!-- Value axis indicator --&gt;
+&lt;text fill="#8A8A96" font-family="sans-serif" font-size="8" x="160" y="18"&gt;データ価値・利用可能期間 →&lt;/text&gt;
+&lt;line stroke="#E2E0DA" stroke-width="1" x1="160" x2="500" y1="22" y2="22"&gt;&lt;/line&gt;
+&lt;polygon fill="#E2E0DA" points="498,18 508,22 498,26"&gt;&lt;/polygon&gt;
+&lt;/svg&gt;
+&lt;p class="diag-caption" data-ja="戦略の重心を右から左へ移行する——ゼロ・ファーストパーティデータ基盤の構築が急務" data-en="戦略の重心を右から左へ移行する——ゼロ・ファーストパーティデータ基盤の構築が急務"&gt;戦略の重心を右から左へ移行する——ゼロ・ファーストパーティデータ基盤の構築が急務&lt;/p&gt;' style="margin-bottom:1.8rem">
+<div class="diag-label" data-ja="Figure 1 — データ戦略の移行：サードパーティ依存からゼロパーティ中心へ" data-en="Figure 1 — データ戦略の移行：サードパーティ依存からゼロパーティ中心へ">Figure 1 — データ戦略の移行：サードパーティ依存からゼロパーティ中心へ</div>
+<svg aria-label="データ種別の価値とトレンドを示す比較図" role="img" style="width:100%;display:block;max-width:620px;margin:0 auto" viewbox="0 0 620 240" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#FAFAF8" height="240" rx="6" width="620" x="0" y="0"></rect>
+<!-- Horizontal bar chart (4 data types stacked, with value and trend indicators) -->
+<!-- Row labels on left -->
+<text fill="#0F2342" font-family="sans-serif" font-size="10" font-weight="700" x="8" y="60">ゼロパーティ</text>
+<text fill="#8A8A96" font-family="sans-serif" font-size="8" x="8" y="74">Zero-Party</text>
+<text fill="#0F2342" font-family="sans-serif" font-size="10" font-weight="700" x="8" y="110">ファーストパーティ</text>
+<text fill="#8A8A96" font-family="sans-serif" font-size="8" x="8" y="124">First-Party</text>
+<text fill="#4A4A55" font-family="sans-serif" font-size="10" x="8" y="160">セカンドパーティ</text>
+<text fill="#8A8A96" font-family="sans-serif" font-size="8" x="8" y="174">Second-Party</text>
+<text fill="#8A8A96" font-family="sans-serif" font-size="10" x="8" y="210">サードパーティ</text>
+<text fill="#8A8A96" font-family="sans-serif" font-size="8" x="8" y="224">Third-Party</text>
+<!-- Bars -->
+<!-- Zero-party: Full width, gold, "顧客が自発的に提供" -->
+<rect fill="#0F2342" height="38" rx="3" width="340" x="160" y="42"></rect>
+<text fill="#A8965A" font-family="sans-serif" font-size="9.5" font-weight="700" text-anchor="middle" x="330" y="58">顧客が自発提供・最高精度・プライバシー完全合法</text>
+<text fill="#C4AD72" font-family="sans-serif" font-size="9" text-anchor="middle" x="330" y="74">アンケート／診断ツール／プリファレンスセンター</text>
+<text fill="#A8965A" font-family="sans-serif" font-size="10" font-weight="700" x="510" y="60">↑↑ 最重要</text>
+<!-- First-party: Wide, navy -->
+<rect fill="#1F3A6E" height="38" rx="3" width="280" x="160" y="92"></rect>
+<text fill="#fff" font-family="sans-serif" font-size="9.5" font-weight="700" text-anchor="middle" x="300" y="108">自社直接収集・CRM・サイト行動・メール開封</text>
+<text fill="#BDD0FF" font-family="sans-serif" font-size="9" text-anchor="middle" x="300" y="124">Server-Side Tag + CDP 基盤が急務</text>
+<text fill="#5A9A6A" font-family="sans-serif" font-size="10" font-weight="700" x="450" y="110">↑ 基盤整備</text>
+<!-- Second-party: Medium, mid-gray -->
+<rect fill="#8A8A96" height="38" opacity="0.6" rx="3" width="180" x="160" y="142"></rect>
+<text fill="#fff" font-family="sans-serif" font-size="9" text-anchor="middle" x="250" y="158">パートナー共有データ</text>
+<text fill="#fff" font-family="sans-serif" font-size="8.5" text-anchor="middle" x="250" y="174">展示会リスト等</text>
+<text fill="#8A8A96" font-family="sans-serif" font-size="9" x="350" y="162">→ 限定活用</text>
+<!-- Third-party: Short, faded out -->
+<rect fill="#C8C5BC" height="38" opacity="0.5" rx="3" width="80" x="160" y="192"></rect>
+<text fill="#8A8A96" font-family="sans-serif" font-size="8.5" text-anchor="middle" x="200" y="211">外部DMP</text>
+<text fill="#8A8A96" font-family="sans-serif" font-size="8" text-anchor="middle" x="200" y="225">Cookie依存</text>
+<text fill="#C45C3A" font-family="sans-serif" font-size="9" x="250" y="212">↓↓ 急速に価値低下</text>
+<!-- Value axis indicator -->
+<text fill="#8A8A96" font-family="sans-serif" font-size="8" x="160" y="18">データ価値・利用可能期間 →</text>
+<line stroke="#E2E0DA" stroke-width="1" x1="160" x2="500" y1="22" y2="22"></line>
+<polygon fill="#E2E0DA" points="498,18 508,22 498,26"></polygon>
+</svg>
+<p class="diag-caption" data-ja="戦略の重心を右から左へ移行する——ゼロ・ファーストパーティデータ基盤の構築が急務" data-en="戦略の重心を右から左へ移行する——ゼロ・ファーストパーティデータ基盤の構築が急務">戦略の重心を右から左へ移行する——ゼロ・ファーストパーティデータ基盤の構築が急務</p>
+</div>
+<h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4" data-ja="データの「3層構造」を理解する" data-en="データの「3層構造」を理解する">データの「3層構造」を理解する</h2>
+<p data-ja="マーケティングデータは取得方法によって3つの層に分類される。2026年以降の戦略は、この3層の役割を明確に定義することから始まる。" data-en="マーケティングデータは取得方法によって3つの層に分類される。2026年以降の戦略は、この3層の役割を明確に定義することから始まる。">マーケティングデータは取得方法によって3つの層に分類される。2026年以降の戦略は、この3層の役割を明確に定義することから始まる。</p>
+<div class="diag-wrap" data-ja-html='&lt;div class="diag-label"&gt;Data Taxonomy — 3層構造&lt;/div&gt;
+&lt;table class="compare-table"&gt;
+&lt;thead&gt;&lt;tr&gt;&lt;th data-ja="種別" data-en="種別"&gt;種別&lt;/th&gt;&lt;th data-ja="定義" data-en="定義"&gt;定義&lt;/th&gt;&lt;th data-ja="例" data-en="例"&gt;例&lt;/th&gt;&lt;th data-ja="2026年の位置づけ" data-en="2026年の位置づけ"&gt;2026年の位置づけ&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;td data-ja-html="&amp;lt;strong&amp;gt;ゼロパーティデータ&amp;lt;/strong&amp;gt;" data-en-html="&amp;lt;strong&amp;gt;ゼロパーティデータ&amp;lt;/strong&amp;gt;"&gt;&lt;strong&gt;ゼロパーティデータ&lt;/strong&gt;&lt;/td&gt;&lt;td data-ja="顧客が自ら積極的に提供した情報" data-en="顧客が自ら積極的に提供した情報"&gt;顧客が自ら積極的に提供した情報&lt;/td&gt;&lt;td data-ja="アンケート回答、プリファレンスセンター設定、コンテンツ選好申告" data-en="アンケート回答、プリファレンスセンター設定、コンテンツ選好申告"&gt;アンケート回答、プリファレンスセンター設定、コンテンツ選好申告&lt;/td&gt;&lt;td data-ja="最高価値・増大中" data-en="最高価値・増大中"&gt;最高価値・増大中&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td data-ja-html="&amp;lt;strong&amp;gt;ファーストパーティデータ&amp;lt;/strong&amp;gt;" data-en-html="&amp;lt;strong&amp;gt;ファーストパーティデータ&amp;lt;/strong&amp;gt;"&gt;&lt;strong&gt;ファーストパーティデータ&lt;/strong&gt;&lt;/td&gt;&lt;td data-ja="自社が直接収集した行動・属性データ" data-en="自社が直接収集した行動・属性データ"&gt;自社が直接収集した行動・属性データ&lt;/td&gt;&lt;td data-ja="サイト閲覧履歴、メール開封・クリック、CRM登録情報" data-en="サイト閲覧履歴、メール開封・クリック、CRM登録情報"&gt;サイト閲覧履歴、メール開封・クリック、CRM登録情報&lt;/td&gt;&lt;td data-ja="基盤・整備が急務" data-en="基盤・整備が急務"&gt;基盤・整備が急務&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td data-ja-html="&amp;lt;strong&amp;gt;セカンドパーティデータ&amp;lt;/strong&amp;gt;" data-en-html="&amp;lt;strong&amp;gt;セカンドパーティデータ&amp;lt;/strong&amp;gt;"&gt;&lt;strong&gt;セカンドパーティデータ&lt;/strong&gt;&lt;/td&gt;&lt;td data-ja="パートナー企業が収集・共有したデータ" data-en="パートナー企業が収集・共有したデータ"&gt;パートナー企業が収集・共有したデータ&lt;/td&gt;&lt;td data-ja="メディアパートナーの閲覧データ、展示会主催者のリスト" data-en="メディアパートナーの閲覧データ、展示会主催者のリスト"&gt;メディアパートナーの閲覧データ、展示会主催者のリスト&lt;/td&gt;&lt;td data-ja="限定的に活用" data-en="限定的に活用"&gt;限定的に活用&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td data-ja-html="&amp;lt;strong&amp;gt;サードパーティデータ&amp;lt;/strong&amp;gt;" data-en-html="&amp;lt;strong&amp;gt;サードパーティデータ&amp;lt;/strong&amp;gt;"&gt;&lt;strong&gt;サードパーティデータ&lt;/strong&gt;&lt;/td&gt;&lt;td data-ja="外部データブローカーが収集・販売" data-en="外部データブローカーが収集・販売"&gt;外部データブローカーが収集・販売&lt;/td&gt;&lt;td data-ja="デモグラフィックセグメント、行動ターゲティングCookie" data-en="デモグラフィックセグメント、行動ターゲティングCookie"&gt;デモグラフィックセグメント、行動ターゲティングCookie&lt;/td&gt;&lt;td data-ja="急速に価値低下" data-en="急速に価値低下"&gt;急速に価値低下&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p class="diag-caption" data-ja="戦略の重心をサード→ゼロ・ファーストへ移行することが最優先課題" data-en="戦略の重心をサード→ゼロ・ファーストへ移行することが最優先課題"&gt;戦略の重心をサード→ゼロ・ファーストへ移行することが最優先課題&lt;/p&gt;' data-en-html='&lt;div class="diag-label"&gt;Data Taxonomy — 3層構造&lt;/div&gt;
+&lt;table class="compare-table"&gt;
+&lt;thead&gt;&lt;tr&gt;&lt;th data-ja="種別" data-en="種別"&gt;種別&lt;/th&gt;&lt;th data-ja="定義" data-en="定義"&gt;定義&lt;/th&gt;&lt;th data-ja="例" data-en="例"&gt;例&lt;/th&gt;&lt;th data-ja="2026年の位置づけ" data-en="2026年の位置づけ"&gt;2026年の位置づけ&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;td data-ja-html="&amp;lt;strong&amp;gt;ゼロパーティデータ&amp;lt;/strong&amp;gt;" data-en-html="&amp;lt;strong&amp;gt;ゼロパーティデータ&amp;lt;/strong&amp;gt;"&gt;&lt;strong&gt;ゼロパーティデータ&lt;/strong&gt;&lt;/td&gt;&lt;td data-ja="顧客が自ら積極的に提供した情報" data-en="顧客が自ら積極的に提供した情報"&gt;顧客が自ら積極的に提供した情報&lt;/td&gt;&lt;td data-ja="アンケート回答、プリファレンスセンター設定、コンテンツ選好申告" data-en="アンケート回答、プリファレンスセンター設定、コンテンツ選好申告"&gt;アンケート回答、プリファレンスセンター設定、コンテンツ選好申告&lt;/td&gt;&lt;td data-ja="最高価値・増大中" data-en="最高価値・増大中"&gt;最高価値・増大中&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td data-ja-html="&amp;lt;strong&amp;gt;ファーストパーティデータ&amp;lt;/strong&amp;gt;" data-en-html="&amp;lt;strong&amp;gt;ファーストパーティデータ&amp;lt;/strong&amp;gt;"&gt;&lt;strong&gt;ファーストパーティデータ&lt;/strong&gt;&lt;/td&gt;&lt;td data-ja="自社が直接収集した行動・属性データ" data-en="自社が直接収集した行動・属性データ"&gt;自社が直接収集した行動・属性データ&lt;/td&gt;&lt;td data-ja="サイト閲覧履歴、メール開封・クリック、CRM登録情報" data-en="サイト閲覧履歴、メール開封・クリック、CRM登録情報"&gt;サイト閲覧履歴、メール開封・クリック、CRM登録情報&lt;/td&gt;&lt;td data-ja="基盤・整備が急務" data-en="基盤・整備が急務"&gt;基盤・整備が急務&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td data-ja-html="&amp;lt;strong&amp;gt;セカンドパーティデータ&amp;lt;/strong&amp;gt;" data-en-html="&amp;lt;strong&amp;gt;セカンドパーティデータ&amp;lt;/strong&amp;gt;"&gt;&lt;strong&gt;セカンドパーティデータ&lt;/strong&gt;&lt;/td&gt;&lt;td data-ja="パートナー企業が収集・共有したデータ" data-en="パートナー企業が収集・共有したデータ"&gt;パートナー企業が収集・共有したデータ&lt;/td&gt;&lt;td data-ja="メディアパートナーの閲覧データ、展示会主催者のリスト" data-en="メディアパートナーの閲覧データ、展示会主催者のリスト"&gt;メディアパートナーの閲覧データ、展示会主催者のリスト&lt;/td&gt;&lt;td data-ja="限定的に活用" data-en="限定的に活用"&gt;限定的に活用&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td data-ja-html="&amp;lt;strong&amp;gt;サードパーティデータ&amp;lt;/strong&amp;gt;" data-en-html="&amp;lt;strong&amp;gt;サードパーティデータ&amp;lt;/strong&amp;gt;"&gt;&lt;strong&gt;サードパーティデータ&lt;/strong&gt;&lt;/td&gt;&lt;td data-ja="外部データブローカーが収集・販売" data-en="外部データブローカーが収集・販売"&gt;外部データブローカーが収集・販売&lt;/td&gt;&lt;td data-ja="デモグラフィックセグメント、行動ターゲティングCookie" data-en="デモグラフィックセグメント、行動ターゲティングCookie"&gt;デモグラフィックセグメント、行動ターゲティングCookie&lt;/td&gt;&lt;td data-ja="急速に価値低下" data-en="急速に価値低下"&gt;急速に価値低下&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p class="diag-caption" data-ja="戦略の重心をサード→ゼロ・ファーストへ移行することが最優先課題" data-en="戦略の重心をサード→ゼロ・ファーストへ移行することが最優先課題"&gt;戦略の重心をサード→ゼロ・ファーストへ移行することが最優先課題&lt;/p&gt;'>
+<div class="diag-label" data-ja="Data Taxonomy — 3層構造" data-en="Data Taxonomy — 3層構造">Data Taxonomy — 3層構造</div>
+<table class="compare-table">
+<thead><tr><th data-ja="種別" data-en="種別">種別</th><th data-ja="定義" data-en="定義">定義</th><th data-ja="例" data-en="例">例</th><th data-ja="2026年の位置づけ" data-en="2026年の位置づけ">2026年の位置づけ</th></tr></thead>
+<tbody>
+<tr><td data-ja-html="&lt;strong&gt;ゼロパーティデータ&lt;/strong&gt;" data-en-html="&lt;strong&gt;ゼロパーティデータ&lt;/strong&gt;"><strong>ゼロパーティデータ</strong></td><td data-ja="顧客が自ら積極的に提供した情報" data-en="顧客が自ら積極的に提供した情報">顧客が自ら積極的に提供した情報</td><td data-ja="アンケート回答、プリファレンスセンター設定、コンテンツ選好申告" data-en="アンケート回答、プリファレンスセンター設定、コンテンツ選好申告">アンケート回答、プリファレンスセンター設定、コンテンツ選好申告</td><td data-ja="最高価値・増大中" data-en="最高価値・増大中">最高価値・増大中</td></tr>
+<tr><td data-ja-html="&lt;strong&gt;ファーストパーティデータ&lt;/strong&gt;" data-en-html="&lt;strong&gt;ファーストパーティデータ&lt;/strong&gt;"><strong>ファーストパーティデータ</strong></td><td data-ja="自社が直接収集した行動・属性データ" data-en="自社が直接収集した行動・属性データ">自社が直接収集した行動・属性データ</td><td data-ja="サイト閲覧履歴、メール開封・クリック、CRM登録情報" data-en="サイト閲覧履歴、メール開封・クリック、CRM登録情報">サイト閲覧履歴、メール開封・クリック、CRM登録情報</td><td data-ja="基盤・整備が急務" data-en="基盤・整備が急務">基盤・整備が急務</td></tr>
+<tr><td data-ja-html="&lt;strong&gt;セカンドパーティデータ&lt;/strong&gt;" data-en-html="&lt;strong&gt;セカンドパーティデータ&lt;/strong&gt;"><strong>セカンドパーティデータ</strong></td><td data-ja="パートナー企業が収集・共有したデータ" data-en="パートナー企業が収集・共有したデータ">パートナー企業が収集・共有したデータ</td><td data-ja="メディアパートナーの閲覧データ、展示会主催者のリスト" data-en="メディアパートナーの閲覧データ、展示会主催者のリスト">メディアパートナーの閲覧データ、展示会主催者のリスト</td><td data-ja="限定的に活用" data-en="限定的に活用">限定的に活用</td></tr>
+<tr><td data-ja-html="&lt;strong&gt;サードパーティデータ&lt;/strong&gt;" data-en-html="&lt;strong&gt;サードパーティデータ&lt;/strong&gt;"><strong>サードパーティデータ</strong></td><td data-ja="外部データブローカーが収集・販売" data-en="外部データブローカーが収集・販売">外部データブローカーが収集・販売</td><td data-ja="デモグラフィックセグメント、行動ターゲティングCookie" data-en="デモグラフィックセグメント、行動ターゲティングCookie">デモグラフィックセグメント、行動ターゲティングCookie</td><td data-ja="急速に価値低下" data-en="急速に価値低下">急速に価値低下</td></tr>
+</tbody>
+</table>
+<p class="diag-caption" data-ja="戦略の重心をサード→ゼロ・ファーストへ移行することが最優先課題" data-en="戦略の重心をサード→ゼロ・ファーストへ移行することが最優先課題">戦略の重心をサード→ゼロ・ファーストへ移行することが最優先課題</p>
+</div>
+<h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4" data-ja="ゼロパーティデータをB2Bで収集する5つの方法" data-en="ゼロパーティデータをB2Bで収集する5つの方法">ゼロパーティデータをB2Bで収集する5つの方法</h2>
+<p data-ja="ゼロパーティデータは「渡したい」と思った時だけ渡される。そのため収集設計は「情報提供と引き換えの価値」を明示することが必須だ。" data-en="ゼロパーティデータは「渡したい」と思った時だけ渡される。そのため収集設計は「情報提供と引き換えの価値」を明示することが必須だ。">ゼロパーティデータは「渡したい」と思った時だけ渡される。そのため収集設計は「情報提供と引き換えの価値」を明示することが必須だ。</p>
+<div class="diag-wrap" data-ja-html='&lt;div class="diag-label"&gt;Zero-Party Data — B2B収集設計&lt;/div&gt;
+&lt;div class="diag-step-row"&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;01&lt;/div&gt;
+&lt;div class="step-title"&gt;プリファレンスセンター&lt;/div&gt;
+&lt;div class="step-body"&gt;「どのテーマの情報を受け取りたいか」を登録者自身が設定。スパム率低下＋セグメント精度向上の一石二鳥。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;02&lt;/div&gt;
+&lt;div class="step-title"&gt;インタラクティブ診断ツール&lt;/div&gt;
+&lt;div class="step-body"&gt;「自社のDX成熟度を測る」「コスト削減余地を診断する」などの無料ツール提供と引き換えに課題・規模情報を収集。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;03&lt;/div&gt;
+&lt;div class="step-title"&gt;ウェビナー事前アンケート&lt;/div&gt;
+&lt;div class="step-body"&gt;参加申込時に「現在の課題」「検討中の施策」を任意回答。回答率60〜70%が一般的で質の高いデータが得られる。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;04&lt;/div&gt;
+&lt;div class="step-title"&gt;コンテンツレコメンド設定&lt;/div&gt;
+&lt;div class="step-body"&gt;「あなたの役職・業界・関心領域を教えてください」でパーソナライズドコンテンツを提供。価値交換が明確。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;05&lt;/div&gt;
+&lt;div class="step-title"&gt;CS定例ヒアリング構造化&lt;/div&gt;
+&lt;div class="step-body"&gt;既存顧客との定例MTGを「データ収集の場」として構造化。構造化フォームで入力しCRMに自動同期。&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class="diag-caption" data-ja="「何かの見返りに情報をもらう」という設計が、ゼロパーティデータ収集の大原則" data-en="「何かの見返りに情報をもらう」という設計が、ゼロパーティデータ収集の大原則"&gt;「何かの見返りに情報をもらう」という設計が、ゼロパーティデータ収集の大原則&lt;/p&gt;' data-en-html='&lt;div class="diag-label"&gt;Zero-Party Data — B2B収集設計&lt;/div&gt;
+&lt;div class="diag-step-row"&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;01&lt;/div&gt;
+&lt;div class="step-title"&gt;プリファレンスセンター&lt;/div&gt;
+&lt;div class="step-body"&gt;「どのテーマの情報を受け取りたいか」を登録者自身が設定。スパム率低下＋セグメント精度向上の一石二鳥。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;02&lt;/div&gt;
+&lt;div class="step-title"&gt;インタラクティブ診断ツール&lt;/div&gt;
+&lt;div class="step-body"&gt;「自社のDX成熟度を測る」「コスト削減余地を診断する」などの無料ツール提供と引き換えに課題・規模情報を収集。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;03&lt;/div&gt;
+&lt;div class="step-title"&gt;ウェビナー事前アンケート&lt;/div&gt;
+&lt;div class="step-body"&gt;参加申込時に「現在の課題」「検討中の施策」を任意回答。回答率60〜70%が一般的で質の高いデータが得られる。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;04&lt;/div&gt;
+&lt;div class="step-title"&gt;コンテンツレコメンド設定&lt;/div&gt;
+&lt;div class="step-body"&gt;「あなたの役職・業界・関心領域を教えてください」でパーソナライズドコンテンツを提供。価値交換が明確。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;05&lt;/div&gt;
+&lt;div class="step-title"&gt;CS定例ヒアリング構造化&lt;/div&gt;
+&lt;div class="step-body"&gt;既存顧客との定例MTGを「データ収集の場」として構造化。構造化フォームで入力しCRMに自動同期。&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class="diag-caption" data-ja="「何かの見返りに情報をもらう」という設計が、ゼロパーティデータ収集の大原則" data-en="「何かの見返りに情報をもらう」という設計が、ゼロパーティデータ収集の大原則"&gt;「何かの見返りに情報をもらう」という設計が、ゼロパーティデータ収集の大原則&lt;/p&gt;'>
+<div class="diag-label" data-ja="Zero-Party Data — B2B収集設計" data-en="Zero-Party Data — B2B収集設計">Zero-Party Data — B2B収集設計</div>
+<div class="diag-step-row" data-ja-html='&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;01&lt;/div&gt;
+&lt;div class="step-title"&gt;プリファレンスセンター&lt;/div&gt;
+&lt;div class="step-body"&gt;「どのテーマの情報を受け取りたいか」を登録者自身が設定。スパム率低下＋セグメント精度向上の一石二鳥。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;02&lt;/div&gt;
+&lt;div class="step-title"&gt;インタラクティブ診断ツール&lt;/div&gt;
+&lt;div class="step-body"&gt;「自社のDX成熟度を測る」「コスト削減余地を診断する」などの無料ツール提供と引き換えに課題・規模情報を収集。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;03&lt;/div&gt;
+&lt;div class="step-title"&gt;ウェビナー事前アンケート&lt;/div&gt;
+&lt;div class="step-body"&gt;参加申込時に「現在の課題」「検討中の施策」を任意回答。回答率60〜70%が一般的で質の高いデータが得られる。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;04&lt;/div&gt;
+&lt;div class="step-title"&gt;コンテンツレコメンド設定&lt;/div&gt;
+&lt;div class="step-body"&gt;「あなたの役職・業界・関心領域を教えてください」でパーソナライズドコンテンツを提供。価値交換が明確。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;05&lt;/div&gt;
+&lt;div class="step-title"&gt;CS定例ヒアリング構造化&lt;/div&gt;
+&lt;div class="step-body"&gt;既存顧客との定例MTGを「データ収集の場」として構造化。構造化フォームで入力しCRMに自動同期。&lt;/div&gt;
+&lt;/div&gt;' data-en-html='&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;01&lt;/div&gt;
+&lt;div class="step-title"&gt;プリファレンスセンター&lt;/div&gt;
+&lt;div class="step-body"&gt;「どのテーマの情報を受け取りたいか」を登録者自身が設定。スパム率低下＋セグメント精度向上の一石二鳥。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;02&lt;/div&gt;
+&lt;div class="step-title"&gt;インタラクティブ診断ツール&lt;/div&gt;
+&lt;div class="step-body"&gt;「自社のDX成熟度を測る」「コスト削減余地を診断する」などの無料ツール提供と引き換えに課題・規模情報を収集。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;03&lt;/div&gt;
+&lt;div class="step-title"&gt;ウェビナー事前アンケート&lt;/div&gt;
+&lt;div class="step-body"&gt;参加申込時に「現在の課題」「検討中の施策」を任意回答。回答率60〜70%が一般的で質の高いデータが得られる。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;04&lt;/div&gt;
+&lt;div class="step-title"&gt;コンテンツレコメンド設定&lt;/div&gt;
+&lt;div class="step-body"&gt;「あなたの役職・業界・関心領域を教えてください」でパーソナライズドコンテンツを提供。価値交換が明確。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;05&lt;/div&gt;
+&lt;div class="step-title"&gt;CS定例ヒアリング構造化&lt;/div&gt;
+&lt;div class="step-body"&gt;既存顧客との定例MTGを「データ収集の場」として構造化。構造化フォームで入力しCRMに自動同期。&lt;/div&gt;
+&lt;/div&gt;'>
+<div class="diag-step-card" data-ja-html='&lt;div class="step-num"&gt;01&lt;/div&gt;
+&lt;div class="step-title"&gt;プリファレンスセンター&lt;/div&gt;
+&lt;div class="step-body"&gt;「どのテーマの情報を受け取りたいか」を登録者自身が設定。スパム率低下＋セグメント精度向上の一石二鳥。&lt;/div&gt;' data-en-html='&lt;div class="step-num"&gt;01&lt;/div&gt;
+&lt;div class="step-title"&gt;プリファレンスセンター&lt;/div&gt;
+&lt;div class="step-body"&gt;「どのテーマの情報を受け取りたいか」を登録者自身が設定。スパム率低下＋セグメント精度向上の一石二鳥。&lt;/div&gt;'>
+<div class="step-num">01</div>
+<div class="step-title" data-ja="プリファレンスセンター" data-en="プリファレンスセンター">プリファレンスセンター</div>
+<div class="step-body" data-ja="「どのテーマの情報を受け取りたいか」を登録者自身が設定。スパム率低下＋セグメント精度向上の一石二鳥。" data-en="「どのテーマの情報を受け取りたいか」を登録者自身が設定。スパム率低下＋セグメント精度向上の一石二鳥。">「どのテーマの情報を受け取りたいか」を登録者自身が設定。スパム率低下＋セグメント精度向上の一石二鳥。</div>
+</div>
+<div class="diag-step-card" data-ja-html='&lt;div class="step-num"&gt;02&lt;/div&gt;
+&lt;div class="step-title"&gt;インタラクティブ診断ツール&lt;/div&gt;
+&lt;div class="step-body"&gt;「自社のDX成熟度を測る」「コスト削減余地を診断する」などの無料ツール提供と引き換えに課題・規模情報を収集。&lt;/div&gt;' data-en-html='&lt;div class="step-num"&gt;02&lt;/div&gt;
+&lt;div class="step-title"&gt;インタラクティブ診断ツール&lt;/div&gt;
+&lt;div class="step-body"&gt;「自社のDX成熟度を測る」「コスト削減余地を診断する」などの無料ツール提供と引き換えに課題・規模情報を収集。&lt;/div&gt;'>
+<div class="step-num">02</div>
+<div class="step-title" data-ja="インタラクティブ診断ツール" data-en="インタラクティブ診断ツール">インタラクティブ診断ツール</div>
+<div class="step-body" data-ja="「自社のDX成熟度を測る」「コスト削減余地を診断する」などの無料ツール提供と引き換えに課題・規模情報を収集。" data-en="「自社のDX成熟度を測る」「コスト削減余地を診断する」などの無料ツール提供と引き換えに課題・規模情報を収集。">「自社のDX成熟度を測る」「コスト削減余地を診断する」などの無料ツール提供と引き換えに課題・規模情報を収集。</div>
+</div>
+<div class="diag-step-card" data-ja-html='&lt;div class="step-num"&gt;03&lt;/div&gt;
+&lt;div class="step-title"&gt;ウェビナー事前アンケート&lt;/div&gt;
+&lt;div class="step-body"&gt;参加申込時に「現在の課題」「検討中の施策」を任意回答。回答率60〜70%が一般的で質の高いデータが得られる。&lt;/div&gt;' data-en-html='&lt;div class="step-num"&gt;03&lt;/div&gt;
+&lt;div class="step-title"&gt;ウェビナー事前アンケート&lt;/div&gt;
+&lt;div class="step-body"&gt;参加申込時に「現在の課題」「検討中の施策」を任意回答。回答率60〜70%が一般的で質の高いデータが得られる。&lt;/div&gt;'>
+<div class="step-num">03</div>
+<div class="step-title" data-ja="ウェビナー事前アンケート" data-en="ウェビナー事前アンケート">ウェビナー事前アンケート</div>
+<div class="step-body" data-ja="参加申込時に「現在の課題」「検討中の施策」を任意回答。回答率60〜70%が一般的で質の高いデータが得られる。" data-en="参加申込時に「現在の課題」「検討中の施策」を任意回答。回答率60〜70%が一般的で質の高いデータが得られる。">参加申込時に「現在の課題」「検討中の施策」を任意回答。回答率60〜70%が一般的で質の高いデータが得られる。</div>
+</div>
+<div class="diag-step-card" data-ja-html='&lt;div class="step-num"&gt;04&lt;/div&gt;
+&lt;div class="step-title"&gt;コンテンツレコメンド設定&lt;/div&gt;
+&lt;div class="step-body"&gt;「あなたの役職・業界・関心領域を教えてください」でパーソナライズドコンテンツを提供。価値交換が明確。&lt;/div&gt;' data-en-html='&lt;div class="step-num"&gt;04&lt;/div&gt;
+&lt;div class="step-title"&gt;コンテンツレコメンド設定&lt;/div&gt;
+&lt;div class="step-body"&gt;「あなたの役職・業界・関心領域を教えてください」でパーソナライズドコンテンツを提供。価値交換が明確。&lt;/div&gt;'>
+<div class="step-num">04</div>
+<div class="step-title" data-ja="コンテンツレコメンド設定" data-en="コンテンツレコメンド設定">コンテンツレコメンド設定</div>
+<div class="step-body" data-ja="「あなたの役職・業界・関心領域を教えてください」でパーソナライズドコンテンツを提供。価値交換が明確。" data-en="「あなたの役職・業界・関心領域を教えてください」でパーソナライズドコンテンツを提供。価値交換が明確。">「あなたの役職・業界・関心領域を教えてください」でパーソナライズドコンテンツを提供。価値交換が明確。</div>
+</div>
+<div class="diag-step-card" data-ja-html='&lt;div class="step-num"&gt;05&lt;/div&gt;
+&lt;div class="step-title"&gt;CS定例ヒアリング構造化&lt;/div&gt;
+&lt;div class="step-body"&gt;既存顧客との定例MTGを「データ収集の場」として構造化。構造化フォームで入力しCRMに自動同期。&lt;/div&gt;' data-en-html='&lt;div class="step-num"&gt;05&lt;/div&gt;
+&lt;div class="step-title"&gt;CS定例ヒアリング構造化&lt;/div&gt;
+&lt;div class="step-body"&gt;既存顧客との定例MTGを「データ収集の場」として構造化。構造化フォームで入力しCRMに自動同期。&lt;/div&gt;'>
+<div class="step-num">05</div>
+<div class="step-title" data-ja="CS定例ヒアリング構造化" data-en="CS定例ヒアリング構造化">CS定例ヒアリング構造化</div>
+<div class="step-body" data-ja="既存顧客との定例MTGを「データ収集の場」として構造化。構造化フォームで入力しCRMに自動同期。" data-en="既存顧客との定例MTGを「データ収集の場」として構造化。構造化フォームで入力しCRMに自動同期。">既存顧客との定例MTGを「データ収集の場」として構造化。構造化フォームで入力しCRMに自動同期。</div>
+</div>
+</div>
+<p class="diag-caption" data-ja="「何かの見返りに情報をもらう」という設計が、ゼロパーティデータ収集の大原則" data-en="「何かの見返りに情報をもらう」という設計が、ゼロパーティデータ収集の大原則">「何かの見返りに情報をもらう」という設計が、ゼロパーティデータ収集の大原則</p>
+</div>
+<h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4" data-ja="ファーストパーティデータ基盤の技術構成" data-en="ファーストパーティデータ基盤の技術構成">ファーストパーティデータ基盤の技術構成</h2>
+<p data-ja="ファーストパーティデータを正確に収集・管理するためには、従来のクライアントサイドタグ（Google Tag Manager等）に依存した構成から脱却する必要がある。" data-en="ファーストパーティデータを正確に収集・管理するためには、従来のクライアントサイドタグ（Google Tag Manager等）に依存した構成から脱却する必要がある。">ファーストパーティデータを正確に収集・管理するためには、従来のクライアントサイドタグ（Google Tag Manager等）に依存した構成から脱却する必要がある。</p>
+<div class="diag-wrap" data-ja-html='&lt;div class="diag-label"&gt;Tech Stack — ファーストパーティデータ基盤&lt;/div&gt;
+&lt;div class="diag-step-row"&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;CMP&lt;/div&gt;
+&lt;div class="step-title"&gt;同意管理プラットフォーム&lt;/div&gt;
+&lt;div class="step-body"&gt;OneTrust、Cookiebot等。GDPR・個人情報保護法対応の同意取得・記録。GAM/GTMと連携して同意に応じたタグ制御。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;SST&lt;/div&gt;
+&lt;div class="step-title"&gt;サーバーサイドトラッキング&lt;/div&gt;
+&lt;div class="step-body"&gt;GTM Server-side Container等。クライアントからサーバーにデータを送り各ツールへ転送。AdBlockerとCookie制限を回避。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;CDP&lt;/div&gt;
+&lt;div class="step-title"&gt;顧客データプラットフォーム&lt;/div&gt;
+&lt;div class="step-body"&gt;Segment、RudderStack等。複数チャネルのデータを統合し単一顧客IDで管理。MAやCRMへの一元配信基盤。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;CRM&lt;/div&gt;
+&lt;div class="step-title"&gt;CRMとの統合&lt;/div&gt;
+&lt;div class="step-body"&gt;HubSpot/Salesforce。CDPで統合されたデータをCRMに反映し、営業・CSへのインテリジェンス提供とパーソナライズ実行。&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class="diag-caption" data-ja="CMP→SST→CDP→CRMの順に整備するのが推奨ロードマップ" data-en="CMP→SST→CDP→CRMの順に整備するのが推奨ロードマップ"&gt;CMP→SST→CDP→CRMの順に整備するのが推奨ロードマップ&lt;/p&gt;' data-en-html='&lt;div class="diag-label"&gt;Tech Stack — ファーストパーティデータ基盤&lt;/div&gt;
+&lt;div class="diag-step-row"&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;CMP&lt;/div&gt;
+&lt;div class="step-title"&gt;同意管理プラットフォーム&lt;/div&gt;
+&lt;div class="step-body"&gt;OneTrust、Cookiebot等。GDPR・個人情報保護法対応の同意取得・記録。GAM/GTMと連携して同意に応じたタグ制御。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;SST&lt;/div&gt;
+&lt;div class="step-title"&gt;サーバーサイドトラッキング&lt;/div&gt;
+&lt;div class="step-body"&gt;GTM Server-side Container等。クライアントからサーバーにデータを送り各ツールへ転送。AdBlockerとCookie制限を回避。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;CDP&lt;/div&gt;
+&lt;div class="step-title"&gt;顧客データプラットフォーム&lt;/div&gt;
+&lt;div class="step-body"&gt;Segment、RudderStack等。複数チャネルのデータを統合し単一顧客IDで管理。MAやCRMへの一元配信基盤。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;CRM&lt;/div&gt;
+&lt;div class="step-title"&gt;CRMとの統合&lt;/div&gt;
+&lt;div class="step-body"&gt;HubSpot/Salesforce。CDPで統合されたデータをCRMに反映し、営業・CSへのインテリジェンス提供とパーソナライズ実行。&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class="diag-caption" data-ja="CMP→SST→CDP→CRMの順に整備するのが推奨ロードマップ" data-en="CMP→SST→CDP→CRMの順に整備するのが推奨ロードマップ"&gt;CMP→SST→CDP→CRMの順に整備するのが推奨ロードマップ&lt;/p&gt;'>
+<div class="diag-label" data-ja="Tech Stack — ファーストパーティデータ基盤" data-en="Tech Stack — ファーストパーティデータ基盤">Tech Stack — ファーストパーティデータ基盤</div>
+<div class="diag-step-row" data-ja-html='&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;CMP&lt;/div&gt;
+&lt;div class="step-title"&gt;同意管理プラットフォーム&lt;/div&gt;
+&lt;div class="step-body"&gt;OneTrust、Cookiebot等。GDPR・個人情報保護法対応の同意取得・記録。GAM/GTMと連携して同意に応じたタグ制御。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;SST&lt;/div&gt;
+&lt;div class="step-title"&gt;サーバーサイドトラッキング&lt;/div&gt;
+&lt;div class="step-body"&gt;GTM Server-side Container等。クライアントからサーバーにデータを送り各ツールへ転送。AdBlockerとCookie制限を回避。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;CDP&lt;/div&gt;
+&lt;div class="step-title"&gt;顧客データプラットフォーム&lt;/div&gt;
+&lt;div class="step-body"&gt;Segment、RudderStack等。複数チャネルのデータを統合し単一顧客IDで管理。MAやCRMへの一元配信基盤。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;CRM&lt;/div&gt;
+&lt;div class="step-title"&gt;CRMとの統合&lt;/div&gt;
+&lt;div class="step-body"&gt;HubSpot/Salesforce。CDPで統合されたデータをCRMに反映し、営業・CSへのインテリジェンス提供とパーソナライズ実行。&lt;/div&gt;
+&lt;/div&gt;' data-en-html='&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;CMP&lt;/div&gt;
+&lt;div class="step-title"&gt;同意管理プラットフォーム&lt;/div&gt;
+&lt;div class="step-body"&gt;OneTrust、Cookiebot等。GDPR・個人情報保護法対応の同意取得・記録。GAM/GTMと連携して同意に応じたタグ制御。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;SST&lt;/div&gt;
+&lt;div class="step-title"&gt;サーバーサイドトラッキング&lt;/div&gt;
+&lt;div class="step-body"&gt;GTM Server-side Container等。クライアントからサーバーにデータを送り各ツールへ転送。AdBlockerとCookie制限を回避。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;CDP&lt;/div&gt;
+&lt;div class="step-title"&gt;顧客データプラットフォーム&lt;/div&gt;
+&lt;div class="step-body"&gt;Segment、RudderStack等。複数チャネルのデータを統合し単一顧客IDで管理。MAやCRMへの一元配信基盤。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;CRM&lt;/div&gt;
+&lt;div class="step-title"&gt;CRMとの統合&lt;/div&gt;
+&lt;div class="step-body"&gt;HubSpot/Salesforce。CDPで統合されたデータをCRMに反映し、営業・CSへのインテリジェンス提供とパーソナライズ実行。&lt;/div&gt;
+&lt;/div&gt;'>
+<div class="diag-step-card" data-ja-html='&lt;div class="step-num"&gt;CMP&lt;/div&gt;
+&lt;div class="step-title"&gt;同意管理プラットフォーム&lt;/div&gt;
+&lt;div class="step-body"&gt;OneTrust、Cookiebot等。GDPR・個人情報保護法対応の同意取得・記録。GAM/GTMと連携して同意に応じたタグ制御。&lt;/div&gt;' data-en-html='&lt;div class="step-num"&gt;CMP&lt;/div&gt;
+&lt;div class="step-title"&gt;同意管理プラットフォーム&lt;/div&gt;
+&lt;div class="step-body"&gt;OneTrust、Cookiebot等。GDPR・個人情報保護法対応の同意取得・記録。GAM/GTMと連携して同意に応じたタグ制御。&lt;/div&gt;'>
+<div class="step-num">CMP</div>
+<div class="step-title" data-ja="同意管理プラットフォーム" data-en="同意管理プラットフォーム">同意管理プラットフォーム</div>
+<div class="step-body" data-ja="OneTrust、Cookiebot等。GDPR・個人情報保護法対応の同意取得・記録。GAM/GTMと連携して同意に応じたタグ制御。" data-en="OneTrust、Cookiebot等。GDPR・個人情報保護法対応の同意取得・記録。GAM/GTMと連携して同意に応じたタグ制御。">OneTrust、Cookiebot等。GDPR・個人情報保護法対応の同意取得・記録。GAM/GTMと連携して同意に応じたタグ制御。</div>
+</div>
+<div class="diag-step-card" data-ja-html='&lt;div class="step-num"&gt;SST&lt;/div&gt;
+&lt;div class="step-title"&gt;サーバーサイドトラッキング&lt;/div&gt;
+&lt;div class="step-body"&gt;GTM Server-side Container等。クライアントからサーバーにデータを送り各ツールへ転送。AdBlockerとCookie制限を回避。&lt;/div&gt;' data-en-html='&lt;div class="step-num"&gt;SST&lt;/div&gt;
+&lt;div class="step-title"&gt;サーバーサイドトラッキング&lt;/div&gt;
+&lt;div class="step-body"&gt;GTM Server-side Container等。クライアントからサーバーにデータを送り各ツールへ転送。AdBlockerとCookie制限を回避。&lt;/div&gt;'>
+<div class="step-num">SST</div>
+<div class="step-title" data-ja="サーバーサイドトラッキング" data-en="サーバーサイドトラッキング">サーバーサイドトラッキング</div>
+<div class="step-body" data-ja="GTM Server-side Container等。クライアントからサーバーにデータを送り各ツールへ転送。AdBlockerとCookie制限を回避。" data-en="GTM Server-side Container等。クライアントからサーバーにデータを送り各ツールへ転送。AdBlockerとCookie制限を回避。">GTM Server-side Container等。クライアントからサーバーにデータを送り各ツールへ転送。AdBlockerとCookie制限を回避。</div>
+</div>
+<div class="diag-step-card" data-ja-html='&lt;div class="step-num"&gt;CDP&lt;/div&gt;
+&lt;div class="step-title"&gt;顧客データプラットフォーム&lt;/div&gt;
+&lt;div class="step-body"&gt;Segment、RudderStack等。複数チャネルのデータを統合し単一顧客IDで管理。MAやCRMへの一元配信基盤。&lt;/div&gt;' data-en-html='&lt;div class="step-num"&gt;CDP&lt;/div&gt;
+&lt;div class="step-title"&gt;顧客データプラットフォーム&lt;/div&gt;
+&lt;div class="step-body"&gt;Segment、RudderStack等。複数チャネルのデータを統合し単一顧客IDで管理。MAやCRMへの一元配信基盤。&lt;/div&gt;'>
+<div class="step-num">CDP</div>
+<div class="step-title" data-ja="顧客データプラットフォーム" data-en="顧客データプラットフォーム">顧客データプラットフォーム</div>
+<div class="step-body" data-ja="Segment、RudderStack等。複数チャネルのデータを統合し単一顧客IDで管理。MAやCRMへの一元配信基盤。" data-en="Segment、RudderStack等。複数チャネルのデータを統合し単一顧客IDで管理。MAやCRMへの一元配信基盤。">Segment、RudderStack等。複数チャネルのデータを統合し単一顧客IDで管理。MAやCRMへの一元配信基盤。</div>
+</div>
+<div class="diag-step-card" data-ja-html='&lt;div class="step-num"&gt;CRM&lt;/div&gt;
+&lt;div class="step-title"&gt;CRMとの統合&lt;/div&gt;
+&lt;div class="step-body"&gt;HubSpot/Salesforce。CDPで統合されたデータをCRMに反映し、営業・CSへのインテリジェンス提供とパーソナライズ実行。&lt;/div&gt;' data-en-html='&lt;div class="step-num"&gt;CRM&lt;/div&gt;
+&lt;div class="step-title"&gt;CRMとの統合&lt;/div&gt;
+&lt;div class="step-body"&gt;HubSpot/Salesforce。CDPで統合されたデータをCRMに反映し、営業・CSへのインテリジェンス提供とパーソナライズ実行。&lt;/div&gt;'>
+<div class="step-num">CRM</div>
+<div class="step-title" data-ja="CRMとの統合" data-en="CRMとの統合">CRMとの統合</div>
+<div class="step-body" data-ja="HubSpot/Salesforce。CDPで統合されたデータをCRMに反映し、営業・CSへのインテリジェンス提供とパーソナライズ実行。" data-en="HubSpot/Salesforce。CDPで統合されたデータをCRMに反映し、営業・CSへのインテリジェンス提供とパーソナライズ実行。">HubSpot/Salesforce。CDPで統合されたデータをCRMに反映し、営業・CSへのインテリジェンス提供とパーソナライズ実行。</div>
+</div>
+</div>
+<p class="diag-caption" data-ja="CMP→SST→CDP→CRMの順に整備するのが推奨ロードマップ" data-en="CMP→SST→CDP→CRMの順に整備するのが推奨ロードマップ">CMP→SST→CDP→CRMの順に整備するのが推奨ロードマップ</p>
+</div>
+<h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4" data-ja="日本のB2B企業が直面するデータ基盤整備の現実" data-en="日本のB2B企業が直面するデータ基盤整備の現実">日本のB2B企業が直面するデータ基盤整備の現実</h2>
+<p data-ja="多くの日本のB2B企業では、マーケティングデータが「MAのメール行動ログ」「CRMの商談情報」「Webアナリティクス（GA4）」の3つにサイロ化されていて、それらが統合されていない。この状態では、たとえゼロパーティデータを収集しても活用できない。" data-en="多くの日本のB2B企業では、マーケティングデータが「MAのメール行動ログ」「CRMの商談情報」「Webアナリティクス（GA4）」の3つにサイロ化されていて、それらが統合されていない。この状態では、たとえゼロパーティデータを収集しても活用できない。">多くの日本のB2B企業では、マーケティングデータが「MAのメール行動ログ」「CRMの商談情報」「Webアナリティクス（GA4）」の3つにサイロ化されていて、それらが統合されていない。この状態では、たとえゼロパーティデータを収集しても活用できない。</p>
+<div class="warn-box" data-ja-html='&lt;div class="warn-label"&gt;よくある失敗：先にツール導入してしまうケース&lt;/div&gt;
+        CDPを導入する前に「どのデータを統合して、何のために使うか」の設計がないまま進めると、高額のCDPが「データの倉庫」になるだけで終わる。データ戦略の設計→必要データの棚卸し→ツール選定の順序が重要だ。ツールは手段であり、戦略が先だ。' data-en-html='&lt;div class="warn-label"&gt;よくある失敗：先にツール導入してしまうケース&lt;/div&gt;
+        CDPを導入する前に「どのデータを統合して、何のために使うか」の設計がないまま進めると、高額のCDPが「データの倉庫」になるだけで終わる。データ戦略の設計→必要データの棚卸し→ツール選定の順序が重要だ。ツールは手段であり、戦略が先だ。'>
+<div class="warn-label" data-ja="よくある失敗：先にツール導入してしまうケース" data-en="よくある失敗：先にツール導入してしまうケース">よくある失敗：先にツール導入してしまうケース</div>
         CDPを導入する前に「どのデータを統合して、何のために使うか」の設計がないまま進めると、高額のCDPが「データの倉庫」になるだけで終わる。データ戦略の設計→必要データの棚卸し→ツール選定の順序が重要だ。ツールは手段であり、戦略が先だ。
       </div>
-
-      <p>Wing では、ツール導入の前に「データ活用シナリオ設計」を必ず実施する。「誰のどの行動データを使って、どのアクションを引き起こしたいか」を明文化した上でツール選定・実装に移行する。これにより導入後の活用率と ROI が大幅に改善する。</p>
-
-      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">プライバシーファーストは差別化の機会</h2>
-
-      <p>クッキーレス対応を「コンプライアンス対応コスト」と捉えるか「顧客信頼構築の機会」と捉えるかで、戦略の質が変わる。プライバシーを尊重し、透明性の高いデータ収集を行うブランドは、B2Bバイヤーからの信頼度が測定可能なほど高い。データの扱い方は、ブランドの価値観そのものだ。</p>
-
-      <div class="insight-box">
-        <div class="insight-label">Wing's View</div>
+<p data-ja="Wing では、ツール導入の前に「データ活用シナリオ設計」を必ず実施する。「誰のどの行動データを使って、どのアクションを引き起こしたいか」を明文化した上でツール選定・実装に移行する。これにより導入後の活用率と ROI が大幅に改善する。" data-en="Wing では、ツール導入の前に「データ活用シナリオ設計」を必ず実施する。「誰のどの行動データを使って、どのアクションを引き起こしたいか」を明文化した上でツール選定・実装に移行する。これにより導入後の活用率と ROI が大幅に改善する。">Wing では、ツール導入の前に「データ活用シナリオ設計」を必ず実施する。「誰のどの行動データを使って、どのアクションを引き起こしたいか」を明文化した上でツール選定・実装に移行する。これにより導入後の活用率と ROI が大幅に改善する。</p>
+<h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4" data-ja="プライバシーファーストは差別化の機会" data-en="プライバシーファーストは差別化の機会">プライバシーファーストは差別化の機会</h2>
+<p data-ja="クッキーレス対応を「コンプライアンス対応コスト」と捉えるか「顧客信頼構築の機会」と捉えるかで、戦略の質が変わる。プライバシーを尊重し、透明性の高いデータ収集を行うブランドは、B2Bバイヤーからの信頼度が測定可能なほど高い。データの扱い方は、ブランドの価値観そのものだ。" data-en="クッキーレス対応を「コンプライアンス対応コスト」と捉えるか「顧客信頼構築の機会」と捉えるかで、戦略の質が変わる。プライバシーを尊重し、透明性の高いデータ収集を行うブランドは、B2Bバイヤーからの信頼度が測定可能なほど高い。データの扱い方は、ブランドの価値観そのものだ。">クッキーレス対応を「コンプライアンス対応コスト」と捉えるか「顧客信頼構築の機会」と捉えるかで、戦略の質が変わる。プライバシーを尊重し、透明性の高いデータ収集を行うブランドは、B2Bバイヤーからの信頼度が測定可能なほど高い。データの扱い方は、ブランドの価値観そのものだ。</p>
+<div class="insight-box" data-ja-html="&lt;div class=&quot;insight-label&quot;&gt;Wing's View&lt;/div&gt;
+        WingではB2Bクライアントのデータ基盤整備を「マーケティングのデータ活用シナリオ設計→CMP設置→サーバーサイドトラッキング導入→CDP選定・実装→CRM連携」という一気通貫のロードマップで支援している。各フェーズで「このデータで何ができるようになるか」を可視化しながら進めることで、現場の納得感と経営の投資判断を同時に得ることができる。" data-en-html="&lt;div class=&quot;insight-label&quot;&gt;Wing's View&lt;/div&gt;
+        WingではB2Bクライアントのデータ基盤整備を「マーケティングのデータ活用シナリオ設計→CMP設置→サーバーサイドトラッキング導入→CDP選定・実装→CRM連携」という一気通貫のロードマップで支援している。各フェーズで「このデータで何ができるようになるか」を可視化しながら進めることで、現場の納得感と経営の投資判断を同時に得ることができる。">
+<div class="insight-label">Wing's View</div>
         WingではB2Bクライアントのデータ基盤整備を「マーケティングのデータ活用シナリオ設計→CMP設置→サーバーサイドトラッキング導入→CDP選定・実装→CRM連携」という一気通貫のロードマップで支援している。各フェーズで「このデータで何ができるようになるか」を可視化しながら進めることで、現場の納得感と経営の投資判断を同時に得ることができる。
       </div>
-
-    </article>
-
-    <!-- CTA -->
-    <div class="mt-16 bg-navy text-white px-8 py-10 text-center">
-      <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold/80 mb-3">Consulting</p>
-      <h2 class="text-[1.2rem] font-medium mb-4 leading-snug">B2Bマーケティングのデータ基盤構築から<br>MA連携まで Wing がご支援します</h2>
-      <p class="text-[.82rem] text-white/70 leading-relaxed mb-6">サーバーサイドトラッキング導入、CMP設置、ゼロパーティデータ収集設計、CDP・CRM統合まで。Wing がデータ戦略の設計から実装を一気通貫でご支援します。</p>
-      <a href="/#contact" class="inline-block bg-gold text-white text-[.78rem] font-medium tracking-wider px-7 py-3 hover:bg-gold-light transition-colors">無料相談を予約する →</a>
-    </div>
-  </div>
+</article>
+<!-- CTA -->
+<div class="mt-16 bg-navy text-white px-8 py-10 text-center" data-ja-html='&lt;p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold/80 mb-3"&gt;Consulting&lt;/p&gt;
+&lt;h2 class="text-[1.2rem] font-medium mb-4 leading-snug"&gt;B2Bマーケティングのデータ基盤構築から&lt;br/&gt;MA連携まで Wing がご支援します&lt;/h2&gt;
+&lt;p class="text-[.82rem] text-white/70 leading-relaxed mb-6" data-ja="サーバーサイドトラッキング導入、CMP設置、ゼロパーティデータ収集設計、CDP・CRM統合まで。Wing がデータ戦略の設計から実装を一気通貫でご支援します。"&gt;サーバーサイドトラッキング導入、CMP設置、ゼロパーティデータ収集設計、CDP・CRM統合まで。Wing がデータ戦略の設計から実装を一気通貫でご支援します。&lt;/p&gt;
+&lt;a class="inline-block bg-gold text-white text-[.78rem] font-medium tracking-wider px-7 py-3 hover:bg-gold-light transition-colors" data-en="Book a Free Consultation →" data-ja="無料相談を予約する →" data-en="無料相談を予約する →" href="/#contact"&gt;無料相談を予約する →&lt;/a&gt;' data-en-html='&lt;p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold/80 mb-3"&gt;Consulting&lt;/p&gt;
+&lt;h2 class="text-[1.2rem] font-medium mb-4 leading-snug"&gt;B2Bマーケティングのデータ基盤構築から&lt;br/&gt;MA連携まで Wing がご支援します&lt;/h2&gt;
+&lt;p class="text-[.82rem] text-white/70 leading-relaxed mb-6" data-ja="サーバーサイドトラッキング導入、CMP設置、ゼロパーティデータ収集設計、CDP・CRM統合まで。Wing がデータ戦略の設計から実装を一気通貫でご支援します。"&gt;サーバーサイドトラッキング導入、CMP設置、ゼロパーティデータ収集設計、CDP・CRM統合まで。Wing がデータ戦略の設計から実装を一気通貫でご支援します。&lt;/p&gt;
+&lt;a class="inline-block bg-gold text-white text-[.78rem] font-medium tracking-wider px-7 py-3 hover:bg-gold-light transition-colors" data-en="Book a Free Consultation →" data-ja="無料相談を予約する →" data-en="無料相談を予約する →" href="/#contact"&gt;無料相談を予約する →&lt;/a&gt;'>
+<p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold/80 mb-3">Consulting</p>
+<h2 class="text-[1.2rem] font-medium mb-4 leading-snug" data-ja-html="B2Bマーケティングのデータ基盤構築から&lt;br/&gt;MA連携まで Wing がご支援します" data-en-html="B2Bマーケティングのデータ基盤構築から&lt;br/&gt;MA連携まで Wing がご支援します">B2Bマーケティングのデータ基盤構築から<br/>MA連携まで Wing がご支援します</h2>
+<p class="text-[.82rem] text-white/70 leading-relaxed mb-6" data-ja="サーバーサイドトラッキング導入、CMP設置、ゼロパーティデータ収集設計、CDP・CRM統合まで。Wing がデータ戦略の設計から実装を一気通貫でご支援します。" data-en="サーバーサイドトラッキング導入、CMP設置、ゼロパーティデータ収集設計、CDP・CRM統合まで。Wing がデータ戦略の設計から実装を一気通貫でご支援します。">サーバーサイドトラッキング導入、CMP設置、ゼロパーティデータ収集設計、CDP・CRM統合まで。Wing がデータ戦略の設計から実装を一気通貫でご支援します。</p>
+<a class="inline-block bg-gold text-white text-[.78rem] font-medium tracking-wider px-7 py-3 hover:bg-gold-light transition-colors" data-en="Book a Free Consultation →" data-ja="無料相談を予約する →" data-en="無料相談を予約する →" href="/#contact">無料相談を予約する →</a>
+</div>
+</div>
 </main>
 <footer class="mt-20 border-t border-[#E2E0DA] py-10 px-6 md:px-10 text-center">
-  <a href="/" class="inline-block mb-4">
-    <svg width="80" height="24" viewBox="0 0 120 36" fill="none">
-      <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#0F2342"/>
-      <path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#0F2342" opacity=".32"/>
-      <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#0F2342">Wing</text>
-    </svg>
-  </a>
-  <p class="text-[.72rem] text-ink-light">© 2026 Wing Consulting. All rights reserved.</p>
+<a class="inline-block mb-4" href="/">
+<svg fill="none" height="24" viewbox="0 0 120 36" width="80">
+<path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#0F2342"></path>
+<path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#0F2342" opacity=".32"></path>
+<text fill="#0F2342" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" x="46" y="25">Wing</text>
+</svg>
+</a>
+<p class="text-[.72rem] text-ink-light">© 2026 Wing Consulting. All rights reserved.</p>
 </footer>
 </body>
 </html>

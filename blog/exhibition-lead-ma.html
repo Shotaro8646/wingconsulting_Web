@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="ja" class="scroll-smooth">
+
+<html class="scroll-smooth" lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>展示会リードの"その後"問題｜MAで商談率を3倍にするフォローアップ設計 | Wing Blog</title>
-<meta name="description" content="展示会で集めた名刺がなぜ商談に繋がらないのか。MAツールを使ったリードナーチャリング設計と、展示会後72時間のフォローアップシナリオを解説。">
-<meta name="keywords" content="展示会 リード獲得, 展示会後 フォローアップ, MAツール リードナーチャリング, 展示会 商談化, HubSpot 展示会, リードスコアリング, 展示会 MA連携, B2B営業 展示会">
-<meta property="og:title" content="展示会リードの"その後"問題｜MAで商談率を3倍にするフォローアップ設計 | Wing Blog">
-<meta property="og:description" content="展示会で集めた名刺がなぜ商談に繋がらないのか。MAツールを使ったリードナーチャリング設計と、展示会後72時間のフォローアップシナリオを解説。">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://wingconsulting.org/blog/exhibition-lead-ma">
-<meta property="og:locale" content="ja_JP">
-<meta property="og:image" content="https://wingconsulting.org/images/og-default.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:site_name" content="Wing">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="展示会リードの"その後"問題｜MAで商談率を3倍にするフォローアップ設計">
-<meta name="twitter:description" content="展示会で集めた名刺がなぜ商談に繋がらないのか。MAツールを使ったリードナーチャリング設計と、展示会後72時間のフォローアップシナリオを解説。">
-<meta name="twitter:image" content="https://wingconsulting.org/images/og-default.png">
-<link rel="canonical" href="https://wingconsulting.org/blog/exhibition-lead-ma">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Exhibition Lead Follow-up with MA | Wing Blog</title>
+<meta content="MA-powered follow-up workflows that triple lead conversion." name="description"/>
+<meta content="展示会 リード獲得, 展示会後 フォローアップ, MAツール リードナーチャリング, 展示会 商談化, HubSpot 展示会, リードスコアリング, 展示会 MA連携, B2B営業 展示会" name="keywords"/>
+<meta blog"="" content="Exhibition Lead Follow-up: 3x Conversion with MA" property="og:title" wing="" |="" その後"問題｜maで商談率を3倍にするフォローアップ設計=""/>
+<meta content="MA-powered follow-up workflows that triple lead conversion." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://wingconsulting.org/blog/exhibition-lead-ma" property="og:url"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="https://wingconsulting.org/images/og-default.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Wing" property="og:site_name"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Exhibition Lead Follow-up: 3x Conversion with MA" name="twitter:title" その後"問題｜maで商談率を3倍にするフォローアップ設計"=""/>
+<meta content="MA-powered follow-up workflows that triple lead conversion." name="twitter:description"/>
+<meta content="https://wingconsulting.org/images/og-default.png" name="twitter:image"/>
+<link href="https://wingconsulting.org/blog/exhibition-lead-ma" rel="canonical"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -98,14 +99,14 @@ article li { margin-bottom: 0.5rem; }
 .p-body { font-size:0.72rem; color:#4A4A55; line-height:1.5; }
 </style>
 <!-- Google Analytics GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-KN7NWHFK9G');
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;family=Noto+Sans+JP:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
 <style id="font-override">
   body, p, li, td, th, span, div {
     font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif !important;
@@ -122,228 +123,974 @@ article li { margin-bottom: 0.5rem; }
 </style>
 </head>
 <body class="bg-slate-warm text-ink">
-
 <!-- HEADER -->
 <header class="bg-navy h-[60px] flex items-center px-6 md:px-10 sticky top-0 z-50">
-  <div class="max-w-5xl mx-auto w-full flex items-center justify-between">
-    <a href="/" class="leading-none">
-      <svg width="120" height="36" viewBox="0 0 120 36" fill="none" aria-label="Wing">
-        <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff"/>
-        <path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#fff" opacity=".32"/>
-        <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#fff">Wing</text>
-      </svg>
-    </a>
-    <div class="flex items-center gap-4">
-      <span class="display text-[.7rem] font-medium tracking-wider text-white/50">Blog</span>
-      <a href="/" class="text-[.75rem] text-white/70 hover:text-white transition-colors">← Home</a>
-    </div>
-  </div>
+<div class="max-w-5xl mx-auto w-full flex items-center justify-between">
+<a class="leading-none" href="/">
+<svg aria-label="Wing" fill="none" height="36" viewbox="0 0 120 36" width="120">
+<path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff"></path>
+<path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#fff" opacity=".32"></path>
+<text fill="#fff" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" x="46" y="25">Wing</text>
+</svg>
+</a>
+<div class="flex items-center gap-4">
+<span class="display text-[.7rem] font-medium tracking-wider text-white/50">Blog</span>
+<a class="text-[.75rem] text-white/70 hover:text-white transition-colors" href="/">← Home</a>
+</div>
+</div>
 </header>
-
 <!-- ARTICLE -->
 <main class="py-16 px-6 md:px-10">
-  <div class="max-w-3xl mx-auto">
-    <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3">Lead Generation</p>
-    <h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4">展示会リードの"その後"問題｜<br>MAで商談率を3倍にするフォローアップ設計</h1>
-    <div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2">
-      <time datetime="2026-03-28">2026.03.28</time>
-      <span>Wing編集部</span>
-    </div>
-    <div class="gold-rule mb-10"></div>
-
-    <article class="text-[.9rem] text-ink leading-[2] max-w-none">
-
-      <p>展示会に出展するたびに、マーケティング・営業チームは数百枚の名刺と引き合いカードを持ち帰る。ブース設営から接客まで費やした工数と費用は決して少なくない。それなのに、3ヶ月後に「あの展示会のリード、どれだけ商談になった？」と聞かれると、答えに詰まる担当者が多い。展示会リードの"その後"は、多くの企業にとって未解決の問題であり続けている。</p>
-
-      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">展示会で300枚の名刺を集めて、商談が0件だった話</h2>
-
-      <p>ある製造業の営業マネージャーから聞いた話だ。大型のIT系展示会に2日間出展し、担当者3名で300枚を超える名刺を交換した。初日の夜、「今回は手応えがある」とチームで乾杯した。ところが展示会終了から2週間後、誰も本格的なフォローができていなかった。名刺はスキャンされないまま積み上がり、「そのうちやる」が「忘れた」に変わっていた。3ヶ月後の商談件数はゼロ。出展費用の約200万円は、ほぼ丸ごと埋没コストになった。</p>
-
-      <p>これは特殊なケースではない。業界調査によれば、展示会で収集されたリードの<strong>80%は一度もフォロー連絡されない</strong>とされる。営業担当者が展示会から帰社した翌日から、通常業務の波に飲み込まれ、展示会リードはそのまま冷却されていく。連絡が来ないベンダーのことを、見込み客は2週間後にはほぼ忘れている。</p>
-
-      <p>この問題の本質は、営業個人の怠慢でも意識の低さでもない。<strong>仕組みの不在</strong>だ。「誰が、いつ、何を、どの順番で送るか」が設計されていないまま展示会に出展しているかぎり、リードの大半は死に続ける。</p>
-
-      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">展示会リードが死ぬ5つの理由</h2>
-
-      <p>展示会リードが商談に繋がらない原因を分解すると、構造的な問題が5つのパターンに集約される。</p>
-
-      <ul class="list-disc text-[.88rem]">
-        <li><strong>フォローまでの時間が長すぎる。</strong>展示会終了から72時間を超えると、見込み客の記憶とモチベーションは急速に低下する。「あのブースの人から連絡が来た」という体験そのものに価値があるのに、それが2週間後では文脈が消えている。</li>
-        <li><strong>全員に同じメールを送る。</strong>「●●展示会にご来場ありがとうございました」という一斉送信は、温度感の違いを完全に無視している。「今すぐ導入を検討している」人と「とりあえず情報収集」の人に同じメッセージを送ることは、前者に対する機会損失であり、後者にとっては的外れなプッシュになる。</li>
-        <li><strong>名刺情報がCRM・MAに入力されない。</strong>Excelや名刺管理アプリで終わってしまい、MAのシナリオに乗らないリードは自動フォローの対象外になる。スキャンから入力、セグメント付与までの一連のオペレーションが設計されていなければ、MAを導入していても意味がない。</li>
-        <li><strong>「また連絡します」で終わる。</strong>ブースでの会話を「ご興味あれば連絡します」で終わらせると、次のアクションが相手任せになる。具体的な次のステップ（「来週水曜に事例資料をお送りします」など）をその場で約束することが、フォローの起点になる。</li>
-        <li><strong>営業とマーケで展示会リードの扱いが違う。</strong>マーケは「全員にメールを送ったから、あとは営業の仕事」と思い、営業は「マーケが送ったメールで温まった人だけ対応する」と思っている。この分断がリードを放置する最大の温床だ。</li>
-      </ul>
-
-      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">MAと連携した展示会フォローアップ設計</h2>
-
-      <p>これらの問題を解決するのが、MAツールを軸にした展示会フォローアップの仕組み化だ。重要なのは「MAを導入する」ことではなく、「展示会の前後のオペレーションをMA前提で設計する」ことだ。</p>
-
-      <!-- フロー図 -->
-      <div class="diag-wrap">
-        <div class="diag-label">Figure — 展示会 → MA → 商談の4ステップフロー</div>
-        <div class="diag-step-row">
-          <div class="diag-step-card">
-            <div class="step-num">1</div>
-            <div class="step-title">展示会当日<br>名刺→CRM入力</div>
-            <div class="step-body">名刺スキャン＋温度感メモを即日入力。「今すぐ」「そのうち」「情報収集」の3分類でタグ付け。担当営業名も必ず記録。</div>
-          </div>
-          <div class="diag-step-card">
-            <div class="step-num">2</div>
-            <div class="step-title">翌日〜72時間<br>サンクスメール送付</div>
-            <div class="step-body">MA経由で自動配信。会話内容に触れたパーソナライズ文＋関連コンテンツのリンクを添付。CTAは「資料DL」か「日程調整URL」のみ。</div>
-          </div>
-          <div class="diag-step-card">
-            <div class="step-num">3</div>
-            <div class="step-title">1〜2週間後<br>スコアに応じた分岐</div>
-            <div class="step-body">メール開封・コンテンツ閲覧スコアが閾値超え→営業にアラート通知。閾値未達→ナーチャリングシナリオへ自動投入。</div>
-          </div>
-          <div class="diag-step-card">
-            <div class="step-num">4</div>
-            <div class="step-title">商談アポ or<br>ナーチャリング継続</div>
-            <div class="step-body">ホットリードは担当営業がコールまたはメール。コールドリードは月次コンテンツ配信で長期育成。四半期ごとに再スコアリング。</div>
-          </div>
-        </div>
-        <p class="diag-caption">展示会終了後72時間以内にSTEP 1〜2を完了させることが商談化率向上の最重要条件</p>
-      </div>
-
-      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">リードスコアリング設計：「今すぐ客」と「そのうち客」を分ける</h2>
-
-      <p>MAを活用したフォローアップの核心は<strong>リードスコアリング</strong>だ。全リードを平等に扱うのではなく、購買確度に応じてアプローチを変えることで、営業リソースを最も効果的に配分できる。</p>
-
-      <p>スコアリングの軸は大きく2つある。<strong>属性スコア</strong>（その人が誰か）と<strong>行動スコア</strong>（その人が何をしたか）だ。属性スコアは役職（部長以上＋15点、課長＋10点など）、会社規模（従業員1000人以上＋20点など）、業種マッチ度で構成する。行動スコアはメール開封（＋3点）、コンテンツDL（＋10点）、価格ページ閲覧（＋15点）、デモ申込ページ閲覧（＋20点）などで加算する。</p>
-
-      <p>展示会特有のポイントとして、<strong>名刺メモ情報のスコア反映</strong>がある。ブースでの会話の中で「●月に稟議が通る予定」「現在3社を比較検討中」「予算は●百万円を確保済み」といった情報が得られた場合、これは属性スコアとして高く評価すべき情報だ。名刺スキャン時のメモ欄に入力し、タグとしてCRMに反映する運用を展示会前に設計しておく。</p>
-
-      <!-- スコアリング表 -->
-      <div class="diag-wrap">
-        <div class="diag-label">リードスコアリング設計例 — 展示会リード向け</div>
-        <div style="display:flex;flex-wrap:wrap;gap:1rem;">
-          <div style="flex:1 1 200px;">
-            <div style="font-size:0.72rem;font-weight:700;color:#0F2342;border-bottom:1px solid #E2E0DA;padding-bottom:0.4rem;margin-bottom:0.6rem;">属性スコア（最大50点）</div>
-            <div style="font-size:0.75rem;color:#4A4A55;line-height:1.8;">
-              役職：部長以上 +20pt<br>
-              役職：課長・マネージャー +12pt<br>
-              会社規模：1000人以上 +15pt<br>
-              業種マッチ +10pt<br>
+<div class="max-w-3xl mx-auto" data-ja-html="&lt;p class=&quot;display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3&quot;&gt;Lead Generation&lt;/p&gt;
+&lt;h1 class=&quot;serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4&quot; data-ja-html='展示会リードの&quot;その後&quot;問題｜&amp;lt;br/&amp;gt;MAで商談率を3倍にするフォローアップ設計'&gt;展示会リードの&quot;その後&quot;問題｜&lt;br/&gt;MAで商談率を3倍にするフォローアップ設計&lt;/h1&gt;
+&lt;div class=&quot;flex items-center gap-4 text-[.75rem] text-ink-light mb-2&quot;&gt;
+&lt;time datetime=&quot;2026-03-28&quot;&gt;2026.03.28&lt;/time&gt;
+&lt;span&gt;Wing編集部&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gold-rule mb-10&quot;&gt;&lt;/div&gt;
+&lt;article class=&quot;text-[.9rem] text-ink leading-[2] max-w-none&quot;&gt;
+&lt;p data-ja='展示会に出展するたびに、マーケティング・営業チームは数百枚の名刺と引き合いカードを持ち帰る。ブース設営から接客まで費やした工数と費用は決して少なくない。それなのに、3ヶ月後に「あの展示会のリード、どれだけ商談になった？」と聞かれると、答えに詰まる担当者が多い。展示会リードの&quot;その後&quot;は、多くの企業にとって未解決の問題であり続けている。'&gt;展示会に出展するたびに、マーケティング・営業チームは数百枚の名刺と引き合いカードを持ち帰る。ブース設営から接客まで費やした工数と費用は決して少なくない。それなのに、3ヶ月後に「あの展示会のリード、どれだけ商談になった？」と聞かれると、答えに詰まる担当者が多い。展示会リードの&quot;その後&quot;は、多くの企業にとって未解決の問題であり続けている。&lt;/p&gt;
+&lt;h2 class=&quot;text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4&quot;&gt;展示会で300枚の名刺を集めて、商談が0件だった話&lt;/h2&gt;
+&lt;p data-ja=&quot;ある製造業の営業マネージャーから聞いた話だ。大型のIT系展示会に2日間出展し、担当者3名で300枚を超える名刺を交換した。初日の夜、「今回は手応えがある」とチームで乾杯した。ところが展示会終了から2週間後、誰も本格的なフォローができていなかった。名刺はスキャンされないまま積み上がり、「そのうちやる」が「忘れた」に変わっていた。3ヶ月後の商談件数はゼロ。出展費用の約200万円は、ほぼ丸ごと埋没コストになった。&quot;&gt;ある製造業の営業マネージャーから聞いた話だ。大型のIT系展示会に2日間出展し、担当者3名で300枚を超える名刺を交換した。初日の夜、「今回は手応えがある」とチームで乾杯した。ところが展示会終了から2週間後、誰も本格的なフォローができていなかった。名刺はスキャンされないまま積み上がり、「そのうちやる」が「忘れた」に変わっていた。3ヶ月後の商談件数はゼロ。出展費用の約200万円は、ほぼ丸ごと埋没コストになった。&lt;/p&gt;
+&lt;p data-ja-html=&quot;これは特殊なケースではない。業界調査によれば、展示会で収集されたリードの&amp;lt;strong&amp;gt;80%は一度もフォロー連絡されない&amp;lt;/strong&amp;gt;とされる。営業担当者が展示会から帰社した翌日から、通常業務の波に飲み込まれ、展示会リードはそのまま冷却されていく。連絡が来ないベンダーのことを、見込み客は2週間後にはほぼ忘れている。&quot;&gt;これは特殊なケースではない。業界調査によれば、展示会で収集されたリードの&lt;strong&gt;80%は一度もフォロー連絡されない&lt;/strong&gt;とされる。営業担当者が展示会から帰社した翌日から、通常業務の波に飲み込まれ、展示会リードはそのまま冷却されていく。連絡が来ないベンダーのことを、見込み客は2週間後にはほぼ忘れている。&lt;/p&gt;
+&lt;p data-ja-html=&quot;この問題の本質は、営業個人の怠慢でも意識の低さでもない。&amp;lt;strong&amp;gt;仕組みの不在&amp;lt;/strong&amp;gt;だ。「誰が、いつ、何を、どの順番で送るか」が設計されていないまま展示会に出展しているかぎり、リードの大半は死に続ける。&quot;&gt;この問題の本質は、営業個人の怠慢でも意識の低さでもない。&lt;strong&gt;仕組みの不在&lt;/strong&gt;だ。「誰が、いつ、何を、どの順番で送るか」が設計されていないまま展示会に出展しているかぎり、リードの大半は死に続ける。&lt;/p&gt;
+&lt;h2 class=&quot;text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4&quot;&gt;展示会リードが死ぬ5つの理由&lt;/h2&gt;
+&lt;p data-ja=&quot;展示会リードが商談に繋がらない原因を分解すると、構造的な問題が5つのパターンに集約される。&quot;&gt;展示会リードが商談に繋がらない原因を分解すると、構造的な問題が5つのパターンに集約される。&lt;/p&gt;
+&lt;ul class=&quot;list-disc text-[.88rem]&quot;&gt;
+&lt;li&gt;&lt;strong&gt;フォローまでの時間が長すぎる。&lt;/strong&gt;展示会終了から72時間を超えると、見込み客の記憶とモチベーションは急速に低下する。「あのブースの人から連絡が来た」という体験そのものに価値があるのに、それが2週間後では文脈が消えている。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;全員に同じメールを送る。&lt;/strong&gt;「●●展示会にご来場ありがとうございました」という一斉送信は、温度感の違いを完全に無視している。「今すぐ導入を検討している」人と「とりあえず情報収集」の人に同じメッセージを送ることは、前者に対する機会損失であり、後者にとっては的外れなプッシュになる。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;名刺情報がCRM・MAに入力されない。&lt;/strong&gt;Excelや名刺管理アプリで終わってしまい、MAのシナリオに乗らないリードは自動フォローの対象外になる。スキャンから入力、セグメント付与までの一連のオペレーションが設計されていなければ、MAを導入していても意味がない。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;「また連絡します」で終わる。&lt;/strong&gt;ブースでの会話を「ご興味あれば連絡します」で終わらせると、次のアクションが相手任せになる。具体的な次のステップ（「来週水曜に事例資料をお送りします」など）をその場で約束することが、フォローの起点になる。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;営業とマーケで展示会リードの扱いが違う。&lt;/strong&gt;マーケは「全員にメールを送ったから、あとは営業の仕事」と思い、営業は「マーケが送ったメールで温まった人だけ対応する」と思っている。この分断がリードを放置する最大の温床だ。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 class=&quot;text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4&quot;&gt;MAと連携した展示会フォローアップ設計&lt;/h2&gt;
+&lt;p data-ja=&quot;これらの問題を解決するのが、MAツールを軸にした展示会フォローアップの仕組み化だ。重要なのは「MAを導入する」ことではなく、「展示会の前後のオペレーションをMA前提で設計する」ことだ。&quot;&gt;これらの問題を解決するのが、MAツールを軸にした展示会フォローアップの仕組み化だ。重要なのは「MAを導入する」ことではなく、「展示会の前後のオペレーションをMA前提で設計する」ことだ。&lt;/p&gt;
+&lt;!-- フロー図 --&gt;
+&lt;div class=&quot;diag-wrap&quot;&gt;
+&lt;div class=&quot;diag-label&quot;&gt;Figure — 展示会 → MA → 商談の4ステップフロー&lt;/div&gt;
+&lt;div class=&quot;diag-step-row&quot;&gt;
+&lt;div class=&quot;diag-step-card&quot;&gt;
+&lt;div class=&quot;step-num&quot;&gt;1&lt;/div&gt;
+&lt;div class=&quot;step-title&quot;&gt;展示会当日&lt;br/&gt;名刺→CRM入力&lt;/div&gt;
+&lt;div class=&quot;step-body&quot;&gt;名刺スキャン＋温度感メモを即日入力。「今すぐ」「そのうち」「情報収集」の3分類でタグ付け。担当営業名も必ず記録。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;diag-step-card&quot;&gt;
+&lt;div class=&quot;step-num&quot;&gt;2&lt;/div&gt;
+&lt;div class=&quot;step-title&quot;&gt;翌日〜72時間&lt;br/&gt;サンクスメール送付&lt;/div&gt;
+&lt;div class=&quot;step-body&quot;&gt;MA経由で自動配信。会話内容に触れたパーソナライズ文＋関連コンテンツのリンクを添付。CTAは「資料DL」か「日程調整URL」のみ。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;diag-step-card&quot;&gt;
+&lt;div class=&quot;step-num&quot;&gt;3&lt;/div&gt;
+&lt;div class=&quot;step-title&quot;&gt;1〜2週間後&lt;br/&gt;スコアに応じた分岐&lt;/div&gt;
+&lt;div class=&quot;step-body&quot;&gt;メール開封・コンテンツ閲覧スコアが閾値超え→営業にアラート通知。閾値未達→ナーチャリングシナリオへ自動投入。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;diag-step-card&quot;&gt;
+&lt;div class=&quot;step-num&quot;&gt;4&lt;/div&gt;
+&lt;div class=&quot;step-title&quot;&gt;商談アポ or&lt;br/&gt;ナーチャリング継続&lt;/div&gt;
+&lt;div class=&quot;step-body&quot;&gt;ホットリードは担当営業がコールまたはメール。コールドリードは月次コンテンツ配信で長期育成。四半期ごとに再スコアリング。&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class=&quot;diag-caption&quot; data-ja=&quot;展示会終了後72時間以内にSTEP 1〜2を完了させることが商談化率向上の最重要条件&quot;&gt;展示会終了後72時間以内にSTEP 1〜2を完了させることが商談化率向上の最重要条件&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 class=&quot;text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4&quot;&gt;リードスコアリング設計：「今すぐ客」と「そのうち客」を分ける&lt;/h2&gt;
+&lt;p data-ja-html=&quot;MAを活用したフォローアップの核心は&amp;lt;strong&amp;gt;リードスコアリング&amp;lt;/strong&amp;gt;だ。全リードを平等に扱うのではなく、購買確度に応じてアプローチを変えることで、営業リソースを最も効果的に配分できる。&quot;&gt;MAを活用したフォローアップの核心は&lt;strong&gt;リードスコアリング&lt;/strong&gt;だ。全リードを平等に扱うのではなく、購買確度に応じてアプローチを変えることで、営業リソースを最も効果的に配分できる。&lt;/p&gt;
+&lt;p data-ja-html=&quot;スコアリングの軸は大きく2つある。&amp;lt;strong&amp;gt;属性スコア&amp;lt;/strong&amp;gt;（その人が誰か）と&amp;lt;strong&amp;gt;行動スコア&amp;lt;/strong&amp;gt;（その人が何をしたか）だ。属性スコアは役職（部長以上＋15点、課長＋10点など）、会社規模（従業員1000人以上＋20点など）、業種マッチ度で構成する。行動スコアはメール開封（＋3点）、コンテンツDL（＋10点）、価格ページ閲覧（＋15点）、デモ申込ページ閲覧（＋20点）などで加算する。&quot;&gt;スコアリングの軸は大きく2つある。&lt;strong&gt;属性スコア&lt;/strong&gt;（その人が誰か）と&lt;strong&gt;行動スコア&lt;/strong&gt;（その人が何をしたか）だ。属性スコアは役職（部長以上＋15点、課長＋10点など）、会社規模（従業員1000人以上＋20点など）、業種マッチ度で構成する。行動スコアはメール開封（＋3点）、コンテンツDL（＋10点）、価格ページ閲覧（＋15点）、デモ申込ページ閲覧（＋20点）などで加算する。&lt;/p&gt;
+&lt;p data-ja-html=&quot;展示会特有のポイントとして、&amp;lt;strong&amp;gt;名刺メモ情報のスコア反映&amp;lt;/strong&amp;gt;がある。ブースでの会話の中で「●月に稟議が通る予定」「現在3社を比較検討中」「予算は●百万円を確保済み」といった情報が得られた場合、これは属性スコアとして高く評価すべき情報だ。名刺スキャン時のメモ欄に入力し、タグとしてCRMに反映する運用を展示会前に設計しておく。&quot;&gt;展示会特有のポイントとして、&lt;strong&gt;名刺メモ情報のスコア反映&lt;/strong&gt;がある。ブースでの会話の中で「●月に稟議が通る予定」「現在3社を比較検討中」「予算は●百万円を確保済み」といった情報が得られた場合、これは属性スコアとして高く評価すべき情報だ。名刺スキャン時のメモ欄に入力し、タグとしてCRMに反映する運用を展示会前に設計しておく。&lt;/p&gt;
+&lt;!-- スコアリング表 --&gt;
+&lt;div class=&quot;diag-wrap&quot;&gt;
+&lt;div class=&quot;diag-label&quot;&gt;リードスコアリング設計例 — 展示会リード向け&lt;/div&gt;
+&lt;div style=&quot;display:flex;flex-wrap:wrap;gap:1rem;&quot;&gt;
+&lt;div style=&quot;flex:1 1 200px;&quot;&gt;
+&lt;div style=&quot;font-size:0.72rem;font-weight:700;color:#0F2342;border-bottom:1px solid #E2E0DA;padding-bottom:0.4rem;margin-bottom:0.6rem;&quot;&gt;属性スコア（最大50点）&lt;/div&gt;
+&lt;div style=&quot;font-size:0.75rem;color:#4A4A55;line-height:1.8;&quot;&gt;
+              役職：部長以上 +20pt&lt;br/&gt;
+              役職：課長・マネージャー +12pt&lt;br/&gt;
+              会社規模：1000人以上 +15pt&lt;br/&gt;
+              業種マッチ +10pt&lt;br/&gt;
+              予算・検討時期メモあり +15pt
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;flex:1 1 200px;&quot;&gt;
+&lt;div style=&quot;font-size:0.72rem;font-weight:700;color:#0F2342;border-bottom:1px solid #E2E0DA;padding-bottom:0.4rem;margin-bottom:0.6rem;&quot;&gt;行動スコア（加算式）&lt;/div&gt;
+&lt;div style=&quot;font-size:0.75rem;color:#4A4A55;line-height:1.8;&quot;&gt;
+              サンクスメール開封 +3pt&lt;br/&gt;
+              資料・事例DL +10pt&lt;br/&gt;
+              Webサイト2回以上訪問 +8pt&lt;br/&gt;
+              価格・プラン页閲覧 +15pt&lt;br/&gt;
+              デモ・相談ページ訪問 +20pt
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;flex:1 1 200px;&quot;&gt;
+&lt;div style=&quot;font-size:0.72rem;font-weight:700;color:#0F2342;border-bottom:1px solid #E2E0DA;padding-bottom:0.4rem;margin-bottom:0.6rem;&quot;&gt;スコア別アクション&lt;/div&gt;
+&lt;div style=&quot;font-size:0.75rem;line-height:1.8;&quot;&gt;
+&lt;span style=&quot;color:#5A9A6A;font-weight:700;&quot;&gt;80点以上&lt;/span&gt;：即日営業アラート・コール&lt;br/&gt;
+&lt;span style=&quot;color:#A8965A;font-weight:700;&quot;&gt;50〜79点&lt;/span&gt;：営業メール＋1週間以内コール&lt;br/&gt;
+&lt;span style=&quot;color:#C45C3A;font-weight:700;&quot;&gt;50点未満&lt;/span&gt;：MAナーチャリングシナリオへ
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class=&quot;diag-caption&quot; data-ja=&quot;スコアの閾値は自社の商談化率データを元に定期的に見直すことを推奨&quot;&gt;スコアの閾値は自社の商談化率データを元に定期的に見直すことを推奨&lt;/p&gt;
+&lt;h2 class=&quot;text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4&quot;&gt;シナリオ設計の実例：製造業向け4ステップ&lt;/h2&gt;
+&lt;p data-ja=&quot;実際のメールシナリオを時系列で設計した例を示す。製造業向けのシステム導入を想定したケースだ。&quot;&gt;実際のメールシナリオを時系列で設計した例を示す。製造業向けのシステム導入を想定したケースだ。&lt;/p&gt;
+&lt;!-- タイムラインシナリオ --&gt;
+&lt;div class=&quot;diag-wrap&quot;&gt;
+&lt;div class=&quot;diag-label&quot;&gt;展示会フォローアップ メールシナリオ — 製造業向け&lt;/div&gt;
+&lt;div style=&quot;display:flex;flex-direction:column;gap:0.8rem;&quot;&gt;
+&lt;div style=&quot;display:flex;gap:1rem;align-items:flex-start;&quot;&gt;
+&lt;div style=&quot;min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;&quot;&gt;Day 0&lt;br/&gt;当日&lt;/div&gt;
+&lt;div style=&quot;flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;&quot;&gt;
+&lt;span style=&quot;font-weight:700;color:#0F2342;&quot;&gt;件名：&lt;/span&gt;本日はご来場いただきありがとうございました（[担当者名]より）&lt;br/&gt;
+&lt;span style=&quot;font-weight:700;color:#0F2342;&quot;&gt;内容：&lt;/span&gt;会話内容に触れた1〜2文のパーソナライズ文＋「お話しした●●についての資料をお送りします」。添付は1点のみ。CTAは資料DLか日程調整URLのどちらか一つ。
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;gap:1rem;align-items:flex-start;&quot;&gt;
+&lt;div style=&quot;min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;&quot;&gt;Day 3&lt;br/&gt;3日後&lt;/div&gt;
+&lt;div style=&quot;flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;&quot;&gt;
+&lt;span style=&quot;font-weight:700;color:#0F2342;&quot;&gt;件名：&lt;/span&gt;【事例】製造業での導入効果と3ヶ月の変化&lt;br/&gt;
+&lt;span style=&quot;font-weight:700;color:#0F2342;&quot;&gt;内容：&lt;/span&gt;類似業界の導入事例を1件紹介。「御社の状況に当てはめると…」という具体的な文脈付け。資料DLまたはウェビナー案内。Day0メール開封者に限定送信することで開封率向上。
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;gap:1rem;align-items:flex-start;&quot;&gt;
+&lt;div style=&quot;min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;&quot;&gt;Day 14&lt;br/&gt;2週間後&lt;/div&gt;
+&lt;div style=&quot;flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;&quot;&gt;
+&lt;span style=&quot;font-weight:700;color:#0F2342;&quot;&gt;件名：&lt;/span&gt;他社との比較資料をご用意しました&lt;br/&gt;
+&lt;span style=&quot;font-weight:700;color:#0F2342;&quot;&gt;内容：&lt;/span&gt;競合比較マトリクスまたはROI試算テンプレートを提供。「検討の整理にお役立てください」という姿勢で。押しつけない。スコアが閾値を超えていれば、この時点で営業からのパーソナルメールに切り替える。
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;gap:1rem;align-items:flex-start;&quot;&gt;
+&lt;div style=&quot;min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;&quot;&gt;Day 30&lt;br/&gt;1ヶ月後&lt;/div&gt;
+&lt;div style=&quot;flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;&quot;&gt;
+&lt;span style=&quot;font-weight:700;color:#0F2342;&quot;&gt;件名：&lt;/span&gt;30分のオンラインデモを無料でご提供しています&lt;br/&gt;
+&lt;span style=&quot;font-weight:700;color:#0F2342;&quot;&gt;内容：&lt;/span&gt;具体的なアクション（デモ申込）への誘導。「もし時期が合わなければ、引き続き情報をお送りします」という逃げ道を用意する。無反応リードはナーチャリングシナリオに移行。
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class=&quot;diag-caption&quot; data-ja=&quot;各ステップのメール本文は200〜300文字を目安に。読むのに10秒かからない長さが開封後の離脱を防ぐ&quot;&gt;各ステップのメール本文は200〜300文字を目安に。読むのに10秒かからない長さが開封後の離脱を防ぐ&lt;/p&gt;
+&lt;p data-ja=&quot;シナリオのポイントは「段階的に温度を上げる」構造だ。最初から「デモを見てください」と言わず、事例→比較資料→デモ申込という順番で、見込み客が自然に購買プロセスを進められる設計にする。各ステップで「読まれた」「クリックされた」かを計測し、スコアに反映させることで、営業が介入すべきタイミングを自動で判定できるようになる。&quot;&gt;シナリオのポイントは「段階的に温度を上げる」構造だ。最初から「デモを見てください」と言わず、事例→比較資料→デモ申込という順番で、見込み客が自然に購買プロセスを進められる設計にする。各ステップで「読まれた」「クリックされた」かを計測し、スコアに反映させることで、営業が介入すべきタイミングを自動で判定できるようになる。&lt;/p&gt;
+&lt;h2 class=&quot;text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4&quot;&gt;MAツール選定の前に確認すること&lt;/h2&gt;
+&lt;p data-ja=&quot;「展示会のフォローアップを改善したい」という相談を受けると、最初にMAツールの選定から始めようとするケースが多い。しかし多くの場合、問題の本質はツールではなく、その前段のオペレーション設計にある。MAを導入する前に確認すべきことが3つある。&quot;&gt;「展示会のフォローアップを改善したい」という相談を受けると、最初にMAツールの選定から始めようとするケースが多い。しかし多くの場合、問題の本質はツールではなく、その前段のオペレーション設計にある。MAを導入する前に確認すべきことが3つある。&lt;/p&gt;
+&lt;p data-ja-html=&quot;&amp;lt;strong&amp;gt;まずCRMが正しく機能しているか確認する。&amp;lt;/strong&amp;gt;MAはCRMのデータを前提に動く。リードの入力ルールが統一されていない、重複データが多い、担当者情報が古いといった状態のままMAを導入しても、シナリオは正しく動作しない。CRMのデータクレンジングとルール整備が最初のステップだ。&quot;&gt;&lt;strong&gt;まずCRMが正しく機能しているか確認する。&lt;/strong&gt;MAはCRMのデータを前提に動く。リードの入力ルールが統一されていない、重複データが多い、担当者情報が古いといった状態のままMAを導入しても、シナリオは正しく動作しない。CRMのデータクレンジングとルール整備が最初のステップだ。&lt;/p&gt;
+&lt;p data-ja-html=&quot;&amp;lt;strong&amp;gt;展示会専用のリードソース設定を行う。&amp;lt;/strong&amp;gt;どの展示会から来たリードかを区別しないと、施策ごとのROIが計測できない。HubSpotであれば「リードソース」カスタムプロパティ、Salesforceであれば「キャンペーン」オブジェクトを使って、展示会名・開催年月を必ず記録する設計にする。これにより「●●展示会リードの商談転換率は●%」という分析が可能になり、次回出展判断の根拠を持てるようになる。&quot;&gt;&lt;strong&gt;展示会専用のリードソース設定を行う。&lt;/strong&gt;どの展示会から来たリードかを区別しないと、施策ごとのROIが計測できない。HubSpotであれば「リードソース」カスタムプロパティ、Salesforceであれば「キャンペーン」オブジェクトを使って、展示会名・開催年月を必ず記録する設計にする。これにより「●●展示会リードの商談転換率は●%」という分析が可能になり、次回出展判断の根拠を持てるようになる。&lt;/p&gt;
+&lt;p data-ja-html=&quot;&amp;lt;strong&amp;gt;営業とマーケのSLA（サービスレベル合意）を先に決める。&amp;lt;/strong&amp;gt;「MAから渡されたホットリードに対して営業は24時間以内に対応する」「対応後5営業日以内にステータスを更新する」といったルールを文書化し、双方が合意していることがMAを機能させる前提条件だ。どんなに精緻なスコアリングを設計しても、営業がアラートを無視すれば意味がない。&quot;&gt;&lt;strong&gt;営業とマーケのSLA（サービスレベル合意）を先に決める。&lt;/strong&gt;「MAから渡されたホットリードに対して営業は24時間以内に対応する」「対応後5営業日以内にステータスを更新する」といったルールを文書化し、双方が合意していることがMAを機能させる前提条件だ。どんなに精緻なスコアリングを設計しても、営業がアラートを無視すれば意味がない。&lt;/p&gt;
+&lt;!-- チェックリスト --&gt;
+&lt;div class=&quot;diag-wrap&quot;&gt;
+&lt;div class=&quot;diag-label&quot;&gt;MA導入前チェックリスト — 展示会フォローアップ向け&lt;/div&gt;
+&lt;div style=&quot;display:flex;flex-wrap:wrap;gap:0.5rem;&quot;&gt;
+&lt;div class=&quot;diag-checklist-item&quot;&gt;&lt;span class=&quot;chk&quot;&gt;✓&lt;/span&gt;&lt;span&gt;CRMへのリード入力ルールが全社で統一されているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-checklist-item&quot;&gt;&lt;span class=&quot;chk&quot;&gt;✓&lt;/span&gt;&lt;span&gt;展示会ごとのリードソース分類が設定されているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-checklist-item&quot;&gt;&lt;span class=&quot;chk&quot;&gt;✓&lt;/span&gt;&lt;span&gt;名刺スキャン→CRM入力の当日オペレーションが設計されているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-checklist-item&quot;&gt;&lt;span class=&quot;chk&quot;&gt;✓&lt;/span&gt;&lt;span&gt;温度感メモ（今すぐ/そのうち/情報収集）の分類基準が共有されているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-checklist-item&quot;&gt;&lt;span class=&quot;chk&quot;&gt;✓&lt;/span&gt;&lt;span&gt;営業とマーケのSLA（対応時間・ステータス更新ルール）が合意されているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-checklist-item&quot;&gt;&lt;span class=&quot;chk&quot;&gt;✓&lt;/span&gt;&lt;span&gt;ホットリードアラートの通知先・通知方法が決まっているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-checklist-item&quot;&gt;&lt;span class=&quot;chk&quot;&gt;✓&lt;/span&gt;&lt;span&gt;各シナリオメールの承認フローと送信者名設定が完了しているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-checklist-item&quot;&gt;&lt;span class=&quot;chk&quot;&gt;✓&lt;/span&gt;&lt;span&gt;商談転換率を計測するためのパイプラインステージが設定されているか&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class=&quot;diag-caption&quot; data-ja=&quot;これらが整備されていない状態でのMA導入は、複雑さを増すだけで効果は出ない&quot;&gt;これらが整備されていない状態でのMA導入は、複雑さを増すだけで効果は出ない&lt;/p&gt;
+&lt;p data-ja=&quot;展示会リードの問題は「集める」ことではなく「活かす」仕組みにある。MAツールはその仕組みを自動化する道具だ。ツールの前に設計があり、設計の前に組織の合意がある。この順序を守ることが、展示会投資を本当のビジネス成果に変換する唯一の道だ。&quot;&gt;展示会リードの問題は「集める」ことではなく「活かす」仕組みにある。MAツールはその仕組みを自動化する道具だ。ツールの前に設計があり、設計の前に組織の合意がある。この順序を守ることが、展示会投資を本当のビジネス成果に変換する唯一の道だ。&lt;/p&gt;
+&lt;/article&gt;
+ CTA 
+&lt;div class=&quot;mt-16 border border-[#E2E0DA] bg-navy/[.03] p-8 rounded-sm&quot;&gt;
+&lt;p class=&quot;display text-[.6rem] font-medium tracking-[.18em] uppercase text-gold mb-3&quot;&gt;Contact Wing&lt;/p&gt;
+&lt;p class=&quot;text-[1rem] font-medium text-ink mb-2&quot; data-ja=&quot;展示会リードの活用設計、MA導入もWingにご相談ください&quot;&gt;展示会リードの活用設計、MA導入もWingにご相談ください&lt;/p&gt;
+&lt;p class=&quot;text-[.82rem] text-ink-mid leading-relaxed mb-6&quot; data-ja=&quot;展示会後のフォローアップ体制からMAツール選定・設定・CRM連携まで、Wingが一貫してご支援します。営業プロセスを「仕組み化」するDXコンサルとしての実績をご活用ください。&quot;&gt;展示会後のフォローアップ体制からMAツール選定・設定・CRM連携まで、Wingが一貫してご支援します。営業プロセスを「仕組み化」するDXコンサルとしての実績をご活用ください。&lt;/p&gt;
+&lt;a class=&quot;inline-block bg-navy text-white text-[.78rem] font-medium tracking-wider px-7 py-3 hover:bg-navy-dark transition-colors&quot; data-en=&quot;Book a Free Consultation →&quot; data-ja=&quot;無料相談を予約する →&quot; href=&quot;/#contact&quot;&gt;無料相談を予約する →&lt;/a&gt;
+&lt;/div&gt;" data-en-html="&lt;p class=&quot;display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3&quot;&gt;Lead Generation&lt;/p&gt;
+&lt;h1 class=&quot;serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4&quot; data-ja-html='展示会リードの&quot;その後&quot;問題｜&amp;lt;br/&amp;gt;MAで商談率を3倍にするフォローアップ設計' data-en-html='展示会リードの&quot;その後&quot;問題｜&amp;lt;br/&amp;gt;MAで商談率を3倍にするフォローアップ設計'&gt;展示会リードの&quot;その後&quot;問題｜&lt;br/&gt;MAで商談率を3倍にするフォローアップ設計&lt;/h1&gt;
+&lt;div class=&quot;flex items-center gap-4 text-[.75rem] text-ink-light mb-2&quot;&gt;
+&lt;time datetime=&quot;2026-03-28&quot;&gt;2026.03.28&lt;/time&gt;
+&lt;span&gt;Wing編集部&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gold-rule mb-10&quot;&gt;&lt;/div&gt;
+&lt;article class=&quot;text-[.9rem] text-ink leading-[2] max-w-none&quot;&gt;
+&lt;p data-ja='展示会に出展するたびに、マーケティング・営業チームは数百枚の名刺と引き合いカードを持ち帰る。ブース設営から接客まで費やした工数と費用は決して少なくない。それなのに、3ヶ月後に「あの展示会のリード、どれだけ商談になった？」と聞かれると、答えに詰まる担当者が多い。展示会リードの&quot;その後&quot;は、多くの企業にとって未解決の問題であり続けている。'&gt;展示会に出展するたびに、マーケティング・営業チームは数百枚の名刺と引き合いカードを持ち帰る。ブース設営から接客まで費やした工数と費用は決して少なくない。それなのに、3ヶ月後に「あの展示会のリード、どれだけ商談になった？」と聞かれると、答えに詰まる担当者が多い。展示会リードの&quot;その後&quot;は、多くの企業にとって未解決の問題であり続けている。&lt;/p&gt;
+&lt;h2 class=&quot;text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4&quot;&gt;展示会で300枚の名刺を集めて、商談が0件だった話&lt;/h2&gt;
+&lt;p data-ja=&quot;ある製造業の営業マネージャーから聞いた話だ。大型のIT系展示会に2日間出展し、担当者3名で300枚を超える名刺を交換した。初日の夜、「今回は手応えがある」とチームで乾杯した。ところが展示会終了から2週間後、誰も本格的なフォローができていなかった。名刺はスキャンされないまま積み上がり、「そのうちやる」が「忘れた」に変わっていた。3ヶ月後の商談件数はゼロ。出展費用の約200万円は、ほぼ丸ごと埋没コストになった。&quot;&gt;ある製造業の営業マネージャーから聞いた話だ。大型のIT系展示会に2日間出展し、担当者3名で300枚を超える名刺を交換した。初日の夜、「今回は手応えがある」とチームで乾杯した。ところが展示会終了から2週間後、誰も本格的なフォローができていなかった。名刺はスキャンされないまま積み上がり、「そのうちやる」が「忘れた」に変わっていた。3ヶ月後の商談件数はゼロ。出展費用の約200万円は、ほぼ丸ごと埋没コストになった。&lt;/p&gt;
+&lt;p data-ja-html=&quot;これは特殊なケースではない。業界調査によれば、展示会で収集されたリードの&amp;lt;strong&amp;gt;80%は一度もフォロー連絡されない&amp;lt;/strong&amp;gt;とされる。営業担当者が展示会から帰社した翌日から、通常業務の波に飲み込まれ、展示会リードはそのまま冷却されていく。連絡が来ないベンダーのことを、見込み客は2週間後にはほぼ忘れている。&quot;&gt;これは特殊なケースではない。業界調査によれば、展示会で収集されたリードの&lt;strong&gt;80%は一度もフォロー連絡されない&lt;/strong&gt;とされる。営業担当者が展示会から帰社した翌日から、通常業務の波に飲み込まれ、展示会リードはそのまま冷却されていく。連絡が来ないベンダーのことを、見込み客は2週間後にはほぼ忘れている。&lt;/p&gt;
+&lt;p data-ja-html=&quot;この問題の本質は、営業個人の怠慢でも意識の低さでもない。&amp;lt;strong&amp;gt;仕組みの不在&amp;lt;/strong&amp;gt;だ。「誰が、いつ、何を、どの順番で送るか」が設計されていないまま展示会に出展しているかぎり、リードの大半は死に続ける。&quot;&gt;この問題の本質は、営業個人の怠慢でも意識の低さでもない。&lt;strong&gt;仕組みの不在&lt;/strong&gt;だ。「誰が、いつ、何を、どの順番で送るか」が設計されていないまま展示会に出展しているかぎり、リードの大半は死に続ける。&lt;/p&gt;
+&lt;h2 class=&quot;text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4&quot;&gt;展示会リードが死ぬ5つの理由&lt;/h2&gt;
+&lt;p data-ja=&quot;展示会リードが商談に繋がらない原因を分解すると、構造的な問題が5つのパターンに集約される。&quot;&gt;展示会リードが商談に繋がらない原因を分解すると、構造的な問題が5つのパターンに集約される。&lt;/p&gt;
+&lt;ul class=&quot;list-disc text-[.88rem]&quot;&gt;
+&lt;li&gt;&lt;strong&gt;フォローまでの時間が長すぎる。&lt;/strong&gt;展示会終了から72時間を超えると、見込み客の記憶とモチベーションは急速に低下する。「あのブースの人から連絡が来た」という体験そのものに価値があるのに、それが2週間後では文脈が消えている。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;全員に同じメールを送る。&lt;/strong&gt;「●●展示会にご来場ありがとうございました」という一斉送信は、温度感の違いを完全に無視している。「今すぐ導入を検討している」人と「とりあえず情報収集」の人に同じメッセージを送ることは、前者に対する機会損失であり、後者にとっては的外れなプッシュになる。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;名刺情報がCRM・MAに入力されない。&lt;/strong&gt;Excelや名刺管理アプリで終わってしまい、MAのシナリオに乗らないリードは自動フォローの対象外になる。スキャンから入力、セグメント付与までの一連のオペレーションが設計されていなければ、MAを導入していても意味がない。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;「また連絡します」で終わる。&lt;/strong&gt;ブースでの会話を「ご興味あれば連絡します」で終わらせると、次のアクションが相手任せになる。具体的な次のステップ（「来週水曜に事例資料をお送りします」など）をその場で約束することが、フォローの起点になる。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;営業とマーケで展示会リードの扱いが違う。&lt;/strong&gt;マーケは「全員にメールを送ったから、あとは営業の仕事」と思い、営業は「マーケが送ったメールで温まった人だけ対応する」と思っている。この分断がリードを放置する最大の温床だ。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 class=&quot;text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4&quot;&gt;MAと連携した展示会フォローアップ設計&lt;/h2&gt;
+&lt;p data-ja=&quot;これらの問題を解決するのが、MAツールを軸にした展示会フォローアップの仕組み化だ。重要なのは「MAを導入する」ことではなく、「展示会の前後のオペレーションをMA前提で設計する」ことだ。&quot;&gt;これらの問題を解決するのが、MAツールを軸にした展示会フォローアップの仕組み化だ。重要なのは「MAを導入する」ことではなく、「展示会の前後のオペレーションをMA前提で設計する」ことだ。&lt;/p&gt;
+&lt;!-- フロー図 --&gt;
+&lt;div class=&quot;diag-wrap&quot;&gt;
+&lt;div class=&quot;diag-label&quot;&gt;Figure — 展示会 → MA → 商談の4ステップフロー&lt;/div&gt;
+&lt;div class=&quot;diag-step-row&quot;&gt;
+&lt;div class=&quot;diag-step-card&quot;&gt;
+&lt;div class=&quot;step-num&quot;&gt;1&lt;/div&gt;
+&lt;div class=&quot;step-title&quot;&gt;展示会当日&lt;br/&gt;名刺→CRM入力&lt;/div&gt;
+&lt;div class=&quot;step-body&quot;&gt;名刺スキャン＋温度感メモを即日入力。「今すぐ」「そのうち」「情報収集」の3分類でタグ付け。担当営業名も必ず記録。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;diag-step-card&quot;&gt;
+&lt;div class=&quot;step-num&quot;&gt;2&lt;/div&gt;
+&lt;div class=&quot;step-title&quot;&gt;翌日〜72時間&lt;br/&gt;サンクスメール送付&lt;/div&gt;
+&lt;div class=&quot;step-body&quot;&gt;MA経由で自動配信。会話内容に触れたパーソナライズ文＋関連コンテンツのリンクを添付。CTAは「資料DL」か「日程調整URL」のみ。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;diag-step-card&quot;&gt;
+&lt;div class=&quot;step-num&quot;&gt;3&lt;/div&gt;
+&lt;div class=&quot;step-title&quot;&gt;1〜2週間後&lt;br/&gt;スコアに応じた分岐&lt;/div&gt;
+&lt;div class=&quot;step-body&quot;&gt;メール開封・コンテンツ閲覧スコアが閾値超え→営業にアラート通知。閾値未達→ナーチャリングシナリオへ自動投入。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;diag-step-card&quot;&gt;
+&lt;div class=&quot;step-num&quot;&gt;4&lt;/div&gt;
+&lt;div class=&quot;step-title&quot;&gt;商談アポ or&lt;br/&gt;ナーチャリング継続&lt;/div&gt;
+&lt;div class=&quot;step-body&quot;&gt;ホットリードは担当営業がコールまたはメール。コールドリードは月次コンテンツ配信で長期育成。四半期ごとに再スコアリング。&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class=&quot;diag-caption&quot; data-ja=&quot;展示会終了後72時間以内にSTEP 1〜2を完了させることが商談化率向上の最重要条件&quot;&gt;展示会終了後72時間以内にSTEP 1〜2を完了させることが商談化率向上の最重要条件&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 class=&quot;text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4&quot;&gt;リードスコアリング設計：「今すぐ客」と「そのうち客」を分ける&lt;/h2&gt;
+&lt;p data-ja-html=&quot;MAを活用したフォローアップの核心は&amp;lt;strong&amp;gt;リードスコアリング&amp;lt;/strong&amp;gt;だ。全リードを平等に扱うのではなく、購買確度に応じてアプローチを変えることで、営業リソースを最も効果的に配分できる。&quot;&gt;MAを活用したフォローアップの核心は&lt;strong&gt;リードスコアリング&lt;/strong&gt;だ。全リードを平等に扱うのではなく、購買確度に応じてアプローチを変えることで、営業リソースを最も効果的に配分できる。&lt;/p&gt;
+&lt;p data-ja-html=&quot;スコアリングの軸は大きく2つある。&amp;lt;strong&amp;gt;属性スコア&amp;lt;/strong&amp;gt;（その人が誰か）と&amp;lt;strong&amp;gt;行動スコア&amp;lt;/strong&amp;gt;（その人が何をしたか）だ。属性スコアは役職（部長以上＋15点、課長＋10点など）、会社規模（従業員1000人以上＋20点など）、業種マッチ度で構成する。行動スコアはメール開封（＋3点）、コンテンツDL（＋10点）、価格ページ閲覧（＋15点）、デモ申込ページ閲覧（＋20点）などで加算する。&quot;&gt;スコアリングの軸は大きく2つある。&lt;strong&gt;属性スコア&lt;/strong&gt;（その人が誰か）と&lt;strong&gt;行動スコア&lt;/strong&gt;（その人が何をしたか）だ。属性スコアは役職（部長以上＋15点、課長＋10点など）、会社規模（従業員1000人以上＋20点など）、業種マッチ度で構成する。行動スコアはメール開封（＋3点）、コンテンツDL（＋10点）、価格ページ閲覧（＋15点）、デモ申込ページ閲覧（＋20点）などで加算する。&lt;/p&gt;
+&lt;p data-ja-html=&quot;展示会特有のポイントとして、&amp;lt;strong&amp;gt;名刺メモ情報のスコア反映&amp;lt;/strong&amp;gt;がある。ブースでの会話の中で「●月に稟議が通る予定」「現在3社を比較検討中」「予算は●百万円を確保済み」といった情報が得られた場合、これは属性スコアとして高く評価すべき情報だ。名刺スキャン時のメモ欄に入力し、タグとしてCRMに反映する運用を展示会前に設計しておく。&quot;&gt;展示会特有のポイントとして、&lt;strong&gt;名刺メモ情報のスコア反映&lt;/strong&gt;がある。ブースでの会話の中で「●月に稟議が通る予定」「現在3社を比較検討中」「予算は●百万円を確保済み」といった情報が得られた場合、これは属性スコアとして高く評価すべき情報だ。名刺スキャン時のメモ欄に入力し、タグとしてCRMに反映する運用を展示会前に設計しておく。&lt;/p&gt;
+&lt;!-- スコアリング表 --&gt;
+&lt;div class=&quot;diag-wrap&quot;&gt;
+&lt;div class=&quot;diag-label&quot;&gt;リードスコアリング設計例 — 展示会リード向け&lt;/div&gt;
+&lt;div style=&quot;display:flex;flex-wrap:wrap;gap:1rem;&quot;&gt;
+&lt;div style=&quot;flex:1 1 200px;&quot;&gt;
+&lt;div style=&quot;font-size:0.72rem;font-weight:700;color:#0F2342;border-bottom:1px solid #E2E0DA;padding-bottom:0.4rem;margin-bottom:0.6rem;&quot;&gt;属性スコア（最大50点）&lt;/div&gt;
+&lt;div style=&quot;font-size:0.75rem;color:#4A4A55;line-height:1.8;&quot;&gt;
+              役職：部長以上 +20pt&lt;br/&gt;
+              役職：課長・マネージャー +12pt&lt;br/&gt;
+              会社規模：1000人以上 +15pt&lt;br/&gt;
+              業種マッチ +10pt&lt;br/&gt;
+              予算・検討時期メモあり +15pt
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;flex:1 1 200px;&quot;&gt;
+&lt;div style=&quot;font-size:0.72rem;font-weight:700;color:#0F2342;border-bottom:1px solid #E2E0DA;padding-bottom:0.4rem;margin-bottom:0.6rem;&quot;&gt;行動スコア（加算式）&lt;/div&gt;
+&lt;div style=&quot;font-size:0.75rem;color:#4A4A55;line-height:1.8;&quot;&gt;
+              サンクスメール開封 +3pt&lt;br/&gt;
+              資料・事例DL +10pt&lt;br/&gt;
+              Webサイト2回以上訪問 +8pt&lt;br/&gt;
+              価格・プラン页閲覧 +15pt&lt;br/&gt;
+              デモ・相談ページ訪問 +20pt
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;flex:1 1 200px;&quot;&gt;
+&lt;div style=&quot;font-size:0.72rem;font-weight:700;color:#0F2342;border-bottom:1px solid #E2E0DA;padding-bottom:0.4rem;margin-bottom:0.6rem;&quot;&gt;スコア別アクション&lt;/div&gt;
+&lt;div style=&quot;font-size:0.75rem;line-height:1.8;&quot;&gt;
+&lt;span style=&quot;color:#5A9A6A;font-weight:700;&quot;&gt;80点以上&lt;/span&gt;：即日営業アラート・コール&lt;br/&gt;
+&lt;span style=&quot;color:#A8965A;font-weight:700;&quot;&gt;50〜79点&lt;/span&gt;：営業メール＋1週間以内コール&lt;br/&gt;
+&lt;span style=&quot;color:#C45C3A;font-weight:700;&quot;&gt;50点未満&lt;/span&gt;：MAナーチャリングシナリオへ
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class=&quot;diag-caption&quot; data-ja=&quot;スコアの閾値は自社の商談化率データを元に定期的に見直すことを推奨&quot;&gt;スコアの閾値は自社の商談化率データを元に定期的に見直すことを推奨&lt;/p&gt;
+&lt;h2 class=&quot;text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4&quot;&gt;シナリオ設計の実例：製造業向け4ステップ&lt;/h2&gt;
+&lt;p data-ja=&quot;実際のメールシナリオを時系列で設計した例を示す。製造業向けのシステム導入を想定したケースだ。&quot;&gt;実際のメールシナリオを時系列で設計した例を示す。製造業向けのシステム導入を想定したケースだ。&lt;/p&gt;
+&lt;!-- タイムラインシナリオ --&gt;
+&lt;div class=&quot;diag-wrap&quot;&gt;
+&lt;div class=&quot;diag-label&quot;&gt;展示会フォローアップ メールシナリオ — 製造業向け&lt;/div&gt;
+&lt;div style=&quot;display:flex;flex-direction:column;gap:0.8rem;&quot;&gt;
+&lt;div style=&quot;display:flex;gap:1rem;align-items:flex-start;&quot;&gt;
+&lt;div style=&quot;min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;&quot;&gt;Day 0&lt;br/&gt;当日&lt;/div&gt;
+&lt;div style=&quot;flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;&quot;&gt;
+&lt;span style=&quot;font-weight:700;color:#0F2342;&quot;&gt;件名：&lt;/span&gt;本日はご来場いただきありがとうございました（[担当者名]より）&lt;br/&gt;
+&lt;span style=&quot;font-weight:700;color:#0F2342;&quot;&gt;内容：&lt;/span&gt;会話内容に触れた1〜2文のパーソナライズ文＋「お話しした●●についての資料をお送りします」。添付は1点のみ。CTAは資料DLか日程調整URLのどちらか一つ。
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;gap:1rem;align-items:flex-start;&quot;&gt;
+&lt;div style=&quot;min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;&quot;&gt;Day 3&lt;br/&gt;3日後&lt;/div&gt;
+&lt;div style=&quot;flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;&quot;&gt;
+&lt;span style=&quot;font-weight:700;color:#0F2342;&quot;&gt;件名：&lt;/span&gt;【事例】製造業での導入効果と3ヶ月の変化&lt;br/&gt;
+&lt;span style=&quot;font-weight:700;color:#0F2342;&quot;&gt;内容：&lt;/span&gt;類似業界の導入事例を1件紹介。「御社の状況に当てはめると…」という具体的な文脈付け。資料DLまたはウェビナー案内。Day0メール開封者に限定送信することで開封率向上。
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;gap:1rem;align-items:flex-start;&quot;&gt;
+&lt;div style=&quot;min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;&quot;&gt;Day 14&lt;br/&gt;2週間後&lt;/div&gt;
+&lt;div style=&quot;flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;&quot;&gt;
+&lt;span style=&quot;font-weight:700;color:#0F2342;&quot;&gt;件名：&lt;/span&gt;他社との比較資料をご用意しました&lt;br/&gt;
+&lt;span style=&quot;font-weight:700;color:#0F2342;&quot;&gt;内容：&lt;/span&gt;競合比較マトリクスまたはROI試算テンプレートを提供。「検討の整理にお役立てください」という姿勢で。押しつけない。スコアが閾値を超えていれば、この時点で営業からのパーソナルメールに切り替える。
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;display:flex;gap:1rem;align-items:flex-start;&quot;&gt;
+&lt;div style=&quot;min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;&quot;&gt;Day 30&lt;br/&gt;1ヶ月後&lt;/div&gt;
+&lt;div style=&quot;flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;&quot;&gt;
+&lt;span style=&quot;font-weight:700;color:#0F2342;&quot;&gt;件名：&lt;/span&gt;30分のオンラインデモを無料でご提供しています&lt;br/&gt;
+&lt;span style=&quot;font-weight:700;color:#0F2342;&quot;&gt;内容：&lt;/span&gt;具体的なアクション（デモ申込）への誘導。「もし時期が合わなければ、引き続き情報をお送りします」という逃げ道を用意する。無反応リードはナーチャリングシナリオに移行。
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class=&quot;diag-caption&quot; data-ja=&quot;各ステップのメール本文は200〜300文字を目安に。読むのに10秒かからない長さが開封後の離脱を防ぐ&quot;&gt;各ステップのメール本文は200〜300文字を目安に。読むのに10秒かからない長さが開封後の離脱を防ぐ&lt;/p&gt;
+&lt;p data-ja=&quot;シナリオのポイントは「段階的に温度を上げる」構造だ。最初から「デモを見てください」と言わず、事例→比較資料→デモ申込という順番で、見込み客が自然に購買プロセスを進められる設計にする。各ステップで「読まれた」「クリックされた」かを計測し、スコアに反映させることで、営業が介入すべきタイミングを自動で判定できるようになる。&quot;&gt;シナリオのポイントは「段階的に温度を上げる」構造だ。最初から「デモを見てください」と言わず、事例→比較資料→デモ申込という順番で、見込み客が自然に購買プロセスを進められる設計にする。各ステップで「読まれた」「クリックされた」かを計測し、スコアに反映させることで、営業が介入すべきタイミングを自動で判定できるようになる。&lt;/p&gt;
+&lt;h2 class=&quot;text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4&quot;&gt;MAツール選定の前に確認すること&lt;/h2&gt;
+&lt;p data-ja=&quot;「展示会のフォローアップを改善したい」という相談を受けると、最初にMAツールの選定から始めようとするケースが多い。しかし多くの場合、問題の本質はツールではなく、その前段のオペレーション設計にある。MAを導入する前に確認すべきことが3つある。&quot;&gt;「展示会のフォローアップを改善したい」という相談を受けると、最初にMAツールの選定から始めようとするケースが多い。しかし多くの場合、問題の本質はツールではなく、その前段のオペレーション設計にある。MAを導入する前に確認すべきことが3つある。&lt;/p&gt;
+&lt;p data-ja-html=&quot;&amp;lt;strong&amp;gt;まずCRMが正しく機能しているか確認する。&amp;lt;/strong&amp;gt;MAはCRMのデータを前提に動く。リードの入力ルールが統一されていない、重複データが多い、担当者情報が古いといった状態のままMAを導入しても、シナリオは正しく動作しない。CRMのデータクレンジングとルール整備が最初のステップだ。&quot;&gt;&lt;strong&gt;まずCRMが正しく機能しているか確認する。&lt;/strong&gt;MAはCRMのデータを前提に動く。リードの入力ルールが統一されていない、重複データが多い、担当者情報が古いといった状態のままMAを導入しても、シナリオは正しく動作しない。CRMのデータクレンジングとルール整備が最初のステップだ。&lt;/p&gt;
+&lt;p data-ja-html=&quot;&amp;lt;strong&amp;gt;展示会専用のリードソース設定を行う。&amp;lt;/strong&amp;gt;どの展示会から来たリードかを区別しないと、施策ごとのROIが計測できない。HubSpotであれば「リードソース」カスタムプロパティ、Salesforceであれば「キャンペーン」オブジェクトを使って、展示会名・開催年月を必ず記録する設計にする。これにより「●●展示会リードの商談転換率は●%」という分析が可能になり、次回出展判断の根拠を持てるようになる。&quot;&gt;&lt;strong&gt;展示会専用のリードソース設定を行う。&lt;/strong&gt;どの展示会から来たリードかを区別しないと、施策ごとのROIが計測できない。HubSpotであれば「リードソース」カスタムプロパティ、Salesforceであれば「キャンペーン」オブジェクトを使って、展示会名・開催年月を必ず記録する設計にする。これにより「●●展示会リードの商談転換率は●%」という分析が可能になり、次回出展判断の根拠を持てるようになる。&lt;/p&gt;
+&lt;p data-ja-html=&quot;&amp;lt;strong&amp;gt;営業とマーケのSLA（サービスレベル合意）を先に決める。&amp;lt;/strong&amp;gt;「MAから渡されたホットリードに対して営業は24時間以内に対応する」「対応後5営業日以内にステータスを更新する」といったルールを文書化し、双方が合意していることがMAを機能させる前提条件だ。どんなに精緻なスコアリングを設計しても、営業がアラートを無視すれば意味がない。&quot;&gt;&lt;strong&gt;営業とマーケのSLA（サービスレベル合意）を先に決める。&lt;/strong&gt;「MAから渡されたホットリードに対して営業は24時間以内に対応する」「対応後5営業日以内にステータスを更新する」といったルールを文書化し、双方が合意していることがMAを機能させる前提条件だ。どんなに精緻なスコアリングを設計しても、営業がアラートを無視すれば意味がない。&lt;/p&gt;
+&lt;!-- チェックリスト --&gt;
+&lt;div class=&quot;diag-wrap&quot;&gt;
+&lt;div class=&quot;diag-label&quot;&gt;MA導入前チェックリスト — 展示会フォローアップ向け&lt;/div&gt;
+&lt;div style=&quot;display:flex;flex-wrap:wrap;gap:0.5rem;&quot;&gt;
+&lt;div class=&quot;diag-checklist-item&quot;&gt;&lt;span class=&quot;chk&quot;&gt;✓&lt;/span&gt;&lt;span&gt;CRMへのリード入力ルールが全社で統一されているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-checklist-item&quot;&gt;&lt;span class=&quot;chk&quot;&gt;✓&lt;/span&gt;&lt;span&gt;展示会ごとのリードソース分類が設定されているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-checklist-item&quot;&gt;&lt;span class=&quot;chk&quot;&gt;✓&lt;/span&gt;&lt;span&gt;名刺スキャン→CRM入力の当日オペレーションが設計されているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-checklist-item&quot;&gt;&lt;span class=&quot;chk&quot;&gt;✓&lt;/span&gt;&lt;span&gt;温度感メモ（今すぐ/そのうち/情報収集）の分類基準が共有されているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-checklist-item&quot;&gt;&lt;span class=&quot;chk&quot;&gt;✓&lt;/span&gt;&lt;span&gt;営業とマーケのSLA（対応時間・ステータス更新ルール）が合意されているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-checklist-item&quot;&gt;&lt;span class=&quot;chk&quot;&gt;✓&lt;/span&gt;&lt;span&gt;ホットリードアラートの通知先・通知方法が決まっているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-checklist-item&quot;&gt;&lt;span class=&quot;chk&quot;&gt;✓&lt;/span&gt;&lt;span&gt;各シナリオメールの承認フローと送信者名設定が完了しているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-checklist-item&quot;&gt;&lt;span class=&quot;chk&quot;&gt;✓&lt;/span&gt;&lt;span&gt;商談転換率を計測するためのパイプラインステージが設定されているか&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class=&quot;diag-caption&quot; data-ja=&quot;これらが整備されていない状態でのMA導入は、複雑さを増すだけで効果は出ない&quot;&gt;これらが整備されていない状態でのMA導入は、複雑さを増すだけで効果は出ない&lt;/p&gt;
+&lt;p data-ja=&quot;展示会リードの問題は「集める」ことではなく「活かす」仕組みにある。MAツールはその仕組みを自動化する道具だ。ツールの前に設計があり、設計の前に組織の合意がある。この順序を守ることが、展示会投資を本当のビジネス成果に変換する唯一の道だ。&quot;&gt;展示会リードの問題は「集める」ことではなく「活かす」仕組みにある。MAツールはその仕組みを自動化する道具だ。ツールの前に設計があり、設計の前に組織の合意がある。この順序を守ることが、展示会投資を本当のビジネス成果に変換する唯一の道だ。&lt;/p&gt;
+&lt;/article&gt;
+ CTA 
+&lt;div class=&quot;mt-16 border border-[#E2E0DA] bg-navy/[.03] p-8 rounded-sm&quot;&gt;
+&lt;p class=&quot;display text-[.6rem] font-medium tracking-[.18em] uppercase text-gold mb-3&quot;&gt;Contact Wing&lt;/p&gt;
+&lt;p class=&quot;text-[1rem] font-medium text-ink mb-2&quot; data-ja=&quot;展示会リードの活用設計、MA導入もWingにご相談ください&quot;&gt;展示会リードの活用設計、MA導入もWingにご相談ください&lt;/p&gt;
+&lt;p class=&quot;text-[.82rem] text-ink-mid leading-relaxed mb-6&quot; data-ja=&quot;展示会後のフォローアップ体制からMAツール選定・設定・CRM連携まで、Wingが一貫してご支援します。営業プロセスを「仕組み化」するDXコンサルとしての実績をご活用ください。&quot;&gt;展示会後のフォローアップ体制からMAツール選定・設定・CRM連携まで、Wingが一貫してご支援します。営業プロセスを「仕組み化」するDXコンサルとしての実績をご活用ください。&lt;/p&gt;
+&lt;a class=&quot;inline-block bg-navy text-white text-[.78rem] font-medium tracking-wider px-7 py-3 hover:bg-navy-dark transition-colors&quot; data-en=&quot;Book a Free Consultation →&quot; data-ja=&quot;無料相談を予約する →&quot; href=&quot;/#contact&quot;&gt;無料相談を予約する →&lt;/a&gt;
+&lt;/div&gt;">
+<p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3">Lead Generation</p>
+<h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4" data-ja-html='展示会リードの"その後"問題｜&lt;br/&gt;MAで商談率を3倍にするフォローアップ設計' data-en-html='展示会リードの"その後"問題｜&lt;br/&gt;MAで商談率を3倍にするフォローアップ設計'>展示会リードの"その後"問題｜<br/>MAで商談率を3倍にするフォローアップ設計</h1>
+<div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2" data-ja-html='&lt;time datetime="2026-03-28"&gt;2026.03.28&lt;/time&gt;
+&lt;span&gt;Wing編集部&lt;/span&gt;' data-en-html='&lt;time datetime="2026-03-28"&gt;2026.03.28&lt;/time&gt;
+&lt;span&gt;Wing編集部&lt;/span&gt;'>
+<time datetime="2026-03-28">2026.03.28</time>
+<span data-en="Wing Editorial Team" data-ja="Wing編集部" data-en="Wing Editorial">Wing編集部</span>
+</div>
+<div class="gold-rule mb-10"></div>
+<article class="text-[.9rem] text-ink leading-[2] max-w-none">
+<p data-ja='展示会に出展するたびに、マーケティング・営業チームは数百枚の名刺と引き合いカードを持ち帰る。ブース設営から接客まで費やした工数と費用は決して少なくない。それなのに、3ヶ月後に「あの展示会のリード、どれだけ商談になった？」と聞かれると、答えに詰まる担当者が多い。展示会リードの"その後"は、多くの企業にとって未解決の問題であり続けている。'>展示会に出展するたびに、マーケティング・営業チームは数百枚の名刺と引き合いカードを持ち帰る。ブース設営から接客まで費やした工数と費用は決して少なくない。それなのに、3ヶ月後に「あの展示会のリード、どれだけ商談になった？」と聞かれると、答えに詰まる担当者が多い。展示会リードの"その後"は、多くの企業にとって未解決の問題であり続けている。</p>
+<h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4" data-ja="展示会で300枚の名刺を集めて、商談が0件だった話" data-en="展示会で300枚の名刺を集めて、商談が0件だった話">展示会で300枚の名刺を集めて、商談が0件だった話</h2>
+<p data-ja="ある製造業の営業マネージャーから聞いた話だ。大型のIT系展示会に2日間出展し、担当者3名で300枚を超える名刺を交換した。初日の夜、「今回は手応えがある」とチームで乾杯した。ところが展示会終了から2週間後、誰も本格的なフォローができていなかった。名刺はスキャンされないまま積み上がり、「そのうちやる」が「忘れた」に変わっていた。3ヶ月後の商談件数はゼロ。出展費用の約200万円は、ほぼ丸ごと埋没コストになった。" data-en="ある製造業の営業マネージャーから聞いた話だ。大型のIT系展示会に2日間出展し、担当者3名で300枚を超える名刺を交換した。初日の夜、「今回は手応えがある」とチームで乾杯した。ところが展示会終了から2週間後、誰も本格的なフォローができていなかった。名刺はスキャンされないまま積み上がり、「そのうちやる」が「忘れた」に変わっていた。3ヶ月後の商談件数はゼロ。出展費用の約200万円は、ほぼ丸ごと埋没コストになった。">ある製造業の営業マネージャーから聞いた話だ。大型のIT系展示会に2日間出展し、担当者3名で300枚を超える名刺を交換した。初日の夜、「今回は手応えがある」とチームで乾杯した。ところが展示会終了から2週間後、誰も本格的なフォローができていなかった。名刺はスキャンされないまま積み上がり、「そのうちやる」が「忘れた」に変わっていた。3ヶ月後の商談件数はゼロ。出展費用の約200万円は、ほぼ丸ごと埋没コストになった。</p>
+<p data-ja-html="これは特殊なケースではない。業界調査によれば、展示会で収集されたリードの&lt;strong&gt;80%は一度もフォロー連絡されない&lt;/strong&gt;とされる。営業担当者が展示会から帰社した翌日から、通常業務の波に飲み込まれ、展示会リードはそのまま冷却されていく。連絡が来ないベンダーのことを、見込み客は2週間後にはほぼ忘れている。" data-en-html="これは特殊なケースではない。業界調査によれば、展示会で収集されたリードの&lt;strong&gt;80%は一度もフォロー連絡されない&lt;/strong&gt;とされる。営業担当者が展示会から帰社した翌日から、通常業務の波に飲み込まれ、展示会リードはそのまま冷却されていく。連絡が来ないベンダーのことを、見込み客は2週間後にはほぼ忘れている。">これは特殊なケースではない。業界調査によれば、展示会で収集されたリードの<strong>80%は一度もフォロー連絡されない</strong>とされる。営業担当者が展示会から帰社した翌日から、通常業務の波に飲み込まれ、展示会リードはそのまま冷却されていく。連絡が来ないベンダーのことを、見込み客は2週間後にはほぼ忘れている。</p>
+<p data-ja-html="この問題の本質は、営業個人の怠慢でも意識の低さでもない。&lt;strong&gt;仕組みの不在&lt;/strong&gt;だ。「誰が、いつ、何を、どの順番で送るか」が設計されていないまま展示会に出展しているかぎり、リードの大半は死に続ける。" data-en-html="この問題の本質は、営業個人の怠慢でも意識の低さでもない。&lt;strong&gt;仕組みの不在&lt;/strong&gt;だ。「誰が、いつ、何を、どの順番で送るか」が設計されていないまま展示会に出展しているかぎり、リードの大半は死に続ける。">この問題の本質は、営業個人の怠慢でも意識の低さでもない。<strong>仕組みの不在</strong>だ。「誰が、いつ、何を、どの順番で送るか」が設計されていないまま展示会に出展しているかぎり、リードの大半は死に続ける。</p>
+<h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4" data-ja="展示会リードが死ぬ5つの理由" data-en="展示会リードが死ぬ5つの理由">展示会リードが死ぬ5つの理由</h2>
+<p data-ja="展示会リードが商談に繋がらない原因を分解すると、構造的な問題が5つのパターンに集約される。" data-en="展示会リードが商談に繋がらない原因を分解すると、構造的な問題が5つのパターンに集約される。">展示会リードが商談に繋がらない原因を分解すると、構造的な問題が5つのパターンに集約される。</p>
+<ul class="list-disc text-[.88rem]">
+<li data-ja-html="&lt;strong&gt;フォローまでの時間が長すぎる。&lt;/strong&gt;展示会終了から72時間を超えると、見込み客の記憶とモチベーションは急速に低下する。「あのブースの人から連絡が来た」という体験そのものに価値があるのに、それが2週間後では文脈が消えている。" data-en-html="&lt;strong&gt;フォローまでの時間が長すぎる。&lt;/strong&gt;展示会終了から72時間を超えると、見込み客の記憶とモチベーションは急速に低下する。「あのブースの人から連絡が来た」という体験そのものに価値があるのに、それが2週間後では文脈が消えている。"><strong>フォローまでの時間が長すぎる。</strong>展示会終了から72時間を超えると、見込み客の記憶とモチベーションは急速に低下する。「あのブースの人から連絡が来た」という体験そのものに価値があるのに、それが2週間後では文脈が消えている。</li>
+<li data-ja-html="&lt;strong&gt;全員に同じメールを送る。&lt;/strong&gt;「●●展示会にご来場ありがとうございました」という一斉送信は、温度感の違いを完全に無視している。「今すぐ導入を検討している」人と「とりあえず情報収集」の人に同じメッセージを送ることは、前者に対する機会損失であり、後者にとっては的外れなプッシュになる。" data-en-html="&lt;strong&gt;全員に同じメールを送る。&lt;/strong&gt;「●●展示会にご来場ありがとうございました」という一斉送信は、温度感の違いを完全に無視している。「今すぐ導入を検討している」人と「とりあえず情報収集」の人に同じメッセージを送ることは、前者に対する機会損失であり、後者にとっては的外れなプッシュになる。"><strong>全員に同じメールを送る。</strong>「●●展示会にご来場ありがとうございました」という一斉送信は、温度感の違いを完全に無視している。「今すぐ導入を検討している」人と「とりあえず情報収集」の人に同じメッセージを送ることは、前者に対する機会損失であり、後者にとっては的外れなプッシュになる。</li>
+<li data-ja-html="&lt;strong&gt;名刺情報がCRM・MAに入力されない。&lt;/strong&gt;Excelや名刺管理アプリで終わってしまい、MAのシナリオに乗らないリードは自動フォローの対象外になる。スキャンから入力、セグメント付与までの一連のオペレーションが設計されていなければ、MAを導入していても意味がない。" data-en-html="&lt;strong&gt;名刺情報がCRM・MAに入力されない。&lt;/strong&gt;Excelや名刺管理アプリで終わってしまい、MAのシナリオに乗らないリードは自動フォローの対象外になる。スキャンから入力、セグメント付与までの一連のオペレーションが設計されていなければ、MAを導入していても意味がない。"><strong>名刺情報がCRM・MAに入力されない。</strong>Excelや名刺管理アプリで終わってしまい、MAのシナリオに乗らないリードは自動フォローの対象外になる。スキャンから入力、セグメント付与までの一連のオペレーションが設計されていなければ、MAを導入していても意味がない。</li>
+<li data-ja-html="&lt;strong&gt;「また連絡します」で終わる。&lt;/strong&gt;ブースでの会話を「ご興味あれば連絡します」で終わらせると、次のアクションが相手任せになる。具体的な次のステップ（「来週水曜に事例資料をお送りします」など）をその場で約束することが、フォローの起点になる。" data-en-html="&lt;strong&gt;「また連絡します」で終わる。&lt;/strong&gt;ブースでの会話を「ご興味あれば連絡します」で終わらせると、次のアクションが相手任せになる。具体的な次のステップ（「来週水曜に事例資料をお送りします」など）をその場で約束することが、フォローの起点になる。"><strong>「また連絡します」で終わる。</strong>ブースでの会話を「ご興味あれば連絡します」で終わらせると、次のアクションが相手任せになる。具体的な次のステップ（「来週水曜に事例資料をお送りします」など）をその場で約束することが、フォローの起点になる。</li>
+<li data-ja-html="&lt;strong&gt;営業とマーケで展示会リードの扱いが違う。&lt;/strong&gt;マーケは「全員にメールを送ったから、あとは営業の仕事」と思い、営業は「マーケが送ったメールで温まった人だけ対応する」と思っている。この分断がリードを放置する最大の温床だ。" data-en-html="&lt;strong&gt;営業とマーケで展示会リードの扱いが違う。&lt;/strong&gt;マーケは「全員にメールを送ったから、あとは営業の仕事」と思い、営業は「マーケが送ったメールで温まった人だけ対応する」と思っている。この分断がリードを放置する最大の温床だ。"><strong>営業とマーケで展示会リードの扱いが違う。</strong>マーケは「全員にメールを送ったから、あとは営業の仕事」と思い、営業は「マーケが送ったメールで温まった人だけ対応する」と思っている。この分断がリードを放置する最大の温床だ。</li>
+</ul>
+<h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4" data-ja="MAと連携した展示会フォローアップ設計" data-en="MAと連携した展示会フォローアップ設計">MAと連携した展示会フォローアップ設計</h2>
+<p data-ja="これらの問題を解決するのが、MAツールを軸にした展示会フォローアップの仕組み化だ。重要なのは「MAを導入する」ことではなく、「展示会の前後のオペレーションをMA前提で設計する」ことだ。" data-en="これらの問題を解決するのが、MAツールを軸にした展示会フォローアップの仕組み化だ。重要なのは「MAを導入する」ことではなく、「展示会の前後のオペレーションをMA前提で設計する」ことだ。">これらの問題を解決するのが、MAツールを軸にした展示会フォローアップの仕組み化だ。重要なのは「MAを導入する」ことではなく、「展示会の前後のオペレーションをMA前提で設計する」ことだ。</p>
+<!-- フロー図 -->
+<div class="diag-wrap" data-ja-html='&lt;div class="diag-label"&gt;Figure — 展示会 → MA → 商談の4ステップフロー&lt;/div&gt;
+&lt;div class="diag-step-row"&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;1&lt;/div&gt;
+&lt;div class="step-title"&gt;展示会当日&lt;br/&gt;名刺→CRM入力&lt;/div&gt;
+&lt;div class="step-body"&gt;名刺スキャン＋温度感メモを即日入力。「今すぐ」「そのうち」「情報収集」の3分類でタグ付け。担当営業名も必ず記録。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;2&lt;/div&gt;
+&lt;div class="step-title"&gt;翌日〜72時間&lt;br/&gt;サンクスメール送付&lt;/div&gt;
+&lt;div class="step-body"&gt;MA経由で自動配信。会話内容に触れたパーソナライズ文＋関連コンテンツのリンクを添付。CTAは「資料DL」か「日程調整URL」のみ。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;3&lt;/div&gt;
+&lt;div class="step-title"&gt;1〜2週間後&lt;br/&gt;スコアに応じた分岐&lt;/div&gt;
+&lt;div class="step-body"&gt;メール開封・コンテンツ閲覧スコアが閾値超え→営業にアラート通知。閾値未達→ナーチャリングシナリオへ自動投入。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;4&lt;/div&gt;
+&lt;div class="step-title"&gt;商談アポ or&lt;br/&gt;ナーチャリング継続&lt;/div&gt;
+&lt;div class="step-body"&gt;ホットリードは担当営業がコールまたはメール。コールドリードは月次コンテンツ配信で長期育成。四半期ごとに再スコアリング。&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class="diag-caption" data-ja="展示会終了後72時間以内にSTEP 1〜2を完了させることが商談化率向上の最重要条件" data-en="展示会終了後72時間以内にSTEP 1〜2を完了させることが商談化率向上の最重要条件"&gt;展示会終了後72時間以内にSTEP 1〜2を完了させることが商談化率向上の最重要条件&lt;/p&gt;' data-en-html='&lt;div class="diag-label"&gt;Figure — 展示会 → MA → 商談の4ステップフロー&lt;/div&gt;
+&lt;div class="diag-step-row"&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;1&lt;/div&gt;
+&lt;div class="step-title"&gt;展示会当日&lt;br/&gt;名刺→CRM入力&lt;/div&gt;
+&lt;div class="step-body"&gt;名刺スキャン＋温度感メモを即日入力。「今すぐ」「そのうち」「情報収集」の3分類でタグ付け。担当営業名も必ず記録。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;2&lt;/div&gt;
+&lt;div class="step-title"&gt;翌日〜72時間&lt;br/&gt;サンクスメール送付&lt;/div&gt;
+&lt;div class="step-body"&gt;MA経由で自動配信。会話内容に触れたパーソナライズ文＋関連コンテンツのリンクを添付。CTAは「資料DL」か「日程調整URL」のみ。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;3&lt;/div&gt;
+&lt;div class="step-title"&gt;1〜2週間後&lt;br/&gt;スコアに応じた分岐&lt;/div&gt;
+&lt;div class="step-body"&gt;メール開封・コンテンツ閲覧スコアが閾値超え→営業にアラート通知。閾値未達→ナーチャリングシナリオへ自動投入。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;4&lt;/div&gt;
+&lt;div class="step-title"&gt;商談アポ or&lt;br/&gt;ナーチャリング継続&lt;/div&gt;
+&lt;div class="step-body"&gt;ホットリードは担当営業がコールまたはメール。コールドリードは月次コンテンツ配信で長期育成。四半期ごとに再スコアリング。&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class="diag-caption" data-ja="展示会終了後72時間以内にSTEP 1〜2を完了させることが商談化率向上の最重要条件" data-en="展示会終了後72時間以内にSTEP 1〜2を完了させることが商談化率向上の最重要条件"&gt;展示会終了後72時間以内にSTEP 1〜2を完了させることが商談化率向上の最重要条件&lt;/p&gt;'>
+<div class="diag-label" data-ja="Figure — 展示会 → MA → 商談の4ステップフロー" data-en="Figure — 展示会 → MA → 商談の4ステップフロー">Figure — 展示会 → MA → 商談の4ステップフロー</div>
+<div class="diag-step-row" data-ja-html='&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;1&lt;/div&gt;
+&lt;div class="step-title"&gt;展示会当日&lt;br/&gt;名刺→CRM入力&lt;/div&gt;
+&lt;div class="step-body"&gt;名刺スキャン＋温度感メモを即日入力。「今すぐ」「そのうち」「情報収集」の3分類でタグ付け。担当営業名も必ず記録。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;2&lt;/div&gt;
+&lt;div class="step-title"&gt;翌日〜72時間&lt;br/&gt;サンクスメール送付&lt;/div&gt;
+&lt;div class="step-body"&gt;MA経由で自動配信。会話内容に触れたパーソナライズ文＋関連コンテンツのリンクを添付。CTAは「資料DL」か「日程調整URL」のみ。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;3&lt;/div&gt;
+&lt;div class="step-title"&gt;1〜2週間後&lt;br/&gt;スコアに応じた分岐&lt;/div&gt;
+&lt;div class="step-body"&gt;メール開封・コンテンツ閲覧スコアが閾値超え→営業にアラート通知。閾値未達→ナーチャリングシナリオへ自動投入。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;4&lt;/div&gt;
+&lt;div class="step-title"&gt;商談アポ or&lt;br/&gt;ナーチャリング継続&lt;/div&gt;
+&lt;div class="step-body"&gt;ホットリードは担当営業がコールまたはメール。コールドリードは月次コンテンツ配信で長期育成。四半期ごとに再スコアリング。&lt;/div&gt;
+&lt;/div&gt;' data-en-html='&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;1&lt;/div&gt;
+&lt;div class="step-title"&gt;展示会当日&lt;br/&gt;名刺→CRM入力&lt;/div&gt;
+&lt;div class="step-body"&gt;名刺スキャン＋温度感メモを即日入力。「今すぐ」「そのうち」「情報収集」の3分類でタグ付け。担当営業名も必ず記録。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;2&lt;/div&gt;
+&lt;div class="step-title"&gt;翌日〜72時間&lt;br/&gt;サンクスメール送付&lt;/div&gt;
+&lt;div class="step-body"&gt;MA経由で自動配信。会話内容に触れたパーソナライズ文＋関連コンテンツのリンクを添付。CTAは「資料DL」か「日程調整URL」のみ。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;3&lt;/div&gt;
+&lt;div class="step-title"&gt;1〜2週間後&lt;br/&gt;スコアに応じた分岐&lt;/div&gt;
+&lt;div class="step-body"&gt;メール開封・コンテンツ閲覧スコアが閾値超え→営業にアラート通知。閾値未達→ナーチャリングシナリオへ自動投入。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-step-card"&gt;
+&lt;div class="step-num"&gt;4&lt;/div&gt;
+&lt;div class="step-title"&gt;商談アポ or&lt;br/&gt;ナーチャリング継続&lt;/div&gt;
+&lt;div class="step-body"&gt;ホットリードは担当営業がコールまたはメール。コールドリードは月次コンテンツ配信で長期育成。四半期ごとに再スコアリング。&lt;/div&gt;
+&lt;/div&gt;'>
+<div class="diag-step-card" data-ja-html='&lt;div class="step-num"&gt;1&lt;/div&gt;
+&lt;div class="step-title"&gt;展示会当日&lt;br/&gt;名刺→CRM入力&lt;/div&gt;
+&lt;div class="step-body"&gt;名刺スキャン＋温度感メモを即日入力。「今すぐ」「そのうち」「情報収集」の3分類でタグ付け。担当営業名も必ず記録。&lt;/div&gt;' data-en-html='&lt;div class="step-num"&gt;1&lt;/div&gt;
+&lt;div class="step-title"&gt;展示会当日&lt;br/&gt;名刺→CRM入力&lt;/div&gt;
+&lt;div class="step-body"&gt;名刺スキャン＋温度感メモを即日入力。「今すぐ」「そのうち」「情報収集」の3分類でタグ付け。担当営業名も必ず記録。&lt;/div&gt;'>
+<div class="step-num">1</div>
+<div class="step-title" data-ja-html="展示会当日&lt;br/&gt;名刺→CRM入力" data-en-html="展示会当日&lt;br/&gt;名刺→CRM入力">展示会当日<br/>名刺→CRM入力</div>
+<div class="step-body" data-ja="名刺スキャン＋温度感メモを即日入力。「今すぐ」「そのうち」「情報収集」の3分類でタグ付け。担当営業名も必ず記録。" data-en="名刺スキャン＋温度感メモを即日入力。「今すぐ」「そのうち」「情報収集」の3分類でタグ付け。担当営業名も必ず記録。">名刺スキャン＋温度感メモを即日入力。「今すぐ」「そのうち」「情報収集」の3分類でタグ付け。担当営業名も必ず記録。</div>
+</div>
+<div class="diag-step-card" data-ja-html='&lt;div class="step-num"&gt;2&lt;/div&gt;
+&lt;div class="step-title"&gt;翌日〜72時間&lt;br/&gt;サンクスメール送付&lt;/div&gt;
+&lt;div class="step-body"&gt;MA経由で自動配信。会話内容に触れたパーソナライズ文＋関連コンテンツのリンクを添付。CTAは「資料DL」か「日程調整URL」のみ。&lt;/div&gt;' data-en-html='&lt;div class="step-num"&gt;2&lt;/div&gt;
+&lt;div class="step-title"&gt;翌日〜72時間&lt;br/&gt;サンクスメール送付&lt;/div&gt;
+&lt;div class="step-body"&gt;MA経由で自動配信。会話内容に触れたパーソナライズ文＋関連コンテンツのリンクを添付。CTAは「資料DL」か「日程調整URL」のみ。&lt;/div&gt;'>
+<div class="step-num">2</div>
+<div class="step-title" data-ja-html="翌日〜72時間&lt;br/&gt;サンクスメール送付" data-en-html="翌日〜72時間&lt;br/&gt;サンクスメール送付">翌日〜72時間<br/>サンクスメール送付</div>
+<div class="step-body" data-ja="MA経由で自動配信。会話内容に触れたパーソナライズ文＋関連コンテンツのリンクを添付。CTAは「資料DL」か「日程調整URL」のみ。" data-en="MA経由で自動配信。会話内容に触れたパーソナライズ文＋関連コンテンツのリンクを添付。CTAは「資料DL」か「日程調整URL」のみ。">MA経由で自動配信。会話内容に触れたパーソナライズ文＋関連コンテンツのリンクを添付。CTAは「資料DL」か「日程調整URL」のみ。</div>
+</div>
+<div class="diag-step-card" data-ja-html='&lt;div class="step-num"&gt;3&lt;/div&gt;
+&lt;div class="step-title"&gt;1〜2週間後&lt;br/&gt;スコアに応じた分岐&lt;/div&gt;
+&lt;div class="step-body"&gt;メール開封・コンテンツ閲覧スコアが閾値超え→営業にアラート通知。閾値未達→ナーチャリングシナリオへ自動投入。&lt;/div&gt;' data-en-html='&lt;div class="step-num"&gt;3&lt;/div&gt;
+&lt;div class="step-title"&gt;1〜2週間後&lt;br/&gt;スコアに応じた分岐&lt;/div&gt;
+&lt;div class="step-body"&gt;メール開封・コンテンツ閲覧スコアが閾値超え→営業にアラート通知。閾値未達→ナーチャリングシナリオへ自動投入。&lt;/div&gt;'>
+<div class="step-num">3</div>
+<div class="step-title" data-ja-html="1〜2週間後&lt;br/&gt;スコアに応じた分岐" data-en-html="1〜2週間後&lt;br/&gt;スコアに応じた分岐">1〜2週間後<br/>スコアに応じた分岐</div>
+<div class="step-body" data-ja="メール開封・コンテンツ閲覧スコアが閾値超え→営業にアラート通知。閾値未達→ナーチャリングシナリオへ自動投入。" data-en="メール開封・コンテンツ閲覧スコアが閾値超え→営業にアラート通知。閾値未達→ナーチャリングシナリオへ自動投入。">メール開封・コンテンツ閲覧スコアが閾値超え→営業にアラート通知。閾値未達→ナーチャリングシナリオへ自動投入。</div>
+</div>
+<div class="diag-step-card" data-ja-html='&lt;div class="step-num"&gt;4&lt;/div&gt;
+&lt;div class="step-title"&gt;商談アポ or&lt;br/&gt;ナーチャリング継続&lt;/div&gt;
+&lt;div class="step-body"&gt;ホットリードは担当営業がコールまたはメール。コールドリードは月次コンテンツ配信で長期育成。四半期ごとに再スコアリング。&lt;/div&gt;' data-en-html='&lt;div class="step-num"&gt;4&lt;/div&gt;
+&lt;div class="step-title"&gt;商談アポ or&lt;br/&gt;ナーチャリング継続&lt;/div&gt;
+&lt;div class="step-body"&gt;ホットリードは担当営業がコールまたはメール。コールドリードは月次コンテンツ配信で長期育成。四半期ごとに再スコアリング。&lt;/div&gt;'>
+<div class="step-num">4</div>
+<div class="step-title" data-ja-html="商談アポ or&lt;br/&gt;ナーチャリング継続" data-en-html="商談アポ or&lt;br/&gt;ナーチャリング継続">商談アポ or<br/>ナーチャリング継続</div>
+<div class="step-body" data-ja="ホットリードは担当営業がコールまたはメール。コールドリードは月次コンテンツ配信で長期育成。四半期ごとに再スコアリング。" data-en="ホットリードは担当営業がコールまたはメール。コールドリードは月次コンテンツ配信で長期育成。四半期ごとに再スコアリング。">ホットリードは担当営業がコールまたはメール。コールドリードは月次コンテンツ配信で長期育成。四半期ごとに再スコアリング。</div>
+</div>
+</div>
+<p class="diag-caption" data-ja="展示会終了後72時間以内にSTEP 1〜2を完了させることが商談化率向上の最重要条件" data-en="展示会終了後72時間以内にSTEP 1〜2を完了させることが商談化率向上の最重要条件">展示会終了後72時間以内にSTEP 1〜2を完了させることが商談化率向上の最重要条件</p>
+</div>
+<h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4" data-ja="リードスコアリング設計：「今すぐ客」と「そのうち客」を分ける" data-en="リードスコアリング設計：「今すぐ客」と「そのうち客」を分ける">リードスコアリング設計：「今すぐ客」と「そのうち客」を分ける</h2>
+<p data-ja-html="MAを活用したフォローアップの核心は&lt;strong&gt;リードスコアリング&lt;/strong&gt;だ。全リードを平等に扱うのではなく、購買確度に応じてアプローチを変えることで、営業リソースを最も効果的に配分できる。" data-en-html="MAを活用したフォローアップの核心は&lt;strong&gt;リードスコアリング&lt;/strong&gt;だ。全リードを平等に扱うのではなく、購買確度に応じてアプローチを変えることで、営業リソースを最も効果的に配分できる。">MAを活用したフォローアップの核心は<strong>リードスコアリング</strong>だ。全リードを平等に扱うのではなく、購買確度に応じてアプローチを変えることで、営業リソースを最も効果的に配分できる。</p>
+<p data-ja-html="スコアリングの軸は大きく2つある。&lt;strong&gt;属性スコア&lt;/strong&gt;（その人が誰か）と&lt;strong&gt;行動スコア&lt;/strong&gt;（その人が何をしたか）だ。属性スコアは役職（部長以上＋15点、課長＋10点など）、会社規模（従業員1000人以上＋20点など）、業種マッチ度で構成する。行動スコアはメール開封（＋3点）、コンテンツDL（＋10点）、価格ページ閲覧（＋15点）、デモ申込ページ閲覧（＋20点）などで加算する。" data-en-html="スコアリングの軸は大きく2つある。&lt;strong&gt;属性スコア&lt;/strong&gt;（その人が誰か）と&lt;strong&gt;行動スコア&lt;/strong&gt;（その人が何をしたか）だ。属性スコアは役職（部長以上＋15点、課長＋10点など）、会社規模（従業員1000人以上＋20点など）、業種マッチ度で構成する。行動スコアはメール開封（＋3点）、コンテンツDL（＋10点）、価格ページ閲覧（＋15点）、デモ申込ページ閲覧（＋20点）などで加算する。">スコアリングの軸は大きく2つある。<strong>属性スコア</strong>（その人が誰か）と<strong>行動スコア</strong>（その人が何をしたか）だ。属性スコアは役職（部長以上＋15点、課長＋10点など）、会社規模（従業員1000人以上＋20点など）、業種マッチ度で構成する。行動スコアはメール開封（＋3点）、コンテンツDL（＋10点）、価格ページ閲覧（＋15点）、デモ申込ページ閲覧（＋20点）などで加算する。</p>
+<p data-ja-html="展示会特有のポイントとして、&lt;strong&gt;名刺メモ情報のスコア反映&lt;/strong&gt;がある。ブースでの会話の中で「●月に稟議が通る予定」「現在3社を比較検討中」「予算は●百万円を確保済み」といった情報が得られた場合、これは属性スコアとして高く評価すべき情報だ。名刺スキャン時のメモ欄に入力し、タグとしてCRMに反映する運用を展示会前に設計しておく。" data-en-html="展示会特有のポイントとして、&lt;strong&gt;名刺メモ情報のスコア反映&lt;/strong&gt;がある。ブースでの会話の中で「●月に稟議が通る予定」「現在3社を比較検討中」「予算は●百万円を確保済み」といった情報が得られた場合、これは属性スコアとして高く評価すべき情報だ。名刺スキャン時のメモ欄に入力し、タグとしてCRMに反映する運用を展示会前に設計しておく。">展示会特有のポイントとして、<strong>名刺メモ情報のスコア反映</strong>がある。ブースでの会話の中で「●月に稟議が通る予定」「現在3社を比較検討中」「予算は●百万円を確保済み」といった情報が得られた場合、これは属性スコアとして高く評価すべき情報だ。名刺スキャン時のメモ欄に入力し、タグとしてCRMに反映する運用を展示会前に設計しておく。</p>
+<!-- スコアリング表 -->
+<div class="diag-wrap" data-ja-html='&lt;div class="diag-label"&gt;リードスコアリング設計例 — 展示会リード向け&lt;/div&gt;
+&lt;div style="display:flex;flex-wrap:wrap;gap:1rem;"&gt;
+&lt;div style="flex:1 1 200px;"&gt;
+&lt;div style="font-size:0.72rem;font-weight:700;color:#0F2342;border-bottom:1px solid #E2E0DA;padding-bottom:0.4rem;margin-bottom:0.6rem;"&gt;属性スコア（最大50点）&lt;/div&gt;
+&lt;div style="font-size:0.75rem;color:#4A4A55;line-height:1.8;"&gt;
+              役職：部長以上 +20pt&lt;br/&gt;
+              役職：課長・マネージャー +12pt&lt;br/&gt;
+              会社規模：1000人以上 +15pt&lt;br/&gt;
+              業種マッチ +10pt&lt;br/&gt;
+              予算・検討時期メモあり +15pt
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="flex:1 1 200px;"&gt;
+&lt;div style="font-size:0.72rem;font-weight:700;color:#0F2342;border-bottom:1px solid #E2E0DA;padding-bottom:0.4rem;margin-bottom:0.6rem;"&gt;行動スコア（加算式）&lt;/div&gt;
+&lt;div style="font-size:0.75rem;color:#4A4A55;line-height:1.8;"&gt;
+              サンクスメール開封 +3pt&lt;br/&gt;
+              資料・事例DL +10pt&lt;br/&gt;
+              Webサイト2回以上訪問 +8pt&lt;br/&gt;
+              価格・プラン页閲覧 +15pt&lt;br/&gt;
+              デモ・相談ページ訪問 +20pt
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="flex:1 1 200px;"&gt;
+&lt;div style="font-size:0.72rem;font-weight:700;color:#0F2342;border-bottom:1px solid #E2E0DA;padding-bottom:0.4rem;margin-bottom:0.6rem;"&gt;スコア別アクション&lt;/div&gt;
+&lt;div style="font-size:0.75rem;line-height:1.8;"&gt;
+&lt;span style="color:#5A9A6A;font-weight:700;"&gt;80点以上&lt;/span&gt;：即日営業アラート・コール&lt;br/&gt;
+&lt;span style="color:#A8965A;font-weight:700;"&gt;50〜79点&lt;/span&gt;：営業メール＋1週間以内コール&lt;br/&gt;
+&lt;span style="color:#C45C3A;font-weight:700;"&gt;50点未満&lt;/span&gt;：MAナーチャリングシナリオへ
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;' data-en-html='&lt;div class="diag-label"&gt;リードスコアリング設計例 — 展示会リード向け&lt;/div&gt;
+&lt;div style="display:flex;flex-wrap:wrap;gap:1rem;"&gt;
+&lt;div style="flex:1 1 200px;"&gt;
+&lt;div style="font-size:0.72rem;font-weight:700;color:#0F2342;border-bottom:1px solid #E2E0DA;padding-bottom:0.4rem;margin-bottom:0.6rem;"&gt;属性スコア（最大50点）&lt;/div&gt;
+&lt;div style="font-size:0.75rem;color:#4A4A55;line-height:1.8;"&gt;
+              役職：部長以上 +20pt&lt;br/&gt;
+              役職：課長・マネージャー +12pt&lt;br/&gt;
+              会社規模：1000人以上 +15pt&lt;br/&gt;
+              業種マッチ +10pt&lt;br/&gt;
+              予算・検討時期メモあり +15pt
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="flex:1 1 200px;"&gt;
+&lt;div style="font-size:0.72rem;font-weight:700;color:#0F2342;border-bottom:1px solid #E2E0DA;padding-bottom:0.4rem;margin-bottom:0.6rem;"&gt;行動スコア（加算式）&lt;/div&gt;
+&lt;div style="font-size:0.75rem;color:#4A4A55;line-height:1.8;"&gt;
+              サンクスメール開封 +3pt&lt;br/&gt;
+              資料・事例DL +10pt&lt;br/&gt;
+              Webサイト2回以上訪問 +8pt&lt;br/&gt;
+              価格・プラン页閲覧 +15pt&lt;br/&gt;
+              デモ・相談ページ訪問 +20pt
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="flex:1 1 200px;"&gt;
+&lt;div style="font-size:0.72rem;font-weight:700;color:#0F2342;border-bottom:1px solid #E2E0DA;padding-bottom:0.4rem;margin-bottom:0.6rem;"&gt;スコア別アクション&lt;/div&gt;
+&lt;div style="font-size:0.75rem;line-height:1.8;"&gt;
+&lt;span style="color:#5A9A6A;font-weight:700;"&gt;80点以上&lt;/span&gt;：即日営業アラート・コール&lt;br/&gt;
+&lt;span style="color:#A8965A;font-weight:700;"&gt;50〜79点&lt;/span&gt;：営業メール＋1週間以内コール&lt;br/&gt;
+&lt;span style="color:#C45C3A;font-weight:700;"&gt;50点未満&lt;/span&gt;：MAナーチャリングシナリオへ
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;'>
+<div class="diag-label" data-ja="リードスコアリング設計例 — 展示会リード向け" data-en="リードスコアリング設計例 — 展示会リード向け">リードスコアリング設計例 — 展示会リード向け</div>
+<div data-ja-html='&lt;div style="flex:1 1 200px;"&gt;
+&lt;div style="font-size:0.72rem;font-weight:700;color:#0F2342;border-bottom:1px solid #E2E0DA;padding-bottom:0.4rem;margin-bottom:0.6rem;"&gt;属性スコア（最大50点）&lt;/div&gt;
+&lt;div style="font-size:0.75rem;color:#4A4A55;line-height:1.8;"&gt;
+              役職：部長以上 +20pt&lt;br/&gt;
+              役職：課長・マネージャー +12pt&lt;br/&gt;
+              会社規模：1000人以上 +15pt&lt;br/&gt;
+              業種マッチ +10pt&lt;br/&gt;
+              予算・検討時期メモあり +15pt
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="flex:1 1 200px;"&gt;
+&lt;div style="font-size:0.72rem;font-weight:700;color:#0F2342;border-bottom:1px solid #E2E0DA;padding-bottom:0.4rem;margin-bottom:0.6rem;"&gt;行動スコア（加算式）&lt;/div&gt;
+&lt;div style="font-size:0.75rem;color:#4A4A55;line-height:1.8;"&gt;
+              サンクスメール開封 +3pt&lt;br/&gt;
+              資料・事例DL +10pt&lt;br/&gt;
+              Webサイト2回以上訪問 +8pt&lt;br/&gt;
+              価格・プラン页閲覧 +15pt&lt;br/&gt;
+              デモ・相談ページ訪問 +20pt
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="flex:1 1 200px;"&gt;
+&lt;div style="font-size:0.72rem;font-weight:700;color:#0F2342;border-bottom:1px solid #E2E0DA;padding-bottom:0.4rem;margin-bottom:0.6rem;"&gt;スコア別アクション&lt;/div&gt;
+&lt;div style="font-size:0.75rem;line-height:1.8;"&gt;
+&lt;span style="color:#5A9A6A;font-weight:700;"&gt;80点以上&lt;/span&gt;：即日営業アラート・コール&lt;br/&gt;
+&lt;span style="color:#A8965A;font-weight:700;"&gt;50〜79点&lt;/span&gt;：営業メール＋1週間以内コール&lt;br/&gt;
+&lt;span style="color:#C45C3A;font-weight:700;"&gt;50点未満&lt;/span&gt;：MAナーチャリングシナリオへ
+            &lt;/div&gt;
+&lt;/div&gt;' data-en-html='&lt;div style="flex:1 1 200px;"&gt;
+&lt;div style="font-size:0.72rem;font-weight:700;color:#0F2342;border-bottom:1px solid #E2E0DA;padding-bottom:0.4rem;margin-bottom:0.6rem;"&gt;属性スコア（最大50点）&lt;/div&gt;
+&lt;div style="font-size:0.75rem;color:#4A4A55;line-height:1.8;"&gt;
+              役職：部長以上 +20pt&lt;br/&gt;
+              役職：課長・マネージャー +12pt&lt;br/&gt;
+              会社規模：1000人以上 +15pt&lt;br/&gt;
+              業種マッチ +10pt&lt;br/&gt;
+              予算・検討時期メモあり +15pt
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="flex:1 1 200px;"&gt;
+&lt;div style="font-size:0.72rem;font-weight:700;color:#0F2342;border-bottom:1px solid #E2E0DA;padding-bottom:0.4rem;margin-bottom:0.6rem;"&gt;行動スコア（加算式）&lt;/div&gt;
+&lt;div style="font-size:0.75rem;color:#4A4A55;line-height:1.8;"&gt;
+              サンクスメール開封 +3pt&lt;br/&gt;
+              資料・事例DL +10pt&lt;br/&gt;
+              Webサイト2回以上訪問 +8pt&lt;br/&gt;
+              価格・プラン页閲覧 +15pt&lt;br/&gt;
+              デモ・相談ページ訪問 +20pt
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="flex:1 1 200px;"&gt;
+&lt;div style="font-size:0.72rem;font-weight:700;color:#0F2342;border-bottom:1px solid #E2E0DA;padding-bottom:0.4rem;margin-bottom:0.6rem;"&gt;スコア別アクション&lt;/div&gt;
+&lt;div style="font-size:0.75rem;line-height:1.8;"&gt;
+&lt;span style="color:#5A9A6A;font-weight:700;"&gt;80点以上&lt;/span&gt;：即日営業アラート・コール&lt;br/&gt;
+&lt;span style="color:#A8965A;font-weight:700;"&gt;50〜79点&lt;/span&gt;：営業メール＋1週間以内コール&lt;br/&gt;
+&lt;span style="color:#C45C3A;font-weight:700;"&gt;50点未満&lt;/span&gt;：MAナーチャリングシナリオへ
+            &lt;/div&gt;
+&lt;/div&gt;' style="display:flex;flex-wrap:wrap;gap:1rem;">
+<div data-ja-html='&lt;div style="font-size:0.72rem;font-weight:700;color:#0F2342;border-bottom:1px solid #E2E0DA;padding-bottom:0.4rem;margin-bottom:0.6rem;"&gt;属性スコア（最大50点）&lt;/div&gt;
+&lt;div style="font-size:0.75rem;color:#4A4A55;line-height:1.8;"&gt;
+              役職：部長以上 +20pt&lt;br/&gt;
+              役職：課長・マネージャー +12pt&lt;br/&gt;
+              会社規模：1000人以上 +15pt&lt;br/&gt;
+              業種マッチ +10pt&lt;br/&gt;
+              予算・検討時期メモあり +15pt
+            &lt;/div&gt;' data-en-html='&lt;div style="font-size:0.72rem;font-weight:700;color:#0F2342;border-bottom:1px solid #E2E0DA;padding-bottom:0.4rem;margin-bottom:0.6rem;"&gt;属性スコア（最大50点）&lt;/div&gt;
+&lt;div style="font-size:0.75rem;color:#4A4A55;line-height:1.8;"&gt;
+              役職：部長以上 +20pt&lt;br/&gt;
+              役職：課長・マネージャー +12pt&lt;br/&gt;
+              会社規模：1000人以上 +15pt&lt;br/&gt;
+              業種マッチ +10pt&lt;br/&gt;
+              予算・検討時期メモあり +15pt
+            &lt;/div&gt;' style="flex:1 1 200px;">
+<div data-ja="属性スコア（最大50点）" data-en="属性スコア（最大50点）" style="font-size:0.72rem;font-weight:700;color:#0F2342;border-bottom:1px solid #E2E0DA;padding-bottom:0.4rem;margin-bottom:0.6rem;">属性スコア（最大50点）</div>
+<div data-ja-html="役職：部長以上 +20pt&lt;br/&gt;
+              役職：課長・マネージャー +12pt&lt;br/&gt;
+              会社規模：1000人以上 +15pt&lt;br/&gt;
+              業種マッチ +10pt&lt;br/&gt;
+              予算・検討時期メモあり +15pt" data-en-html="役職：部長以上 +20pt&lt;br/&gt;
+              役職：課長・マネージャー +12pt&lt;br/&gt;
+              会社規模：1000人以上 +15pt&lt;br/&gt;
+              業種マッチ +10pt&lt;br/&gt;
+              予算・検討時期メモあり +15pt" style="font-size:0.75rem;color:#4A4A55;line-height:1.8;">
+              役職：部長以上 +20pt<br/>
+              役職：課長・マネージャー +12pt<br/>
+              会社規模：1000人以上 +15pt<br/>
+              業種マッチ +10pt<br/>
               予算・検討時期メモあり +15pt
             </div>
-          </div>
-          <div style="flex:1 1 200px;">
-            <div style="font-size:0.72rem;font-weight:700;color:#0F2342;border-bottom:1px solid #E2E0DA;padding-bottom:0.4rem;margin-bottom:0.6rem;">行動スコア（加算式）</div>
-            <div style="font-size:0.75rem;color:#4A4A55;line-height:1.8;">
-              サンクスメール開封 +3pt<br>
-              資料・事例DL +10pt<br>
-              Webサイト2回以上訪問 +8pt<br>
-              価格・プラン页閲覧 +15pt<br>
+</div>
+<div data-ja-html='&lt;div style="font-size:0.72rem;font-weight:700;color:#0F2342;border-bottom:1px solid #E2E0DA;padding-bottom:0.4rem;margin-bottom:0.6rem;"&gt;行動スコア（加算式）&lt;/div&gt;
+&lt;div style="font-size:0.75rem;color:#4A4A55;line-height:1.8;"&gt;
+              サンクスメール開封 +3pt&lt;br/&gt;
+              資料・事例DL +10pt&lt;br/&gt;
+              Webサイト2回以上訪問 +8pt&lt;br/&gt;
+              価格・プラン页閲覧 +15pt&lt;br/&gt;
+              デモ・相談ページ訪問 +20pt
+            &lt;/div&gt;' data-en-html='&lt;div style="font-size:0.72rem;font-weight:700;color:#0F2342;border-bottom:1px solid #E2E0DA;padding-bottom:0.4rem;margin-bottom:0.6rem;"&gt;行動スコア（加算式）&lt;/div&gt;
+&lt;div style="font-size:0.75rem;color:#4A4A55;line-height:1.8;"&gt;
+              サンクスメール開封 +3pt&lt;br/&gt;
+              資料・事例DL +10pt&lt;br/&gt;
+              Webサイト2回以上訪問 +8pt&lt;br/&gt;
+              価格・プラン页閲覧 +15pt&lt;br/&gt;
+              デモ・相談ページ訪問 +20pt
+            &lt;/div&gt;' style="flex:1 1 200px;">
+<div data-ja="行動スコア（加算式）" data-en="行動スコア（加算式）" style="font-size:0.72rem;font-weight:700;color:#0F2342;border-bottom:1px solid #E2E0DA;padding-bottom:0.4rem;margin-bottom:0.6rem;">行動スコア（加算式）</div>
+<div data-ja-html="サンクスメール開封 +3pt&lt;br/&gt;
+              資料・事例DL +10pt&lt;br/&gt;
+              Webサイト2回以上訪問 +8pt&lt;br/&gt;
+              価格・プラン页閲覧 +15pt&lt;br/&gt;
+              デモ・相談ページ訪問 +20pt" data-en-html="サンクスメール開封 +3pt&lt;br/&gt;
+              資料・事例DL +10pt&lt;br/&gt;
+              Webサイト2回以上訪問 +8pt&lt;br/&gt;
+              価格・プラン页閲覧 +15pt&lt;br/&gt;
+              デモ・相談ページ訪問 +20pt" style="font-size:0.75rem;color:#4A4A55;line-height:1.8;">
+              サンクスメール開封 +3pt<br/>
+              資料・事例DL +10pt<br/>
+              Webサイト2回以上訪問 +8pt<br/>
+              価格・プラン页閲覧 +15pt<br/>
               デモ・相談ページ訪問 +20pt
             </div>
-          </div>
-          <div style="flex:1 1 200px;">
-            <div style="font-size:0.72rem;font-weight:700;color:#0F2342;border-bottom:1px solid #E2E0DA;padding-bottom:0.4rem;margin-bottom:0.6rem;">スコア別アクション</div>
-            <div style="font-size:0.75rem;line-height:1.8;">
-              <span style="color:#5A9A6A;font-weight:700;">80点以上</span>：即日営業アラート・コール<br>
-              <span style="color:#A8965A;font-weight:700;">50〜79点</span>：営業メール＋1週間以内コール<br>
-              <span style="color:#C45C3A;font-weight:700;">50点未満</span>：MAナーチャリングシナリオへ
+</div>
+<div data-ja-html='&lt;div style="font-size:0.72rem;font-weight:700;color:#0F2342;border-bottom:1px solid #E2E0DA;padding-bottom:0.4rem;margin-bottom:0.6rem;"&gt;スコア別アクション&lt;/div&gt;
+&lt;div style="font-size:0.75rem;line-height:1.8;"&gt;
+&lt;span style="color:#5A9A6A;font-weight:700;"&gt;80点以上&lt;/span&gt;：即日営業アラート・コール&lt;br/&gt;
+&lt;span style="color:#A8965A;font-weight:700;"&gt;50〜79点&lt;/span&gt;：営業メール＋1週間以内コール&lt;br/&gt;
+&lt;span style="color:#C45C3A;font-weight:700;"&gt;50点未満&lt;/span&gt;：MAナーチャリングシナリオへ
+            &lt;/div&gt;' data-en-html='&lt;div style="font-size:0.72rem;font-weight:700;color:#0F2342;border-bottom:1px solid #E2E0DA;padding-bottom:0.4rem;margin-bottom:0.6rem;"&gt;スコア別アクション&lt;/div&gt;
+&lt;div style="font-size:0.75rem;line-height:1.8;"&gt;
+&lt;span style="color:#5A9A6A;font-weight:700;"&gt;80点以上&lt;/span&gt;：即日営業アラート・コール&lt;br/&gt;
+&lt;span style="color:#A8965A;font-weight:700;"&gt;50〜79点&lt;/span&gt;：営業メール＋1週間以内コール&lt;br/&gt;
+&lt;span style="color:#C45C3A;font-weight:700;"&gt;50点未満&lt;/span&gt;：MAナーチャリングシナリオへ
+            &lt;/div&gt;' style="flex:1 1 200px;">
+<div data-ja="スコア別アクション" data-en="スコア別アクション" style="font-size:0.72rem;font-weight:700;color:#0F2342;border-bottom:1px solid #E2E0DA;padding-bottom:0.4rem;margin-bottom:0.6rem;">スコア別アクション</div>
+<div data-ja-html='&lt;span style="color:#5A9A6A;font-weight:700;"&gt;80点以上&lt;/span&gt;：即日営業アラート・コール&lt;br/&gt;
+&lt;span style="color:#A8965A;font-weight:700;"&gt;50〜79点&lt;/span&gt;：営業メール＋1週間以内コール&lt;br/&gt;
+&lt;span style="color:#C45C3A;font-weight:700;"&gt;50点未満&lt;/span&gt;：MAナーチャリングシナリオへ' data-en-html='&lt;span style="color:#5A9A6A;font-weight:700;"&gt;80点以上&lt;/span&gt;：即日営業アラート・コール&lt;br/&gt;
+&lt;span style="color:#A8965A;font-weight:700;"&gt;50〜79点&lt;/span&gt;：営業メール＋1週間以内コール&lt;br/&gt;
+&lt;span style="color:#C45C3A;font-weight:700;"&gt;50点未満&lt;/span&gt;：MAナーチャリングシナリオへ' style="font-size:0.75rem;line-height:1.8;">
+<span data-ja="80点以上" data-en="80点以上" style="color:#5A9A6A;font-weight:700;">80点以上</span>：即日営業アラート・コール<br/>
+<span data-ja="50〜79点" data-en="50〜79点" style="color:#A8965A;font-weight:700;">50〜79点</span>：営業メール＋1週間以内コール<br/>
+<span data-ja="50点未満" data-en="50点未満" style="color:#C45C3A;font-weight:700;">50点未満</span>：MAナーチャリングシナリオへ
             </div>
-          </div>
-        </div>
-      </div>
-      <p class="diag-caption">スコアの閾値は自社の商談化率データを元に定期的に見直すことを推奨</p>
-
-      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">シナリオ設計の実例：製造業向け4ステップ</h2>
-
-      <p>実際のメールシナリオを時系列で設計した例を示す。製造業向けのシステム導入を想定したケースだ。</p>
-
-      <!-- タイムラインシナリオ -->
-      <div class="diag-wrap">
-        <div class="diag-label">展示会フォローアップ メールシナリオ — 製造業向け</div>
-        <div style="display:flex;flex-direction:column;gap:0.8rem;">
-          <div style="display:flex;gap:1rem;align-items:flex-start;">
-            <div style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;">Day 0<br>当日</div>
-            <div style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;">
-              <span style="font-weight:700;color:#0F2342;">件名：</span>本日はご来場いただきありがとうございました（[担当者名]より）<br>
-              <span style="font-weight:700;color:#0F2342;">内容：</span>会話内容に触れた1〜2文のパーソナライズ文＋「お話しした●●についての資料をお送りします」。添付は1点のみ。CTAは資料DLか日程調整URLのどちらか一つ。
+</div>
+</div>
+</div>
+<p class="diag-caption" data-ja="スコアの閾値は自社の商談化率データを元に定期的に見直すことを推奨" data-en="スコアの閾値は自社の商談化率データを元に定期的に見直すことを推奨">スコアの閾値は自社の商談化率データを元に定期的に見直すことを推奨</p>
+<h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4" data-ja="シナリオ設計の実例：製造業向け4ステップ" data-en="シナリオ設計の実例：製造業向け4ステップ">シナリオ設計の実例：製造業向け4ステップ</h2>
+<p data-ja="実際のメールシナリオを時系列で設計した例を示す。製造業向けのシステム導入を想定したケースだ。" data-en="実際のメールシナリオを時系列で設計した例を示す。製造業向けのシステム導入を想定したケースだ。">実際のメールシナリオを時系列で設計した例を示す。製造業向けのシステム導入を想定したケースだ。</p>
+<!-- タイムラインシナリオ -->
+<div class="diag-wrap" data-ja-html='&lt;div class="diag-label"&gt;展示会フォローアップ メールシナリオ — 製造業向け&lt;/div&gt;
+&lt;div style="display:flex;flex-direction:column;gap:0.8rem;"&gt;
+&lt;div style="display:flex;gap:1rem;align-items:flex-start;"&gt;
+&lt;div style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;"&gt;Day 0&lt;br/&gt;当日&lt;/div&gt;
+&lt;div style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;"&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;件名：&lt;/span&gt;本日はご来場いただきありがとうございました（[担当者名]より）&lt;br/&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;内容：&lt;/span&gt;会話内容に触れた1〜2文のパーソナライズ文＋「お話しした●●についての資料をお送りします」。添付は1点のみ。CTAは資料DLか日程調整URLのどちらか一つ。
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="display:flex;gap:1rem;align-items:flex-start;"&gt;
+&lt;div style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;"&gt;Day 3&lt;br/&gt;3日後&lt;/div&gt;
+&lt;div style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;"&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;件名：&lt;/span&gt;【事例】製造業での導入効果と3ヶ月の変化&lt;br/&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;内容：&lt;/span&gt;類似業界の導入事例を1件紹介。「御社の状況に当てはめると…」という具体的な文脈付け。資料DLまたはウェビナー案内。Day0メール開封者に限定送信することで開封率向上。
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="display:flex;gap:1rem;align-items:flex-start;"&gt;
+&lt;div style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;"&gt;Day 14&lt;br/&gt;2週間後&lt;/div&gt;
+&lt;div style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;"&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;件名：&lt;/span&gt;他社との比較資料をご用意しました&lt;br/&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;内容：&lt;/span&gt;競合比較マトリクスまたはROI試算テンプレートを提供。「検討の整理にお役立てください」という姿勢で。押しつけない。スコアが閾値を超えていれば、この時点で営業からのパーソナルメールに切り替える。
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="display:flex;gap:1rem;align-items:flex-start;"&gt;
+&lt;div style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;"&gt;Day 30&lt;br/&gt;1ヶ月後&lt;/div&gt;
+&lt;div style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;"&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;件名：&lt;/span&gt;30分のオンラインデモを無料でご提供しています&lt;br/&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;内容：&lt;/span&gt;具体的なアクション（デモ申込）への誘導。「もし時期が合わなければ、引き続き情報をお送りします」という逃げ道を用意する。無反応リードはナーチャリングシナリオに移行。
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;' data-en-html='&lt;div class="diag-label"&gt;展示会フォローアップ メールシナリオ — 製造業向け&lt;/div&gt;
+&lt;div style="display:flex;flex-direction:column;gap:0.8rem;"&gt;
+&lt;div style="display:flex;gap:1rem;align-items:flex-start;"&gt;
+&lt;div style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;"&gt;Day 0&lt;br/&gt;当日&lt;/div&gt;
+&lt;div style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;"&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;件名：&lt;/span&gt;本日はご来場いただきありがとうございました（[担当者名]より）&lt;br/&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;内容：&lt;/span&gt;会話内容に触れた1〜2文のパーソナライズ文＋「お話しした●●についての資料をお送りします」。添付は1点のみ。CTAは資料DLか日程調整URLのどちらか一つ。
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="display:flex;gap:1rem;align-items:flex-start;"&gt;
+&lt;div style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;"&gt;Day 3&lt;br/&gt;3日後&lt;/div&gt;
+&lt;div style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;"&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;件名：&lt;/span&gt;【事例】製造業での導入効果と3ヶ月の変化&lt;br/&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;内容：&lt;/span&gt;類似業界の導入事例を1件紹介。「御社の状況に当てはめると…」という具体的な文脈付け。資料DLまたはウェビナー案内。Day0メール開封者に限定送信することで開封率向上。
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="display:flex;gap:1rem;align-items:flex-start;"&gt;
+&lt;div style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;"&gt;Day 14&lt;br/&gt;2週間後&lt;/div&gt;
+&lt;div style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;"&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;件名：&lt;/span&gt;他社との比較資料をご用意しました&lt;br/&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;内容：&lt;/span&gt;競合比較マトリクスまたはROI試算テンプレートを提供。「検討の整理にお役立てください」という姿勢で。押しつけない。スコアが閾値を超えていれば、この時点で営業からのパーソナルメールに切り替える。
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="display:flex;gap:1rem;align-items:flex-start;"&gt;
+&lt;div style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;"&gt;Day 30&lt;br/&gt;1ヶ月後&lt;/div&gt;
+&lt;div style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;"&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;件名：&lt;/span&gt;30分のオンラインデモを無料でご提供しています&lt;br/&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;内容：&lt;/span&gt;具体的なアクション（デモ申込）への誘導。「もし時期が合わなければ、引き続き情報をお送りします」という逃げ道を用意する。無反応リードはナーチャリングシナリオに移行。
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;'>
+<div class="diag-label" data-ja="展示会フォローアップ メールシナリオ — 製造業向け" data-en="展示会フォローアップ メールシナリオ — 製造業向け">展示会フォローアップ メールシナリオ — 製造業向け</div>
+<div data-ja-html='&lt;div style="display:flex;gap:1rem;align-items:flex-start;"&gt;
+&lt;div style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;"&gt;Day 0&lt;br/&gt;当日&lt;/div&gt;
+&lt;div style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;"&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;件名：&lt;/span&gt;本日はご来場いただきありがとうございました（[担当者名]より）&lt;br/&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;内容：&lt;/span&gt;会話内容に触れた1〜2文のパーソナライズ文＋「お話しした●●についての資料をお送りします」。添付は1点のみ。CTAは資料DLか日程調整URLのどちらか一つ。
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="display:flex;gap:1rem;align-items:flex-start;"&gt;
+&lt;div style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;"&gt;Day 3&lt;br/&gt;3日後&lt;/div&gt;
+&lt;div style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;"&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;件名：&lt;/span&gt;【事例】製造業での導入効果と3ヶ月の変化&lt;br/&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;内容：&lt;/span&gt;類似業界の導入事例を1件紹介。「御社の状況に当てはめると…」という具体的な文脈付け。資料DLまたはウェビナー案内。Day0メール開封者に限定送信することで開封率向上。
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="display:flex;gap:1rem;align-items:flex-start;"&gt;
+&lt;div style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;"&gt;Day 14&lt;br/&gt;2週間後&lt;/div&gt;
+&lt;div style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;"&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;件名：&lt;/span&gt;他社との比較資料をご用意しました&lt;br/&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;内容：&lt;/span&gt;競合比較マトリクスまたはROI試算テンプレートを提供。「検討の整理にお役立てください」という姿勢で。押しつけない。スコアが閾値を超えていれば、この時点で営業からのパーソナルメールに切り替える。
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="display:flex;gap:1rem;align-items:flex-start;"&gt;
+&lt;div style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;"&gt;Day 30&lt;br/&gt;1ヶ月後&lt;/div&gt;
+&lt;div style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;"&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;件名：&lt;/span&gt;30分のオンラインデモを無料でご提供しています&lt;br/&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;内容：&lt;/span&gt;具体的なアクション（デモ申込）への誘導。「もし時期が合わなければ、引き続き情報をお送りします」という逃げ道を用意する。無反応リードはナーチャリングシナリオに移行。
+            &lt;/div&gt;
+&lt;/div&gt;' data-en-html='&lt;div style="display:flex;gap:1rem;align-items:flex-start;"&gt;
+&lt;div style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;"&gt;Day 0&lt;br/&gt;当日&lt;/div&gt;
+&lt;div style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;"&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;件名：&lt;/span&gt;本日はご来場いただきありがとうございました（[担当者名]より）&lt;br/&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;内容：&lt;/span&gt;会話内容に触れた1〜2文のパーソナライズ文＋「お話しした●●についての資料をお送りします」。添付は1点のみ。CTAは資料DLか日程調整URLのどちらか一つ。
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="display:flex;gap:1rem;align-items:flex-start;"&gt;
+&lt;div style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;"&gt;Day 3&lt;br/&gt;3日後&lt;/div&gt;
+&lt;div style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;"&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;件名：&lt;/span&gt;【事例】製造業での導入効果と3ヶ月の変化&lt;br/&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;内容：&lt;/span&gt;類似業界の導入事例を1件紹介。「御社の状況に当てはめると…」という具体的な文脈付け。資料DLまたはウェビナー案内。Day0メール開封者に限定送信することで開封率向上。
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="display:flex;gap:1rem;align-items:flex-start;"&gt;
+&lt;div style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;"&gt;Day 14&lt;br/&gt;2週間後&lt;/div&gt;
+&lt;div style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;"&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;件名：&lt;/span&gt;他社との比較資料をご用意しました&lt;br/&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;内容：&lt;/span&gt;競合比較マトリクスまたはROI試算テンプレートを提供。「検討の整理にお役立てください」という姿勢で。押しつけない。スコアが閾値を超えていれば、この時点で営業からのパーソナルメールに切り替える。
+            &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="display:flex;gap:1rem;align-items:flex-start;"&gt;
+&lt;div style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;"&gt;Day 30&lt;br/&gt;1ヶ月後&lt;/div&gt;
+&lt;div style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;"&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;件名：&lt;/span&gt;30分のオンラインデモを無料でご提供しています&lt;br/&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;内容：&lt;/span&gt;具体的なアクション（デモ申込）への誘導。「もし時期が合わなければ、引き続き情報をお送りします」という逃げ道を用意する。無反応リードはナーチャリングシナリオに移行。
+            &lt;/div&gt;
+&lt;/div&gt;' style="display:flex;flex-direction:column;gap:0.8rem;">
+<div data-ja-html='&lt;div style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;"&gt;Day 0&lt;br/&gt;当日&lt;/div&gt;
+&lt;div style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;"&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;件名：&lt;/span&gt;本日はご来場いただきありがとうございました（[担当者名]より）&lt;br/&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;内容：&lt;/span&gt;会話内容に触れた1〜2文のパーソナライズ文＋「お話しした●●についての資料をお送りします」。添付は1点のみ。CTAは資料DLか日程調整URLのどちらか一つ。
+            &lt;/div&gt;' data-en-html='&lt;div style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;"&gt;Day 0&lt;br/&gt;当日&lt;/div&gt;
+&lt;div style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;"&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;件名：&lt;/span&gt;本日はご来場いただきありがとうございました（[担当者名]より）&lt;br/&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;内容：&lt;/span&gt;会話内容に触れた1〜2文のパーソナライズ文＋「お話しした●●についての資料をお送りします」。添付は1点のみ。CTAは資料DLか日程調整URLのどちらか一つ。
+            &lt;/div&gt;' style="display:flex;gap:1rem;align-items:flex-start;">
+<div data-ja-html="Day 0&lt;br/&gt;当日" data-en-html="Day 0&lt;br/&gt;当日" style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;">Day 0<br/>当日</div>
+<div data-ja-html='&lt;span style="font-weight:700;color:#0F2342;"&gt;件名：&lt;/span&gt;本日はご来場いただきありがとうございました（[担当者名]より）&lt;br/&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;内容：&lt;/span&gt;会話内容に触れた1〜2文のパーソナライズ文＋「お話しした●●についての資料をお送りします」。添付は1点のみ。CTAは資料DLか日程調整URLのどちらか一つ。' data-en-html='&lt;span style="font-weight:700;color:#0F2342;"&gt;件名：&lt;/span&gt;本日はご来場いただきありがとうございました（[担当者名]より）&lt;br/&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;内容：&lt;/span&gt;会話内容に触れた1〜2文のパーソナライズ文＋「お話しした●●についての資料をお送りします」。添付は1点のみ。CTAは資料DLか日程調整URLのどちらか一つ。' style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;">
+<span data-ja="件名：" data-en="件名：" style="font-weight:700;color:#0F2342;">件名：</span>本日はご来場いただきありがとうございました（[担当者名]より）<br/>
+<span data-ja="内容：" data-en="内容：" style="font-weight:700;color:#0F2342;">内容：</span>会話内容に触れた1〜2文のパーソナライズ文＋「お話しした●●についての資料をお送りします」。添付は1点のみ。CTAは資料DLか日程調整URLのどちらか一つ。
             </div>
-          </div>
-          <div style="display:flex;gap:1rem;align-items:flex-start;">
-            <div style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;">Day 3<br>3日後</div>
-            <div style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;">
-              <span style="font-weight:700;color:#0F2342;">件名：</span>【事例】製造業での導入効果と3ヶ月の変化<br>
-              <span style="font-weight:700;color:#0F2342;">内容：</span>類似業界の導入事例を1件紹介。「御社の状況に当てはめると…」という具体的な文脈付け。資料DLまたはウェビナー案内。Day0メール開封者に限定送信することで開封率向上。
+</div>
+<div data-ja-html='&lt;div style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;"&gt;Day 3&lt;br/&gt;3日後&lt;/div&gt;
+&lt;div style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;"&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;件名：&lt;/span&gt;【事例】製造業での導入効果と3ヶ月の変化&lt;br/&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;内容：&lt;/span&gt;類似業界の導入事例を1件紹介。「御社の状況に当てはめると…」という具体的な文脈付け。資料DLまたはウェビナー案内。Day0メール開封者に限定送信することで開封率向上。
+            &lt;/div&gt;' data-en-html='&lt;div style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;"&gt;Day 3&lt;br/&gt;3日後&lt;/div&gt;
+&lt;div style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;"&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;件名：&lt;/span&gt;【事例】製造業での導入効果と3ヶ月の変化&lt;br/&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;内容：&lt;/span&gt;類似業界の導入事例を1件紹介。「御社の状況に当てはめると…」という具体的な文脈付け。資料DLまたはウェビナー案内。Day0メール開封者に限定送信することで開封率向上。
+            &lt;/div&gt;' style="display:flex;gap:1rem;align-items:flex-start;">
+<div data-ja-html="Day 3&lt;br/&gt;3日後" data-en-html="Day 3&lt;br/&gt;3日後" style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;">Day 3<br/>3日後</div>
+<div data-ja-html='&lt;span style="font-weight:700;color:#0F2342;"&gt;件名：&lt;/span&gt;【事例】製造業での導入効果と3ヶ月の変化&lt;br/&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;内容：&lt;/span&gt;類似業界の導入事例を1件紹介。「御社の状況に当てはめると…」という具体的な文脈付け。資料DLまたはウェビナー案内。Day0メール開封者に限定送信することで開封率向上。' data-en-html='&lt;span style="font-weight:700;color:#0F2342;"&gt;件名：&lt;/span&gt;【事例】製造業での導入効果と3ヶ月の変化&lt;br/&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;内容：&lt;/span&gt;類似業界の導入事例を1件紹介。「御社の状況に当てはめると…」という具体的な文脈付け。資料DLまたはウェビナー案内。Day0メール開封者に限定送信することで開封率向上。' style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;">
+<span data-ja="件名：" data-en="件名：" style="font-weight:700;color:#0F2342;">件名：</span>【事例】製造業での導入効果と3ヶ月の変化<br/>
+<span data-ja="内容：" data-en="内容：" style="font-weight:700;color:#0F2342;">内容：</span>類似業界の導入事例を1件紹介。「御社の状況に当てはめると…」という具体的な文脈付け。資料DLまたはウェビナー案内。Day0メール開封者に限定送信することで開封率向上。
             </div>
-          </div>
-          <div style="display:flex;gap:1rem;align-items:flex-start;">
-            <div style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;">Day 14<br>2週間後</div>
-            <div style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;">
-              <span style="font-weight:700;color:#0F2342;">件名：</span>他社との比較資料をご用意しました<br>
-              <span style="font-weight:700;color:#0F2342;">内容：</span>競合比較マトリクスまたはROI試算テンプレートを提供。「検討の整理にお役立てください」という姿勢で。押しつけない。スコアが閾値を超えていれば、この時点で営業からのパーソナルメールに切り替える。
+</div>
+<div data-ja-html='&lt;div style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;"&gt;Day 14&lt;br/&gt;2週間後&lt;/div&gt;
+&lt;div style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;"&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;件名：&lt;/span&gt;他社との比較資料をご用意しました&lt;br/&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;内容：&lt;/span&gt;競合比較マトリクスまたはROI試算テンプレートを提供。「検討の整理にお役立てください」という姿勢で。押しつけない。スコアが閾値を超えていれば、この時点で営業からのパーソナルメールに切り替える。
+            &lt;/div&gt;' data-en-html='&lt;div style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;"&gt;Day 14&lt;br/&gt;2週間後&lt;/div&gt;
+&lt;div style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;"&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;件名：&lt;/span&gt;他社との比較資料をご用意しました&lt;br/&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;内容：&lt;/span&gt;競合比較マトリクスまたはROI試算テンプレートを提供。「検討の整理にお役立てください」という姿勢で。押しつけない。スコアが閾値を超えていれば、この時点で営業からのパーソナルメールに切り替える。
+            &lt;/div&gt;' style="display:flex;gap:1rem;align-items:flex-start;">
+<div data-ja-html="Day 14&lt;br/&gt;2週間後" data-en-html="Day 14&lt;br/&gt;2週間後" style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;">Day 14<br/>2週間後</div>
+<div data-ja-html='&lt;span style="font-weight:700;color:#0F2342;"&gt;件名：&lt;/span&gt;他社との比較資料をご用意しました&lt;br/&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;内容：&lt;/span&gt;競合比較マトリクスまたはROI試算テンプレートを提供。「検討の整理にお役立てください」という姿勢で。押しつけない。スコアが閾値を超えていれば、この時点で営業からのパーソナルメールに切り替える。' data-en-html='&lt;span style="font-weight:700;color:#0F2342;"&gt;件名：&lt;/span&gt;他社との比較資料をご用意しました&lt;br/&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;内容：&lt;/span&gt;競合比較マトリクスまたはROI試算テンプレートを提供。「検討の整理にお役立てください」という姿勢で。押しつけない。スコアが閾値を超えていれば、この時点で営業からのパーソナルメールに切り替える。' style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;">
+<span data-ja="件名：" data-en="件名：" style="font-weight:700;color:#0F2342;">件名：</span>他社との比較資料をご用意しました<br/>
+<span data-ja="内容：" data-en="内容：" style="font-weight:700;color:#0F2342;">内容：</span>競合比較マトリクスまたはROI試算テンプレートを提供。「検討の整理にお役立てください」という姿勢で。押しつけない。スコアが閾値を超えていれば、この時点で営業からのパーソナルメールに切り替える。
             </div>
-          </div>
-          <div style="display:flex;gap:1rem;align-items:flex-start;">
-            <div style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;">Day 30<br>1ヶ月後</div>
-            <div style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;">
-              <span style="font-weight:700;color:#0F2342;">件名：</span>30分のオンラインデモを無料でご提供しています<br>
-              <span style="font-weight:700;color:#0F2342;">内容：</span>具体的なアクション（デモ申込）への誘導。「もし時期が合わなければ、引き続き情報をお送りします」という逃げ道を用意する。無反応リードはナーチャリングシナリオに移行。
+</div>
+<div data-ja-html='&lt;div style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;"&gt;Day 30&lt;br/&gt;1ヶ月後&lt;/div&gt;
+&lt;div style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;"&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;件名：&lt;/span&gt;30分のオンラインデモを無料でご提供しています&lt;br/&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;内容：&lt;/span&gt;具体的なアクション（デモ申込）への誘導。「もし時期が合わなければ、引き続き情報をお送りします」という逃げ道を用意する。無反応リードはナーチャリングシナリオに移行。
+            &lt;/div&gt;' data-en-html='&lt;div style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;"&gt;Day 30&lt;br/&gt;1ヶ月後&lt;/div&gt;
+&lt;div style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;"&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;件名：&lt;/span&gt;30分のオンラインデモを無料でご提供しています&lt;br/&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;内容：&lt;/span&gt;具体的なアクション（デモ申込）への誘導。「もし時期が合わなければ、引き続き情報をお送りします」という逃げ道を用意する。無反応リードはナーチャリングシナリオに移行。
+            &lt;/div&gt;' style="display:flex;gap:1rem;align-items:flex-start;">
+<div data-ja-html="Day 30&lt;br/&gt;1ヶ月後" data-en-html="Day 30&lt;br/&gt;1ヶ月後" style="min-width:60px;text-align:center;background:#0F2342;color:#A8965A;font-size:0.72rem;font-weight:700;padding:0.4rem 0.3rem;line-height:1.3;">Day 30<br/>1ヶ月後</div>
+<div data-ja-html='&lt;span style="font-weight:700;color:#0F2342;"&gt;件名：&lt;/span&gt;30分のオンラインデモを無料でご提供しています&lt;br/&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;内容：&lt;/span&gt;具体的なアクション（デモ申込）への誘導。「もし時期が合わなければ、引き続き情報をお送りします」という逃げ道を用意する。無反応リードはナーチャリングシナリオに移行。' data-en-html='&lt;span style="font-weight:700;color:#0F2342;"&gt;件名：&lt;/span&gt;30分のオンラインデモを無料でご提供しています&lt;br/&gt;
+&lt;span style="font-weight:700;color:#0F2342;"&gt;内容：&lt;/span&gt;具体的なアクション（デモ申込）への誘導。「もし時期が合わなければ、引き続き情報をお送りします」という逃げ道を用意する。無反応リードはナーチャリングシナリオに移行。' style="flex:1;background:#F8F5ED;padding:0.8rem;font-size:0.78rem;color:#4A4A55;line-height:1.6;">
+<span data-ja="件名：" data-en="件名：" style="font-weight:700;color:#0F2342;">件名：</span>30分のオンラインデモを無料でご提供しています<br/>
+<span data-ja="内容：" data-en="内容：" style="font-weight:700;color:#0F2342;">内容：</span>具体的なアクション（デモ申込）への誘導。「もし時期が合わなければ、引き続き情報をお送りします」という逃げ道を用意する。無反応リードはナーチャリングシナリオに移行。
             </div>
-          </div>
-        </div>
-      </div>
-      <p class="diag-caption">各ステップのメール本文は200〜300文字を目安に。読むのに10秒かからない長さが開封後の離脱を防ぐ</p>
-
-      <p>シナリオのポイントは「段階的に温度を上げる」構造だ。最初から「デモを見てください」と言わず、事例→比較資料→デモ申込という順番で、見込み客が自然に購買プロセスを進められる設計にする。各ステップで「読まれた」「クリックされた」かを計測し、スコアに反映させることで、営業が介入すべきタイミングを自動で判定できるようになる。</p>
-
-      <h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4">MAツール選定の前に確認すること</h2>
-
-      <p>「展示会のフォローアップを改善したい」という相談を受けると、最初にMAツールの選定から始めようとするケースが多い。しかし多くの場合、問題の本質はツールではなく、その前段のオペレーション設計にある。MAを導入する前に確認すべきことが3つある。</p>
-
-      <p><strong>まずCRMが正しく機能しているか確認する。</strong>MAはCRMのデータを前提に動く。リードの入力ルールが統一されていない、重複データが多い、担当者情報が古いといった状態のままMAを導入しても、シナリオは正しく動作しない。CRMのデータクレンジングとルール整備が最初のステップだ。</p>
-
-      <p><strong>展示会専用のリードソース設定を行う。</strong>どの展示会から来たリードかを区別しないと、施策ごとのROIが計測できない。HubSpotであれば「リードソース」カスタムプロパティ、Salesforceであれば「キャンペーン」オブジェクトを使って、展示会名・開催年月を必ず記録する設計にする。これにより「●●展示会リードの商談転換率は●%」という分析が可能になり、次回出展判断の根拠を持てるようになる。</p>
-
-      <p><strong>営業とマーケのSLA（サービスレベル合意）を先に決める。</strong>「MAから渡されたホットリードに対して営業は24時間以内に対応する」「対応後5営業日以内にステータスを更新する」といったルールを文書化し、双方が合意していることがMAを機能させる前提条件だ。どんなに精緻なスコアリングを設計しても、営業がアラートを無視すれば意味がない。</p>
-
-      <!-- チェックリスト -->
-      <div class="diag-wrap">
-        <div class="diag-label">MA導入前チェックリスト — 展示会フォローアップ向け</div>
-        <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
-          <div class="diag-checklist-item"><span class="chk">✓</span><span>CRMへのリード入力ルールが全社で統一されているか</span></div>
-          <div class="diag-checklist-item"><span class="chk">✓</span><span>展示会ごとのリードソース分類が設定されているか</span></div>
-          <div class="diag-checklist-item"><span class="chk">✓</span><span>名刺スキャン→CRM入力の当日オペレーションが設計されているか</span></div>
-          <div class="diag-checklist-item"><span class="chk">✓</span><span>温度感メモ（今すぐ/そのうち/情報収集）の分類基準が共有されているか</span></div>
-          <div class="diag-checklist-item"><span class="chk">✓</span><span>営業とマーケのSLA（対応時間・ステータス更新ルール）が合意されているか</span></div>
-          <div class="diag-checklist-item"><span class="chk">✓</span><span>ホットリードアラートの通知先・通知方法が決まっているか</span></div>
-          <div class="diag-checklist-item"><span class="chk">✓</span><span>各シナリオメールの承認フローと送信者名設定が完了しているか</span></div>
-          <div class="diag-checklist-item"><span class="chk">✓</span><span>商談転換率を計測するためのパイプラインステージが設定されているか</span></div>
-        </div>
-      </div>
-      <p class="diag-caption">これらが整備されていない状態でのMA導入は、複雑さを増すだけで効果は出ない</p>
-
-      <p>展示会リードの問題は「集める」ことではなく「活かす」仕組みにある。MAツールはその仕組みを自動化する道具だ。ツールの前に設計があり、設計の前に組織の合意がある。この順序を守ることが、展示会投資を本当のビジネス成果に変換する唯一の道だ。</p>
-
-    </article>
-
-    <!-- CTA -->
-    <div class="mt-16 border border-[#E2E0DA] bg-navy/[.03] p-8 rounded-sm">
-      <p class="display text-[.6rem] font-medium tracking-[.18em] uppercase text-gold mb-3">Contact Wing</p>
-      <p class="text-[1rem] font-medium text-ink mb-2">展示会リードの活用設計、MA導入もWingにご相談ください</p>
-      <p class="text-[.82rem] text-ink-mid leading-relaxed mb-6">展示会後のフォローアップ体制からMAツール選定・設定・CRM連携まで、Wingが一貫してご支援します。営業プロセスを「仕組み化」するDXコンサルとしての実績をご活用ください。</p>
-      <a href="/#contact" class="inline-block bg-navy text-white text-[.78rem] font-medium tracking-wider px-7 py-3 hover:bg-navy-dark transition-colors">無料相談を予約する →</a>
-    </div>
-  </div>
+</div>
+</div>
+</div>
+<p class="diag-caption" data-ja="各ステップのメール本文は200〜300文字を目安に。読むのに10秒かからない長さが開封後の離脱を防ぐ" data-en="各ステップのメール本文は200〜300文字を目安に。読むのに10秒かからない長さが開封後の離脱を防ぐ">各ステップのメール本文は200〜300文字を目安に。読むのに10秒かからない長さが開封後の離脱を防ぐ</p>
+<p data-ja="シナリオのポイントは「段階的に温度を上げる」構造だ。最初から「デモを見てください」と言わず、事例→比較資料→デモ申込という順番で、見込み客が自然に購買プロセスを進められる設計にする。各ステップで「読まれた」「クリックされた」かを計測し、スコアに反映させることで、営業が介入すべきタイミングを自動で判定できるようになる。" data-en="シナリオのポイントは「段階的に温度を上げる」構造だ。最初から「デモを見てください」と言わず、事例→比較資料→デモ申込という順番で、見込み客が自然に購買プロセスを進められる設計にする。各ステップで「読まれた」「クリックされた」かを計測し、スコアに反映させることで、営業が介入すべきタイミングを自動で判定できるようになる。">シナリオのポイントは「段階的に温度を上げる」構造だ。最初から「デモを見てください」と言わず、事例→比較資料→デモ申込という順番で、見込み客が自然に購買プロセスを進められる設計にする。各ステップで「読まれた」「クリックされた」かを計測し、スコアに反映させることで、営業が介入すべきタイミングを自動で判定できるようになる。</p>
+<h2 class="text-[1.15rem] font-bold text-navy border-l-2 border-gold pl-4" data-ja="MAツール選定の前に確認すること" data-en="MAツール選定の前に確認すること">MAツール選定の前に確認すること</h2>
+<p data-ja="「展示会のフォローアップを改善したい」という相談を受けると、最初にMAツールの選定から始めようとするケースが多い。しかし多くの場合、問題の本質はツールではなく、その前段のオペレーション設計にある。MAを導入する前に確認すべきことが3つある。" data-en="「展示会のフォローアップを改善したい」という相談を受けると、最初にMAツールの選定から始めようとするケースが多い。しかし多くの場合、問題の本質はツールではなく、その前段のオペレーション設計にある。MAを導入する前に確認すべきことが3つある。">「展示会のフォローアップを改善したい」という相談を受けると、最初にMAツールの選定から始めようとするケースが多い。しかし多くの場合、問題の本質はツールではなく、その前段のオペレーション設計にある。MAを導入する前に確認すべきことが3つある。</p>
+<p data-ja-html="&lt;strong&gt;まずCRMが正しく機能しているか確認する。&lt;/strong&gt;MAはCRMのデータを前提に動く。リードの入力ルールが統一されていない、重複データが多い、担当者情報が古いといった状態のままMAを導入しても、シナリオは正しく動作しない。CRMのデータクレンジングとルール整備が最初のステップだ。" data-en-html="&lt;strong&gt;まずCRMが正しく機能しているか確認する。&lt;/strong&gt;MAはCRMのデータを前提に動く。リードの入力ルールが統一されていない、重複データが多い、担当者情報が古いといった状態のままMAを導入しても、シナリオは正しく動作しない。CRMのデータクレンジングとルール整備が最初のステップだ。"><strong>まずCRMが正しく機能しているか確認する。</strong>MAはCRMのデータを前提に動く。リードの入力ルールが統一されていない、重複データが多い、担当者情報が古いといった状態のままMAを導入しても、シナリオは正しく動作しない。CRMのデータクレンジングとルール整備が最初のステップだ。</p>
+<p data-ja-html="&lt;strong&gt;展示会専用のリードソース設定を行う。&lt;/strong&gt;どの展示会から来たリードかを区別しないと、施策ごとのROIが計測できない。HubSpotであれば「リードソース」カスタムプロパティ、Salesforceであれば「キャンペーン」オブジェクトを使って、展示会名・開催年月を必ず記録する設計にする。これにより「●●展示会リードの商談転換率は●%」という分析が可能になり、次回出展判断の根拠を持てるようになる。" data-en-html="&lt;strong&gt;展示会専用のリードソース設定を行う。&lt;/strong&gt;どの展示会から来たリードかを区別しないと、施策ごとのROIが計測できない。HubSpotであれば「リードソース」カスタムプロパティ、Salesforceであれば「キャンペーン」オブジェクトを使って、展示会名・開催年月を必ず記録する設計にする。これにより「●●展示会リードの商談転換率は●%」という分析が可能になり、次回出展判断の根拠を持てるようになる。"><strong>展示会専用のリードソース設定を行う。</strong>どの展示会から来たリードかを区別しないと、施策ごとのROIが計測できない。HubSpotであれば「リードソース」カスタムプロパティ、Salesforceであれば「キャンペーン」オブジェクトを使って、展示会名・開催年月を必ず記録する設計にする。これにより「●●展示会リードの商談転換率は●%」という分析が可能になり、次回出展判断の根拠を持てるようになる。</p>
+<p data-ja-html="&lt;strong&gt;営業とマーケのSLA（サービスレベル合意）を先に決める。&lt;/strong&gt;「MAから渡されたホットリードに対して営業は24時間以内に対応する」「対応後5営業日以内にステータスを更新する」といったルールを文書化し、双方が合意していることがMAを機能させる前提条件だ。どんなに精緻なスコアリングを設計しても、営業がアラートを無視すれば意味がない。" data-en-html="&lt;strong&gt;営業とマーケのSLA（サービスレベル合意）を先に決める。&lt;/strong&gt;「MAから渡されたホットリードに対して営業は24時間以内に対応する」「対応後5営業日以内にステータスを更新する」といったルールを文書化し、双方が合意していることがMAを機能させる前提条件だ。どんなに精緻なスコアリングを設計しても、営業がアラートを無視すれば意味がない。"><strong>営業とマーケのSLA（サービスレベル合意）を先に決める。</strong>「MAから渡されたホットリードに対して営業は24時間以内に対応する」「対応後5営業日以内にステータスを更新する」といったルールを文書化し、双方が合意していることがMAを機能させる前提条件だ。どんなに精緻なスコアリングを設計しても、営業がアラートを無視すれば意味がない。</p>
+<!-- チェックリスト -->
+<div class="diag-wrap" data-ja-html='&lt;div class="diag-label"&gt;MA導入前チェックリスト — 展示会フォローアップ向け&lt;/div&gt;
+&lt;div style="display:flex;flex-wrap:wrap;gap:0.5rem;"&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;CRMへのリード入力ルールが全社で統一されているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;展示会ごとのリードソース分類が設定されているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;名刺スキャン→CRM入力の当日オペレーションが設計されているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;温度感メモ（今すぐ/そのうち/情報収集）の分類基準が共有されているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;営業とマーケのSLA（対応時間・ステータス更新ルール）が合意されているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;ホットリードアラートの通知先・通知方法が決まっているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;各シナリオメールの承認フローと送信者名設定が完了しているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;商談転換率を計測するためのパイプラインステージが設定されているか&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;' data-en-html='&lt;div class="diag-label"&gt;MA導入前チェックリスト — 展示会フォローアップ向け&lt;/div&gt;
+&lt;div style="display:flex;flex-wrap:wrap;gap:0.5rem;"&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;CRMへのリード入力ルールが全社で統一されているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;展示会ごとのリードソース分類が設定されているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;名刺スキャン→CRM入力の当日オペレーションが設計されているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;温度感メモ（今すぐ/そのうち/情報収集）の分類基準が共有されているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;営業とマーケのSLA（対応時間・ステータス更新ルール）が合意されているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;ホットリードアラートの通知先・通知方法が決まっているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;各シナリオメールの承認フローと送信者名設定が完了しているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;商談転換率を計測するためのパイプラインステージが設定されているか&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;'>
+<div class="diag-label" data-ja="MA導入前チェックリスト — 展示会フォローアップ向け" data-en="MA導入前チェックリスト — 展示会フォローアップ向け">MA導入前チェックリスト — 展示会フォローアップ向け</div>
+<div data-ja-html='&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;CRMへのリード入力ルールが全社で統一されているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;展示会ごとのリードソース分類が設定されているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;名刺スキャン→CRM入力の当日オペレーションが設計されているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;温度感メモ（今すぐ/そのうち/情報収集）の分類基準が共有されているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;営業とマーケのSLA（対応時間・ステータス更新ルール）が合意されているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;ホットリードアラートの通知先・通知方法が決まっているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;各シナリオメールの承認フローと送信者名設定が完了しているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;商談転換率を計測するためのパイプラインステージが設定されているか&lt;/span&gt;&lt;/div&gt;' data-en-html='&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;CRMへのリード入力ルールが全社で統一されているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;展示会ごとのリードソース分類が設定されているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;名刺スキャン→CRM入力の当日オペレーションが設計されているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;温度感メモ（今すぐ/そのうち/情報収集）の分類基準が共有されているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;営業とマーケのSLA（対応時間・ステータス更新ルール）が合意されているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;ホットリードアラートの通知先・通知方法が決まっているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;各シナリオメールの承認フローと送信者名設定が完了しているか&lt;/span&gt;&lt;/div&gt;
+&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;商談転換率を計測するためのパイプラインステージが設定されているか&lt;/span&gt;&lt;/div&gt;' style="display:flex;flex-wrap:wrap;gap:0.5rem;">
+<div class="diag-checklist-item" data-ja-html='&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;CRMへのリード入力ルールが全社で統一されているか&lt;/span&gt;' data-en-html='&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;CRMへのリード入力ルールが全社で統一されているか&lt;/span&gt;'><span class="chk">✓</span><span data-ja="CRMへのリード入力ルールが全社で統一されているか" data-en="CRMへのリード入力ルールが全社で統一されているか">CRMへのリード入力ルールが全社で統一されているか</span></div>
+<div class="diag-checklist-item" data-ja-html='&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;展示会ごとのリードソース分類が設定されているか&lt;/span&gt;' data-en-html='&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;展示会ごとのリードソース分類が設定されているか&lt;/span&gt;'><span class="chk">✓</span><span data-ja="展示会ごとのリードソース分類が設定されているか" data-en="展示会ごとのリードソース分類が設定されているか">展示会ごとのリードソース分類が設定されているか</span></div>
+<div class="diag-checklist-item" data-ja-html='&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;名刺スキャン→CRM入力の当日オペレーションが設計されているか&lt;/span&gt;' data-en-html='&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;名刺スキャン→CRM入力の当日オペレーションが設計されているか&lt;/span&gt;'><span class="chk">✓</span><span data-ja="名刺スキャン→CRM入力の当日オペレーションが設計されているか" data-en="名刺スキャン→CRM入力の当日オペレーションが設計されているか">名刺スキャン→CRM入力の当日オペレーションが設計されているか</span></div>
+<div class="diag-checklist-item" data-ja-html='&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;温度感メモ（今すぐ/そのうち/情報収集）の分類基準が共有されているか&lt;/span&gt;' data-en-html='&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;温度感メモ（今すぐ/そのうち/情報収集）の分類基準が共有されているか&lt;/span&gt;'><span class="chk">✓</span><span data-ja="温度感メモ（今すぐ/そのうち/情報収集）の分類基準が共有されているか" data-en="温度感メモ（今すぐ/そのうち/情報収集）の分類基準が共有されているか">温度感メモ（今すぐ/そのうち/情報収集）の分類基準が共有されているか</span></div>
+<div class="diag-checklist-item" data-ja-html='&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;営業とマーケのSLA（対応時間・ステータス更新ルール）が合意されているか&lt;/span&gt;' data-en-html='&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;営業とマーケのSLA（対応時間・ステータス更新ルール）が合意されているか&lt;/span&gt;'><span class="chk">✓</span><span data-ja="営業とマーケのSLA（対応時間・ステータス更新ルール）が合意されているか" data-en="営業とマーケのSLA（対応時間・ステータス更新ルール）が合意されているか">営業とマーケのSLA（対応時間・ステータス更新ルール）が合意されているか</span></div>
+<div class="diag-checklist-item" data-ja-html='&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;ホットリードアラートの通知先・通知方法が決まっているか&lt;/span&gt;' data-en-html='&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;ホットリードアラートの通知先・通知方法が決まっているか&lt;/span&gt;'><span class="chk">✓</span><span data-ja="ホットリードアラートの通知先・通知方法が決まっているか" data-en="ホットリードアラートの通知先・通知方法が決まっているか">ホットリードアラートの通知先・通知方法が決まっているか</span></div>
+<div class="diag-checklist-item" data-ja-html='&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;各シナリオメールの承認フローと送信者名設定が完了しているか&lt;/span&gt;' data-en-html='&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;各シナリオメールの承認フローと送信者名設定が完了しているか&lt;/span&gt;'><span class="chk">✓</span><span data-ja="各シナリオメールの承認フローと送信者名設定が完了しているか" data-en="各シナリオメールの承認フローと送信者名設定が完了しているか">各シナリオメールの承認フローと送信者名設定が完了しているか</span></div>
+<div class="diag-checklist-item" data-ja-html='&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;商談転換率を計測するためのパイプラインステージが設定されているか&lt;/span&gt;' data-en-html='&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;商談転換率を計測するためのパイプラインステージが設定されているか&lt;/span&gt;'><span class="chk">✓</span><span data-ja="商談転換率を計測するためのパイプラインステージが設定されているか" data-en="商談転換率を計測するためのパイプラインステージが設定されているか">商談転換率を計測するためのパイプラインステージが設定されているか</span></div>
+</div>
+</div>
+<p class="diag-caption" data-ja="これらが整備されていない状態でのMA導入は、複雑さを増すだけで効果は出ない" data-en="これらが整備されていない状態でのMA導入は、複雑さを増すだけで効果は出ない">これらが整備されていない状態でのMA導入は、複雑さを増すだけで効果は出ない</p>
+<p data-ja="展示会リードの問題は「集める」ことではなく「活かす」仕組みにある。MAツールはその仕組みを自動化する道具だ。ツールの前に設計があり、設計の前に組織の合意がある。この順序を守ることが、展示会投資を本当のビジネス成果に変換する唯一の道だ。" data-en="展示会リードの問題は「集める」ことではなく「活かす」仕組みにある。MAツールはその仕組みを自動化する道具だ。ツールの前に設計があり、設計の前に組織の合意がある。この順序を守ることが、展示会投資を本当のビジネス成果に変換する唯一の道だ。">展示会リードの問題は「集める」ことではなく「活かす」仕組みにある。MAツールはその仕組みを自動化する道具だ。ツールの前に設計があり、設計の前に組織の合意がある。この順序を守ることが、展示会投資を本当のビジネス成果に変換する唯一の道だ。</p>
+</article>
+<!-- CTA -->
+<div class="mt-16 border border-[#E2E0DA] bg-navy/[.03] p-8 rounded-sm" data-ja-html='&lt;p class="display text-[.6rem] font-medium tracking-[.18em] uppercase text-gold mb-3"&gt;Contact Wing&lt;/p&gt;
+&lt;p class="text-[1rem] font-medium text-ink mb-2" data-ja="展示会リードの活用設計、MA導入もWingにご相談ください"&gt;展示会リードの活用設計、MA導入もWingにご相談ください&lt;/p&gt;
+&lt;p class="text-[.82rem] text-ink-mid leading-relaxed mb-6" data-ja="展示会後のフォローアップ体制からMAツール選定・設定・CRM連携まで、Wingが一貫してご支援します。営業プロセスを「仕組み化」するDXコンサルとしての実績をご活用ください。"&gt;展示会後のフォローアップ体制からMAツール選定・設定・CRM連携まで、Wingが一貫してご支援します。営業プロセスを「仕組み化」するDXコンサルとしての実績をご活用ください。&lt;/p&gt;
+&lt;a class="inline-block bg-navy text-white text-[.78rem] font-medium tracking-wider px-7 py-3 hover:bg-navy-dark transition-colors" data-en="Book a Free Consultation →" data-ja="無料相談を予約する →" data-en="無料相談を予約する →" href="/#contact"&gt;無料相談を予約する →&lt;/a&gt;' data-en-html='&lt;p class="display text-[.6rem] font-medium tracking-[.18em] uppercase text-gold mb-3"&gt;Contact Wing&lt;/p&gt;
+&lt;p class="text-[1rem] font-medium text-ink mb-2" data-ja="展示会リードの活用設計、MA導入もWingにご相談ください"&gt;展示会リードの活用設計、MA導入もWingにご相談ください&lt;/p&gt;
+&lt;p class="text-[.82rem] text-ink-mid leading-relaxed mb-6" data-ja="展示会後のフォローアップ体制からMAツール選定・設定・CRM連携まで、Wingが一貫してご支援します。営業プロセスを「仕組み化」するDXコンサルとしての実績をご活用ください。"&gt;展示会後のフォローアップ体制からMAツール選定・設定・CRM連携まで、Wingが一貫してご支援します。営業プロセスを「仕組み化」するDXコンサルとしての実績をご活用ください。&lt;/p&gt;
+&lt;a class="inline-block bg-navy text-white text-[.78rem] font-medium tracking-wider px-7 py-3 hover:bg-navy-dark transition-colors" data-en="Book a Free Consultation →" data-ja="無料相談を予約する →" data-en="無料相談を予約する →" href="/#contact"&gt;無料相談を予約する →&lt;/a&gt;'>
+<p class="display text-[.6rem] font-medium tracking-[.18em] uppercase text-gold mb-3">Contact Wing</p>
+<p class="text-[1rem] font-medium text-ink mb-2" data-ja="展示会リードの活用設計、MA導入もWingにご相談ください" data-en="展示会リードの活用設計、MA導入もWingにご相談ください">展示会リードの活用設計、MA導入もWingにご相談ください</p>
+<p class="text-[.82rem] text-ink-mid leading-relaxed mb-6" data-ja="展示会後のフォローアップ体制からMAツール選定・設定・CRM連携まで、Wingが一貫してご支援します。営業プロセスを「仕組み化」するDXコンサルとしての実績をご活用ください。" data-en="展示会後のフォローアップ体制からMAツール選定・設定・CRM連携まで、Wingが一貫してご支援します。営業プロセスを「仕組み化」するDXコンサルとしての実績をご活用ください。">展示会後のフォローアップ体制からMAツール選定・設定・CRM連携まで、Wingが一貫してご支援します。営業プロセスを「仕組み化」するDXコンサルとしての実績をご活用ください。</p>
+<a class="inline-block bg-navy text-white text-[.78rem] font-medium tracking-wider px-7 py-3 hover:bg-navy-dark transition-colors" data-en="Book a Free Consultation →" data-ja="無料相談を予約する →" data-en="無料相談を予約する →" href="/#contact">無料相談を予約する →</a>
+</div>
+</div>
 </main>
-
 <!-- FOOTER -->
 <footer class="mt-20 border-t border-[#E2E0DA] py-10 px-6 md:px-10 text-center">
-  <a href="/" class="inline-block mb-4">
-    <svg width="80" height="24" viewBox="0 0 120 36" fill="none">
-      <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#0F2342"/>
-      <path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#0F2342" opacity=".32"/>
-      <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#0F2342">Wing</text>
-    </svg>
-  </a>
-  <p class="text-[.72rem] text-ink-light">© 2026 Wing Consulting. All rights reserved.</p>
+<a class="inline-block mb-4" href="/">
+<svg fill="none" height="24" viewbox="0 0 120 36" width="80">
+<path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#0F2342"></path>
+<path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#0F2342" opacity=".32"></path>
+<text fill="#0F2342" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" x="46" y="25">Wing</text>
+</svg>
+</a>
+<p class="text-[.72rem] text-ink-light">© 2026 Wing Consulting. All rights reserved.</p>
 </footer>
-
 </body>
 </html>

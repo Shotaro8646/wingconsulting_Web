@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="ja" class="scroll-smooth">
+
+<html class="scroll-smooth" lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>貿易業務の自動化にAIエージェントを活用する方法｜商社・メーカーのDX実践事例 | Wing Blog</title>
-<meta name="description" content="貿易業務の自動化にAIエージェントを活用する方法を解説。引合・原価計算・書類作成まで自動化するAIの仕組みと、RPAとの違い、商社・メーカーが今すぐ着手できる貿易DXの具体策を紹介します。">
-<meta name="keywords" content="貿易業務 自動化, AIエージェント 活用, 貿易DX 事例, 商社 DX, 貿易 RPA, 輸出入 業務 効率化, AI 貿易 導入, 貿易書類 自動化">
-<meta property="og:title" content="貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来">
-<meta property="og:description" content="貿易業務のDXにおけるAIエージェントの活用法を解説。引合から原価計算まで自動化するBorderFlow AIの事例を交えて、商社の貿易DXの具体策を紹介。">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://wingconsulting.org/blog/trade-dx-ai-agent">
-<meta property="og:locale" content="ja_JP">
-<meta property="og:image" content="https://wingconsulting.org/images/og-default.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:site_name" content="Wing">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来">
-<meta name="twitter:description" content="貿易業務のDXにおけるAIエージェントの活用法を解説。BorderFlow AIの事例とともに具体策を紹介。">
-<meta name="twitter:image" content="https://wingconsulting.org/images/og-default.png">
-<link rel="canonical" href="https://wingconsulting.org/blog/trade-dx-ai-agent">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Agents for Trade Automation | Wing Blog</title>
+<meta content="How AI agents automate trade operations for trading companies." name="description"/>
+<meta content="貿易業務 自動化, AIエージェント 活用, 貿易DX 事例, 商社 DX, 貿易 RPA, 輸出入 業務 効率化, AI 貿易 導入, 貿易書類 自動化" name="keywords"/>
+<meta content="AI Agents: The Key to Trade DX" property="og:title"/>
+<meta content="How AI agents automate trade operations for trading companies." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://wingconsulting.org/blog/trade-dx-ai-agent" property="og:url"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="https://wingconsulting.org/images/og-default.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Wing" property="og:site_name"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="AI Agents: The Key to Trade DX" name="twitter:title"/>
+<meta content="How AI agents automate trade operations for trading companies." name="twitter:description"/>
+<meta content="https://wingconsulting.org/images/og-default.png" name="twitter:image"/>
+<link href="https://wingconsulting.org/blog/trade-dx-ai-agent" rel="canonical"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -61,8 +62,6 @@
 }
 </script>
 <script src="https://cdn.tailwindcss.com"></script>
-
-
 <script>
 tailwind.config = {
   theme: {
@@ -119,15 +118,14 @@ article li { margin-bottom: 0.5rem; }
 @media (max-width:500px) { .diag-flow-row { flex-direction:column; } .diag-flow-arrow { transform:rotate(90deg); } }
 </style>
 <!-- Google Analytics GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-KN7NWHFK9G');
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;family=Noto+Sans+JP:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
 <style id="font-override">
   body, p, li, td, th, span, div {
     font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif !important;
@@ -143,191 +141,768 @@ article li { margin-bottom: 0.5rem; }
     font-family: "Roboto", sans-serif !important;
   }
 </style>
-
 </head>
 <body class="bg-slate-warm text-ink">
-
 <!-- ─── HEADER ─────────────────────────────────────────── -->
 <header class="bg-navy h-[60px] flex items-center px-6 md:px-10 sticky top-0 z-50">
-  <div class="max-w-5xl mx-auto w-full flex items-center justify-between">
-    <a href="/" class="leading-none">
-      <svg width="120" height="36" viewBox="0 0 120 36" fill="none" aria-label="Wing">
-        <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff"/>
-        <path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#fff" opacity=".32"/>
-        <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#fff">Wing</text>
-      </svg>
-    </a>
-    <div class="flex items-center gap-4">
-      <span class="display text-[.7rem] font-medium tracking-wider text-white/50">Blog</span>
-      <a href="/" class="text-[.75rem] text-white/70 hover:text-white transition-colors">&larr; Home</a>
-    </div>
-  </div>
+<div class="max-w-5xl mx-auto w-full flex items-center justify-between">
+<a class="leading-none" href="/">
+<svg aria-label="Wing" fill="none" height="36" viewbox="0 0 120 36" width="120">
+<path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff"></path>
+<path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#fff" opacity=".32"></path>
+<text fill="#fff" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" x="46" y="25">Wing</text>
+</svg>
+</a>
+<div class="flex items-center gap-4">
+<span class="display text-[.7rem] font-medium tracking-wider text-white/50" data-en="Blog" data-ja="ブログ" data-en="ブログ">Blog</span>
+<a class="text-[.75rem] text-white/70 hover:text-white transition-colors" data-en="← Home" data-ja="← ホーム" data-en="← ホーム" href="/">← Home</a>
+</div>
+</div>
 </header>
-
 <!-- ─── ARTICLE ─────────────────────────────────────────── -->
 <main class="py-16 px-6 md:px-10">
-  <div class="max-w-3xl mx-auto">
-    <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3">Trade DX</p>
-    <h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4">貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来</h1>
-    <div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2">
-      <time datetime="2026-03-25">2026.03.25</time>
-      <span>Wing編集部</span>
-    </div>
-    <div class="gold-rule mb-10"></div>
-
-    <article class="text-[.9rem] text-ink leading-[2] max-w-none">
-
-      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">1. なぜ貿易業務のDXが進まないのか</h2>
-      <p>商社や貿易会社において、DX推進の重要性は広く認識されているものの、実際の業務デジタル化は他業界に比べて遅れていると言われています。その最大の要因は、貿易業務特有の複雑性にあります。</p>
-      <p>貿易取引には、引合対応、見積作成、発注・受注管理、船積書類の作成、通関手続き、為替管理、原価計算など、多岐にわたるプロセスが存在します。さらに、取引先ごとに異なるフォーマットの書類、複数の言語、各国の規制対応が求められます。こうした業務の多くは依然としてExcelやメール、FAXに依存しており、属人化が進んでいるのが現状です。</p>
-      <p>加えて、貿易業務は例外処理が多く、単純な自動化ツールでは対応しきれないケースが頻発します。これが「貿易DXは難しい」という認識を生み、変革を遅らせている大きな要因です。</p>
-
-      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">2. AIエージェントとは？従来のRPAとの違い</h2>
-      <p>AIエージェントとは、大規模言語モデル（LLM）を基盤とし、人間の指示に基づいて自律的にタスクを遂行するAIシステムです。従来のRPA（Robotic Process Automation）との決定的な違いは、「判断力」と「柔軟性」にあります。</p>
-      <p>RPAは事前に定義されたルールに従って定型作業を自動化しますが、ルールから外れた処理には対応できません。一方、AIエージェントは自然言語を理解し、文脈に応じた判断を行えます。たとえば、取引先から届いたメールの内容を解析して適切な対応を判断したり、不定形の書類からデータを抽出したりすることが可能です。</p>
-      <p>貿易業務のように例外処理が多くフォーマットが統一されていない領域では、AIエージェントの柔軟性が大きな威力を発揮します。RPAでは自動化率30%が限界だった業務でも、AIエージェントを活用すれば70〜80%まで自動化できるケースもあります。</p>
-
-      <!-- DIAGRAM: RPA vs AIエージェント comparison -->
-      <div class="diag-wrap">
-        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;">RPA vs AIエージェント — 比較</div>
-        <div class="diag-compare-row">
-          <div class="diag-compare-box rpa">
-            <div class="box-head">RPA（従来型）</div>
-            <div class="box-badge">単純ルール</div>
-            <ul>
-              <li>事前定義されたルールのみ実行</li>
-              <li>フォーマット変化に対応できない</li>
-              <li>例外処理は人間が手動対応</li>
-              <li>自然言語の理解は不可</li>
-              <li>自動化率の上限：約30%</li>
-            </ul>
-          </div>
-          <div class="diag-arrow-mid">→</div>
-          <div class="diag-compare-box ai">
-            <div class="box-head">AIエージェント（次世代）</div>
-            <div class="box-badge">判断・実行・学習</div>
-            <ul>
-              <li>自然言語を理解し文脈で判断</li>
-              <li>非定型フォーマットに柔軟対応</li>
-              <li>例外処理を自律的に判断・実行</li>
-              <li>過去データから継続的に学習</li>
-              <li>自動化率：70〜80%まで可能</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <p class="diag-caption">[図] RPAとAIエージェントの能力比較</p>
-
-      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">3. 貿易業務におけるAIエージェント活用の具体例</h2>
-      <p>AIエージェントは、貿易業務の以下のような場面で活用が進んでいます。</p>
-      <ul class="list-disc">
-        <li><strong>引合メールの自動解析と案件登録：</strong>取引先からの引合メールを解析し、品目・数量・納期・仕向地などを自動で抽出してシステムに登録</li>
-        <li><strong>見積原価の自動計算：</strong>過去の取引データ、現在の為替レート、物流コストを考慮した原価計算を自動生成</li>
-        <li><strong>船積書類の自動作成：</strong>Invoice、Packing List、B/Lドラフトを取引条件に基づいて自動生成</li>
-        <li><strong>規制・コンプライアンスチェック：</strong>輸出管理規制、安全保障貿易管理、各国の輸入規制への適合を自動判定</li>
-        <li><strong>取引先とのコミュニケーション支援：</strong>多言語での問い合わせ対応や、定型的な確認メールの自動生成</li>
-      </ul>
-
-      <!-- DIAGRAM: 3 use-cases visual table -->
-      <div class="diag-wrap">
-        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;">代表的なAIエージェント活用シーン</div>
-        <div class="diag-usecase-row">
-          <div class="diag-usecase-card">
-            <div class="uc-icon">📄</div>
-            <div class="uc-title">書類処理の自動化</div>
-            <div class="uc-body">Invoice・PL・B/Lドラフトをメール受信から自動解析し、システムへ登録。取引先ごとのフォーマット差異にも対応。</div>
-          </div>
-          <div class="diag-usecase-card">
-            <div class="uc-icon">🔢</div>
-            <div class="uc-title">HSコード自動判定</div>
-            <div class="uc-body">品目名・仕様・原材料情報からAIが最適なHSコードを候補提示。過去判定データを参照し精度を継続的に向上。</div>
-          </div>
-          <div class="diag-usecase-card">
-            <div class="uc-icon">🌐</div>
-            <div class="uc-title">輸出規制チェック</div>
-            <div class="uc-body">輸出管理規制・安全保障貿易管理・各国輸入規制への適合を自動判定。対象貨物・仕向地・取引先を総合的に評価。</div>
-          </div>
-        </div>
-      </div>
-      <p class="diag-caption">[図] 貿易業務におけるAIエージェントの代表的な活用領域</p>
-
-      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">4. BorderFlow AI による貿易業務自動化の実例</h2>
-      <p>Wingが開発した「BorderFlow AI」は、貿易業務に特化したAIエージェントプラットフォームです。商社の実務を深く理解したコンサルタントとAIエンジニアが共同で設計し、貿易実務の現場で実際に使えるレベルの自動化を実現しています。</p>
-      <p>BorderFlow AIの特徴は、引合受信から原価計算、見積作成までのフローをエンドツーエンドで自動化できる点にあります。取引先からメールで届いた引合内容をAIが解析し、過去の類似取引データを参照しながら原価を自動算出。担当者は生成された見積ドラフトを確認・微調整するだけで、従来数時間かかっていた作業を数十分に短縮できます。</p>
-      <p>ある中堅商社では、BorderFlow AIの導入により引合対応にかかる時間を約60%削減し、見積回答のリードタイムを平均2日から半日に短縮することに成功しました。また、属人化していた原価計算のロジックがシステムに蓄積されることで、担当者の異動・退職リスクにも対応できるようになりました。</p>
-
-      <!-- DIAGRAM: BorderFlow AI process flow -->
-      <div class="diag-wrap">
-        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;">BorderFlow AI — 処理フロー</div>
-        <div class="diag-flow-row">
-          <div class="diag-flow-step">📥<br>書類受取<br><span style="font-weight:400;font-size:0.68rem;">メール・ポータル</span></div>
-          <div class="diag-flow-arrow">→</div>
-          <div class="diag-flow-step">🔍<br>OCR解析<br><span style="font-weight:400;font-size:0.68rem;">非定型フォーマット対応</span></div>
-          <div class="diag-flow-arrow">→</div>
-          <div class="diag-flow-step">🤖<br>AI判断<br><span style="font-weight:400;font-size:0.68rem;">HSコード・規制・原価</span></div>
-          <div class="diag-flow-arrow">→</div>
-          <div class="diag-flow-step">📋<br>通関申請<br><span style="font-weight:400;font-size:0.68rem;">NACCSへ自動入力</span></div>
-          <div class="diag-flow-arrow">→</div>
-          <div class="diag-flow-step done">✅<br>完了<br><span style="font-weight:400;font-size:0.68rem;">担当者が最終確認のみ</span></div>
-        </div>
-      </div>
-      <p class="diag-caption">[図] BorderFlow AIによる貿易書類処理の自動化フロー</p>
-
-      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">5. 導入のステップと注意点</h2>
-      <p>貿易業務にAIエージェントを導入する際は、以下のステップを推奨します。</p>
-      <ul class="list-decimal">
-        <li><strong>業務の可視化：</strong>まず現行業務のフローを整理し、自動化可能な領域とボトルネックを特定します</li>
-        <li><strong>パイロット領域の選定：</strong>全業務を一度に自動化するのではなく、効果が見えやすい領域（引合処理、原価計算など）からスモールスタートします</li>
-        <li><strong>データ整備：</strong>過去の取引データ、マスタデータの品質を向上させます。AIの精度はデータ品質に大きく依存します</li>
-        <li><strong>段階的な展開：</strong>パイロットの成果を踏まえて対象業務を拡大し、組織全体への定着を図ります</li>
-        <li><strong>人材育成：</strong>AIを使いこなせる人材の育成と、AIと人間の協働体制の設計が不可欠です</li>
-      </ul>
-      <p>注意すべき点として、AIエージェントは万能ではありません。最終判断は人間が行う「Human in the Loop」の設計が重要です。また、取引情報のセキュリティ確保と、各国の個人情報保護規制への対応も忘れてはなりません。</p>
-
-      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">6. まとめ</h2>
-      <p>貿易業務のDXが遅れている背景には、業務の複雑性と例外処理の多さがあります。しかし、AIエージェントの登場により、これまで自動化が困難だった領域にもデジタル化の道が開かれました。</p>
-      <p>商社の競争力を維持・強化するためには、単なるツール導入ではなく、業務プロセスの再設計とAI活用を一体的に進めることが不可欠です。貿易DXに関心をお持ちの方は、ぜひお気軽にご相談ください。</p>
-    </article>
-
-    <!-- CTA -->
-    <div class="mt-14 bg-navy rounded-sm p-8 md:p-10 text-center">
-      <p class="serif text-[1.4rem] font-medium text-white mb-3">DXに関するお悩みをお聞かせください</p>
-      <p class="text-[.82rem] text-white/65 mb-6">初回ヒアリング無料 / オンライン対応可 / 構想段階からの相談歓迎</p>
-      <a href="https://wingconsulting.org/#contact" class="display inline-block text-[.82rem] font-medium text-navy bg-gold px-8 py-3.5 rounded-sm tracking-wider hover:bg-gold-mid transition-colors">相談する</a>
-    </div>
-
-    <!-- Related Articles -->
-    <div class="mt-16">
-      <p class="display text-[.65rem] font-medium tracking-[.18em] uppercase text-gold mb-4">Related Articles</p>
-      <div class="grid md:grid-cols-2 gap-4">
-        <a href="/blog/dx-consulting-guide" class="group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors">
-          <p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2">DX Strategy</p>
-          <p class="text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors">DXコンサルティングとは？失敗しない選び方と成功のポイント</p>
-          <p class="text-[.68rem] text-ink-light mt-2">2026.03.25</p>
-        </a>
-        <a href="/blog/pfas-chemsherpa-guide" class="group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors">
-          <p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2">Compliance</p>
-          <p class="text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors">PFAS規制とchemSHERPA対応の実務ガイド</p>
-          <p class="text-[.68rem] text-ink-light mt-2">2026.03.25</p>
-        </a>
-      </div>
-    </div>
-  </div>
+<div class="max-w-3xl mx-auto" data-ja-html="&lt;p class=&quot;display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3&quot; data-en=&quot;Trade DX&quot; data-ja=&quot;Trade DX&quot;&gt;Trade DX&lt;/p&gt;
+&lt;h1 class=&quot;serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4&quot; data-en=&quot;AI Agents: The Key to Trade DX. How Automation Is Transforming the Future of Trading Companies&quot; data-ja=&quot;貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来&quot;&gt;貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来&lt;/h1&gt;
+&lt;div class=&quot;flex items-center gap-4 text-[.75rem] text-ink-light mb-2&quot;&gt;
+&lt;time datetime=&quot;2026-03-25&quot;&gt;2026.03.25&lt;/time&gt;
+&lt;span data-en=&quot;Wing Editorial Team&quot; data-ja=&quot;Wing編集部&quot;&gt;Wing編集部&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gold-rule mb-10&quot;&gt;&lt;/div&gt;
+&lt;article class=&quot;text-[.9rem] text-ink leading-[2] max-w-none&quot;&gt;
+&lt;h2 class=&quot;text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4&quot; data-en=&quot;1. Why Trade DX Remains Stalled&quot; data-ja=&quot;1. なぜ貿易業務のDXが進まないのか&quot;&gt;1. なぜ貿易業務のDXが進まないのか&lt;/h2&gt;
+&lt;p data-en=&quot;While the importance of DX is widely recognized among trading companies, the actual digitalization of operations is said to lag behind other industries. The primary reason lies in the inherent complexity of trade operations.&quot; data-ja=&quot;商社や貿易会社において、DX推進の重要性は広く認識されているものの、実際の業務デジタル化は他業界に比べて遅れていると言われています。その最大の要因は、貿易業務特有の複雑性にあります。&quot;&gt;商社や貿易会社において、DX推進の重要性は広く認識されているものの、実際の業務デジタル化は他業界に比べて遅れていると言われています。その最大の要因は、貿易業務特有の複雑性にあります。&lt;/p&gt;
+&lt;p data-en=&quot;Trade transactions encompass a wide range of processes, including inquiry handling, quotation preparation, purchase and sales order management, shipping document preparation, customs procedures, foreign exchange management, and cost calculation. Moreover, each counterparty requires different document formats, multiple languages, and compliance with various national regulations. Many of these tasks still rely on Excel, email, and fax, and remain heavily dependent on individual expertise.&quot; data-ja=&quot;貿易取引には、引合対応、見積作成、発注・受注管理、船積書類の作成、通関手続き、為替管理、原価計算など、多岐にわたるプロセスが存在します。さらに、取引先ごとに異なるフォーマットの書類、複数の言語、各国の規制対応が求められます。こうした業務の多くは依然としてExcelやメール、FAXに依存しており、属人化が進んでいるのが現状です。&quot;&gt;貿易取引には、引合対応、見積作成、発注・受注管理、船積書類の作成、通関手続き、為替管理、原価計算など、多岐にわたるプロセスが存在します。さらに、取引先ごとに異なるフォーマットの書類、複数の言語、各国の規制対応が求められます。こうした業務の多くは依然としてExcelやメール、FAXに依存しており、属人化が進んでいるのが現状です。&lt;/p&gt;
+&lt;p data-en=&quot;Furthermore, trade operations involve frequent exception handling that simple automation tools cannot address. This has fostered the perception that trade DX is difficult, significantly delaying transformation efforts.&quot; data-ja=&quot;加えて、貿易業務は例外処理が多く、単純な自動化ツールでは対応しきれないケースが頻発します。これが「貿易DXは難しい」という認識を生み、変革を遅らせている大きな要因です。&quot;&gt;加えて、貿易業務は例外処理が多く、単純な自動化ツールでは対応しきれないケースが頻発します。これが「貿易DXは難しい」という認識を生み、変革を遅らせている大きな要因です。&lt;/p&gt;
+&lt;h2 class=&quot;text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4&quot; data-en=&quot;2. What Are AI Agents? How They Differ from Traditional RPA&quot; data-ja=&quot;2. AIエージェントとは？従来のRPAとの違い&quot;&gt;2. AIエージェントとは？従来のRPAとの違い&lt;/h2&gt;
+&lt;p data-en=&quot;An AI agent is an AI system built on large language models (LLMs) that autonomously executes tasks based on human instructions. The critical difference from traditional RPA (Robotic Process Automation) lies in its decision-making capability and flexibility.&quot; data-ja=&quot;AIエージェントとは、大規模言語モデル（LLM）を基盤とし、人間の指示に基づいて自律的にタスクを遂行するAIシステムです。従来のRPA（Robotic Process Automation）との決定的な違いは、「判断力」と「柔軟性」にあります。&quot;&gt;AIエージェントとは、大規模言語モデル（LLM）を基盤とし、人間の指示に基づいて自律的にタスクを遂行するAIシステムです。従来のRPA（Robotic Process Automation）との決定的な違いは、「判断力」と「柔軟性」にあります。&lt;/p&gt;
+&lt;p data-en=&quot;RPA automates routine tasks by following predefined rules but cannot handle processes that deviate from those rules. AI agents, on the other hand, understand natural language and make context-aware decisions. For example, they can analyze incoming emails from counterparties to determine appropriate responses, or extract data from non-standardized documents.&quot; data-ja=&quot;RPAは事前に定義されたルールに従って定型作業を自動化しますが、ルールから外れた処理には対応できません。一方、AIエージェントは自然言語を理解し、文脈に応じた判断を行えます。たとえば、取引先から届いたメールの内容を解析して適切な対応を判断したり、不定形の書類からデータを抽出したりすることが可能です。&quot;&gt;RPAは事前に定義されたルールに従って定型作業を自動化しますが、ルールから外れた処理には対応できません。一方、AIエージェントは自然言語を理解し、文脈に応じた判断を行えます。たとえば、取引先から届いたメールの内容を解析して適切な対応を判断したり、不定形の書類からデータを抽出したりすることが可能です。&lt;/p&gt;
+&lt;p data-en=&quot;In domains like trade operations, where exception handling is frequent and formats are not standardized, the flexibility of AI agents proves highly effective. Even for tasks where RPA could only achieve a 30% automation rate, AI agents can push automation to 70-80%.&quot; data-ja=&quot;貿易業務のように例外処理が多くフォーマットが統一されていない領域では、AIエージェントの柔軟性が大きな威力を発揮します。RPAでは自動化率30%が限界だった業務でも、AIエージェントを活用すれば70〜80%まで自動化できるケースもあります。&quot;&gt;貿易業務のように例外処理が多くフォーマットが統一されていない領域では、AIエージェントの柔軟性が大きな威力を発揮します。RPAでは自動化率30%が限界だった業務でも、AIエージェントを活用すれば70〜80%まで自動化できるケースもあります。&lt;/p&gt;
+&lt;!-- DIAGRAM: RPA vs AIエージェント comparison --&gt;
+&lt;div class=&quot;diag-wrap&quot;&gt;
+&lt;div data-en=&quot;RPA vs AI Agent — Comparison&quot; data-ja=&quot;RPA vs AIエージェント — 比較&quot; style=&quot;font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;&quot;&gt;RPA vs AIエージェント — 比較&lt;/div&gt;
+&lt;div class=&quot;diag-compare-row&quot;&gt;
+&lt;div class=&quot;diag-compare-box rpa&quot;&gt;
+&lt;div class=&quot;box-head&quot; data-en=&quot;RPA (Traditional)&quot; data-ja=&quot;RPA（従来型）&quot;&gt;RPA（従来型）&lt;/div&gt;
+&lt;div class=&quot;box-badge&quot; data-en=&quot;Simple Rules&quot; data-ja=&quot;単純ルール&quot;&gt;単純ルール&lt;/div&gt;
+&lt;ul&gt;
+&lt;li data-en=&quot;Executes only predefined rules&quot; data-ja=&quot;事前定義されたルールのみ実行&quot;&gt;事前定義されたルールのみ実行&lt;/li&gt;
+&lt;li data-en=&quot;Cannot adapt to format changes&quot; data-ja=&quot;フォーマット変化に対応できない&quot;&gt;フォーマット変化に対応できない&lt;/li&gt;
+&lt;li data-en=&quot;Exceptions require manual human handling&quot; data-ja=&quot;例外処理は人間が手動対応&quot;&gt;例外処理は人間が手動対応&lt;/li&gt;
+&lt;li data-en=&quot;Cannot understand natural language&quot; data-ja=&quot;自然言語の理解は不可&quot;&gt;自然言語の理解は不可&lt;/li&gt;
+&lt;li data-en=&quot;Maximum automation rate: approx. 30%&quot; data-ja=&quot;自動化率の上限：約30%&quot;&gt;自動化率の上限：約30%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;diag-arrow-mid&quot;&gt;→&lt;/div&gt;
+&lt;div class=&quot;diag-compare-box ai&quot;&gt;
+&lt;div class=&quot;box-head&quot; data-en=&quot;AI Agent (Next Generation)&quot; data-ja=&quot;AIエージェント（次世代）&quot;&gt;AIエージェント（次世代）&lt;/div&gt;
+&lt;div class=&quot;box-badge&quot; data-en=&quot;Decide, Execute, Learn&quot; data-ja=&quot;判断・実行・学習&quot;&gt;判断・実行・学習&lt;/div&gt;
+&lt;ul&gt;
+&lt;li data-en=&quot;Understands natural language and decides by context&quot; data-ja=&quot;自然言語を理解し文脈で判断&quot;&gt;自然言語を理解し文脈で判断&lt;/li&gt;
+&lt;li data-en=&quot;Flexibly handles non-standardized formats&quot; data-ja=&quot;非定型フォーマットに柔軟対応&quot;&gt;非定型フォーマットに柔軟対応&lt;/li&gt;
+&lt;li data-en=&quot;Autonomously decides and executes exception handling&quot; data-ja=&quot;例外処理を自律的に判断・実行&quot;&gt;例外処理を自律的に判断・実行&lt;/li&gt;
+&lt;li data-en=&quot;Continuously learns from historical data&quot; data-ja=&quot;過去データから継続的に学習&quot;&gt;過去データから継続的に学習&lt;/li&gt;
+&lt;li data-en=&quot;Automation rate: up to 70-80%&quot; data-ja=&quot;自動化率：70〜80%まで可能&quot;&gt;自動化率：70〜80%まで可能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class=&quot;diag-caption&quot; data-en=&quot;[Figure] Capability Comparison: RPA vs. AI Agent&quot; data-ja=&quot;[図] RPAとAIエージェントの能力比較&quot;&gt;[図] RPAとAIエージェントの能力比較&lt;/p&gt;
+&lt;h2 class=&quot;text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4&quot; data-en=&quot;3. Practical Applications of AI Agents in Trade Operations&quot; data-ja=&quot;3. 貿易業務におけるAIエージェント活用の具体例&quot;&gt;3. 貿易業務におけるAIエージェント活用の具体例&lt;/h2&gt;
+&lt;p data-en=&quot;AI agents are increasingly being deployed in the following trade operation scenarios.&quot; data-ja=&quot;AIエージェントは、貿易業務の以下のような場面で活用が進んでいます。&quot;&gt;AIエージェントは、貿易業務の以下のような場面で活用が進んでいます。&lt;/p&gt;
+&lt;ul class=&quot;list-disc&quot;&gt;
+&lt;li data-en-html=&quot;&amp;lt;strong&amp;gt;Automated inquiry email parsing and case registration:&amp;lt;/strong&amp;gt; Analyzes inquiry emails from counterparties and automatically extracts product, quantity, delivery date, and destination for system registration&quot; data-ja-html=&quot;&amp;lt;strong&amp;gt;引合メールの自動解析と案件登録：&amp;lt;/strong&amp;gt;取引先からの引合メールを解析し、品目・数量・納期・仕向地などを自動で抽出してシステムに登録&quot;&gt;&lt;strong&gt;引合メールの自動解析と案件登録：&lt;/strong&gt;取引先からの引合メールを解析し、品目・数量・納期・仕向地などを自動で抽出してシステムに登録&lt;/li&gt;
+&lt;li data-en-html=&quot;&amp;lt;strong&amp;gt;Automated cost estimation:&amp;lt;/strong&amp;gt; Automatically generates cost calculations factoring in historical transaction data, current exchange rates, and logistics costs&quot; data-ja-html=&quot;&amp;lt;strong&amp;gt;見積原価の自動計算：&amp;lt;/strong&amp;gt;過去の取引データ、現在の為替レート、物流コストを考慮した原価計算を自動生成&quot;&gt;&lt;strong&gt;見積原価の自動計算：&lt;/strong&gt;過去の取引データ、現在の為替レート、物流コストを考慮した原価計算を自動生成&lt;/li&gt;
+&lt;li data-en-html=&quot;&amp;lt;strong&amp;gt;Automated shipping document preparation:&amp;lt;/strong&amp;gt; Auto-generates Invoices, Packing Lists, and B/L drafts based on trade terms&quot; data-ja-html=&quot;&amp;lt;strong&amp;gt;船積書類の自動作成：&amp;lt;/strong&amp;gt;Invoice、Packing List、B/Lドラフトを取引条件に基づいて自動生成&quot;&gt;&lt;strong&gt;船積書類の自動作成：&lt;/strong&gt;Invoice、Packing List、B/Lドラフトを取引条件に基づいて自動生成&lt;/li&gt;
+&lt;li data-en-html=&quot;&amp;lt;strong&amp;gt;Regulatory and compliance checks:&amp;lt;/strong&amp;gt; Automatically assesses compliance with export control regulations, security trade controls, and import regulations of each country&quot; data-ja-html=&quot;&amp;lt;strong&amp;gt;規制・コンプライアンスチェック：&amp;lt;/strong&amp;gt;輸出管理規制、安全保障貿易管理、各国の輸入規制への適合を自動判定&quot;&gt;&lt;strong&gt;規制・コンプライアンスチェック：&lt;/strong&gt;輸出管理規制、安全保障貿易管理、各国の輸入規制への適合を自動判定&lt;/li&gt;
+&lt;li data-en-html=&quot;&amp;lt;strong&amp;gt;Counterparty communication support:&amp;lt;/strong&amp;gt; Handles multilingual inquiries and auto-generates standardized confirmation emails&quot; data-ja-html=&quot;&amp;lt;strong&amp;gt;取引先とのコミュニケーション支援：&amp;lt;/strong&amp;gt;多言語での問い合わせ対応や、定型的な確認メールの自動生成&quot;&gt;&lt;strong&gt;取引先とのコミュニケーション支援：&lt;/strong&gt;多言語での問い合わせ対応や、定型的な確認メールの自動生成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- DIAGRAM: 3 use-cases visual table --&gt;
+&lt;div class=&quot;diag-wrap&quot;&gt;
+&lt;div data-en=&quot;Key AI Agent Use Cases&quot; data-ja=&quot;代表的なAIエージェント活用シーン&quot; style=&quot;font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;&quot;&gt;代表的なAIエージェント活用シーン&lt;/div&gt;
+&lt;div class=&quot;diag-usecase-row&quot;&gt;
+&lt;div class=&quot;diag-usecase-card&quot;&gt;
+&lt;div class=&quot;uc-icon&quot;&gt;📄&lt;/div&gt;
+&lt;div class=&quot;uc-title&quot; data-en=&quot;Document Processing Automation&quot; data-ja=&quot;書類処理の自動化&quot;&gt;書類処理の自動化&lt;/div&gt;
+&lt;div class=&quot;uc-body&quot; data-en=&quot;Automatically parses Invoices, Packing Lists, and B/L drafts from incoming emails and registers them in the system. Handles format differences across counterparties.&quot; data-ja=&quot;Invoice・PL・B/Lドラフトをメール受信から自動解析し、システムへ登録。取引先ごとのフォーマット差異にも対応。&quot;&gt;Invoice・PL・B/Lドラフトをメール受信から自動解析し、システムへ登録。取引先ごとのフォーマット差異にも対応。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;diag-usecase-card&quot;&gt;
+&lt;div class=&quot;uc-icon&quot;&gt;🔢&lt;/div&gt;
+&lt;div class=&quot;uc-title&quot; data-en=&quot;Automated HS Code Classification&quot; data-ja=&quot;HSコード自動判定&quot;&gt;HSコード自動判定&lt;/div&gt;
+&lt;div class=&quot;uc-body&quot; data-en=&quot;AI suggests optimal HS codes based on product name, specifications, and raw material data. Continuously improves accuracy by referencing past classification data.&quot; data-ja=&quot;品目名・仕様・原材料情報からAIが最適なHSコードを候補提示。過去判定データを参照し精度を継続的に向上。&quot;&gt;品目名・仕様・原材料情報からAIが最適なHSコードを候補提示。過去判定データを参照し精度を継続的に向上。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;diag-usecase-card&quot;&gt;
+&lt;div class=&quot;uc-icon&quot;&gt;🌐&lt;/div&gt;
+&lt;div class=&quot;uc-title&quot; data-en=&quot;Export Control Screening&quot; data-ja=&quot;輸出規制チェック&quot;&gt;輸出規制チェック&lt;/div&gt;
+&lt;div class=&quot;uc-body&quot; data-en=&quot;Automatically assesses compliance with export controls, security trade management, and national import regulations. Comprehensively evaluates target cargo, destination, and counterparty.&quot; data-ja=&quot;輸出管理規制・安全保障貿易管理・各国輸入規制への適合を自動判定。対象貨物・仕向地・取引先を総合的に評価。&quot;&gt;輸出管理規制・安全保障貿易管理・各国輸入規制への適合を自動判定。対象貨物・仕向地・取引先を総合的に評価。&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class=&quot;diag-caption&quot; data-en=&quot;[Figure] Key Application Areas for AI Agents in Trade Operations&quot; data-ja=&quot;[図] 貿易業務におけるAIエージェントの代表的な活用領域&quot;&gt;[図] 貿易業務におけるAIエージェントの代表的な活用領域&lt;/p&gt;
+&lt;h2 class=&quot;text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4&quot; data-en=&quot;4. BorderFlow AI: A Real-World Trade Automation Case Study&quot; data-ja=&quot;4. BorderFlow AI による貿易業務自動化の実例&quot;&gt;4. BorderFlow AI による貿易業務自動化の実例&lt;/h2&gt;
+&lt;p data-en=&quot;BorderFlow AI, developed by Wing, is an AI agent platform specialized for trade operations. Co-designed by consultants with deep trading company expertise and AI engineers, it delivers production-grade automation for real-world trade workflows.&quot; data-ja=&quot;Wingが開発した「BorderFlow AI」は、貿易業務に特化したAIエージェントプラットフォームです。商社の実務を深く理解したコンサルタントとAIエンジニアが共同で設計し、貿易実務の現場で実際に使えるレベルの自動化を実現しています。&quot;&gt;Wingが開発した「BorderFlow AI」は、貿易業務に特化したAIエージェントプラットフォームです。商社の実務を深く理解したコンサルタントとAIエンジニアが共同で設計し、貿易実務の現場で実際に使えるレベルの自動化を実現しています。&lt;/p&gt;
+&lt;p data-en=&quot;The key strength of BorderFlow AI is its ability to automate the entire flow from inquiry receipt through cost calculation to quotation preparation end-to-end. The AI analyzes inquiry content received via email, automatically calculates costs by referencing similar past transactions, and generates a draft quotation. Staff only need to review and fine-tune the output, reducing what previously took hours to just minutes.&quot; data-ja=&quot;BorderFlow AIの特徴は、引合受信から原価計算、見積作成までのフローをエンドツーエンドで自動化できる点にあります。取引先からメールで届いた引合内容をAIが解析し、過去の類似取引データを参照しながら原価を自動算出。担当者は生成された見積ドラフトを確認・微調整するだけで、従来数時間かかっていた作業を数十分に短縮できます。&quot;&gt;BorderFlow AIの特徴は、引合受信から原価計算、見積作成までのフローをエンドツーエンドで自動化できる点にあります。取引先からメールで届いた引合内容をAIが解析し、過去の類似取引データを参照しながら原価を自動算出。担当者は生成された見積ドラフトを確認・微調整するだけで、従来数時間かかっていた作業を数十分に短縮できます。&lt;/p&gt;
+&lt;p data-en=&quot;A mid-sized trading company achieved a roughly 60% reduction in inquiry handling time after deploying BorderFlow AI, shortening the average quotation turnaround from two days to half a day. Additionally, by accumulating previously person-dependent cost calculation logic in the system, the company mitigated risks associated with staff transfers and turnover.&quot; data-ja=&quot;ある中堅商社では、BorderFlow AIの導入により引合対応にかかる時間を約60%削減し、見積回答のリードタイムを平均2日から半日に短縮することに成功しました。また、属人化していた原価計算のロジックがシステムに蓄積されることで、担当者の異動・退職リスクにも対応できるようになりました。&quot;&gt;ある中堅商社では、BorderFlow AIの導入により引合対応にかかる時間を約60%削減し、見積回答のリードタイムを平均2日から半日に短縮することに成功しました。また、属人化していた原価計算のロジックがシステムに蓄積されることで、担当者の異動・退職リスクにも対応できるようになりました。&lt;/p&gt;
+&lt;!-- DIAGRAM: BorderFlow AI process flow --&gt;
+&lt;div class=&quot;diag-wrap&quot;&gt;
+&lt;div data-en=&quot;BorderFlow AI — Processing Flow&quot; data-ja=&quot;BorderFlow AI — 処理フロー&quot; style=&quot;font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;&quot;&gt;BorderFlow AI — 処理フロー&lt;/div&gt;
+&lt;div class=&quot;diag-flow-row&quot;&gt;
+&lt;div class=&quot;diag-flow-step&quot; data-en-html='📥&amp;lt;br&amp;gt;Document Receipt&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;Email / Portal&amp;lt;/span&amp;gt;' data-ja-html='📥&amp;lt;br&amp;gt;書類受取&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;メール・ポータル&amp;lt;/span&amp;gt;'&gt;📥&lt;br/&gt;書類受取&lt;br/&gt;&lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&gt;メール・ポータル&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-flow-arrow&quot;&gt;→&lt;/div&gt;
+&lt;div class=&quot;diag-flow-step&quot; data-en-html='🔍&amp;lt;br&amp;gt;OCR Analysis&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;Non-standard Format Support&amp;lt;/span&amp;gt;' data-ja-html='🔍&amp;lt;br&amp;gt;OCR解析&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;非定型フォーマット対応&amp;lt;/span&amp;gt;'&gt;🔍&lt;br/&gt;OCR解析&lt;br/&gt;&lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&gt;非定型フォーマット対応&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-flow-arrow&quot;&gt;→&lt;/div&gt;
+&lt;div class=&quot;diag-flow-step&quot; data-en-html='🤖&amp;lt;br&amp;gt;AI Decision&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;HS Code / Regulation / Cost&amp;lt;/span&amp;gt;' data-ja-html='🤖&amp;lt;br&amp;gt;AI判断&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;HSコード・規制・原価&amp;lt;/span&amp;gt;'&gt;🤖&lt;br/&gt;AI判断&lt;br/&gt;&lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&gt;HSコード・規制・原価&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-flow-arrow&quot;&gt;→&lt;/div&gt;
+&lt;div class=&quot;diag-flow-step&quot; data-en-html='📋&amp;lt;br&amp;gt;Customs Filing&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;Auto-entry to NACCS&amp;lt;/span&amp;gt;' data-ja-html='📋&amp;lt;br&amp;gt;通関申請&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;NACCSへ自動入力&amp;lt;/span&amp;gt;'&gt;📋&lt;br/&gt;通関申請&lt;br/&gt;&lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&gt;NACCSへ自動入力&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-flow-arrow&quot;&gt;→&lt;/div&gt;
+&lt;div class=&quot;diag-flow-step done&quot; data-en-html='✅&amp;lt;br&amp;gt;Complete&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;Staff performs final review only&amp;lt;/span&amp;gt;' data-ja-html='✅&amp;lt;br&amp;gt;完了&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;担当者が最終確認のみ&amp;lt;/span&amp;gt;'&gt;✅&lt;br/&gt;完了&lt;br/&gt;&lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&gt;担当者が最終確認のみ&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class=&quot;diag-caption&quot; data-en=&quot;[Figure] BorderFlow AI Trade Document Processing Automation Flow&quot; data-ja=&quot;[図] BorderFlow AIによる貿易書類処理の自動化フロー&quot;&gt;[図] BorderFlow AIによる貿易書類処理の自動化フロー&lt;/p&gt;
+&lt;h2 class=&quot;text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4&quot; data-en=&quot;5. Implementation Steps and Key Considerations&quot; data-ja=&quot;5. 導入のステップと注意点&quot;&gt;5. 導入のステップと注意点&lt;/h2&gt;
+&lt;p data-en=&quot;When implementing AI agents in trade operations, we recommend the following steps.&quot; data-ja=&quot;貿易業務にAIエージェントを導入する際は、以下のステップを推奨します。&quot;&gt;貿易業務にAIエージェントを導入する際は、以下のステップを推奨します。&lt;/p&gt;
+&lt;ul class=&quot;list-decimal&quot;&gt;
+&lt;li data-en-html=&quot;&amp;lt;strong&amp;gt;Process visualization:&amp;lt;/strong&amp;gt; Map out current workflows to identify areas suitable for automation and operational bottlenecks&quot; data-ja-html=&quot;&amp;lt;strong&amp;gt;業務の可視化：&amp;lt;/strong&amp;gt;まず現行業務のフローを整理し、自動化可能な領域とボトルネックを特定します&quot;&gt;&lt;strong&gt;業務の可視化：&lt;/strong&gt;まず現行業務のフローを整理し、自動化可能な領域とボトルネックを特定します&lt;/li&gt;
+&lt;li data-en-html=&quot;&amp;lt;strong&amp;gt;Pilot area selection:&amp;lt;/strong&amp;gt; Rather than automating all processes at once, start small with high-impact areas such as inquiry handling and cost calculation&quot; data-ja-html=&quot;&amp;lt;strong&amp;gt;パイロット領域の選定：&amp;lt;/strong&amp;gt;全業務を一度に自動化するのではなく、効果が見えやすい領域（引合処理、原価計算など）からスモールスタートします&quot;&gt;&lt;strong&gt;パイロット領域の選定：&lt;/strong&gt;全業務を一度に自動化するのではなく、効果が見えやすい領域（引合処理、原価計算など）からスモールスタートします&lt;/li&gt;
+&lt;li data-en-html=&quot;&amp;lt;strong&amp;gt;Data preparation:&amp;lt;/strong&amp;gt; Improve the quality of historical transaction data and master data. AI accuracy is highly dependent on data quality&quot; data-ja-html=&quot;&amp;lt;strong&amp;gt;データ整備：&amp;lt;/strong&amp;gt;過去の取引データ、マスタデータの品質を向上させます。AIの精度はデータ品質に大きく依存します&quot;&gt;&lt;strong&gt;データ整備：&lt;/strong&gt;過去の取引データ、マスタデータの品質を向上させます。AIの精度はデータ品質に大きく依存します&lt;/li&gt;
+&lt;li data-en-html=&quot;&amp;lt;strong&amp;gt;Phased rollout:&amp;lt;/strong&amp;gt; Based on pilot results, expand the scope of targeted operations and drive adoption across the organization&quot; data-ja-html=&quot;&amp;lt;strong&amp;gt;段階的な展開：&amp;lt;/strong&amp;gt;パイロットの成果を踏まえて対象業務を拡大し、組織全体への定着を図ります&quot;&gt;&lt;strong&gt;段階的な展開：&lt;/strong&gt;パイロットの成果を踏まえて対象業務を拡大し、組織全体への定着を図ります&lt;/li&gt;
+&lt;li data-en-html=&quot;&amp;lt;strong&amp;gt;Talent development:&amp;lt;/strong&amp;gt; It is essential to cultivate personnel who can effectively leverage AI and to design a human-AI collaboration framework&quot; data-ja-html=&quot;&amp;lt;strong&amp;gt;人材育成：&amp;lt;/strong&amp;gt;AIを使いこなせる人材の育成と、AIと人間の協働体制の設計が不可欠です&quot;&gt;&lt;strong&gt;人材育成：&lt;/strong&gt;AIを使いこなせる人材の育成と、AIと人間の協働体制の設計が不可欠です&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p data-en=&quot;An important caveat: AI agents are not infallible. Designing a Human-in-the-Loop framework where humans make final decisions is critical. Additionally, ensuring the security of transaction data and compliance with data protection regulations in each jurisdiction must not be overlooked.&quot; data-ja=&quot;注意すべき点として、AIエージェントは万能ではありません。最終判断は人間が行う「Human in the Loop」の設計が重要です。また、取引情報のセキュリティ確保と、各国の個人情報保護規制への対応も忘れてはなりません。&quot;&gt;注意すべき点として、AIエージェントは万能ではありません。最終判断は人間が行う「Human in the Loop」の設計が重要です。また、取引情報のセキュリティ確保と、各国の個人情報保護規制への対応も忘れてはなりません。&lt;/p&gt;
+&lt;h2 class=&quot;text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4&quot; data-en=&quot;6. Conclusion&quot; data-ja=&quot;6. まとめ&quot;&gt;6. まとめ&lt;/h2&gt;
+&lt;p data-en=&quot;The delayed DX of trade operations stems from operational complexity and frequent exception handling. However, the emergence of AI agents has opened the door to digitalization in areas previously considered too difficult to automate.&quot; data-ja=&quot;貿易業務のDXが遅れている背景には、業務の複雑性と例外処理の多さがあります。しかし、AIエージェントの登場により、これまで自動化が困難だった領域にもデジタル化の道が開かれました。&quot;&gt;貿易業務のDXが遅れている背景には、業務の複雑性と例外処理の多さがあります。しかし、AIエージェントの登場により、これまで自動化が困難だった領域にもデジタル化の道が開かれました。&lt;/p&gt;
+&lt;p data-en=&quot;To maintain and strengthen the competitiveness of trading companies, it is essential to pursue business process redesign and AI adoption as an integrated initiative, rather than merely implementing tools. If you are interested in trade DX, please do not hesitate to contact us.&quot; data-ja=&quot;商社の競争力を維持・強化するためには、単なるツール導入ではなく、業務プロセスの再設計とAI活用を一体的に進めることが不可欠です。貿易DXに関心をお持ちの方は、ぜひお気軽にご相談ください。&quot;&gt;商社の競争力を維持・強化するためには、単なるツール導入ではなく、業務プロセスの再設計とAI活用を一体的に進めることが不可欠です。貿易DXに関心をお持ちの方は、ぜひお気軽にご相談ください。&lt;/p&gt;
+&lt;/article&gt;
+ CTA 
+&lt;div class=&quot;mt-14 bg-navy rounded-sm p-8 md:p-10 text-center&quot;&gt;
+&lt;p class=&quot;serif text-[1.4rem] font-medium text-white mb-3&quot; data-en=&quot;Tell Us About Your DX Challenges&quot; data-ja=&quot;DXに関するお悩みをお聞かせください&quot;&gt;DXに関するお悩みをお聞かせください&lt;/p&gt;
+&lt;p class=&quot;text-[.82rem] text-white/65 mb-6&quot; data-en=&quot;Free initial consultation / Online available / Early-stage inquiries welcome&quot; data-ja=&quot;初回ヒアリング無料 / オンライン対応可 / 構想段階からの相談歓迎&quot;&gt;初回ヒアリング無料 / オンライン対応可 / 構想段階からの相談歓迎&lt;/p&gt;
+&lt;a class=&quot;display inline-block text-[.82rem] font-medium text-navy bg-gold px-8 py-3.5 rounded-sm tracking-wider hover:bg-gold-mid transition-colors&quot; data-en=&quot;Contact Us&quot; data-ja=&quot;相談する&quot; href=&quot;https://wingconsulting.org/#contact&quot;&gt;相談する&lt;/a&gt;
+&lt;/div&gt;
+ Related Articles 
+&lt;div class=&quot;mt-16&quot;&gt;
+&lt;p class=&quot;display text-[.65rem] font-medium tracking-[.18em] uppercase text-gold mb-4&quot;&gt;Related Articles&lt;/p&gt;
+&lt;div class=&quot;grid md:grid-cols-2 gap-4&quot;&gt;
+&lt;a class=&quot;group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors&quot; data-ja-html='&amp;lt;p class=&quot;display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2&quot;&amp;gt;DX Strategy&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot; data-en=&quot;What Is DX Consulting? How to Choose the Right Partner and Succeed&quot; data-ja=&quot;DXコンサルティングとは？失敗しない選び方と成功のポイント&quot;&amp;gt;DXコンサルティングとは？失敗しない選び方と成功のポイント&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&amp;gt;2026.03.25&amp;lt;/p&amp;gt;' href=&quot;/blog/dx-consulting-guide&quot;&gt;
+&lt;p class=&quot;display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2&quot;&gt;DX Strategy&lt;/p&gt;
+&lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot; data-en=&quot;What Is DX Consulting? How to Choose the Right Partner and Succeed&quot; data-ja=&quot;DXコンサルティングとは？失敗しない選び方と成功のポイント&quot;&gt;DXコンサルティングとは？失敗しない選び方と成功のポイント&lt;/p&gt;
+&lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&gt;2026.03.25&lt;/p&gt;
+&lt;/a&gt;
+&lt;a class=&quot;group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors&quot; data-ja-html='&amp;lt;p class=&quot;display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2&quot;&amp;gt;Compliance&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot; data-en=&quot;A Practical Guide to PFAS Regulations and chemSHERPA Compliance&quot; data-ja=&quot;PFAS規制とchemSHERPA対応の実務ガイド&quot;&amp;gt;PFAS規制とchemSHERPA対応の実務ガイド&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&amp;gt;2026.03.25&amp;lt;/p&amp;gt;' href=&quot;/blog/pfas-chemsherpa-guide&quot;&gt;
+&lt;p class=&quot;display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2&quot;&gt;Compliance&lt;/p&gt;
+&lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot; data-en=&quot;A Practical Guide to PFAS Regulations and chemSHERPA Compliance&quot; data-ja=&quot;PFAS規制とchemSHERPA対応の実務ガイド&quot;&gt;PFAS規制とchemSHERPA対応の実務ガイド&lt;/p&gt;
+&lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&gt;2026.03.25&lt;/p&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;" data-en-html="&lt;p class=&quot;display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3&quot; data-en=&quot;Trade DX&quot; data-ja=&quot;Trade DX&quot;&gt;Trade DX&lt;/p&gt;
+&lt;h1 class=&quot;serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4&quot; data-en=&quot;AI Agents: The Key to Trade DX. How Automation Is Transforming the Future of Trading Companies&quot; data-ja=&quot;貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来&quot;&gt;貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来&lt;/h1&gt;
+&lt;div class=&quot;flex items-center gap-4 text-[.75rem] text-ink-light mb-2&quot;&gt;
+&lt;time datetime=&quot;2026-03-25&quot;&gt;2026.03.25&lt;/time&gt;
+&lt;span data-en=&quot;Wing Editorial Team&quot; data-ja=&quot;Wing編集部&quot;&gt;Wing編集部&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gold-rule mb-10&quot;&gt;&lt;/div&gt;
+&lt;article class=&quot;text-[.9rem] text-ink leading-[2] max-w-none&quot;&gt;
+&lt;h2 class=&quot;text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4&quot; data-en=&quot;1. Why Trade DX Remains Stalled&quot; data-ja=&quot;1. なぜ貿易業務のDXが進まないのか&quot;&gt;1. なぜ貿易業務のDXが進まないのか&lt;/h2&gt;
+&lt;p data-en=&quot;While the importance of DX is widely recognized among trading companies, the actual digitalization of operations is said to lag behind other industries. The primary reason lies in the inherent complexity of trade operations.&quot; data-ja=&quot;商社や貿易会社において、DX推進の重要性は広く認識されているものの、実際の業務デジタル化は他業界に比べて遅れていると言われています。その最大の要因は、貿易業務特有の複雑性にあります。&quot;&gt;商社や貿易会社において、DX推進の重要性は広く認識されているものの、実際の業務デジタル化は他業界に比べて遅れていると言われています。その最大の要因は、貿易業務特有の複雑性にあります。&lt;/p&gt;
+&lt;p data-en=&quot;Trade transactions encompass a wide range of processes, including inquiry handling, quotation preparation, purchase and sales order management, shipping document preparation, customs procedures, foreign exchange management, and cost calculation. Moreover, each counterparty requires different document formats, multiple languages, and compliance with various national regulations. Many of these tasks still rely on Excel, email, and fax, and remain heavily dependent on individual expertise.&quot; data-ja=&quot;貿易取引には、引合対応、見積作成、発注・受注管理、船積書類の作成、通関手続き、為替管理、原価計算など、多岐にわたるプロセスが存在します。さらに、取引先ごとに異なるフォーマットの書類、複数の言語、各国の規制対応が求められます。こうした業務の多くは依然としてExcelやメール、FAXに依存しており、属人化が進んでいるのが現状です。&quot;&gt;貿易取引には、引合対応、見積作成、発注・受注管理、船積書類の作成、通関手続き、為替管理、原価計算など、多岐にわたるプロセスが存在します。さらに、取引先ごとに異なるフォーマットの書類、複数の言語、各国の規制対応が求められます。こうした業務の多くは依然としてExcelやメール、FAXに依存しており、属人化が進んでいるのが現状です。&lt;/p&gt;
+&lt;p data-en=&quot;Furthermore, trade operations involve frequent exception handling that simple automation tools cannot address. This has fostered the perception that trade DX is difficult, significantly delaying transformation efforts.&quot; data-ja=&quot;加えて、貿易業務は例外処理が多く、単純な自動化ツールでは対応しきれないケースが頻発します。これが「貿易DXは難しい」という認識を生み、変革を遅らせている大きな要因です。&quot;&gt;加えて、貿易業務は例外処理が多く、単純な自動化ツールでは対応しきれないケースが頻発します。これが「貿易DXは難しい」という認識を生み、変革を遅らせている大きな要因です。&lt;/p&gt;
+&lt;h2 class=&quot;text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4&quot; data-en=&quot;2. What Are AI Agents? How They Differ from Traditional RPA&quot; data-ja=&quot;2. AIエージェントとは？従来のRPAとの違い&quot;&gt;2. AIエージェントとは？従来のRPAとの違い&lt;/h2&gt;
+&lt;p data-en=&quot;An AI agent is an AI system built on large language models (LLMs) that autonomously executes tasks based on human instructions. The critical difference from traditional RPA (Robotic Process Automation) lies in its decision-making capability and flexibility.&quot; data-ja=&quot;AIエージェントとは、大規模言語モデル（LLM）を基盤とし、人間の指示に基づいて自律的にタスクを遂行するAIシステムです。従来のRPA（Robotic Process Automation）との決定的な違いは、「判断力」と「柔軟性」にあります。&quot;&gt;AIエージェントとは、大規模言語モデル（LLM）を基盤とし、人間の指示に基づいて自律的にタスクを遂行するAIシステムです。従来のRPA（Robotic Process Automation）との決定的な違いは、「判断力」と「柔軟性」にあります。&lt;/p&gt;
+&lt;p data-en=&quot;RPA automates routine tasks by following predefined rules but cannot handle processes that deviate from those rules. AI agents, on the other hand, understand natural language and make context-aware decisions. For example, they can analyze incoming emails from counterparties to determine appropriate responses, or extract data from non-standardized documents.&quot; data-ja=&quot;RPAは事前に定義されたルールに従って定型作業を自動化しますが、ルールから外れた処理には対応できません。一方、AIエージェントは自然言語を理解し、文脈に応じた判断を行えます。たとえば、取引先から届いたメールの内容を解析して適切な対応を判断したり、不定形の書類からデータを抽出したりすることが可能です。&quot;&gt;RPAは事前に定義されたルールに従って定型作業を自動化しますが、ルールから外れた処理には対応できません。一方、AIエージェントは自然言語を理解し、文脈に応じた判断を行えます。たとえば、取引先から届いたメールの内容を解析して適切な対応を判断したり、不定形の書類からデータを抽出したりすることが可能です。&lt;/p&gt;
+&lt;p data-en=&quot;In domains like trade operations, where exception handling is frequent and formats are not standardized, the flexibility of AI agents proves highly effective. Even for tasks where RPA could only achieve a 30% automation rate, AI agents can push automation to 70-80%.&quot; data-ja=&quot;貿易業務のように例外処理が多くフォーマットが統一されていない領域では、AIエージェントの柔軟性が大きな威力を発揮します。RPAでは自動化率30%が限界だった業務でも、AIエージェントを活用すれば70〜80%まで自動化できるケースもあります。&quot;&gt;貿易業務のように例外処理が多くフォーマットが統一されていない領域では、AIエージェントの柔軟性が大きな威力を発揮します。RPAでは自動化率30%が限界だった業務でも、AIエージェントを活用すれば70〜80%まで自動化できるケースもあります。&lt;/p&gt;
+&lt;!-- DIAGRAM: RPA vs AIエージェント comparison --&gt;
+&lt;div class=&quot;diag-wrap&quot;&gt;
+&lt;div data-en=&quot;RPA vs AI Agent — Comparison&quot; data-ja=&quot;RPA vs AIエージェント — 比較&quot; style=&quot;font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;&quot;&gt;RPA vs AIエージェント — 比較&lt;/div&gt;
+&lt;div class=&quot;diag-compare-row&quot;&gt;
+&lt;div class=&quot;diag-compare-box rpa&quot;&gt;
+&lt;div class=&quot;box-head&quot; data-en=&quot;RPA (Traditional)&quot; data-ja=&quot;RPA（従来型）&quot;&gt;RPA（従来型）&lt;/div&gt;
+&lt;div class=&quot;box-badge&quot; data-en=&quot;Simple Rules&quot; data-ja=&quot;単純ルール&quot;&gt;単純ルール&lt;/div&gt;
+&lt;ul&gt;
+&lt;li data-en=&quot;Executes only predefined rules&quot; data-ja=&quot;事前定義されたルールのみ実行&quot;&gt;事前定義されたルールのみ実行&lt;/li&gt;
+&lt;li data-en=&quot;Cannot adapt to format changes&quot; data-ja=&quot;フォーマット変化に対応できない&quot;&gt;フォーマット変化に対応できない&lt;/li&gt;
+&lt;li data-en=&quot;Exceptions require manual human handling&quot; data-ja=&quot;例外処理は人間が手動対応&quot;&gt;例外処理は人間が手動対応&lt;/li&gt;
+&lt;li data-en=&quot;Cannot understand natural language&quot; data-ja=&quot;自然言語の理解は不可&quot;&gt;自然言語の理解は不可&lt;/li&gt;
+&lt;li data-en=&quot;Maximum automation rate: approx. 30%&quot; data-ja=&quot;自動化率の上限：約30%&quot;&gt;自動化率の上限：約30%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;diag-arrow-mid&quot;&gt;→&lt;/div&gt;
+&lt;div class=&quot;diag-compare-box ai&quot;&gt;
+&lt;div class=&quot;box-head&quot; data-en=&quot;AI Agent (Next Generation)&quot; data-ja=&quot;AIエージェント（次世代）&quot;&gt;AIエージェント（次世代）&lt;/div&gt;
+&lt;div class=&quot;box-badge&quot; data-en=&quot;Decide, Execute, Learn&quot; data-ja=&quot;判断・実行・学習&quot;&gt;判断・実行・学習&lt;/div&gt;
+&lt;ul&gt;
+&lt;li data-en=&quot;Understands natural language and decides by context&quot; data-ja=&quot;自然言語を理解し文脈で判断&quot;&gt;自然言語を理解し文脈で判断&lt;/li&gt;
+&lt;li data-en=&quot;Flexibly handles non-standardized formats&quot; data-ja=&quot;非定型フォーマットに柔軟対応&quot;&gt;非定型フォーマットに柔軟対応&lt;/li&gt;
+&lt;li data-en=&quot;Autonomously decides and executes exception handling&quot; data-ja=&quot;例外処理を自律的に判断・実行&quot;&gt;例外処理を自律的に判断・実行&lt;/li&gt;
+&lt;li data-en=&quot;Continuously learns from historical data&quot; data-ja=&quot;過去データから継続的に学習&quot;&gt;過去データから継続的に学習&lt;/li&gt;
+&lt;li data-en=&quot;Automation rate: up to 70-80%&quot; data-ja=&quot;自動化率：70〜80%まで可能&quot;&gt;自動化率：70〜80%まで可能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class=&quot;diag-caption&quot; data-en=&quot;[Figure] Capability Comparison: RPA vs. AI Agent&quot; data-ja=&quot;[図] RPAとAIエージェントの能力比較&quot;&gt;[図] RPAとAIエージェントの能力比較&lt;/p&gt;
+&lt;h2 class=&quot;text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4&quot; data-en=&quot;3. Practical Applications of AI Agents in Trade Operations&quot; data-ja=&quot;3. 貿易業務におけるAIエージェント活用の具体例&quot;&gt;3. 貿易業務におけるAIエージェント活用の具体例&lt;/h2&gt;
+&lt;p data-en=&quot;AI agents are increasingly being deployed in the following trade operation scenarios.&quot; data-ja=&quot;AIエージェントは、貿易業務の以下のような場面で活用が進んでいます。&quot;&gt;AIエージェントは、貿易業務の以下のような場面で活用が進んでいます。&lt;/p&gt;
+&lt;ul class=&quot;list-disc&quot;&gt;
+&lt;li data-en-html=&quot;&amp;lt;strong&amp;gt;Automated inquiry email parsing and case registration:&amp;lt;/strong&amp;gt; Analyzes inquiry emails from counterparties and automatically extracts product, quantity, delivery date, and destination for system registration&quot; data-ja-html=&quot;&amp;lt;strong&amp;gt;引合メールの自動解析と案件登録：&amp;lt;/strong&amp;gt;取引先からの引合メールを解析し、品目・数量・納期・仕向地などを自動で抽出してシステムに登録&quot;&gt;&lt;strong&gt;引合メールの自動解析と案件登録：&lt;/strong&gt;取引先からの引合メールを解析し、品目・数量・納期・仕向地などを自動で抽出してシステムに登録&lt;/li&gt;
+&lt;li data-en-html=&quot;&amp;lt;strong&amp;gt;Automated cost estimation:&amp;lt;/strong&amp;gt; Automatically generates cost calculations factoring in historical transaction data, current exchange rates, and logistics costs&quot; data-ja-html=&quot;&amp;lt;strong&amp;gt;見積原価の自動計算：&amp;lt;/strong&amp;gt;過去の取引データ、現在の為替レート、物流コストを考慮した原価計算を自動生成&quot;&gt;&lt;strong&gt;見積原価の自動計算：&lt;/strong&gt;過去の取引データ、現在の為替レート、物流コストを考慮した原価計算を自動生成&lt;/li&gt;
+&lt;li data-en-html=&quot;&amp;lt;strong&amp;gt;Automated shipping document preparation:&amp;lt;/strong&amp;gt; Auto-generates Invoices, Packing Lists, and B/L drafts based on trade terms&quot; data-ja-html=&quot;&amp;lt;strong&amp;gt;船積書類の自動作成：&amp;lt;/strong&amp;gt;Invoice、Packing List、B/Lドラフトを取引条件に基づいて自動生成&quot;&gt;&lt;strong&gt;船積書類の自動作成：&lt;/strong&gt;Invoice、Packing List、B/Lドラフトを取引条件に基づいて自動生成&lt;/li&gt;
+&lt;li data-en-html=&quot;&amp;lt;strong&amp;gt;Regulatory and compliance checks:&amp;lt;/strong&amp;gt; Automatically assesses compliance with export control regulations, security trade controls, and import regulations of each country&quot; data-ja-html=&quot;&amp;lt;strong&amp;gt;規制・コンプライアンスチェック：&amp;lt;/strong&amp;gt;輸出管理規制、安全保障貿易管理、各国の輸入規制への適合を自動判定&quot;&gt;&lt;strong&gt;規制・コンプライアンスチェック：&lt;/strong&gt;輸出管理規制、安全保障貿易管理、各国の輸入規制への適合を自動判定&lt;/li&gt;
+&lt;li data-en-html=&quot;&amp;lt;strong&amp;gt;Counterparty communication support:&amp;lt;/strong&amp;gt; Handles multilingual inquiries and auto-generates standardized confirmation emails&quot; data-ja-html=&quot;&amp;lt;strong&amp;gt;取引先とのコミュニケーション支援：&amp;lt;/strong&amp;gt;多言語での問い合わせ対応や、定型的な確認メールの自動生成&quot;&gt;&lt;strong&gt;取引先とのコミュニケーション支援：&lt;/strong&gt;多言語での問い合わせ対応や、定型的な確認メールの自動生成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- DIAGRAM: 3 use-cases visual table --&gt;
+&lt;div class=&quot;diag-wrap&quot;&gt;
+&lt;div data-en=&quot;Key AI Agent Use Cases&quot; data-ja=&quot;代表的なAIエージェント活用シーン&quot; style=&quot;font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;&quot;&gt;代表的なAIエージェント活用シーン&lt;/div&gt;
+&lt;div class=&quot;diag-usecase-row&quot;&gt;
+&lt;div class=&quot;diag-usecase-card&quot;&gt;
+&lt;div class=&quot;uc-icon&quot;&gt;📄&lt;/div&gt;
+&lt;div class=&quot;uc-title&quot; data-en=&quot;Document Processing Automation&quot; data-ja=&quot;書類処理の自動化&quot;&gt;書類処理の自動化&lt;/div&gt;
+&lt;div class=&quot;uc-body&quot; data-en=&quot;Automatically parses Invoices, Packing Lists, and B/L drafts from incoming emails and registers them in the system. Handles format differences across counterparties.&quot; data-ja=&quot;Invoice・PL・B/Lドラフトをメール受信から自動解析し、システムへ登録。取引先ごとのフォーマット差異にも対応。&quot;&gt;Invoice・PL・B/Lドラフトをメール受信から自動解析し、システムへ登録。取引先ごとのフォーマット差異にも対応。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;diag-usecase-card&quot;&gt;
+&lt;div class=&quot;uc-icon&quot;&gt;🔢&lt;/div&gt;
+&lt;div class=&quot;uc-title&quot; data-en=&quot;Automated HS Code Classification&quot; data-ja=&quot;HSコード自動判定&quot;&gt;HSコード自動判定&lt;/div&gt;
+&lt;div class=&quot;uc-body&quot; data-en=&quot;AI suggests optimal HS codes based on product name, specifications, and raw material data. Continuously improves accuracy by referencing past classification data.&quot; data-ja=&quot;品目名・仕様・原材料情報からAIが最適なHSコードを候補提示。過去判定データを参照し精度を継続的に向上。&quot;&gt;品目名・仕様・原材料情報からAIが最適なHSコードを候補提示。過去判定データを参照し精度を継続的に向上。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;diag-usecase-card&quot;&gt;
+&lt;div class=&quot;uc-icon&quot;&gt;🌐&lt;/div&gt;
+&lt;div class=&quot;uc-title&quot; data-en=&quot;Export Control Screening&quot; data-ja=&quot;輸出規制チェック&quot;&gt;輸出規制チェック&lt;/div&gt;
+&lt;div class=&quot;uc-body&quot; data-en=&quot;Automatically assesses compliance with export controls, security trade management, and national import regulations. Comprehensively evaluates target cargo, destination, and counterparty.&quot; data-ja=&quot;輸出管理規制・安全保障貿易管理・各国輸入規制への適合を自動判定。対象貨物・仕向地・取引先を総合的に評価。&quot;&gt;輸出管理規制・安全保障貿易管理・各国輸入規制への適合を自動判定。対象貨物・仕向地・取引先を総合的に評価。&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class=&quot;diag-caption&quot; data-en=&quot;[Figure] Key Application Areas for AI Agents in Trade Operations&quot; data-ja=&quot;[図] 貿易業務におけるAIエージェントの代表的な活用領域&quot;&gt;[図] 貿易業務におけるAIエージェントの代表的な活用領域&lt;/p&gt;
+&lt;h2 class=&quot;text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4&quot; data-en=&quot;4. BorderFlow AI: A Real-World Trade Automation Case Study&quot; data-ja=&quot;4. BorderFlow AI による貿易業務自動化の実例&quot;&gt;4. BorderFlow AI による貿易業務自動化の実例&lt;/h2&gt;
+&lt;p data-en=&quot;BorderFlow AI, developed by Wing, is an AI agent platform specialized for trade operations. Co-designed by consultants with deep trading company expertise and AI engineers, it delivers production-grade automation for real-world trade workflows.&quot; data-ja=&quot;Wingが開発した「BorderFlow AI」は、貿易業務に特化したAIエージェントプラットフォームです。商社の実務を深く理解したコンサルタントとAIエンジニアが共同で設計し、貿易実務の現場で実際に使えるレベルの自動化を実現しています。&quot;&gt;Wingが開発した「BorderFlow AI」は、貿易業務に特化したAIエージェントプラットフォームです。商社の実務を深く理解したコンサルタントとAIエンジニアが共同で設計し、貿易実務の現場で実際に使えるレベルの自動化を実現しています。&lt;/p&gt;
+&lt;p data-en=&quot;The key strength of BorderFlow AI is its ability to automate the entire flow from inquiry receipt through cost calculation to quotation preparation end-to-end. The AI analyzes inquiry content received via email, automatically calculates costs by referencing similar past transactions, and generates a draft quotation. Staff only need to review and fine-tune the output, reducing what previously took hours to just minutes.&quot; data-ja=&quot;BorderFlow AIの特徴は、引合受信から原価計算、見積作成までのフローをエンドツーエンドで自動化できる点にあります。取引先からメールで届いた引合内容をAIが解析し、過去の類似取引データを参照しながら原価を自動算出。担当者は生成された見積ドラフトを確認・微調整するだけで、従来数時間かかっていた作業を数十分に短縮できます。&quot;&gt;BorderFlow AIの特徴は、引合受信から原価計算、見積作成までのフローをエンドツーエンドで自動化できる点にあります。取引先からメールで届いた引合内容をAIが解析し、過去の類似取引データを参照しながら原価を自動算出。担当者は生成された見積ドラフトを確認・微調整するだけで、従来数時間かかっていた作業を数十分に短縮できます。&lt;/p&gt;
+&lt;p data-en=&quot;A mid-sized trading company achieved a roughly 60% reduction in inquiry handling time after deploying BorderFlow AI, shortening the average quotation turnaround from two days to half a day. Additionally, by accumulating previously person-dependent cost calculation logic in the system, the company mitigated risks associated with staff transfers and turnover.&quot; data-ja=&quot;ある中堅商社では、BorderFlow AIの導入により引合対応にかかる時間を約60%削減し、見積回答のリードタイムを平均2日から半日に短縮することに成功しました。また、属人化していた原価計算のロジックがシステムに蓄積されることで、担当者の異動・退職リスクにも対応できるようになりました。&quot;&gt;ある中堅商社では、BorderFlow AIの導入により引合対応にかかる時間を約60%削減し、見積回答のリードタイムを平均2日から半日に短縮することに成功しました。また、属人化していた原価計算のロジックがシステムに蓄積されることで、担当者の異動・退職リスクにも対応できるようになりました。&lt;/p&gt;
+&lt;!-- DIAGRAM: BorderFlow AI process flow --&gt;
+&lt;div class=&quot;diag-wrap&quot;&gt;
+&lt;div data-en=&quot;BorderFlow AI — Processing Flow&quot; data-ja=&quot;BorderFlow AI — 処理フロー&quot; style=&quot;font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;&quot;&gt;BorderFlow AI — 処理フロー&lt;/div&gt;
+&lt;div class=&quot;diag-flow-row&quot;&gt;
+&lt;div class=&quot;diag-flow-step&quot; data-en-html='📥&amp;lt;br&amp;gt;Document Receipt&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;Email / Portal&amp;lt;/span&amp;gt;' data-ja-html='📥&amp;lt;br&amp;gt;書類受取&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;メール・ポータル&amp;lt;/span&amp;gt;'&gt;📥&lt;br/&gt;書類受取&lt;br/&gt;&lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&gt;メール・ポータル&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-flow-arrow&quot;&gt;→&lt;/div&gt;
+&lt;div class=&quot;diag-flow-step&quot; data-en-html='🔍&amp;lt;br&amp;gt;OCR Analysis&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;Non-standard Format Support&amp;lt;/span&amp;gt;' data-ja-html='🔍&amp;lt;br&amp;gt;OCR解析&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;非定型フォーマット対応&amp;lt;/span&amp;gt;'&gt;🔍&lt;br/&gt;OCR解析&lt;br/&gt;&lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&gt;非定型フォーマット対応&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-flow-arrow&quot;&gt;→&lt;/div&gt;
+&lt;div class=&quot;diag-flow-step&quot; data-en-html='🤖&amp;lt;br&amp;gt;AI Decision&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;HS Code / Regulation / Cost&amp;lt;/span&amp;gt;' data-ja-html='🤖&amp;lt;br&amp;gt;AI判断&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;HSコード・規制・原価&amp;lt;/span&amp;gt;'&gt;🤖&lt;br/&gt;AI判断&lt;br/&gt;&lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&gt;HSコード・規制・原価&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-flow-arrow&quot;&gt;→&lt;/div&gt;
+&lt;div class=&quot;diag-flow-step&quot; data-en-html='📋&amp;lt;br&amp;gt;Customs Filing&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;Auto-entry to NACCS&amp;lt;/span&amp;gt;' data-ja-html='📋&amp;lt;br&amp;gt;通関申請&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;NACCSへ自動入力&amp;lt;/span&amp;gt;'&gt;📋&lt;br/&gt;通関申請&lt;br/&gt;&lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&gt;NACCSへ自動入力&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-flow-arrow&quot;&gt;→&lt;/div&gt;
+&lt;div class=&quot;diag-flow-step done&quot; data-en-html='✅&amp;lt;br&amp;gt;Complete&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;Staff performs final review only&amp;lt;/span&amp;gt;' data-ja-html='✅&amp;lt;br&amp;gt;完了&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;担当者が最終確認のみ&amp;lt;/span&amp;gt;'&gt;✅&lt;br/&gt;完了&lt;br/&gt;&lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&gt;担当者が最終確認のみ&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class=&quot;diag-caption&quot; data-en=&quot;[Figure] BorderFlow AI Trade Document Processing Automation Flow&quot; data-ja=&quot;[図] BorderFlow AIによる貿易書類処理の自動化フロー&quot;&gt;[図] BorderFlow AIによる貿易書類処理の自動化フロー&lt;/p&gt;
+&lt;h2 class=&quot;text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4&quot; data-en=&quot;5. Implementation Steps and Key Considerations&quot; data-ja=&quot;5. 導入のステップと注意点&quot;&gt;5. 導入のステップと注意点&lt;/h2&gt;
+&lt;p data-en=&quot;When implementing AI agents in trade operations, we recommend the following steps.&quot; data-ja=&quot;貿易業務にAIエージェントを導入する際は、以下のステップを推奨します。&quot;&gt;貿易業務にAIエージェントを導入する際は、以下のステップを推奨します。&lt;/p&gt;
+&lt;ul class=&quot;list-decimal&quot;&gt;
+&lt;li data-en-html=&quot;&amp;lt;strong&amp;gt;Process visualization:&amp;lt;/strong&amp;gt; Map out current workflows to identify areas suitable for automation and operational bottlenecks&quot; data-ja-html=&quot;&amp;lt;strong&amp;gt;業務の可視化：&amp;lt;/strong&amp;gt;まず現行業務のフローを整理し、自動化可能な領域とボトルネックを特定します&quot;&gt;&lt;strong&gt;業務の可視化：&lt;/strong&gt;まず現行業務のフローを整理し、自動化可能な領域とボトルネックを特定します&lt;/li&gt;
+&lt;li data-en-html=&quot;&amp;lt;strong&amp;gt;Pilot area selection:&amp;lt;/strong&amp;gt; Rather than automating all processes at once, start small with high-impact areas such as inquiry handling and cost calculation&quot; data-ja-html=&quot;&amp;lt;strong&amp;gt;パイロット領域の選定：&amp;lt;/strong&amp;gt;全業務を一度に自動化するのではなく、効果が見えやすい領域（引合処理、原価計算など）からスモールスタートします&quot;&gt;&lt;strong&gt;パイロット領域の選定：&lt;/strong&gt;全業務を一度に自動化するのではなく、効果が見えやすい領域（引合処理、原価計算など）からスモールスタートします&lt;/li&gt;
+&lt;li data-en-html=&quot;&amp;lt;strong&amp;gt;Data preparation:&amp;lt;/strong&amp;gt; Improve the quality of historical transaction data and master data. AI accuracy is highly dependent on data quality&quot; data-ja-html=&quot;&amp;lt;strong&amp;gt;データ整備：&amp;lt;/strong&amp;gt;過去の取引データ、マスタデータの品質を向上させます。AIの精度はデータ品質に大きく依存します&quot;&gt;&lt;strong&gt;データ整備：&lt;/strong&gt;過去の取引データ、マスタデータの品質を向上させます。AIの精度はデータ品質に大きく依存します&lt;/li&gt;
+&lt;li data-en-html=&quot;&amp;lt;strong&amp;gt;Phased rollout:&amp;lt;/strong&amp;gt; Based on pilot results, expand the scope of targeted operations and drive adoption across the organization&quot; data-ja-html=&quot;&amp;lt;strong&amp;gt;段階的な展開：&amp;lt;/strong&amp;gt;パイロットの成果を踏まえて対象業務を拡大し、組織全体への定着を図ります&quot;&gt;&lt;strong&gt;段階的な展開：&lt;/strong&gt;パイロットの成果を踏まえて対象業務を拡大し、組織全体への定着を図ります&lt;/li&gt;
+&lt;li data-en-html=&quot;&amp;lt;strong&amp;gt;Talent development:&amp;lt;/strong&amp;gt; It is essential to cultivate personnel who can effectively leverage AI and to design a human-AI collaboration framework&quot; data-ja-html=&quot;&amp;lt;strong&amp;gt;人材育成：&amp;lt;/strong&amp;gt;AIを使いこなせる人材の育成と、AIと人間の協働体制の設計が不可欠です&quot;&gt;&lt;strong&gt;人材育成：&lt;/strong&gt;AIを使いこなせる人材の育成と、AIと人間の協働体制の設計が不可欠です&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p data-en=&quot;An important caveat: AI agents are not infallible. Designing a Human-in-the-Loop framework where humans make final decisions is critical. Additionally, ensuring the security of transaction data and compliance with data protection regulations in each jurisdiction must not be overlooked.&quot; data-ja=&quot;注意すべき点として、AIエージェントは万能ではありません。最終判断は人間が行う「Human in the Loop」の設計が重要です。また、取引情報のセキュリティ確保と、各国の個人情報保護規制への対応も忘れてはなりません。&quot;&gt;注意すべき点として、AIエージェントは万能ではありません。最終判断は人間が行う「Human in the Loop」の設計が重要です。また、取引情報のセキュリティ確保と、各国の個人情報保護規制への対応も忘れてはなりません。&lt;/p&gt;
+&lt;h2 class=&quot;text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4&quot; data-en=&quot;6. Conclusion&quot; data-ja=&quot;6. まとめ&quot;&gt;6. まとめ&lt;/h2&gt;
+&lt;p data-en=&quot;The delayed DX of trade operations stems from operational complexity and frequent exception handling. However, the emergence of AI agents has opened the door to digitalization in areas previously considered too difficult to automate.&quot; data-ja=&quot;貿易業務のDXが遅れている背景には、業務の複雑性と例外処理の多さがあります。しかし、AIエージェントの登場により、これまで自動化が困難だった領域にもデジタル化の道が開かれました。&quot;&gt;貿易業務のDXが遅れている背景には、業務の複雑性と例外処理の多さがあります。しかし、AIエージェントの登場により、これまで自動化が困難だった領域にもデジタル化の道が開かれました。&lt;/p&gt;
+&lt;p data-en=&quot;To maintain and strengthen the competitiveness of trading companies, it is essential to pursue business process redesign and AI adoption as an integrated initiative, rather than merely implementing tools. If you are interested in trade DX, please do not hesitate to contact us.&quot; data-ja=&quot;商社の競争力を維持・強化するためには、単なるツール導入ではなく、業務プロセスの再設計とAI活用を一体的に進めることが不可欠です。貿易DXに関心をお持ちの方は、ぜひお気軽にご相談ください。&quot;&gt;商社の競争力を維持・強化するためには、単なるツール導入ではなく、業務プロセスの再設計とAI活用を一体的に進めることが不可欠です。貿易DXに関心をお持ちの方は、ぜひお気軽にご相談ください。&lt;/p&gt;
+&lt;/article&gt;
+ CTA 
+&lt;div class=&quot;mt-14 bg-navy rounded-sm p-8 md:p-10 text-center&quot;&gt;
+&lt;p class=&quot;serif text-[1.4rem] font-medium text-white mb-3&quot; data-en=&quot;Tell Us About Your DX Challenges&quot; data-ja=&quot;DXに関するお悩みをお聞かせください&quot;&gt;DXに関するお悩みをお聞かせください&lt;/p&gt;
+&lt;p class=&quot;text-[.82rem] text-white/65 mb-6&quot; data-en=&quot;Free initial consultation / Online available / Early-stage inquiries welcome&quot; data-ja=&quot;初回ヒアリング無料 / オンライン対応可 / 構想段階からの相談歓迎&quot;&gt;初回ヒアリング無料 / オンライン対応可 / 構想段階からの相談歓迎&lt;/p&gt;
+&lt;a class=&quot;display inline-block text-[.82rem] font-medium text-navy bg-gold px-8 py-3.5 rounded-sm tracking-wider hover:bg-gold-mid transition-colors&quot; data-en=&quot;Contact Us&quot; data-ja=&quot;相談する&quot; href=&quot;https://wingconsulting.org/#contact&quot;&gt;相談する&lt;/a&gt;
+&lt;/div&gt;
+ Related Articles 
+&lt;div class=&quot;mt-16&quot;&gt;
+&lt;p class=&quot;display text-[.65rem] font-medium tracking-[.18em] uppercase text-gold mb-4&quot;&gt;Related Articles&lt;/p&gt;
+&lt;div class=&quot;grid md:grid-cols-2 gap-4&quot;&gt;
+&lt;a class=&quot;group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors&quot; data-ja-html='&amp;lt;p class=&quot;display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2&quot;&amp;gt;DX Strategy&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot; data-en=&quot;What Is DX Consulting? How to Choose the Right Partner and Succeed&quot; data-ja=&quot;DXコンサルティングとは？失敗しない選び方と成功のポイント&quot;&amp;gt;DXコンサルティングとは？失敗しない選び方と成功のポイント&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&amp;gt;2026.03.25&amp;lt;/p&amp;gt;' data-en-html='&amp;lt;p class=&quot;display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2&quot;&amp;gt;DX Strategy&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot; data-en=&quot;What Is DX Consulting? How to Choose the Right Partner and Succeed&quot; data-ja=&quot;DXコンサルティングとは？失敗しない選び方と成功のポイント&quot;&amp;gt;DXコンサルティングとは？失敗しない選び方と成功のポイント&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&amp;gt;2026.03.25&amp;lt;/p&amp;gt;' href=&quot;/blog/dx-consulting-guide&quot;&gt;
+&lt;p class=&quot;display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2&quot;&gt;DX Strategy&lt;/p&gt;
+&lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot; data-en=&quot;What Is DX Consulting? How to Choose the Right Partner and Succeed&quot; data-ja=&quot;DXコンサルティングとは？失敗しない選び方と成功のポイント&quot;&gt;DXコンサルティングとは？失敗しない選び方と成功のポイント&lt;/p&gt;
+&lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&gt;2026.03.25&lt;/p&gt;
+&lt;/a&gt;
+&lt;a class=&quot;group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors&quot; data-ja-html='&amp;lt;p class=&quot;display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2&quot;&amp;gt;Compliance&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot; data-en=&quot;A Practical Guide to PFAS Regulations and chemSHERPA Compliance&quot; data-ja=&quot;PFAS規制とchemSHERPA対応の実務ガイド&quot;&amp;gt;PFAS規制とchemSHERPA対応の実務ガイド&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&amp;gt;2026.03.25&amp;lt;/p&amp;gt;' data-en-html='&amp;lt;p class=&quot;display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2&quot;&amp;gt;Compliance&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot; data-en=&quot;A Practical Guide to PFAS Regulations and chemSHERPA Compliance&quot; data-ja=&quot;PFAS規制とchemSHERPA対応の実務ガイド&quot;&amp;gt;PFAS規制とchemSHERPA対応の実務ガイド&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&amp;gt;2026.03.25&amp;lt;/p&amp;gt;' href=&quot;/blog/pfas-chemsherpa-guide&quot;&gt;
+&lt;p class=&quot;display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2&quot;&gt;Compliance&lt;/p&gt;
+&lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot; data-en=&quot;A Practical Guide to PFAS Regulations and chemSHERPA Compliance&quot; data-ja=&quot;PFAS規制とchemSHERPA対応の実務ガイド&quot;&gt;PFAS規制とchemSHERPA対応の実務ガイド&lt;/p&gt;
+&lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&gt;2026.03.25&lt;/p&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;">
+<p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3" data-en="Trade DX" data-ja="Trade DX" data-en="Trade DX">Trade DX</p>
+<h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4" data-en="AI Agents: The Key to Trade DX. How Automation Is Transforming the Future of Trading Companies" data-ja="貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来" data-en="貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来">貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来</h1>
+<div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2" data-ja-html='&lt;time datetime="2026-03-25"&gt;2026.03.25&lt;/time&gt;
+&lt;span data-en="Wing Editorial Team" data-ja="Wing編集部" data-en="Wing Editorial"&gt;Wing編集部&lt;/span&gt;' data-en-html='&lt;time datetime="2026-03-25"&gt;2026.03.25&lt;/time&gt;
+&lt;span data-en="Wing Editorial Team" data-ja="Wing編集部" data-en="Wing Editorial"&gt;Wing編集部&lt;/span&gt;'>
+<time datetime="2026-03-25">2026.03.25</time>
+<span data-en="Wing Editorial Team" data-ja="Wing編集部" data-en="Wing Editorial">Wing編集部</span>
+</div>
+<div class="gold-rule mb-10"></div>
+<article class="text-[.9rem] text-ink leading-[2] max-w-none">
+<h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4" data-en="1. Why Trade DX Remains Stalled" data-ja="1. なぜ貿易業務のDXが進まないのか" data-en="1. なぜ貿易業務のDXが進まないのか">1. なぜ貿易業務のDXが進まないのか</h2>
+<p data-en="While the importance of DX is widely recognized among trading companies, the actual digitalization of operations is said to lag behind other industries. The primary reason lies in the inherent complexity of trade operations." data-ja="商社や貿易会社において、DX推進の重要性は広く認識されているものの、実際の業務デジタル化は他業界に比べて遅れていると言われています。その最大の要因は、貿易業務特有の複雑性にあります。" data-en="商社や貿易会社において、DX推進の重要性は広く認識されているものの、実際の業務デジタル化は他業界に比べて遅れていると言われています。その最大の要因は、貿易業務特有の複雑性にあります。">商社や貿易会社において、DX推進の重要性は広く認識されているものの、実際の業務デジタル化は他業界に比べて遅れていると言われています。その最大の要因は、貿易業務特有の複雑性にあります。</p>
+<p data-en="Trade transactions encompass a wide range of processes, including inquiry handling, quotation preparation, purchase and sales order management, shipping document preparation, customs procedures, foreign exchange management, and cost calculation. Moreover, each counterparty requires different document formats, multiple languages, and compliance with various national regulations. Many of these tasks still rely on Excel, email, and fax, and remain heavily dependent on individual expertise." data-ja="貿易取引には、引合対応、見積作成、発注・受注管理、船積書類の作成、通関手続き、為替管理、原価計算など、多岐にわたるプロセスが存在します。さらに、取引先ごとに異なるフォーマットの書類、複数の言語、各国の規制対応が求められます。こうした業務の多くは依然としてExcelやメール、FAXに依存しており、属人化が進んでいるのが現状です。" data-en="貿易取引には、引合対応、見積作成、発注・受注管理、船積書類の作成、通関手続き、為替管理、原価計算など、多岐にわたるプロセスが存在します。さらに、取引先ごとに異なるフォーマットの書類、複数の言語、各国の規制対応が求められます。こうした業務の多くは依然としてExcelやメール、FAXに依存しており、属人化が進んでいるのが現状です。">貿易取引には、引合対応、見積作成、発注・受注管理、船積書類の作成、通関手続き、為替管理、原価計算など、多岐にわたるプロセスが存在します。さらに、取引先ごとに異なるフォーマットの書類、複数の言語、各国の規制対応が求められます。こうした業務の多くは依然としてExcelやメール、FAXに依存しており、属人化が進んでいるのが現状です。</p>
+<p data-en="Furthermore, trade operations involve frequent exception handling that simple automation tools cannot address. This has fostered the perception that trade DX is difficult, significantly delaying transformation efforts." data-ja="加えて、貿易業務は例外処理が多く、単純な自動化ツールでは対応しきれないケースが頻発します。これが「貿易DXは難しい」という認識を生み、変革を遅らせている大きな要因です。" data-en="加えて、貿易業務は例外処理が多く、単純な自動化ツールでは対応しきれないケースが頻発します。これが「貿易DXは難しい」という認識を生み、変革を遅らせている大きな要因です。">加えて、貿易業務は例外処理が多く、単純な自動化ツールでは対応しきれないケースが頻発します。これが「貿易DXは難しい」という認識を生み、変革を遅らせている大きな要因です。</p>
+<h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4" data-en="2. What Are AI Agents? How They Differ from Traditional RPA" data-ja="2. AIエージェントとは？従来のRPAとの違い" data-en="2. AIエージェントとは？従来のRPAとの違い">2. AIエージェントとは？従来のRPAとの違い</h2>
+<p data-en="An AI agent is an AI system built on large language models (LLMs) that autonomously executes tasks based on human instructions. The critical difference from traditional RPA (Robotic Process Automation) lies in its decision-making capability and flexibility." data-ja="AIエージェントとは、大規模言語モデル（LLM）を基盤とし、人間の指示に基づいて自律的にタスクを遂行するAIシステムです。従来のRPA（Robotic Process Automation）との決定的な違いは、「判断力」と「柔軟性」にあります。" data-en="AIエージェントとは、大規模言語モデル（LLM）を基盤とし、人間の指示に基づいて自律的にタスクを遂行するAIシステムです。従来のRPA（Robotic Process Automation）との決定的な違いは、「判断力」と「柔軟性」にあります。">AIエージェントとは、大規模言語モデル（LLM）を基盤とし、人間の指示に基づいて自律的にタスクを遂行するAIシステムです。従来のRPA（Robotic Process Automation）との決定的な違いは、「判断力」と「柔軟性」にあります。</p>
+<p data-en="RPA automates routine tasks by following predefined rules but cannot handle processes that deviate from those rules. AI agents, on the other hand, understand natural language and make context-aware decisions. For example, they can analyze incoming emails from counterparties to determine appropriate responses, or extract data from non-standardized documents." data-ja="RPAは事前に定義されたルールに従って定型作業を自動化しますが、ルールから外れた処理には対応できません。一方、AIエージェントは自然言語を理解し、文脈に応じた判断を行えます。たとえば、取引先から届いたメールの内容を解析して適切な対応を判断したり、不定形の書類からデータを抽出したりすることが可能です。" data-en="RPAは事前に定義されたルールに従って定型作業を自動化しますが、ルールから外れた処理には対応できません。一方、AIエージェントは自然言語を理解し、文脈に応じた判断を行えます。たとえば、取引先から届いたメールの内容を解析して適切な対応を判断したり、不定形の書類からデータを抽出したりすることが可能です。">RPAは事前に定義されたルールに従って定型作業を自動化しますが、ルールから外れた処理には対応できません。一方、AIエージェントは自然言語を理解し、文脈に応じた判断を行えます。たとえば、取引先から届いたメールの内容を解析して適切な対応を判断したり、不定形の書類からデータを抽出したりすることが可能です。</p>
+<p data-en="In domains like trade operations, where exception handling is frequent and formats are not standardized, the flexibility of AI agents proves highly effective. Even for tasks where RPA could only achieve a 30% automation rate, AI agents can push automation to 70-80%." data-ja="貿易業務のように例外処理が多くフォーマットが統一されていない領域では、AIエージェントの柔軟性が大きな威力を発揮します。RPAでは自動化率30%が限界だった業務でも、AIエージェントを活用すれば70〜80%まで自動化できるケースもあります。" data-en="貿易業務のように例外処理が多くフォーマットが統一されていない領域では、AIエージェントの柔軟性が大きな威力を発揮します。RPAでは自動化率30%が限界だった業務でも、AIエージェントを活用すれば70〜80%まで自動化できるケースもあります。">貿易業務のように例外処理が多くフォーマットが統一されていない領域では、AIエージェントの柔軟性が大きな威力を発揮します。RPAでは自動化率30%が限界だった業務でも、AIエージェントを活用すれば70〜80%まで自動化できるケースもあります。</p>
+<!-- DIAGRAM: RPA vs AIエージェント comparison -->
+<div class="diag-wrap" data-ja-html='&lt;div data-en="RPA vs AI Agent — Comparison" data-ja="RPA vs AIエージェント — 比較" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;"&gt;RPA vs AIエージェント — 比較&lt;/div&gt;
+&lt;div class="diag-compare-row"&gt;
+&lt;div class="diag-compare-box rpa"&gt;
+&lt;div class="box-head" data-en="RPA (Traditional)" data-ja="RPA（従来型）"&gt;RPA（従来型）&lt;/div&gt;
+&lt;div class="box-badge" data-en="Simple Rules" data-ja="単純ルール"&gt;単純ルール&lt;/div&gt;
+&lt;ul&gt;
+&lt;li data-en="Executes only predefined rules" data-ja="事前定義されたルールのみ実行"&gt;事前定義されたルールのみ実行&lt;/li&gt;
+&lt;li data-en="Cannot adapt to format changes" data-ja="フォーマット変化に対応できない"&gt;フォーマット変化に対応できない&lt;/li&gt;
+&lt;li data-en="Exceptions require manual human handling" data-ja="例外処理は人間が手動対応"&gt;例外処理は人間が手動対応&lt;/li&gt;
+&lt;li data-en="Cannot understand natural language" data-ja="自然言語の理解は不可"&gt;自然言語の理解は不可&lt;/li&gt;
+&lt;li data-en="Maximum automation rate: approx. 30%" data-ja="自動化率の上限：約30%"&gt;自動化率の上限：約30%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="diag-arrow-mid"&gt;→&lt;/div&gt;
+&lt;div class="diag-compare-box ai"&gt;
+&lt;div class="box-head" data-en="AI Agent (Next Generation)" data-ja="AIエージェント（次世代）"&gt;AIエージェント（次世代）&lt;/div&gt;
+&lt;div class="box-badge" data-en="Decide, Execute, Learn" data-ja="判断・実行・学習"&gt;判断・実行・学習&lt;/div&gt;
+&lt;ul&gt;
+&lt;li data-en="Understands natural language and decides by context" data-ja="自然言語を理解し文脈で判断"&gt;自然言語を理解し文脈で判断&lt;/li&gt;
+&lt;li data-en="Flexibly handles non-standardized formats" data-ja="非定型フォーマットに柔軟対応"&gt;非定型フォーマットに柔軟対応&lt;/li&gt;
+&lt;li data-en="Autonomously decides and executes exception handling" data-ja="例外処理を自律的に判断・実行"&gt;例外処理を自律的に判断・実行&lt;/li&gt;
+&lt;li data-en="Continuously learns from historical data" data-ja="過去データから継続的に学習"&gt;過去データから継続的に学習&lt;/li&gt;
+&lt;li data-en="Automation rate: up to 70-80%" data-ja="自動化率：70〜80%まで可能" data-en="自動化率：70〜80%まで可能"&gt;自動化率：70〜80%まで可能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;' data-en-html='&lt;div data-en="RPA vs AI Agent — Comparison" data-ja="RPA vs AIエージェント — 比較" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;"&gt;RPA vs AIエージェント — 比較&lt;/div&gt;
+&lt;div class="diag-compare-row"&gt;
+&lt;div class="diag-compare-box rpa"&gt;
+&lt;div class="box-head" data-en="RPA (Traditional)" data-ja="RPA（従来型）"&gt;RPA（従来型）&lt;/div&gt;
+&lt;div class="box-badge" data-en="Simple Rules" data-ja="単純ルール"&gt;単純ルール&lt;/div&gt;
+&lt;ul&gt;
+&lt;li data-en="Executes only predefined rules" data-ja="事前定義されたルールのみ実行"&gt;事前定義されたルールのみ実行&lt;/li&gt;
+&lt;li data-en="Cannot adapt to format changes" data-ja="フォーマット変化に対応できない"&gt;フォーマット変化に対応できない&lt;/li&gt;
+&lt;li data-en="Exceptions require manual human handling" data-ja="例外処理は人間が手動対応"&gt;例外処理は人間が手動対応&lt;/li&gt;
+&lt;li data-en="Cannot understand natural language" data-ja="自然言語の理解は不可"&gt;自然言語の理解は不可&lt;/li&gt;
+&lt;li data-en="Maximum automation rate: approx. 30%" data-ja="自動化率の上限：約30%"&gt;自動化率の上限：約30%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="diag-arrow-mid"&gt;→&lt;/div&gt;
+&lt;div class="diag-compare-box ai"&gt;
+&lt;div class="box-head" data-en="AI Agent (Next Generation)" data-ja="AIエージェント（次世代）"&gt;AIエージェント（次世代）&lt;/div&gt;
+&lt;div class="box-badge" data-en="Decide, Execute, Learn" data-ja="判断・実行・学習"&gt;判断・実行・学習&lt;/div&gt;
+&lt;ul&gt;
+&lt;li data-en="Understands natural language and decides by context" data-ja="自然言語を理解し文脈で判断"&gt;自然言語を理解し文脈で判断&lt;/li&gt;
+&lt;li data-en="Flexibly handles non-standardized formats" data-ja="非定型フォーマットに柔軟対応"&gt;非定型フォーマットに柔軟対応&lt;/li&gt;
+&lt;li data-en="Autonomously decides and executes exception handling" data-ja="例外処理を自律的に判断・実行"&gt;例外処理を自律的に判断・実行&lt;/li&gt;
+&lt;li data-en="Continuously learns from historical data" data-ja="過去データから継続的に学習"&gt;過去データから継続的に学習&lt;/li&gt;
+&lt;li data-en="Automation rate: up to 70-80%" data-ja="自動化率：70〜80%まで可能" data-en="自動化率：70〜80%まで可能"&gt;自動化率：70〜80%まで可能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;'>
+<div data-en="RPA vs AI Agent — Comparison" data-ja="RPA vs AIエージェント — 比較" data-en="RPA vs AIエージェント — 比較" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;">RPA vs AIエージェント — 比較</div>
+<div class="diag-compare-row" data-ja-html='&lt;div class="diag-compare-box rpa"&gt;
+&lt;div class="box-head" data-en="RPA (Traditional)" data-ja="RPA（従来型）"&gt;RPA（従来型）&lt;/div&gt;
+&lt;div class="box-badge" data-en="Simple Rules" data-ja="単純ルール"&gt;単純ルール&lt;/div&gt;
+&lt;ul&gt;
+&lt;li data-en="Executes only predefined rules" data-ja="事前定義されたルールのみ実行"&gt;事前定義されたルールのみ実行&lt;/li&gt;
+&lt;li data-en="Cannot adapt to format changes" data-ja="フォーマット変化に対応できない"&gt;フォーマット変化に対応できない&lt;/li&gt;
+&lt;li data-en="Exceptions require manual human handling" data-ja="例外処理は人間が手動対応"&gt;例外処理は人間が手動対応&lt;/li&gt;
+&lt;li data-en="Cannot understand natural language" data-ja="自然言語の理解は不可"&gt;自然言語の理解は不可&lt;/li&gt;
+&lt;li data-en="Maximum automation rate: approx. 30%" data-ja="自動化率の上限：約30%"&gt;自動化率の上限：約30%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="diag-arrow-mid"&gt;→&lt;/div&gt;
+&lt;div class="diag-compare-box ai"&gt;
+&lt;div class="box-head" data-en="AI Agent (Next Generation)" data-ja="AIエージェント（次世代）"&gt;AIエージェント（次世代）&lt;/div&gt;
+&lt;div class="box-badge" data-en="Decide, Execute, Learn" data-ja="判断・実行・学習"&gt;判断・実行・学習&lt;/div&gt;
+&lt;ul&gt;
+&lt;li data-en="Understands natural language and decides by context" data-ja="自然言語を理解し文脈で判断"&gt;自然言語を理解し文脈で判断&lt;/li&gt;
+&lt;li data-en="Flexibly handles non-standardized formats" data-ja="非定型フォーマットに柔軟対応"&gt;非定型フォーマットに柔軟対応&lt;/li&gt;
+&lt;li data-en="Autonomously decides and executes exception handling" data-ja="例外処理を自律的に判断・実行"&gt;例外処理を自律的に判断・実行&lt;/li&gt;
+&lt;li data-en="Continuously learns from historical data" data-ja="過去データから継続的に学習"&gt;過去データから継続的に学習&lt;/li&gt;
+&lt;li data-en="Automation rate: up to 70-80%" data-ja="自動化率：70〜80%まで可能" data-en="自動化率：70〜80%まで可能"&gt;自動化率：70〜80%まで可能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;' data-en-html='&lt;div class="diag-compare-box rpa"&gt;
+&lt;div class="box-head" data-en="RPA (Traditional)" data-ja="RPA（従来型）"&gt;RPA（従来型）&lt;/div&gt;
+&lt;div class="box-badge" data-en="Simple Rules" data-ja="単純ルール"&gt;単純ルール&lt;/div&gt;
+&lt;ul&gt;
+&lt;li data-en="Executes only predefined rules" data-ja="事前定義されたルールのみ実行"&gt;事前定義されたルールのみ実行&lt;/li&gt;
+&lt;li data-en="Cannot adapt to format changes" data-ja="フォーマット変化に対応できない"&gt;フォーマット変化に対応できない&lt;/li&gt;
+&lt;li data-en="Exceptions require manual human handling" data-ja="例外処理は人間が手動対応"&gt;例外処理は人間が手動対応&lt;/li&gt;
+&lt;li data-en="Cannot understand natural language" data-ja="自然言語の理解は不可"&gt;自然言語の理解は不可&lt;/li&gt;
+&lt;li data-en="Maximum automation rate: approx. 30%" data-ja="自動化率の上限：約30%"&gt;自動化率の上限：約30%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="diag-arrow-mid"&gt;→&lt;/div&gt;
+&lt;div class="diag-compare-box ai"&gt;
+&lt;div class="box-head" data-en="AI Agent (Next Generation)" data-ja="AIエージェント（次世代）"&gt;AIエージェント（次世代）&lt;/div&gt;
+&lt;div class="box-badge" data-en="Decide, Execute, Learn" data-ja="判断・実行・学習"&gt;判断・実行・学習&lt;/div&gt;
+&lt;ul&gt;
+&lt;li data-en="Understands natural language and decides by context" data-ja="自然言語を理解し文脈で判断"&gt;自然言語を理解し文脈で判断&lt;/li&gt;
+&lt;li data-en="Flexibly handles non-standardized formats" data-ja="非定型フォーマットに柔軟対応"&gt;非定型フォーマットに柔軟対応&lt;/li&gt;
+&lt;li data-en="Autonomously decides and executes exception handling" data-ja="例外処理を自律的に判断・実行"&gt;例外処理を自律的に判断・実行&lt;/li&gt;
+&lt;li data-en="Continuously learns from historical data" data-ja="過去データから継続的に学習"&gt;過去データから継続的に学習&lt;/li&gt;
+&lt;li data-en="Automation rate: up to 70-80%" data-ja="自動化率：70〜80%まで可能" data-en="自動化率：70〜80%まで可能"&gt;自動化率：70〜80%まで可能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;'>
+<div class="diag-compare-box rpa" data-ja-html='&lt;div class="box-head" data-en="RPA (Traditional)" data-ja="RPA（従来型）"&gt;RPA（従来型）&lt;/div&gt;
+&lt;div class="box-badge" data-en="Simple Rules" data-ja="単純ルール"&gt;単純ルール&lt;/div&gt;
+&lt;ul&gt;
+&lt;li data-en="Executes only predefined rules" data-ja="事前定義されたルールのみ実行"&gt;事前定義されたルールのみ実行&lt;/li&gt;
+&lt;li data-en="Cannot adapt to format changes" data-ja="フォーマット変化に対応できない"&gt;フォーマット変化に対応できない&lt;/li&gt;
+&lt;li data-en="Exceptions require manual human handling" data-ja="例外処理は人間が手動対応"&gt;例外処理は人間が手動対応&lt;/li&gt;
+&lt;li data-en="Cannot understand natural language" data-ja="自然言語の理解は不可"&gt;自然言語の理解は不可&lt;/li&gt;
+&lt;li data-en="Maximum automation rate: approx. 30%" data-ja="自動化率の上限：約30%" data-en="自動化率の上限：約30%"&gt;自動化率の上限：約30%&lt;/li&gt;
+&lt;/ul&gt;' data-en-html='&lt;div class="box-head" data-en="RPA (Traditional)" data-ja="RPA（従来型）"&gt;RPA（従来型）&lt;/div&gt;
+&lt;div class="box-badge" data-en="Simple Rules" data-ja="単純ルール"&gt;単純ルール&lt;/div&gt;
+&lt;ul&gt;
+&lt;li data-en="Executes only predefined rules" data-ja="事前定義されたルールのみ実行"&gt;事前定義されたルールのみ実行&lt;/li&gt;
+&lt;li data-en="Cannot adapt to format changes" data-ja="フォーマット変化に対応できない"&gt;フォーマット変化に対応できない&lt;/li&gt;
+&lt;li data-en="Exceptions require manual human handling" data-ja="例外処理は人間が手動対応"&gt;例外処理は人間が手動対応&lt;/li&gt;
+&lt;li data-en="Cannot understand natural language" data-ja="自然言語の理解は不可"&gt;自然言語の理解は不可&lt;/li&gt;
+&lt;li data-en="Maximum automation rate: approx. 30%" data-ja="自動化率の上限：約30%" data-en="自動化率の上限：約30%"&gt;自動化率の上限：約30%&lt;/li&gt;
+&lt;/ul&gt;'>
+<div class="box-head" data-en="RPA (Traditional)" data-ja="RPA（従来型）" data-en="RPA（従来型）">RPA（従来型）</div>
+<div class="box-badge" data-en="Simple Rules" data-ja="単純ルール" data-en="単純ルール">単純ルール</div>
+<ul>
+<li data-en="Executes only predefined rules" data-ja="事前定義されたルールのみ実行" data-en="事前定義されたルールのみ実行">事前定義されたルールのみ実行</li>
+<li data-en="Cannot adapt to format changes" data-ja="フォーマット変化に対応できない" data-en="フォーマット変化に対応できない">フォーマット変化に対応できない</li>
+<li data-en="Exceptions require manual human handling" data-ja="例外処理は人間が手動対応" data-en="例外処理は人間が手動対応">例外処理は人間が手動対応</li>
+<li data-en="Cannot understand natural language" data-ja="自然言語の理解は不可" data-en="自然言語の理解は不可">自然言語の理解は不可</li>
+<li data-en="Maximum automation rate: approx. 30%" data-ja="自動化率の上限：約30%" data-en="自動化率の上限：約30%">自動化率の上限：約30%</li>
+</ul>
+</div>
+<div class="diag-arrow-mid">→</div>
+<div class="diag-compare-box ai" data-ja-html='&lt;div class="box-head" data-en="AI Agent (Next Generation)" data-ja="AIエージェント（次世代）"&gt;AIエージェント（次世代）&lt;/div&gt;
+&lt;div class="box-badge" data-en="Decide, Execute, Learn" data-ja="判断・実行・学習"&gt;判断・実行・学習&lt;/div&gt;
+&lt;ul&gt;
+&lt;li data-en="Understands natural language and decides by context" data-ja="自然言語を理解し文脈で判断"&gt;自然言語を理解し文脈で判断&lt;/li&gt;
+&lt;li data-en="Flexibly handles non-standardized formats" data-ja="非定型フォーマットに柔軟対応"&gt;非定型フォーマットに柔軟対応&lt;/li&gt;
+&lt;li data-en="Autonomously decides and executes exception handling" data-ja="例外処理を自律的に判断・実行"&gt;例外処理を自律的に判断・実行&lt;/li&gt;
+&lt;li data-en="Continuously learns from historical data" data-ja="過去データから継続的に学習"&gt;過去データから継続的に学習&lt;/li&gt;
+&lt;li data-en="Automation rate: up to 70-80%" data-ja="自動化率：70〜80%まで可能" data-en="自動化率：70〜80%まで可能"&gt;自動化率：70〜80%まで可能&lt;/li&gt;
+&lt;/ul&gt;' data-en-html='&lt;div class="box-head" data-en="AI Agent (Next Generation)" data-ja="AIエージェント（次世代）"&gt;AIエージェント（次世代）&lt;/div&gt;
+&lt;div class="box-badge" data-en="Decide, Execute, Learn" data-ja="判断・実行・学習"&gt;判断・実行・学習&lt;/div&gt;
+&lt;ul&gt;
+&lt;li data-en="Understands natural language and decides by context" data-ja="自然言語を理解し文脈で判断"&gt;自然言語を理解し文脈で判断&lt;/li&gt;
+&lt;li data-en="Flexibly handles non-standardized formats" data-ja="非定型フォーマットに柔軟対応"&gt;非定型フォーマットに柔軟対応&lt;/li&gt;
+&lt;li data-en="Autonomously decides and executes exception handling" data-ja="例外処理を自律的に判断・実行"&gt;例外処理を自律的に判断・実行&lt;/li&gt;
+&lt;li data-en="Continuously learns from historical data" data-ja="過去データから継続的に学習"&gt;過去データから継続的に学習&lt;/li&gt;
+&lt;li data-en="Automation rate: up to 70-80%" data-ja="自動化率：70〜80%まで可能" data-en="自動化率：70〜80%まで可能"&gt;自動化率：70〜80%まで可能&lt;/li&gt;
+&lt;/ul&gt;'>
+<div class="box-head" data-en="AI Agent (Next Generation)" data-ja="AIエージェント（次世代）" data-en="AIエージェント（次世代）">AIエージェント（次世代）</div>
+<div class="box-badge" data-en="Decide, Execute, Learn" data-ja="判断・実行・学習" data-en="判断・実行・学習">判断・実行・学習</div>
+<ul>
+<li data-en="Understands natural language and decides by context" data-ja="自然言語を理解し文脈で判断" data-en="自然言語を理解し文脈で判断">自然言語を理解し文脈で判断</li>
+<li data-en="Flexibly handles non-standardized formats" data-ja="非定型フォーマットに柔軟対応" data-en="非定型フォーマットに柔軟対応">非定型フォーマットに柔軟対応</li>
+<li data-en="Autonomously decides and executes exception handling" data-ja="例外処理を自律的に判断・実行" data-en="例外処理を自律的に判断・実行">例外処理を自律的に判断・実行</li>
+<li data-en="Continuously learns from historical data" data-ja="過去データから継続的に学習" data-en="過去データから継続的に学習">過去データから継続的に学習</li>
+<li data-en="Automation rate: up to 70-80%" data-ja="自動化率：70〜80%まで可能" data-en="自動化率：70〜80%まで可能">自動化率：70〜80%まで可能</li>
+</ul>
+</div>
+</div>
+</div>
+<p class="diag-caption" data-en="[Figure] Capability Comparison: RPA vs. AI Agent" data-ja="[図] RPAとAIエージェントの能力比較" data-en="[図] RPAとAIエージェントの能力比較">[図] RPAとAIエージェントの能力比較</p>
+<h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4" data-en="3. Practical Applications of AI Agents in Trade Operations" data-ja="3. 貿易業務におけるAIエージェント活用の具体例" data-en="3. 貿易業務におけるAIエージェント活用の具体例">3. 貿易業務におけるAIエージェント活用の具体例</h2>
+<p data-en="AI agents are increasingly being deployed in the following trade operation scenarios." data-ja="AIエージェントは、貿易業務の以下のような場面で活用が進んでいます。" data-en="AIエージェントは、貿易業務の以下のような場面で活用が進んでいます。">AIエージェントは、貿易業務の以下のような場面で活用が進んでいます。</p>
+<ul class="list-disc">
+<li data-en-html="&lt;strong&gt;Automated inquiry email parsing and case registration:&lt;/strong&gt; Analyzes inquiry emails from counterparties and automatically extracts product, quantity, delivery date, and destination for system registration" data-ja-html="&lt;strong&gt;引合メールの自動解析と案件登録：&lt;/strong&gt;取引先からの引合メールを解析し、品目・数量・納期・仕向地などを自動で抽出してシステムに登録" data-en-html="&lt;strong&gt;引合メールの自動解析と案件登録：&lt;/strong&gt;取引先からの引合メールを解析し、品目・数量・納期・仕向地などを自動で抽出してシステムに登録"><strong>引合メールの自動解析と案件登録：</strong>取引先からの引合メールを解析し、品目・数量・納期・仕向地などを自動で抽出してシステムに登録</li>
+<li data-en-html="&lt;strong&gt;Automated cost estimation:&lt;/strong&gt; Automatically generates cost calculations factoring in historical transaction data, current exchange rates, and logistics costs" data-ja-html="&lt;strong&gt;見積原価の自動計算：&lt;/strong&gt;過去の取引データ、現在の為替レート、物流コストを考慮した原価計算を自動生成" data-en-html="&lt;strong&gt;見積原価の自動計算：&lt;/strong&gt;過去の取引データ、現在の為替レート、物流コストを考慮した原価計算を自動生成"><strong>見積原価の自動計算：</strong>過去の取引データ、現在の為替レート、物流コストを考慮した原価計算を自動生成</li>
+<li data-en-html="&lt;strong&gt;Automated shipping document preparation:&lt;/strong&gt; Auto-generates Invoices, Packing Lists, and B/L drafts based on trade terms" data-ja-html="&lt;strong&gt;船積書類の自動作成：&lt;/strong&gt;Invoice、Packing List、B/Lドラフトを取引条件に基づいて自動生成" data-en-html="&lt;strong&gt;船積書類の自動作成：&lt;/strong&gt;Invoice、Packing List、B/Lドラフトを取引条件に基づいて自動生成"><strong>船積書類の自動作成：</strong>Invoice、Packing List、B/Lドラフトを取引条件に基づいて自動生成</li>
+<li data-en-html="&lt;strong&gt;Regulatory and compliance checks:&lt;/strong&gt; Automatically assesses compliance with export control regulations, security trade controls, and import regulations of each country" data-ja-html="&lt;strong&gt;規制・コンプライアンスチェック：&lt;/strong&gt;輸出管理規制、安全保障貿易管理、各国の輸入規制への適合を自動判定" data-en-html="&lt;strong&gt;規制・コンプライアンスチェック：&lt;/strong&gt;輸出管理規制、安全保障貿易管理、各国の輸入規制への適合を自動判定"><strong>規制・コンプライアンスチェック：</strong>輸出管理規制、安全保障貿易管理、各国の輸入規制への適合を自動判定</li>
+<li data-en-html="&lt;strong&gt;Counterparty communication support:&lt;/strong&gt; Handles multilingual inquiries and auto-generates standardized confirmation emails" data-ja-html="&lt;strong&gt;取引先とのコミュニケーション支援：&lt;/strong&gt;多言語での問い合わせ対応や、定型的な確認メールの自動生成" data-en-html="&lt;strong&gt;取引先とのコミュニケーション支援：&lt;/strong&gt;多言語での問い合わせ対応や、定型的な確認メールの自動生成"><strong>取引先とのコミュニケーション支援：</strong>多言語での問い合わせ対応や、定型的な確認メールの自動生成</li>
+</ul>
+<!-- DIAGRAM: 3 use-cases visual table -->
+<div class="diag-wrap" data-ja-html='&lt;div data-en="Key AI Agent Use Cases" data-ja="代表的なAIエージェント活用シーン" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;"&gt;代表的なAIエージェント活用シーン&lt;/div&gt;
+&lt;div class="diag-usecase-row"&gt;
+&lt;div class="diag-usecase-card"&gt;
+&lt;div class="uc-icon"&gt;📄&lt;/div&gt;
+&lt;div class="uc-title" data-en="Document Processing Automation" data-ja="書類処理の自動化"&gt;書類処理の自動化&lt;/div&gt;
+&lt;div class="uc-body" data-en="Automatically parses Invoices, Packing Lists, and B/L drafts from incoming emails and registers them in the system. Handles format differences across counterparties." data-ja="Invoice・PL・B/Lドラフトをメール受信から自動解析し、システムへ登録。取引先ごとのフォーマット差異にも対応。"&gt;Invoice・PL・B/Lドラフトをメール受信から自動解析し、システムへ登録。取引先ごとのフォーマット差異にも対応。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-usecase-card"&gt;
+&lt;div class="uc-icon"&gt;🔢&lt;/div&gt;
+&lt;div class="uc-title" data-en="Automated HS Code Classification" data-ja="HSコード自動判定"&gt;HSコード自動判定&lt;/div&gt;
+&lt;div class="uc-body" data-en="AI suggests optimal HS codes based on product name, specifications, and raw material data. Continuously improves accuracy by referencing past classification data." data-ja="品目名・仕様・原材料情報からAIが最適なHSコードを候補提示。過去判定データを参照し精度を継続的に向上。"&gt;品目名・仕様・原材料情報からAIが最適なHSコードを候補提示。過去判定データを参照し精度を継続的に向上。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-usecase-card"&gt;
+&lt;div class="uc-icon"&gt;🌐&lt;/div&gt;
+&lt;div class="uc-title" data-en="Export Control Screening" data-ja="輸出規制チェック"&gt;輸出規制チェック&lt;/div&gt;
+&lt;div class="uc-body" data-en="Automatically assesses compliance with export controls, security trade management, and national import regulations. Comprehensively evaluates target cargo, destination, and counterparty." data-ja="輸出管理規制・安全保障貿易管理・各国輸入規制への適合を自動判定。対象貨物・仕向地・取引先を総合的に評価。" data-en="輸出管理規制・安全保障貿易管理・各国輸入規制への適合を自動判定。対象貨物・仕向地・取引先を総合的に評価。"&gt;輸出管理規制・安全保障貿易管理・各国輸入規制への適合を自動判定。対象貨物・仕向地・取引先を総合的に評価。&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;' data-en-html='&lt;div data-en="Key AI Agent Use Cases" data-ja="代表的なAIエージェント活用シーン" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;"&gt;代表的なAIエージェント活用シーン&lt;/div&gt;
+&lt;div class="diag-usecase-row"&gt;
+&lt;div class="diag-usecase-card"&gt;
+&lt;div class="uc-icon"&gt;📄&lt;/div&gt;
+&lt;div class="uc-title" data-en="Document Processing Automation" data-ja="書類処理の自動化"&gt;書類処理の自動化&lt;/div&gt;
+&lt;div class="uc-body" data-en="Automatically parses Invoices, Packing Lists, and B/L drafts from incoming emails and registers them in the system. Handles format differences across counterparties." data-ja="Invoice・PL・B/Lドラフトをメール受信から自動解析し、システムへ登録。取引先ごとのフォーマット差異にも対応。"&gt;Invoice・PL・B/Lドラフトをメール受信から自動解析し、システムへ登録。取引先ごとのフォーマット差異にも対応。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-usecase-card"&gt;
+&lt;div class="uc-icon"&gt;🔢&lt;/div&gt;
+&lt;div class="uc-title" data-en="Automated HS Code Classification" data-ja="HSコード自動判定"&gt;HSコード自動判定&lt;/div&gt;
+&lt;div class="uc-body" data-en="AI suggests optimal HS codes based on product name, specifications, and raw material data. Continuously improves accuracy by referencing past classification data." data-ja="品目名・仕様・原材料情報からAIが最適なHSコードを候補提示。過去判定データを参照し精度を継続的に向上。"&gt;品目名・仕様・原材料情報からAIが最適なHSコードを候補提示。過去判定データを参照し精度を継続的に向上。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-usecase-card"&gt;
+&lt;div class="uc-icon"&gt;🌐&lt;/div&gt;
+&lt;div class="uc-title" data-en="Export Control Screening" data-ja="輸出規制チェック"&gt;輸出規制チェック&lt;/div&gt;
+&lt;div class="uc-body" data-en="Automatically assesses compliance with export controls, security trade management, and national import regulations. Comprehensively evaluates target cargo, destination, and counterparty." data-ja="輸出管理規制・安全保障貿易管理・各国輸入規制への適合を自動判定。対象貨物・仕向地・取引先を総合的に評価。" data-en="輸出管理規制・安全保障貿易管理・各国輸入規制への適合を自動判定。対象貨物・仕向地・取引先を総合的に評価。"&gt;輸出管理規制・安全保障貿易管理・各国輸入規制への適合を自動判定。対象貨物・仕向地・取引先を総合的に評価。&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;'>
+<div data-en="Key AI Agent Use Cases" data-ja="代表的なAIエージェント活用シーン" data-en="代表的なAIエージェント活用シーン" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;">代表的なAIエージェント活用シーン</div>
+<div class="diag-usecase-row" data-ja-html='&lt;div class="diag-usecase-card"&gt;
+&lt;div class="uc-icon"&gt;📄&lt;/div&gt;
+&lt;div class="uc-title" data-en="Document Processing Automation" data-ja="書類処理の自動化"&gt;書類処理の自動化&lt;/div&gt;
+&lt;div class="uc-body" data-en="Automatically parses Invoices, Packing Lists, and B/L drafts from incoming emails and registers them in the system. Handles format differences across counterparties." data-ja="Invoice・PL・B/Lドラフトをメール受信から自動解析し、システムへ登録。取引先ごとのフォーマット差異にも対応。"&gt;Invoice・PL・B/Lドラフトをメール受信から自動解析し、システムへ登録。取引先ごとのフォーマット差異にも対応。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-usecase-card"&gt;
+&lt;div class="uc-icon"&gt;🔢&lt;/div&gt;
+&lt;div class="uc-title" data-en="Automated HS Code Classification" data-ja="HSコード自動判定"&gt;HSコード自動判定&lt;/div&gt;
+&lt;div class="uc-body" data-en="AI suggests optimal HS codes based on product name, specifications, and raw material data. Continuously improves accuracy by referencing past classification data." data-ja="品目名・仕様・原材料情報からAIが最適なHSコードを候補提示。過去判定データを参照し精度を継続的に向上。"&gt;品目名・仕様・原材料情報からAIが最適なHSコードを候補提示。過去判定データを参照し精度を継続的に向上。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-usecase-card"&gt;
+&lt;div class="uc-icon"&gt;🌐&lt;/div&gt;
+&lt;div class="uc-title" data-en="Export Control Screening" data-ja="輸出規制チェック"&gt;輸出規制チェック&lt;/div&gt;
+&lt;div class="uc-body" data-en="Automatically assesses compliance with export controls, security trade management, and national import regulations. Comprehensively evaluates target cargo, destination, and counterparty." data-ja="輸出管理規制・安全保障貿易管理・各国輸入規制への適合を自動判定。対象貨物・仕向地・取引先を総合的に評価。" data-en="輸出管理規制・安全保障貿易管理・各国輸入規制への適合を自動判定。対象貨物・仕向地・取引先を総合的に評価。"&gt;輸出管理規制・安全保障貿易管理・各国輸入規制への適合を自動判定。対象貨物・仕向地・取引先を総合的に評価。&lt;/div&gt;
+&lt;/div&gt;' data-en-html='&lt;div class="diag-usecase-card"&gt;
+&lt;div class="uc-icon"&gt;📄&lt;/div&gt;
+&lt;div class="uc-title" data-en="Document Processing Automation" data-ja="書類処理の自動化"&gt;書類処理の自動化&lt;/div&gt;
+&lt;div class="uc-body" data-en="Automatically parses Invoices, Packing Lists, and B/L drafts from incoming emails and registers them in the system. Handles format differences across counterparties." data-ja="Invoice・PL・B/Lドラフトをメール受信から自動解析し、システムへ登録。取引先ごとのフォーマット差異にも対応。"&gt;Invoice・PL・B/Lドラフトをメール受信から自動解析し、システムへ登録。取引先ごとのフォーマット差異にも対応。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-usecase-card"&gt;
+&lt;div class="uc-icon"&gt;🔢&lt;/div&gt;
+&lt;div class="uc-title" data-en="Automated HS Code Classification" data-ja="HSコード自動判定"&gt;HSコード自動判定&lt;/div&gt;
+&lt;div class="uc-body" data-en="AI suggests optimal HS codes based on product name, specifications, and raw material data. Continuously improves accuracy by referencing past classification data." data-ja="品目名・仕様・原材料情報からAIが最適なHSコードを候補提示。過去判定データを参照し精度を継続的に向上。"&gt;品目名・仕様・原材料情報からAIが最適なHSコードを候補提示。過去判定データを参照し精度を継続的に向上。&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="diag-usecase-card"&gt;
+&lt;div class="uc-icon"&gt;🌐&lt;/div&gt;
+&lt;div class="uc-title" data-en="Export Control Screening" data-ja="輸出規制チェック"&gt;輸出規制チェック&lt;/div&gt;
+&lt;div class="uc-body" data-en="Automatically assesses compliance with export controls, security trade management, and national import regulations. Comprehensively evaluates target cargo, destination, and counterparty." data-ja="輸出管理規制・安全保障貿易管理・各国輸入規制への適合を自動判定。対象貨物・仕向地・取引先を総合的に評価。" data-en="輸出管理規制・安全保障貿易管理・各国輸入規制への適合を自動判定。対象貨物・仕向地・取引先を総合的に評価。"&gt;輸出管理規制・安全保障貿易管理・各国輸入規制への適合を自動判定。対象貨物・仕向地・取引先を総合的に評価。&lt;/div&gt;
+&lt;/div&gt;'>
+<div class="diag-usecase-card" data-ja-html='&lt;div class="uc-icon"&gt;📄&lt;/div&gt;
+&lt;div class="uc-title" data-en="Document Processing Automation" data-ja="書類処理の自動化"&gt;書類処理の自動化&lt;/div&gt;
+&lt;div class="uc-body" data-en="Automatically parses Invoices, Packing Lists, and B/L drafts from incoming emails and registers them in the system. Handles format differences across counterparties." data-ja="Invoice・PL・B/Lドラフトをメール受信から自動解析し、システムへ登録。取引先ごとのフォーマット差異にも対応。" data-en="Invoice・PL・B/Lドラフトをメール受信から自動解析し、システムへ登録。取引先ごとのフォーマット差異にも対応。"&gt;Invoice・PL・B/Lドラフトをメール受信から自動解析し、システムへ登録。取引先ごとのフォーマット差異にも対応。&lt;/div&gt;' data-en-html='&lt;div class="uc-icon"&gt;📄&lt;/div&gt;
+&lt;div class="uc-title" data-en="Document Processing Automation" data-ja="書類処理の自動化"&gt;書類処理の自動化&lt;/div&gt;
+&lt;div class="uc-body" data-en="Automatically parses Invoices, Packing Lists, and B/L drafts from incoming emails and registers them in the system. Handles format differences across counterparties." data-ja="Invoice・PL・B/Lドラフトをメール受信から自動解析し、システムへ登録。取引先ごとのフォーマット差異にも対応。" data-en="Invoice・PL・B/Lドラフトをメール受信から自動解析し、システムへ登録。取引先ごとのフォーマット差異にも対応。"&gt;Invoice・PL・B/Lドラフトをメール受信から自動解析し、システムへ登録。取引先ごとのフォーマット差異にも対応。&lt;/div&gt;'>
+<div class="uc-icon">📄</div>
+<div class="uc-title" data-en="Document Processing Automation" data-ja="書類処理の自動化" data-en="書類処理の自動化">書類処理の自動化</div>
+<div class="uc-body" data-en="Automatically parses Invoices, Packing Lists, and B/L drafts from incoming emails and registers them in the system. Handles format differences across counterparties." data-ja="Invoice・PL・B/Lドラフトをメール受信から自動解析し、システムへ登録。取引先ごとのフォーマット差異にも対応。" data-en="Invoice・PL・B/Lドラフトをメール受信から自動解析し、システムへ登録。取引先ごとのフォーマット差異にも対応。">Invoice・PL・B/Lドラフトをメール受信から自動解析し、システムへ登録。取引先ごとのフォーマット差異にも対応。</div>
+</div>
+<div class="diag-usecase-card" data-ja-html='&lt;div class="uc-icon"&gt;🔢&lt;/div&gt;
+&lt;div class="uc-title" data-en="Automated HS Code Classification" data-ja="HSコード自動判定"&gt;HSコード自動判定&lt;/div&gt;
+&lt;div class="uc-body" data-en="AI suggests optimal HS codes based on product name, specifications, and raw material data. Continuously improves accuracy by referencing past classification data." data-ja="品目名・仕様・原材料情報からAIが最適なHSコードを候補提示。過去判定データを参照し精度を継続的に向上。" data-en="品目名・仕様・原材料情報からAIが最適なHSコードを候補提示。過去判定データを参照し精度を継続的に向上。"&gt;品目名・仕様・原材料情報からAIが最適なHSコードを候補提示。過去判定データを参照し精度を継続的に向上。&lt;/div&gt;' data-en-html='&lt;div class="uc-icon"&gt;🔢&lt;/div&gt;
+&lt;div class="uc-title" data-en="Automated HS Code Classification" data-ja="HSコード自動判定"&gt;HSコード自動判定&lt;/div&gt;
+&lt;div class="uc-body" data-en="AI suggests optimal HS codes based on product name, specifications, and raw material data. Continuously improves accuracy by referencing past classification data." data-ja="品目名・仕様・原材料情報からAIが最適なHSコードを候補提示。過去判定データを参照し精度を継続的に向上。" data-en="品目名・仕様・原材料情報からAIが最適なHSコードを候補提示。過去判定データを参照し精度を継続的に向上。"&gt;品目名・仕様・原材料情報からAIが最適なHSコードを候補提示。過去判定データを参照し精度を継続的に向上。&lt;/div&gt;'>
+<div class="uc-icon">🔢</div>
+<div class="uc-title" data-en="Automated HS Code Classification" data-ja="HSコード自動判定" data-en="HSコード自動判定">HSコード自動判定</div>
+<div class="uc-body" data-en="AI suggests optimal HS codes based on product name, specifications, and raw material data. Continuously improves accuracy by referencing past classification data." data-ja="品目名・仕様・原材料情報からAIが最適なHSコードを候補提示。過去判定データを参照し精度を継続的に向上。" data-en="品目名・仕様・原材料情報からAIが最適なHSコードを候補提示。過去判定データを参照し精度を継続的に向上。">品目名・仕様・原材料情報からAIが最適なHSコードを候補提示。過去判定データを参照し精度を継続的に向上。</div>
+</div>
+<div class="diag-usecase-card" data-ja-html='&lt;div class="uc-icon"&gt;🌐&lt;/div&gt;
+&lt;div class="uc-title" data-en="Export Control Screening" data-ja="輸出規制チェック"&gt;輸出規制チェック&lt;/div&gt;
+&lt;div class="uc-body" data-en="Automatically assesses compliance with export controls, security trade management, and national import regulations. Comprehensively evaluates target cargo, destination, and counterparty." data-ja="輸出管理規制・安全保障貿易管理・各国輸入規制への適合を自動判定。対象貨物・仕向地・取引先を総合的に評価。" data-en="輸出管理規制・安全保障貿易管理・各国輸入規制への適合を自動判定。対象貨物・仕向地・取引先を総合的に評価。"&gt;輸出管理規制・安全保障貿易管理・各国輸入規制への適合を自動判定。対象貨物・仕向地・取引先を総合的に評価。&lt;/div&gt;' data-en-html='&lt;div class="uc-icon"&gt;🌐&lt;/div&gt;
+&lt;div class="uc-title" data-en="Export Control Screening" data-ja="輸出規制チェック"&gt;輸出規制チェック&lt;/div&gt;
+&lt;div class="uc-body" data-en="Automatically assesses compliance with export controls, security trade management, and national import regulations. Comprehensively evaluates target cargo, destination, and counterparty." data-ja="輸出管理規制・安全保障貿易管理・各国輸入規制への適合を自動判定。対象貨物・仕向地・取引先を総合的に評価。" data-en="輸出管理規制・安全保障貿易管理・各国輸入規制への適合を自動判定。対象貨物・仕向地・取引先を総合的に評価。"&gt;輸出管理規制・安全保障貿易管理・各国輸入規制への適合を自動判定。対象貨物・仕向地・取引先を総合的に評価。&lt;/div&gt;'>
+<div class="uc-icon">🌐</div>
+<div class="uc-title" data-en="Export Control Screening" data-ja="輸出規制チェック" data-en="輸出規制チェック">輸出規制チェック</div>
+<div class="uc-body" data-en="Automatically assesses compliance with export controls, security trade management, and national import regulations. Comprehensively evaluates target cargo, destination, and counterparty." data-ja="輸出管理規制・安全保障貿易管理・各国輸入規制への適合を自動判定。対象貨物・仕向地・取引先を総合的に評価。" data-en="輸出管理規制・安全保障貿易管理・各国輸入規制への適合を自動判定。対象貨物・仕向地・取引先を総合的に評価。">輸出管理規制・安全保障貿易管理・各国輸入規制への適合を自動判定。対象貨物・仕向地・取引先を総合的に評価。</div>
+</div>
+</div>
+</div>
+<p class="diag-caption" data-en="[Figure] Key Application Areas for AI Agents in Trade Operations" data-ja="[図] 貿易業務におけるAIエージェントの代表的な活用領域" data-en="[図] 貿易業務におけるAIエージェントの代表的な活用領域">[図] 貿易業務におけるAIエージェントの代表的な活用領域</p>
+<h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4" data-en="4. BorderFlow AI: A Real-World Trade Automation Case Study" data-ja="4. BorderFlow AI による貿易業務自動化の実例" data-en="4. BorderFlow AI による貿易業務自動化の実例">4. BorderFlow AI による貿易業務自動化の実例</h2>
+<p data-en="BorderFlow AI, developed by Wing, is an AI agent platform specialized for trade operations. Co-designed by consultants with deep trading company expertise and AI engineers, it delivers production-grade automation for real-world trade workflows." data-ja="Wingが開発した「BorderFlow AI」は、貿易業務に特化したAIエージェントプラットフォームです。商社の実務を深く理解したコンサルタントとAIエンジニアが共同で設計し、貿易実務の現場で実際に使えるレベルの自動化を実現しています。" data-en="Wingが開発した「BorderFlow AI」は、貿易業務に特化したAIエージェントプラットフォームです。商社の実務を深く理解したコンサルタントとAIエンジニアが共同で設計し、貿易実務の現場で実際に使えるレベルの自動化を実現しています。">Wingが開発した「BorderFlow AI」は、貿易業務に特化したAIエージェントプラットフォームです。商社の実務を深く理解したコンサルタントとAIエンジニアが共同で設計し、貿易実務の現場で実際に使えるレベルの自動化を実現しています。</p>
+<p data-en="The key strength of BorderFlow AI is its ability to automate the entire flow from inquiry receipt through cost calculation to quotation preparation end-to-end. The AI analyzes inquiry content received via email, automatically calculates costs by referencing similar past transactions, and generates a draft quotation. Staff only need to review and fine-tune the output, reducing what previously took hours to just minutes." data-ja="BorderFlow AIの特徴は、引合受信から原価計算、見積作成までのフローをエンドツーエンドで自動化できる点にあります。取引先からメールで届いた引合内容をAIが解析し、過去の類似取引データを参照しながら原価を自動算出。担当者は生成された見積ドラフトを確認・微調整するだけで、従来数時間かかっていた作業を数十分に短縮できます。" data-en="BorderFlow AIの特徴は、引合受信から原価計算、見積作成までのフローをエンドツーエンドで自動化できる点にあります。取引先からメールで届いた引合内容をAIが解析し、過去の類似取引データを参照しながら原価を自動算出。担当者は生成された見積ドラフトを確認・微調整するだけで、従来数時間かかっていた作業を数十分に短縮できます。">BorderFlow AIの特徴は、引合受信から原価計算、見積作成までのフローをエンドツーエンドで自動化できる点にあります。取引先からメールで届いた引合内容をAIが解析し、過去の類似取引データを参照しながら原価を自動算出。担当者は生成された見積ドラフトを確認・微調整するだけで、従来数時間かかっていた作業を数十分に短縮できます。</p>
+<p data-en="A mid-sized trading company achieved a roughly 60% reduction in inquiry handling time after deploying BorderFlow AI, shortening the average quotation turnaround from two days to half a day. Additionally, by accumulating previously person-dependent cost calculation logic in the system, the company mitigated risks associated with staff transfers and turnover." data-ja="ある中堅商社では、BorderFlow AIの導入により引合対応にかかる時間を約60%削減し、見積回答のリードタイムを平均2日から半日に短縮することに成功しました。また、属人化していた原価計算のロジックがシステムに蓄積されることで、担当者の異動・退職リスクにも対応できるようになりました。" data-en="ある中堅商社では、BorderFlow AIの導入により引合対応にかかる時間を約60%削減し、見積回答のリードタイムを平均2日から半日に短縮することに成功しました。また、属人化していた原価計算のロジックがシステムに蓄積されることで、担当者の異動・退職リスクにも対応できるようになりました。">ある中堅商社では、BorderFlow AIの導入により引合対応にかかる時間を約60%削減し、見積回答のリードタイムを平均2日から半日に短縮することに成功しました。また、属人化していた原価計算のロジックがシステムに蓄積されることで、担当者の異動・退職リスクにも対応できるようになりました。</p>
+<!-- DIAGRAM: BorderFlow AI process flow -->
+<div class="diag-wrap" data-ja-html="&lt;div data-en=&quot;BorderFlow AI — Processing Flow&quot; data-ja=&quot;BorderFlow AI — 処理フロー&quot; style=&quot;font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;&quot;&gt;BorderFlow AI — 処理フロー&lt;/div&gt;
+&lt;div class=&quot;diag-flow-row&quot;&gt;
+&lt;div class=&quot;diag-flow-step&quot; data-en-html='📥&amp;lt;br&amp;gt;Document Receipt&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;Email / Portal&amp;lt;/span&amp;gt;' data-ja-html='📥&amp;lt;br&amp;gt;書類受取&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;メール・ポータル&amp;lt;/span&amp;gt;'&gt;📥&lt;br/&gt;書類受取&lt;br/&gt;&lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&gt;メール・ポータル&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-flow-arrow&quot;&gt;→&lt;/div&gt;
+&lt;div class=&quot;diag-flow-step&quot; data-en-html='🔍&amp;lt;br&amp;gt;OCR Analysis&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;Non-standard Format Support&amp;lt;/span&amp;gt;' data-ja-html='🔍&amp;lt;br&amp;gt;OCR解析&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;非定型フォーマット対応&amp;lt;/span&amp;gt;'&gt;🔍&lt;br/&gt;OCR解析&lt;br/&gt;&lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&gt;非定型フォーマット対応&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-flow-arrow&quot;&gt;→&lt;/div&gt;
+&lt;div class=&quot;diag-flow-step&quot; data-en-html='🤖&amp;lt;br&amp;gt;AI Decision&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;HS Code / Regulation / Cost&amp;lt;/span&amp;gt;' data-ja-html='🤖&amp;lt;br&amp;gt;AI判断&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;HSコード・規制・原価&amp;lt;/span&amp;gt;'&gt;🤖&lt;br/&gt;AI判断&lt;br/&gt;&lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&gt;HSコード・規制・原価&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-flow-arrow&quot;&gt;→&lt;/div&gt;
+&lt;div class=&quot;diag-flow-step&quot; data-en-html='📋&amp;lt;br&amp;gt;Customs Filing&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;Auto-entry to NACCS&amp;lt;/span&amp;gt;' data-ja-html='📋&amp;lt;br&amp;gt;通関申請&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;NACCSへ自動入力&amp;lt;/span&amp;gt;'&gt;📋&lt;br/&gt;通関申請&lt;br/&gt;&lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&gt;NACCSへ自動入力&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-flow-arrow&quot;&gt;→&lt;/div&gt;
+&lt;div class=&quot;diag-flow-step done&quot; data-en-html='✅&amp;lt;br&amp;gt;Complete&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;Staff performs final review only&amp;lt;/span&amp;gt;' data-ja-html='✅&amp;lt;br&amp;gt;完了&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;担当者が最終確認のみ&amp;lt;/span&amp;gt;'&gt;✅&lt;br/&gt;完了&lt;br/&gt;&lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&gt;担当者が最終確認のみ&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;" data-en-html="&lt;div data-en=&quot;BorderFlow AI — Processing Flow&quot; data-ja=&quot;BorderFlow AI — 処理フロー&quot; style=&quot;font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;&quot;&gt;BorderFlow AI — 処理フロー&lt;/div&gt;
+&lt;div class=&quot;diag-flow-row&quot;&gt;
+&lt;div class=&quot;diag-flow-step&quot; data-en-html='📥&amp;lt;br&amp;gt;Document Receipt&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;Email / Portal&amp;lt;/span&amp;gt;' data-ja-html='📥&amp;lt;br&amp;gt;書類受取&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;メール・ポータル&amp;lt;/span&amp;gt;'&gt;📥&lt;br/&gt;書類受取&lt;br/&gt;&lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&gt;メール・ポータル&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-flow-arrow&quot;&gt;→&lt;/div&gt;
+&lt;div class=&quot;diag-flow-step&quot; data-en-html='🔍&amp;lt;br&amp;gt;OCR Analysis&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;Non-standard Format Support&amp;lt;/span&amp;gt;' data-ja-html='🔍&amp;lt;br&amp;gt;OCR解析&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;非定型フォーマット対応&amp;lt;/span&amp;gt;'&gt;🔍&lt;br/&gt;OCR解析&lt;br/&gt;&lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&gt;非定型フォーマット対応&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-flow-arrow&quot;&gt;→&lt;/div&gt;
+&lt;div class=&quot;diag-flow-step&quot; data-en-html='🤖&amp;lt;br&amp;gt;AI Decision&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;HS Code / Regulation / Cost&amp;lt;/span&amp;gt;' data-ja-html='🤖&amp;lt;br&amp;gt;AI判断&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;HSコード・規制・原価&amp;lt;/span&amp;gt;'&gt;🤖&lt;br/&gt;AI判断&lt;br/&gt;&lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&gt;HSコード・規制・原価&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-flow-arrow&quot;&gt;→&lt;/div&gt;
+&lt;div class=&quot;diag-flow-step&quot; data-en-html='📋&amp;lt;br&amp;gt;Customs Filing&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;Auto-entry to NACCS&amp;lt;/span&amp;gt;' data-ja-html='📋&amp;lt;br&amp;gt;通関申請&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;NACCSへ自動入力&amp;lt;/span&amp;gt;'&gt;📋&lt;br/&gt;通関申請&lt;br/&gt;&lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&gt;NACCSへ自動入力&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-flow-arrow&quot;&gt;→&lt;/div&gt;
+&lt;div class=&quot;diag-flow-step done&quot; data-en-html='✅&amp;lt;br&amp;gt;Complete&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;Staff performs final review only&amp;lt;/span&amp;gt;' data-ja-html='✅&amp;lt;br&amp;gt;完了&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;担当者が最終確認のみ&amp;lt;/span&amp;gt;' data-en-html='✅&amp;lt;br&amp;gt;完了&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;担当者が最終確認のみ&amp;lt;/span&amp;gt;'&gt;✅&lt;br/&gt;完了&lt;br/&gt;&lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&gt;担当者が最終確認のみ&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;">
+<div data-en="BorderFlow AI — Processing Flow" data-ja="BorderFlow AI — 処理フロー" data-en="BorderFlow AI — 処理フロー" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;">BorderFlow AI — 処理フロー</div>
+<div class="diag-flow-row" data-ja-html="&lt;div class=&quot;diag-flow-step&quot; data-en-html='📥&amp;lt;br&amp;gt;Document Receipt&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;Email / Portal&amp;lt;/span&amp;gt;' data-ja-html='📥&amp;lt;br&amp;gt;書類受取&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;メール・ポータル&amp;lt;/span&amp;gt;'&gt;📥&lt;br/&gt;書類受取&lt;br/&gt;&lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&gt;メール・ポータル&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-flow-arrow&quot;&gt;→&lt;/div&gt;
+&lt;div class=&quot;diag-flow-step&quot; data-en-html='🔍&amp;lt;br&amp;gt;OCR Analysis&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;Non-standard Format Support&amp;lt;/span&amp;gt;' data-ja-html='🔍&amp;lt;br&amp;gt;OCR解析&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;非定型フォーマット対応&amp;lt;/span&amp;gt;'&gt;🔍&lt;br/&gt;OCR解析&lt;br/&gt;&lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&gt;非定型フォーマット対応&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-flow-arrow&quot;&gt;→&lt;/div&gt;
+&lt;div class=&quot;diag-flow-step&quot; data-en-html='🤖&amp;lt;br&amp;gt;AI Decision&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;HS Code / Regulation / Cost&amp;lt;/span&amp;gt;' data-ja-html='🤖&amp;lt;br&amp;gt;AI判断&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;HSコード・規制・原価&amp;lt;/span&amp;gt;'&gt;🤖&lt;br/&gt;AI判断&lt;br/&gt;&lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&gt;HSコード・規制・原価&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-flow-arrow&quot;&gt;→&lt;/div&gt;
+&lt;div class=&quot;diag-flow-step&quot; data-en-html='📋&amp;lt;br&amp;gt;Customs Filing&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;Auto-entry to NACCS&amp;lt;/span&amp;gt;' data-ja-html='📋&amp;lt;br&amp;gt;通関申請&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;NACCSへ自動入力&amp;lt;/span&amp;gt;'&gt;📋&lt;br/&gt;通関申請&lt;br/&gt;&lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&gt;NACCSへ自動入力&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-flow-arrow&quot;&gt;→&lt;/div&gt;
+&lt;div class=&quot;diag-flow-step done&quot; data-en-html='✅&amp;lt;br&amp;gt;Complete&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;Staff performs final review only&amp;lt;/span&amp;gt;' data-ja-html='✅&amp;lt;br&amp;gt;完了&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;担当者が最終確認のみ&amp;lt;/span&amp;gt;'&gt;✅&lt;br/&gt;完了&lt;br/&gt;&lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&gt;担当者が最終確認のみ&lt;/span&gt;&lt;/div&gt;" data-en-html="&lt;div class=&quot;diag-flow-step&quot; data-en-html='📥&amp;lt;br&amp;gt;Document Receipt&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;Email / Portal&amp;lt;/span&amp;gt;' data-ja-html='📥&amp;lt;br&amp;gt;書類受取&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;メール・ポータル&amp;lt;/span&amp;gt;'&gt;📥&lt;br/&gt;書類受取&lt;br/&gt;&lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&gt;メール・ポータル&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-flow-arrow&quot;&gt;→&lt;/div&gt;
+&lt;div class=&quot;diag-flow-step&quot; data-en-html='🔍&amp;lt;br&amp;gt;OCR Analysis&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;Non-standard Format Support&amp;lt;/span&amp;gt;' data-ja-html='🔍&amp;lt;br&amp;gt;OCR解析&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;非定型フォーマット対応&amp;lt;/span&amp;gt;'&gt;🔍&lt;br/&gt;OCR解析&lt;br/&gt;&lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&gt;非定型フォーマット対応&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-flow-arrow&quot;&gt;→&lt;/div&gt;
+&lt;div class=&quot;diag-flow-step&quot; data-en-html='🤖&amp;lt;br&amp;gt;AI Decision&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;HS Code / Regulation / Cost&amp;lt;/span&amp;gt;' data-ja-html='🤖&amp;lt;br&amp;gt;AI判断&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;HSコード・規制・原価&amp;lt;/span&amp;gt;'&gt;🤖&lt;br/&gt;AI判断&lt;br/&gt;&lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&gt;HSコード・規制・原価&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-flow-arrow&quot;&gt;→&lt;/div&gt;
+&lt;div class=&quot;diag-flow-step&quot; data-en-html='📋&amp;lt;br&amp;gt;Customs Filing&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;Auto-entry to NACCS&amp;lt;/span&amp;gt;' data-ja-html='📋&amp;lt;br&amp;gt;通関申請&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;NACCSへ自動入力&amp;lt;/span&amp;gt;'&gt;📋&lt;br/&gt;通関申請&lt;br/&gt;&lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&gt;NACCSへ自動入力&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;diag-flow-arrow&quot;&gt;→&lt;/div&gt;
+&lt;div class=&quot;diag-flow-step done&quot; data-en-html='✅&amp;lt;br&amp;gt;Complete&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;Staff performs final review only&amp;lt;/span&amp;gt;' data-ja-html='✅&amp;lt;br&amp;gt;完了&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;担当者が最終確認のみ&amp;lt;/span&amp;gt;' data-en-html='✅&amp;lt;br&amp;gt;完了&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;担当者が最終確認のみ&amp;lt;/span&amp;gt;'&gt;✅&lt;br/&gt;完了&lt;br/&gt;&lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&gt;担当者が最終確認のみ&lt;/span&gt;&lt;/div&gt;">
+<div class="diag-flow-step" data-en-html='📥&lt;br&gt;Document Receipt&lt;br&gt;&lt;span style="font-weight:400;font-size:0.68rem;"&gt;Email / Portal&lt;/span&gt;' data-ja-html='📥&lt;br&gt;書類受取&lt;br&gt;&lt;span style="font-weight:400;font-size:0.68rem;"&gt;メール・ポータル&lt;/span&gt;' data-en-html='📥&lt;br&gt;書類受取&lt;br&gt;&lt;span style="font-weight:400;font-size:0.68rem;"&gt;メール・ポータル&lt;/span&gt;'>📥<br/>書類受取<br/><span data-ja="メール・ポータル" data-en="メール・ポータル" style="font-weight:400;font-size:0.68rem;">メール・ポータル</span></div>
+<div class="diag-flow-arrow">→</div>
+<div class="diag-flow-step" data-en-html='🔍&lt;br&gt;OCR Analysis&lt;br&gt;&lt;span style="font-weight:400;font-size:0.68rem;"&gt;Non-standard Format Support&lt;/span&gt;' data-ja-html='🔍&lt;br&gt;OCR解析&lt;br&gt;&lt;span style="font-weight:400;font-size:0.68rem;"&gt;非定型フォーマット対応&lt;/span&gt;' data-en-html='🔍&lt;br&gt;OCR解析&lt;br&gt;&lt;span style="font-weight:400;font-size:0.68rem;"&gt;非定型フォーマット対応&lt;/span&gt;'>🔍<br/>OCR解析<br/><span data-ja="非定型フォーマット対応" data-en="非定型フォーマット対応" style="font-weight:400;font-size:0.68rem;">非定型フォーマット対応</span></div>
+<div class="diag-flow-arrow">→</div>
+<div class="diag-flow-step" data-en-html='🤖&lt;br&gt;AI Decision&lt;br&gt;&lt;span style="font-weight:400;font-size:0.68rem;"&gt;HS Code / Regulation / Cost&lt;/span&gt;' data-ja-html='🤖&lt;br&gt;AI判断&lt;br&gt;&lt;span style="font-weight:400;font-size:0.68rem;"&gt;HSコード・規制・原価&lt;/span&gt;' data-en-html='🤖&lt;br&gt;AI判断&lt;br&gt;&lt;span style="font-weight:400;font-size:0.68rem;"&gt;HSコード・規制・原価&lt;/span&gt;'>🤖<br/>AI判断<br/><span data-ja="HSコード・規制・原価" data-en="HSコード・規制・原価" style="font-weight:400;font-size:0.68rem;">HSコード・規制・原価</span></div>
+<div class="diag-flow-arrow">→</div>
+<div class="diag-flow-step" data-en-html='📋&lt;br&gt;Customs Filing&lt;br&gt;&lt;span style="font-weight:400;font-size:0.68rem;"&gt;Auto-entry to NACCS&lt;/span&gt;' data-ja-html='📋&lt;br&gt;通関申請&lt;br&gt;&lt;span style="font-weight:400;font-size:0.68rem;"&gt;NACCSへ自動入力&lt;/span&gt;' data-en-html='📋&lt;br&gt;通関申請&lt;br&gt;&lt;span style="font-weight:400;font-size:0.68rem;"&gt;NACCSへ自動入力&lt;/span&gt;'>📋<br/>通関申請<br/><span data-ja="NACCSへ自動入力" data-en="NACCSへ自動入力" style="font-weight:400;font-size:0.68rem;">NACCSへ自動入力</span></div>
+<div class="diag-flow-arrow">→</div>
+<div class="diag-flow-step done" data-en-html='✅&lt;br&gt;Complete&lt;br&gt;&lt;span style="font-weight:400;font-size:0.68rem;"&gt;Staff performs final review only&lt;/span&gt;' data-ja-html='✅&lt;br&gt;完了&lt;br&gt;&lt;span style="font-weight:400;font-size:0.68rem;"&gt;担当者が最終確認のみ&lt;/span&gt;' data-en-html='✅&lt;br&gt;完了&lt;br&gt;&lt;span style="font-weight:400;font-size:0.68rem;"&gt;担当者が最終確認のみ&lt;/span&gt;'>✅<br/>完了<br/><span data-ja="担当者が最終確認のみ" data-en="担当者が最終確認のみ" style="font-weight:400;font-size:0.68rem;">担当者が最終確認のみ</span></div>
+</div>
+</div>
+<p class="diag-caption" data-en="[Figure] BorderFlow AI Trade Document Processing Automation Flow" data-ja="[図] BorderFlow AIによる貿易書類処理の自動化フロー" data-en="[図] BorderFlow AIによる貿易書類処理の自動化フロー">[図] BorderFlow AIによる貿易書類処理の自動化フロー</p>
+<h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4" data-en="5. Implementation Steps and Key Considerations" data-ja="5. 導入のステップと注意点" data-en="5. 導入のステップと注意点">5. 導入のステップと注意点</h2>
+<p data-en="When implementing AI agents in trade operations, we recommend the following steps." data-ja="貿易業務にAIエージェントを導入する際は、以下のステップを推奨します。" data-en="貿易業務にAIエージェントを導入する際は、以下のステップを推奨します。">貿易業務にAIエージェントを導入する際は、以下のステップを推奨します。</p>
+<ul class="list-decimal">
+<li data-en-html="&lt;strong&gt;Process visualization:&lt;/strong&gt; Map out current workflows to identify areas suitable for automation and operational bottlenecks" data-ja-html="&lt;strong&gt;業務の可視化：&lt;/strong&gt;まず現行業務のフローを整理し、自動化可能な領域とボトルネックを特定します" data-en-html="&lt;strong&gt;業務の可視化：&lt;/strong&gt;まず現行業務のフローを整理し、自動化可能な領域とボトルネックを特定します"><strong>業務の可視化：</strong>まず現行業務のフローを整理し、自動化可能な領域とボトルネックを特定します</li>
+<li data-en-html="&lt;strong&gt;Pilot area selection:&lt;/strong&gt; Rather than automating all processes at once, start small with high-impact areas such as inquiry handling and cost calculation" data-ja-html="&lt;strong&gt;パイロット領域の選定：&lt;/strong&gt;全業務を一度に自動化するのではなく、効果が見えやすい領域（引合処理、原価計算など）からスモールスタートします" data-en-html="&lt;strong&gt;パイロット領域の選定：&lt;/strong&gt;全業務を一度に自動化するのではなく、効果が見えやすい領域（引合処理、原価計算など）からスモールスタートします"><strong>パイロット領域の選定：</strong>全業務を一度に自動化するのではなく、効果が見えやすい領域（引合処理、原価計算など）からスモールスタートします</li>
+<li data-en-html="&lt;strong&gt;Data preparation:&lt;/strong&gt; Improve the quality of historical transaction data and master data. AI accuracy is highly dependent on data quality" data-ja-html="&lt;strong&gt;データ整備：&lt;/strong&gt;過去の取引データ、マスタデータの品質を向上させます。AIの精度はデータ品質に大きく依存します" data-en-html="&lt;strong&gt;データ整備：&lt;/strong&gt;過去の取引データ、マスタデータの品質を向上させます。AIの精度はデータ品質に大きく依存します"><strong>データ整備：</strong>過去の取引データ、マスタデータの品質を向上させます。AIの精度はデータ品質に大きく依存します</li>
+<li data-en-html="&lt;strong&gt;Phased rollout:&lt;/strong&gt; Based on pilot results, expand the scope of targeted operations and drive adoption across the organization" data-ja-html="&lt;strong&gt;段階的な展開：&lt;/strong&gt;パイロットの成果を踏まえて対象業務を拡大し、組織全体への定着を図ります" data-en-html="&lt;strong&gt;段階的な展開：&lt;/strong&gt;パイロットの成果を踏まえて対象業務を拡大し、組織全体への定着を図ります"><strong>段階的な展開：</strong>パイロットの成果を踏まえて対象業務を拡大し、組織全体への定着を図ります</li>
+<li data-en-html="&lt;strong&gt;Talent development:&lt;/strong&gt; It is essential to cultivate personnel who can effectively leverage AI and to design a human-AI collaboration framework" data-ja-html="&lt;strong&gt;人材育成：&lt;/strong&gt;AIを使いこなせる人材の育成と、AIと人間の協働体制の設計が不可欠です" data-en-html="&lt;strong&gt;人材育成：&lt;/strong&gt;AIを使いこなせる人材の育成と、AIと人間の協働体制の設計が不可欠です"><strong>人材育成：</strong>AIを使いこなせる人材の育成と、AIと人間の協働体制の設計が不可欠です</li>
+</ul>
+<p data-en="An important caveat: AI agents are not infallible. Designing a Human-in-the-Loop framework where humans make final decisions is critical. Additionally, ensuring the security of transaction data and compliance with data protection regulations in each jurisdiction must not be overlooked." data-ja="注意すべき点として、AIエージェントは万能ではありません。最終判断は人間が行う「Human in the Loop」の設計が重要です。また、取引情報のセキュリティ確保と、各国の個人情報保護規制への対応も忘れてはなりません。" data-en="注意すべき点として、AIエージェントは万能ではありません。最終判断は人間が行う「Human in the Loop」の設計が重要です。また、取引情報のセキュリティ確保と、各国の個人情報保護規制への対応も忘れてはなりません。">注意すべき点として、AIエージェントは万能ではありません。最終判断は人間が行う「Human in the Loop」の設計が重要です。また、取引情報のセキュリティ確保と、各国の個人情報保護規制への対応も忘れてはなりません。</p>
+<h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4" data-en="6. Conclusion" data-ja="6. まとめ" data-en="6. まとめ">6. まとめ</h2>
+<p data-en="The delayed DX of trade operations stems from operational complexity and frequent exception handling. However, the emergence of AI agents has opened the door to digitalization in areas previously considered too difficult to automate." data-ja="貿易業務のDXが遅れている背景には、業務の複雑性と例外処理の多さがあります。しかし、AIエージェントの登場により、これまで自動化が困難だった領域にもデジタル化の道が開かれました。" data-en="貿易業務のDXが遅れている背景には、業務の複雑性と例外処理の多さがあります。しかし、AIエージェントの登場により、これまで自動化が困難だった領域にもデジタル化の道が開かれました。">貿易業務のDXが遅れている背景には、業務の複雑性と例外処理の多さがあります。しかし、AIエージェントの登場により、これまで自動化が困難だった領域にもデジタル化の道が開かれました。</p>
+<p data-en="To maintain and strengthen the competitiveness of trading companies, it is essential to pursue business process redesign and AI adoption as an integrated initiative, rather than merely implementing tools. If you are interested in trade DX, please do not hesitate to contact us." data-ja="商社の競争力を維持・強化するためには、単なるツール導入ではなく、業務プロセスの再設計とAI活用を一体的に進めることが不可欠です。貿易DXに関心をお持ちの方は、ぜひお気軽にご相談ください。" data-en="商社の競争力を維持・強化するためには、単なるツール導入ではなく、業務プロセスの再設計とAI活用を一体的に進めることが不可欠です。貿易DXに関心をお持ちの方は、ぜひお気軽にご相談ください。">商社の競争力を維持・強化するためには、単なるツール導入ではなく、業務プロセスの再設計とAI活用を一体的に進めることが不可欠です。貿易DXに関心をお持ちの方は、ぜひお気軽にご相談ください。</p>
+</article>
+<!-- CTA -->
+<div class="mt-14 bg-navy rounded-sm p-8 md:p-10 text-center" data-ja-html='&lt;p class="serif text-[1.4rem] font-medium text-white mb-3" data-en="Tell Us About Your DX Challenges" data-ja="DXに関するお悩みをお聞かせください"&gt;DXに関するお悩みをお聞かせください&lt;/p&gt;
+&lt;p class="text-[.82rem] text-white/65 mb-6" data-en="Free initial consultation / Online available / Early-stage inquiries welcome" data-ja="初回ヒアリング無料 / オンライン対応可 / 構想段階からの相談歓迎"&gt;初回ヒアリング無料 / オンライン対応可 / 構想段階からの相談歓迎&lt;/p&gt;
+&lt;a class="display inline-block text-[.82rem] font-medium text-navy bg-gold px-8 py-3.5 rounded-sm tracking-wider hover:bg-gold-mid transition-colors" data-en="Contact Us" data-ja="相談する" data-en="Contact" href="https://wingconsulting.org/#contact"&gt;相談する&lt;/a&gt;' data-en-html='&lt;p class="serif text-[1.4rem] font-medium text-white mb-3" data-en="Tell Us About Your DX Challenges" data-ja="DXに関するお悩みをお聞かせください"&gt;DXに関するお悩みをお聞かせください&lt;/p&gt;
+&lt;p class="text-[.82rem] text-white/65 mb-6" data-en="Free initial consultation / Online available / Early-stage inquiries welcome" data-ja="初回ヒアリング無料 / オンライン対応可 / 構想段階からの相談歓迎"&gt;初回ヒアリング無料 / オンライン対応可 / 構想段階からの相談歓迎&lt;/p&gt;
+&lt;a class="display inline-block text-[.82rem] font-medium text-navy bg-gold px-8 py-3.5 rounded-sm tracking-wider hover:bg-gold-mid transition-colors" data-en="Contact Us" data-ja="相談する" data-en="Contact" href="https://wingconsulting.org/#contact"&gt;相談する&lt;/a&gt;'>
+<p class="serif text-[1.4rem] font-medium text-white mb-3" data-en="Tell Us About Your DX Challenges" data-ja="DXに関するお悩みをお聞かせください" data-en="DXに関するお悩みをお聞かせください">DXに関するお悩みをお聞かせください</p>
+<p class="text-[.82rem] text-white/65 mb-6" data-en="Free initial consultation / Online available / Early-stage inquiries welcome" data-ja="初回ヒアリング無料 / オンライン対応可 / 構想段階からの相談歓迎" data-en="初回ヒアリング無料 / オンライン対応可 / 構想段階からの相談歓迎">初回ヒアリング無料 / オンライン対応可 / 構想段階からの相談歓迎</p>
+<a class="display inline-block text-[.82rem] font-medium text-navy bg-gold px-8 py-3.5 rounded-sm tracking-wider hover:bg-gold-mid transition-colors" data-en="Contact Us" data-ja="相談する" data-en="Contact" href="https://wingconsulting.org/#contact">相談する</a>
+</div>
+<!-- Related Articles -->
+<div class="mt-16" data-ja-html="&lt;p class=&quot;display text-[.65rem] font-medium tracking-[.18em] uppercase text-gold mb-4&quot;&gt;Related Articles&lt;/p&gt;
+&lt;div class=&quot;grid md:grid-cols-2 gap-4&quot;&gt;
+&lt;a class=&quot;group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors&quot; data-ja-html='&amp;lt;p class=&quot;display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2&quot;&amp;gt;DX Strategy&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot; data-en=&quot;What Is DX Consulting? How to Choose the Right Partner and Succeed&quot; data-ja=&quot;DXコンサルティングとは？失敗しない選び方と成功のポイント&quot;&amp;gt;DXコンサルティングとは？失敗しない選び方と成功のポイント&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&amp;gt;2026.03.25&amp;lt;/p&amp;gt;' href=&quot;/blog/dx-consulting-guide&quot;&gt;
+&lt;p class=&quot;display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2&quot;&gt;DX Strategy&lt;/p&gt;
+&lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot; data-en=&quot;What Is DX Consulting? How to Choose the Right Partner and Succeed&quot; data-ja=&quot;DXコンサルティングとは？失敗しない選び方と成功のポイント&quot;&gt;DXコンサルティングとは？失敗しない選び方と成功のポイント&lt;/p&gt;
+&lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&gt;2026.03.25&lt;/p&gt;
+&lt;/a&gt;
+&lt;a class=&quot;group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors&quot; data-ja-html='&amp;lt;p class=&quot;display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2&quot;&amp;gt;Compliance&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot; data-en=&quot;A Practical Guide to PFAS Regulations and chemSHERPA Compliance&quot; data-ja=&quot;PFAS規制とchemSHERPA対応の実務ガイド&quot;&amp;gt;PFAS規制とchemSHERPA対応の実務ガイド&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&amp;gt;2026.03.25&amp;lt;/p&amp;gt;' href=&quot;/blog/pfas-chemsherpa-guide&quot;&gt;
+&lt;p class=&quot;display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2&quot;&gt;Compliance&lt;/p&gt;
+&lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot; data-en=&quot;A Practical Guide to PFAS Regulations and chemSHERPA Compliance&quot; data-ja=&quot;PFAS規制とchemSHERPA対応の実務ガイド&quot;&gt;PFAS規制とchemSHERPA対応の実務ガイド&lt;/p&gt;
+&lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&gt;2026.03.25&lt;/p&gt;
+&lt;/a&gt;
+&lt;/div&gt;" data-en-html="&lt;p class=&quot;display text-[.65rem] font-medium tracking-[.18em] uppercase text-gold mb-4&quot;&gt;Related Articles&lt;/p&gt;
+&lt;div class=&quot;grid md:grid-cols-2 gap-4&quot;&gt;
+&lt;a class=&quot;group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors&quot; data-ja-html='&amp;lt;p class=&quot;display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2&quot;&amp;gt;DX Strategy&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot; data-en=&quot;What Is DX Consulting? How to Choose the Right Partner and Succeed&quot; data-ja=&quot;DXコンサルティングとは？失敗しない選び方と成功のポイント&quot;&amp;gt;DXコンサルティングとは？失敗しない選び方と成功のポイント&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&amp;gt;2026.03.25&amp;lt;/p&amp;gt;' data-en-html='&amp;lt;p class=&quot;display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2&quot;&amp;gt;DX Strategy&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot; data-en=&quot;What Is DX Consulting? How to Choose the Right Partner and Succeed&quot; data-ja=&quot;DXコンサルティングとは？失敗しない選び方と成功のポイント&quot;&amp;gt;DXコンサルティングとは？失敗しない選び方と成功のポイント&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&amp;gt;2026.03.25&amp;lt;/p&amp;gt;' href=&quot;/blog/dx-consulting-guide&quot;&gt;
+&lt;p class=&quot;display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2&quot;&gt;DX Strategy&lt;/p&gt;
+&lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot; data-en=&quot;What Is DX Consulting? How to Choose the Right Partner and Succeed&quot; data-ja=&quot;DXコンサルティングとは？失敗しない選び方と成功のポイント&quot;&gt;DXコンサルティングとは？失敗しない選び方と成功のポイント&lt;/p&gt;
+&lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&gt;2026.03.25&lt;/p&gt;
+&lt;/a&gt;
+&lt;a class=&quot;group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors&quot; data-ja-html='&amp;lt;p class=&quot;display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2&quot;&amp;gt;Compliance&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot; data-en=&quot;A Practical Guide to PFAS Regulations and chemSHERPA Compliance&quot; data-ja=&quot;PFAS規制とchemSHERPA対応の実務ガイド&quot;&amp;gt;PFAS規制とchemSHERPA対応の実務ガイド&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&amp;gt;2026.03.25&amp;lt;/p&amp;gt;' data-en-html='&amp;lt;p class=&quot;display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2&quot;&amp;gt;Compliance&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot; data-en=&quot;A Practical Guide to PFAS Regulations and chemSHERPA Compliance&quot; data-ja=&quot;PFAS規制とchemSHERPA対応の実務ガイド&quot;&amp;gt;PFAS規制とchemSHERPA対応の実務ガイド&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&amp;gt;2026.03.25&amp;lt;/p&amp;gt;' href=&quot;/blog/pfas-chemsherpa-guide&quot;&gt;
+&lt;p class=&quot;display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2&quot;&gt;Compliance&lt;/p&gt;
+&lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot; data-en=&quot;A Practical Guide to PFAS Regulations and chemSHERPA Compliance&quot; data-ja=&quot;PFAS規制とchemSHERPA対応の実務ガイド&quot;&gt;PFAS規制とchemSHERPA対応の実務ガイド&lt;/p&gt;
+&lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&gt;2026.03.25&lt;/p&gt;
+&lt;/a&gt;
+&lt;/div&gt;">
+<p class="display text-[.65rem] font-medium tracking-[.18em] uppercase text-gold mb-4">Related Articles</p>
+<div class="grid md:grid-cols-2 gap-4" data-ja-html="&lt;a class=&quot;group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors&quot; data-ja-html='&amp;lt;p class=&quot;display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2&quot;&amp;gt;DX Strategy&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot; data-en=&quot;What Is DX Consulting? How to Choose the Right Partner and Succeed&quot; data-ja=&quot;DXコンサルティングとは？失敗しない選び方と成功のポイント&quot;&amp;gt;DXコンサルティングとは？失敗しない選び方と成功のポイント&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&amp;gt;2026.03.25&amp;lt;/p&amp;gt;' href=&quot;/blog/dx-consulting-guide&quot;&gt;
+&lt;p class=&quot;display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2&quot;&gt;DX Strategy&lt;/p&gt;
+&lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot; data-en=&quot;What Is DX Consulting? How to Choose the Right Partner and Succeed&quot; data-ja=&quot;DXコンサルティングとは？失敗しない選び方と成功のポイント&quot;&gt;DXコンサルティングとは？失敗しない選び方と成功のポイント&lt;/p&gt;
+&lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&gt;2026.03.25&lt;/p&gt;
+&lt;/a&gt;
+&lt;a class=&quot;group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors&quot; data-ja-html='&amp;lt;p class=&quot;display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2&quot;&amp;gt;Compliance&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot; data-en=&quot;A Practical Guide to PFAS Regulations and chemSHERPA Compliance&quot; data-ja=&quot;PFAS規制とchemSHERPA対応の実務ガイド&quot;&amp;gt;PFAS規制とchemSHERPA対応の実務ガイド&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&amp;gt;2026.03.25&amp;lt;/p&amp;gt;' href=&quot;/blog/pfas-chemsherpa-guide&quot;&gt;
+&lt;p class=&quot;display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2&quot;&gt;Compliance&lt;/p&gt;
+&lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot; data-en=&quot;A Practical Guide to PFAS Regulations and chemSHERPA Compliance&quot; data-ja=&quot;PFAS規制とchemSHERPA対応の実務ガイド&quot;&gt;PFAS規制とchemSHERPA対応の実務ガイド&lt;/p&gt;
+&lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&gt;2026.03.25&lt;/p&gt;
+&lt;/a&gt;" data-en-html="&lt;a class=&quot;group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors&quot; data-ja-html='&amp;lt;p class=&quot;display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2&quot;&amp;gt;DX Strategy&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot; data-en=&quot;What Is DX Consulting? How to Choose the Right Partner and Succeed&quot; data-ja=&quot;DXコンサルティングとは？失敗しない選び方と成功のポイント&quot;&amp;gt;DXコンサルティングとは？失敗しない選び方と成功のポイント&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&amp;gt;2026.03.25&amp;lt;/p&amp;gt;' data-en-html='&amp;lt;p class=&quot;display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2&quot;&amp;gt;DX Strategy&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot; data-en=&quot;What Is DX Consulting? How to Choose the Right Partner and Succeed&quot; data-ja=&quot;DXコンサルティングとは？失敗しない選び方と成功のポイント&quot;&amp;gt;DXコンサルティングとは？失敗しない選び方と成功のポイント&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&amp;gt;2026.03.25&amp;lt;/p&amp;gt;' href=&quot;/blog/dx-consulting-guide&quot;&gt;
+&lt;p class=&quot;display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2&quot;&gt;DX Strategy&lt;/p&gt;
+&lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot; data-en=&quot;What Is DX Consulting? How to Choose the Right Partner and Succeed&quot; data-ja=&quot;DXコンサルティングとは？失敗しない選び方と成功のポイント&quot;&gt;DXコンサルティングとは？失敗しない選び方と成功のポイント&lt;/p&gt;
+&lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&gt;2026.03.25&lt;/p&gt;
+&lt;/a&gt;
+&lt;a class=&quot;group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors&quot; data-ja-html='&amp;lt;p class=&quot;display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2&quot;&amp;gt;Compliance&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot; data-en=&quot;A Practical Guide to PFAS Regulations and chemSHERPA Compliance&quot; data-ja=&quot;PFAS規制とchemSHERPA対応の実務ガイド&quot;&amp;gt;PFAS規制とchemSHERPA対応の実務ガイド&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&amp;gt;2026.03.25&amp;lt;/p&amp;gt;' data-en-html='&amp;lt;p class=&quot;display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2&quot;&amp;gt;Compliance&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot; data-en=&quot;A Practical Guide to PFAS Regulations and chemSHERPA Compliance&quot; data-ja=&quot;PFAS規制とchemSHERPA対応の実務ガイド&quot;&amp;gt;PFAS規制とchemSHERPA対応の実務ガイド&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&amp;gt;2026.03.25&amp;lt;/p&amp;gt;' href=&quot;/blog/pfas-chemsherpa-guide&quot;&gt;
+&lt;p class=&quot;display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2&quot;&gt;Compliance&lt;/p&gt;
+&lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot; data-en=&quot;A Practical Guide to PFAS Regulations and chemSHERPA Compliance&quot; data-ja=&quot;PFAS規制とchemSHERPA対応の実務ガイド&quot;&gt;PFAS規制とchemSHERPA対応の実務ガイド&lt;/p&gt;
+&lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&gt;2026.03.25&lt;/p&gt;
+&lt;/a&gt;">
+<a class="group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors" data-ja-html='&lt;p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2"&gt;DX Strategy&lt;/p&gt;
+&lt;p class="text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors" data-en="What Is DX Consulting? How to Choose the Right Partner and Succeed" data-ja="DXコンサルティングとは？失敗しない選び方と成功のポイント" data-en="DXコンサルティングとは？失敗しない選び方と成功のポイント"&gt;DXコンサルティングとは？失敗しない選び方と成功のポイント&lt;/p&gt;
+&lt;p class="text-[.68rem] text-ink-light mt-2"&gt;2026.03.25&lt;/p&gt;' data-en-html='&lt;p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2"&gt;DX Strategy&lt;/p&gt;
+&lt;p class="text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors" data-en="What Is DX Consulting? How to Choose the Right Partner and Succeed" data-ja="DXコンサルティングとは？失敗しない選び方と成功のポイント" data-en="DXコンサルティングとは？失敗しない選び方と成功のポイント"&gt;DXコンサルティングとは？失敗しない選び方と成功のポイント&lt;/p&gt;
+&lt;p class="text-[.68rem] text-ink-light mt-2"&gt;2026.03.25&lt;/p&gt;' href="/blog/dx-consulting-guide">
+<p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2">DX Strategy</p>
+<p class="text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors" data-en="What Is DX Consulting? How to Choose the Right Partner and Succeed" data-ja="DXコンサルティングとは？失敗しない選び方と成功のポイント" data-en="DXコンサルティングとは？失敗しない選び方と成功のポイント">DXコンサルティングとは？失敗しない選び方と成功のポイント</p>
+<p class="text-[.68rem] text-ink-light mt-2">2026.03.25</p>
+</a>
+<a class="group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors" data-ja-html='&lt;p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2"&gt;Compliance&lt;/p&gt;
+&lt;p class="text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors" data-en="A Practical Guide to PFAS Regulations and chemSHERPA Compliance" data-ja="PFAS規制とchemSHERPA対応の実務ガイド" data-en="PFAS規制とchemSHERPA対応の実務ガイド"&gt;PFAS規制とchemSHERPA対応の実務ガイド&lt;/p&gt;
+&lt;p class="text-[.68rem] text-ink-light mt-2"&gt;2026.03.25&lt;/p&gt;' data-en-html='&lt;p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2"&gt;Compliance&lt;/p&gt;
+&lt;p class="text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors" data-en="A Practical Guide to PFAS Regulations and chemSHERPA Compliance" data-ja="PFAS規制とchemSHERPA対応の実務ガイド" data-en="PFAS規制とchemSHERPA対応の実務ガイド"&gt;PFAS規制とchemSHERPA対応の実務ガイド&lt;/p&gt;
+&lt;p class="text-[.68rem] text-ink-light mt-2"&gt;2026.03.25&lt;/p&gt;' href="/blog/pfas-chemsherpa-guide">
+<p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2">Compliance</p>
+<p class="text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors" data-en="A Practical Guide to PFAS Regulations and chemSHERPA Compliance" data-ja="PFAS規制とchemSHERPA対応の実務ガイド" data-en="PFAS規制とchemSHERPA対応の実務ガイド">PFAS規制とchemSHERPA対応の実務ガイド</p>
+<p class="text-[.68rem] text-ink-light mt-2">2026.03.25</p>
+</a>
+</div>
+</div>
+</div>
 </main>
-
 <!-- ─── FOOTER ──────────────────────────────────────────── -->
 <footer class="bg-navy py-10 px-6 md:px-10">
-  <div class="max-w-5xl mx-auto flex flex-wrap justify-between items-center gap-5">
-    <a href="/" class="leading-none">
-      <svg width="110" height="32" viewBox="0 0 110 32" fill="none" aria-label="Wing">
-        <path d="M5 23C8 14,16 7,27 6C20 11,14 17,13 25Z" fill="rgba(255,255,255,.65)"/>
-        <path d="M10 24C13 13,23 5,36 4C29 10,21 18,20 26Z" fill="rgba(255,255,255,.65)" opacity=".3"/>
-        <text x="42" y="22" font-family="Cormorant Garamond,serif" font-size="20" font-weight="500" letter-spacing=".05em" fill="rgba(255,255,255,.6)">Wing</text>
-      </svg>
-    </a>
-    <p class="text-[.66rem] text-white/65">&copy; 2026 Wing Inc. All rights reserved.</p>
-  </div>
+<div class="max-w-5xl mx-auto flex flex-wrap justify-between items-center gap-5">
+<a class="leading-none" href="/">
+<svg aria-label="Wing" fill="none" height="32" viewbox="0 0 110 32" width="110">
+<path d="M5 23C8 14,16 7,27 6C20 11,14 17,13 25Z" fill="rgba(255,255,255,.65)"></path>
+<path d="M10 24C13 13,23 5,36 4C29 10,21 18,20 26Z" fill="rgba(255,255,255,.65)" opacity=".3"></path>
+<text fill="rgba(255,255,255,.6)" font-family="Cormorant Garamond,serif" font-size="20" font-weight="500" letter-spacing=".05em" x="42" y="22">Wing</text>
+</svg>
+</a>
+<p class="text-[.66rem] text-white/65" data-en="© 2026 Wing Inc. All rights reserved." data-ja="© 2026 Wing Inc. All rights reserved." data-en="© 2026 Wing Inc. All rights reserved.">© 2026 Wing Inc. All rights reserved.</p>
+</div>
 </footer>
-
 </body>
 </html>

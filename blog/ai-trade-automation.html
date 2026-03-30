@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="ja" class="scroll-smooth">
+
+<html class="scroll-smooth" lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AIで貿易業務を自動化する：どこから手をつけるか | Wing Blog</title>
-<meta name="description" content="貿易業務のAI自動化をどこから始めるかを解説。優先度マトリクスで着手順序を整理し、書類照合・HS分類・法規制チェックの効果と数値目安を紹介。">
-<meta name="keywords" content="AI 貿易自動化, 貿易 AI 業務効率化, 書類照合 AI, HS分類 AI, 法規制チェック 自動化, AI-OCR 輸入, 貿易業務 効率化 数値, 自動化 優先度">
-<meta property="og:title" content="AIで貿易業務を自動化する：どこから手をつけるか">
-<meta property="og:description" content="貿易業務AI自動化の優先度マトリクスを解説。着手順序と書類照合・HS分類・法規制チェックの効果数値を紹介。">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://wingconsulting.org/blog/ai-trade-automation">
-<meta property="og:locale" content="ja_JP">
-<meta property="og:image" content="https://wingconsulting.org/images/og-default.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:site_name" content="Wing">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="AIで貿易業務を自動化する：どこから手をつけるか">
-<meta name="twitter:description" content="貿易業務AI自動化の優先度マトリクスと着手順序、自動化効果の数値目安を解説。">
-<meta name="twitter:image" content="https://wingconsulting.org/images/og-default.png">
-<link rel="canonical" href="https://wingconsulting.org/blog/ai-trade-automation">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Trade Automation: Where to Start | Wing Blog</title>
+<meta content="How to prioritize and automate repetitive trade tasks with AI." name="description"/>
+<meta content="AI 貿易自動化, 貿易 AI 業務効率化, 書類照合 AI, HS分類 AI, 法規制チェック 自動化, AI-OCR 輸入, 貿易業務 効率化 数値, 自動化 優先度" name="keywords"/>
+<meta content="AI Trade Automation: Where to Start" property="og:title"/>
+<meta content="How to prioritize and automate repetitive trade tasks with AI." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://wingconsulting.org/blog/ai-trade-automation" property="og:url"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="https://wingconsulting.org/images/og-default.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Wing" property="og:site_name"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="AI Trade Automation: Where to Start" name="twitter:title"/>
+<meta content="How to prioritize and automate repetitive trade tasks with AI." name="twitter:description"/>
+<meta content="https://wingconsulting.org/images/og-default.png" name="twitter:image"/>
+<link href="https://wingconsulting.org/blog/ai-trade-automation" rel="canonical"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -116,14 +117,14 @@ article li { margin-bottom: 0.5rem; }
 .p-body { font-size:0.72rem; color:#4A4A55; line-height:1.5; }
 </style>
 <!-- Google Analytics GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-KN7NWHFK9G');
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;family=Noto+Sans+JP:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
 <style id="font-override">
   body, p, li, td, th, span, div {
     font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif !important;
@@ -140,156 +141,137 @@ article li { margin-bottom: 0.5rem; }
 </style>
 </head>
 <body class="bg-slate-warm text-ink">
-
 <!-- ─── HEADER ─────────────────────────────────────────── -->
 <header class="bg-navy h-[60px] flex items-center px-6 md:px-10 sticky top-0 z-50">
-  <div class="max-w-5xl mx-auto w-full flex items-center justify-between">
-    <a href="/" class="leading-none">
-      <svg width="120" height="36" viewBox="0 0 120 36" fill="none" aria-label="Wing">
-        <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff"/>
-        <path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#fff" opacity=".32"/>
-        <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#fff">Wing</text>
-      </svg>
-    </a>
-    <div class="flex items-center gap-4">
-      <span class="display text-[.7rem] font-medium tracking-wider text-white/50">Blog</span>
-      <a href="/" class="text-[.75rem] text-white/70 hover:text-white transition-colors">← Home</a>
-    </div>
-  </div>
+<div class="max-w-5xl mx-auto w-full flex items-center justify-between">
+<a class="leading-none" href="/">
+<svg aria-label="Wing" fill="none" height="36" viewbox="0 0 120 36" width="120">
+<path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff"></path>
+<path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#fff" opacity=".32"></path>
+<text fill="#fff" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" x="46" y="25">Wing</text>
+</svg>
+</a>
+<div class="flex items-center gap-4">
+<span class="display text-[.7rem] font-medium tracking-wider text-white/50">Blog</span>
+<a class="text-[.75rem] text-white/70 hover:text-white transition-colors" href="/">← Home</a>
+</div>
+</div>
 </header>
-
 <!-- ─── ARTICLE ─────────────────────────────────────────── -->
 <main class="py-16 px-6 md:px-10">
-  <div class="max-w-3xl mx-auto">
-    <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3">AI Automation</p>
-    <h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4">AIで貿易業務を自動化する：<br>どこから手をつけるか</h1>
-    <div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2">
-      <time datetime="2026-03-28">2026.03.28</time>
-      <span>Wing編集部</span>
-    </div>
-    <div class="gold-rule mb-10"></div>
-
-    <article class="text-[.9rem] text-ink leading-[2] max-w-none">
-
-      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">「貿易業務はAIに向かない」は過去の話だ</h2>
-      <p>貿易業務のAI自動化が難しいとされてきた理由は明快だ。書類の形式が取引先ごとにバラバラ、法規制が品目と仕向地によって変わる、例外処理が多い──構造化されていない情報を扱う業務は、ルールベースのRPAや従来の業務システムとの相性が悪かった。</p>
-      <p>しかし、大規模言語モデル（LLM）と高精度AI-OCRの登場で、この状況は変わった。書類のフォーマットが標準化されていなくても、AIは文脈を読んで必要な情報を抽出できる。HS分類の根拠を自然言語で説明できる。法規制のチェックリストを品目ごとに自動展開できる。</p>
-      <p>問題は「AIで何ができるか」ではなく、「どこから始めるか」だ。</p>
-
-      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">自動化の優先度マトリクス</h2>
-      <p>貿易業務をAIで自動化する際、すべての領域を同時に対象にする必要はない。「効果の大きさ」と「自動化の難易度」で優先度を整理すると、着手順序が明確になる。</p>
-
-      <!-- DIAGRAM: 優先度マトリクス -->
-      <div class="diag-wrap">
-        <div class="diag-label">貿易業務 AI自動化 優先度マトリクス</div>
-        <div class="priority-row">
-          <div class="priority-item a">
-            <div class="p-label">優先度 A ── 最初に着手</div>
-            <div class="p-title">効果大・難易度低</div>
-            <div class="p-body">書類データ抽出・システム入力<br>書類間の照合チェック<br>（Invoice ↔ Packing List ↔ B/L）</div>
-          </div>
-          <div class="priority-item b">
-            <div class="p-label">優先度 B ── フェーズ2</div>
-            <div class="p-title">効果大・難易度中</div>
-            <div class="p-body">HSコード分類の補助<br>法規制チェックリストの自動展開<br>ワークフローの自動進行管理</div>
-          </div>
-          <div class="priority-item c">
-            <div class="p-label">優先度 C ── フェーズ3以降</div>
-            <div class="p-title">効果大・難易度高</div>
-            <div class="p-body">輸出規制スクリーニング<br>コスト計算・P&L推計の自動化<br>安全保障輸出管理</div>
-          </div>
-        </div>
-      </div>
-      <p class="diag-caption">[図] 貿易業務AI自動化の優先度マトリクス（効果 × 難易度）</p>
-
-      <p><strong>優先度A（効果大・難易度低）──最初に着手する領域</strong></p>
-      <ul class="list-disc">
-        <li><strong>書類データ抽出とシステム入力</strong>：Invoice、Packing List、B/Lから金額・数量・品番を抽出してシステムに連携する。フォーマットが異なっても高精度で対応できる。</li>
-        <li><strong>書類間の照合チェック</strong>：Invoice ↔ Packing List ↔ B/Lの数量・金額・品番の一致確認。ルールが明確で自動化しやすく、手動照合の工数削減効果が大きい。</li>
-      </ul>
-
-      <p><strong>優先度B（効果大・難易度中）──フェーズ2で着手する領域</strong></p>
-      <ul class="list-disc">
-        <li><strong>HSコード分類の補助</strong>：品名・成分・用途から候補HS番号を提示し、担当者の確認工数を削減する。最終判断は担当者が行うが、調査時間が大幅に短縮される。</li>
-        <li><strong>法規制チェックリストの自動展開</strong>：品目コードと仕向地に応じて確認すべき法令リストを自動生成し、チェック結果を記録する。</li>
-        <li><strong>ワークフローの自動進行管理</strong>：取引パターン（輸入・輸出・三国間等）に応じてステップを自動展開し、担当者への通知・期日管理を行う。</li>
-      </ul>
-
-      <p><strong>優先度C（効果大・難易度高）──フェーズ3以降</strong></p>
-      <ul class="list-disc">
-        <li><strong>輸出規制スクリーニング（安全保障輸出管理）</strong>：取引先・品目・仕向地を組み合わせたリスク判定。精度担保のために人間の最終確認を維持しつつ、スクリーニング工数を削減する。</li>
-        <li><strong>コスト計算・P&L推計の自動化</strong>：原価・関税・諸費用を積み上げたランデッドコストと案件別損益をリアルタイムで算出する。</li>
-      </ul>
-
-      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">「AI担当者」は不要──現場担当者が使えることが条件</h2>
-      <p>AIを貿易業務に導入する際に起きやすい失敗は、「AIを使いこなすための専門知識が必要」という前提で設計してしまうことだ。</p>
-      <p>実際に効果が出ているシステムは、現場の貿易事務担当者がAIの出力結果を「確認・承認・修正」する形で使える設計になっている。AIは候補を出し、担当者が判断する。AIが間違えても担当者が修正できる。このループが機能してはじめて、業務が回る。</p>
-      <p>逆に、AIの出力をそのまま信用しなければならない設計、AIがブラックボックスで何を根拠に判断したか分からない設計は、現場の信頼を得られない。</p>
-
-      <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4">自動化で変わる数字の目安</h2>
-      <p>業界平均を参考にした場合、以下のような効果が報告されている。</p>
-
-      <!-- DIAGRAM: 効果数値 -->
-      <div class="diag-wrap">
-        <div class="diag-label">貿易業務AI自動化 効果の目安</div>
-        <div class="diag-step-row">
-          <div class="diag-step-card">
-            <div class="step-num" style="width:auto;padding:0 6px;font-size:0.65rem;">書類</div>
-            <div class="step-title">書類入力・照合工数</div>
-            <div class="step-body" style="font-size:0.85rem;font-weight:700;color:#5A9A6A;">最大60〜80%削減</div>
-          </div>
-          <div class="diag-step-card">
-            <div class="step-num" style="width:auto;padding:0 6px;font-size:0.65rem;">HS</div>
-            <div class="step-title">HSコード調査時間</div>
-            <div class="step-body" style="font-size:0.85rem;font-weight:700;color:#5A9A6A;">20〜30分 → 5分以内</div>
-          </div>
-          <div class="diag-step-card">
-            <div class="step-num" style="width:auto;padding:0 6px;font-size:0.65rem;">法規</div>
-            <div class="step-title">法規制チェック漏れ</div>
-            <div class="step-body" style="font-size:0.85rem;font-weight:700;color:#5A9A6A;">属人的な抜け漏れをほぼゼロに</div>
-          </div>
-          <div class="diag-step-card">
-            <div class="step-num" style="width:auto;padding:0 6px;font-size:0.65rem;">全体</div>
-            <div class="step-title">案件一件あたり処理工数</div>
-            <div class="step-body" style="font-size:0.85rem;font-weight:700;color:#5A9A6A;">全体で30〜50%削減</div>
-          </div>
-        </div>
-      </div>
-      <p class="diag-caption">[図] 貿易業務AI自動化による効果の目安（業界平均参考値）</p>
-
-      <ul class="list-disc">
-        <li>書類入力・照合工数：<strong>最大60〜80%削減</strong></li>
-        <li>HSコード調査時間：<strong>一品目あたり20〜30分 → 5分以内</strong></li>
-        <li>法規制チェックの漏れ：<strong>チェックリスト自動化で、属人的な抜け漏れをほぼゼロに</strong></li>
-        <li>案件一件あたりの処理工数：<strong>全体で30〜50%削減</strong>（自動化対象領域による）</li>
-      </ul>
-
-      <p>ただし、これらの数字は業務標準化の程度・取扱品目の複雑さ・取引件数によって大きく変動する。重要なのは、自社のベースラインを計測してから導入効果を評価することだ。</p>
-
-      <p>どこから始めるかを一緒に考えたい方へ──BorderFlow AIでは業務フロー診断から始める導入プロセスを提供しています。</p>
-
-      <!-- CTA -->
-      <div class="mt-14 p-8 bg-navy text-white text-center rounded-sm">
-        <p class="display text-[.65rem] tracking-[.2em] uppercase text-gold mb-3">BorderFlow AI</p>
-        <p class="text-[1.05rem] font-medium leading-snug mb-2">業務フロー診断から始める、<br>貿易AI自動化の第一歩を踏み出しませんか？</p>
-        <p class="text-[.78rem] text-white/60 mb-6">どこから着手するかを一緒に整理し、スモールスタートで成果を出します。</p>
-        <a href="/#contact" class="inline-block bg-gold text-navy text-[.78rem] font-medium px-8 py-3 hover:bg-gold-light transition-colors">お問い合わせ・ご相談</a>
-      </div>
-
-    </article>
-  </div>
+<div class="max-w-3xl mx-auto">
+<p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3">AI Automation</p>
+<h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4">AIで貿易業務を自動化する：<br/>どこから手をつけるか</h1>
+<div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2">
+<time datetime="2026-03-28">2026.03.28</time>
+<span data-en="Wing Editorial Team" data-ja="Wing編集部">Wing編集部</span>
+</div>
+<div class="gold-rule mb-10"></div>
+<article class="text-[.9rem] text-ink leading-[2] max-w-none">
+<h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4" data-en='"Trade Operations Are Not Suited for AI" Is a Thing of the Past' data-ja="「貿易業務はAIに向かない」は過去の話だ">「貿易業務はAIに向かない」は過去の話だ</h2>
+<p data-en="The reason trade operations were considered difficult to automate with AI is clear. Document formats vary by trading partner, regulations change by product and destination, and exception handling is frequent. Operations dealing with unstructured information were poorly suited for rule-based RPA and conventional business systems." data-ja="貿易業務のAI自動化が難しいとされてきた理由は明快だ。書類の形式が取引先ごとにバラバラ、法規制が品目と仕向地によって変わる、例外処理が多い──構造化されていない情報を扱う業務は、ルールベースのRPAや従来の業務システムとの相性が悪かった。">貿易業務のAI自動化が難しいとされてきた理由は明快だ。書類の形式が取引先ごとにバラバラ、法規制が品目と仕向地によって変わる、例外処理が多い──構造化されていない情報を扱う業務は、ルールベースのRPAや従来の業務システムとの相性が悪かった。</p>
+<p data-en="However, with the advent of large language models (LLMs) and high-accuracy AI-OCR, this situation has changed. Even when document formats are not standardized, AI can read context and extract necessary information. It can explain HS classification rationale in natural language. It can automatically generate regulatory checklists per product." data-ja="しかし、大規模言語モデル（LLM）と高精度AI-OCRの登場で、この状況は変わった。書類のフォーマットが標準化されていなくても、AIは文脈を読んで必要な情報を抽出できる。HS分類の根拠を自然言語で説明できる。法規制のチェックリストを品目ごとに自動展開できる。">しかし、大規模言語モデル（LLM）と高精度AI-OCRの登場で、この状況は変わった。書類のフォーマットが標準化されていなくても、AIは文脈を読んで必要な情報を抽出できる。HS分類の根拠を自然言語で説明できる。法規制のチェックリストを品目ごとに自動展開できる。</p>
+<p data-en='The question is not "what can AI do" but "where to start."' data-ja="問題は「AIで何ができるか」ではなく、「どこから始めるか」だ。">問題は「AIで何ができるか」ではなく、「どこから始めるか」だ。</p>
+<h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4" data-en="Automation Priority Matrix" data-ja="自動化の優先度マトリクス">自動化の優先度マトリクス</h2>
+<p data-en="When automating trade operations with AI, there is no need to address all areas simultaneously. Organizing priorities by impact and automation difficulty clarifies the order of implementation." data-ja="貿易業務をAIで自動化する際、すべての領域を同時に対象にする必要はない。「効果の大きさ」と「自動化の難易度」で優先度を整理すると、着手順序が明確になる。">貿易業務をAIで自動化する際、すべての領域を同時に対象にする必要はない。「効果の大きさ」と「自動化の難易度」で優先度を整理すると、着手順序が明確になる。</p>
+<!-- DIAGRAM: 優先度マトリクス -->
+<div class="diag-wrap">
+<div class="diag-label" data-en="Trade Operations AI Automation Priority Matrix" data-ja="貿易業務 AI自動化 優先度マトリクス">貿易業務 AI自動化 優先度マトリクス</div>
+<div class="priority-row">
+<div class="priority-item a">
+<div class="p-label" data-en="Priority A: Start Here" data-ja="優先度 A ── 最初に着手">優先度 A ── 最初に着手</div>
+<div class="p-title" data-en="High Impact, Low Difficulty" data-ja="効果大・難易度低">効果大・難易度低</div>
+<div class="p-body">書類データ抽出・システム入力<br/>書類間の照合チェック<br/>（Invoice ↔ Packing List ↔ B/L）</div>
+</div>
+<div class="priority-item b">
+<div class="p-label" data-en="Priority B: Phase 2" data-ja="優先度 B ── フェーズ2">優先度 B ── フェーズ2</div>
+<div class="p-title" data-en="High Impact, Medium Difficulty" data-ja="効果大・難易度中">効果大・難易度中</div>
+<div class="p-body">HSコード分類の補助<br/>法規制チェックリストの自動展開<br/>ワークフローの自動進行管理</div>
+</div>
+<div class="priority-item c">
+<div class="p-label" data-en="Priority C: Phase 3+" data-ja="優先度 C ── フェーズ3以降">優先度 C ── フェーズ3以降</div>
+<div class="p-title" data-en="High Impact, High Difficulty" data-ja="効果大・難易度高">効果大・難易度高</div>
+<div class="p-body">輸出規制スクリーニング<br/>コスト計算・P&amp;L推計の自動化<br/>安全保障輸出管理</div>
+</div>
+</div>
+</div>
+<p class="diag-caption" data-en="Automation Priority Matrix" data-ja="自動化の優先度マトリクス">[図] 貿易業務AI自動化の優先度マトリクス（効果 × 難易度）</p>
+<p><strong>優先度A（効果大・難易度低）──最初に着手する領域</strong></p>
+<ul class="list-disc">
+<li><strong>書類データ抽出とシステム入力</strong>：Invoice、Packing List、B/Lから金額・数量・品番を抽出してシステムに連携する。フォーマットが異なっても高精度で対応できる。</li>
+<li><strong>書類間の照合チェック</strong>：Invoice ↔ Packing List ↔ B/Lの数量・金額・品番の一致確認。ルールが明確で自動化しやすく、手動照合の工数削減効果が大きい。</li>
+</ul>
+<p><strong>優先度B（効果大・難易度中）──フェーズ2で着手する領域</strong></p>
+<ul class="list-disc">
+<li><strong>HSコード分類の補助</strong>：品名・成分・用途から候補HS番号を提示し、担当者の確認工数を削減する。最終判断は担当者が行うが、調査時間が大幅に短縮される。</li>
+<li><strong>法規制チェックリストの自動展開</strong>：品目コードと仕向地に応じて確認すべき法令リストを自動生成し、チェック結果を記録する。</li>
+<li><strong>ワークフローの自動進行管理</strong>：取引パターン（輸入・輸出・三国間等）に応じてステップを自動展開し、担当者への通知・期日管理を行う。</li>
+</ul>
+<p><strong>優先度C（効果大・難易度高）──フェーズ3以降</strong></p>
+<ul class="list-disc">
+<li><strong>輸出規制スクリーニング（安全保障輸出管理）</strong>：取引先・品目・仕向地を組み合わせたリスク判定。精度担保のために人間の最終確認を維持しつつ、スクリーニング工数を削減する。</li>
+<li><strong>コスト計算・P&amp;L推計の自動化</strong>：原価・関税・諸費用を積み上げたランデッドコストと案件別損益をリアルタイムで算出する。</li>
+</ul>
+<h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4" data-en='"AI Specialists" Are Not Needed: The Requirement Is Usability by Field Staff' data-ja="「AI担当者」は不要──現場担当者が使えることが条件">「AI担当者」は不要──現場担当者が使えることが条件</h2>
+<p>AIを貿易業務に導入する際に起きやすい失敗は、「AIを使いこなすための専門知識が必要」という前提で設計してしまうことだ。</p>
+<p>実際に効果が出ているシステムは、現場の貿易事務担当者がAIの出力結果を「確認・承認・修正」する形で使える設計になっている。AIは候補を出し、担当者が判断する。AIが間違えても担当者が修正できる。このループが機能してはじめて、業務が回る。</p>
+<p>逆に、AIの出力をそのまま信用しなければならない設計、AIがブラックボックスで何を根拠に判断したか分からない設計は、現場の信頼を得られない。</p>
+<h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4" data-en="Estimated Metrics Improvement from Automation" data-ja="自動化で変わる数字の目安">自動化で変わる数字の目安</h2>
+<p>業界平均を参考にした場合、以下のような効果が報告されている。</p>
+<!-- DIAGRAM: 効果数値 -->
+<div class="diag-wrap">
+<div class="diag-label">貿易業務AI自動化 効果の目安</div>
+<div class="diag-step-row">
+<div class="diag-step-card">
+<div class="step-num" data-en="The reason trade operations were considered difficult to automate with AI is clear. Document formats vary by trading partner, regulations change by product and destination, and exception handling is frequent. Operations dealing with unstructured information were poorly suited for rule-based RPA and conventional business systems." data-ja="貿易業務のAI自動化が難しいとされてきた理由は明快だ。書類の形式が取引先ごとにバラバラ、法規制が品目と仕向地によって変わる、例外処理が多い──構造化されていない情報を扱う業務は、ルールベースのRPAや従来の業務システムとの相性が悪かった。" style="width:auto;padding:0 6px;font-size:0.65rem;">書類</div>
+<div class="step-title" data-en="Document Entry and Verification Workload" data-ja="書類入力・照合工数">書類入力・照合工数</div>
+<div class="step-body" data-en="Up to 60-80% Reduction" data-ja="最大60〜80%削減" style="font-size:0.85rem;font-weight:700;color:#5A9A6A;">最大60〜80%削減</div>
+</div>
+<div class="diag-step-card">
+<div class="step-num" style="width:auto;padding:0 6px;font-size:0.65rem;">HS</div>
+<div class="step-title" data-en="HS Code Research Time" data-ja="HSコード調査時間">HSコード調査時間</div>
+<div class="step-body" data-en="20-30 min to Under 5 min" data-ja="20〜30分 → 5分以内" style="font-size:0.85rem;font-weight:700;color:#5A9A6A;">20〜30分 → 5分以内</div>
+</div>
+<div class="diag-step-card">
+<div class="step-num" data-en="The reason trade operations were considered difficult to automate with AI is clear. Document formats vary by trading partner, regulations change by product and destination, and exception handling is frequent. Operations dealing with unstructured information were poorly suited for rule-based RPA and conventional business systems." data-ja="貿易業務のAI自動化が難しいとされてきた理由は明快だ。書類の形式が取引先ごとにバラバラ、法規制が品目と仕向地によって変わる、例外処理が多い──構造化されていない情報を扱う業務は、ルールベースのRPAや従来の業務システムとの相性が悪かった。" style="width:auto;padding:0 6px;font-size:0.65rem;">法規</div>
+<div class="step-title" data-en="Regulatory Check Omissions" data-ja="法規制チェック漏れ">法規制チェック漏れ</div>
+<div class="step-body" data-en="Near-Zero Human-Dependent Oversights" data-ja="属人的な抜け漏れをほぼゼロに" style="font-size:0.85rem;font-weight:700;color:#5A9A6A;">属人的な抜け漏れをほぼゼロに</div>
+</div>
+<div class="diag-step-card">
+<div class="step-num" data-en="30-50% Overall Reduction" data-ja="全体で30〜50%削減" style="width:auto;padding:0 6px;font-size:0.65rem;">全体</div>
+<div class="step-title" data-en="Processing Time Per Transaction" data-ja="案件一件あたり処理工数">案件一件あたり処理工数</div>
+<div class="step-body" data-en="30-50% Overall Reduction" data-ja="全体で30〜50%削減" style="font-size:0.85rem;font-weight:700;color:#5A9A6A;">全体で30〜50%削減</div>
+</div>
+</div>
+</div>
+<p class="diag-caption">[図] 貿易業務AI自動化による効果の目安（業界平均参考値）</p>
+<ul class="list-disc">
+<li>書類入力・照合工数：<strong>最大60〜80%削減</strong></li>
+<li>HSコード調査時間：<strong>一品目あたり20〜30分 → 5分以内</strong></li>
+<li>法規制チェックの漏れ：<strong>チェックリスト自動化で、属人的な抜け漏れをほぼゼロに</strong></li>
+<li>案件一件あたりの処理工数：<strong>全体で30〜50%削減</strong>（自動化対象領域による）</li>
+</ul>
+<p>ただし、これらの数字は業務標準化の程度・取扱品目の複雑さ・取引件数によって大きく変動する。重要なのは、自社のベースラインを計測してから導入効果を評価することだ。</p>
+<p>どこから始めるかを一緒に考えたい方へ──BorderFlow AIでは業務フロー診断から始める導入プロセスを提供しています。</p>
+<!-- CTA -->
+<div class="mt-14 p-8 bg-navy text-white text-center rounded-sm">
+<p class="display text-[.65rem] tracking-[.2em] uppercase text-gold mb-3">BorderFlow AI</p>
+<p class="text-[1.05rem] font-medium leading-snug mb-2">業務フロー診断から始める、<br/>貿易AI自動化の第一歩を踏み出しませんか？</p>
+<p class="text-[.78rem] text-white/60 mb-6" data-en="We help you organize where to begin and deliver results through a small start." data-ja="どこから着手するかを一緒に整理し、スモールスタートで成果を出します。">どこから着手するかを一緒に整理し、スモールスタートで成果を出します。</p>
+<a class="inline-block bg-gold text-navy text-[.78rem] font-medium px-8 py-3 hover:bg-gold-light transition-colors" data-en="Contact Us" data-ja="お問い合わせ・ご相談" href="/#contact">お問い合わせ・ご相談</a>
+</div>
+</article>
+</div>
 </main>
-
 <!-- ─── FOOTER ─────────────────────────────────────────── -->
 <footer class="bg-navy py-10 px-6 md:px-10 mt-16">
-  <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-    <svg width="80" height="28" viewBox="0 0 120 36" fill="none" aria-label="Wing">
-      <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff" opacity=".6"/>
-      <text x="46" y="25" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" fill="#fff" opacity=".6">Wing</text>
-    </svg>
-    <p class="text-[.68rem] text-white/30">© 2026 Wing. All rights reserved.</p>
-  </div>
+<div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+<svg aria-label="Wing" fill="none" height="28" viewbox="0 0 120 36" width="80">
+<path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff" opacity=".6"></path>
+<text fill="#fff" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" opacity=".6" x="46" y="25">Wing</text>
+</svg>
+<p class="text-[.68rem] text-white/30">© 2026 Wing. All rights reserved.</p>
+</div>
 </footer>
-
 </body>
 </html>
