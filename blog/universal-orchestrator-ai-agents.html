@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ユニバーサルオーケストレーター：マルチベンダーAIエージェント統合の決定版アーキテクチャ | Wing Blog</title>
-<meta name="description" content="マルチベンダーAIエージェントを統合するユニバーサルオーケストレーターのアーキテクチャ。">
+<meta name="description" content="Gartnerが定義するUniversal Orchestratorとは何か。BPAやBOATとの違い、マルチベンダー環境でのAIエージェント統合設計、MCP/A2Aプロトコルとの連携を解説。">
 <meta name="keywords" content="ユニバーサルオーケストレーター, Universal Orchestrator, マルチエージェント, AIエージェント統合, MCP, A2Aプロトコル, LangGraph, Temporal, エンタープライズAI">
-<meta property="og:title" content="ユニバーサルオーケストレーター：マルチベンダーAIエージェント統合の決定版アーキテクチャ | Wing Blog">
-<meta property="og:description" content="マルチベンダーAIエージェントを統合するユニバーサルオーケストレーターのアーキテクチャ。">
+<meta property="og:title" content="ユニバーサルオーケストレーター：マルチベンダーAIエージェント統合の決定版アーキテクチャ">
+<meta property="og:description" content="Gartnerが定義するUniversal Orchestratorとは何か。BPAやBOATとの違い、マルチベンダー環境でのAIエージェント統合設計、MCP/A2Aプロトコルとの連携を解説。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://wingconsulting.org/blog/universal-orchestrator-ai-agents">
 <meta property="og:locale" content="ja_JP">
@@ -16,8 +16,8 @@
 <meta property="og:image:height" content="630">
 <meta property="og:site_name" content="Wing">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="ユニバーサルオーケストレーター：マルチベンダーAIエージェント統合の決定版アーキテクチャ | Wing Blog">
-<meta name="twitter:description" content="マルチベンダーAIエージェントを統合するユニバーサルオーケストレーターのアーキテクチャ。">
+<meta name="twitter:title" content="ユニバーサルオーケストレーター：マルチベンダーAIエージェント統合の決定版アーキテクチャ">
+<meta name="twitter:description" content="Gartnerが定義するUniversal Orchestratorとは何か。BPAやBOATとの違い、マルチベンダー環境でのAIエージェント統合設計、MCP/A2Aプロトコルとの連携を解説。">
 <meta name="twitter:image" content="https://wingconsulting.org/images/og-default.png">
 <link rel="canonical" href="https://wingconsulting.org/blog/universal-orchestrator-ai-agents">
 <script type="application/ld+json">
@@ -27,7 +27,7 @@
   "headline": "ユニバーサルオーケストレーター：マルチベンダーAIエージェント統合の決定版アーキテクチャ",
   "description": "Gartnerが定義するUniversal Orchestratorとは何か。BPAやBOATとの違い、マルチベンダー環境でのAIエージェント統合設計、MCP/A2Aプロトコルとの連携を解説。",
   "author": {"@type": "Organization","name": "Wing編集部","url": "https://wingconsulting.org"},
-  "publisher": {"@type": "Organization","name": "Wing","url": "https://wingconsulting.org","logo": {"@type": "ImageObject","url": "https://wingconsulting.org/images/logo.png"}},
+  "publisher": {"@type": "Organization","name": "Wing","url": "https://wingconsulting.org","logo": {"@type": "ImageObject","url": "https://wingconsulting.org/images/og-default.png"}},
   "datePublished": "2026-03-29",
   "dateModified": "2026-03-29",
   "mainEntityOfPage": {"@type": "WebPage","@id": "https://wingconsulting.org/blog/universal-orchestrator-ai-agents"},

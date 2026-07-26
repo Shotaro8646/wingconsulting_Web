@@ -7,6 +7,26 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <!-- ─── インサイト一覧 ─── -->
+  <url>
+    <loc>https://wingconsulting.org/blog/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <!-- ─── 会社情報 ─── -->
+  <url>
+    <loc>https://wingconsulting.org/about</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wingconsulting.org/privacy</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
   <!-- ─── ツール ─── -->
   <url>
     <loc>https://wingconsulting.org/dx-assessment</loc>
