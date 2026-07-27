@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KN7NWHFK9G');
+</script>
+
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>安全保障貿易管理とは？該非判定の実務とAI・DXによる輸出管理の効率化 | Wing Blog</title>
+<meta content="安全保障貿易管理（輸出管理）の基礎から実務までを解説。リスト規制・キャッチオール規制・該非判定の進め方、2025年10月改正やみなし輸出管理の最新動向、そして属人化・工数増という課題をAI・DXで解決する具体策を、製造業・商社の実務目線でまとめました。" name="description"/>
+<meta content="安全保障貿易管理, 輸出管理, 該非判定, リスト規制, キャッチオール規制, 外為法, 該非判定 自動化, 輸出管理 DX, パラメータシート, みなし輸出" name="keywords"/>
+<meta content="安全保障貿易管理とは？該非判定の実務とAI・DXによる輸出管理の効率化" property="og:title"/>
+<meta content="安全保障貿易管理（輸出管理）の基礎から実務までを解説。リスト規制・キャッチオール規制・該非判定の進め方、2025年10月改正やみなし輸出管理の最新動向、そして属人化・工数増という課題をAI・DXで解決する具体策を、製造業・商社の実務目線でまとめました。" property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://wingconsulting.org/blog/export-control-ai" property="og:url"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="https://wingconsulting.org/images/og/export-control-ai.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Wing" property="og:site_name"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="安全保障貿易管理とは？該非判定の実務とAI・DXによる輸出管理の効率化" name="twitter:title"/>
+<meta content="安全保障貿易管理（輸出管理）の基礎から実務までを解説。リスト規制・キャッチオール規制・該非判定の進め方、2025年10月改正やみなし輸出管理の最新動向、そして属人化・工数増という課題をAI・DXで解決する具体策を、製造業・商社の実務目線でまとめました。" name="twitter:description"/>
+<meta content="https://wingconsulting.org/images/og/export-control-ai.png" name="twitter:image"/>
+<link href="https://wingconsulting.org/blog/export-control-ai" rel="canonical"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "安全保障貿易管理とは？該非判定の実務とAI・DXによる輸出管理の効率化",
+  "description": "安全保障貿易管理（輸出管理）の基礎から実務までを解説。リスト規制・キャッチオール規制・該非判定の進め方、2025年10月改正やみなし輸出管理の最新動向、そして属人化・工数増という課題をAI・DXで解決する具体策を、製造業・商社の実務目線でまとめました。",
+  "author": {
+    "@type": "Organization",
+    "name": "Wing編集部",
+    "url": "https://wingconsulting.org"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Wing",
+    "url": "https://wingconsulting.org",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wingconsulting.org/images/og/export-control-ai.png"
+    }
+  },
+  "datePublished": "2026-07-27",
+  "dateModified": "2026-07-27",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://wingconsulting.org/blog/export-control-ai"
+  },
+  "image": "https://wingconsulting.org/images/og/export-control-ai.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Wing", "item": "https://wingconsulting.org"},
+    {"@type": "ListItem", "position": 2, "name": "インサイト", "item": "https://wingconsulting.org/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "安全保障貿易管理とは？該非判定の実務とAI・DXによる輸出管理の効率化", "item": "https://wingconsulting.org/blog/export-control-ai"}
+  ]
+}
+</script>
+<style>
+    /* ── Diagram styles ── */
+    .diag-wrap { background:#fff; border:1px solid #E0DDD4; border-top:3px solid #A8965A; padding:1.4rem 1.5rem 1rem; margin:2rem 0 0.5rem; font-size:0.85rem; }
+    .diag-caption { text-align:center; font-size:0.72rem; color:#6B6B6B; margin-top:0.5rem; margin-bottom:2rem; }
+    .diag-pyramid { display:flex; flex-direction:column; align-items:center; gap:0.4rem; margin:0.5rem 0; }
+    .diag-pyr-layer { display:flex; align-items:center; gap:0.8rem; width:100%; max-width:560px; }
+    .diag-pyr-bar { display:flex; align-items:center; justify-content:center; color:#fff; font-size:0.78rem; font-weight:700; padding:0.7rem 1rem; text-align:center; line-height:1.4; flex:1; }
+    .diag-pyr-label { font-size:0.72rem; color:#4A4A4A; line-height:1.4; width:140px; flex-shrink:0; }
+    .diag-ba-row { display:flex; flex-wrap:wrap; gap:1rem; }
+    .diag-ba-col { flex:1 1 200px; border:1px solid #E0DDD4; padding:1rem; }
+    .diag-ba-col .ba-head { font-size:0.7rem; font-weight:700; letter-spacing:0.1em; padding:0.35rem 0.7rem; margin:-1rem -1rem 0.8rem; }
+    .diag-ba-col.before .ba-head { background:#E0DDD4; color:#4A4A4A; }
+    .diag-ba-col.after .ba-head { background:#0B1A2E; color:#A8965A; }
+    .diag-ba-col ul { list-style:none; padding:0; margin:0; }
+    .diag-ba-col li { font-size:0.78rem; color:#4A4A4A; padding:0.25rem 0; border-bottom:1px solid #F0EDE8; line-height:1.5; display:flex; gap:0.4rem; }
+    .diag-ba-col li:last-child { border-bottom:none; }
+    .diag-ba-col li .li-icon { flex-shrink:0; }
+    .diag-ba-arrow { display:flex; align-items:center; justify-content:center; font-size:1.4rem; color:#A8965A; flex-shrink:0; }
+    .diag-checklist { display:flex; flex-direction:column; gap:0.5rem; }
+    .diag-checklist-item { display:flex; align-items:flex-start; gap:0.6rem; background:#FAFAF7; border-left:3px solid #A8965A; padding:0.6rem 0.8rem; font-size:0.8rem; line-height:1.5; color:#1A1A1A; }
+    .diag-checklist-item .chk-num { background:#0B1A2E; color:#A8965A; font-weight:700; font-size:0.7rem; width:22px; height:22px; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:0.05rem; }
+
+    :root {
+      --navy: #0B1A2E;
+      --navy-light: #132742;
+      --gold: #A8965A;
+      --gold-light: #C4B278;
+      --gold-pale: #F5F0E3;
+      --text: #1A1A1A;
+      --text-secondary: #4A4A4A;
+      --text-light: #6B6B6B;
+      --bg: #FAFAF7;
+      --white: #FFFFFF;
+      --border: #E0DDD4;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Yu Gothic', 'YuGothic', 'Noto Sans JP', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.9;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header bar ── */
+    .site-header {
+      background: var(--navy);
+      padding: 16px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-family: 'Yu Gothic', 'YuGothic', 'Noto Sans JP', sans-serif;
+      color: var(--gold);
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-decoration: none;
+    }
+    .site-nav {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.05em;
+    }
+    .site-nav a { color: rgba(255,255,255,0.7); text-decoration: none; }
+    .site-nav a:hover { color: var(--gold-light); }
+    .site-nav span { margin: 0 8px; }
+
+    /* ── Hero ── */
+    .hero {
+      background: var(--navy);
+      padding: 64px 24px 72px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 120px;
+      background: linear-gradient(to bottom, transparent, var(--bg));
+    }
+    .hero-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .hero-tag {
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 14px;
+      letter-spacing: 0.1em;
+    }
+    .hero-date {
+      color: rgba(255,255,255,0.45);
+      font-size: 13px;
+      letter-spacing: 0.05em;
+    }
+    .hero h1 {
+      font-family: 'Yu Gothic', 'YuGothic', 'Noto Sans JP', sans-serif;
+      color: var(--white);
+      font-size: clamp(24px, 4vw, 34px);
+      font-weight: 900;
+      line-height: 1.55;
+      margin-bottom: 20px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--gold-light);
+    }
+    .hero-lead {
+      color: rgba(255,255,255,0.6);
+      font-size: 15px;
+      line-height: 1.85;
+      max-width: 600px;
+    }
+
+    /* ── Reading time bar ── */
+    .reading-bar {
+      max-width: 720px;
+      margin: -24px auto 0;
+      padding: 0 24px;
+      position: relative;
+      z-index: 2;
+    }
+    .reading-bar-inner {
+      background: var(--white);
+      border: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 13px;
+      color: var(--text-light);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    }
+    .reading-bar-inner svg {
+      flex-shrink: 0;
+    }
+
+    /* ── Article ── */
+    .article {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    .article p {
+      margin-bottom: 28px;
+      font-size: 15.5px;
+      line-height: 2;
+      color: var(--text-secondary);
+    }
+
+    .article h2 {
+      font-family: 'Yu Gothic', 'YuGothic', 'Noto Sans JP', sans-serif;
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 56px 0 20px;
+      padding-left: 16px;
+      border-left: 3px solid var(--gold);
+      line-height: 1.6;
+    }
+
+    .article h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      margin: 36px 0 14px;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── Insight box ── */
+    .insight-box {
+      background: var(--navy);
+      color: var(--white);
+      padding: 32px 28px;
+      margin: 40px 0;
+      position: relative;
+    }
+    .insight-box::before {
+      content: 'INSIGHT';
+      position: absolute;
+      top: -10px;
+      left: 28px;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 12px;
+      letter-spacing: 0.15em;
+    }
+    .insight-box p {
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 0;
+      font-size: 14.5px;
+      line-height: 1.95;
+    }
+
+    /* ── Numbered blocks ── */
+    .numbered-section {
+      margin: 40px 0;
+    }
+    .numbered-item {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 28px;
+      align-items: flex-start;
+    }
+    .numbered-item-num {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      background: var(--gold-pale);
+      color: var(--gold);
+      font-family: 'Yu Gothic', 'YuGothic', 'Noto Sans JP', sans-serif;
+      font-weight: 900;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .numbered-item-body h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .numbered-item-body p {
+      margin-bottom: 0;
+      font-size: 14.5px;
+      line-height: 1.9;
+    }
+
+    /* ── Comparison table ── */
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 32px 0;
+      font-size: 14px;
+    }
+    .compare-table th {
+      background: var(--navy);
+      color: var(--white);
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 500;
+      font-size: 12.5px;
+      letter-spacing: 0.05em;
+    }
+    .compare-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+    .compare-table tr:nth-child(even) td {
+      background: var(--gold-pale);
+    }
+
+    /* ── Divider ── */
+    .section-divider {
+      width: 40px;
+      height: 2px;
+      background: var(--gold);
+      margin: 48px 0;
+    }
+
+    /* ── Author card ── */
+    .author-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      padding: 28px;
+      margin-top: 56px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .author-avatar {
+      width: 56px;
+      height: 56px;
+      background: var(--navy);
+      border-radius: 50%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-family: 'Yu Gothic', 'YuGothic', 'Noto Sans JP', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .author-info h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+    .author-info .author-role {
+      font-size: 12px;
+      color: var(--text-light);
+      margin-bottom: 8px;
+    }
+    .author-info p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 0;
+    }
+
+    /* ── CTA ── */
+    .cta-section {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      padding: 48px 28px;
+      text-align: center;
+      margin-top: 56px;
+    }
+    .cta-section h3 {
+      font-family: 'Yu Gothic', 'YuGothic', 'Noto Sans JP', sans-serif;
+      color: var(--white);
+      font-size: 19px;
+      margin-bottom: 12px;
+    }
+    .cta-section p {
+      color: rgba(255,255,255,0.55);
+      font-size: 13.5px;
+      margin-bottom: 24px;
+      line-height: 1.8;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 14px 36px;
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      transition: background 0.2s;
+    }
+    .cta-btn:hover {
+      background: var(--gold-light);
+    }
+
+    /* ── Footer ── */
+    .site-footer {
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 12px;
+      color: var(--text-light);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .hero { padding: 48px 20px 56px; }
+      .article { padding: 40px 20px 64px; }
+      .author-card { flex-direction: column; }
+      .reading-bar-inner { flex-wrap: wrap; gap: 12px; }
+      .numbered-item { flex-direction: column; gap: 10px; }
+    }
+  </style>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;family=Noto+Sans+JP:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<style id="font-override">
+  body, p, li, td, th, span, div {
+    font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif !important;
+  }
+  h1, h2, h3, h4, h5, h6, .serif {
+    font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif !important;
+  }
+  .display, [class*="display"], [class*="font-display"] {
+    font-family: "Roboto", "Yu Gothic", "YuGothic", sans-serif !important;
+  }
+  /* English text elements */
+  :lang(en), .en, [lang="en"] {
+    font-family: "Roboto", sans-serif !important;
+  }
+</style>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">WING</a>
+<nav class="site-nav">
+<a href="/#approach">サービス</a><span>·</span>
+<a href="/blog/">ブログ</a><span>·</span>
+<a href="/about">会社概要</a><span>·</span>
+<a href="/#contact">お問い合わせ</a>
+</nav>
+</div>
+</header>
+
+<section class="hero">
+<div class="hero-inner">
+<div class="hero-meta">
+<span class="hero-tag">貿易DX</span>
+<span class="hero-date">2026.07.27</span>
+</div>
+<h1>輸出管理は「事務コスト」ではない ―<br/><em>該非判定の負担</em>を、AI・DXで構造的に減らす</h1>
+<p class="hero-lead">経済安全保障の時代、輸出管理は一部の専門部署だけの問題ではなくなった。該非判定の属人化と工数増に現場が疲弊する一方、違反時の経営リスクは重い。本稿では、安全保障貿易管理の実務と最新動向を整理したうえで、AI・DXで「守り」の業務をどう変えられるかを解説する。</p>
+</div>
+</section>
+
+<div class="reading-bar">
+<div class="reading-bar-inner">
+<svg fill="none" height="16" viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" stroke="#A8965A" stroke-width="1.5"></circle><path d="M8 4.5V8l2.5 1.5" stroke="#A8965A" stroke-linecap="round" stroke-width="1.5"></path></svg>
+<span>読了目安 約9分</span>
+<span>安全保障貿易管理 / 該非判定 / AI・DX</span>
+</div>
+</div>
+
+<article class="article">
+
+<p>「うちは軍需とは無縁だから関係ない」――安全保障貿易管理について、いまだにそう考える経営者は少なくない。だが、この認識は危うい。ドローンに使われる汎用モーター、工作機械、暗号技術を含むソフトウェア、さらには技術者への技術提供まで、規制の網は「民生品」にこそ広く及ぶ。対象は大企業に限らず、部品メーカーも、商社も、大学の研究室も含まれる。</p>
+
+<p>そして違反の代償は重い。外国為替及び外国貿易法（外為法）に基づく輸出管理に違反すれば、刑事罰に加え、最長で数年間の輸出禁止という行政制裁が科されうる。取引先や金融機関からの信用失墜まで含めれば、事業そのものを揺るがしかねない。輸出管理は「事務手続き」ではなく、経営リスクそのものである。</p>
+
+<p>にもかかわらず、多くの企業で輸出管理の実務は、一部のベテラン担当者の経験と勘に支えられている。品目が増え、法令が改正されるたびに膨らむ<strong>該非判定（がいひはんてい）</strong>の負担は、属人化と工数増という形で現場に静かに蓄積している。本稿では、まず制度の全体像を押さえたうえで、この構造的な負担をAI・DXでどう軽減できるかを、実務目線で整理する。</p>
+
+<h2>安全保障貿易管理とは ― 外為法が全ての輸出者に課す義務</h2>
+
+<p>安全保障貿易管理とは、国際的な平和と安全の維持を目的に、武器や、大量破壊兵器・通常兵器の開発等に転用されうる貨物・技術が懸念国や懸念組織に渡らないよう、輸出や技術提供を管理する枠組みである。日本では外為法を根拠とし、貨物の輸出は輸出貿易管理令、技術の提供は外国為替令によって規制される。</p>
+
+<p>規制は大きく二本柱で構成される。<strong>リスト規制</strong>と<strong>キャッチオール規制（補完的輸出規制）</strong>である。この二つは判断の起点が異なるため、実務ではまず「どちらの規制に照らして確認するか」を切り分けることが出発点になる。</p>
+
+<div class="compare-table-wrap" style="overflow-x:auto;">
+<table class="compare-table" style="min-width:520px;">
+<tr><th>観点</th><th>リスト規制</th><th>キャッチオール規制</th></tr>
+<tr><td>判断の起点</td><td>「貨物・技術の仕様」が規制リストに該当するか</td><td>「仕向地・用途・需要者」が懸念に該当するか</td></tr>
+<tr><td>対象</td><td>輸出令別表第1の1〜15項等に列挙された品目・技術</td><td>リストに載らない汎用品のうち、兵器転用の懸念があるもの</td></tr>
+<tr><td>確認方法</td><td>該非判定（パラメータシート・判定書）</td><td>客観要件（用途・需要者）とインフォーム要件の確認</td></tr>
+<tr><td>許可の要否</td><td>該当すれば原則、仕向地を問わず経済産業大臣の許可が必要</td><td>要件に該当すれば許可が必要（優遇対象国向けは一部緩和）</td></tr>
+</table>
+</div>
+<p class="diag-caption">[表] リスト規制とキャッチオール規制の違い</p>
+
+<p>ここで重要なのは、リスト規制は「取引相手が誰であれ、モノの仕様が該当すれば許可が要る」という点だ。相手が友好国であっても、判定を省略してよいわけではない。一方キャッチオール規制は、仕様ではなく「その汎用品が、どこの誰に、何のために渡るのか」に着目する。両者は排他的ではなく、輸出の都度、両方の観点から確認する必要がある。</p>
+
+<h2>該非判定の実務 ― パラメータシートと判定書</h2>
+
+<p>該非判定とは、ある貨物や技術が規制リストに「該当」するのか「非該当」なのかを、仕様に基づいて確認する作業である。実務では、製品の技術仕様を規制の判定項目（スペック）と一つずつ突き合わせる<strong>パラメータシート</strong>が広く用いられる。自社製品であれば自ら判定し、他社から仕入れた部品・材料であれば、製造業者から<strong>該非判定書</strong>を取り付けて根拠とするのが基本の流れだ。</p>
+
+<div class="numbered-section">
+<div class="numbered-item">
+<div class="numbered-item-num">1</div>
+<div class="numbered-item-body">
+<h4>品目・技術の特定</h4>
+<p>輸出しようとする貨物、または提供する技術（設計図・製造ノウハウ・プログラム等）を正確に特定する。同じ製品でも、含まれる機能や性能によって判定が変わる。</p>
+</div>
+</div>
+<div class="numbered-item">
+<div class="numbered-item-num">2</div>
+<div class="numbered-item-body">
+<h4>リスト規制の該非判定</h4>
+<p>パラメータシートを用い、仕様を規制項目と照合する。仕入品は製造業者の判定書を取り付け、自社の責任で内容を確認する。</p>
+</div>
+</div>
+<div class="numbered-item">
+<div class="numbered-item-num">3</div>
+<div class="numbered-item-body">
+<h4>キャッチオール規制の確認</h4>
+<p>非該当の場合も、仕向地・用途・需要者を確認する。契約書・仕様書・カタログ等から用途を確認し、需要者が懸念先でないかを照合する。</p>
+</div>
+</div>
+<div class="numbered-item">
+<div class="numbered-item-num">4</div>
+<div class="numbered-item-body">
+<h4>判断根拠の記録・保管</h4>
+<p>判定結果とその根拠資料を社内に保管する。監査や事後確認に耐える「なぜ、そう判断したか」の記録こそが、コンプライアンスの実体である。</p>
+</div>
+</div>
+</div>
+
+<h2>なぜ該非判定は「重い」のか ― 3つの構造的課題</h2>
+
+<p>制度そのものは明快だが、実務の現場では判定作業が年々重くなっている。その負担は、次の三つの構造的な要因から生じる。</p>
+
+<div class="numbered-section">
+<div class="numbered-item">
+<div class="numbered-item-num">①</div>
+<div class="numbered-item-body">
+<h4>属人化 ― 判定がベテランの頭の中にある</h4>
+<p>該非判定は、規制の条文解釈と製品知識の両方を要する。結果として、一部の熟練担当者しか的確に判定できず、その退職や異動が事業継続リスクになる。</p>
+</div>
+</div>
+<div class="numbered-item">
+<div class="numbered-item-num">②</div>
+<div class="numbered-item-body">
+<h4>工数 ― 品目が増えるほど判定が積み上がる</h4>
+<p>取扱品目が増え、取引先が変わるたびに判定は再度必要になる。判定書の取り付け・催促・保管といった付随作業も含め、輸出量の拡大がそのまま管理工数の増大に直結する。</p>
+</div>
+</div>
+<div class="numbered-item">
+<div class="numbered-item-num">③</div>
+<div class="numbered-item-body">
+<h4>改正追随 ― 規制は頻繁に変わる</h4>
+<p>国際情勢を反映し、規制リストや運用は頻繁に見直される。改正のたびに、過去に「非該当」とした品目まで再判定が必要になりうるが、その影響範囲を人手で追い切るのは難しい。</p>
+</div>
+</div>
+</div>
+
+<div class="insight-box">
+<p>輸出管理の負担の本質は、判定の「難しさ」だけではない。むしろ、判定と記録という同じ作業が、品目・取引・改正のたびに際限なく繰り返される「反復の総量」にある。だからこそ、個々の判定を人が担いつつ、反復と追跡をシステムで肩代わりさせる発想が効く。</p>
+</div>
+
+<h2>最新動向 ― 規制はむしろ強化されている</h2>
+
+<p>輸出管理を「一度整えれば終わり」の業務と捉えるのは危険だ。経済安全保障の潮流のなか、規制はむしろ拡大・強化の方向にある。直近でも、実務に影響する二つの動きを押さえておきたい。</p>
+
+<h3>2025年10月：通常兵器に関する補完的輸出規制の見直し</h3>
+<p>2025年10月には、一般国向けの通常兵器に関する補完的輸出規制が見直された。防衛装備品に利用されうる部品・装置や、軍事研究・開発に用いられる恐れのある材料・技術について、仕向地や需要者が懸念対象に該当する場合の確認が改めて求められる。従来「大量破壊兵器」を中心に意識されてきたキャッチオール確認の射程が、通常兵器関連にも広く及ぶことを意味する。</p>
+
+<h3>2022年5月：みなし輸出管理の明確化</h3>
+<p>技術は、国境を越えなくても「輸出」とみなされる。2022年5月に明確化された「みなし輸出管理」では、日本国内の居住者であっても、外国政府や外国法人の強い影響下にある「特定類型」に該当する者へ技術を提供する場合、輸出許可の対象となりうる。製造現場だけでなく、外国籍人材が関わる研究開発や、大学・研究機関にも直接関わる論点である。</p>
+
+<div class="section-divider"></div>
+
+<p>要点は、輸出管理が「守りの固定業務」ではなく、情勢とともに動き続ける「生きた規制」だということだ。改正のたびに影響範囲を洗い直し、判定と記録を更新し続ける――この継続的な負荷こそ、テクノロジーで支えるべき領域である。</p>
+
+<h2>AI・DXで輸出管理をどう変えるか</h2>
+
+<p>ここで強調しておきたいのは、AIは該非判定の「責任」を肩代わりしないという点だ。最終的な判定と法令遵守の責任は、あくまで企業と担当者にある。AIが担うのは、判定に至るまでの照合・検索・記録という反復作業の負荷を下げ、属人化を解きほぐすことである。具体的には、次の四つの方向で効果が見込める。</p>
+
+<div class="numbered-section">
+<div class="numbered-item">
+<div class="numbered-item-num">1</div>
+<div class="numbered-item-body">
+<h4>該非判定の下調べを半自動化する</h4>
+<p>製品仕様書やデータシートをAIが読み取り、パラメータシートの該当項目や過去の類似判定を提示する。担当者はゼロから調べるのではなく、AIが用意した「たたき台」を検証・確定する形に変わり、判定の初動工数が大きく減る。</p>
+</div>
+</div>
+<div class="numbered-item">
+<div class="numbered-item-num">2</div>
+<div class="numbered-item-body">
+<h4>取引審査（需要者・用途）を仕組み化する</h4>
+<p>取引先や需要者を、外国ユーザーリストや各種の懸念先情報と自動照合し、名称の表記揺れや類似名も含めて検知する。用途に関する懸念表現を契約書・仕様書から拾い上げ、確認漏れを防ぐ。</p>
+</div>
+</div>
+<div class="numbered-item">
+<div class="numbered-item-num">3</div>
+<div class="numbered-item-body">
+<h4>判定書と根拠資料をナレッジ化する</h4>
+<p>散在しがちな判定書・パラメータシート・確認記録を一元管理し、品目・取引単位で検索可能にする。ベテランの頭の中にあった判断根拠が、組織の資産として蓄積・再利用される。</p>
+</div>
+</div>
+<div class="numbered-item">
+<div class="numbered-item-num">4</div>
+<div class="numbered-item-body">
+<h4>改正の影響を追跡可能にする</h4>
+<p>規制改正があった際に、過去の判定のうち再確認が必要な品目を絞り込む。人手では追い切れない「改正の波及先」を可視化し、再判定の抜け漏れを防ぐ。</p>
+</div>
+</div>
+</div>
+
+<p>いずれも、判定という「頭脳労働」をAIに丸投げするものではない。人が判断に集中できるよう、その周辺の探索・照合・記録・追跡を仕組みで支える――これが、輸出管理におけるAI・DXの現実的な勘所である。監査証跡（いつ・誰が・何を根拠に判定したか）が自動的に残る点も、コンプライアンス上の大きな価値になる。</p>
+
+<h2>導入の進め方 ― スモールスタートの4ステップ</h2>
+
+<p>輸出管理のDXは、全社一斉の大規模システム導入で始める必要はない。むしろ、負担の大きい一点から小さく始め、効果を確認しながら広げるほうが定着しやすい。</p>
+
+<div class="numbered-section">
+<div class="numbered-item">
+<div class="numbered-item-num">1</div>
+<div class="numbered-item-body">
+<h4>棚卸し ― どこに負担が集中しているか</h4>
+<p>判定件数・工数・属人度を可視化し、最も負担の重い品目群や工程を特定する。「どの業務から手をつけるか」を数字で決める。</p>
+</div>
+</div>
+<div class="numbered-item">
+<div class="numbered-item-num">2</div>
+<div class="numbered-item-body">
+<h4>一点集中のパイロット</h4>
+<p>負担の大きい一領域（例：仕入品の判定書管理、取引先の名簿照合）に絞り、小さく試す。既存の運用を壊さず、並走で効果を測る。</p>
+</div>
+</div>
+<div class="numbered-item">
+<div class="numbered-item-num">3</div>
+<div class="numbered-item-body">
+<h4>ナレッジの標準化</h4>
+<p>パイロットで得た判定ロジックや確認手順を、テンプレートとして標準化する。属人化していた判断基準を、誰もが使える形に落とし込む。</p>
+</div>
+</div>
+<div class="numbered-item">
+<div class="numbered-item-num">4</div>
+<div class="numbered-item-body">
+<h4>横展開と定着</h4>
+<p>効果が確認できた仕組みを他品目・他部門へ広げ、日常業務に組み込む。改正時の再確認までを含めて、運用を回し続けられる状態にする。</p>
+</div>
+</div>
+</div>
+
+<div class="insight-box">
+<p>安全保障貿易管理は、避けられない「守り」の業務である。しかし、守りだからこそ、属人化と工数増を放置すればいずれ事業のボトルネックになる。判定の責任は人が持ち、反復と追跡はテクノロジーが担う――この分担を設計できた企業だけが、輸出を伸ばしながらコンプライアンスを両立できる。</p>
+</div>
+
+<!-- Author -->
+<div class="author-card">
+<div class="author-avatar">W</div>
+<div class="author-info">
+<h4>Wing ― IT/DX Consulting</h4>
+<div class="author-role">AI・デジタル変革を、確実な「ビジネス成果」へ</div>
+<p>大手外資系・日系コンサルティングファーム出身。貿易実務とIT/DXの両領域に精通し、戦略の策定から実行・定着までを一貫して支援。</p>
+</div>
+</div>
+
+<!-- CTA -->
+<div class="cta-section">
+<h3>貿易・輸出管理のDX、まずは無料相談から</h3>
+<p>該非判定の属人化、判定書管理、取引審査の効率化まで。<br/>貴社の状況に合わせた進め方を、実務目線でご提案します。</p>
+<a class="cta-btn" href="/#contact">無料で相談する</a>
+</div>
+</article>
+
+<!-- related-articles (auto) -->
+<section style="max-width:800px;margin:3.5rem auto 0;padding:2rem 1.5rem 0;border-top:1px solid #E5E7EB;font-family:'Noto Sans JP',sans-serif;">
+  <p style="font-family:'Outfit','Noto Sans JP',sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#B8A882;margin:0 0 .7rem;">Related</p>
+  <h2 style="font-size:1.15rem;font-weight:500;color:#1A1A1F;margin:0 0 1.3rem;">関連記事</h2>
+  <div style="display:grid;gap:.8rem;">
+    <a href="/blog/customs-dx-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">通関DXとは？AI・自動化で変わる輸出入手続きの効率化</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/hs-code-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">HSコードの調べ方・決め方を徹底解説｜品目分類の基礎から事前教示・EPA活用まで</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/chemical-import-automation" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">化学品輸入の自動化入門：書類処理から法規制チェックまで</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/trade-dx-complete-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">貿易DX完全ガイド｜輸入・輸出業務の課題とAI活用の全体像</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+  </div>
+  <p style="margin:1.5rem 0 0;"><a href="/blog/" style="font-family:'Outfit','Noto Sans JP',sans-serif;font-size:.8rem;letter-spacing:.03em;color:#1E4E7E;text-decoration:none;">すべての記事を見る →</a></p>
+</section>
+<footer class="site-footer">
+    © 2026 Wing. All rights reserved.
+  </footer>
+</body>
+</html>
