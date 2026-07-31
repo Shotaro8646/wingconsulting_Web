@@ -12,395 +12,547 @@
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
-<title>Wing｜AI・DX変革の伴走パートナー ─ 経営を語り、コードを書く</title>
-<meta name="description" content="Wingは、構想だけで終わらせないAI・DX変革のパートナーです。戦略を描いた本人が現場に入り込み（Forward Deployed Engineer）、PoCで止まっていたAIを事業の成果まで動かしきります。中堅・大手企業のDX推進、貿易DX・AIプロダクト提供、内製化支援まで一気通貫。">
+<title>Wing｜貴社のビジネスに、変革の翼を ─ 現場・実務の解像度 × AIネイティブな実装力</title>
+<meta name="description" content="Wingは、現場・実務の解像度とAIネイティブな実装力を併せ持つFDE（Forward Deployed Engineer）型のAI・DX変革パートナーです。ビジネスとテクノロジー双方に精通したエンジニアが現場に入り込み、AI戦略の構想から開発・現場への定着までを一気通貫で実行します。">
 <meta name="keywords" content="AIコンサルティング, DXコンサルティング, FDE, Forward Deployed Engineer, 伴走型支援, PoC 本番展開, 内製化支援, 貿易DX, グローバルDX, AI導入">
-<meta property="og:title" content="Wing｜御社の翼に、AIと変革のエンジンを。">
-<meta property="og:description" content="構想だけで終わらせない。戦略を描いた本人が現場に入り込み、AIを事業の成果まで動かしきります。">
+<meta property="og:title" content="Wing｜貴社のビジネスに、変革の翼を。">
+<meta property="og:description" content="現場・実務の解像度 × AIネイティブな実装力。FDE型のAI・DX変革パートナー。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://wingconsulting.org/">
 <meta property="og:image" content="https://wingconsulting.org/images/og-default.png">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:site_name" content="Wing">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Wing｜御社の翼に、AIと変革のエンジンを。">
+<meta name="twitter:title" content="Wing｜貴社のビジネスに、変革の翼を。">
 <meta name="twitter:image" content="https://wingconsulting.org/images/og-default.png">
 <link rel="canonical" href="https://wingconsulting.org/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#101820;--ai:#16324F;--ai-deep:#0E2238;--paper:#FAFBFC;--grid:#E8EDF2;
-  --signal:#0E8A6D;--sub:#5A6672;
-  --mono:'IBM Plex Mono',monospace;--serif:'Shippori Mincho B1',serif;--sans:'Zen Kaku Gothic New',sans-serif;
+  --paper:#FDFDFB;         /* 背景 */
+  --paper2:#F6F6F2;        /* 交互セクション */
+  --navy:#16293F;          /* 主色 */
+  --navy-deep:#0E1C2E;     /* 濃紺（ダーク帯） */
+  --gold:#A8925A;          /* 金（白上で読める濃度） */
+  --gold-bright:#C9B27C;   /* 金（紺上用） */
+  --gold-pale:#F3EEE1;     /* 金の淡面 */
+  --ink:#1B222B;           /* 本文 */
+  --sub:#5C6672;           /* 副文 */
+  --faint:#8B94A0;         /* 弱文字 */
+  --line:#E4E2DA;          /* 罫線 */
+  --mono:'IBM Plex Mono',monospace;
+  --serif:'Shippori Mincho B1',serif;
+  --sans:'Zen Kaku Gothic New',sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.rv{transition:none!important;opacity:1!important;transform:none!important}}
-body{font-family:var(--sans);color:var(--ink);background:var(--paper);
-  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
-  background-size:36px 36px;line-height:1.9;font-size:15.5px}
-.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.rv{transition:none!important;opacity:1!important;transform:none!important}.bar-fill{transition:none!important}}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.95;font-size:15px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
 a{color:inherit;text-decoration:none}
-a:focus-visible,button:focus-visible{outline:3px solid var(--signal);outline-offset:2px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+::selection{background:rgba(168,146,90,.25)}
 
-header{position:sticky;top:0;background:rgba(250,251,252,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--grid);z-index:10}
-.nav{display:flex;align-items:center;justify-content:space-between;height:62px}
-.logo{font-family:var(--serif);font-weight:800;font-size:19px;letter-spacing:.05em}
-.logo small{font-family:var(--sans);font-size:10.5px;font-weight:500;color:var(--sub);display:block;line-height:1;margin-top:2px}
-.nav ul{display:flex;gap:24px;list-style:none;font-size:13.5px;font-weight:500;align-items:center}
-.nav .cta-s{background:var(--ai);color:#fff;padding:9px 16px;border-radius:3px;font-size:12.5px}
-.nav .cta-s:hover{background:var(--ai-deep)}
-@media(max-width:860px){.nav ul li:not(:last-child){display:none}}
+/* ───────── header ───────── */
+header{position:sticky;top:0;z-index:50;background:rgba(253,253,251,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{font-family:var(--serif);font-weight:700;font-size:20px;letter-spacing:.16em;color:var(--navy)}
+.logo b{color:var(--gold)}
+.nav ul{display:flex;gap:26px;list-style:none;font-size:12.5px;font-weight:500;align-items:center;letter-spacing:.05em}
+.nav ul a{color:var(--sub);transition:color .2s}
+.nav ul a:hover{color:var(--navy)}
+.nav .cta-s{background:var(--navy);color:#fff;padding:10px 20px;border-radius:2px;font-weight:700;letter-spacing:.08em}
+.nav .cta-s:hover{background:var(--navy-deep);color:#fff}
+@media(max-width:900px){.nav ul li:not(:last-child){display:none}}
 
-.hero{padding:72px 0 64px;border-bottom:1px solid var(--grid)}
-.eyebrow{font-size:13px;letter-spacing:.14em;color:var(--signal);font-weight:700;margin-bottom:18px}
-h1{font-family:var(--serif);font-weight:800;font-size:clamp(28px,4.8vw,46px);line-height:1.5;letter-spacing:.02em}
-h1 em{font-style:normal;background:linear-gradient(transparent 68%,rgba(14,138,109,.22) 68%)}
-.hero p.lead{margin:24px 0 30px;font-size:clamp(14.5px,1.7vw,16.5px);color:var(--sub);max-width:640px}
-.hero-flex{display:flex;gap:44px;align-items:flex-start}
-.hero-left{flex:1.15}.hero-right{flex:1;min-width:0}
-@media(max-width:880px){.hero-flex{flex-direction:column}.hero-right{width:100%}}
-.btn-row{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-block;padding:14px 26px;border-radius:3px;font-weight:700;font-size:14.5px;border:1px solid var(--ai);text-align:center;cursor:pointer}
-.btn.primary{background:var(--ai);color:#fff}
-.btn.primary:hover{background:var(--ai-deep)}
-.btn.ghost{color:var(--ai);background:#fff}
-.btn.dl{background:var(--signal);border-color:var(--signal);color:#fff}
-.btn.dl:hover{filter:brightness(.94)}
-.hero-note{margin-top:12px;font-size:12px;color:var(--sub)}
-.chips{margin-top:26px;display:flex;flex-wrap:wrap;gap:8px}
-.chip{font-size:12px;background:#fff;border:1px solid var(--grid);border-radius:999px;padding:5px 13px;color:var(--sub)}
+/* ───────── hero ───────── */
+.hero{position:relative;padding:104px 0 96px;overflow:hidden;background:var(--paper)}
+.hero::before{content:'';position:absolute;top:0;right:-140px;width:560px;height:560px;border-radius:50%;
+  background:radial-gradient(circle,rgba(168,146,90,.10),transparent 66%);pointer-events:none}
+.hero::after{content:'';position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--line)}
+.formula{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:34px}
+.formula .f-item{font-size:clamp(13px,1.6vw,16px);font-weight:700;letter-spacing:.1em;color:var(--navy);
+  border:1px solid var(--line);border-bottom:2px solid var(--gold);padding:10px 22px;background:#fff}
+.formula .f-x{font-family:var(--serif);color:var(--gold);font-size:clamp(16px,2vw,22px);font-weight:600}
+h1{font-family:var(--serif);font-weight:700;font-size:clamp(36px,6.4vw,66px);line-height:1.42;letter-spacing:.03em;color:var(--navy)}
+h1 em{font-style:normal;color:var(--navy);position:relative;background:linear-gradient(transparent 72%,rgba(168,146,90,.28) 72%)}
+.hero .lead{margin:32px 0 44px;font-size:clamp(14px,1.6vw,16px);color:var(--sub);max-width:660px;line-height:2.15}
+.btn-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:16px 34px;border-radius:2px;font-weight:700;font-size:14px;letter-spacing:.08em;text-align:center;transition:all .2s}
+.btn.primary{background:var(--navy);color:#fff;border:1px solid var(--navy)}
+.btn.primary:hover{background:var(--navy-deep)}
+.btn.ghost{color:var(--navy);border:1px solid var(--navy);background:transparent}
+.btn.ghost:hover{background:var(--navy);color:#fff}
+.hero-note{margin-top:22px;font-size:12px;color:var(--faint);letter-spacing:.04em}
+.hero-note b{color:var(--sub);font-weight:500}
 
-.transform{border:1px solid var(--grid);border-radius:6px;background:#fff;box-shadow:0 8px 28px rgba(16,24,32,.06);overflow:hidden}
-.transform .t-head{display:flex;justify-content:space-between;padding:10px 16px;border-bottom:1px solid var(--grid);font-size:11.5px;color:var(--sub);font-weight:700}
-.t-body{display:grid;grid-template-columns:1fr 34px 1fr}
-.t-memo{padding:18px 16px;font-size:12.5px;color:var(--sub);background:repeating-linear-gradient(#fff,#fff 26px,#F1F4F7 27px)}
-.t-memo b{color:var(--ink)}.t-memo li{list-style:none;margin-bottom:8px}
-.t-arrow{display:flex;align-items:center;justify-content:center;color:var(--signal);font-size:18px;background:#fff}
-.t-app{padding:14px;background:#F6F9F8}
-.t-app .bar{height:9px;border-radius:2px;background:var(--grid);margin-bottom:8px}
-.t-app .bar.g{background:var(--signal);opacity:.85}
-.t-app .row{display:flex;gap:6px}
-.t-app .cell{flex:1;height:26px;border:1px solid var(--grid);border-radius:3px;background:#fff}
-.t-app .cell.on{border-color:var(--signal);background:rgba(14,138,109,.08)}
-.t-foot{padding:10px 16px;border-top:1px solid var(--grid);font-size:11.5px;color:var(--signal);font-weight:700}
+/* ───────── kicker(共通) ───────── */
+.kicker{display:flex;align-items:baseline;gap:16px;margin-bottom:24px}
+.kicker .no{font-family:var(--mono);font-size:12px;color:var(--gold);letter-spacing:.1em}
+.kicker .label{font-size:11.5px;letter-spacing:.34em;color:var(--faint);font-weight:500;text-transform:uppercase}
+h2{font-family:var(--serif);font-weight:600;font-size:clamp(25px,3.6vw,40px);line-height:1.58;margin-bottom:20px;letter-spacing:.02em;color:var(--navy)}
+h2 em{font-style:normal;background:linear-gradient(transparent 72%,rgba(168,146,90,.3) 72%)}
+.sec-lead{color:var(--sub);font-size:14.5px;max-width:720px;line-height:2.1}
+section{padding:96px 0}
 
-section{padding:72px 0;border-bottom:1px solid var(--grid)}
-.sec-label{font-size:12.5px;letter-spacing:.14em;color:var(--sub);margin-bottom:12px;font-weight:700}
-.sec-label .no{font-family:var(--mono);color:var(--signal);margin-right:8px}
-h2{font-family:var(--serif);font-weight:700;font-size:clamp(23px,3.2vw,32px);line-height:1.55;margin-bottom:16px}
-.sec-lead{color:var(--sub);font-size:14.5px;max-width:680px}
-.sec-alt{background:#fff}
+/* ───────── dark band (data) ───────── */
+.band{background:
+  radial-gradient(ellipse 900px 460px at 85% -10%,rgba(201,178,124,.12),transparent 60%),
+  var(--navy-deep);color:#EDEBE4}
+.band h2{color:#fff}
+.band h2 em{background:linear-gradient(transparent 72%,rgba(201,178,124,.35) 72%);color:var(--gold-bright)}
+.band .sec-lead{color:rgba(237,235,228,.72)}
+.band .kicker .label{color:rgba(237,235,228,.5)}
+.band .kicker .no{color:var(--gold-bright)}
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.12);margin-top:50px}
+@media(max-width:820px){.stat-row{grid-template-columns:1fr}}
+.bigstat{background:var(--navy-deep);padding:38px 32px 32px;position:relative}
+.bigstat::before{content:'';position:absolute;top:0;left:0;width:46px;height:2px;background:var(--gold-bright)}
+.bigstat .n{font-family:var(--serif);font-size:clamp(46px,5vw,62px);line-height:1;color:var(--gold-bright);letter-spacing:.02em}
+.bigstat .n small{font-size:.42em;letter-spacing:.06em}
+.bigstat .t{margin-top:16px;font-size:13.5px;font-weight:700;color:#fff;line-height:1.8}
+.bigstat .d{margin-top:8px;font-size:12px;color:rgba(237,235,228,.6);line-height:1.9}
+.src{margin-top:20px;font-family:var(--mono);font-size:10.5px;color:rgba(237,235,228,.45);letter-spacing:.05em}
+.src a{border-bottom:1px solid rgba(255,255,255,.2)}
+.src a:hover{color:var(--gold-bright)}
 
-.pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
-@media(max-width:820px){.pain-grid{grid-template-columns:1fr}}
-.pain{background:#fff;border:1px solid var(--grid);border-radius:6px;padding:24px 22px}
-.pain h3{font-size:15.5px;font-weight:700;margin-bottom:8px;line-height:1.6;font-family:var(--serif);color:var(--ai)}
-.pain p{font-size:13px;color:var(--sub)}
-.pain-answer{margin-top:30px;font-family:var(--serif);font-size:clamp(16px,2vw,20px);font-weight:700}
-.pain-answer em{font-style:normal;color:var(--signal)}
+/* divide (95%) */
+.divide{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:center;margin-top:52px}
+@media(max-width:880px){.divide{grid-template-columns:1fr;gap:38px}}
+.d95 .huge{font-family:var(--serif);font-size:clamp(100px,13vw,172px);line-height:.95;color:#fff;letter-spacing:.01em}
+.d95 .huge small{font-size:.32em;color:var(--gold-bright)}
+.d95 .cap{margin-top:16px;font-size:14px;color:rgba(237,235,228,.75);line-height:2.05}
+.d95 .cap b{color:#fff}
+.bars{display:flex;flex-direction:column;gap:28px}
+.bar-item .bl{display:flex;justify-content:space-between;font-size:13px;margin-bottom:10px;color:rgba(237,235,228,.75)}
+.bar-item .bl b{font-family:var(--mono);color:var(--gold-bright);font-size:16px}
+.bar-track{height:10px;background:rgba(255,255,255,.1)}
+.bar-fill{height:100%;background:linear-gradient(to right,var(--gold),var(--gold-bright));width:0;transition:width 1.1s cubic-bezier(.2,.7,.3,1)}
+.bar-fill.dim{background:rgba(255,255,255,.28)}
+.in .bar-fill{width:var(--w)}
+.divide-note{margin-top:36px;padding:22px 28px;border-left:2px solid var(--gold-bright);background:rgba(255,255,255,.05);font-size:13.5px;line-height:2.05;color:rgba(237,235,228,.8)}
+.divide-note b{color:var(--gold-bright)}
 
-.fde-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
-@media(max-width:820px){.fde-grid{grid-template-columns:1fr}}
-.fde{background:#fff;border:1px solid var(--grid);border-radius:6px;padding:26px 22px}
-.fde .fno{font-family:var(--mono);font-size:12px;color:var(--signal);font-weight:700}
-.fde h3{font-family:var(--serif);font-size:17px;margin:8px 0 8px;line-height:1.5}
-.fde p{font-size:13px;color:var(--sub)}
+/* ───────── FDE ───────── */
+.fde-def{font-family:var(--serif);font-size:clamp(17px,2.2vw,22px);color:var(--ink);line-height:2.05;max-width:780px;margin-top:10px}
+.fde-def b{color:var(--navy);font-weight:700;background:linear-gradient(transparent 74%,rgba(168,146,90,.25) 74%)}
+.diagram{margin-top:58px;border:1px solid var(--line);background:#fff;padding:52px 44px 42px;position:relative;box-shadow:0 24px 60px rgba(22,41,63,.07)}
+.diagram::before{content:'FDE MODEL';position:absolute;top:20px;right:24px;font-family:var(--mono);font-size:10px;letter-spacing:.3em;color:var(--faint)}
+@media(max-width:760px){.diagram{padding:36px 18px 30px}}
+.dg-top{display:grid;grid-template-columns:1fr auto 1fr;gap:0;align-items:stretch}
+@media(max-width:760px){.dg-top{grid-template-columns:1fr}}
+.dg-side{border:1px solid var(--line);background:var(--paper);padding:28px 26px}
+.dg-side h4{font-family:var(--serif);font-size:16.5px;color:var(--navy);margin-bottom:14px;letter-spacing:.06em}
+.dg-side h4 span{display:block;font-family:var(--mono);font-size:10px;color:var(--gold);letter-spacing:.26em;margin-bottom:8px}
+.dg-side li{list-style:none;font-size:12.5px;color:var(--sub);padding:6px 0;border-bottom:1px dashed var(--line)}
+.dg-side li:last-child{border-bottom:none}
+.dg-center{display:flex;align-items:center;padding:0 8px}
+@media(max-width:760px){.dg-center{padding:22px 0;justify-content:center}}
+.dg-node{border:1px solid var(--navy);background:var(--navy);color:#fff;padding:32px 34px;text-align:center;min-width:250px;position:relative;box-shadow:0 16px 44px rgba(22,41,63,.25)}
+.dg-node::before,.dg-node::after{content:'⟶';position:absolute;top:50%;transform:translateY(-50%);color:var(--gold);font-size:18px}
+.dg-node::before{left:-30px;content:'⟷'}
+.dg-node::after{right:-30px;content:'⟷'}
+@media(max-width:760px){.dg-node::before,.dg-node::after{display:none}}
+.dg-node .tag{font-family:var(--mono);font-size:10px;letter-spacing:.3em;color:var(--gold-bright);margin-bottom:12px}
+.dg-node h3{font-family:var(--serif);font-size:20px;color:#fff;line-height:1.65;letter-spacing:.05em}
+.dg-node p{font-size:11.5px;color:rgba(255,255,255,.72);margin-top:12px;line-height:1.95}
+.dg-flow{margin-top:46px;padding-top:36px;border-top:1px dashed var(--line)}
+.dg-flow .fl-title{font-family:var(--mono);font-size:10.5px;letter-spacing:.3em;color:var(--faint);margin-bottom:22px;text-align:center}
+.fl-steps{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:0;align-items:stretch}
+@media(max-width:760px){.fl-steps{grid-template-columns:1fr}}
+.fl-step{background:var(--paper);border:1px solid var(--line);border-top:2px solid var(--gold);padding:22px 24px}
+.fl-step .fs-no{font-family:var(--mono);font-size:10.5px;color:var(--gold);letter-spacing:.18em}
+.fl-step h5{font-family:var(--serif);font-size:15.5px;font-weight:700;color:var(--navy);margin:8px 0 6px;letter-spacing:.04em}
+.fl-step p{font-size:11.5px;color:var(--sub);line-height:1.95}
+.fl-arrow{display:flex;align-items:center;justify-content:center;color:var(--gold);padding:0 12px;font-size:17px}
+@media(max-width:760px){.fl-arrow{transform:rotate(90deg);padding:8px 0}}
+.dg-foot{margin-top:28px;text-align:center;font-size:12.5px;color:var(--sub);letter-spacing:.05em}
+.dg-foot b{color:var(--navy);font-weight:700;background:linear-gradient(transparent 74%,rgba(168,146,90,.25) 74%)}
 
-.bp{position:relative;margin-top:44px}
-.bp-grid{display:grid;grid-template-columns:1.05fr 1.25fr 1.4fr;gap:20px}
-@media(max-width:820px){.bp-grid{grid-template-columns:1fr}}
-.phase{background:#fff;border:1px solid var(--grid);border-radius:6px;overflow:hidden;position:relative}
-.phase .ph-top{padding:14px 20px;border-bottom:1px dashed var(--grid);display:flex;justify-content:space-between;align-items:baseline}
-.phase .ph-no{font-size:12.5px;color:var(--signal);font-weight:700}
-.phase .ph-no span{font-family:var(--mono);margin-right:6px}
-.phase .ph-dur{font-size:12px;color:var(--sub)}
-.phase h3{font-family:var(--serif);font-size:18px;padding:16px 20px 2px}
-.phase p{padding:6px 20px 12px;font-size:13px;color:var(--sub)}
-.phase .ph-meta{padding:0 20px 14px;font-size:12px;color:var(--sub)}
-.phase .ph-meta b{color:var(--ink)}
-.phase .ph-price{padding:12px 20px;border-top:1px solid var(--grid);font-size:13px;background:#FAFBFC}
-.phase .ph-price b{font-family:var(--mono);color:var(--ai);font-size:15px}
-.phase.focus{border-color:var(--signal);box-shadow:0 10px 30px rgba(14,138,109,.10)}
-.phase.focus .ph-badge{position:absolute;top:-11px;left:18px;background:var(--signal);color:#fff;font-size:11px;font-weight:700;padding:2px 10px;border-radius:2px}
-.bp-note{margin-top:20px;font-size:12.5px;color:var(--sub)}
+/* ───────── sections alt ───────── */
+.sec-alt{background:var(--paper2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 
-.cmp{margin-top:36px;overflow-x:auto}
-table.c{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--grid);font-size:13.5px;min-width:560px}
-table.c th,table.c td{padding:14px 16px;border-bottom:1px solid var(--grid);text-align:left;vertical-align:top}
-table.c thead th{font-size:12.5px;color:var(--sub);border-bottom:2px solid var(--ai);font-weight:700}
-table.c thead th.wings{color:var(--signal)}
-table.c tbody th{font-weight:700;font-size:12.5px;white-space:nowrap;color:var(--sub);width:118px}
-table.c td.wings{font-weight:700}
-table.c .num{font-family:var(--mono)}
-table.c td.wings .num{color:var(--signal)}
-.cmp-note{margin-top:10px;font-size:12px;color:var(--sub)}
+/* phases */
+.bp-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;margin-top:50px}
+@media(max-width:860px){.bp-grid{grid-template-columns:1fr}}
+.phase{background:#fff;border:1px solid var(--line);overflow:hidden;position:relative;display:flex;flex-direction:column}
+.phase .ph-top{padding:16px 22px;border-bottom:1px dashed var(--line);display:flex;justify-content:space-between;align-items:baseline}
+.phase .ph-no{font-size:12.5px;color:var(--gold);font-weight:700;letter-spacing:.04em}
+.phase .ph-no span{font-family:var(--mono);margin-right:8px}
+.phase .ph-dur{font-family:var(--mono);font-size:11px;color:var(--faint)}
+.phase h3{font-family:var(--serif);font-size:18px;padding:18px 22px 4px;color:var(--navy);letter-spacing:.03em}
+.phase p{padding:8px 22px 14px;font-size:12.5px;color:var(--sub);flex:1;line-height:2}
+.phase .ph-meta{padding:0 22px 16px;font-size:11.5px;color:var(--faint);line-height:1.9}
+.phase .ph-meta b{color:var(--sub)}
+.phase .ph-price{padding:14px 22px;border-top:1px solid var(--line);font-size:12.5px;background:var(--paper);color:var(--sub)}
+.phase .ph-price b{font-family:var(--mono);color:var(--navy);font-size:14px}
+.phase.focus{border-color:var(--navy);box-shadow:0 18px 44px rgba(22,41,63,.10)}
+.phase.focus .ph-badge{position:absolute;top:-11px;left:20px;background:var(--navy);color:#fff;font-size:10.5px;font-weight:700;padding:3px 12px;letter-spacing:.08em}
+.bp-note{margin-top:22px;font-size:12px;color:var(--faint);line-height:2}
+.ph-fill{background:rgba(168,146,90,.14);border-bottom:1px dashed var(--gold);color:var(--navy);padding:0 4px}
 
-.prod-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:34px}
-@media(max-width:820px){.prod-grid{grid-template-columns:1fr}}
-.prod{background:#fff;border:1px solid var(--grid);border-radius:6px;padding:26px 24px;display:flex;flex-direction:column}
-.prod .tag{font-family:var(--mono);font-size:11px;color:var(--signal);font-weight:700;letter-spacing:.06em}
-.prod h3{font-family:var(--serif);font-size:19px;margin:8px 0 4px}
-.prod .sub{font-size:12.5px;color:var(--sub);margin-bottom:12px}
-.prod p{font-size:13px;color:var(--sub);flex:1}
-.prod .free{margin-top:14px;font-size:12px;color:var(--signal);font-weight:700}
-.prod .plink{margin-top:8px;font-size:13px;color:var(--ai);font-weight:700}
+/* compare */
+.cmp{margin-top:50px;overflow-x:auto}
+table.c{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);font-size:13px;min-width:640px}
+table.c th,table.c td{padding:16px 20px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;line-height:1.9}
+table.c thead th{font-size:12px;color:var(--faint);border-bottom:2px solid var(--navy);font-weight:700;letter-spacing:.08em}
+table.c thead th.wings{color:var(--navy)}
+table.c tbody th{font-weight:700;font-size:12px;white-space:nowrap;color:var(--faint);width:120px}
+table.c td{color:var(--sub)}
+table.c td.wings{color:var(--ink);font-weight:500;background:var(--gold-pale)}
+table.c .num{font-family:var(--mono);color:var(--navy);font-weight:700}
+.cmp-note{margin-top:12px;font-size:11.5px;color:var(--faint)}
 
-.pill-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
-@media(max-width:820px){.pill-row{grid-template-columns:1fr}}
-.pillar{background:#fff;border:1px solid var(--grid);border-radius:6px;padding:24px 22px}
-.pillar .pno{font-family:var(--mono);font-size:12px;color:var(--signal)}
-.pillar h3{font-family:var(--serif);font-size:16px;margin:6px 0}
-.pillar p{font-size:12.5px;color:var(--sub)}
-.pillar ul{margin:10px 0 0;padding-left:0;list-style:none}
-.pillar li{font-size:12px;color:var(--sub);padding:3px 0;border-bottom:1px solid var(--grid)}
+/* services */
+.pill-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:50px}
+@media(max-width:860px){.pill-row{grid-template-columns:1fr}}
+.pillar{background:#fff;border:1px solid var(--line);border-top:2px solid var(--navy);padding:30px 26px;transition:box-shadow .25s}
+.pillar:hover{box-shadow:0 14px 36px rgba(22,41,63,.08)}
+.pillar .pno{font-family:var(--mono);font-size:11px;color:var(--gold);letter-spacing:.22em}
+.pillar h3{font-family:var(--serif);font-size:18px;color:var(--navy);margin:12px 0 10px;letter-spacing:.04em}
+.pillar>p{font-size:12.5px;color:var(--sub);margin-bottom:16px;line-height:2}
+.pillar ul{list-style:none}
+.pillar li{font-size:12.5px;color:var(--sub);padding:7px 0 7px 18px;border-bottom:1px dashed var(--line);position:relative}
+.pillar li::before{content:'─';position:absolute;left:0;color:var(--gold);font-size:10px;top:9px}
 .pillar li:last-child{border-bottom:none}
 
-.why-flex{display:flex;gap:40px;margin-top:36px;align-items:flex-start}
-@media(max-width:820px){.why-flex{flex-direction:column}}
-.why-left{flex:1.35}.why-right{flex:1}
-.profile-card{background:#fff;border:1px solid var(--grid);border-radius:6px;padding:24px;display:flex;gap:20px;margin-bottom:22px}
-.profile-card .ph{width:88px;height:88px;border-radius:6px;background:linear-gradient(135deg,var(--grid),#fff);border:1px solid var(--grid);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--sub);text-align:center}
-.profile-card h3{font-family:var(--serif);font-size:17px;margin-bottom:4px}
-.profile-card .role{font-size:12px;color:var(--sub);margin-bottom:8px}
-.profile-card p{font-size:12.5px;color:var(--sub)}
-.why-copy p{font-size:14px;color:var(--sub);margin-bottom:14px}
-.why-copy p b{color:var(--ink)}
-.stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--grid);border:1px solid var(--grid)}
-.stat{background:#fff;padding:20px 18px}
-.stat .n{font-family:var(--mono);font-size:28px;color:var(--ai)}
-.stat .n b{color:var(--signal);font-weight:500}
-.stat .l{font-size:11.5px;color:var(--sub);margin-top:2px}
-.sec-trust{margin-top:18px;padding:14px 18px;background:#fff;border-left:3px solid var(--signal);font-size:13px}
+/* products */
+.prod-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:50px}
+@media(max-width:860px){.prod-grid{grid-template-columns:1fr}}
+.prod{background:var(--navy);color:#fff;padding:34px 32px;position:relative;overflow:hidden}
+.prod::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,var(--gold-bright),transparent 70%)}
+.prod::after{content:'';position:absolute;bottom:-120px;right:-120px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(201,178,124,.14),transparent 65%)}
+.prod .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.3em;color:var(--gold-bright)}
+.prod h3{font-family:var(--serif);font-size:20px;color:#fff;margin:14px 0 4px;letter-spacing:.03em}
+.prod .sub{font-size:12px;color:rgba(255,255,255,.6);margin-bottom:14px}
+.prod p{font-size:12.5px;color:rgba(255,255,255,.78);margin-bottom:18px;line-height:2;position:relative;z-index:1}
+.prod .free{display:inline-block;font-size:11.5px;color:var(--gold-bright);border:1px solid rgba(201,178,124,.45);padding:6px 14px;margin-bottom:18px;letter-spacing:.04em}
+.prod .plink{font-size:12.5px;color:var(--gold-bright);font-weight:700;letter-spacing:.06em;position:relative;z-index:1}
+.prod .plink:hover{color:#fff}
 
-.faq{margin-top:34px;display:grid;gap:12px;max-width:820px}
-.faq details{background:#fff;border:1px solid var(--grid);border-radius:6px;padding:0}
-.faq summary{cursor:pointer;padding:16px 20px;font-weight:700;font-size:14px;list-style:none;position:relative}
+/* why */
+.why-flex{display:flex;gap:48px;margin-top:50px;align-items:flex-start}
+@media(max-width:860px){.why-flex{flex-direction:column}}
+.why-left{flex:1.4}.why-right{flex:1}
+.profile-card{background:#fff;border:1px solid var(--line);padding:28px;display:flex;gap:22px;margin-bottom:24px}
+@media(max-width:560px){.profile-card{flex-direction:column}}
+.profile-card .ph{width:92px;height:92px;background:var(--gold-pale);border:1px dashed var(--gold);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--gold);text-align:center;line-height:1.6}
+.profile-card h3{font-family:var(--serif);font-size:17px;color:var(--navy);margin-bottom:4px}
+.profile-card .role{font-size:11.5px;color:var(--faint);margin-bottom:10px}
+.profile-card p{font-size:12.5px;color:var(--sub);line-height:1.95}
+.why-copy p{font-size:13.5px;color:var(--sub);margin-bottom:16px;line-height:2.1}
+.why-copy p b{color:var(--ink);font-weight:700}
+.stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.stat{background:#fff;padding:26px 22px}
+.stat .n{font-family:var(--serif);font-size:34px;color:var(--navy)}
+.stat .n b{color:var(--gold);font-weight:500;font-size:.6em}
+.stat .l{font-size:11px;color:var(--faint);margin-top:4px;letter-spacing:.04em}
+.sec-trust{margin-top:20px;padding:18px 22px;border-left:2px solid var(--gold);background:#fff;font-size:12.5px;color:var(--sub);line-height:2}
+
+/* faq */
+.faq{margin-top:48px;display:grid;gap:12px;max-width:860px}
+.faq details{background:#fff;border:1px solid var(--line)}
+.faq details[open]{border-color:var(--navy)}
+.faq summary{cursor:pointer;padding:18px 24px;font-weight:700;font-size:13.5px;list-style:none;position:relative;color:var(--navy);letter-spacing:.02em}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"＋";position:absolute;right:18px;color:var(--signal)}
+.faq summary::after{content:"＋";position:absolute;right:20px;color:var(--gold)}
 .faq details[open] summary::after{content:"−"}
-.faq .a{padding:0 20px 16px;font-size:13.5px;color:var(--sub)}
+.faq .a{padding:0 24px 20px;font-size:13px;color:var(--sub);line-height:2.05}
 
-.ins-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
-@media(max-width:820px){.ins-grid{grid-template-columns:1fr}}
-.ins{background:#fff;border:1px solid var(--grid);border-radius:6px;padding:20px 20px;display:block}
-.ins .cat{font-family:var(--mono);font-size:10.5px;color:var(--signal);font-weight:700}
-.ins h3{font-family:var(--serif);font-size:14.5px;line-height:1.6;margin:8px 0 6px}
-.ins p{font-size:12px;color:var(--sub)}
-.ins:hover{border-color:var(--signal)}
-.ins-all{margin-top:22px;font-size:13.5px;color:var(--ai);font-weight:700}
+/* insights */
+.ins-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+@media(max-width:860px){.ins-grid{grid-template-columns:1fr}}
+.ins{background:#fff;border:1px solid var(--line);padding:24px 22px;display:block;transition:all .25s}
+.ins:hover{border-color:var(--navy);transform:translateY(-3px);box-shadow:0 14px 34px rgba(22,41,63,.08)}
+.ins .cat{font-family:var(--mono);font-size:10px;letter-spacing:.26em;color:var(--gold);margin-bottom:12px}
+.ins h3{font-size:13.5px;font-weight:700;color:var(--navy);line-height:1.75;margin-bottom:8px}
+.ins p{font-size:11.5px;color:var(--faint);line-height:1.9}
+.ins-all{display:inline-block;margin-top:32px;font-size:13px;color:var(--navy);font-weight:700;letter-spacing:.08em;border-bottom:1px solid var(--gold)}
 
-table.co{width:100%;max-width:720px;border-collapse:collapse;background:#fff;border:1px solid var(--grid);font-size:13.5px;margin-top:30px}
-table.co th,table.co td{padding:13px 18px;border-bottom:1px solid var(--grid);text-align:left}
-table.co th{width:140px;color:var(--sub);font-size:12.5px;background:#FAFBFC;font-weight:700}
-.ph-fill{color:#B98900;background:#FFF6E0;padding:0 6px;border-radius:3px;font-size:12px;font-weight:700}
+/* company */
+table.co{width:100%;max-width:760px;border-collapse:collapse;background:#fff;border:1px solid var(--line);font-size:13px;margin-top:44px}
+table.co th,table.co td{padding:15px 22px;border-bottom:1px solid var(--line);text-align:left}
+table.co th{width:150px;color:var(--faint);font-size:12px;font-weight:700;letter-spacing:.08em;background:var(--paper)}
+table.co td{color:var(--sub)}
 
-.cta-sec{background:var(--ai);color:#fff;border-bottom:none;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:36px 36px}
+/* contact */
+.cta-sec{background:
+  radial-gradient(ellipse 800px 420px at 50% -20%,rgba(201,178,124,.14),transparent 60%),
+  var(--navy-deep);color:#EDEBE4}
 .cta-sec h2{color:#fff}
-.cta-sec p{color:rgba(255,255,255,.78);max-width:620px;font-size:14.5px;margin-bottom:28px}
-.cta-flex{display:flex;gap:40px;align-items:flex-start;margin-top:8px}
-@media(max-width:820px){.cta-flex{flex-direction:column}}
-.cta-left{flex:1}.cta-right{flex:1.1;width:100%}
-.form{background:#fff;border-radius:8px;padding:24px;display:grid;gap:12px}
-.form label{font-size:12px;color:var(--sub);font-weight:700;display:block;margin-bottom:4px}
-.form input,.form textarea,.form select{width:100%;border:1px solid var(--grid);border-radius:4px;padding:10px 12px;font-family:var(--sans);font-size:14px;color:var(--ink);background:#fff}
-.form textarea{min-height:96px;resize:vertical}
-.form .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-@media(max-width:520px){.form .two{grid-template-columns:1fr}}
-.form .submit{background:var(--signal);color:#fff;border:none;border-radius:4px;padding:14px;font-weight:700;font-size:14.5px;cursor:pointer}
-.form .submit:hover{filter:brightness(.94)}
-.form .note{font-size:11px;color:var(--sub)}
-footer{background:var(--ai-deep);color:rgba(255,255,255,.55);font-size:12px;padding:26px 0}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-footer a{color:rgba(255,255,255,.7)}
+.cta-sec .kicker .label{color:rgba(237,235,228,.5)}
+.cta-sec .kicker .no{color:var(--gold-bright)}
+.cta-flex{display:grid;grid-template-columns:1fr 1.15fr;gap:56px;margin-top:44px;align-items:start}
+@media(max-width:880px){.cta-flex{grid-template-columns:1fr;gap:36px}}
+.cta-left p{color:rgba(237,235,228,.78);font-size:14px;margin-bottom:18px;line-height:2.1}
+.form{display:flex;flex-direction:column;gap:16px;background:#fff;padding:34px;color:var(--ink)}
+.form label{font-size:11.5px;font-weight:700;color:var(--sub);display:block;margin-bottom:6px;letter-spacing:.06em}
+.form input,.form textarea{width:100%;background:var(--paper);border:1px solid var(--line);padding:12px 14px;font-family:var(--sans);font-size:13.5px;color:var(--ink)}
+.form input:focus,.form textarea:focus{outline:none;border-color:var(--navy)}
+.form textarea{min-height:120px;resize:vertical}
+.form .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:560px){.form .two{grid-template-columns:1fr}}
+.form .submit{background:var(--navy);color:#fff;border:none;padding:16px;font-family:var(--sans);font-weight:700;font-size:14px;letter-spacing:.1em;cursor:pointer;transition:background .2s}
+.form .submit:hover{background:var(--gold)}
+.form .note{font-size:10.5px;color:var(--faint)}
 
-.rv{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+/* footer */
+footer{background:var(--navy-deep);color:rgba(237,235,228,.5);font-size:11.5px;padding:34px 0;border-top:1px solid rgba(255,255,255,.08)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer a:hover{color:var(--gold-bright)}
+
+/* misc */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
 .rv.in{opacity:1;transform:none}
-.draft-ribbon{position:fixed;bottom:14px;right:14px;background:#B98900;color:#fff;font-size:11px;font-weight:700;padding:7px 12px;border-radius:4px;z-index:50;box-shadow:0 4px 14px rgba(0,0,0,.2)}
+.draft-ribbon{position:fixed;bottom:18px;right:-46px;transform:rotate(-38deg);background:#B33;color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.18em;padding:6px 60px;z-index:99;pointer-events:none;opacity:.92}
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap nav">
-    <div class="logo">Wing<small>御社の翼に、AIと変革のエンジンを</small></div>
+    <div class="logo">W<b>I</b>NG</div>
     <ul>
-      <li><a href="#fde">私たちの進め方</a></li>
-      <li><a href="#consulting">サービス</a></li>
+      <li><a href="#data">AI格差の現実</a></li>
+      <li><a href="#fde">FDEとは</a></li>
+      <li><a href="#model">ご支援の流れ</a></li>
       <li><a href="#products">AIプロダクト</a></li>
       <li><a href="#why">代表紹介</a></li>
-      <li><a href="#insights">インサイト</a></li>
       <li><a class="cta-s" href="#contact">無料相談</a></li>
     </ul>
   </div>
 </header>
 
+<!-- ═══════════ HERO ═══════════ -->
 <section class="hero">
-  <div class="wrap hero-flex">
-    <div class="hero-left">
-      <div class="eyebrow">FORWARD DEPLOYED ENGINEER ─ 構想から、現場まで</div>
-      <h1>御社の翼に、<br><em>AIと変革のエンジンを。</em></h1>
-      <p class="lead">戦略を描いた本人が、そのまま現場に入り込む。だからWingの支援は、提案書で終わりません。PoCで止まっていたAIを、事業の成果になるまで動かしきります。</p>
-      <div class="btn-row">
-        <a class="btn primary" href="#contact">無料相談を申し込む（30分）</a>
-        <a class="btn dl" href="#contact">サービス資料をもらう</a>
+  <div class="wrap">
+    <div class="formula rv in">
+      <span class="f-item">現場・実務の解像度</span>
+      <span class="f-x">×</span>
+      <span class="f-item">AIネイティブな実装力</span>
+    </div>
+    <h1>貴社のビジネスに、<br><em>変革の翼を。</em></h1>
+    <p class="lead">AIで先行する企業と、置き去りにされる企業。その分かれ目は技術力ではなく、「ビジネスの現場にAIを統合しきる力」にあります。Wingは、戦略とコードの両方を扱うエンジニアが貴社の現場に入り込み、構想から定着までを一気通貫で実行します。</p>
+    <div class="btn-row">
+      <a class="btn primary" href="#contact">無料相談を申し込む（30分）</a>
+      <a class="btn ghost" href="#fde">Wingの進め方を見る</a>
+    </div>
+    <p class="hero-note"><b>構想から実装・内製化まで一気通貫</b>　／　段階契約で投資判断を分割　／　知見は貴社に残す</p>
+  </div>
+</section>
+
+<!-- ═══════════ DATA: 格差 ═══════════ -->
+<section class="band" id="data">
+  <div class="wrap">
+    <div class="kicker"><span class="no">01</span><span class="label">The AI Divide</span></div>
+    <h2>AIの格差は、もう始まっている。</h2>
+    <p class="sec-lead">世界6大陸・約10億件の求人データを分析したPwCの調査は、AIを使いこなす企業とそれ以外の間に、急速に開く生産性の差を示しています。</p>
+    <div class="stat-row rv">
+      <div class="bigstat">
+        <div class="n">3<small>倍</small></div>
+        <div class="t">AI活用業種の「従業員1人あたり売上成長」は、低活用業種の3倍</div>
+        <div class="d">AI活用度の高い業種は27%成長、低い業種は9%に留まる。</div>
       </div>
-      <div class="hero-note" style="color:var(--ink);font-weight:700;margin-top:14px">構想から実装・内製化まで一気通貫 ／ 段階契約で投資判断を分割 ／ 知見は御社に残す</div>
-      <div class="chips">
-        <span class="chip">PoCから本番展開へ</span><span class="chip">基幹周辺の業務自動化</span><span class="chip">全社AIガバナンス</span><span class="chip">貿易・調達業務のAI化</span><span class="chip">グローバル標準化</span><span class="chip">内製化・人材育成</span>
+      <div class="bigstat">
+        <div class="n">4<small>倍</small></div>
+        <div class="t">生成AI普及以降、先行業種の生産性成長は約4倍に加速</div>
+        <div class="d">2022年を境に、AIを活かせる業種とそれ以外の差が急拡大している。</div>
+      </div>
+      <div class="bigstat">
+        <div class="n">56<small>%</small></div>
+        <div class="t">AIスキルを持つ人材の賃金プレミアムは56%に上昇</div>
+        <div class="d">前年の25%から倍増。人材市場もAI活用企業へ傾いている。</div>
       </div>
     </div>
-    <div class="hero-right rv">
-      <div class="transform" aria-label="構想が動くシステムになるイメージ">
-        <div class="t-head"><span>ご相談時の論点メモ</span><span>3週間後のお打ち合わせ</span></div>
-        <div class="t-body">
-          <ul class="t-memo">
-            <li><b>PoCは成功</b>、その後が止まっている</li>
-            <li>部門ごとに<b>別々のAI</b>が増えている</li>
-            <li>ベンダー提案の<b>妥当性が判断できない</b></li>
-            <li>「結局、誰が手を動かす？」</li>
-          </ul>
-          <div class="t-arrow">→</div>
-          <div class="t-app" aria-hidden="true">
-            <div class="bar g" style="width:55%"></div>
-            <div class="row" style="margin-bottom:6px"><div class="cell on"></div><div class="cell"></div><div class="cell"></div></div>
-            <div class="row" style="margin-bottom:6px"><div class="cell"></div><div class="cell on"></div><div class="cell"></div></div>
-            <div class="bar" style="width:80%"></div>
-            <div class="bar" style="width:64%"></div>
+    <p class="src">出典: <a href="https://www.pwc.com/gx/en/issues/artificial-intelligence/job-barometer/2025/report.pdf" target="_blank" rel="noopener">PwC Global AI Jobs Barometer</a>（6大陸・約10億件の求人データ分析）</p>
+  </div>
+</section>
+
+<!-- ═══════════ DATA: 95%の壁 ═══════════ -->
+<section class="band" style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker"><span class="no">02</span><span class="label">The GenAI Divide</span></div>
+    <h2>しかし、自己流のAI導入は<em>95%が成果ゼロ</em>。</h2>
+    <div class="divide">
+      <div class="d95 rv">
+        <div class="huge">95<small>%</small></div>
+        <p class="cap">MITの調査では、企業の生成AIパイロットの<b>95%がP&amp;Lに測定可能なインパクトを生んでいない</b>。8割以上の企業がすでにAIを試しているにも関わらず、です。</p>
+      </div>
+      <div class="rv">
+        <div class="bars">
+          <div class="bar-item">
+            <div class="bl"><span>外部の専門家と組んだ導入の成功率</span><b>67%</b></div>
+            <div class="bar-track"><div class="bar-fill" style="--w:67%"></div></div>
+          </div>
+          <div class="bar-item">
+            <div class="bl"><span>社内単独での導入の成功率</span><b>33%</b></div>
+            <div class="bar-track"><div class="bar-fill dim" style="--w:33%"></div></div>
           </div>
         </div>
-        <div class="t-foot">実際に動く画面を見ながら、次の意思決定を進めます</div>
+        <div class="divide-note">失敗の主因は技術ではなく、<b>業務・組織へAIを統合する力の欠如</b>（MITはこれを "learning gap" と呼びます）。ツールを買うことと、事業が変わることの間には、深い溝があります。</div>
       </div>
     </div>
+    <p class="src">出典: <a href="https://mlq.ai/media/quarterly_decks/v0.1_State_of_AI_in_Business_2025_Report.pdf" target="_blank" rel="noopener">MIT NANDA "The GenAI Divide: State of AI in Business"</a>（300超のAI導入事例・52件の構造化インタビュー）</p>
   </div>
 </section>
 
-<section id="pain">
+<!-- ═══════════ FDE ═══════════ -->
+<section id="fde">
   <div class="wrap">
-    <div class="sec-label"><span class="no">01</span>よくあるご相談</div>
-    <h2>AIの議論は進んでいる。<br>事業は、まだ変わっていない。</h2>
-    <div class="pain-grid">
-      <div class="pain rv"><h3>PoCは成功した。それきりになっている。</h3><p>実証実験は終わり、報告書もある。しかし本番稼働と全社展開の道筋を描ける人がおらず、成果が事業の数字に現れないまま次年度を迎えていませんか。</p></div>
-      <div class="pain rv"><h3>提案書は立派、でも誰も動かない。</h3><p>ロードマップは受け取った。だが実行フェーズで担当者が入れ替わり、描いた本人はもういない。計画と現場のあいだで、施策が宙に浮いています。</p></div>
-      <div class="pain rv"><h3>知見が、社内に残らない。</h3><p>ベンダーに任せるほど、仕様も判断根拠も外部に蓄積される。次の改修でまた見積を取る——この繰り返しから抜け出せずにいませんか。</p></div>
+    <div class="kicker"><span class="no">03</span><span class="label">Forward Deployed Engineer</span></div>
+    <h2>だからWingは、<em>現場に入り込む</em>。</h2>
+    <p class="fde-def">FDE（Forward Deployed Engineer）とは、<b>ビジネスとテクノロジーの双方に精通したフルスタックAIエンジニアが貴社の現場に入り込み</b>、AI戦略の全体設計から開発、現場への定着までを一気通貫で実行する支援モデルです。海外の先進テック企業が実践し、成果を上げてきた手法です。</p>
+
+    <div class="diagram rv">
+      <div class="dg-top">
+        <div class="dg-side">
+          <h4><span>MANAGEMENT</span>経営・戦略</h4>
+          <ul>
+            <li>経営課題・事業KPI</li>
+            <li>投資対効果の判断</li>
+            <li>AIガバナンス・リスク</li>
+            <li>グローバル標準化</li>
+          </ul>
+        </div>
+        <div class="dg-center">
+          <div class="dg-node">
+            <div class="tag">WING FDE</div>
+            <h3>経営を語り、<br>コードを書く。</h3>
+            <p>戦略の言葉と現場の言葉を翻訳なしで往復し、その場で動くものに変える</p>
+          </div>
+        </div>
+        <div class="dg-side">
+          <h4><span>OPERATIONS</span>現場・システム</h4>
+          <ul>
+            <li>業務プロセス・帳票</li>
+            <li>基幹システム・データ</li>
+            <li>現場担当者の運用</li>
+            <li>既存ベンダーとの連携</li>
+          </ul>
+        </div>
+      </div>
+      <div class="dg-flow">
+        <div class="fl-title">END-TO-END DELIVERY</div>
+        <div class="fl-steps">
+          <div class="fl-step">
+            <div class="fs-no">PHASE 1</div>
+            <h5>AI戦略の全体設計</h5>
+            <p>現場に入り込み業務を理解。投資対効果が最も高い一点を特定し、全体構想を描く。</p>
+          </div>
+          <div class="fl-arrow">→</div>
+          <div class="fl-step">
+            <div class="fs-no">PHASE 2</div>
+            <h5>開発・実証</h5>
+            <p>最新のAI開発環境で数週間のうちに動くものを構築。実物で意思決定を進める。</p>
+          </div>
+          <div class="fl-arrow">→</div>
+          <div class="fl-step">
+            <div class="fs-no">PHASE 3</div>
+            <h5>現場への落とし込み</h5>
+            <p>本番展開・運用定着・効果測定まで並走。知見と体制を貴社の中に残す。</p>
+          </div>
+        </div>
+      </div>
+      <div class="dg-foot">聞く人・作る人・定着させる人が、<b>すべて同じ人間</b>。伝言ゲームによる要件のズレが構造的に起きません。</div>
     </div>
-    <p class="pain-answer rv">Wingがお引き受けするのは、この<em>「構想と現場のあいだ」</em>です。<br>基幹システムに手を入れず、その周辺から確実に変えていきます。</p>
   </div>
 </section>
 
-<section id="fde" class="sec-alt">
+<!-- ═══════════ ご支援の流れ ═══════════ -->
+<section class="sec-alt" id="model">
   <div class="wrap">
-    <div class="sec-label"><span class="no">02</span>私たちの進め方</div>
-    <h2>経営を語り、コードを書く。</h2>
-    <p class="sec-lead">FDE（Forward Deployed Engineer）とは、戦略を描いた本人が御社の現場に入り込み、業務を理解しながらAI・システムをその場で形にする進め方です。営業・PM・SEと伝言を重ねる従来型と違い、<b>課題を聞いた本人が、動くものを作り、成果が出るまで見届けます。</b></p>
-    <div class="fde-grid">
-      <div class="fde rv"><div class="fno">MODEL 01</div><h3>現場に入り込む</h3><p>会議室のヒアリングだけで終わりません。実際の業務・画面・帳票を一緒に見ながら、投資対効果が最も高い一点を見極めます。</p></div>
-      <div class="fde rv"><div class="fno">MODEL 02</div><h3>最新AIで、速く形にする</h3><p>Claude Code等の最新AI開発環境を活用し、従来は数名で数ヶ月かかった検証を数週間に短縮。議論ではなく実物で意思決定します。</p></div>
-      <div class="fde rv"><div class="fno">MODEL 03</div><h3>内製化まで並走する</h3><p>作って終わりにしません。定着・改善・効果測定まで伴走し、最終的に御社の中に知見と運用体制が残る状態を目指します。</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="model">
-  <div class="wrap">
-    <div class="sec-label"><span class="no">03</span>ご支援の流れ</div>
+    <div class="kicker"><span class="no">04</span><span class="label">Engagement Model</span></div>
     <h2>小さく確かめて、確かになった分だけ進む。</h2>
-    <p class="sec-lead">契約は段階ごとに区切ります。診断だけで終える、試作を見てから判断する——どちらも想定内の設計です。大きな投資判断を、実物を見る前に迫ることはしません。これは発注側のリスクを下げるための構造です。</p>
-    <div class="bp">
-      <div class="bp-grid">
-        <div class="phase rv">
-          <div class="ph-top"><span class="ph-no"><span>第1段階</span>診断・課題定義</span><span class="ph-dur">2〜4週間</span></div>
-          <h3>現状の棚卸しと、着手点の特定</h3>
-          <p>経営・IT・業務の三視点で現状を診断し、どこから着手すれば最も効果が出るかを特定。優先順位と投資対効果を明示します。</p>
-          <div class="ph-meta"><b>成果物：</b>診断レポート・優先課題／<b>御社のご負担：</b>ヒアリング数回</div>
-          <div class="ph-price">固定 <b><span class="ph-fill">◯◯万円 要確定</span></b>（税別）</div>
-        </div>
-        <div class="phase focus rv">
-          <div class="ph-badge">動く画面が出ます</div>
-          <div class="ph-top"><span class="ph-no"><span>第2段階</span>試作・実証</span><span class="ph-dur">2〜4週間</span></div>
-          <h3>動くプロトタイプによる検証</h3>
-          <p>診断結果をそのまま動く画面に。現場に触っていただきながら要件と効果を固めます。本格展開の投資判断は、この実物を見てからで構いません。</p>
-          <div class="ph-meta"><b>成果物：</b>動作するプロトタイプ／<b>御社のご負担：</b>週1回の確認会</div>
-          <div class="ph-price">固定 <b><span class="ph-fill">◯◯〜◯◯万円 要確定</span></b>（税別）</div>
-        </div>
-        <div class="phase rv">
-          <div class="ph-top"><span class="ph-no"><span>第3段階</span>本番展開・内製化</span><span class="ph-dur">継続</span></div>
-          <h3>全社展開と、知見の移転</h3>
-          <p>権限管理・データ保全・監視を整えて本番稼働へ。運用の定着と効果測定に並走しながら、最終的に御社の中で回る体制をつくります。</p>
-          <div class="ph-meta"><b>含まれるもの：</b>展開支援・改善・内製化支援・月次レビュー</div>
-          <div class="ph-price">月額 <b><span class="ph-fill">◯◯万円〜 要確定</span></b>（税別）</div>
-        </div>
+    <p class="sec-lead">契約は段階ごとに区切ります。診断だけで終える、試作を見てから判断する——どちらも想定内の設計です。大きな投資判断を、実物を見る前に迫ることはしません。</p>
+    <div class="bp-grid">
+      <div class="phase rv">
+        <div class="ph-top"><span class="ph-no"><span>第1段階</span>診断・課題定義</span><span class="ph-dur">2〜4週間</span></div>
+        <h3>現状の棚卸しと、着手点の特定</h3>
+        <p>経営・IT・業務の三視点で現状を診断し、どこから着手すれば最も効果が出るかを特定。優先順位と投資対効果を明示します。</p>
+        <div class="ph-meta"><b>成果物：</b>診断レポート・優先課題／<b>ご負担：</b>ヒアリング数回</div>
+        <div class="ph-price">固定 <b><span class="ph-fill">◯◯万円 要確定</span></b>（税別）</div>
       </div>
-      <p class="bp-note">※ 御社への定例訪問（関西圏・東京）にも対応します ※ 会計・在庫の中核など基幹システム本体の刷新は対象外です。既存の基幹を活かし、その周辺を速く変えるのが当社の領域です</p>
+      <div class="phase focus rv">
+        <div class="ph-badge">動く画面が出ます</div>
+        <div class="ph-top"><span class="ph-no"><span>第2段階</span>試作・実証</span><span class="ph-dur">2〜4週間</span></div>
+        <h3>動くプロトタイプによる検証</h3>
+        <p>診断結果をそのまま動く画面に。現場に触っていただきながら要件と効果を固めます。本格展開の投資判断は、実物を見てからで構いません。</p>
+        <div class="ph-meta"><b>成果物：</b>動作するプロトタイプ／<b>ご負担：</b>週1回の確認会</div>
+        <div class="ph-price">固定 <b><span class="ph-fill">◯◯〜◯◯万円 要確定</span></b>（税別）</div>
+      </div>
+      <div class="phase rv">
+        <div class="ph-top"><span class="ph-no"><span>第3段階</span>本番展開・内製化</span><span class="ph-dur">継続</span></div>
+        <h3>全社展開と、知見の移転</h3>
+        <p>権限管理・データ保全・監視を整えて本番稼働へ。運用の定着と効果測定に並走しながら、最終的に貴社の中で回る体制をつくります。</p>
+        <div class="ph-meta"><b>含まれるもの：</b>展開支援・改善・内製化支援・月次レビュー</div>
+        <div class="ph-price">月額 <b><span class="ph-fill">◯◯万円〜 要確定</span></b>（税別）</div>
+      </div>
     </div>
-  </div>
-</section>
+    <p class="bp-note">※ 定例訪問（関西圏・東京）にも対応します　※ 会計・在庫の中核など基幹システム本体の刷新は対象外です。既存の基幹を活かし、その周辺を速く変えるのが当社の領域です</p>
 
-<section id="compare" class="sec-alt">
-  <div class="wrap">
-    <div class="sec-label"><span class="no">04</span>従来型のご支援との違い</div>
-    <h2>進捗報告は、書類ではなく画面で。</h2>
     <div class="cmp rv">
       <table class="c">
         <thead><tr><th></th><th>従来型のコンサル・SI</th><th class="wings">Wing（FDE型）</th></tr></thead>
         <tbody>
           <tr><th>最初の成果物</th><td>報告書・要件定義書（数ヶ月後）</td><td class="wings">動くプロトタイプ（<span class="num">2〜4週</span>）</td></tr>
-          <tr><th>体制</th><td>提案はシニア、実行は若手に交代</td><td class="wings">課題を理解したシニアが<span class="num">最初から最後まで</span>関与</td></tr>
+          <tr><th>体制</th><td>提案はシニア、実行は若手に交代</td><td class="wings">課題を理解した本人が<span class="num">最初から最後まで</span>関与</td></tr>
           <tr><th>要件の固め方</th><td>文書の往復とレビュー会議</td><td class="wings">実物を触りながら現場と直接調整</td></tr>
-          <tr><th>投資判断</th><td>着手前に全体規模のコミットが必要</td><td class="wings">段階契約で<span class="num">分割</span>。実物を見てから判断</td></tr>
-          <tr><th>プロジェクト後</th><td>運用・保守は別会社・別契約になりがち</td><td class="wings">同じ担当者が展開・定着まで並走</td></tr>
-          <tr><th>知見の残り方</th><td>仕様も判断根拠もベンダー側に蓄積</td><td class="wings">ソースコード・設計資料ごと<span class="num">御社に残す</span></td></tr>
+          <tr><th>投資判断</th><td>着手前に全体規模のコミット</td><td class="wings">段階契約で<span class="num">分割</span>。実物を見てから判断</td></tr>
+          <tr><th>知見の残り方</th><td>仕様も判断根拠もベンダー側に蓄積</td><td class="wings">ソースコード・設計資料ごと<span class="num">貴社に残す</span></td></tr>
         </tbody>
       </table>
-      <p class="cmp-note">※ 速さの理由は人数ではなく、業務理解×AI開発（Claude Code等の最新AIコーディング）の掛け算です。御社のデータを外部のAI学習に使うことはありません。</p>
+      <p class="cmp-note">※ 速さの理由は人数ではなく、業務理解×AIネイティブ開発（Claude Code等）の掛け算です。貴社のデータを外部のAI学習に使うことはありません。</p>
     </div>
   </div>
 </section>
 
+<!-- ═══════════ サービス ═══════════ -->
 <section id="consulting">
   <div class="wrap">
-    <div class="sec-label"><span class="no">05</span>サービス</div>
+    <div class="kicker"><span class="no">05</span><span class="label">Services</span></div>
     <h2>構想から実装、内製化まで。</h2>
     <p class="sec-lead">上流の戦略構想から、実装・PMO、組織の内製化までをご支援します。実装まで担えるからこそ、机上で終わらない実行可能な戦略を描けます。</p>
     <div class="pill-row">
-      <div class="pillar rv"><div class="pno">01</div><h3>戦略構想・アドバイザリー</h3><p>経営・IT・業務の三視点から現状を診断し、実行可能なDX・AI戦略を策定。</p><ul><li>DX現状診断・課題定義</li><li>AI活用ロードマップ策定</li><li>CxO・経営層アドバイザリー</li><li>ITデューデリジェンス・PMI支援</li></ul></div>
-      <div class="pillar rv"><div class="pno">02</div><h3>実装・PMO</h3><p>要件定義から現場定着まで一貫関与し、成果が出るまで推進します。</p><ul><li>PMO・プロジェクト推進</li><li>システム実装・開発管理</li><li>ベンダー選定・要件定義支援</li><li>グローバル・ASEAN展開支援</li></ul></div>
-      <div class="pillar rv"><div class="pno">03</div><h3>内製化・人材育成</h3><p>「知っている」から「現場で使える」へ。支援終了後も自走できる状態をつくります。</p><ul><li>DX・生成AI活用研修</li><li>データ分析・可視化基盤の構築</li><li>プロジェクトマネジメント研修</li><li>推進体制の設計・立ち上げ</li></ul></div>
+      <div class="pillar rv"><div class="pno">SERVICE 01</div><h3>戦略構想・アドバイザリー</h3><p>経営・IT・業務の三視点から現状を診断し、実行可能なDX・AI戦略を策定。</p><ul><li>DX現状診断・課題定義</li><li>AI活用ロードマップ策定</li><li>CxO・経営層アドバイザリー</li><li>ITデューデリジェンス・PMI支援</li></ul></div>
+      <div class="pillar rv"><div class="pno">SERVICE 02</div><h3>実装・PMO</h3><p>要件定義から現場定着まで一貫関与し、成果が出るまで推進します。</p><ul><li>PMO・プロジェクト推進</li><li>システム実装・開発管理</li><li>ベンダー選定・要件定義支援</li><li>グローバル・ASEAN展開支援</li></ul></div>
+      <div class="pillar rv"><div class="pno">SERVICE 03</div><h3>内製化・人材育成</h3><p>「知っている」から「現場で使える」へ。支援終了後も自走できる状態をつくります。</p><ul><li>DX・生成AI活用研修</li><li>データ分析・可視化基盤の構築</li><li>プロジェクトマネジメント研修</li><li>推進体制の設計・立ち上げ</li></ul></div>
     </div>
   </div>
 </section>
 
-<section id="products" class="sec-alt">
+<!-- ═══════════ プロダクト ═══════════ -->
+<section class="sec-alt" id="products">
   <div class="wrap">
-    <div class="sec-label"><span class="no">06</span>AIプロダクト</div>
+    <div class="kicker"><span class="no">06</span><span class="label">AI Products</span></div>
     <h2>伴走で得た知見を、プロダクトにも。</h2>
-    <p class="sec-lead">個別のご支援に加え、特定業務の繰り返し作業を自動化する業界特化型のAIプロダクトも自社開発・提供しています。まずは無料PoCからお試しいただけます。</p>
+    <p class="sec-lead">個別のご支援に加え、特定業務の繰り返し作業を自動化する業界特化型のAIプロダクトも自社開発・提供しています。自ら作り、自ら運用しているからこそ、実装の話を実感を持って語れます。</p>
     <div class="prod-grid">
       <div class="prod rv">
         <div class="tag">BORDERFLOW AI</div>
         <h3>自律型 貿易事務エージェント</h3>
         <div class="sub">契約書・Invoice・BLをドラッグ＆ドロップするだけ</div>
-        <p>AI-OCRが書類を読み取り案件情報を自動入力。取引パターンの自動判定からHS分類・通関申告・原価計算まで、貿易事務の全ステップをAIが自律処理。メールからワンクリックでの案件登録にも対応します。</p>
-        <div class="free">🎁 1ヶ月無料PoC受付中（ソフトウェア使用料完全無料）</div>
+        <p>AI-OCRが書類を読み取り案件情報を自動入力。取引パターンの自動判定からHS分類・通関申告・原価計算まで、貿易事務の全ステップをAIが自律処理します。</p>
+        <div class="free">1ヶ月無料PoC受付中（ソフトウェア使用料 完全無料）</div><br>
         <a class="plink" href="/borderflow-guide">ソリューション詳細 →</a>
       </div>
       <div class="prod rv">
         <div class="tag">CHEMOS</div>
         <h3>PFAS・chemSHERPA 対応の自動化</h3>
         <div class="sub">chemSHERPAファイルをドロップするだけ</div>
-        <p>AIが含有物質を自動解析し、PFAS該当物質を3段階で判定。サプライヤーへの照会メール生成から提出物の自動作成まで、7ステップを証跡付きで完走。精度・速度・監査対応を同時に実現します。</p>
-        <div class="free">🎁 1ヶ月無料PoC受付中（ソフトウェア使用料完全無料）</div>
+        <p>AIが含有物質を自動解析し、PFAS該当物質を3段階で判定。サプライヤーへの照会メール生成から提出物の自動作成まで、7ステップを証跡付きで完走します。</p>
+        <div class="free">1ヶ月無料PoC受付中（ソフトウェア使用料 完全無料）</div><br>
         <a class="plink" href="/chemos-guide">ソリューション詳細 →</a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ═══════════ 代表紹介 ═══════════ -->
 <section id="why">
   <div class="wrap">
-    <div class="sec-label"><span class="no">07</span>代表紹介</div>
+    <div class="kicker"><span class="no">07</span><span class="label">Who We Are</span></div>
     <h2>聞く人と、作る人が、同じ人。</h2>
     <div class="why-flex">
       <div class="why-left rv">
@@ -413,11 +565,10 @@ footer a{color:rgba(255,255,255,.7)}
           </div>
         </div>
         <div class="why-copy">
-          <p><b>「御社の業務の言葉」を、翻訳なしで理解できます。</b>ヒアリングから設計・実装まで同じ人間が担当するため、伝言ゲームによる要件のズレが起きません。</p>
-          <p>実装には最新のAI開発環境を活用し、従来は数名で数ヶ月かかった検証を数週間に短縮。<b>自社でも貿易・化学品領域のプロダクト（BorderFlow・ChemOS）を設計・実装・運用しており、「提案するだけの人」ではありません。</b></p>
-          <p>日英バイリンガルでプロジェクトを推進し、海外拠点・外国人メンバーとも直接連携します。</p>
+          <p><b>「貴社の業務の言葉」を、翻訳なしで理解できます。</b>ヒアリングから設計・実装まで同じ人間が担当するため、伝言ゲームによる要件のズレが起きません。</p>
+          <p>実装には最新のAI開発環境を活用し、従来は数名で数ヶ月かかった検証を数週間に短縮。<b>自社でも貿易・化学品領域のプロダクトを設計・実装・運用しており、「提案するだけの人」ではありません。</b>日英バイリンガルで、海外拠点・外国人メンバーとも直接連携します。</p>
         </div>
-        <div class="sec-trust">御社のデータは、御社のものです ── 秘密保持契約の締結、データの国内保管、支援終了時の全データ・成果物の引き渡しを標準対応としています</div>
+        <div class="sec-trust">貴社のデータは、貴社のものです ── 秘密保持契約の締結、データの国内保管、支援終了時の全データ・成果物の引き渡しを標準対応としています。</div>
       </div>
       <div class="why-right rv">
         <div class="stat-grid">
@@ -431,14 +582,15 @@ footer a{color:rgba(255,255,255,.7)}
   </div>
 </section>
 
-<section id="faq" class="sec-alt">
+<!-- ═══════════ FAQ ═══════════ -->
+<section class="sec-alt" id="faq">
   <div class="wrap">
-    <div class="sec-label"><span class="no">08</span>よくあるご質問</div>
+    <div class="kicker"><span class="no">08</span><span class="label">FAQ</span></div>
     <h2>ご相談前の疑問にお答えします</h2>
     <div class="faq rv">
-      <details><summary>大手コンサルティングファームとの違いは何ですか？</summary><div class="a">最大の違いは、提案した人間が実装まで担う点です。大手では提案フェーズのシニアが実行フェーズで交代することが少なくありませんが、Wingでは課題を理解した人間がフェーズをまたいで一貫して関与します。「前回話した背景」を毎回説明し直す必要がありません。</div></details>
-      <details><summary>少人数体制で、当社の規模に対応できますか？</summary><div class="a">上流の構想・意思決定支援と、実装の初期段階は代表が直接担当します。全社展開など体制が必要な局面では、信頼できるパートナーと連携して増員する設計です。まず小さく着手し、成果を確認しながら規模を広げる進め方をご提案しています。</div></details>
-      <details><summary>セキュリティや情報管理の要件に対応できますか？</summary><div class="a">秘密保持契約を締結のうえ、データは国内リージョンで管理し、アクセス権限・バックアップ体制を整えて運用します。御社の情報セキュリティ規程・調達要件に沿った対応を前提としており、詳細は契約前に書面でご説明します。御社のデータを外部のAI学習に使うことはありません。</div></details>
+      <details><summary>大手コンサルティングファームとの違いは何ですか？</summary><div class="a">最大の違いは、提案した人間が実装まで担う点です。大手では提案フェーズのシニアが実行フェーズで交代することが少なくありませんが、Wingでは課題を理解した人間がフェーズをまたいで一貫して関与します。</div></details>
+      <details><summary>少人数体制で、当社の規模に対応できますか？</summary><div class="a">上流の構想・意思決定支援と実装の初期段階は代表が直接担当し、全社展開など体制が必要な局面では信頼できるパートナーと連携して増員します。まず小さく着手し、成果を確認しながら規模を広げる進め方をご提案しています。</div></details>
+      <details><summary>セキュリティや情報管理の要件に対応できますか？</summary><div class="a">秘密保持契約を締結のうえ、データは国内リージョンで管理し、アクセス権限・バックアップ体制を整えて運用します。貴社の情報セキュリティ規程・調達要件に沿った対応を前提とし、詳細は契約前に書面でご説明します。貴社のデータを外部のAI学習に使うことはありません。</div></details>
       <details><summary>途中でやめることはできますか？</summary><div class="a">できます。契約は段階ごとに区切っており、診断だけ・試作までという終わり方も想定した設計です。実物を見て「この投資はしない」と判断していただくのも、正しい結論の一つだと考えています。</div></details>
       <details><summary>既存のベンダーやSIerとの取引があるのですが。</summary><div class="a">併用いただけます。既存の基幹システムはそのまま活かし、その周辺を変えるのが当社の領域です。ベンダー提案の妥当性評価や条件交渉を、発注側の立場でお手伝いすることも可能です。</div></details>
       <details><summary>最終的に社内で運用できるようになりますか？</summary><div class="a">それを目標に設計しています。ソースコード・設計資料は成果物としてお渡しし、運用体制の立ち上げと人材育成まで支援します。当社への依存が続く状態は、成功とは考えていません。</div></details>
@@ -446,26 +598,27 @@ footer a{color:rgba(255,255,255,.7)}
   </div>
 </section>
 
+<!-- ═══════════ インサイト ═══════════ -->
 <section id="insights">
   <div class="wrap">
-    <div class="sec-label"><span class="no">09</span>インサイト</div>
+    <div class="kicker"><span class="no">09</span><span class="label">Insights</span></div>
     <h2>知見はすべて公開しています</h2>
-    <p class="sec-lead">貿易DX・AIエージェント・DX戦略の実践知を、記事として公開しています。</p>
     <div class="ins-grid">
-      <a class="ins rv" href="/blog/poc-death-dx-consulting"><div class="cat">DX戦略</div><h3>AI導入が本番稼働に届かない理由｜PoC失敗の原因と対策</h3><p>PoCが本番移行できない5大原因と、失敗しないプロジェクト設計。</p></a>
-      <a class="ins rv" href="/blog/dx-consulting-guide"><div class="cat">DX戦略</div><h3>DXコンサルティングとは？失敗しない選び方と成功のポイント</h3><p>大手と専門ファームの違い、失敗パターンと成功の秘訣を解説。</p></a>
-      <a class="ins rv" href="/blog/global-it-organization-model"><div class="cat">IT組織</div><h3>グローバル企業のIT組織モデル｜海外拠点のIT機能をどう設計するか</h3><p>集中型・分担型・自律型の3モデルとガバナンスの最適解。</p></a>
-      <a class="ins rv" href="/blog/ai-agent-guide"><div class="cat">AIエージェント</div><h3>AIエージェント完全ガイド｜概念から導入・ガバナンスまで</h3><p>Gartnerレポートに基づく7ステップの体系的ガイド。</p></a>
-      <a class="ins rv" href="/blog/trade-dx-complete-guide"><div class="cat">貿易DX</div><h3>貿易DX完全ガイド｜業務フロー・課題・AI活用まで</h3><p>輸入・輸出の全業務フローとAI・RPA活用による自動化を解説。</p></a>
-      <a class="ins rv" href="/blog/export-control-ai"><div class="cat">貿易DX</div><h3>安全保障貿易管理とは？該非判定の実務とAI・DXによる効率化</h3><p>リスト規制・キャッチオール規制と、該非判定の属人化を解く方法。</p></a>
+      <a class="ins rv" href="/blog/poc-death-dx-consulting"><div class="cat">DX STRATEGY</div><h3>AI導入が本番稼働に届かない理由｜PoC失敗の原因と対策</h3><p>PoCが本番移行できない5大原因と、失敗しないプロジェクト設計。</p></a>
+      <a class="ins rv" href="/blog/dx-consulting-guide"><div class="cat">DX STRATEGY</div><h3>DXコンサルティングとは？失敗しない選び方と成功のポイント</h3><p>大手と専門ファームの違い、失敗パターンと成功の秘訣を解説。</p></a>
+      <a class="ins rv" href="/blog/global-it-organization-model"><div class="cat">IT ORGANIZATION</div><h3>グローバル企業のIT組織モデル｜海外拠点のIT機能設計</h3><p>集中型・分担型・自律型の3モデルとガバナンスの最適解。</p></a>
+      <a class="ins rv" href="/blog/ai-agent-guide"><div class="cat">AI AGENTS</div><h3>AIエージェント完全ガイド｜概念から導入・ガバナンスまで</h3><p>Gartnerレポートに基づく7ステップの体系的ガイド。</p></a>
+      <a class="ins rv" href="/blog/trade-dx-complete-guide"><div class="cat">TRADE DX</div><h3>貿易DX完全ガイド｜業務フロー・課題・AI活用まで</h3><p>輸入・輸出の全業務フローとAI・RPA活用による自動化。</p></a>
+      <a class="ins rv" href="/blog/export-control-ai"><div class="cat">TRADE DX</div><h3>安全保障貿易管理とは？該非判定の実務とAI・DXによる効率化</h3><p>リスト規制・キャッチオール規制と、該非判定の属人化を解く方法。</p></a>
     </div>
-    <p><a class="ins-all" href="/blog/">すべての記事を見る →</a></p>
+    <a class="ins-all" href="/blog/">すべての記事を見る →</a>
   </div>
 </section>
 
-<section id="company">
+<!-- ═══════════ 会社概要 ═══════════ -->
+<section class="sec-alt" id="company">
   <div class="wrap">
-    <div class="sec-label"><span class="no">10</span>会社概要</div>
+    <div class="kicker"><span class="no">10</span><span class="label">Company</span></div>
     <h2>会社概要</h2>
     <table class="co rv">
       <tr><th>社名</th><td>Wing</td></tr>
@@ -478,16 +631,17 @@ footer a{color:rgba(255,255,255,.7)}
   </div>
 </section>
 
+<!-- ═══════════ CTA ═══════════ -->
 <section class="cta-sec" id="contact">
   <div class="wrap">
-    <div class="sec-label" style="color:rgba(255,255,255,.6)">お問い合わせ</div>
-    <h2>「やらない」という結論まで、正直にお伝えします</h2>
+    <div class="kicker"><span class="no">11</span><span class="label">Contact</span></div>
+    <h2>「やらない」という結論まで、<br>正直にお伝えします。</h2>
     <div class="cta-flex">
-      <div class="cta-left">
+      <div class="cta-left rv">
         <p>30分の無料相談では、状況を伺ったうえで、その施策を進めるべきか・見送るべきかから率直にお話しします。投資に値しないと考えれば、そうお伝えします。それも成果物の一つだと考えています。営業のお電話は一切いたしません。</p>
-        <p style="color:rgba(255,255,255,.6);font-size:12.5px">※ 伴走の質を保つため、同時にご一緒するのは<span style="color:#fff;font-weight:700">数社まで</span>としています。<br>返信目安：1〜2営業日以内 ／ 構想段階からのご相談も歓迎します。</p>
+        <p style="font-size:12px;color:rgba(237,235,228,.55)">※ 伴走の質を保つため、同時にご一緒するのは数社までとしています。<br>返信目安：1〜2営業日以内　／　構想段階からのご相談も歓迎します。</p>
       </div>
-      <div class="cta-right">
+      <div class="rv">
         <form class="form" action="https://formspree.io/f/xpqopzdj" method="POST">
           <div><label>お名前 *</label><input type="text" name="name" required></div>
           <div class="two">
@@ -506,11 +660,11 @@ footer a{color:rgba(255,255,255,.7)}
 <footer>
   <div class="wrap">
     <div>© 2026 Wing. All rights reserved.</div>
-    <div><a href="/blog/">インサイト</a> ｜ <a href="/about">会社概要</a> ｜ <a href="/privacy">プライバシーポリシー</a></div>
+    <div><a href="/blog/">インサイト</a>　｜　<a href="/about">会社概要</a>　｜　<a href="/privacy">プライバシーポリシー</a></div>
   </div>
 </footer>
 
-<div class="draft-ribbon">DRAFT PREVIEW ／ 本番未反映</div>
+<div class="draft-ribbon">DRAFT PREVIEW</div>
 
 <script>
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
