@@ -1,0 +1,27 @@
+# Wing — AI・DX変革の伴走パートナー
+> AIネイティブな実装力 × ビジネス現場の解像度。FDE（Forward Deployed Engineer）型で、AI戦略の構想から開発・現場定着までを一気通貫で実行する日本のコンサルティングファーム。貿易DX・AIエージェント・グローバル標準化を専門領域とする。
+
+## サービス
+- [Wing トップ](https://wingconsulting.org/): FDE型のAI・DXコンサルティング。構想・実装・内製化までを同一担当が一貫して担う
+- [DX・AIクイックアセスメント](https://wingconsulting.org/dx-assessment): 5分・登録不要でDX成熟度と推奨アクションを自動診断
+- [会社概要](https://wingconsulting.org/about): Wingの体制と支援方針
+
+## AIプロダクト
+- [BorderFlow AI](https://wingconsulting.org/borderflow-guide): 自律型の貿易事務エージェント。AI-OCRによる書類読取、HS分類、通関申告、原価計算までを自動処理
+- [ChemOS](https://wingconsulting.org/chemos-guide): PFAS・chemSHERPA対応の自動化。含有物質の自動解析からサプライヤー照会・提出物作成まで証跡付きで完走
+
+## 主要インサイト
+- [貿易DX完全ガイド](https://wingconsulting.org/blog/trade-dx-complete-guide): 輸出入の全業務フローとAI活用による自動化
+- [HSコードの調べ方・決め方](https://wingconsulting.org/blog/hs-code-guide): 品目分類の基礎から事前教示・EPA活用まで
+- [安全保障貿易管理と該非判定](https://wingconsulting.org/blog/export-control-ai): リスト規制・キャッチオール規制とAIによる効率化
+- [AIエージェント完全ガイド](https://wingconsulting.org/blog/ai-agent-guide): 概念から導入・ガバナンスまでの7ステップ
+- [AI導入が本番稼働に届かない理由](https://wingconsulting.org/blog/poc-death-dx-consulting): PoC失敗の5大原因と対策
+- [DXコンサルティングの選び方](https://wingconsulting.org/blog/dx-consulting-guide): 大手と専門ファームの違い、失敗パターン
+- [通関DXとは](https://wingconsulting.org/blog/customs-dx-guide): AI-OCR・次世代NACCS・電子通関
+- [PFAS規制 2026年最新動向](https://wingconsulting.org/blog/pfas-global-regulation-2026): 米国TSCA・EU PPWR・日本化審法
+- [グローバル企業のIT組織モデル](https://wingconsulting.org/blog/global-it-organization-model): 集中型・分担型・自律型の比較
+- [インサイト一覧](https://wingconsulting.org/blog/): 全記事のカテゴリ別索引
+
+## 補足
+- サイトは日本語（ja）。全ページ静的HTMLでサーバーサイドレンダリング済み。
+- 記事にはdatePublished / dateModifiedをJSON-LDと本文の双方に記載。
