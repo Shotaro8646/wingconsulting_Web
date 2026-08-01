@@ -124,8 +124,9 @@ table.c .num{font-family:var(--en);color:var(--gold-deep);font-weight:600}
 /* pillars */
 .pillar{border:1px solid var(--line);border-top:2px solid var(--ink);padding:28px 26px;background:#fff;display:flex;flex-direction:column}
 .g3.pillars{gap:18px}
-.pillar h3{margin:10px 0 8px;font-size:16.5px;font-weight:700;color:var(--ink);min-height:1.6em}
-.pillar>p{margin:0 0 16px;font-size:12.5px;color:var(--sub2);line-height:2;min-height:calc(2em * 2);text-wrap:pretty}
+.pillar h3{margin:12px 0 8px;font-size:16.5px;font-weight:700;color:var(--ink);line-height:1.6}
+.pillar>p.tag-en{margin:0}
+.pillar>p:not(.tag-en){margin:0 0 16px;font-size:12.5px;color:var(--sub2);line-height:2;text-wrap:pretty}
 .pillar ul{margin:auto 0 0;padding:0;list-style:none;border-top:1px solid var(--line)}
 .pillar li{font-size:12.5px;color:var(--sub2);padding:8px 0 8px 16px;border-bottom:1px dashed var(--line);position:relative;line-height:1.8}
 .pillar li::before{content:'─';position:absolute;left:0;color:var(--gold);font-size:10px}
@@ -229,7 +230,8 @@ footer a{color:var(--faint)}
 .fde2-circles{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:26px 22px;flex:1;padding:6px 10px}
 .fde2-circles::before{content:'';position:absolute;left:8%;right:8%;top:50%;border-top:1px dashed #C9CDD4}
 .fde2-circles::after{content:'';position:absolute;top:4%;bottom:4%;left:50%;border-left:1px dashed #C9CDD4}
-.fc{position:relative;z-index:1;aspect-ratio:1;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;max-width:190px;margin:0 auto;width:100%}
+.fc{position:relative;z-index:1;aspect-ratio:1;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;max-width:190px;min-width:0;margin:0 auto;width:100%;padding:10px}
+@media(max-width:560px){.fc{aspect-ratio:auto;border-radius:14px;padding:18px 12px}.fde2-circles::before,.fde2-circles::after{display:none}}
 .fc b{font-size:12px;color:var(--ink);line-height:1.55}
 .fc small{font-weight:400;font-size:9.5px;color:var(--sub2)}
 .fc .pill{background:var(--ink);color:#fff;font-size:10px;font-weight:700;padding:4px 12px;border-radius:999px;letter-spacing:.04em}
@@ -259,25 +261,11 @@ footer a{color:var(--faint)}
 .fde2-result.gold b{color:var(--gold-deep)}
 .fde2-src{margin:26px 0 0;font-size:12px;color:var(--sub2);line-height:2;max-width:880px;text-wrap:pretty}
 .fde2-src span{display:block;font-size:10px;color:var(--faint);margin-top:4px}
-.thesis{min-width:0;position:relative;z-index:1;max-width:330px;justify-self:end;width:100%}
-@media(max-width:860px){.thesis{max-width:none;justify-self:stretch;margin-top:34px}}
-.th-cap{margin:0 0 10px;font-size:10.5px;letter-spacing:.1em;color:var(--faint)}
-.th-grid{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);background:#fff}
-.th-grid span{font-size:11px;line-height:1.5;color:var(--sub2);padding:14px 12px;text-align:center;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:center}
-.th-grid span:nth-child(2n){border-right:none}
-.th-grid span:nth-child(n+3){border-bottom:none}
-.th-join{display:grid;grid-template-columns:repeat(4,1fr);height:26px;position:relative}
-.th-join i{border-left:1px solid var(--line2);margin:0 auto;width:0;height:13px}
-.th-join::after{content:'';position:absolute;left:12.5%;right:12.5%;top:13px;border-top:1px solid var(--line2)}
-.th-join::before{content:'';position:absolute;left:50%;top:13px;height:13px;border-left:1px solid var(--gold);z-index:1}
-.th-node{border:1px solid var(--ink);background:var(--ink);color:#fff;text-align:center;padding:15px 14px}
-.th-node b{display:block;font-family:var(--en);font-weight:600;font-size:14px;letter-spacing:.2em;color:var(--gold-soft)}
-.th-node span{display:block;font-size:11px;color:rgba(255,255,255,.72);margin-top:4px}
 .draft-ribbon{position:fixed;bottom:18px;right:-46px;transform:rotate(-38deg);background:#B33;color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.18em;padding:6px 60px;z-index:99;pointer-events:none;opacity:.92;font-family:var(--sans)}
 @media(max-width:900px){.navlinks a:not(.btn-dark){display:none}}
 .hero-grid{display:grid;grid-template-columns:minmax(0,760px) 1fr;gap:56px;align-items:center}
 @media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:0}}
-@media(max-width:430px){h1{font-size:27px !important}}
+@media(max-width:480px){h1{font-size:clamp(22px,7vw,27px) !important}}
 @media(max-width:960px){.g4>div{border-right:none !important;padding-right:0 !important}}
 .cta-strip{border-top:1px solid var(--line);padding:44px 40px;text-align:center;background:#fff}
 .cta-strip p{margin:0 0 20px;font-weight:700;font-size:17px;color:var(--ink);line-height:1.9}
@@ -327,17 +315,7 @@ footer a{color:var(--faint)}
           <a href="#contact" class="btn-dark">無料相談を申し込む（30分）</a>
         </div>
       </div>
-      <div class="thesis" aria-label="4つの能力を1人に統合するFDEモデルの概念図">
-        <div class="th-grid">
-          <span>AI基盤・クラウド</span><span>ドメイン知識</span>
-          <span>データサイエンス</span><span>AIアプリ開発</span>
-        </div>
-        <div class="th-join" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-        <div class="th-node">
-          <b>WING FDE</b>
-          <span>4つの能力を1人（1チーム）に統合</span>
-        </div>
-      </div>
+      <div aria-hidden="true" style="min-width:0;"></div>
     </div>
   </section>
 
