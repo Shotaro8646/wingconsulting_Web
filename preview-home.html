@@ -38,6 +38,11 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}[data-grow]{transition:none !important;transform:none !important}}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+h1,h2.sec{text-wrap:balance}
+.sec-lead,.opt p,.phase p,.faq .a,.ct-l p{text-wrap:pretty}
+.g4 p,.phase .dur,.vs-wing,.vs-trad{font-variant-numeric:tabular-nums}
 body{margin:0;background:#FFFFFF;-webkit-font-smoothing:antialiased;font-family:var(--sans);color:var(--ink)}
 a{color:var(--ink);text-decoration:none}
 a:hover{color:var(--gold-deep)}
@@ -621,6 +626,7 @@ footer a{color:var(--faint)}
 <script>
 (function(){
   var els = Array.prototype.slice.call(document.querySelectorAll('[data-grow]'));
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) { return; }
   els.forEach(function(el){
     el.style.transformOrigin = 'left center';
     el.style.transform = 'scaleX(0)';
