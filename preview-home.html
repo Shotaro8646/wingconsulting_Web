@@ -215,6 +215,50 @@ footer a{color:var(--faint)}
 .vs-trad{font-size:13px;color:var(--sub2);line-height:1.9}
 .vs-wing{background:var(--ink);color:#fff;font-size:13px;font-weight:500;line-height:1.9}
 .vs-wing em{font-style:normal;color:var(--gold-soft);font-weight:700}
+.fde2{display:grid;grid-template-columns:1fr auto 1fr;gap:0;align-items:stretch;margin-top:8px}
+@media(max-width:900px){.fde2{grid-template-columns:1fr}}
+.fde2-arrow{display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--gold);padding:0 18px}
+@media(max-width:900px){.fde2-arrow{transform:rotate(90deg);padding:14px 0}}
+.fde2-panel{border:1px solid var(--line);background:#fff;padding:26px 26px 22px;display:flex;flex-direction:column}
+.fde2-panel.win{border-color:var(--ink)}
+.fde2-head{margin:0 0 20px;font-weight:700;font-size:14.5px;color:var(--sub2)}
+.fde2-head span{display:block;font-size:11px;font-weight:500;color:var(--faint);margin-top:2px}
+.fde2-head.gold{color:var(--ink)}
+.fde2-head.gold span{color:var(--gold-deep)}
+/* left: dispersed circles */
+.fde2-circles{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:26px 22px;flex:1;padding:6px 10px}
+.fde2-circles::before{content:'';position:absolute;left:8%;right:8%;top:50%;border-top:1px dashed #C9CDD4}
+.fde2-circles::after{content:'';position:absolute;top:4%;bottom:4%;left:50%;border-left:1px dashed #C9CDD4}
+.fc{position:relative;z-index:1;aspect-ratio:1;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;max-width:190px;margin:0 auto;width:100%}
+.fc b{font-size:12px;color:var(--ink);line-height:1.55}
+.fc small{font-weight:400;font-size:9.5px;color:var(--sub2)}
+.fc .pill{background:var(--ink);color:#fff;font-size:10px;font-weight:700;padding:4px 12px;border-radius:999px;letter-spacing:.04em}
+.t1{background:rgba(42,50,65,.09)}
+.t2{background:rgba(169,138,75,.16)}
+.t3{background:rgba(169,138,75,.08)}
+.t4{background:rgba(42,50,65,.15)}
+.fde2-x{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:26px;color:#B9BEC7;font-weight:700;pointer-events:none;z-index:2}
+.fde2-x::before{content:'';position:absolute;width:52px;height:52px;background:#fff;border-radius:50%;z-index:-1}
+/* right: venn */
+.fde2-venn{position:relative;flex:1;aspect-ratio:1.12;max-width:400px;margin:0 auto;width:100%}
+.vn{position:absolute;width:57%;aspect-ratio:1;border-radius:50%;display:flex;padding:11%}
+.vn b{font-size:11.5px;color:var(--ink);line-height:1.55;font-weight:700}
+.vn small{font-weight:400;font-size:9px;color:var(--sub2)}
+.v1{left:0;top:0;align-items:flex-start;justify-content:flex-start;text-align:left}
+.v2{right:0;top:0;align-items:flex-start;justify-content:flex-end;text-align:right}
+.v3{left:0;bottom:0;align-items:flex-end;justify-content:flex-start;text-align:left}
+.v4{right:0;bottom:0;align-items:flex-end;justify-content:flex-end;text-align:right}
+.vn-core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:33%;aspect-ratio:1;border-radius:50%;background:#fff;border:2px solid var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(20,24,31,.15);z-index:2}
+.vn-core b{font-family:var(--en);font-weight:600;font-size:clamp(15px,1.6vw,20px);letter-spacing:.1em;color:var(--ink)}
+.vn-core span{font-family:var(--en);font-size:8px;color:var(--sub2);text-align:center;line-height:1.5;margin-top:3px;letter-spacing:.04em}
+.fde2-note{margin:16px 0 0;font-size:11.5px;color:var(--faint);line-height:1.9}
+.win .fde2-note{color:var(--gold-deep)}
+.fde2-result{margin-top:12px;border-top:1px solid var(--line);padding-top:12px;font-size:12.5px;color:var(--sub2)}
+.fde2-result b{color:var(--ink);font-size:14px;margin:0 2px}
+.fde2-result span{display:block;font-size:10px;color:var(--faint);margin-top:3px}
+.fde2-result.gold b{color:var(--gold-deep)}
+.fde2-src{margin:26px 0 0;font-size:12px;color:var(--sub2);line-height:2;max-width:880px;text-wrap:pretty}
+.fde2-src span{display:block;font-size:10px;color:var(--faint);margin-top:4px}
 .draft-ribbon{position:fixed;bottom:18px;right:-46px;transform:rotate(-38deg);background:#B33;color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.18em;padding:6px 60px;z-index:99;pointer-events:none;opacity:.92;font-family:var(--sans)}
 @media(max-width:900px){.navlinks a:not(.btn-dark){display:none}}
 .hero-grid{display:grid;grid-template-columns:minmax(0,760px) 1fr;gap:56px;align-items:center}
@@ -335,45 +379,40 @@ footer a{color:var(--faint)}
       <div class="sec-head">
         <div>
           <p class="kicker">02 ─ FORWARD DEPLOYED ENGINEER</p>
-          <h2 class="sec"><span style="display:inline-block; white-space:nowrap;">だからWingは、</span><br><span style="display:inline-block; white-space:nowrap;">現場に入り込む。</span></h2>
+          <h2 class="sec"><span style="display:inline-block; white-space:nowrap;">分散していた4つの能力を、</span><br><span style="display:inline-block; white-space:nowrap;">「1人」に統合する。</span></h2>
         </div>
-        <p class="sec-lead">FDE（Forward Deployed Engineer）は、<b style="color:#14181F;">経営とオペレーション・現場に精通したエンジニアが貴社の中に入り込み、AIを用いた解決策の構想から実行・開発までを一気通貫で担う</b>、海外の先進テック企業発の支援モデルです。資料とヒアリングだけで要件を固めるのではなく、業務の現場で手を動かしながらAIを組み込んでいく。Wingはこのモデルを、日本企業の実務に合わせて実践しています。</p>
+        <p class="sec-lead">AI導入には「AI基盤」「ドメイン知識」「データサイエンス」「AIアプリ開発」の4つの能力が必要です。従来この4能力は、コンサル・開発者・製品ベンダー・現場部門へと主体ごとに分散し、1つの文脈に統合されないまま実装が途切れてきました。FDE（Forward Deployed Engineer）は、<b style="color:#14181F;">同じ4能力を1人（1チーム）に束ね、課題発見から定着までを一貫して担う</b>存在です。</p>
       </div>
 
-      <div class="dg" style="background:#fff;">
-        <div class="dg-top">
-          <div class="dg-side">
-            <p class="en" style="font-family:'Outfit',sans-serif; font-weight:500; font-size:10px; letter-spacing:.22em; color:#A98A4B; margin:0 0 8px;">MANAGEMENT</p>
-            <h4>経営・戦略</h4>
-            <ul>
-              <li>経営課題・事業KPI</li>
-              <li>投資対効果の判断</li>
-              <li>AIガバナンス・リスク</li>
-              <li>グローバル標準化</li>
-            </ul>
+      <div class="fde2">
+        <div class="fde2-panel">
+          <p class="fde2-head">従来のAI導入<span>4つの能力が、主体ごとにバラバラ</span></p>
+          <div class="fde2-circles">
+            <div class="fc t1"><b>AI基盤・<br>クラウド</b><span class="pill">製品ベンダー</span></div>
+            <div class="fc t2"><b>ドメイン知識<small>（業務・業界）</small></b><span class="pill">現場部門</span></div>
+            <div class="fc t3"><b>フルスタック<br>データサイエンス</b><span class="pill">コンサル</span></div>
+            <div class="fc t4"><b>AIアプリ<br>開発</b><span class="pill">開発者</span></div>
+            <div class="fde2-x" aria-hidden="true">✕</div>
           </div>
-          <div class="dg-center">
-            <span class="dg-x">⟷</span>
-            <div class="dg-node">
-              <p class="t">WING FDE</p>
-              <h3>経営を語り、<br>コードを書く。</h3>
-              <p>戦略の言葉と現場の言葉を翻訳なしで往復し、その場で動くものに変える</p>
-            </div>
-            <span class="dg-x">⟷</span>
-          </div>
-          <div class="dg-side" style="border-left:1px solid #E8E5DE;">
-            <p class="en" style="font-family:'Outfit',sans-serif; font-weight:500; font-size:10px; letter-spacing:.22em; color:#A98A4B; margin:0 0 8px;">OPERATIONS</p>
-            <h4>現場・システム</h4>
-            <ul>
-              <li>業務プロセス・帳票</li>
-              <li>基幹システム・データ</li>
-              <li>現場担当者の運用</li>
-              <li>既存ベンダーとの連携</li>
-            </ul>
-          </div>
+          <p class="fde2-note">同じ4能力が別々の主体に分散 ── 1つの文脈に統合されず、実装が途切れる</p>
+          <div class="fde2-result">結果：<b>約95%のAIパイロットが失敗</b><span>MIT "State of AI in Business"（2025）</span></div>
         </div>
-        <div class="dg-foot">聞く人・作る人・定着させる人が、<b>すべて同じ人間</b>。伝言ゲームによる要件のズレが構造的に起きません。</div>
+        <div class="fde2-arrow" aria-hidden="true">→</div>
+        <div class="fde2-panel win">
+          <p class="fde2-head gold">Wing（FDE型）<span>同じ4つの能力を、1人に統合</span></p>
+          <div class="fde2-venn">
+            <div class="vn v1 t1"><b>AI基盤・<br>クラウド</b></div>
+            <div class="vn v2 t2"><b>ドメイン知識<br><small>（業務・業界）</small></b></div>
+            <div class="vn v3 t3"><b>フルスタック<br>データサイエンス</b></div>
+            <div class="vn v4 t4"><b>AIアプリ<br>開発</b></div>
+            <div class="vn-core"><b>FDE</b><span>Forward Deployed<br>Engineer</span></div>
+          </div>
+          <p class="fde2-note">＋ 高いコミュニケーション能力 ── 経営と現場の言葉を翻訳なしで往復する</p>
+          <div class="fde2-result gold">結果：<b>「使われるAI」</b><span>ROIの回収と、模倣されない強み（Moat）の構築</span></div>
+        </div>
       </div>
+
+      <p class="fde2-src">FDEはPalantirが生んだ職種（2000年代）。現在はOpenAI・Anthropic・Salesforce等が採用を広げ、a16zは「今、スタートアップで最もホットな職種」と評しています。<span>出典：a16z "Services-Led Growth"（2025）／ MIT "State of AI in Business"（2025）／ Financial Times（2026）ほか公開情報より作成</span></p>
     </div>
   </section>
 
