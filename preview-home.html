@@ -49,7 +49,7 @@ a:hover{color:var(--gold-deep)}
 .wrap{max-width:1160px;margin:0 auto;padding:0 40px}
 @media(max-width:720px){.wrap{padding:0 22px}}
 .kicker{margin:0 0 12px 0;font-family:var(--en);font-weight:500;font-size:11px;letter-spacing:.2em;color:var(--gold)}
-h2.sec{font-weight:900;font-size:26px;line-height:1.65;margin:0;color:var(--ink)}
+h2.sec{font-weight:900;font-size:clamp(23px,2.5vw,33px);line-height:1.6;margin:0;color:var(--ink);letter-spacing:.005em}
 .sec-head{display:grid;grid-template-columns:320px 1fr;gap:56px;align-items:start;margin-bottom:36px}
 .sec-head:not(:has(.sec-lead)){grid-template-columns:1fr;gap:0;margin-bottom:30px}
 @media(max-width:860px){.sec-head{grid-template-columns:1fr;gap:18px}}
@@ -195,7 +195,7 @@ table.co td{color:var(--sub2)}
 footer{border-top:1px solid var(--line);padding:30px 40px;font-size:11.5px;color:var(--faint)}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:0}
 footer a{color:var(--faint)}
-.hero-art{position:absolute;right:14%;top:52%;transform:translateY(-50%);pointer-events:none;opacity:.08;line-height:0}
+.hero-art{position:absolute;right:16%;top:54%;transform:translateY(-50%);pointer-events:none;opacity:.045;line-height:0;z-index:0}
 .hero-art svg{height:470px;width:auto}
 @media(max-width:1120px){.hero-art svg{height:360px}}
 @media(max-width:860px){.hero-art{display:none}}
@@ -259,6 +259,20 @@ footer a{color:var(--faint)}
 .fde2-result.gold b{color:var(--gold-deep)}
 .fde2-src{margin:26px 0 0;font-size:12px;color:var(--sub2);line-height:2;max-width:880px;text-wrap:pretty}
 .fde2-src span{display:block;font-size:10px;color:var(--faint);margin-top:4px}
+.thesis{min-width:0;position:relative;z-index:1;max-width:330px;justify-self:end;width:100%}
+@media(max-width:860px){.thesis{max-width:none;justify-self:stretch;margin-top:34px}}
+.th-cap{margin:0 0 10px;font-size:10.5px;letter-spacing:.1em;color:var(--faint)}
+.th-grid{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);background:#fff}
+.th-grid span{font-size:11px;line-height:1.5;color:var(--sub2);padding:14px 12px;text-align:center;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:center}
+.th-grid span:nth-child(2n){border-right:none}
+.th-grid span:nth-child(n+3){border-bottom:none}
+.th-join{display:grid;grid-template-columns:repeat(4,1fr);height:26px;position:relative}
+.th-join i{border-left:1px solid var(--line2);margin:0 auto;width:0;height:13px}
+.th-join::after{content:'';position:absolute;left:12.5%;right:12.5%;top:13px;border-top:1px solid var(--line2)}
+.th-join::before{content:'';position:absolute;left:50%;top:13px;height:13px;border-left:1px solid var(--gold);z-index:1}
+.th-node{border:1px solid var(--ink);background:var(--ink);color:#fff;text-align:center;padding:15px 14px}
+.th-node b{display:block;font-family:var(--en);font-weight:600;font-size:14px;letter-spacing:.2em;color:var(--gold-soft)}
+.th-node span{display:block;font-size:11px;color:rgba(255,255,255,.72);margin-top:4px}
 .draft-ribbon{position:fixed;bottom:18px;right:-46px;transform:rotate(-38deg);background:#B33;color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.18em;padding:6px 60px;z-index:99;pointer-events:none;opacity:.92;font-family:var(--sans)}
 @media(max-width:900px){.navlinks a:not(.btn-dark){display:none}}
 .hero-grid{display:grid;grid-template-columns:minmax(0,760px) 1fr;gap:56px;align-items:center}
@@ -314,7 +328,18 @@ footer a{color:var(--faint)}
           <a href="#fde" class="btn-line">Wingの進め方を見る</a>
         </div>
       </div>
-      <div aria-hidden="true" style="min-width:0;"></div>
+      <div class="thesis" aria-label="4つの能力を1人に統合するFDEモデルの概念図">
+        <p class="th-cap">AIの効果を最大化する、4つの能力</p>
+        <div class="th-grid">
+          <span>AI基盤・クラウド</span><span>ドメイン知識</span>
+          <span>データサイエンス</span><span>AIアプリ開発</span>
+        </div>
+        <div class="th-join" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <div class="th-node">
+          <b>WING FDE</b>
+          <span>4つの能力を1人（1チーム）に統合</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -323,7 +348,7 @@ footer a{color:var(--faint)}
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <p class="kicker">01 ─ THE AI DIVIDE</p>
+          <p class="kicker">THE AI DIVIDE</p>
           <h2 class="sec"><span style="display:inline-block; white-space:nowrap;">AIの格差は始まっています。</span><br><span style="display:inline-block; white-space:nowrap;">導入するだけでは、</span><br><span style="display:inline-block; white-space:nowrap;">損益に直結しません。</span></h2>
         </div>
         <p class="sec-lead">世界6大陸・約10億件の求人データを対象としたPwCの調査によると、AIを使いこなす企業とそれ以外の間で、生産性の差が急速に拡大しています。一方で、AIの効果を自社の利益として実感できている企業はごく一部です。<br><br>分かれ目は、ツールの有無ではありません。<b style="color:#14181F;">経営・ビジネスとテクノロジーの融合がうまくいかず、部分最適やPoCが乱立してしまう</b>——つまり、AIを業務と組織に統合しきれたかどうかが、成果を分けています。</p>
@@ -378,7 +403,7 @@ footer a{color:var(--faint)}
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <p class="kicker">02 ─ FORWARD DEPLOYED ENGINEER</p>
+          <p class="kicker">FORWARD DEPLOYED ENGINEER</p>
           <h2 class="sec"><span style="display:inline-block; white-space:nowrap;">分散していた4つの能力を、</span><br><span style="display:inline-block; white-space:nowrap;">「1人」に統合する。</span></h2>
         </div>
         <p class="sec-lead">AI導入には「AI基盤」「ドメイン知識」「データサイエンス」「AIアプリ開発」の4つの能力が必要です。従来この4能力は、コンサル・開発者・製品ベンダー・現場部門へと主体ごとに分散し、1つの文脈に統合されないまま実装が途切れてきました。FDE（Forward Deployed Engineer）は、<b style="color:#14181F;">同じ4能力を1人（1チーム）に束ね、課題発見から定着までを一貫して担う</b>存在です。</p>
@@ -419,7 +444,7 @@ footer a{color:var(--faint)}
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <p class="kicker">03 ─ ENGAGEMENT MODEL</p>
+          <p class="kicker">ENGAGEMENT MODEL</p>
           <h2 class="sec"><span style="display:inline-block; white-space:nowrap;">小さく確かめて、</span><br><span style="display:inline-block; white-space:nowrap;">確かになった分だけ進む。</span></h2>
         </div>
         <p class="sec-lead">契約は段階ごとに区切ります。診断だけで終える、試作を見てから判断する——どちらも想定内の設計です。大きな投資判断を、実物を見る前に迫ることはしません。入口は2つ。<b style="color:#14181F;">貴社の状況に合わせて、最適な進め方をご提案します。</b></p>
@@ -486,7 +511,7 @@ footer a{color:var(--faint)}
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <p class="kicker">04 ─ SERVICES</p>
+          <p class="kicker">SERVICES</p>
           <h2 class="sec"><span style="display:inline-block; white-space:nowrap;">構想から実装、</span><br><span style="display:inline-block; white-space:nowrap;">内製化まで。</span></h2>
         </div>
         <p class="sec-lead">上流の戦略構想から、実装・PMO、組織の内製化までをご支援します。実装まで担えるからこそ、机上で終わらない実行可能な戦略を描けます。</p>
@@ -504,7 +529,7 @@ footer a{color:var(--faint)}
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <p class="kicker">05 ─ AI PRODUCTS</p>
+          <p class="kicker">AI PRODUCTS</p>
           <h2 class="sec"><span style="display:inline-block; white-space:nowrap;">現場で何度も見た作業は、</span><br><span style="display:inline-block; white-space:nowrap;">製品にしました。</span></h2>
         </div>
         <p class="sec-lead">支援先で繰り返し現れた同じ作業を汎用化し、業界特化型のAIプロダクトとして提供しています。いずれも設計・実装・運用まで自社で行っており、コンサルティングとあわせて、単体でもご利用いただけます。</p>
@@ -542,7 +567,7 @@ footer a{color:var(--faint)}
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <p class="kicker">06 ─ FAQ</p>
+          <p class="kicker">FAQ</p>
           <h2 class="sec">聞きにくいことから、<br>お答えします。</h2>
         </div>
       </div>
@@ -562,7 +587,7 @@ footer a{color:var(--faint)}
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <p class="kicker">07 ─ INSIGHTS</p>
+          <p class="kicker">INSIGHTS</p>
           <h2 class="sec"><span style="display:inline-block; white-space:nowrap;">読んでから、</span><br><span style="display:inline-block; white-space:nowrap;">決めてください。</span></h2>
         </div>
         <p class="sec-lead">AIエージェント・DX戦略・貿易DX・規制対応。プロジェクトの現場で得た実践知を記事として公開しています。私たちの考え方は、営業資料より記事のほうが正確に伝わります。</p>
@@ -584,7 +609,7 @@ footer a{color:var(--faint)}
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <p class="kicker">08 ─ COMPANY</p>
+          <p class="kicker">COMPANY</p>
           <h2 class="sec">会社概要</h2>
         </div>
       </div>
@@ -601,7 +626,7 @@ footer a{color:var(--faint)}
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <p class="kicker">09 ─ CONTACT</p>
+          <p class="kicker">CONTACT</p>
           <h2 class="sec">AIをやらない、<br>という提案もします。</h2>
         </div>
       </div>
