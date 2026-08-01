@@ -122,12 +122,12 @@ table.c td{color:var(--sub2)}
 table.c td.w{color:var(--ink);font-weight:500;background:#FBFAF7}
 table.c .num{font-family:var(--en);color:var(--gold-deep);font-weight:600}
 /* pillars */
-.pillar{border:1px solid var(--line);border-top:2px solid var(--ink);padding:28px 26px;background:#fff}
+.pillar{border:1px solid var(--line);border-top:2px solid var(--ink);padding:28px 26px;background:#fff;display:flex;flex-direction:column}
 .g3.pillars{gap:18px}
-.pillar h3{margin:10px 0 8px;font-size:16.5px;font-weight:700;color:var(--ink)}
-.pillar>p{margin:0 0 14px;font-size:12.5px;color:var(--sub2);line-height:2}
-.pillar ul{margin:0;padding:0;list-style:none}
-.pillar li{font-size:12.5px;color:var(--sub2);padding:7px 0 7px 16px;border-bottom:1px dashed var(--line);position:relative;line-height:1.8}
+.pillar h3{margin:10px 0 8px;font-size:16.5px;font-weight:700;color:var(--ink);min-height:1.6em}
+.pillar>p{margin:0 0 16px;font-size:12.5px;color:var(--sub2);line-height:2;min-height:calc(2em * 2);text-wrap:pretty}
+.pillar ul{margin:auto 0 0;padding:0;list-style:none;border-top:1px solid var(--line)}
+.pillar li{font-size:12.5px;color:var(--sub2);padding:8px 0 8px 16px;border-bottom:1px dashed var(--line);position:relative;line-height:1.8}
 .pillar li::before{content:'─';position:absolute;left:0;color:var(--gold);font-size:10px}
 .pillar li:last-child{border-bottom:none}
 /* products */
@@ -329,7 +329,6 @@ footer a{color:var(--faint)}
         </div>
       </div>
       <div class="thesis" aria-label="4つの能力を1人に統合するFDEモデルの概念図">
-        <p class="th-cap">AIの効果を最大化する、4つの能力</p>
         <div class="th-grid">
           <span>AI基盤・クラウド</span><span>ドメイン知識</span>
           <span>データサイエンス</span><span>AIアプリ開発</span>
@@ -512,9 +511,9 @@ footer a{color:var(--faint)}
       <div class="sec-head">
         <div>
           <p class="kicker">SERVICES</p>
-          <h2 class="sec"><span style="display:inline-block; white-space:nowrap;">構想から実装、</span><br><span style="display:inline-block; white-space:nowrap;">内製化まで。</span></h2>
+          <h2 class="sec"><span style="display:inline-block; white-space:nowrap;">丸ごとでも、</span><br><span style="display:inline-block; white-space:nowrap;">一部だけでも。</span></h2>
         </div>
-        <p class="sec-lead">上流の戦略構想から、実装・PMO、組織の内製化までをご支援します。実装まで担えるからこそ、机上で終わらない実行可能な戦略を描けます。</p>
+        <p class="sec-lead">構想から実装・内製化までを一気通貫で担うこともできますし、「PMOだけ」「ベンダー選定だけ」「研修だけ」といった特定機能の強化だけでもお引き受けします。<b style="color:#14181F;">貴社に足りている部分は、無理に置き換えません。</b></p>
       </div>
       <div class="g3 pillars">
         <div class="pillar"><p class="tag-en" style="margin-bottom:0;">SERVICE 01</p><h3>戦略構想・アドバイザリー</h3><p>経営・IT・業務の三視点から現状を診断し、実行可能なDX・AI戦略を策定。</p><ul><li>DX現状診断・課題定義</li><li>AI活用ロードマップ策定</li><li>CxO・経営層アドバイザリー</li><li>ITデューデリジェンス・PMI支援</li></ul></div>
