@@ -49,8 +49,9 @@ a:hover{color:var(--gold-deep)}
 .wrap{max-width:1160px;margin:0 auto;padding:0 40px}
 @media(max-width:720px){.wrap{padding:0 22px}}
 .kicker{margin:0 0 12px 0;font-family:var(--en);font-weight:500;font-size:11px;letter-spacing:.2em;color:var(--gold)}
-h2.sec{font-weight:900;font-size:clamp(23px,2.5vw,33px);line-height:1.6;margin:0;color:var(--ink);letter-spacing:.005em}
-.sec-head{display:grid;grid-template-columns:320px 1fr;gap:56px;align-items:start;margin-bottom:36px}
+h2.sec{font-weight:900;font-size:clamp(22px,2.2vw,29px);line-height:1.62;margin:0;color:var(--ink);letter-spacing:.005em;text-wrap:balance}
+.sec-head{display:grid;grid-template-columns:minmax(0,400px) 1fr;gap:56px;align-items:start;margin-bottom:36px}
+.sec-head>*{min-width:0}
 .sec-head:not(:has(.sec-lead)){grid-template-columns:1fr;gap:0;margin-bottom:30px}
 @media(max-width:860px){.sec-head{grid-template-columns:1fr;gap:18px}}
 .sec-lead{margin:6px 0 0 0;font-size:15px;line-height:2.1;color:var(--sub);max-width:680px;text-wrap:pretty}
@@ -325,7 +326,7 @@ footer a{color:var(--faint)}
       <div class="sec-head">
         <div>
           <p class="kicker">THE AI DIVIDE</p>
-          <h2 class="sec"><span style="display:inline-block; white-space:nowrap;">AIの格差は始まっています。</span><br><span style="display:inline-block; white-space:nowrap;">導入するだけでは、</span><br><span style="display:inline-block; white-space:nowrap;">損益に直結しません。</span></h2>
+          <h2 class="sec"><span style="display:inline-block;">AIの格差は始まっています。</span><br><span style="display:inline-block;">導入するだけでは、</span><br><span style="display:inline-block;">損益に直結しません。</span></h2>
         </div>
         <p class="sec-lead">世界6大陸・約10億件の求人データを対象としたPwCの調査によると、AIを使いこなす企業とそれ以外の間で、生産性の差が急速に拡大しています。一方で、AIの効果を自社の利益として実感できている企業はごく一部です。<br><br>分かれ目は、ツールの有無ではありません。<b style="color:#14181F;">経営・ビジネスとテクノロジーの融合がうまくいかず、部分最適やPoCが乱立してしまう</b>——つまり、AIを業務と組織に統合しきれたかどうかが、成果を分けています。</p>
       </div>
@@ -380,7 +381,7 @@ footer a{color:var(--faint)}
       <div class="sec-head">
         <div>
           <p class="kicker">FORWARD DEPLOYED ENGINEER</p>
-          <h2 class="sec"><span style="display:inline-block; white-space:nowrap;">分散していた4つの能力を、</span><br><span style="display:inline-block; white-space:nowrap;">「1人」に統合する。</span></h2>
+          <h2 class="sec"><span style="display:inline-block;">分散していた4つの能力を、</span><br><span style="display:inline-block;">「1人」に統合する。</span></h2>
         </div>
         <p class="sec-lead">AI導入には「AI基盤」「ドメイン知識」「データサイエンス」「AIアプリ開発」の4つの能力が必要です。従来この4能力は、コンサル・開発者・製品ベンダー・現場部門へと主体ごとに分散し、1つの文脈に統合されないまま実装が途切れてきました。FDE（Forward Deployed Engineer）は、<b style="color:#14181F;">同じ4能力を1人（1チーム）に束ね、課題発見から定着までを一貫して担う</b>存在です。</p>
       </div>
@@ -421,7 +422,7 @@ footer a{color:var(--faint)}
       <div class="sec-head">
         <div>
           <p class="kicker">ENGAGEMENT MODEL</p>
-          <h2 class="sec"><span style="display:inline-block; white-space:nowrap;">小さく確かめて、</span><br><span style="display:inline-block; white-space:nowrap;">確かになった分だけ進む。</span></h2>
+          <h2 class="sec"><span style="display:inline-block;">小さく確かめて、</span><br><span style="display:inline-block;">確かになった分だけ進む。</span></h2>
         </div>
         <p class="sec-lead">契約は段階ごとに区切ります。診断だけで終える、試作を見てから判断する——どちらも想定内の設計です。大きな投資判断を、実物を見る前に迫ることはしません。入口は2つ。<b style="color:#14181F;">貴社の状況に合わせて、最適な進め方をご提案します。</b></p>
       </div>
@@ -488,7 +489,7 @@ footer a{color:var(--faint)}
       <div class="sec-head">
         <div>
           <p class="kicker">SERVICES</p>
-          <h2 class="sec"><span style="display:inline-block; white-space:nowrap;">丸ごとでも、</span><br><span style="display:inline-block; white-space:nowrap;">一部だけでも。</span></h2>
+          <h2 class="sec"><span style="display:inline-block;">丸ごとでも、</span><br><span style="display:inline-block;">一部だけでも。</span></h2>
         </div>
         <p class="sec-lead">構想から実装・内製化までを一気通貫で担うこともできますし、「PMOだけ」「ベンダー選定だけ」「研修だけ」といった特定機能の強化だけでもお引き受けします。<b style="color:#14181F;">貴社に足りている部分は、無理に置き換えません。</b></p>
       </div>
@@ -506,7 +507,7 @@ footer a{color:var(--faint)}
       <div class="sec-head">
         <div>
           <p class="kicker">AI PRODUCTS</p>
-          <h2 class="sec"><span style="display:inline-block; white-space:nowrap;">現場で何度も見た作業は、</span><br><span style="display:inline-block; white-space:nowrap;">製品にしました。</span></h2>
+          <h2 class="sec"><span style="display:inline-block;">現場で何度も見た作業は、</span><br><span style="display:inline-block;">製品にしました。</span></h2>
         </div>
         <p class="sec-lead">支援先で繰り返し現れた同じ作業を汎用化し、業界特化型のAIプロダクトとして提供しています。いずれも設計・実装・運用まで自社で行っており、コンサルティングとあわせて、単体でもご利用いただけます。</p>
       </div>
@@ -564,7 +565,7 @@ footer a{color:var(--faint)}
       <div class="sec-head">
         <div>
           <p class="kicker">INSIGHTS</p>
-          <h2 class="sec"><span style="display:inline-block; white-space:nowrap;">読んでから、</span><br><span style="display:inline-block; white-space:nowrap;">決めてください。</span></h2>
+          <h2 class="sec"><span style="display:inline-block;">読んでから、</span><br><span style="display:inline-block;">決めてください。</span></h2>
         </div>
         <p class="sec-lead">AIエージェント・DX戦略・貿易DX・規制対応。プロジェクトの現場で得た実践知を記事として公開しています。私たちの考え方は、営業資料より記事のほうが正確に伝わります。</p>
       </div>
