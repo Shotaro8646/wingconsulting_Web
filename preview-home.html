@@ -195,6 +195,21 @@ footer a{color:var(--faint)}
 @media(max-width:1120px){.hero-art svg{height:360px}}
 @media(max-width:860px){.hero-art{display:none}}
 @media(max-width:720px){br.pc{display:none}}
+.opt{border:1px solid var(--line);border-left:3px solid var(--gold);background:#fff;padding:26px 26px 20px}
+.opt h3{margin:10px 0 8px;font-size:16.5px;font-weight:700;color:var(--ink)}
+.opt p{margin:0 0 14px;font-size:13px;color:var(--sub2);line-height:2}
+.opt .opt-fit{margin:0;font-size:11.5px;color:var(--faint);border-top:1px dashed var(--line);padding-top:12px;line-height:1.95}
+.vs{min-width:680px;border:1px solid var(--line);border-bottom:none}
+.vs-r{display:grid;grid-template-columns:150px 1fr 1.15fr;border-bottom:1px solid var(--line)}
+.vs-r>div{padding:17px 22px}
+.vs-hr>div{padding:14px 22px}
+.vs-h{font-size:12.5px;font-weight:700;color:var(--faint);letter-spacing:.04em}
+.vs-h.wing{background:var(--ink);color:#fff}
+.vs-tag{display:block;font-family:var(--en);font-weight:500;font-size:9.5px;letter-spacing:.24em;color:var(--gold-soft);margin-bottom:4px}
+.vs-label{font-size:12px;font-weight:700;color:var(--faint);letter-spacing:.04em}
+.vs-trad{font-size:13px;color:var(--sub2);line-height:1.9}
+.vs-wing{background:var(--ink);color:#fff;font-size:13px;font-weight:500;line-height:1.9}
+.vs-wing em{font-style:normal;color:var(--gold-soft);font-weight:700}
 .draft-ribbon{position:fixed;bottom:18px;right:-46px;transform:rotate(-38deg);background:#B33;color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.18em;padding:6px 60px;z-index:99;pointer-events:none;opacity:.92;font-family:var(--sans)}
 @media(max-width:900px){.navlinks a:not(.btn-dark){display:none}}
 .hero-grid{display:grid;grid-template-columns:minmax(0,760px) 1fr;gap:56px;align-items:center}
@@ -365,45 +380,82 @@ footer a{color:var(--faint)}
           <p class="kicker">03 ─ ENGAGEMENT MODEL</p>
           <h2 class="sec"><span style="display:inline-block; white-space:nowrap;">小さく確かめて、</span><br><span style="display:inline-block; white-space:nowrap;">確かになった分だけ進む。</span></h2>
         </div>
-        <p class="sec-lead">契約は段階ごとに区切ります。診断だけで終える、試作を見てから判断する——どちらも想定内の設計です。大きな投資判断を、実物を見る前に迫ることはしません。</p>
+        <p class="sec-lead">契約は段階ごとに区切ります。診断だけで終える、試作を見てから判断する——どちらも想定内の設計です。大きな投資判断を、実物を見る前に迫ることはしません。入口は2つ。<b style="color:#14181F;">貴社の状況に合わせて、最適な進め方をご提案します。</b></p>
       </div>
+      <div class="g2 entry" style="margin-bottom:36px;">
+        <div class="opt">
+          <p class="tag-en" style="margin-bottom:0;">ENTRY A</p>
+          <h3>全体設計から始める</h3>
+          <p>まず社内の業務・IT化の現状を棚卸しし、AI実装の優先度と必要な機能を明確にします。「どこから手をつけるべきか」を固めてから、優先領域の試作へ進みます。</p>
+          <p class="opt-fit">こんな場合に ── AI活用の方向性がまだ固まっていない ／ 部門ごとにバラバラにAIツールが動いている ／ 投資の優先順位を整理したい</p>
+        </div>
+        <div class="opt">
+          <p class="tag-en" style="margin-bottom:0;">ENTRY B</p>
+          <h3>特定領域の開発から始める</h3>
+          <p>「この業務を自動化したい」など開発したいテーマが既に明確な場合は、全体診断を省き、対象領域の試作開発から直接着手します。</p>
+          <p class="opt-fit">こんな場合に ── 開発要望・対象業務が決まっている ／ PoCや要件のたたき台が既にある ／ まず一つ動かして社内の理解を得たい</p>
+        </div>
+      </div>
+      <p style="margin:0 0 14px; font-size:12.5px; color:#8A909B;">どちらの入口でも、「試作で確かめてから本格展開する」という流れは共通です。</p>
       <div class="g3 phases">
         <div class="phase">
           <div class="top"><span class="no"><span>第1段階</span>診断・課題定義</span><span class="dur">2〜4週間</span></div>
           <h3>現状の棚卸しと、着手点の特定</h3>
           <p>経営・IT・業務の三視点で現状を診断し、どこから着手すれば最も効果が出るかを特定。優先順位と投資対効果を明示します。</p>
           <div class="meta"><b>成果物：</b>診断レポート・優先課題／<b>ご負担：</b>ヒアリング数回</div>
-          <div class="price">固定 <b><span class="ph-fill">◯◯万円 要確定</span></b>（税別）</div>
         </div>
         <div class="phase focus">
-          <div class="badge">動く画面が出ます</div>
           <div class="top"><span class="no"><span>第2段階</span>試作・実証</span><span class="dur">2〜4週間</span></div>
           <h3>動くプロトタイプによる検証</h3>
           <p>診断結果をそのまま動く画面に。現場に触っていただきながら要件と効果を固めます。本格展開の投資判断は、実物を見てからで構いません。</p>
           <div class="meta"><b>成果物：</b>動作するプロトタイプ／<b>ご負担：</b>週1回の確認会</div>
-          <div class="price">固定 <b><span class="ph-fill">◯◯〜◯◯万円 要確定</span></b>（税別）</div>
         </div>
         <div class="phase">
           <div class="top"><span class="no"><span>第3段階</span>本番展開・内製化</span><span class="dur">継続</span></div>
           <h3>全社展開と、知見の移転</h3>
           <p>権限管理・データ保全・監視を整えて本番稼働へ。運用の定着と効果測定に並走しながら、最終的に貴社の中で回る体制をつくります。</p>
           <div class="meta"><b>含まれるもの：</b>展開支援・改善・内製化支援・月次レビュー</div>
-          <div class="price">月額 <b><span class="ph-fill">◯◯万円〜 要確定</span></b>（税別）</div>
         </div>
       </div>
       <p style="margin:20px 0 0; font-size:12px; color:#8A909B; line-height:2;">※ 定例訪問（関西圏・東京）にも対応します　※ 会計・在庫の中核など基幹システム本体の刷新は対象外です。既存の基幹を活かし、その周辺を速く変えるのが当社の領域です</p>
 
-      <div style="margin-top:46px; overflow-x:auto;">
-        <table class="c">
-          <thead><tr><th></th><th>従来型のコンサル・SI</th><th class="w">Wing（FDE型）</th></tr></thead>
-          <tbody>
-            <tr><th>最初の成果物</th><td>報告書・要件定義書（数ヶ月後）</td><td class="w">動くプロトタイプ（<span class="num">2〜4週</span>）</td></tr>
-            <tr><th>体制</th><td>提案はシニア、実行は若手に交代</td><td class="w">課題を理解した本人が<span class="num">最初から最後まで</span>関与</td></tr>
-            <tr><th>要件の固め方</th><td>文書の往復とレビュー会議</td><td class="w">実物を触りながら現場と直接調整</td></tr>
-            <tr><th>投資判断</th><td>着手前に全体規模のコミット</td><td class="w">段階契約で<span class="num">分割</span>。実物を見てから判断</td></tr>
-            <tr><th>知見の残り方</th><td>仕様も判断根拠もベンダー側に蓄積</td><td class="w">ソースコード・設計資料ごと<span class="num">貴社に残す</span></td></tr>
-          </tbody>
-        </table>
+      <div style="margin-top:46px;">
+        <p class="tag-en" style="margin-bottom:6px;">COMPARISON</p>
+        <p style="margin:0 0 22px; font-weight:700; font-size:17px; color:#14181F;">従来型のご支援との違い</p>
+        <div style="overflow-x:auto;">
+        <div class="vs">
+          <div class="vs-r vs-hr">
+            <div></div>
+            <div class="vs-h">従来型のコンサル・SI</div>
+            <div class="vs-h wing"><span class="vs-tag">FDE MODEL</span>Wing</div>
+          </div>
+          <div class="vs-r">
+            <div class="vs-label">最初の成果物</div>
+            <div class="vs-trad">報告書・要件定義書（数ヶ月後）</div>
+            <div class="vs-wing">動くプロトタイプ<em>（2〜4週）</em></div>
+          </div>
+          <div class="vs-r">
+            <div class="vs-label">体制</div>
+            <div class="vs-trad">提案はシニア、実行は若手に交代</div>
+            <div class="vs-wing">課題を理解した本人が<em>最初から最後まで</em>関与</div>
+          </div>
+          <div class="vs-r">
+            <div class="vs-label">要件の固め方</div>
+            <div class="vs-trad">文書の往復とレビュー会議</div>
+            <div class="vs-wing">実物を触りながら<em>現場と直接調整</em></div>
+          </div>
+          <div class="vs-r">
+            <div class="vs-label">投資判断</div>
+            <div class="vs-trad">着手前に全体規模のコミット</div>
+            <div class="vs-wing">段階契約で分割。<em>実物を見てから判断</em></div>
+          </div>
+          <div class="vs-r">
+            <div class="vs-label">知見の残り方</div>
+            <div class="vs-trad">仕様も判断根拠もベンダー側に蓄積</div>
+            <div class="vs-wing">ソースコード・設計資料ごと<em>貴社に残す</em></div>
+          </div>
+        </div>
+        </div>
         <p style="margin:12px 0 0; font-size:11.5px; color:#8A909B;">※ 速さの理由は人数ではなく、業務理解×AIネイティブ開発（Claude Code等）の掛け算です。貴社のデータを外部のAI学習に使うことはありません。</p>
       </div>
     </div>
@@ -518,9 +570,8 @@ footer a{color:var(--faint)}
       </div>
       <table class="co">
         <tr><th>社名</th><td>Wing</td></tr>
-        <tr><th>代表者</th><td><span class="ph-fill">氏名 要記入</span></td></tr>
-        <tr><th>設立</th><td>2026年<span class="ph-fill">◯月 要記入</span></td></tr>
-        <tr><th>所在地</th><td><span class="ph-fill">要記入</span>（関西圏 ／ 東京 サテライト）</td></tr>
+        <tr><th>設立</th><td>2026年</td></tr>
+        <tr><th>所在地</th><td>関西圏 ／ 東京（サテライト）</td></tr>
         <tr><th>事業内容</th><td>AI・DXコンサルティング、FDE型の実装・伴走支援、AIプロダクト（BorderFlow・ChemOS）の開発提供</td></tr>
         <tr><th>対応地域</th><td>全国（オンライン）／ 関西圏・東京は訪問対応可 ／ 英語対応可</td></tr>
       </table>
