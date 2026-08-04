@@ -393,8 +393,7 @@ footer a{color:var(--faint)}
 .wall-h.gold{color:var(--gold-deep)}
 .wall-h.gold span{color:var(--ink)}
 .wall-body{flex:1}
-.cbox{border:1px solid var(--line);background:#FBFAF7;padding:14px}
-.cbox.inside{border-color:rgba(169,138,75,.5);background:#FDFBF6;padding:16px 14px}
+.cbox{border:1px solid var(--line2);background:#FBFAF7;padding:14px}
 .cbox-t{margin:0 0 10px;font-size:11px;letter-spacing:.06em;color:var(--faint);text-align:center;font-weight:700}
 .cbox-t small{display:block;font-weight:400;font-size:11px;color:var(--gold-deep);margin-top:2px}
 .cbox-r{display:grid;grid-template-columns:1fr 1fr;gap:10px}
@@ -408,8 +407,24 @@ footer a{color:var(--faint)}
 .ex.in{right:2px;bottom:2px}
 .vend{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .vend>span{border:1px solid var(--line);background:#fff;padding:9px 6px;text-align:center;font-size:12px;color:var(--sub2)}
-.fde-n{margin:14px auto 12px;width:74px;height:74px;border-radius:50%;background:var(--ink);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(20,24,31,.22)}
-.fde-n b{font-family:var(--en);font-weight:600;font-size:17px;letter-spacing:.14em;color:var(--gold-soft)}
+.cbox.inside{border-color:var(--ink);border-width:2px;background:#fff;padding:18px 16px}
+.cbox.inside .cbox-t{color:var(--ink);font-size:12px}
+.cbox.inside .cbox-t small{color:var(--gold-deep)}
+.bridge{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;margin-top:4px}
+@media(max-width:560px){.bridge{grid-template-columns:1fr;gap:6px}}
+.side{border:1px solid var(--line2);background:#FBFAF7;padding:14px 10px;text-align:center}
+.side b{display:block;font-size:14px;color:var(--ink)}
+.side span{display:block;font-size:11px;color:var(--sub2);margin-top:5px;line-height:1.6}
+.side.mgmt{border-top:3px solid var(--ink)}
+.side.ops{border-top:3px solid var(--gold)}
+.mid{display:flex;flex-direction:column;align-items:center;gap:4px;padding:0 4px}
+@media(max-width:560px){.mid{flex-direction:row;justify-content:center;padding:6px 0}}
+.mid .ar{color:var(--gold);font-size:15px;line-height:1;transform:rotate(90deg)}
+@media(max-width:560px){.mid .ar{transform:none}}
+.fde-n{width:84px;height:84px;border-radius:50%;background:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(20,24,31,.3);flex:none}
+.fde-n b{font-family:var(--en);font-weight:600;font-size:19px;letter-spacing:.12em;color:var(--gold-soft);line-height:1}
+.fde-n em{font-style:normal;font-family:var(--en);font-size:11px;color:rgba(255,255,255,.75);margin-top:3px;letter-spacing:.1em}
+.bridge-cap{margin:12px 0 14px;font-size:12px;color:var(--gold-deep);text-align:center;line-height:1.8}
 .fde-role{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 @media(max-width:560px){.fde-role{grid-template-columns:1fr}}
 .fde-role>span{border-top:2px solid var(--gold-soft);background:#fff;padding:10px 8px;font-size:11px;color:var(--sub2);line-height:1.7;text-align:center}
@@ -608,7 +623,7 @@ footer a{color:var(--faint)}
           <p class="wall-h">BEFORE<span>外からアドバイス・サービスを提供</span></p>
           <div class="wall-body">
             <div class="cbox">
-              <p class="cbox-t">クライアント企業</p>
+              <p class="cbox-t">クライアント企業様</p>
               <div class="cbox-r"><span>経営層</span><span>現場部門</span></div>
             </div>
             <div class="barrier">
@@ -630,12 +645,17 @@ footer a{color:var(--faint)}
           <p class="wall-h gold">AFTER<span>内部の旗振り役として変革を牽引（Wing）</span></p>
           <div class="wall-body">
             <div class="cbox inside">
-              <p class="cbox-t">クライアント企業<small>推進チームの一員として内部に入る</small></p>
-              <div class="cbox-r">
-                <span>経営層<small>経営課題（KPI・収益）</small></span>
-                <span>現場部門<small>現場課題（業務実態）</small></span>
+              <p class="cbox-t">クライアント企業様<small>推進チームの一員として内部に入る</small></p>
+              <div class="bridge">
+                <div class="side mgmt"><b>経営層</b><span>経営課題（KPI・収益）</span></div>
+                <div class="mid">
+                  <span class="ar">↕</span>
+                  <div class="fde-n"><b>FDE</b><em>Wing</em></div>
+                  <span class="ar">↕</span>
+                </div>
+                <div class="side ops"><b>現場部門</b><span>現場課題（業務実態）</span></div>
               </div>
-              <div class="fde-n"><b>FDE</b></div>
+              <p class="bridge-cap">経営と現場の間に入り、双方の言葉を翻訳しながら打ち手をつくる</p>
               <div class="fde-role">
                 <span><b>経営課題を特定</b>収益・KPIの論点へ</span>
                 <span><b>現場実態で設計</b>業務・人・データ</span>
