@@ -311,11 +311,11 @@ section .wrap{padding:0}
 .arch-lbl span{font-family:var(--en);font-size:10px;font-weight:600;letter-spacing:.18em;color:var(--ink);white-space:nowrap}
 .arch-lbl.gold span{color:var(--gold-deep)}
 .arch-lbl i{flex:1;height:1px;background:var(--line)}
-.procs{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.procs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
 .proc-b{background:var(--pale);color:var(--ink);border-top:2px solid var(--line2);padding:13px 8px;display:flex;align-items:center;justify-content:center;gap:8px}
-.proc-b span{font-size:13.5px;font-weight:700;white-space:nowrap}
+.proc-b span{font-size:14px;font-weight:700;white-space:nowrap}
 .proc-c{margin-top:6px;font-size:11px;color:var(--faint);text-align:center;line-height:1.6}
-.arch-ar{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;text-align:center;color:var(--gold);font-size:13px;line-height:1}
+.arch-ar{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;text-align:center;color:var(--gold);font-size:13px;line-height:1}
 .plat{background:var(--bar-dark);border-top:2px solid var(--gold);color:#fff;padding:16px 18px}
 .plat-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px}
 .plat-h strong{font-family:var(--en);font-size:19px;font-weight:600;letter-spacing:.02em;color:var(--gold-soft)}
@@ -324,7 +324,8 @@ section .wrap{padding:0}
 .plat-s p{margin:0 0 8px;font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--gold-soft)}
 .stack{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
 .stack i{font-style:normal;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.26);padding:8px 4px;text-align:center;font-size:11px;line-height:1.4}
-.sols{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.sols{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;align-items:start}
+.sol-stack{display:flex;flex-direction:column;gap:10px;min-width:0}
 .sol{position:relative;border:1px solid var(--line);border-top:2px solid var(--line2);background:#fff;padding:17px 13px 13px}
 .sol.live{border-top-color:var(--gold)}
 .sol-st{position:absolute;top:-9px;right:8px;font-size:10px;font-weight:700;padding:1px 7px;background:#fff;border:1px solid var(--line2);color:var(--sub2);white-space:nowrap}
@@ -345,6 +346,34 @@ section .wrap{padding:0}
 .dataloop{margin:0 0 22px;border-left:2px solid var(--gold);background:#FBFAF7;padding:13px 16px;font-size:13px;line-height:1.95;color:var(--sub2);text-wrap:pretty}
 .dataloop span{display:inline-block;font-family:var(--en);font-size:10px;font-weight:600;letter-spacing:.14em;color:var(--gold-deep);margin-right:12px}
 .dataloop b{color:var(--ink)}
+/* ── 接続図 ── */
+.eco{border:1px solid var(--line);background:#fff;padding:22px 22px 18px;margin-bottom:22px;display:flex;flex-direction:column;gap:14px}
+.eco-body{display:grid;grid-template-columns:.82fr auto 1.18fr;gap:16px;align-items:center}
+.eco-h{margin:0 0 9px;font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--faint)}
+.eco-side{display:flex;flex-direction:column;gap:7px;min-width:0}
+.eco-g{display:grid;grid-template-columns:repeat(2,1fr);gap:7px;margin-bottom:10px}
+.eco-g>p{grid-column:1/-1}
+.eco-g:last-child{margin-bottom:0}
+.eco-g>p{margin:0;font-size:10px;font-weight:700;letter-spacing:.1em;color:var(--gold-deep)}
+.eco-i{border:1px solid var(--line);border-left:2px solid var(--line2);padding:8px 12px;min-width:0}
+.eco-i b{display:block;font-size:12.5px;font-weight:700;color:var(--ink);line-height:1.5}
+.eco-i span{display:block;font-size:10.5px;color:var(--sub2);line-height:1.6;margin-top:2px}
+.eco-hub{display:flex;align-items:center;gap:10px}
+.eco-hub-b{background:var(--bar-dark);border-top:2px solid var(--gold);color:#fff;padding:18px 20px;text-align:center;width:190px}
+.eco-hub-b strong{display:block;font-family:var(--en);font-size:17px;font-weight:600;letter-spacing:.02em;color:var(--gold-soft)}
+.eco-hub-b span{display:block;font-size:10.5px;line-height:1.7;color:rgba(255,255,255,.86);margin-top:6px}
+.eco-ar{color:var(--gold);font-size:16px;line-height:1}
+.eco-n{margin:0;padding-top:12px;border-top:1px solid var(--line);font-size:11.5px;color:var(--faint);line-height:1.9;text-wrap:pretty}
+@media(max-width:640px){
+  .eco-g{grid-template-columns:1fr}
+}
+@media(max-width:900px){
+  .eco-body{grid-template-columns:1fr;gap:12px}
+  .eco-hub{flex-direction:column;gap:6px}
+  .eco-hub-b{width:100%}
+  .eco-ar{transform:rotate(90deg)}
+}
+@media(max-width:560px){.eco{padding:18px 14px 16px}}
 /* GOAL */
 .goal{border:1px solid var(--line2);border-top:2px solid var(--gold);margin-top:22px}
 .goal-h{background:var(--pale);color:var(--ink);padding:20px 22px}
@@ -355,20 +384,15 @@ section .wrap{padding:0}
 .goal-g b{display:block;font-size:14px;color:var(--ink);margin-bottom:3px}
 .goal-f{background:#fff;border-top:1px solid var(--line);padding:16px 22px;font-size:12.5px;color:var(--sub2);line-height:1.9;text-wrap:pretty}
 .goal-f b{display:block;font-size:14px;color:var(--gold-deep);margin-bottom:3px}
-@media(max-width:1080px){
-  .sols{grid-template-columns:repeat(3,1fr)}
-}
 @media(max-width:900px){
-  .procs,.arch-ar{grid-template-columns:repeat(3,1fr)}
-  .arch-ar span:nth-child(n+4){display:none}
+  .procs,.arch-ar{grid-template-columns:repeat(2,1fr)}
+  .arch-ar span:nth-child(n+3){display:none}
   .stack{grid-template-columns:repeat(3,1fr)}
   .sols{grid-template-columns:repeat(2,1fr)}
   .goal-g{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:560px){
   .arch{padding:18px 14px 16px}
-  .procs,.arch-ar{grid-template-columns:repeat(2,1fr)}
-  .arch-ar span:nth-child(n+3){display:none}
   .sols{grid-template-columns:1fr}
   .stack{grid-template-columns:repeat(2,1fr)}
   .goal-g{grid-template-columns:1fr;padding:18px}
@@ -989,13 +1013,13 @@ footer a{color:var(--faint)}
         <div>
           <h2 class="sec">自社プロダクトを土台に、貴社仕様にカスタマイズ。</h2>
         </div>
-        <p class="sec-lead">計画・調達・生産・物流・販売は、担当も帳票も分かれています。ただし、扱う取引そのものは同じものです。<b style="color:#14181F;">全工程に共通する処理を1つの基盤にまとめ、工程ごとの違いは個別のソリューションで受け止めます。</b>読み取り・照合・判定はAIが担い、承認は人が行う設計です。</p>
+        <p class="sec-lead">計画・調達・輸出入・販売は、担当も帳票も分かれています。ただし、扱う取引そのものは同じものです。<b style="color:#14181F;">全工程に共通する処理を1つの基盤にまとめ、工程ごとの違いは個別のソリューションで受け止めます。</b>読み取り・照合・判定はAIが担い、承認は人が行う設計です。</p>
       </div>
       <div class="arch">
         <div class="arch-lbl"><span>PROCESS ／ 工程</span><i></i></div>
-        <div class="procs"><div class="proc"><div class="proc-b"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18v16H3z"/><path d="M3 10h18"/><path d="M8 3v4M16 3v4"/><path d="M7 14l3 3 4-5"/></svg><span>計画</span></div><div class="proc-c">需要予測・在庫計画</div></div><div class="proc"><div class="proc-b"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg><span>調達</span></div><div class="proc-c">部品・材料メーカー</div></div><div class="proc"><div class="proc-b"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V11l5 3V11l5 3V11l5 3v7z"/><path d="M18 8V3h3v5"/><path d="M3 21h18"/></svg><span>生産</span></div><div class="proc-c">工場</div></div><div class="proc"><div class="proc-b"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 16V6h11v10"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7.5" cy="18" r="1.8"/><circle cx="17.5" cy="18" r="1.8"/></svg><span>輸出入</span></div><div class="proc-c">配送業者・通関</div></div><div class="proc"><div class="proc-b"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l1.6-5h14.8L21 9"/><path d="M4.5 9v11h15V9"/><path d="M9.5 20v-6h5v6"/></svg><span>販売</span></div><div class="proc-c">卸売・小売・顧客</div></div></div>
+        <div class="procs"><div class="proc"><div class="proc-b"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18v16H3z"/><path d="M3 10h18"/><path d="M8 3v4M16 3v4"/><path d="M7 14l3 3 4-5"/></svg><span>計画</span></div><div class="proc-c">需要予測・在庫計画</div></div><div class="proc"><div class="proc-b"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg><span>調達</span></div><div class="proc-c">仕入先・材料メーカー</div></div><div class="proc"><div class="proc-b"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 16V6h11v10"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7.5" cy="18" r="1.8"/><circle cx="17.5" cy="18" r="1.8"/></svg><span>輸出入</span></div><div class="proc-c">配送業者・通関</div></div><div class="proc"><div class="proc-b"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l1.6-5h14.8L21 9"/><path d="M4.5 9v11h15V9"/><path d="M9.5 20v-6h5v6"/></svg><span>販売</span></div><div class="proc-c">卸売・小売・顧客</div></div></div>
 
-        <div class="arch-ar" aria-hidden="true"><span>↓</span><span>↓</span><span>↓</span><span>↓</span><span>↓</span></div>
+        <div class="arch-ar" aria-hidden="true"><span>↓</span><span>↓</span><span>↓</span><span>↓</span></div>
 
         <div class="plat">
           <div class="plat-h">
@@ -1008,10 +1032,10 @@ footer a{color:var(--faint)}
           </div>
         </div>
 
-        <div class="arch-ar" aria-hidden="true"><span>↓</span><span>↓</span><span>↓</span><span>↓</span><span>↓</span></div>
+        <div class="arch-ar" aria-hidden="true"><span>↓</span><span>↓</span><span>↓</span><span>↓</span></div>
 
         <div class="arch-lbl gold"><span>AI SOLUTIONS ／ 工程 × 業界別</span><i></i></div>
-        <div class="sols"><div class="sol"><span class="sol-st">構想中</span><div class="sol-p">工程：計画</div><div class="sol-n">需給・在庫最適化</div><div class="sol-d">需要予測から発注点・安全在庫を算出</div></div><div class="sol"><span class="sol-st">開発中</span><div class="sol-p">工程：調達・購買</div><div class="sol-n">Procurement AI</div><div class="sol-d">見積比較と単価差異の検出</div></div><div class="sol live"><span class="sol-st">提供中</span><div class="sol-p">工程：生産・品質</div><div class="sol-n">ChemOS</div><div class="sol-d">含有物質の解析とPFAS判定</div></div><div class="sol live"><span class="sol-st">提供中</span><div class="sol-p">工程：輸出入・物流</div><div class="sol-n">貿易事務エージェント</div><div class="sol-d">通関申告と原価計算まで自律処理</div></div><div class="sol"><span class="sol-st">開発中</span><div class="sol-p">工程：販売・輸出管理</div><div class="sol-n">Export Control AI</div><div class="sol-d">該非判定を条文引用付きで下書き</div></div></div>
+        <div class="sols"><div class="sol"><span class="sol-st">構想中</span><div class="sol-p">工程：計画</div><div class="sol-n">需給・在庫最適化</div><div class="sol-d">需要予測から発注点・安全在庫を算出</div></div><div class="sol-stack"><div class="sol"><span class="sol-st">開発中</span><div class="sol-p">工程：調達・購買</div><div class="sol-n">Procurement AI</div><div class="sol-d">見積比較と単価差異の検出</div></div><div class="sol live"><span class="sol-st">提供中</span><div class="sol-p">工程：調達・品質規制</div><div class="sol-n">ChemOS</div><div class="sol-d">含有物質の解析とPFAS判定</div></div></div><div class="sol live"><span class="sol-st">提供中</span><div class="sol-p">工程：輸出入・物流</div><div class="sol-n">貿易事務エージェント</div><div class="sol-d">通関申告と原価計算まで自律処理</div></div><div class="sol"><span class="sol-st">開発中</span><div class="sol-p">工程：販売・輸出管理</div><div class="sol-n">Export Control AI</div><div class="sol-d">該非判定を条文引用付きで下書き</div></div></div>
 
         <p class="split-n"><span>役割分担</span>基盤は案件の進行と記録を担い、<b>該非判定や含有物質の該当性といった判断そのものは、専門のエンジンが行います。</b>BorderFlow AI の各ステップから呼び出すことも、個別に導入することもできます。</p>
 
@@ -1023,6 +1047,29 @@ footer a{color:var(--faint)}
       </div>
 
       <p class="dataloop"><span>DATA LOOP</span>工程が違っても、蓄積先は同じデータ基盤です。<b>調達で読み取った品目情報が、規制判定にも通関申告にもそのまま効きます。</b></p>
+
+      <div class="eco">
+        <div class="arch-lbl"><span>CONNECTIONS ／ 外部システム・取引先との接続</span><i></i></div>
+        <div class="eco-body">
+          <div class="eco-side">
+            <p class="eco-h">社内システム</p>
+            <div class="eco-i"><b>基幹・会計システム</b><span>仕訳・債権債務・原価</span></div><div class="eco-i"><b>共有メールボックス</b><span>Microsoft 365 ／ Gmail</span></div><div class="eco-i"><b>既存の在庫・購買システム</b><span>入出庫・発注残</span></div>
+          </div>
+          <div class="eco-hub">
+            <span class="eco-ar l" aria-hidden="true">⇄</span>
+            <div class="eco-hub-b">
+              <strong>BorderFlow AI</strong>
+              <span>案件の記録と進行を一元管理</span>
+            </div>
+            <span class="eco-ar r" aria-hidden="true">⇄</span>
+          </div>
+          <div class="eco-side">
+            <p class="eco-h">社外の相手先・機関</p>
+            <div class="eco-g"><p>金融</p><div class="eco-i"><b>銀行</b><span>L/C開設・決済・為替予約</span></div><div class="eco-i"><b>損害保険会社</b><span>海上保険の付保・求償</span></div><div class="eco-i"><b>信用調査機関</b><span>与信枠・格付の更新</span></div></div><div class="eco-g"><p>物流・通関</p><div class="eco-i"><b>NACCS</b><span>輸出入申告・関税納付</span></div><div class="eco-i"><b>通関業者・乙仲</b><span>申告依頼・許可通知</span></div><div class="eco-i"><b>倉庫事業者</b><span>入出庫・在庫照合</span></div><div class="eco-i"><b>船社・フォワーダー</b><span>B/L・本船動静</span></div></div><div class="eco-g"><p>取引先</p><div class="eco-i"><b>仕入先</b><span>契約・Invoice・船積書類</span></div><div class="eco-i"><b>販売先</b><span>受注・請求・入金</span></div></div>
+          </div>
+        </div>
+        <p class="eco-n">接続方式は貴社の環境に合わせて設計します。既存の基幹システムやメール環境を置き換えず、そのまま繋ぐことを前提とした構成です。</p>
+      </div>
 
       <div class="prods">
         <div class="prod">
