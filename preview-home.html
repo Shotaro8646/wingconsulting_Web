@@ -311,11 +311,11 @@ section .wrap{padding:0}
 .arch-lbl span{font-family:var(--en);font-size:10px;font-weight:600;letter-spacing:.18em;color:var(--ink);white-space:nowrap}
 .arch-lbl.gold span{color:var(--gold-deep)}
 .arch-lbl i{flex:1;height:1px;background:var(--line)}
-.procs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.procs{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
 .proc-b{background:var(--pale);color:var(--ink);border-top:2px solid var(--line2);padding:13px 8px;display:flex;align-items:center;justify-content:center;gap:8px}
-.proc-b span{font-size:14px;font-weight:700;white-space:nowrap}
+.proc-b span{font-size:13.5px;font-weight:700;white-space:nowrap}
 .proc-c{margin-top:6px;font-size:11px;color:var(--faint);text-align:center;line-height:1.6}
-.arch-ar{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;text-align:center;color:var(--gold);font-size:13px;line-height:1}
+.arch-ar{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;text-align:center;color:var(--gold);font-size:13px;line-height:1}
 .plat{background:var(--bar-dark);border-top:2px solid var(--gold);color:#fff;padding:16px 18px}
 .plat-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px}
 .plat-h strong{font-family:var(--en);font-size:19px;font-weight:600;letter-spacing:.02em;color:var(--gold-soft)}
@@ -324,15 +324,18 @@ section .wrap{padding:0}
 .plat-s p{margin:0 0 8px;font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--gold-soft)}
 .stack{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
 .stack i{font-style:normal;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.26);padding:8px 4px;text-align:center;font-size:11px;line-height:1.4}
-.sols{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.sols{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
 .sol{position:relative;border:1px solid var(--line);border-top:2px solid var(--line2);background:#fff;padding:17px 13px 13px}
 .sol.live{border-top-color:var(--gold)}
 .sol-st{position:absolute;top:-9px;right:8px;font-size:10px;font-weight:700;padding:1px 7px;background:#fff;border:1px solid var(--line2);color:var(--sub2);white-space:nowrap}
 .sol.live .sol-st{background:var(--gold-deep);border-color:var(--gold-deep);color:#fff}
 .sol-p{font-size:10px;font-weight:700;color:var(--faint);letter-spacing:.02em}
-.sol-n{margin-top:5px;font-size:14px;font-weight:700;color:var(--ink);line-height:1.4}
+.sol-n{margin-top:5px;font-size:13px;font-weight:700;color:var(--ink);line-height:1.45}
 .sol.live .sol-n{color:var(--gold-deep)}
 .sol-d{margin-top:6px;font-size:11px;color:var(--sub2);line-height:1.75}
+.split-n{margin:0;border-left:2px solid var(--line2);padding:11px 15px;font-size:12.5px;line-height:1.95;color:var(--sub2);text-wrap:pretty}
+.split-n span{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.1em;color:var(--ink);margin-right:12px}
+.split-n b{color:var(--ink)}
 .loop{background:#FBFAF7;border:1px dashed var(--gold);padding:12px 16px;display:flex;flex-wrap:wrap;align-items:center;gap:7px}
 .loop-l{font-family:var(--en);font-size:10px;font-weight:600;letter-spacing:.16em;color:var(--gold-deep);margin-right:6px;white-space:nowrap}
 .loop b{font-size:12px;font-weight:700;background:#fff;border:1px solid var(--line2);padding:6px 11px;white-space:nowrap}
@@ -352,15 +355,20 @@ section .wrap{padding:0}
 .goal-g b{display:block;font-size:14px;color:var(--ink);margin-bottom:3px}
 .goal-f{background:#fff;border-top:1px solid var(--line);padding:16px 22px;font-size:12.5px;color:var(--sub2);line-height:1.9;text-wrap:pretty}
 .goal-f b{display:block;font-size:14px;color:var(--gold-deep);margin-bottom:3px}
+@media(max-width:1080px){
+  .sols{grid-template-columns:repeat(3,1fr)}
+}
 @media(max-width:900px){
-  .procs,.arch-ar{grid-template-columns:repeat(2,1fr)}
-  .arch-ar span:nth-child(n+3){display:none}
+  .procs,.arch-ar{grid-template-columns:repeat(3,1fr)}
+  .arch-ar span:nth-child(n+4){display:none}
   .stack{grid-template-columns:repeat(3,1fr)}
   .sols{grid-template-columns:repeat(2,1fr)}
   .goal-g{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:560px){
   .arch{padding:18px 14px 16px}
+  .procs,.arch-ar{grid-template-columns:repeat(2,1fr)}
+  .arch-ar span:nth-child(n+3){display:none}
   .sols{grid-template-columns:1fr}
   .stack{grid-template-columns:repeat(2,1fr)}
   .goal-g{grid-template-columns:1fr;padding:18px}
@@ -375,6 +383,8 @@ section .wrap{padding:0}
 .prods{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 @media(max-width:860px){.prods{grid-template-columns:1fr}}
 .prod.dev{border-top-color:var(--line2);background:#FDFDFB}
+.prod .badge.road{background:transparent;border:1px solid var(--line2);color:var(--sub2)}
+.prod.road{grid-column:1/-1}
 .prod .badge{display:inline-block;margin-left:8px;padding:2px 8px;background:var(--gold-deep);color:#fff;font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.04em;vertical-align:middle}
 .prod.dev .free{color:var(--sub2);border-color:var(--line2)}
 .prod .cust{margin:0 0 14px;font-size:12px;color:var(--gold-deep);line-height:1.9;border-left:2px solid var(--gold);padding-left:12px}
@@ -979,13 +989,13 @@ footer a{color:var(--faint)}
         <div>
           <h2 class="sec">自社プロダクトを土台に、貴社仕様にカスタマイズ。</h2>
         </div>
-        <p class="sec-lead">調達・生産・物流・販売は、担当も帳票も分かれています。ただし、扱う取引そのものは同じものです。<b style="color:#14181F;">全工程に共通する処理を1つの基盤にまとめ、工程ごとの違いは個別のソリューションで受け止めます。</b>読み取り・照合・判定はAIが担い、承認は人が行う設計です。</p>
+        <p class="sec-lead">計画・調達・生産・物流・販売は、担当も帳票も分かれています。ただし、扱う取引そのものは同じものです。<b style="color:#14181F;">全工程に共通する処理を1つの基盤にまとめ、工程ごとの違いは個別のソリューションで受け止めます。</b>読み取り・照合・判定はAIが担い、承認は人が行う設計です。</p>
       </div>
       <div class="arch">
         <div class="arch-lbl"><span>PROCESS ／ 工程</span><i></i></div>
-        <div class="procs"><div class="proc"><div class="proc-b"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg><span>調達</span></div><div class="proc-c">部品・材料メーカー</div></div><div class="proc"><div class="proc-b"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V11l5 3V11l5 3V11l5 3v7z"/><path d="M18 8V3h3v5"/><path d="M3 21h18"/></svg><span>生産</span></div><div class="proc-c">工場</div></div><div class="proc"><div class="proc-b"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 16V6h11v10"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7.5" cy="18" r="1.8"/><circle cx="17.5" cy="18" r="1.8"/></svg><span>物流</span></div><div class="proc-c">配送業者・通関</div></div><div class="proc"><div class="proc-b"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l1.6-5h14.8L21 9"/><path d="M4.5 9v11h15V9"/><path d="M9.5 20v-6h5v6"/></svg><span>販売</span></div><div class="proc-c">卸売・小売・顧客</div></div></div>
+        <div class="procs"><div class="proc"><div class="proc-b"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18v16H3z"/><path d="M3 10h18"/><path d="M8 3v4M16 3v4"/><path d="M7 14l3 3 4-5"/></svg><span>計画</span></div><div class="proc-c">需要予測・在庫計画</div></div><div class="proc"><div class="proc-b"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg><span>調達</span></div><div class="proc-c">部品・材料メーカー</div></div><div class="proc"><div class="proc-b"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V11l5 3V11l5 3V11l5 3v7z"/><path d="M18 8V3h3v5"/><path d="M3 21h18"/></svg><span>生産</span></div><div class="proc-c">工場</div></div><div class="proc"><div class="proc-b"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 16V6h11v10"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7.5" cy="18" r="1.8"/><circle cx="17.5" cy="18" r="1.8"/></svg><span>輸出入</span></div><div class="proc-c">配送業者・通関</div></div><div class="proc"><div class="proc-b"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l1.6-5h14.8L21 9"/><path d="M4.5 9v11h15V9"/><path d="M9.5 20v-6h5v6"/></svg><span>販売</span></div><div class="proc-c">卸売・小売・顧客</div></div></div>
 
-        <div class="arch-ar" aria-hidden="true"><span>↓</span><span>↓</span><span>↓</span><span>↓</span></div>
+        <div class="arch-ar" aria-hidden="true"><span>↓</span><span>↓</span><span>↓</span><span>↓</span><span>↓</span></div>
 
         <div class="plat">
           <div class="plat-h">
@@ -998,10 +1008,12 @@ footer a{color:var(--faint)}
           </div>
         </div>
 
-        <div class="arch-ar" aria-hidden="true"><span>↓</span><span>↓</span><span>↓</span><span>↓</span></div>
+        <div class="arch-ar" aria-hidden="true"><span>↓</span><span>↓</span><span>↓</span><span>↓</span><span>↓</span></div>
 
         <div class="arch-lbl gold"><span>AI SOLUTIONS ／ 工程 × 業界別</span><i></i></div>
-        <div class="sols"><div class="sol"><span class="sol-st">開発中</span><div class="sol-p">工程：調達・購買</div><div class="sol-n">Procurement AI</div><div class="sol-d">見積比較と単価差異の検出</div></div><div class="sol live"><span class="sol-st">提供中</span><div class="sol-p">工程：生産・品質</div><div class="sol-n">ChemOS</div><div class="sol-d">含有物質の解析とPFAS判定</div></div><div class="sol live"><span class="sol-st">提供中</span><div class="sol-p">工程：物流・輸出入</div><div class="sol-n">貿易事務エージェント</div><div class="sol-d">通関申告と原価計算まで自律処理</div></div><div class="sol"><span class="sol-st">開発中</span><div class="sol-p">工程：販売・輸出管理</div><div class="sol-n">Export Control AI</div><div class="sol-d">該非判定を条文引用付きで下書き</div></div></div>
+        <div class="sols"><div class="sol"><span class="sol-st">構想中</span><div class="sol-p">工程：計画</div><div class="sol-n">需給・在庫最適化</div><div class="sol-d">需要予測から発注点・安全在庫を算出</div></div><div class="sol"><span class="sol-st">開発中</span><div class="sol-p">工程：調達・購買</div><div class="sol-n">Procurement AI</div><div class="sol-d">見積比較と単価差異の検出</div></div><div class="sol live"><span class="sol-st">提供中</span><div class="sol-p">工程：生産・品質</div><div class="sol-n">ChemOS</div><div class="sol-d">含有物質の解析とPFAS判定</div></div><div class="sol live"><span class="sol-st">提供中</span><div class="sol-p">工程：輸出入・物流</div><div class="sol-n">貿易事務エージェント</div><div class="sol-d">通関申告と原価計算まで自律処理</div></div><div class="sol"><span class="sol-st">開発中</span><div class="sol-p">工程：販売・輸出管理</div><div class="sol-n">Export Control AI</div><div class="sol-d">該非判定を条文引用付きで下書き</div></div></div>
+
+        <p class="split-n"><span>役割分担</span>基盤は案件の進行と記録を担い、<b>該非判定や含有物質の該当性といった判断そのものは、専門のエンジンが行います。</b>BorderFlow AI の各ステップから呼び出すことも、個別に導入することもできます。</p>
 
         <div class="loop">
           <span class="loop-l">AGENT LOOP</span>
@@ -1048,6 +1060,14 @@ footer a{color:var(--faint)}
           <p class="cust">大規模な調達基盤の導入が過剰な中堅企業向けに、既存の購買フローを活かしたまま導入できる設計です。</p>
           <span class="free">2026年内リリース予定・先行導入企業を募集中</span><br>
           <a class="go" href="#contact">導入について相談する →</a>
+        </div>
+        <div class="prod dev road">
+          <p class="tag-en" style="margin-bottom:0;">DEMAND &amp; INVENTORY AI<span class="badge road">ロードマップ</span></p>
+          <h3>需給・在庫最適化</h3>
+          <p class="sub">出荷実績と受注残をつなぐだけ</p>
+          <p>需要予測をもとに、品目ごとの発注点と安全在庫を算出。リードタイムの変動と欠品リスクを織り込み、過剰在庫と欠品のどちらに寄っているかを可視化します。貿易事務エージェントが持つ入出庫・洋上在庫のデータをそのまま使うため、別途のデータ整備は不要です。</p>
+          <p class="cust">構想段階です。対象品目・拠点構成・需要変動の特性について、ご一緒に検討いただける企業を探しています。</p>
+          <a class="go" href="#contact">構想段階から相談する →</a>
         </div>
       </div>
 
