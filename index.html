@@ -364,51 +364,47 @@ footer a{color:var(--faint)}
 .vs-trad{font-size:13px;color:var(--sub2);line-height:1.9}
 .vs-wing{background:var(--ink);color:#fff;font-size:13px;font-weight:500;line-height:1.9}
 .vs-wing em{font-style:normal;color:var(--gold-soft);font-weight:700}
-.fde2{display:grid;grid-template-columns:1fr auto 1fr;gap:0;align-items:stretch;margin-top:8px}
-@media(max-width:900px){.fde2{grid-template-columns:1fr}}
-.fde2-arrow{display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--gold);padding:0 18px}
-@media(max-width:900px){.fde2-arrow{transform:rotate(90deg);padding:14px 0}}
-.fde2-panel{border:1px solid var(--line);background:#fff;padding:26px 26px 22px;display:flex;flex-direction:column}
-.fde2-panel.win{border-color:var(--ink)}
-.fde2-head{margin:0 0 20px;font-weight:700;font-size:14px;color:var(--sub2)}
-.fde2-head span{display:block;font-size:11px;font-weight:500;color:var(--faint);margin-top:2px}
-.fde2-head.gold{color:var(--ink)}
-.fde2-head.gold span{color:var(--gold-deep)}
-/* left: dispersed circles */
-.fde2-circles{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:26px 22px;flex:1;padding:6px 10px}
-.fde2-circles::before{content:'';position:absolute;left:8%;right:8%;top:50%;border-top:1px dashed #C9CDD4}
-.fde2-circles::after{content:'';position:absolute;top:4%;bottom:4%;left:50%;border-left:1px dashed #C9CDD4}
-.fc{position:relative;z-index:1;aspect-ratio:1;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;max-width:190px;min-width:0;margin:0 auto;width:100%;padding:10px}
-@media(max-width:560px){.fc{aspect-ratio:auto;border-radius:14px;padding:18px 12px}.fde2-circles::before,.fde2-circles::after{display:none}}
-.fc b{font-size:12px;color:var(--ink);line-height:1.55}
-.fc small{font-weight:400;font-size:11px;color:var(--sub2)}
-.fc .pill{background:var(--ink);color:#fff;font-size:11px;font-weight:700;padding:4px 12px;border-radius:999px;letter-spacing:.04em}
-.t1{background:rgba(42,50,65,.09)}
-.t2{background:rgba(169,138,75,.16)}
-.t3{background:rgba(169,138,75,.08)}
-.t4{background:rgba(42,50,65,.15)}
-.fde2-x{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:26px;color:#B9BEC7;font-weight:700;pointer-events:none;z-index:2}
-.fde2-x::before{content:'';position:absolute;width:52px;height:52px;background:#fff;border-radius:50%;z-index:-1}
-/* right: venn */
-.fde2-venn{position:relative;flex:1;aspect-ratio:1.12;max-width:400px;margin:0 auto;width:100%}
-.vn{position:absolute;width:57%;aspect-ratio:1;border-radius:50%;display:flex;padding:11%}
-.vn b{font-size:12px;color:var(--ink);line-height:1.55;font-weight:700}
-.vn small{font-weight:400;font-size:11px;color:var(--sub2)}
-.v1{left:0;top:0;align-items:flex-start;justify-content:flex-start;text-align:left}
-.v2{right:0;top:0;align-items:flex-start;justify-content:flex-end;text-align:right}
-.v3{left:0;bottom:0;align-items:flex-end;justify-content:flex-start;text-align:left}
-.v4{right:0;bottom:0;align-items:flex-end;justify-content:flex-end;text-align:right}
-.vn-core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:33%;aspect-ratio:1;border-radius:50%;background:#fff;border:2px solid var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(20,24,31,.15);z-index:2}
-.vn-core b{font-family:var(--en);font-weight:600;font-size:clamp(15px,1.6vw,20px);letter-spacing:.1em;color:var(--ink)}
-.vn-core span{font-family:var(--en);font-size:11px;color:var(--sub2);text-align:center;line-height:1.5;margin-top:3px;letter-spacing:.04em}
-.fde2-note{margin:16px 0 0;font-size:12px;color:var(--faint);line-height:1.9}
-.win .fde2-note{color:var(--gold-deep)}
-.fde2-result{margin-top:12px;border-top:1px solid var(--line);padding-top:12px;font-size:13px;color:var(--sub2)}
-.fde2-result b{color:var(--ink);font-size:14px;margin:0 2px}
-.fde2-result span{display:block;font-size:11px;color:var(--faint);margin-top:3px}
-.fde2-result.gold b{color:var(--gold-deep)}
-.fde2-src{margin:26px 0 0;font-size:12px;color:var(--sub2);line-height:2;max-width:880px;text-wrap:pretty}
-.fde2-src span{display:block;font-size:11px;color:var(--faint);margin-top:4px}
+.wall{display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch;margin-top:8px}
+@media(max-width:900px){.wall{grid-template-columns:1fr}}
+.wall-ar{display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--gold);padding:0 18px}
+@media(max-width:900px){.wall-ar{transform:rotate(90deg);padding:14px 0}}
+.wall-p{border:1px solid var(--line);background:#fff;padding:24px 24px 20px;display:flex;flex-direction:column}
+.wall-p.win{border-color:var(--ink)}
+.wall-h{margin:0 0 18px;font-family:var(--en);font-weight:600;font-size:12px;letter-spacing:.2em;color:var(--faint)}
+.wall-h span{display:block;font-family:var(--sans);font-size:14px;font-weight:700;color:var(--sub2);letter-spacing:.02em;margin-top:4px}
+.wall-h.gold{color:var(--gold-deep)}
+.wall-h.gold span{color:var(--ink)}
+.wall-body{flex:1}
+.cbox{border:1px solid var(--line);background:#FBFAF7;padding:14px}
+.cbox.inside{border-color:rgba(169,138,75,.5);background:#FDFBF6;padding:16px 14px}
+.cbox-t{margin:0 0 10px;font-size:11px;letter-spacing:.06em;color:var(--faint);text-align:center;font-weight:700}
+.cbox-t small{display:block;font-weight:400;font-size:11px;color:var(--gold-deep);margin-top:2px}
+.cbox-r{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cbox-r>span{border:1px solid var(--line);background:#fff;padding:10px 8px;text-align:center;font-size:13px;font-weight:700;color:var(--ink)}
+.cbox-r>span small{display:block;font-weight:400;font-size:11px;color:var(--sub2);margin-top:4px;line-height:1.6}
+.barrier{position:relative;margin:0;padding:26px 0;display:flex;align-items:center;justify-content:center}
+.barrier::before{content:'';position:absolute;left:0;right:0;top:50%;border-top:3px double #C9CDD4}
+.bar-l{position:relative;background:#fff;padding:0 12px;font-size:11px;font-weight:700;letter-spacing:.14em;color:#8A909B}
+.ex{position:absolute;font-size:11px;color:var(--faint);white-space:nowrap}
+.ex.out{left:2px;top:2px}
+.ex.in{right:2px;bottom:2px}
+.vend{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.vend>span{border:1px solid var(--line);background:#fff;padding:9px 6px;text-align:center;font-size:12px;color:var(--sub2)}
+.fde-n{margin:14px auto 12px;width:74px;height:74px;border-radius:50%;background:var(--ink);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(20,24,31,.22)}
+.fde-n b{font-family:var(--en);font-weight:600;font-size:17px;letter-spacing:.14em;color:var(--gold-soft)}
+.fde-role{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+@media(max-width:560px){.fde-role{grid-template-columns:1fr}}
+.fde-role>span{border-top:2px solid var(--gold-soft);background:#fff;padding:10px 8px;font-size:11px;color:var(--sub2);line-height:1.7;text-align:center}
+.fde-role>span b{display:block;font-size:12px;color:var(--ink);margin-bottom:3px}
+.wall-n{margin:16px 0 0;font-size:12px;color:var(--faint);line-height:1.9}
+.wall-n.gold{color:var(--gold-deep)}
+.wall-sp{margin-top:12px;padding:10px 12px;background:#FBFAF7;border:1px solid var(--line);font-size:11px;color:var(--faint);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.wall-sp b{font-family:var(--en);font-size:15px;color:var(--ink)}
+.wall-sp b.g{color:var(--gold-deep)}
+.wall-r{margin-top:12px;border-top:1px solid var(--line);padding-top:12px;font-size:13px;color:var(--sub2)}
+.wall-r b{color:var(--ink);font-size:14px;margin:0 2px}
+.wall-r span{display:block;font-size:11px;color:var(--faint);margin-top:3px}
+.wall-r.gold b{color:var(--gold-deep)}
 @media(max-width:900px){.navlinks a:not(.btn-dark){display:none}}
 
 /* ── ヒーロー：モバイル最適化 ── */
@@ -572,36 +568,55 @@ footer a{color:var(--faint)}
       <div class="sec-head">
         <div>
           <p class="kicker">FORWARD DEPLOYED ENGINEER</p>
-          <h2 class="sec"><span style="display:inline-block;">分散していた4つの能力を、</span><br><span style="display:inline-block;">「1人」に統合する。</span></h2>
+          <h2 class="sec"><span style="display:inline-block;">壁の外から発注せず、</span><br><span style="display:inline-block;">壁の中に入って解く。</span></h2>
         </div>
-        <p class="sec-lead">AI導入には「AI基盤」「ドメイン知識」「データサイエンス」「AIアプリ開発」の4つの能力が必要です。従来この4能力は、コンサル・開発者・製品ベンダー・現場部門へと主体ごとに分散し、1つの文脈に統合されないまま実装が途切れてきました。FDE（Forward Deployed Engineer）は、<b style="color:#14181F;">同じ4能力を1人（1チーム）に束ね、課題発見から定着までを一貫して担う</b>存在です。</p>
+        <p class="sec-lead">FDE（Forward Deployed Engineer）は、貴社の現場のシステムと業務プロセスを熟知したうえで、経営層との対話から解くべき経営課題を捉え、そのままAI開発まで高速に進める役割です。<b style="color:#14181F;">解くのは経営課題と現場課題であり、AI・ITはその手段にすぎません。</b>壁の中に入るからこそ、課題の特定から成果までが一本につながります。</p>
       </div>
 
-      <div class="fde2">
-        <div class="fde2-panel">
-          <p class="fde2-head">従来のAI導入<span>4つの能力が、主体ごとにバラバラ</span></p>
-          <div class="fde2-circles">
-            <div class="fc t1"><b>AI基盤・<br>クラウド</b><span class="pill">担当：製品ベンダー</span></div>
-            <div class="fc t2"><b>ドメイン知識<small>（業務・業界）</small></b><span class="pill">担当：現場部門</span></div>
-            <div class="fc t3"><b>フルスタック<br>データサイエンス</b><span class="pill">担当：コンサル</span></div>
-            <div class="fc t4"><b>AIアプリ<br>開発</b><span class="pill">担当：開発者</span></div>
-            <div class="fde2-x" aria-hidden="true">✕</div>
+      <div class="wall">
+        <!-- BEFORE -->
+        <div class="wall-p">
+          <p class="wall-h">BEFORE<span>壁の外にいる</span></p>
+          <div class="wall-body">
+            <div class="cbox">
+              <p class="cbox-t">クライアント企業</p>
+              <div class="cbox-r"><span>経営層</span><span>現場部門</span></div>
+            </div>
+            <div class="barrier">
+              <span class="ex out">RFP・仕様書 ↓</span>
+              <span class="bar-l">組織の壁</span>
+              <span class="ex in">↑ 納品物</span>
+            </div>
+            <div class="vend"><span>コンサル</span><span>開発会社</span><span>製品ベンダー</span><span>SIer</span></div>
           </div>
-          <p class="fde2-note">同じ4能力が別々の主体に分散 ── 1つの文脈に統合されず、実装が途切れる</p>
-          <div class="fde2-result">結果：<b>約95%のAIパイロットが失敗</b><span>MIT "State of AI in Business"（2025）</span></div>
+          <p class="wall-n">納品物が目的化 ── 経営課題は誰も引き取らない</p>
+          <div class="wall-sp"><span>動くものが出るまで</span><b>月〜年</b><span>直列・途中で修正できない</span></div>
+          <div class="wall-r">結果：<b>約95%のAIパイロットが失敗</b><span>MIT "State of AI in Business"（2025）</span></div>
         </div>
-        <div class="fde2-arrow" aria-hidden="true">→</div>
-        <div class="fde2-panel win">
-          <p class="fde2-head gold">Wing（FDE型）<span>同じ4つの能力を、1人に統合</span></p>
-          <div class="fde2-venn">
-            <div class="vn v1 t1"><b>AI基盤・<br>クラウド</b></div>
-            <div class="vn v2 t2"><b>ドメイン知識<br><small>（業務・業界）</small></b></div>
-            <div class="vn v3 t3"><b>フルスタック<br>データサイエンス</b></div>
-            <div class="vn v4 t4"><b>AIアプリ<br>開発</b></div>
-            <div class="vn-core"><b>FDE</b><span>Forward Deployed<br>Engineer</span></div>
+
+        <div class="wall-ar" aria-hidden="true">→</div>
+
+        <!-- AFTER -->
+        <div class="wall-p win">
+          <p class="wall-h gold">AFTER<span>壁の中にいる（Wing）</span></p>
+          <div class="wall-body">
+            <div class="cbox inside">
+              <p class="cbox-t">クライアント企業<small>同じ場に入り込む</small></p>
+              <div class="cbox-r">
+                <span>経営層<small>経営課題（KPI・収益）</small></span>
+                <span>現場部門<small>現場課題（業務実態）</small></span>
+              </div>
+              <div class="fde-n"><b>FDE</b></div>
+              <div class="fde-role">
+                <span><b>経営課題を特定</b>収益・KPIの論点へ</span>
+                <span><b>現場実態で設計</b>業務・人・データ</span>
+                <span><b>AI・ITで成果化</b>使われる状態まで</span>
+              </div>
+            </div>
           </div>
-          <p class="fde2-note">＋ 高いコミュニケーション能力 ── 経営と現場の言葉を翻訳なしで往復し、運用ルールまで落とし込む</p>
-          <div class="fde2-result gold">結果：<b>「使われるAI」</b><span>ROIの回収と、模倣されない強み（Moat）の構築</span></div>
+          <p class="wall-n gold">解くのは経営・現場の課題 ── AI・ITはあくまで手段</p>
+          <div class="wall-sp"><span>動くものが出るまで</span><b class="g">日〜週</b><span>反復・その場で修正</span></div>
+          <div class="wall-r gold">結果：<b>「使われるAI」</b><span>ROIの回収と、模倣されない強み（Moat）の構築</span></div>
         </div>
       </div>
     </div>
