@@ -27,30 +27,32 @@
   <meta property="og:locale" content="ja_JP">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --navy: #0F2342;
-      --navy-mid: #1a3660;
-      --gold: #B8923A;
-      --gold-light: #D4AF6A;
-      --gold-pale: #f5ead4;
-      --ink: #1C1917;
-      --ink-mid: #6B6560;
-      --bg: #FAFAF8;
-      --card-border: #E2E0DA;
-      --card-hover: #F3F1EB;
-      --selected-bg: #EBF0F8;
-      --selected-border: #0F2342;
+      --navy: #14181F;
+      --navy-mid: #2A3241;
+      --gold: #A98A4B;
+      --gold-deep: #8A6E33;
+      --gold-light: #B8A882;
+      --gold-pale: #F1EEE7;
+      --ink: #14181F;
+      --ink-mid: #5C6470;
+      --bg: #FFFFFF;
+      --card-border: #E8E5DE;
+      --card-hover: #FBFAF7;
+      --selected-bg: #FBFAF7;
+      --selected-border: #A98A4B;
       --white: #ffffff;
-      --red: #C0392B;
-      --amber: #D4860B;
-      --green: #2E7D57;
-      --radius: 10px;
-      --shadow: 0 2px 12px rgba(15,35,66,0.08);
-      --shadow-md: 0 4px 24px rgba(15,35,66,0.12);
+      --red: #A2493C;
+      --amber: #A07D2E;
+      --line2: #D8D3C8;
+      --disp: "Yu Gothic Medium","YuGothic","游ゴシック Medium","Yu Gothic","Noto Sans JP",sans-serif;
+      --radius: 2px;
+      --shadow: none;
+      --shadow-md: none;
     }
 
     html { scroll-behavior: smooth; }
@@ -65,16 +67,16 @@
 
     /* NAV */
     nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
+      position: sticky;
+      top: 0;
       z-index: 100;
-      background: var(--navy);
-      height: 56px;
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--card-border);
+      height: 72px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 0 24px;
-      box-shadow: 0 1px 8px rgba(0,0,0,0.25);
     }
 
     .nav-logo {
@@ -84,113 +86,98 @@
       text-decoration: none;
     }
 
-    .nav-logo-mark {
-      width: 32px;
-      height: 32px;
-      background: var(--gold);
-      border-radius: 6px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 14px;
-      color: var(--white);
-      letter-spacing: -0.5px;
-    }
-
-    .nav-logo-text {
-      color: var(--white);
-      font-size: 15px;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-    }
+    .nav-logo img { height: 46px; width: auto; display: block; }
 
     .nav-back {
-      color: var(--gold-light);
+      color: var(--ink-mid);
       text-decoration: none;
       font-size: 13px;
       font-weight: 500;
       display: flex;
       align-items: center;
       gap: 6px;
+      min-height: 44px;
+      padding: 0 4px;
       transition: color 0.2s;
     }
 
-    .nav-back:hover { color: var(--white); }
+    .nav-back:hover { color: var(--gold-deep); }
 
     /* HERO */
     .hero {
-      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
-      padding: 120px 24px 64px;
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--card-border);
+      padding: 62px 24px 54px;
       text-align: center;
       position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse at 70% 30%, rgba(184,146,58,0.12) 0%, transparent 60%);
-      pointer-events: none;
     }
 
     .hero-badge {
       display: inline-block;
-      background: rgba(184,146,58,0.18);
-      border: 1px solid rgba(184,146,58,0.4);
-      color: var(--gold-light);
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 4px 14px;
-      border-radius: 20px;
-      margin-bottom: 20px;
+      font-family: 'Outfit', sans-serif;
+      color: var(--gold-deep);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      padding: 0 0 12px;
+      margin-bottom: 14px;
+      border-bottom: 1px solid var(--gold);
     }
 
     .hero h1 {
-      color: var(--white);
-      font-size: clamp(26px, 5vw, 38px);
-      font-weight: 700;
-      line-height: 1.3;
-      margin-bottom: 16px;
-      letter-spacing: -0.01em;
+      font-family: var(--disp);
+      color: var(--ink);
+      font-size: clamp(23px, 4.2vw, 36px);
+      font-weight: 500;
+      line-height: 1.48;
+      margin-bottom: 18px;
+      letter-spacing: 0.01em;
+      text-wrap: balance;
     }
 
-    .hero h1 span {
-      color: var(--gold-light);
-    }
+    .hero h1 span { color: var(--gold-deep); }
 
     .hero p {
-      color: rgba(255,255,255,0.72);
-      font-size: 15px;
-      max-width: 520px;
-      margin: 0 auto 32px;
-      line-height: 1.8;
+      color: var(--ink-mid);
+      font-size: 14px;
+      max-width: 600px;
+      margin: 0 auto 30px;
+      line-height: 1.95;
+      text-wrap: pretty;
     }
 
     .hero-stats {
       display: flex;
       justify-content: center;
-      gap: 32px;
+      gap: 0;
       flex-wrap: wrap;
+      max-width: 420px;
+      margin: 0 auto;
+      border-top: 1px solid var(--card-border);
     }
 
     .hero-stat {
       text-align: center;
+      flex: 1;
+      padding: 16px 8px 0;
+      border-right: 1px solid var(--card-border);
     }
+
+    .hero-stat:last-child { border-right: none; }
 
     .hero-stat strong {
       display: block;
-      color: var(--gold-light);
-      font-size: 22px;
-      font-weight: 700;
+      font-family: 'Outfit', sans-serif;
+      color: var(--ink);
+      font-size: 21px;
+      font-weight: 500;
+      line-height: 1.2;
     }
 
     .hero-stat span {
-      color: rgba(255,255,255,0.55);
-      font-size: 12px;
+      color: var(--ink-mid);
+      font-size: 11px;
+      letter-spacing: .04em;
     }
 
     /* MAIN CONTAINER */
@@ -220,10 +207,10 @@
     }
 
     .step-dot {
-      width: 36px;
-      height: 36px;
+      width: 34px;
+      height: 34px;
       border-radius: 50%;
-      border: 2px solid var(--card-border);
+      border: 1px solid var(--card-border);
       background: var(--white);
       display: flex;
       align-items: center;
@@ -272,7 +259,7 @@
       width: 80px;
     }
 
-    .step-label.active { color: var(--navy); font-weight: 600; }
+    .step-label.active { color: var(--ink); font-weight: 700; }
 
     /* FORM SECTIONS */
     .form-step {
@@ -288,10 +275,12 @@
     }
 
     .section-title {
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 6px;
+      font-family: var(--disp);
+      font-size: clamp(20px, 2.4vw, 25px);
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 8px;
+      letter-spacing: .01em;
     }
 
     .section-subtitle {
@@ -307,7 +296,7 @@
     .field-label {
       font-size: 13px;
       font-weight: 700;
-      color: var(--navy);
+      color: var(--ink);
       margin-bottom: 10px;
       display: flex;
       align-items: center;
@@ -315,12 +304,14 @@
     }
 
     .field-label .req {
-      font-size: 11px;
-      color: var(--white);
-      background: var(--gold);
+      font-size: 10px;
+      color: var(--gold-deep);
+      background: transparent;
+      border: 1px solid var(--gold-light);
       padding: 1px 6px;
-      border-radius: 3px;
+      border-radius: 0;
       font-weight: 600;
+      letter-spacing: .06em;
     }
 
     /* RADIO CARDS */
@@ -354,7 +345,7 @@
       flex-direction: column;
       gap: 4px;
       padding: 12px 16px;
-      border: 1.5px solid var(--card-border);
+      border: 1px solid var(--card-border);
       border-radius: var(--radius);
       cursor: pointer;
       background: var(--white);
@@ -363,14 +354,14 @@
     }
 
     .radio-card label:hover {
-      border-color: var(--navy);
+      border-color: var(--gold);
       background: var(--card-hover);
     }
 
     .radio-card input:checked + label {
-      border-color: var(--navy);
+      border-color: var(--gold);
       background: var(--selected-bg);
-      box-shadow: 0 0 0 1px var(--navy);
+      box-shadow: inset 3px 0 0 var(--gold);
     }
 
     .radio-card .card-main {
@@ -386,7 +377,8 @@
     }
 
     .radio-card input:checked + label .card-main {
-      color: var(--navy);
+      color: var(--ink);
+      font-weight: 700;
     }
 
     /* CHECKBOX CARDS */
@@ -423,14 +415,14 @@
     }
 
     .checkbox-card label:hover {
-      border-color: var(--navy);
+      border-color: var(--gold);
       background: var(--card-hover);
     }
 
     .checkbox-card input:checked + label {
       border-color: var(--gold);
       background: var(--gold-pale);
-      box-shadow: 0 0 0 1px var(--gold);
+      box-shadow: inset 3px 0 0 var(--gold);
       color: var(--ink);
     }
 
@@ -489,26 +481,24 @@
     }
 
     .btn-primary {
-      background: var(--gold);
+      background: var(--ink);
       color: var(--white);
-      box-shadow: 0 2px 8px rgba(184,146,58,0.35);
+      letter-spacing: .03em;
     }
 
     .btn-primary:hover {
-      background: #a07d2e;
-      box-shadow: 0 4px 16px rgba(184,146,58,0.45);
-      transform: translateY(-1px);
+      background: var(--navy-mid);
     }
 
     .btn-secondary {
       background: transparent;
       color: var(--ink-mid);
-      border: 1.5px solid var(--card-border);
+      border: 1px solid var(--line2);
     }
 
     .btn-secondary:hover {
-      border-color: var(--navy);
-      color: var(--navy);
+      border-color: var(--ink);
+      color: var(--ink);
     }
 
     .btn-navy {
@@ -531,7 +521,7 @@
       margin-top: 8px;
       padding: 8px 12px;
       background: rgba(192,57,43,0.06);
-      border-radius: 6px;
+      border-radius: 0;
       border-left: 3px solid var(--red);
     }
 
@@ -551,10 +541,12 @@
     }
 
     .results-header h2 {
-      font-size: 26px;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 8px;
+      font-family: var(--disp);
+      font-size: clamp(22px, 2.6vw, 29px);
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 10px;
+      letter-spacing: .01em;
     }
 
     .results-header p {
@@ -575,10 +567,9 @@
 
     .metric-card {
       background: var(--white);
-      border: 1.5px solid var(--card-border);
-      border-radius: var(--radius);
-      padding: 20px;
-      box-shadow: var(--shadow);
+      border: 1px solid var(--card-border);
+      border-top: 2px solid var(--gold);
+      padding: 22px 20px;
     }
 
     .metric-card.full-width {
@@ -595,9 +586,10 @@
     }
 
     .metric-value {
-      font-size: 28px;
-      font-weight: 700;
-      color: var(--navy);
+      font-family: 'Outfit', sans-serif;
+      font-size: 32px;
+      font-weight: 500;
+      color: var(--ink);
       line-height: 1.1;
     }
 
@@ -619,9 +611,9 @@
     }
 
     .gauge-track {
-      height: 10px;
-      background: var(--card-border);
-      border-radius: 5px;
+      height: 8px;
+      background: var(--gold-pale);
+      border-radius: 0;
       overflow: hidden;
       position: relative;
       margin-bottom: 6px;
@@ -629,13 +621,13 @@
 
     .gauge-fill {
       height: 100%;
-      border-radius: 5px;
+      border-radius: 0;
       transition: width 1s ease;
     }
 
     .gauge-fill.red { background: var(--red); }
     .gauge-fill.amber { background: var(--amber); }
-    .gauge-fill.green { background: var(--green); }
+    .gauge-fill.green { background: var(--gold); }
 
     .gauge-markers {
       display: flex;
@@ -666,9 +658,9 @@
     }
 
     .maturity-track {
-      height: 14px;
-      background: linear-gradient(to right, #e8f4ea, #2E7D57);
-      border-radius: 7px;
+      height: 12px;
+      background: linear-gradient(to right, #F1EEE7, #A98A4B);
+      border-radius: 0;
       position: relative;
       margin-bottom: 8px;
     }
@@ -677,23 +669,23 @@
       position: absolute;
       top: 50%;
       transform: translate(-50%, -50%);
-      width: 20px;
-      height: 20px;
-      background: var(--navy);
+      width: 18px;
+      height: 18px;
+      background: var(--ink);
       border: 2px solid var(--white);
       border-radius: 50%;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+      box-shadow: 0 0 0 1px var(--ink);
       transition: left 1s ease;
     }
 
     .maturity-level {
       display: inline-block;
-      background: var(--navy);
+      background: var(--ink);
       color: var(--white);
       font-size: 12px;
       font-weight: 600;
-      padding: 3px 10px;
-      border-radius: 12px;
+      padding: 4px 12px;
+      border-radius: 0;
       margin-top: 4px;
     }
 
@@ -720,9 +712,9 @@
 
     /* PATTERN CARD */
     .pattern-name {
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 700;
-      color: var(--navy);
+      color: var(--ink);
       margin-bottom: 6px;
     }
 
@@ -735,17 +727,16 @@
     /* RECOMMENDATIONS */
     .reco-section {
       background: var(--white);
-      border: 1.5px solid var(--card-border);
-      border-radius: var(--radius);
-      padding: 24px;
+      border: 1px solid var(--card-border);
+      border-top: 2px solid var(--gold);
+      padding: 26px 24px;
       margin-bottom: 24px;
-      box-shadow: var(--shadow);
     }
 
     .reco-title {
       font-size: 16px;
       font-weight: 700;
-      color: var(--navy);
+      color: var(--ink);
       margin-bottom: 16px;
       display: flex;
       align-items: center;
@@ -755,10 +746,9 @@
     .reco-title::before {
       content: '';
       display: block;
-      width: 4px;
-      height: 18px;
+      width: 3px;
+      height: 17px;
       background: var(--gold);
-      border-radius: 2px;
     }
 
     .reco-list {
@@ -781,12 +771,13 @@
       background: var(--gold-pale);
       border: 1px solid var(--gold-light);
       border-radius: 50%;
+      font-family: 'Outfit', sans-serif;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 11px;
       font-weight: 700;
-      color: var(--gold);
+      color: var(--gold-deep);
       margin-top: 2px;
     }
 
@@ -799,16 +790,16 @@
     /* FOOTER CTA */
     .footer-cta {
       background: var(--navy);
-      border-radius: 14px;
-      padding: 36px 32px;
+      padding: 38px 32px;
       text-align: center;
       margin-bottom: 24px;
     }
 
     .footer-cta h3 {
+      font-family: var(--disp);
       color: var(--white);
-      font-size: 18px;
-      font-weight: 700;
+      font-size: clamp(18px, 2.2vw, 22px);
+      font-weight: 500;
       margin-bottom: 8px;
       line-height: 1.5;
     }
@@ -832,6 +823,27 @@
       line-height: 1.8;
       padding: 0 20px 40px;
     }
+
+    /* FOOTER */
+    .site-foot {
+      border-top: 1px solid var(--card-border);
+      padding: 26px 24px;
+      font-size: 12px;
+      color: var(--ink-mid);
+    }
+
+    .site-foot .inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .site-foot a { color: var(--ink-mid); text-decoration: none; display: inline-block; padding: 8px 2px; }
+    .site-foot a:hover { color: var(--gold-deep); }
 
     /* RESPONSIVE */
     @media (max-width: 600px) {
@@ -902,9 +914,8 @@
 
 <!-- NAV -->
 <nav>
-  <a href="https://wingconsulting.org" class="nav-logo">
-    <div class="nav-logo-mark">W</div>
-    <span class="nav-logo-text">Wing Consulting</span>
+  <a href="https://wingconsulting.org" class="nav-logo" style="line-height:0;">
+    <img src="/wing-logo.svg" alt="Wing">
   </a>
   <a href="https://wingconsulting.org" class="nav-back">
     ← トップページ
@@ -913,9 +924,9 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-badge">Free Assessment Tool</div>
-  <h1>DX・AI <span>クイックアセスメント</span></h1>
-  <p>3ステップ、約5分で完了。あなたの企業のDX成熟度・AI活用状況を診断し、パーソナライズされた推奨アクションを生成します。</p>
+  <div class="hero-badge">DX・AI クイックアセスメント</div>
+  <h1>貴社のDXは、いま<span>どの段階</span>にあるか。</h1>
+  <p>3ステップの設問にお答えいただくと、IT投資比率の業界比較、デジタル成熟度、組織の傾向、次に取るべき打ち手を自動で算出します。登録も入力も不要です。</p>
   <div class="hero-stats">
     <div class="hero-stat"><strong>3</strong><span>ステップ</span></div>
     <div class="hero-stat"><strong>約5分</strong><span>所要時間</span></div>
@@ -947,7 +958,7 @@
   <!-- STEP 1 -->
   <div class="form-step active" id="step1">
     <div class="section-title">会社プロフィール</div>
-    <div class="section-subtitle">貴社の基本情報をご選択ください。</div>
+    <div class="section-subtitle">貴社の基本情報をお選びください。</div>
 
     <div class="field-group">
       <div class="field-label">業種 <span class="req">必須</span></div>
@@ -1003,7 +1014,7 @@
       </div>
     </div>
 
-    <div id="err1" class="error-msg">すべての項目を選択してください。</div>
+    <div id="err1" class="error-msg">すべての項目をお選びください。</div>
     <div class="btn-row">
       <span></span>
       <button class="btn btn-primary" onclick="nextStep(1)">次へ ›</button>
@@ -1013,7 +1024,7 @@
   <!-- STEP 2 -->
   <div class="form-step" id="step2">
     <div class="section-title">テクノロジー現状</div>
-    <div class="section-subtitle">現在のシステム環境とデジタル化の状況をお聞かせください。</div>
+    <div class="section-subtitle">現在のシステム環境とデジタル化の状況をお選びください。</div>
 
     <div class="field-group">
       <div class="field-label">基幹システム <span class="req">必須</span></div>
@@ -1046,7 +1057,7 @@
       </div>
     </div>
 
-    <div id="err2" class="error-msg">すべての項目を選択してください。</div>
+    <div id="err2" class="error-msg">すべての項目をお選びください。</div>
     <div class="btn-row">
       <button class="btn btn-secondary" onclick="prevStep(2)">‹ 戻る</button>
       <button class="btn btn-primary" onclick="nextStep(2)">次へ ›</button>
@@ -1093,8 +1104,8 @@
   <!-- RESULTS -->
   <div id="results">
     <div class="results-header">
-      <h2>診断レポート</h2>
-      <p id="results-subtitle">診断が完了しました。以下に貴社のDX現状分析をお届けします。</p>
+      <h2>診断結果</h2>
+      <p id="results-subtitle">ご入力内容をもとに、貴社の現在地を4つの指標で示します。</p>
     </div>
 
     <div class="metrics-grid">
@@ -1154,9 +1165,9 @@
 
     <!-- CTA -->
     <div class="footer-cta">
-      <h3>Wingの専門家が<br>詳細な診断レポートを作成します</h3>
-      <p>この自動診断の3〜5倍の深さで、業界・規模・課題に即した具体的な変革シナリオをご提案します。</p>
-      <a href="https://wingconsulting.org/#contact" class="btn btn-primary">無料相談を予約する →</a>
+      <h3>この結果をもとに、<br>貴社に合わせた打ち手をご提案します。</h3>
+      <p>30分の無料相談では、本診断では扱えない個別の事情まで伺ったうえで、次に取るべき一手を具体的にお示しします。営業のお電話は一切いたしません。</p>
+      <a href="https://wingconsulting.org/#contact" class="btn btn-primary">無料相談を申し込む（30分）</a>
     </div>
 
     <div class="btn-row" style="justify-content:center;margin-top:0;">
@@ -1167,10 +1178,16 @@
 </main>
 
 <p class="disclaimer">
-  本診断ツールは、入力情報に基づく自動生成レポートです。<br>
-  個人情報は収集しておりません。専門家診断の代替を保証するものではありません。<br>
-  © 2026 Wing Consulting. All rights reserved.
+  本診断は、ご入力内容に基づく自動算出の結果です。<br>
+  個人情報は取得していません。個別の状況を踏まえた診断に代わるものではありません。
 </p>
+
+<footer class="site-foot">
+  <div class="inner">
+    <div>&copy; 2026 Wing. All rights reserved.</div>
+    <div><a href="/blog/">インサイト</a>　｜　<a href="/about">会社概要</a>　｜　<a href="/privacy">プライバシーポリシー</a></div>
+  </div>
+</footer>
 
 <script>
   // ── Step navigation ──────────────────────────────────────────
@@ -1263,11 +1280,11 @@
   const PATTERN_MAP = {
     '人材不足': {
       name: 'DX人材育成型',
-      desc: 'DX推進の核心は人材です。外部パートナーとの協業で短期成果を確保しながら、内製化ロードマップを段階的に設計することが効果的です。'
+      desc: 'DX推進の核心は人材です。外部パートナーとの協業で短期の成果を確保しつつ、内製化のロードマップを段階的に描くことが有効です。'
     },
     '予算': {
       name: '投資対効果最大化型',
-      desc: '投資判断に厳密さが求められる組織です。小さなPoC → ROI実証 → 本格投資のサイクルを設計し、経営に対して数字で語ることが鍵です。'
+      desc: '投資判断に厳密さが求められる組織です。小さなPoCでROIを実証してから本格投資へ進むサイクルを設計し、経営に対して数字で語ることが要点になります。'
     },
     '経営理解_large': {
       name: 'トップダウン型変革',
@@ -1275,15 +1292,15 @@
     },
     '経営理解_small': {
       name: '経営巻き込み型',
-      desc: '現場の成功事例を可視化しながら経営層への「DXの勝ちパターン提示」を繰り返すことで変革の機運を醸成します。'
+      desc: '現場の成功事例を可視化し、経営層に「勝ちパターン」として示すことを繰り返すと、変革の機運が生まれます。'
     },
     '技術選定': {
       name: 'テクノロジー最適化型',
-      desc: 'ベンダー評価の客観的フレームワーク構築が急務です。自社の要件定義能力を高め、ベンダーロックインリスクを最小化した選定プロセスが重要です。'
+      desc: 'ベンダー評価の基準を客観化することが急務です。自社の要件定義能力を高め、特定ベンダーへの依存を避けた選定プロセスを整えます。'
     },
     '現場抵抗': {
       name: 'チェンジマネジメント型',
-      desc: '技術よりも人・プロセス・文化の変革が先決です。現場を巻き込んだ設計と、クイックウィンによるモチベーション維持が変革成功の鍵です。'
+      desc: '技術よりも、人・プロセス・組織文化の変革が先決です。現場を巻き込んだ設計と、早期に成果を示すことによる推進力の維持が要点になります。'
     }
   };
 
@@ -1355,7 +1372,7 @@
     } else if (ratio > bench.high) {
       recos.push(`IT投資比率は業界水準を上回っています。投資効果の最大化に向けて、ポートフォリオ最適化と不要システムの統廃合を検討することを推奨します。`);
     } else {
-      recos.push(`IT投資水準は業界平均（${bench.avg}%）に近い水準です。現状維持ではなく、AI・データ領域への戦略的な重点投資への配分見直しを検討してください。`);
+      recos.push(`IT投資の比率は業界平均（${bench.avg}%）と同程度です。総額を増やすより、AI・データ領域へ配分を寄せる見直しが有効です。`);
     }
 
     if (priorities.includes('データ活用')) {
@@ -1402,9 +1419,9 @@
     const ratioText = r.ratio.toFixed(1) + '%';
     document.getElementById('res-it-ratio').textContent = ratioText;
     let ratioColor, ratioStatus;
-    if (r.ratio < r.bench.low) { ratioColor = 'red'; ratioStatus = '業界水準を下回っています'; }
-    else if (r.ratio > r.bench.high) { ratioColor = 'amber'; ratioStatus = '業界水準を上回っています'; }
-    else { ratioColor = 'green'; ratioStatus = '業界標準水準です'; }
+    if (r.ratio < r.bench.low) { ratioColor = 'red'; ratioStatus = '業界平均を下回っています'; }
+    else if (r.ratio > r.bench.high) { ratioColor = 'amber'; ratioStatus = '業界平均を上回っています'; }
+    else { ratioColor = 'green'; ratioStatus = '業界平均並みの水準です'; }
     document.getElementById('res-it-sub').textContent = ratioStatus;
 
     const maxRatio = r.bench.high * 1.5;
