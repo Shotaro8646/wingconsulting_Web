@@ -193,13 +193,13 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Outfit:wght@300;400;500;600&family=Shippori+Mincho+B1:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
   --ink:#14181F; --sub:#4A515C; --sub2:#5C6470; --faint:#6B7280;
   --gold:#A98A4B; --gold-deep:#8A6E33; --gold-soft:#B8A882;
   --pale:#F1EEE7; --line:#E8E5DE; --line2:#D8D3C8; --bar-dark:#2A3241;
-  --sans:'Noto Sans JP','Outfit',sans-serif; --en:'Outfit',sans-serif; --disp:'Shippori Mincho B1','Noto Sans JP',serif;
+  --sans:'Noto Sans JP','Outfit',sans-serif; --en:'Outfit',sans-serif; --disp:"Yu Gothic Medium","YuGothic","游ゴシック Medium","Yu Gothic","Noto Sans JP",sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -218,7 +218,7 @@ a:hover{color:var(--gold-deep)}
 .wrap{max-width:1160px;margin:0 auto;padding:0 40px}
 @media(max-width:720px){.wrap{padding:0 22px}}
 .kicker{margin:0 0 12px 0;font-family:var(--en);font-weight:500;font-size:11px;letter-spacing:.2em;color:var(--gold-deep)}
-h2.sec{font-family:var(--disp);font-weight:700;font-size:clamp(24px,2.5vw,33px);line-height:1.6;margin:0;color:var(--ink);letter-spacing:.02em;text-wrap:balance}
+h2.sec{font-family:var(--disp);font-weight:500;font-size:clamp(24px,2.6vw,34px);line-height:1.58;margin:0;color:var(--ink);letter-spacing:.01em;text-wrap:balance}
 .sec-head{display:grid;grid-template-columns:minmax(0,420px) 1fr;gap:52px;align-items:start;margin-bottom:30px}
 .sec-head>*{min-width:0}
 .sec-head:not(:has(.sec-lead)){grid-template-columns:1fr;gap:0;margin-bottom:30px}
@@ -550,7 +550,7 @@ footer a{color:var(--faint)}
     <div class="wrap hero-grid hero-pad" style="padding-top:60px; padding-bottom:54px;">
       <div>
         <p class="kicker" style="letter-spacing:.22em;">AI / FDE CONSULTING &amp; EXECUTION</p>
-        <h1 class="hero-h1" style="font-family:'Shippori Mincho B1','Noto Sans JP',serif; font-weight:700; font-size:clamp(22px,3.6vw,50px); line-height:1.42; letter-spacing:.01em; margin:0 0 16px 0;"><span style="display:inline-block;">AIネイティブな実装力<span style="font-family:'Outfit',sans-serif; font-weight:400; color:#A98A4B; margin-left:.2em; font-size:.8em;">×</span></span><br><span style="display:inline-block;">ビジネス現場の解像度</span></h1>
+        <h1 class="hero-h1" style="font-family:"Yu Gothic Medium","YuGothic","游ゴシック Medium","Yu Gothic","Noto Sans JP",sans-serif; font-weight:500; font-size:clamp(22px,3.6vw,50px); line-height:1.42; letter-spacing:.01em; margin:0 0 16px 0;"><span style="display:inline-block;">AIネイティブな実装力<span style="font-family:'Outfit',sans-serif; font-weight:400; color:#A98A4B; margin-left:.2em; font-size:.8em;">×</span></span><br><span style="display:inline-block;">ビジネス現場の解像度</span></h1>
         <p class="hero-tag" style="margin:0 0 26px 0; font-weight:700; font-size:clamp(16px,2vw,20px); line-height:1.75; letter-spacing:.05em; color:#8A6E33;">貴社のビジネスに、変革の翼を。</p>
         <div class="hero-pts" style="display:flex; flex-direction:column; gap:14px; margin-bottom:30px;">
           <div style="display:flex; gap:14px; align-items:flex-start;">
