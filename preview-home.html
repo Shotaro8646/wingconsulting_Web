@@ -284,6 +284,16 @@ section .wrap{padding:0}
 .pillar li{font-size:13px;color:var(--sub2);padding:8px 0 8px 16px;border-bottom:1px dashed var(--line);position:relative;line-height:1.8}
 .pillar li::before{content:'─';position:absolute;left:0;color:var(--gold);font-size:11px}
 .pillar li:last-child{border-bottom:none}
+.exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:6px}
+@media(max-width:900px){.exp-grid{grid-template-columns:1fr}}
+.exp{border:1px solid var(--line);border-top:2px solid var(--gold);background:#fff;padding:26px 24px}
+.exp h3{margin:10px 0 14px;font-size:17px;font-weight:700;color:var(--ink)}
+.exp ul{margin:0;padding:0;list-style:none}
+.exp li{font-size:13px;font-weight:700;color:var(--ink);padding:11px 0;border-bottom:1px dashed var(--line);line-height:1.6}
+.exp li:last-child{border-bottom:none}
+.exp li span{display:block;font-size:11px;font-weight:400;color:var(--sub2);margin-top:3px;line-height:1.7}
+.exp-note{margin:24px 0 0;font-size:13px;color:var(--sub2);line-height:2;max-width:820px;text-wrap:pretty}
+.exp-note b{color:var(--ink)}
 /* products */
 .prod{border:1px solid var(--line);border-top:2px solid var(--gold);padding:30px;background:#fff}
 .prod h3{margin:12px 0 4px;font-size:17px;font-weight:900;color:var(--ink)}
@@ -479,6 +489,7 @@ footer a{color:var(--faint)}
       <nav class="navlinks" style="display:flex; gap:28px; align-items:center;">
         <a href="#fde" style="font-size:13px; color:#5C6470; white-space:nowrap;">FDEとは</a>
         <a href="#consulting" style="font-size:13px; color:#5C6470; white-space:nowrap;">提供サービス</a>
+        <a href="#expertise" style="font-size:13px; color:#5C6470; white-space:nowrap;">対応領域</a>
         <a href="#products" style="font-size:13px; color:#5C6470; white-space:nowrap;">AIプロダクト</a>
         <a href="#insights" style="font-size:13px; color:#5C6470; white-space:nowrap;">インサイト</a>
         <a href="/dx-assessment" style="font-size:13px; color:#8A6E33; white-space:nowrap;">無料診断</a>
@@ -716,6 +727,62 @@ footer a{color:var(--faint)}
         <div class="pillar"><p class="tag-en" style="margin-bottom:0;">SERVICE 02</p><h3>実装・PMO</h3><p>要件定義から現場定着まで一貫関与し、成果が出るまで推進します。</p><ul><li>PMO・プロジェクト推進</li><li>システム実装・開発管理</li><li>運用設計（権限・承認フロー・監視）</li><li>ベンダー選定・要件定義支援</li><li>グローバル・ASEAN展開支援</li></ul></div>
         <div class="pillar"><p class="tag-en" style="margin-bottom:0;">SERVICE 03</p><h3>内製化・人材育成</h3><p>「知っている」から「現場で使える」へ。支援終了後も自走できる状態をつくります。</p><ul><li>DX・生成AI活用研修</li><li>データ分析・可視化基盤の構築</li><li>プロジェクトマネジメント研修</li><li>推進体制の設計・立ち上げ</li></ul></div>
       </div>
+    </div>
+  </section>
+
+  <!-- ═══════ EXPERTISE ═══════ -->
+  <section id="expertise" class="hairline-t">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="kicker">EXPERTISE</p>
+          <h2 class="sec"><span style="display:inline-block;">熟知している業界と、</span><br><span style="display:inline-block;">業務プロセス。</span></h2>
+        </div>
+        <p class="sec-lead">AIを業務に組み込むには、その業務を知っていることが前提になります。総合商社の米州統括会社に4年間常駐し、<b style="color:#14181F;">30社を超える事業投資先のDXを支援</b>してきた経験から、以下の領域では初回のヒアリングから具体的な論点に入れます。</p>
+      </div>
+
+      <div class="exp-grid">
+        <div class="exp">
+          <p class="tag-en" style="margin-bottom:0;">INDUSTRIES</p>
+          <h3>業界</h3>
+          <ul>
+            <li>総合商社・専門商社<span>貿易実務、コモディティトレーディング</span></li>
+            <li>化学品・素材<span>規制対応、EC・B2Bマーケティング</span></li>
+            <li>製造業<span>調達改革、基幹刷新、データ活用</span></li>
+            <li>流通・食品・農業<span>ERP導入、サプライチェーン</span></li>
+            <li>通信<span>購買業務改革、SSC構想</span></li>
+            <li>ヘルスケア<span>データプラットフォーム構想・構築</span></li>
+          </ul>
+        </div>
+
+        <div class="exp">
+          <p class="tag-en" style="margin-bottom:0;">OPERATIONS</p>
+          <h3>業務プロセス</h3>
+          <ul>
+            <li>購買・調達<span>ソーシング、発注、支払、コスト削減</span></li>
+            <li>貿易事務<span>受発注、通関、原価計算、法規制対応</span></li>
+            <li>経理・決算<span>プロセス標準化、SSC（シェアードサービス）</span></li>
+            <li>受発注・在庫<span>基幹システム連携、業務設計</span></li>
+            <li>カスタマーサポート<span>コールセンター業務設計、CRM</span></li>
+            <li>IT組織・ガバナンス<span>グローバルIT戦略、IT-DD、PMI</span></li>
+          </ul>
+        </div>
+
+        <div class="exp">
+          <p class="tag-en" style="margin-bottom:0;">SYSTEMS</p>
+          <h3>システム・技術</h3>
+          <ul>
+            <li>ERP<span>SAP S/4HANA、Microsoft Dynamics</span></li>
+            <li>調達システム<span>SAP Ariba</span></li>
+            <li>クラウド<span>Azure、Google Cloud</span></li>
+            <li>業務自動化<span>UiPath、WinActor、ServiceNow</span></li>
+            <li>AI開発<span>AIエージェント、LLM活用、AI-OCR</span></li>
+            <li>データ基盤<span>分析・可視化基盤の設計と構築</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="exp-note">上記に当てはまらない業界でも、まず業務を理解するところから始めます。<b>「どの業務のどこに時間が溶けているか」</b>が特定できれば、AIの使いどころは見えてきます。</p>
     </div>
   </section>
 
