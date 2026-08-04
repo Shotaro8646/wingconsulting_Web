@@ -193,13 +193,13 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Outfit:wght@300;400;500;600&family=Shippori+Mincho+B1:wght@600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --ink:#14181F; --sub:#4A515C; --sub2:#5C6470; --faint:#6B7280;
   --gold:#A98A4B; --gold-deep:#8A6E33; --gold-soft:#B8A882;
   --pale:#F1EEE7; --line:#E8E5DE; --line2:#D8D3C8; --bar-dark:#2A3241;
-  --sans:'Noto Sans JP','Outfit',sans-serif; --en:'Outfit',sans-serif;
+  --sans:'Noto Sans JP','Outfit',sans-serif; --en:'Outfit',sans-serif; --disp:'Shippori Mincho B1','Noto Sans JP',serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -207,7 +207,6 @@ html{scroll-behavior:smooth}
 html,body{overflow-x:hidden}
 img,svg{max-width:100%;height:auto}
 
-section[id],span[id]{scroll-margin-top:84px}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}[data-grow]{transition:none !important;transform:none !important}}
 a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 h1,h2.sec{text-wrap:balance}
@@ -219,13 +218,13 @@ a:hover{color:var(--gold-deep)}
 .wrap{max-width:1160px;margin:0 auto;padding:0 40px}
 @media(max-width:720px){.wrap{padding:0 22px}}
 .kicker{margin:0 0 12px 0;font-family:var(--en);font-weight:500;font-size:11px;letter-spacing:.2em;color:var(--gold-deep)}
-h2.sec{font-weight:900;font-size:clamp(23px,2.3vw,30px);line-height:1.62;margin:0;color:var(--ink);letter-spacing:.005em;text-wrap:balance}
-.sec-head{display:grid;grid-template-columns:minmax(0,400px) 1fr;gap:56px;align-items:start;margin-bottom:36px}
+h2.sec{font-family:var(--disp);font-weight:700;font-size:clamp(24px,2.5vw,33px);line-height:1.6;margin:0;color:var(--ink);letter-spacing:.02em;text-wrap:balance}
+.sec-head{display:grid;grid-template-columns:minmax(0,420px) 1fr;gap:64px;align-items:start;margin-bottom:44px}
 .sec-head>*{min-width:0}
 .sec-head:not(:has(.sec-lead)){grid-template-columns:1fr;gap:0;margin-bottom:30px}
 @media(max-width:860px){.sec-head{grid-template-columns:1fr;gap:18px}}
 .sec-lead{margin:6px 0 0 0;font-size:15px;line-height:2.1;color:var(--sub);max-width:680px;text-wrap:pretty}
-section{padding:56px 40px 64px 40px}
+section{padding:82px 40px 88px 40px}
 @media(max-width:720px){section{padding:44px 22px 50px 22px}}
 section .wrap{padding:0}
 .hairline-t{border-top:1px solid var(--line)}
@@ -325,14 +324,14 @@ section .wrap{padding:0}
 .why-copy b{color:var(--ink)}
 .trust{margin-top:20px;padding:16px 20px;border-left:2px solid var(--gold);background:#FBFAF7;font-size:13px;color:var(--sub2);line-height:2}
 /* faq */
-.faq{display:grid;gap:12px;max-width:860px}
-.faq details{border:1px solid var(--line);background:#fff}
-.faq details[open]{border-color:var(--ink)}
-.faq summary{cursor:pointer;padding:17px 24px;font-weight:700;font-size:13px;list-style:none;position:relative;color:var(--ink)}
+.faq{display:grid;gap:0;max-width:860px;border-top:1px solid var(--line)}
+.faq details{background:transparent;border:none;border-bottom:1px solid var(--line)}
+.faq details[open]{border-bottom-color:var(--ink)}
+.faq summary{cursor:pointer;padding:18px 30px 18px 0;font-weight:700;font-size:13px;list-style:none;position:relative;color:var(--ink)}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"＋";position:absolute;right:20px;color:var(--gold)}
+.faq summary::after{content:"＋";position:absolute;right:2px;color:var(--gold)}
 .faq details[open] summary::after{content:"−"}
-.faq .a{padding:0 24px 18px;font-size:13px;color:var(--sub2);line-height:2.05}
+.faq .a{padding:0 30px 20px 0;font-size:13px;color:var(--sub2);line-height:2.05}
 /* insights */
 .ins-g{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 @media(max-width:860px){.ins-g{grid-template-columns:1fr}}
@@ -488,6 +487,22 @@ footer a{color:var(--faint)}
   .fde2-venn{max-width:280px}
 }
 
+
+/* ── signature: 途切れない継続の罫線 ── */
+.rail{position:relative}
+@media(min-width:1300px){
+  .rail::before{content:'';position:absolute;top:0;bottom:0;left:calc(50% - 580px - 30px);width:1px;
+    background:linear-gradient(180deg,rgba(169,138,75,.55),rgba(169,138,75,.28));pointer-events:none}
+  .rail::after{content:'';position:absolute;top:64px;left:calc(50% - 580px - 33px);width:7px;height:7px;
+    background:var(--gold);pointer-events:none}
+  .hero-sec.rail::before{top:38%}
+  .hero-sec.rail::after{top:38%}
+  footer.rail::before{bottom:auto;height:34px}
+}
+.warm{background:#FBFAF7}
+/* 従来型パネルだけ、継続が断たれていることを示す */
+.wall-p{border-left:3px dashed var(--line2)}
+.wall-p.win{border-left:3px solid var(--gold)}
 .hero-sec{position:relative;overflow:hidden;background:#fff;border-bottom:1px solid var(--line)}
 .hero-bg{position:absolute;inset:0;background:url('/images/hero-nyc.jpg') center 38%/cover no-repeat;opacity:.40;filter:saturate(1.1) brightness(1.12) contrast(.94)}
 .hero-veil{position:absolute;inset:0;pointer-events:none;background:linear-gradient(100deg,#fff 0%,rgba(255,255,255,.94) 34%,rgba(255,255,255,.72) 62%,rgba(255,255,255,.48) 100%)}
@@ -510,7 +525,6 @@ footer a{color:var(--faint)}
 <body>
 <div style="font-family:'Noto Sans JP','Outfit',sans-serif; color:#14181F; background:#FFFFFF;">
 
-  <span id="top" aria-hidden="true"></span>
   <header style="background:#FFFFFF; border-bottom:1px solid #E8E5DE; position:sticky; top:0; z-index:50;">
     <div class="wrap" style="height:72px; display:flex; align-items:center; justify-content:space-between;">
       <a href="/" style="line-height:0;">
@@ -529,14 +543,14 @@ footer a{color:var(--faint)}
   </header>
 
   <!-- ═══════ HERO ═══════ -->
-  <section class="hero-sec">
+  <section class="hero-sec rail">
     <div class="hero-bg" aria-hidden="true"></div>
     <div class="hero-veil" aria-hidden="true"></div>
     <div class="hero-fade" aria-hidden="true"></div>
     <div class="wrap hero-grid hero-pad" style="padding-top:60px; padding-bottom:54px;">
       <div>
         <p class="kicker" style="letter-spacing:.22em;">AI / FDE CONSULTING &amp; EXECUTION</p>
-        <h1 class="hero-h1" style="font-weight:900; font-size:clamp(22px,3.6vw,50px); line-height:1.42; letter-spacing:.01em; margin:0 0 16px 0;"><span style="display:inline-block;">AIネイティブな実装力<span style="font-family:'Outfit',sans-serif; font-weight:400; color:#A98A4B; margin-left:.2em; font-size:.8em;">×</span></span><br><span style="display:inline-block;">ビジネス現場の解像度</span></h1>
+        <h1 class="hero-h1" style="font-family:'Shippori Mincho B1','Noto Sans JP',serif; font-weight:700; font-size:clamp(22px,3.6vw,50px); line-height:1.42; letter-spacing:.01em; margin:0 0 16px 0;"><span style="display:inline-block;">AIネイティブな実装力<span style="font-family:'Outfit',sans-serif; font-weight:400; color:#A98A4B; margin-left:.2em; font-size:.8em;">×</span></span><br><span style="display:inline-block;">ビジネス現場の解像度</span></h1>
         <p class="hero-tag" style="margin:0 0 26px 0; font-weight:700; font-size:clamp(16px,2vw,20px); line-height:1.75; letter-spacing:.05em; color:#8A6E33;">貴社のビジネスに、変革の翼を。</p>
         <div class="hero-pts" style="display:flex; flex-direction:column; gap:14px; margin-bottom:30px;">
           <div style="display:flex; gap:14px; align-items:flex-start;">
@@ -561,7 +575,6 @@ footer a{color:var(--faint)}
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <p class="kicker">THE AI DIVIDE</p>
           <h2 class="sec"><span style="display:inline-block;">AIの格差は始まっています。</span><br><span style="display:inline-block;">導入するだけでは、</span><br><span style="display:inline-block;">損益に直結しません。</span></h2>
         </div>
         <p class="sec-lead">McKinseyとPwCコンサルティングの調査によると、AIを使いこなす企業とそれ以外の間で、生産性の差が急速に拡大しています。一方で、AIの効果を自社の利益として実感できている企業はごく一部です。<br><br>分かれ目は、ツールの有無ではありません。<b style="color:#14181F;">経営・ビジネスとテクノロジーが噛み合わず、部分最適やPoCが乱立してしまう</b>——多くの企業がつまずくのは、この一点です。</p>
@@ -612,11 +625,10 @@ footer a{color:var(--faint)}
   </section>
 
   <!-- ═══════ 02 FDE ═══════ -->
-  <section id="fde" class="hairline-t" style="background:#FBFAF7;">
+  <section id="fde" class="hairline-t rail">
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <p class="kicker">FORWARD DEPLOYED ENGINEER</p>
           <h2 class="sec"><span style="display:inline-block;">外からの助言ではなく、</span><br><span style="display:inline-block;">内部の旗振り役として。</span></h2>
         </div>
         <p class="sec-lead">FDE（Forward Deployed Engineer）は、貴社の現場のシステムと業務プロセスを熟知したうえで、経営層との対話から解くべき経営課題を捉え、そのままAI開発まで高速に進める役割です。<b style="color:#14181F;">解くのは経営課題と現場課題であり、AI・ITはその手段にすぎません。</b>外から助言する立場ではなく、貴社の内部で変革を牽引する立場に立つからこそ、課題の特定から成果までが一本につながります。</p>
@@ -685,11 +697,10 @@ footer a{color:var(--faint)}
   </section>
 
   <!-- ═══════ 03 ご支援の流れ ═══════ -->
-  <section id="model" class="hairline-t">
+  <section id="model" class="hairline-t rail">
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <p class="kicker">ENGAGEMENT MODEL</p>
           <h2 class="sec"><span style="display:inline-block;">小さく試して、</span><br><span style="display:inline-block;">確かめた分だけ進む。</span></h2>
         </div>
         <p class="sec-lead">契約は段階ごとに区切ります。診断だけで終える、試作を見てから判断する——どちらも想定内の設計です。大きな投資判断を、実物を見る前に迫ることはしません。入口は2つ。<b style="color:#14181F;">貴社の状況に合わせて、最適な進め方をご提案します。</b></p>
@@ -756,11 +767,10 @@ footer a{color:var(--faint)}
   </section>
 
   <!-- ═══════ 04 サービス ═══════ -->
-  <section id="consulting" class="hairline-t" style="background:#FBFAF7;"><span id="approach" style="display:block;height:0;scroll-margin-top:80px" aria-hidden="true"></span>
+  <section id="consulting" class="hairline-t rail">
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <p class="kicker">SERVICES</p>
           <h2 class="sec"><span style="display:inline-block;">一気通貫から、</span><br><span style="display:inline-block;">特定領域の強化まで。</span></h2>
         </div>
         <p class="sec-lead">構想から実装・内製化までをまとめて担うこともできますし、「PMOだけ」「ベンダー選定だけ」「研修だけ」といった特定機能の強化だけでもお引き受けします。<b style="color:#14181F;">貴社に足りている部分は、無理に置き換えません。</b></p>
@@ -774,11 +784,10 @@ footer a{color:var(--faint)}
   </section>
 
   <!-- ═══════ EXPERTISE ═══════ -->
-  <section id="expertise" class="hairline-t">
+  <section id="expertise" class="hairline-t rail">
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <p class="kicker">EXPERTISE</p>
           <h2 class="sec"><span style="display:inline-block;">これまで関わってきた</span><br><span style="display:inline-block;">業界と業務。</span></h2>
         </div>
         <p class="sec-lead">AIを業務に組み込むには、その業務を知っていることが前提になります。外資系および日系の総合コンサルティングファームにおける日本・アメリカでの経験を通じて、<b style="color:#14181F;">30社を超える企業のDXを支援</b>してきました。以下は、これまで実際に関わってきた領域です。</p>
@@ -830,11 +839,10 @@ footer a{color:var(--faint)}
   </section>
 
   <!-- ═══════ 05 プロダクト ═══════ -->
-  <section id="products" class="hairline-t">
+  <section id="products" class="hairline-t warm rail">
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <p class="kicker">AI PRODUCTS</p>
           <h2 class="sec"><span style="display:inline-block;">支援の現場から生まれた、</span><br><span style="display:inline-block;">2つのAIプロダクト。</span></h2>
         </div>
         <p class="sec-lead">書類を読み、照合し、判定する。貿易事務と化学品規制対応は業種こそ違いますが、負荷の構造は共通しています。この反復作業を担うAIプロダクトを自社で開発し、設計・実装・運用まで手がけています。コンサルティングとあわせても、単体でもご利用いただけます。</p>
@@ -868,11 +876,10 @@ footer a{color:var(--faint)}
   </div>
 
   <!-- ═══════ 06 FAQ ═══════ -->
-  <section id="faq" class="hairline-t" style="background:#FBFAF7;">
+  <section id="faq" class="hairline-t rail">
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <p class="kicker">FAQ</p>
           <h2 class="sec">よくいただく<br>ご質問。</h2>
         </div>
       </div>
@@ -888,11 +895,10 @@ footer a{color:var(--faint)}
   </section>
 
   <!-- ═══════ 07 インサイト ═══════ -->
-  <section id="insights" class="hairline-t">
+  <section id="insights" class="hairline-t rail">
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <p class="kicker">INSIGHTS</p>
           <h2 class="sec"><span style="display:inline-block;">プロジェクトの現場で得た</span><br><span style="display:inline-block;">知見を公開しています。</span></h2>
         </div>
         <p class="sec-lead">AIエージェント・DX戦略・貿易DX・規制対応。実務で得た知見を記事として公開しています。営業資料より、こちらのほうが私たちの考え方を正確にお伝えできると考えています。</p>
@@ -910,11 +916,10 @@ footer a{color:var(--faint)}
   </section>
 
   <!-- ═══════ 08 会社概要 ═══════ -->
-  <section id="company" class="hairline-t" style="background:#FBFAF7;">
+  <section id="company" class="hairline-t rail">
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <p class="kicker">COMPANY</p>
           <h2 class="sec">会社概要</h2>
         </div>
       </div>
@@ -927,11 +932,10 @@ footer a{color:var(--faint)}
   </section>
 
   <!-- ═══════ 09 CONTACT ═══════ -->
-  <section id="contact" class="hairline-t">
+  <section id="contact" class="hairline-t rail">
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <p class="kicker">CONTACT</p>
           <h2 class="sec">長年の経営コンサルティングの知見から、<br>貴社に合わせた打ち手を。</h2>
         </div>
       </div>
@@ -955,7 +959,7 @@ footer a{color:var(--faint)}
     </div>
   </section>
 
-  <footer>
+  <footer class="rail">
     <div class="wrap">
       <div>© 2026 Wing. All rights reserved.</div>
       <div><a href="/blog/">インサイト</a>　｜　<a href="/about">会社概要</a>　｜　<a href="/privacy">プライバシーポリシー</a></div>
