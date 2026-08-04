@@ -415,6 +415,19 @@ footer a{color:var(--faint)}
 .fde2-src span{display:block;font-size:11px;color:var(--faint);margin-top:4px}
 .draft-ribbon{position:fixed;bottom:18px;right:-46px;transform:rotate(-38deg);background:#B33;color:#fff;font-size:11px;font-weight:700;letter-spacing:.18em;padding:6px 60px;z-index:99;pointer-events:none;opacity:.92;font-family:var(--sans)}
 @media(max-width:900px){.navlinks a:not(.btn-dark){display:none}}
+
+/* ── ヒーロー：モバイル最適化 ── */
+@media(max-width:720px){
+  .hero-pad{padding-top:36px !important;padding-bottom:38px !important}
+  .hero-h1{font-size:clamp(21px,6.2vw,26px) !important;line-height:1.5 !important;margin-bottom:12px !important}
+  .hero-h1 span[style*="nowrap"]{white-space:normal !important}
+  .hero-tag{font-size:clamp(15px,4.4vw,17px) !important;line-height:1.7 !important;letter-spacing:.03em !important;margin-bottom:20px !important}
+  .hero-pts{gap:12px !important;margin-bottom:24px !important}
+  .hero-pts>div{gap:9px !important}
+  .hero-pts>div>div{width:4px !important;height:4px !important;margin-top:9px !important}
+  .hero-pts p{font-size:13px !important;line-height:1.85 !important}
+  .kicker{font-size:10.5px;letter-spacing:.14em}
+}
 /* ───────── モバイル最適化 ───────── */
 @media(max-width:720px){
   /* 比較表：横スクロールをやめ、行ごとのカードに積み替える */
@@ -479,12 +492,12 @@ footer a{color:var(--faint)}
   <section style="background:#FFFFFF; border-bottom:1px solid #E8E5DE; padding:0; position:relative; overflow:hidden;">
     <div class="hero-art" aria-hidden="true"><svg viewBox="400 620 700 520" xmlns="http://www.w3.org/2000/svg"><path d="M 1078 642 L 634 868 L 628 897 L 610 953 L 593 991 L 557 1050 L 555 1050 L 460 912 L 416 913 L 557 1116 L 600 1051 L 633 990 L 648 955 L 666 892 L 937 753 L 981 732 L 999 721 L 1013 716 L 1014 719 L 992 761 L 972 788 L 947 814 L 931 821 L 793 900 L 715 942 L 797 914 L 801 914 L 900 879 L 908 879 L 908 883 L 891 913 L 866 940 L 851 952 L 706 1005 L 816 998 L 817 1001 L 810 1014 L 790 1040 L 716 1040 L 660 1048 L 647 1052 L 633 1075 L 805 1076 L 821 1059 L 840 1034 L 851 1016 L 865 984 L 899 958 L 914 942 L 928 923 L 949 881 L 959 846 L 982 830 L 1005 806 L 1018 788 L 1037 756 L 1056 715 L 1072 669 Z" fill="#A98A4B"/></svg></div>
 
-    <div class="wrap hero-grid" style="padding-top:60px; padding-bottom:54px;">
+    <div class="wrap hero-grid hero-pad" style="padding-top:60px; padding-bottom:54px;">
       <div>
         <p class="kicker" style="letter-spacing:.22em;">AI / FDE CONSULTING &amp; EXECUTION</p>
-        <h1 style="font-weight:900; font-size:clamp(34px,3.6vw,50px); line-height:1.42; letter-spacing:.01em; margin:0 0 16px 0;"><span style="display:inline-block; white-space:nowrap;">AIネイティブな実装力<span style="font-family:'Outfit',sans-serif; font-weight:400; color:#A98A4B; margin-left:.2em; font-size:.8em;">×</span></span><br><span style="display:inline-block; white-space:nowrap;">ビジネス現場の解像度</span></h1>
-        <p style="margin:0 0 26px 0; font-weight:700; font-size:20px; line-height:1.8; letter-spacing:.06em; color:#8A6E33;">貴社のビジネスに、変革の翼を。</p>
-        <div style="display:flex; flex-direction:column; gap:14px; margin-bottom:30px;">
+        <h1 class="hero-h1" style="font-weight:900; font-size:clamp(34px,3.6vw,50px); line-height:1.42; letter-spacing:.01em; margin:0 0 16px 0;"><span style="display:inline-block; white-space:nowrap;">AIネイティブな実装力<span style="font-family:'Outfit',sans-serif; font-weight:400; color:#A98A4B; margin-left:.2em; font-size:.8em;">×</span></span><br><span style="display:inline-block; white-space:nowrap;">ビジネス現場の解像度</span></h1>
+        <p class="hero-tag" style="margin:0 0 26px 0; font-weight:700; font-size:20px; line-height:1.8; letter-spacing:.06em; color:#8A6E33;">貴社のビジネスに、変革の翼を。</p>
+        <div class="hero-pts" style="display:flex; flex-direction:column; gap:14px; margin-bottom:30px;">
           <div style="display:flex; gap:14px; align-items:flex-start;">
             <div style="flex:none; width:6px; height:6px; background:#A98A4B; margin-top:11px;"></div>
             <p style="margin:0; font-size:14px; line-height:1.95; color:#4A515C; text-wrap:pretty;">AI時代の勝敗を分けるのは、技術力だけではありません。<br><span style="color:#14181F; font-weight:500;">AIを、貴社の業務に最適な形で組み込みきれるかどうか</span>です。</p>
