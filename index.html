@@ -193,6 +193,10 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
+/* 横溢れの保険 */
+html,body{overflow-x:hidden}
+img,svg{max-width:100%;height:auto}
+
 section[id],span[id]{scroll-margin-top:84px}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}[data-grow]{transition:none !important;transform:none !important}}
 a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
@@ -270,14 +274,6 @@ section .wrap{padding:0}
 .phase.focus .badge{position:absolute;top:-11px;left:20px;background:var(--ink);color:#fff;font-size:11px;font-weight:700;padding:3px 12px;letter-spacing:.08em}
 .ph-fill{background:rgba(169,138,75,.13);border-bottom:1px dashed var(--gold);color:var(--gold-deep);padding:0 4px}
 /* compare */
-table.c{width:100%;border-collapse:collapse;border:1px solid var(--line);font-size:13px;min-width:640px;background:#fff}
-table.c th,table.c td{padding:15px 20px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;line-height:1.9}
-table.c thead th{font-size:12px;color:var(--faint);border-bottom:2px solid var(--ink);font-weight:700;letter-spacing:.08em}
-table.c thead th.w{color:var(--gold-deep)}
-table.c tbody th{font-weight:700;font-size:12px;white-space:nowrap;color:var(--faint);width:118px}
-table.c td{color:var(--sub2)}
-table.c td.w{color:var(--ink);font-weight:500;background:#FBFAF7}
-table.c .num{font-family:var(--en);color:var(--gold-deep);font-weight:600}
 /* pillars */
 .pillar{border:1px solid var(--line);border-top:2px solid var(--ink);padding:28px 26px;background:#fff;display:flex;flex-direction:column}
 .g3.pillars{gap:18px}
@@ -495,8 +491,8 @@ footer a{color:var(--faint)}
     <div class="wrap hero-grid hero-pad" style="padding-top:60px; padding-bottom:54px;">
       <div>
         <p class="kicker" style="letter-spacing:.22em;">AI / FDE CONSULTING &amp; EXECUTION</p>
-        <h1 class="hero-h1" style="font-weight:900; font-size:clamp(34px,3.6vw,50px); line-height:1.42; letter-spacing:.01em; margin:0 0 16px 0;"><span style="display:inline-block; white-space:nowrap;">AIネイティブな実装力<span style="font-family:'Outfit',sans-serif; font-weight:400; color:#A98A4B; margin-left:.2em; font-size:.8em;">×</span></span><br><span style="display:inline-block; white-space:nowrap;">ビジネス現場の解像度</span></h1>
-        <p class="hero-tag" style="margin:0 0 26px 0; font-weight:700; font-size:20px; line-height:1.8; letter-spacing:.06em; color:#8A6E33;">貴社のビジネスに、変革の翼を。</p>
+        <h1 class="hero-h1" style="font-weight:900; font-size:clamp(22px,3.6vw,50px); line-height:1.42; letter-spacing:.01em; margin:0 0 16px 0;"><span style="display:inline-block; white-space:nowrap;">AIネイティブな実装力<span style="font-family:'Outfit',sans-serif; font-weight:400; color:#A98A4B; margin-left:.2em; font-size:.8em;">×</span></span><br><span style="display:inline-block; white-space:nowrap;">ビジネス現場の解像度</span></h1>
+        <p class="hero-tag" style="margin:0 0 26px 0; font-weight:700; font-size:clamp(16px,2vw,20px); line-height:1.75; letter-spacing:.05em; color:#8A6E33;">貴社のビジネスに、変革の翼を。</p>
         <div class="hero-pts" style="display:flex; flex-direction:column; gap:14px; margin-bottom:30px;">
           <div style="display:flex; gap:14px; align-items:flex-start;">
             <div style="flex:none; width:6px; height:6px; background:#A98A4B; margin-top:11px;"></div>
@@ -803,7 +799,7 @@ footer a{color:var(--faint)}
       <div class="sec-head">
         <div>
           <p class="kicker">CONTACT</p>
-          <h2 class="sec">AIをやらない、<br>という提案もします。</h2>
+          <h2 class="sec">導入ありきの提案は、<br>いたしません。</h2>
         </div>
       </div>
       <div class="ct">
