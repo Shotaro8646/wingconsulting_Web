@@ -312,18 +312,18 @@ section .wrap{padding:0}
 .arch-lbl.gold span{color:var(--gold-deep)}
 .arch-lbl i{flex:1;height:1px;background:var(--line)}
 .procs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.proc-b{background:var(--ink);color:#fff;padding:13px 8px;display:flex;align-items:center;justify-content:center;gap:8px}
+.proc-b{background:var(--pale);color:var(--ink);border-top:2px solid var(--line2);padding:13px 8px;display:flex;align-items:center;justify-content:center;gap:8px}
 .proc-b span{font-size:14px;font-weight:700;white-space:nowrap}
 .proc-c{margin-top:6px;font-size:11px;color:var(--faint);text-align:center;line-height:1.6}
 .arch-ar{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;text-align:center;color:var(--gold);font-size:13px;line-height:1}
-.plat{border:1px solid var(--gold-deep);background:var(--gold-deep);color:#fff;padding:15px 18px}
+.plat{background:var(--bar-dark);border-top:2px solid var(--gold);color:#fff;padding:16px 18px}
 .plat-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px}
-.plat-h strong{font-family:var(--en);font-size:19px;font-weight:600;letter-spacing:.02em}
-.plat-h span{font-size:12px;color:rgba(255,255,255,.92)}
-.plat-s{border-top:1px solid rgba(255,255,255,.3);margin-top:11px;padding-top:11px}
-.plat-s p{margin:0 0 8px;font-size:10px;font-weight:700;letter-spacing:.14em;color:rgba(255,255,255,.72)}
+.plat-h strong{font-family:var(--en);font-size:19px;font-weight:600;letter-spacing:.02em;color:var(--gold-soft)}
+.plat-h span{font-size:12px;color:rgba(255,255,255,.86)}
+.plat-s{border-top:1px solid rgba(255,255,255,.22);margin-top:12px;padding-top:12px}
+.plat-s p{margin:0 0 8px;font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--gold-soft)}
 .stack{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
-.stack i{font-style:normal;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.34);padding:8px 4px;text-align:center;font-size:11px;line-height:1.4}
+.stack i{font-style:normal;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.26);padding:8px 4px;text-align:center;font-size:11px;line-height:1.4}
 .sols{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
 .sol{position:relative;border:1px solid var(--line);border-top:2px solid var(--line2);background:#fff;padding:17px 13px 13px}
 .sol.live{border-top-color:var(--gold)}
@@ -343,14 +343,14 @@ section .wrap{padding:0}
 .dataloop span{display:inline-block;font-family:var(--en);font-size:10px;font-weight:600;letter-spacing:.14em;color:var(--gold-deep);margin-right:12px}
 .dataloop b{color:var(--ink)}
 /* GOAL */
-.goal{border:1px solid var(--ink);margin-top:22px}
-.goal-h{background:var(--ink);color:#fff;padding:19px 22px}
-.goal-h p{margin:0;font-family:var(--en);font-size:10px;font-weight:600;letter-spacing:.2em;color:rgba(255,255,255,.6)}
-.goal-h h3{margin:7px 0 0;font-family:var(--disp);font-size:clamp(17px,2vw,23px);font-weight:500;line-height:1.45;color:#fff;letter-spacing:.01em}
+.goal{border:1px solid var(--line2);border-top:2px solid var(--gold);margin-top:22px}
+.goal-h{background:var(--pale);color:var(--ink);padding:20px 22px}
+.goal-h p{margin:0;font-family:var(--en);font-size:10px;font-weight:600;letter-spacing:.2em;color:var(--ink)}
+.goal-h h3{margin:7px 0 0;font-family:var(--disp);font-size:clamp(17px,2vw,23px);font-weight:500;line-height:1.45;color:var(--ink);letter-spacing:.01em}
 .goal-g{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:22px}
 .goal-g>div{border-left:2px solid var(--gold);padding-left:12px;font-size:12px;color:var(--sub2);line-height:1.8}
 .goal-g b{display:block;font-size:14px;color:var(--ink);margin-bottom:3px}
-.goal-f{background:#FBFAF7;border-top:1px solid var(--line);padding:16px 22px;font-size:12.5px;color:var(--sub2);line-height:1.9;text-wrap:pretty}
+.goal-f{background:#fff;border-top:1px solid var(--line);padding:16px 22px;font-size:12.5px;color:var(--sub2);line-height:1.9;text-wrap:pretty}
 .goal-f b{display:block;font-size:14px;color:var(--gold-deep);margin-bottom:3px}
 @media(max-width:900px){
   .procs,.arch-ar{grid-template-columns:repeat(2,1fr)}
@@ -978,7 +978,7 @@ footer a{color:var(--faint)}
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <h2 class="sec">自社プロダクトを土台に、貴社仕様へ作り込む。</h2>
+          <h2 class="sec">自社プロダクトを土台に、貴社仕様にカスタマイズ。</h2>
         </div>
         <p class="sec-lead">調達・生産・物流・販売は、担当も帳票も分かれています。ただし、扱う取引そのものは同じものです。<b style="color:#14181F;">全工程に共通する処理を1つの基盤にまとめ、工程ごとの違いは個別のソリューションで受け止めます。</b>読み取り・照合・判定はAIが担い、承認は人が行う設計です。</p>
       </div>
