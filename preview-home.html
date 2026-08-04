@@ -310,7 +310,8 @@ section .wrap{padding:0}
 .prod .sub{font-size:12px;color:var(--faint);margin:0 0 14px}
 .prod p{margin:0 0 16px;font-size:13px;color:var(--sub2);line-height:2}
 .prod .free{display:inline-block;font-size:12px;color:var(--gold-deep);border:1px solid var(--line2);padding:6px 14px;margin-bottom:16px;letter-spacing:.03em}
-.g3.prods{gap:18px}
+.prods{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:860px){.prods{grid-template-columns:1fr}}
 .prod.dev{border-top-color:var(--line2);background:#FDFDFB}
 .prod .badge{display:inline-block;margin-left:8px;padding:2px 8px;background:var(--gold-deep);color:#fff;font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.04em;vertical-align:middle}
 .prod.dev .free{color:var(--sub2);border-color:var(--line2)}
@@ -852,9 +853,9 @@ footer a{color:var(--faint)}
         <div>
           <h2 class="sec">自社プロダクトを土台に、貴社仕様へ作り込む。</h2>
         </div>
-        <p class="sec-lead">書類を読み、照合し、判定する。この反復作業を担うAIプロダクトを自社で開発しています。<b style="color:#14181F;">ゼロから作るのでも、既製品をそのまま使うのでもありません。</b>実績のあるプロダクトを土台に、貴社の業務プロセスと固有要件へ作り込むため、短期間で立ち上げながら現場に合った形に仕上がります。いずれも書類を扱う反復業務という共通の構造を持っています。</p>
+        <p class="sec-lead">書類を読み、照合し、判定する。この反復作業を担うAIプロダクトを自社で開発しています。<b style="color:#14181F;">ゼロから作るのでも、既製品をそのまま使うのでもありません。</b>実績のあるプロダクトを土台に、貴社の業務プロセスと固有要件へ作り込むため、短期間で立ち上げながら現場に合った形に仕上がります。いずれも「書類を読み、照合し、判定する」という共通の構造を持つ業務を対象にしています。</p>
       </div>
-      <div class="g3 prods">
+      <div class="prods">
         <div class="prod">
           <p class="tag-en" style="margin-bottom:0;">BORDERFLOW AI</p>
           <h3>自律型 貿易事務エージェント</h3>
@@ -881,6 +882,15 @@ footer a{color:var(--faint)}
           <p class="cust">最終判定は貴社の責任で行う前提の設計です。AIが担うのは、判定に至るまでの検索・照合・記録です。</p>
           <span class="free">2026年内リリース予定・先行導入企業を募集中</span><br>
           <a class="go" href="/blog/export-control-ai">安全保障貿易管理の解説記事 →</a>
+        </div>
+        <div class="prod dev">
+          <p class="tag-en" style="margin-bottom:0;">PROCUREMENT AI<span class="badge">開発中</span></p>
+          <h3>AI搭載 調達プラットフォーム</h3>
+          <p class="sub">見積書をまとめてアップロードするだけ</p>
+          <p>各社バラバラの様式で届く見積書をAIが読み取り、条件を揃えた比較表に自動整形。仕様との適合チェック、過去単価との差異検出、サプライヤーの与信・法規制スクリーニングまでを一連で処理し、稟議に使える資料を生成します。</p>
+          <p class="cust">大規模な調達基盤の導入が過剰な中堅企業向けに、既存の購買フローを活かしたまま導入できる設計です。</p>
+          <span class="free">2026年内リリース予定・先行導入企業を募集中</span><br>
+          <a class="go" href="#contact">導入について相談する →</a>
         </div>
       </div>
     </div>
@@ -944,7 +954,7 @@ footer a{color:var(--faint)}
       <table class="co">
         <tr><th>社名</th><td>Wing</td></tr>
         <tr><th>設立</th><td>2026年</td></tr>
-        <tr><th>事業内容</th><td>自社AIプロダクト（BorderFlow AI・ChemOS・該非判定AI）を軸としたカスタマイズソリューションの開発・提供、AI・DXコンサルティング、実装・伴走支援</td></tr>
+        <tr><th>事業内容</th><td>自社AIプロダクト（BorderFlow AI・ChemOS・該非判定AI・調達プラットフォーム）を軸としたカスタマイズソリューションの開発・提供、AI・DXコンサルティング、実装・伴走支援</td></tr>
       </table>
     </div>
   </section>
