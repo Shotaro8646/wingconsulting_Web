@@ -388,6 +388,17 @@ footer a{color:var(--faint)}
 .vs-trad{font-size:13px;color:var(--sub2);line-height:1.9}
 .vs-wing{background:var(--ink);color:#fff;font-size:13px;font-weight:500;line-height:1.9}
 .vs-wing em{font-style:normal;color:var(--gold-soft);font-weight:700}
+.str-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:1000px){.str-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.str-grid{grid-template-columns:1fr}}
+.str{border-top:2px solid var(--ink);padding:16px 0 0;display:flex;flex-direction:column}
+.str:nth-child(4){border-top-color:var(--gold)}
+.str-n{margin:0 0 8px;font-family:var(--en);font-weight:600;font-size:12px;letter-spacing:.18em;color:var(--gold-deep)}
+.str h3{margin:0 0 10px;font-size:17px;font-weight:700;color:var(--ink)}
+.str p{margin:0 0 14px;font-size:12.5px;color:var(--sub2);line-height:1.95;flex:1}
+.str-l{font-size:12px;color:var(--gold-deep);font-weight:700;letter-spacing:.03em}
+.str-note{margin:26px 0 0;padding:16px 20px;background:#FBFAF7;border-left:2px solid var(--gold);font-size:13px;color:var(--sub2);line-height:2;max-width:900px;text-wrap:pretty}
+.str-note b{color:var(--ink)}
 .wall{display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch;margin-top:8px}
 @media(max-width:900px){.wall{grid-template-columns:1fr}}
 .wall-ar{display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--gold);padding:0 18px}
@@ -540,6 +551,7 @@ footer a{color:var(--faint)}
       </a>
       <nav class="navlinks" style="display:flex; gap:28px; align-items:center;">
         <a href="#fde" style="font-size:13px; color:#5C6470; white-space:nowrap;">FDEとは</a>
+        <a href="#strength" style="font-size:13px; color:#5C6470; white-space:nowrap;">強み</a>
         <a href="#consulting" style="font-size:13px; color:#5C6470; white-space:nowrap;">提供サービス</a>
         <a href="#expertise" style="font-size:13px; color:#5C6470; white-space:nowrap;">対応領域</a>
         <a href="#products" style="font-size:13px; color:#5C6470; white-space:nowrap;">AIプロダクト</a>
@@ -701,6 +713,47 @@ footer a{color:var(--faint)}
           <div class="wall-r gold">結果：<b>「使われるAI」</b><span>ROIの回収と、模倣されない強み（Moat）の構築</span></div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ═══════ 差別化の4要素 ═══════ -->
+  <section id="strength" class="hairline-t rail">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 class="sec">これを1つで揃えられる会社は、多くありません。</h2>
+        </div>
+        <p class="sec-lead">内部の旗振り役として機能するには、4つの力が同時に必要です。どれか1つでも欠けると、構想か実装か定着のどこかで止まります。Wingはこの4つを1つの組織で持ち、案件ごとに組み替えて使います。</p>
+      </div>
+
+      <div class="str-grid">
+        <div class="str">
+          <p class="str-n">01</p>
+          <h3>業務理解</h3>
+          <p>調達・貿易・経理・IT組織の実務を、外資系および日系のコンサルティングファームで10年以上。現場の帳票と例外処理まで分かるため、ヒアリング初日から論点に入れます。</p>
+          <a class="str-l" href="#expertise">対応領域を見る →</a>
+        </div>
+        <div class="str">
+          <p class="str-n">02</p>
+          <h3>コンサルティング力</h3>
+          <p>経営課題を特定し、投資対効果で優先順位をつけ、経営層の合意形成まで持っていく力。何を作るかを決める前に、そもそも作るべきかを判断します。</p>
+          <a class="str-l" href="#consulting">提供サービスを見る →</a>
+        </div>
+        <div class="str">
+          <p class="str-n">03</p>
+          <h3>AI実装力</h3>
+          <p>要件定義から実装、運用設計までを同じ人間が担当。最新のAI開発環境を使い、数週間で動くものを出します。設計と実装の間で情報が失われません。</p>
+          <a class="str-l" href="#fde">進め方を見る →</a>
+        </div>
+        <div class="str">
+          <p class="str-n">04</p>
+          <h3>テンプレート</h3>
+          <p>自社プロダクトと標準業務プロセスの型を保有。ゼロから作らないため立ち上げが速く、他社事例で検証済みの設計をそのまま使えます。</p>
+          <a class="str-l" href="#products">プロダクトを見る →</a>
+        </div>
+      </div>
+
+      <p class="str-note">大手ファームは<b>01・02</b>を持ちますが実装は外注、開発会社は<b>03</b>に強くても経営課題は扱わず、SaaSベンダーは<b>04</b>はあっても個社の業務には合わせません。<b>4つが1つに揃っていること</b>が、Wingの立ち位置です。</p>
     </div>
   </section>
 
