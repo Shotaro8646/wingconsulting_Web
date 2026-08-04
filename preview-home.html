@@ -307,11 +307,6 @@ table.c .num{font-family:var(--en);color:var(--gold-deep);font-weight:600}
 .prof p{margin:0;font-size:13px;color:var(--sub2);line-height:1.95}
 .why-copy p{margin:0 0 14px;font-size:13px;color:var(--sub2);line-height:2.1}
 .why-copy b{color:var(--ink)}
-.wstats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
-.wstat{background:#fff;padding:24px 20px}
-.wstat .n{font-family:var(--en);font-weight:500;font-size:34px;color:var(--ink);line-height:1}
-.wstat .n b{color:var(--gold);font-weight:500;font-size:.6em}
-.wstat .l{font-size:11px;color:var(--faint);margin-top:6px;letter-spacing:.03em}
 .trust{margin-top:20px;padding:16px 20px;border-left:2px solid var(--gold);background:#FBFAF7;font-size:13px;color:var(--sub2);line-height:2}
 /* faq */
 .faq{display:grid;gap:12px;max-width:860px}
@@ -420,6 +415,37 @@ footer a{color:var(--faint)}
 .fde2-src span{display:block;font-size:11px;color:var(--faint);margin-top:4px}
 .draft-ribbon{position:fixed;bottom:18px;right:-46px;transform:rotate(-38deg);background:#B33;color:#fff;font-size:11px;font-weight:700;letter-spacing:.18em;padding:6px 60px;z-index:99;pointer-events:none;opacity:.92;font-family:var(--sans)}
 @media(max-width:900px){.navlinks a:not(.btn-dark){display:none}}
+/* ───────── モバイル最適化 ───────── */
+@media(max-width:720px){
+  /* 比較表：横スクロールをやめ、行ごとのカードに積み替える */
+  .vs{min-width:0;border:none}
+  .vs-r{display:block;border:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:14px;background:#fff}
+  .vs-r.vs-hr{display:none}
+  .vs-r>div{padding:14px 18px}
+  .vs-label{background:#FBFAF7;border-bottom:1px solid var(--line);font-size:12px;color:var(--ink);font-weight:700}
+  .vs-trad{position:relative;padding-top:30px !important;color:var(--sub2)}
+  .vs-trad::before{content:'従来型のコンサル・SI';position:absolute;top:10px;left:18px;font-size:10px;letter-spacing:.08em;color:var(--faint);font-weight:700}
+  .vs-wing{position:relative;padding-top:30px !important}
+  .vs-wing::before{content:'Wing（FDE型）';position:absolute;top:10px;left:18px;font-size:10px;letter-spacing:.08em;color:var(--gold-soft);font-weight:700}
+  /* ベン図：中央円の英語表記を隠し、溢れを防ぐ */
+  .vn-core span{display:none}
+  .vn-core b{font-size:14px}
+  .vn b{font-size:10.5px}
+  .vn{padding:8%}
+  /* 分散側：意味を失う✕印を非表示 */
+  .fde2-x{display:none}
+  /* ボタンは全幅で押しやすく */
+  .btn-dark,.btn-line{display:block;width:100%;text-align:center;white-space:normal}
+  .cta-strip .btn-dark{width:auto;display:inline-block}
+}
+@media(max-width:560px){
+  /* 4能力は1列に積む（128px幅の窮屈さを解消） */
+  .fde2-circles{grid-template-columns:1fr;gap:12px}
+  .fc{flex-direction:row;justify-content:flex-start;gap:14px;text-align:left;padding:14px 16px}
+  .fc b{flex:1}
+  .fde2-venn{max-width:280px}
+}
+
 .hero-grid{display:grid;grid-template-columns:minmax(0,760px) 1fr;gap:56px;align-items:center}
 @media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:0}}
 @media(max-width:480px){h1{font-size:clamp(22px,7vw,27px) !important}}
