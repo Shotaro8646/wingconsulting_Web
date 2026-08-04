@@ -431,9 +431,14 @@ footer a{color:var(--faint)}
 .fde-role>span b{display:block;font-size:12px;color:var(--ink);margin-bottom:3px}
 .wall-n{margin:16px 0 0;font-size:12px;color:var(--faint);line-height:1.9}
 .wall-n.gold{color:var(--gold-deep)}
-.wall-sp{margin-top:12px;padding:10px 12px;background:#FBFAF7;border:1px solid var(--line);font-size:11px;color:var(--faint);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.wall-sp b{font-family:var(--en);font-size:15px;color:var(--ink)}
-.wall-sp b.g{color:var(--gold-deep)}
+.wall-sp{margin-top:12px;padding:14px 16px;background:#FBFAF7;border:1px solid var(--line2);display:block}
+.wall-sp.gold{border-color:var(--gold);background:#FDFBF6}
+.wall-sp .sp-t{margin:0 0 8px;font-size:12px;font-weight:700;color:var(--ink);line-height:1.7}
+.wall-sp .sp-v{margin:0 0 8px;display:flex;align-items:baseline;gap:8px;border-top:1px dashed var(--line2);border-bottom:1px dashed var(--line2);padding:8px 0}
+.wall-sp .sp-v b{font-family:var(--en);font-size:22px;color:var(--sub);line-height:1}
+.wall-sp .sp-v b.g{color:var(--gold-deep)}
+.wall-sp .sp-v span{font-size:11px;color:var(--faint)}
+.wall-sp .sp-d{margin:0;font-size:11px;color:var(--sub2);line-height:1.8}
 .wall-r{margin-top:12px;border-top:1px solid var(--line);padding-top:12px;font-size:13px;color:var(--sub2)}
 .wall-r b{color:var(--ink);font-size:14px;margin:0 2px}
 .wall-r span{display:block;font-size:11px;color:var(--faint);margin-top:3px}
@@ -634,7 +639,11 @@ footer a{color:var(--faint)}
             <div class="vend"><span>コンサル</span><span>開発会社</span><span>製品ベンダー</span><span>SIer</span></div>
           </div>
           <p class="wall-n">経営・現場・ITで一貫した打ち手が取られず、現場に落ちる前に立ち消えになる</p>
-          <div class="wall-sp"><span>動くものが出るまで</span><b>月〜年</b><span>直列・途中で修正できない</span></div>
+          <div class="wall-sp">
+            <p class="sp-t">工程ごとに担当が替わり、段階的に開発</p>
+            <p class="sp-v"><b>数ヶ月</b><span>初期版が出るまで</span></p>
+            <p class="sp-d">前工程の完了を待って次へ進むため、途中で方針を変えられない</p>
+          </div>
           <div class="wall-r">結果：<b>約95%のAIパイロットが失敗</b><span>MIT "State of AI in Business"（2025）</span></div>
         </div>
 
@@ -664,7 +673,11 @@ footer a{color:var(--faint)}
             </div>
           </div>
           <p class="wall-n gold">経営・現場・ITを一人が貫くから、打ち手が現場で使われる状態まで到達する</p>
-          <div class="wall-sp"><span>動くものが出るまで</span><b class="g">日〜週</b><span>反復・その場で修正</span></div>
+          <div class="wall-sp gold">
+            <p class="sp-t">多段階の導入ステップをFDEが一貫して推進</p>
+            <p class="sp-v"><b class="g">数週間</b><span>初期版を実装</span></p>
+            <p class="sp-d">経営・ビジネスとAIの双方を理解したコンサルタント／AIエンジニアが高速に解決</p>
+          </div>
           <div class="wall-r gold">結果：<b>「使われるAI」</b><span>ROIの回収と、模倣されない強み（Moat）の構築</span></div>
         </div>
       </div>
