@@ -309,6 +309,10 @@ section .wrap{padding:0}
 .prod .sub{font-size:12px;color:var(--faint);margin:0 0 14px}
 .prod p{margin:0 0 16px;font-size:13px;color:var(--sub2);line-height:2}
 .prod .free{display:inline-block;font-size:12px;color:var(--gold-deep);border:1px solid var(--line2);padding:6px 14px;margin-bottom:16px;letter-spacing:.03em}
+.g3.prods{gap:18px}
+.prod.dev{border-top-color:var(--line2);background:#FDFDFB}
+.prod .badge{display:inline-block;margin-left:8px;padding:2px 8px;background:var(--gold-deep);color:#fff;font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.04em;vertical-align:middle}
+.prod.dev .free{color:var(--sub2);border-color:var(--line2)}
 .prod .cust{margin:0 0 14px;font-size:12px;color:var(--gold-deep);line-height:1.9;border-left:2px solid var(--gold);padding-left:12px}
 .prod .go{font-size:13px;color:var(--gold-deep);font-weight:700;letter-spacing:.04em}
 /* why */
@@ -846,9 +850,9 @@ footer a{color:var(--faint)}
         <div>
           <h2 class="sec">自社プロダクトを土台に、貴社仕様へ作り込む。</h2>
         </div>
-        <p class="sec-lead">書類を読み、照合し、判定する。この反復作業を担うAIプロダクトを自社で開発しています。<b style="color:#14181F;">ゼロから作るのでも、既製品をそのまま使うのでもありません。</b>実績のあるプロダクトを土台に、貴社の業務プロセスと固有要件へ作り込むため、短期間で立ち上げながら現場に合った形に仕上がります。</p>
+        <p class="sec-lead">書類を読み、照合し、判定する。この反復作業を担うAIプロダクトを自社で開発しています。<b style="color:#14181F;">ゼロから作るのでも、既製品をそのまま使うのでもありません。</b>実績のあるプロダクトを土台に、貴社の業務プロセスと固有要件へ作り込むため、短期間で立ち上げながら現場に合った形に仕上がります。いずれも書類を扱う反復業務という共通の構造を持っています。</p>
       </div>
-      <div class="g2">
+      <div class="g3 prods">
         <div class="prod">
           <p class="tag-en" style="margin-bottom:0;">BORDERFLOW AI</p>
           <h3>自律型 貿易事務エージェント</h3>
@@ -866,6 +870,15 @@ footer a{color:var(--faint)}
           <p class="cust">貴社の調査票様式・社内規程・サプライヤー体制に合わせて作り込みます。</p>
           <span class="free">1ヶ月無料PoC受付中（ソフトウェア使用料 完全無料）</span><br>
           <a class="go" href="/chemos-guide">ソリューション詳細 →</a>
+        </div>
+        <div class="prod dev">
+          <p class="tag-en" style="margin-bottom:0;">EXPORT CONTROL AI<span class="badge">開発中</span></p>
+          <h3>該非判定の下調べ自動化</h3>
+          <p class="sub">製品仕様書をアップロードするだけ</p>
+          <p>仕様書・データシートをAIが読み取り、輸出令別表第1の該当候補となる項番を抽出。貨物等省令のスペックと突合し、パラメータシートの下書きを条文の引用付きで生成します。判定履歴を蓄積するため、法改正時に再確認が必要な品目も洗い出せます。</p>
+          <p class="cust">最終判定は貴社の責任で行う前提の設計です。AIが担うのは、判定に至るまでの検索・照合・記録です。</p>
+          <span class="free">2026年内リリース予定・先行導入企業を募集中</span><br>
+          <a class="go" href="/blog/export-control-ai">安全保障貿易管理の解説記事 →</a>
         </div>
       </div>
     </div>
@@ -929,7 +942,7 @@ footer a{color:var(--faint)}
       <table class="co">
         <tr><th>社名</th><td>Wing</td></tr>
         <tr><th>設立</th><td>2026年</td></tr>
-        <tr><th>事業内容</th><td>自社AIプロダクト（BorderFlow AI・ChemOS）を軸としたカスタマイズソリューションの開発・提供、AI・DXコンサルティング、実装・伴走支援</td></tr>
+        <tr><th>事業内容</th><td>自社AIプロダクト（BorderFlow AI・ChemOS・該非判定AI）を軸としたカスタマイズソリューションの開発・提供、AI・DXコンサルティング、実装・伴走支援</td></tr>
       </table>
     </div>
   </section>
