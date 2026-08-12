@@ -10,3 +10,19 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "geolocation=(), microphone=(), camera=(), payment=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+
+# ── StayPath デモ（/staypath/）──────────────────────────────
+# 面談の録音にマイクを使うため、この配下だけ microphone を許可する。
+# 検索結果には製品ページ（/staypath-guide）を出したいので、アプリ本体は noindex。
+[[headers]]
+  for = "/staypath/*"
+  [headers.values]
+    Permissions-Policy = "geolocation=(), camera=(), payment=(), microphone=(self)"
+    X-Robots-Tag = "noindex, nofollow"
+
+# SPAのため、/staypath/ 配下のパスは実ファイルが無ければ index.html を返す。
+# 実ファイル（assets配下）が優先されるので、この1行で足りる。
+[[redirects]]
+  from = "/staypath/*"
+  to = "/staypath/index.html"
+  status = 200

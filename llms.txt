@@ -9,6 +9,7 @@
 ## AIプロダクト
 - [BorderFlow AI](https://wingconsulting.org/borderflow-guide): 自律型の貿易事務エージェント。AI-OCRによる書類読取、HS分類、通関申告、原価計算までを自動処理
 - [ChemOS](https://wingconsulting.org/chemos-guide): PFAS・chemSHERPA対応の自動化。含有物質の自動解析からサプライヤー照会・提出物作成まで証跡付きで完走
+- [StayPath](https://wingconsulting.org/staypath-guide): 外国人材受入支援の業務管理システム。登録支援機関・監理団体向けに、在留期限の走査、申請書類の展開、様式差し込みによる契約書作成と照合、面談録音からの要約を自動化。デモ公開中
 
 ## 主要インサイト
 - [貿易DX完全ガイド](https://wingconsulting.org/blog/trade-dx-complete-guide): 輸出入の全業務フローとAI活用による自動化
