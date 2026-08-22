@@ -1,0 +1,49 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>richmenu</title>
+<!--
+  LINEのリッチメニュー（トークを開くと下に出る固定メニュー）の下絵。
+  2500×1686 を 3列×2行に等分する。枠の位置は line-richmenu の areas と同じ数字。
+
+  地は白。アプリ本体と同じく、面で区切らずヘアラインで切る。
+  トークの背景に対して沈まないよう、枠線は本体より一段濃くしてある。
+-->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Outfit:wght@300&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:2500px;height:1686px;background:#FFFFFF;
+    font-family:'Noto Sans JP',sans-serif;color:#14181F;
+    display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr)}
+  .c{position:relative;display:flex;flex-direction:column;justify-content:center;padding:0 78px;
+    border-right:3px solid #E6E4DF;border-bottom:3px solid #E6E4DF}
+  .c:nth-child(3n){border-right:none}
+  .c:nth-child(n+4){border-bottom:none}
+  .n{position:absolute;top:62px;left:78px;font-family:'Outfit',sans-serif;
+    font-size:38px;font-weight:300;letter-spacing:.14em;color:#A98A4B}
+  .t{font-size:86px;font-weight:500;letter-spacing:.01em;line-height:1.24}
+  .s{margin-top:24px;font-size:42px;font-weight:400;line-height:1.5;color:#6B7280}
+</style>
+<div class="c"><span class="n">01</span>
+  <div class="t">働きたい</div>
+  <div class="s">日本で働きたい方</div>
+</div>
+<div class="c"><span class="n">02</span>
+  <div class="t">在籍中の相談</div>
+  <div class="s">いま働いている方</div>
+</div>
+<div class="c"><span class="n">03</span>
+  <div class="t">採用の相談</div>
+  <div class="s">受入をご検討の企業さま</div>
+</div>
+<div class="c"><span class="n">04</span>
+  <div class="t">求人を出す</div>
+  <div class="s">募集内容が決まっている<br>企業さま</div>
+</div>
+<div class="c"><span class="n">05</span>
+  <div class="t">送り出し機関</div>
+  <div class="s">海外の送り出し機関の方</div>
+</div>
+<div class="c"><span class="n">06</span>
+  <div class="t">その他</div>
+  <div class="s">上記以外のお問い合わせ</div>
+</div>
