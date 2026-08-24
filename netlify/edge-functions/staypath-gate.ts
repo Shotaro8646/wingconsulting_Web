@@ -76,18 +76,14 @@ export default async (request: Request, context: Context) => {
 
   // 設定前は開けない。「掛けたつもりで開いていた」を作らないため、
   // 通してしまうのではなく、何を設定すればよいかを出して止める
+  // 未設定のあいだは通す。設定が済むまで運用側まで入れなくなり、
+  // 実際に締め出してしまった。環境変数を入れた瞬間に下の判定が効く。
   if (!user || !pass) {
-    return new Response(
-      page('入口の合言葉が未設定です', `
-        <p>Netlify の環境変数に <code>STAYPATH_USER</code> と <code>STAYPATH_PASS</code> を
-        設定すると開きます。</p>
-        <p>Site configuration → Environment variables → Add a variable。
-        設定したあと、Deploys から Clear cache and deploy site で反映されます。</p>
-        <p>受付フォーム（<code>/staypath/form/…?t=…</code>）はこの門を通らないので、
-        いまも開けます。</p>`),
-      { status: 503, headers: { ...ASK, 'WWW-Authenticate': '' } },
-    )
+    const res = await context.next()
+    res.headers.set('X-StayPath-Gate', 'off: unset')
+    return res
   }
+
 
   const auth = request.headers.get('authorization') ?? ''
   if (auth.startsWith('Basic ')) {
