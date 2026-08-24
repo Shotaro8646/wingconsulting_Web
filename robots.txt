@@ -19,3 +19,10 @@ User-agent: *
 Allow: /
 
 Sitemap: https://wingconsulting.org/sitemap.xml
+
+# /staypath/ は Disallow にしない。
+# あそこは X-Robots-Tag: noindex を返している（netlify.toml）。
+# robots.txt で弾くとクローラーがヘッダーを読めなくなり、
+# 万一すでに索引に載っていた場合、消えずに残る。
+# 読ませたうえで noindex を伝えるほうが確実に落ちる。
+# リンクはトップからも製品ページからも外したので、辿り着く経路は無い。
