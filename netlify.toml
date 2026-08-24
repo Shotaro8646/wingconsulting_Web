@@ -26,3 +26,12 @@
   from = "/staypath/*"
   to = "/staypath/index.html"
   status = 200
+
+# ── 入口の門 ────────────────────────────────────
+# /staypath/ 配下は合言葉を知っている人にだけ出す。
+# 合言葉は Netlify の環境変数（STAYPATH_USER / STAYPATH_PASS）に置く。
+# ここは公開リポジトリなので、値そのものは絶対に書かない。
+# 受付フォームは門を通らない。関数の側で通す道を決めている。
+[[edge_functions]]
+  path = "/staypath/*"
+  function = "staypath-gate"
