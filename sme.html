@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KN7NWHFK9G');
+</script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>その業務、AIで解決できるかもしれません。｜株式会社Wing</title>
+  <meta name="description" content="従業員20〜80名の企業向けのAI導入支援。日報・見積書・チェック帳票・申請書類などの手作業を、訪問60〜90分の無料診断でAI化の余地から確かめます。AI顧問（月5万円〜）・AI導入・AIコンサルティングの3つのご支援。">
+  <link rel="canonical" href="https://wingconsulting.org/sme">
+  <meta property="og:title" content="その業務、AIで解決できるかもしれません。｜株式会社Wing">
+  <meta property="og:description" content="従業員20〜80名の企業向けのAI導入支援。日報・見積書・チェック帳票・申請書類などの手作業を、訪問60〜90分の無料診断でAI化の余地から確かめます。">
+  <meta property="og:url" content="https://wingconsulting.org/sme">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:image" content="https://wingconsulting.org/images/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://wingconsulting.org/images/og-default.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #16233F;
+      --ink-2: #4A5568;
+      --ink-deep: #0E1932;
+      --line: #C9CCC4;
+      --line-2: #E2E4DD;
+      --bg: #FBFBF8;
+      --white: #FFFFFF;
+      --hover: #F8F8F2;
+      --hi: #F5D547;
+      --red: #C4432B;
+      --disp: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+      --mono: 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      background-image:
+        linear-gradient(#E7E7DD 1px, transparent 1px),
+        linear-gradient(90deg, #E7E7DD 1px, transparent 1px),
+        linear-gradient(#F1F1EA 1px, transparent 1px),
+        linear-gradient(90deg, #F1F1EA 1px, transparent 1px);
+      background-size: 140px 140px, 140px 140px, 28px 28px, 28px 28px;
+      color: var(--ink);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      text-wrap: pretty;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; }
+    .wrap { max-width: 1120px; margin: 0 auto; }
+    .mark { background: linear-gradient(transparent 62%, var(--hi) 62%); }
+
+    /* ── ヘッダー ── */
+    .hd { border-bottom: 1px solid var(--line); background: var(--white); position: sticky; top: 0; z-index: 20; }
+    .hd .wrap { padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .brand { display: flex; align-items: baseline; gap: 10px; }
+    .brand-name { font-family: var(--disp); font-weight: 700; font-size: 17px; white-space: nowrap; }
+    .brand-tag { font-family: var(--mono); font-size: 10px; letter-spacing: .16em; color: var(--ink-2); white-space: nowrap; }
+    .btn-s {
+      font-family: var(--disp); font-weight: 700; font-size: 13px; text-decoration: none;
+      border: 1px solid var(--ink); padding: 8px 14px; background: var(--white); white-space: nowrap;
+      transition: background .15s ease, color .15s ease;
+    }
+    .btn-s:hover { background: var(--ink); color: var(--white); }
+
+    /* ── ヒーロー ── */
+    .hero { padding: 44px 24px 40px; }
+    .eyebrow {
+      font-family: var(--mono); font-size: 11px; letter-spacing: .18em; color: var(--ink-2);
+      border: 1px solid var(--line); background: var(--white); display: inline-block; padding: 5px 9px; margin-bottom: 22px;
+    }
+    h1 { font-family: var(--disp); font-weight: 700; font-size: clamp(28px, 5.6vw, 56px); line-height: 1.38; letter-spacing: -0.02em; margin: 0 0 20px; }
+    h1 > span { display: block; }
+    .hero-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+      gap: 24px; align-items: start; border-top: 1px solid var(--line); padding-top: 22px;
+    }
+    .lead { margin: 0; font-size: clamp(16px, 1.6vw, 19px); line-height: 1.9; }
+    .btn-l {
+      display: inline-block; font-family: var(--disp); font-weight: 700; font-size: 18px;
+      color: var(--white); background: var(--ink); border: 1px solid var(--ink);
+      padding: 15px 26px; text-decoration: none; transition: background .15s ease;
+    }
+    .btn-l:hover { background: var(--ink-deep); }
+    .note { margin: 14px 0 0; font-family: var(--mono); font-size: 12px; color: var(--ink-2); }
+
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr)); gap: 1px; background: var(--white); border: 1px solid var(--line); margin-top: 26px; }
+    .stat { background: var(--white); outline: 1px solid var(--line); padding: 14px 16px; }
+    .stat-k { font-family: var(--mono); font-size: 10px; letter-spacing: .16em; color: var(--ink-2); margin-bottom: 6px; }
+    .stat-v { font-family: var(--mono); font-size: 17px; }
+    .stat-v.b { font-weight: 700; }
+    .stat-v.jp { font-family: var(--disp); font-weight: 700; font-size: 15px; }
+
+    /* ── セクション共通 ── */
+    .sec { border-top: 1px solid var(--line); padding: 44px 24px; }
+    .sec.white { background: var(--white); }
+    .sec-label { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+    .sec-no { font-family: var(--mono); font-size: 11px; letter-spacing: .14em; color: var(--ink); border: 1px solid var(--ink); padding: 4px 8px; }
+    .sec-nm { font-family: var(--disp); font-weight: 700; font-size: 12px; letter-spacing: .24em; color: var(--ink-2); }
+    .rule { flex: 1; height: 1px; background: var(--line); }
+    h2 { font-family: var(--disp); font-weight: 700; font-size: clamp(23px, 3.4vw, 36px); line-height: 1.4; letter-spacing: -0.01em; margin: 0 0 24px; }
+    .foot-note { margin: 14px 0 0; font-size: 13px; color: var(--ink-2); }
+
+    /* ── 01 対象業務 ── */
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); gap: 1px; background: var(--white); border: 1px solid var(--line); }
+    .card { background: var(--white); outline: 1px solid var(--line); padding: 20px 22px; position: relative; transition: background .15s ease; }
+    .card:hover { background: var(--hover); }
+    .card-no { position: absolute; top: 12px; right: 14px; font-family: var(--mono); font-size: 10px; letter-spacing: .12em; color: var(--ink-2); }
+    .card-hd { display: flex; gap: 14px; align-items: center; margin-bottom: 14px; }
+    .card-hd svg { flex: none; }
+    .card-ttl { font-family: var(--disp); font-weight: 700; font-size: 17px; line-height: 1.5; }
+    .ba { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 10px 12px; border-top: 1px solid var(--line-2); padding-top: 13px; }
+    .tag { font-family: var(--mono); font-size: 10px; letter-spacing: .1em; padding: 3px 0; width: 56px; text-align: center; white-space: nowrap; align-self: start; margin-top: 3px; }
+    .tag-now { color: var(--ink-2); border: 1px solid var(--line); background: var(--bg); }
+    .tag-ai { color: var(--white); border: 1px solid var(--ink); background: var(--ink); }
+    .txt-now { font-size: 13px; line-height: 1.7; color: var(--ink-2); }
+    .txt-ai { font-family: var(--disp); font-weight: 700; font-size: 17px; line-height: 1.6; color: var(--ink); }
+
+    /* ── 02 サービス ── */
+    .svcs { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 1px; background: var(--white); border: 1px solid var(--line); }
+    .svc { background: var(--white); outline: 1px solid var(--line); padding: 22px 20px; display: flex; flex-direction: column; gap: 16px; }
+    .svc-k { font-family: var(--mono); font-size: 12px; letter-spacing: .16em; color: var(--ink-2); margin-bottom: 6px; }
+    h3 { font-family: var(--disp); font-weight: 700; font-size: 22px; margin: 0 0 6px; }
+    .svc-sub { margin: 0; font-size: 14px; line-height: 1.8; color: var(--ink-2); }
+    .rows { border-top: 1px solid var(--line); }
+    .row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 11px 0; border-bottom: 1px solid var(--line-2); }
+    .row:last-child { border-bottom: 0; }
+    .row-hd { display: flex; align-items: center; gap: 9px; flex-wrap: wrap; }
+    .row-ttl { font-family: var(--disp); font-weight: 700; font-size: 15px; }
+    .row-sub { font-size: 13px; color: var(--ink-2); line-height: 1.65; }
+    .pill { font-family: var(--mono); font-size: 10px; letter-spacing: .14em; color: var(--red); border: 1px solid var(--red); padding: 2px 6px; }
+    .price { border: 1px solid var(--line); padding: 7px 10px; font-family: var(--mono); font-size: 14px; white-space: nowrap; }
+    .price.hi { border-color: var(--ink); font-weight: 700; font-size: 15px; }
+    .themes { padding: 11px 0 13px; border-bottom: 1px solid var(--line-2); }
+    .themes-k { font-family: var(--mono); font-size: 10px; letter-spacing: .14em; color: var(--ink-2); margin-bottom: 8px; }
+    .themes ul { margin: 0; padding-left: 1.1em; font-size: 13px; line-height: 1.8; color: var(--ink-2); }
+    .terms { margin: 12px 0 0; font-size: 12px; line-height: 1.75; color: var(--ink-2); }
+
+    /* ── 03 FAQ ── */
+    .faq { border-top: 1px solid var(--line); background: var(--white); }
+    .faq summary { display: flex; align-items: flex-start; gap: 14px; padding: 17px 18px; border-bottom: 1px solid var(--line); cursor: pointer; list-style: none; transition: background .15s ease; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary:hover { background: var(--hover); }
+    .q-no { font-family: var(--mono); font-size: 12px; color: var(--ink-2); margin-top: 5px; }
+    .q-t { font-family: var(--disp); font-weight: 700; font-size: 16px; line-height: 1.7; flex: 1; }
+    .q-p { font-family: var(--mono); font-size: 17px; color: var(--ink); transition: transform .18s ease; }
+    .faq details[open] .q-p { transform: rotate(45deg); }
+    .a { padding: 2px 20px 22px 52px; border-bottom: 1px solid var(--line); line-height: 1.9; color: var(--ink-2); max-width: 74ch; }
+    .a p + p { margin-top: 10px; }
+
+    /* ── お問い合わせ ── */
+    .cta { border-top: 1px solid var(--line); background: var(--white); padding: 52px 24px 60px; }
+    .stamp { display: inline-block; border: 2px solid var(--red); color: var(--red); font-family: var(--disp); font-weight: 700; font-size: 15px; letter-spacing: .14em; padding: 8px 15px; transform: rotate(-3deg); margin-bottom: 22px; }
+    .cta h2 { font-size: clamp(25px, 4.4vw, 48px); }
+    .cta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 28px; border-top: 1px solid var(--line); padding-top: 24px; align-items: start; }
+    .cta-lead { margin: 0; line-height: 1.95; }
+
+    .form { display: grid; gap: 13px; }
+    .form label { display: block; font-family: var(--mono); font-size: 10px; letter-spacing: .14em; color: var(--ink-2); margin-bottom: 5px; }
+    .form input, .form textarea {
+      width: 100%; font-family: inherit; font-size: 15px; color: var(--ink); background: var(--bg);
+      border: 1px solid var(--line); border-radius: 0; padding: 10px 12px;
+    }
+    .form textarea { min-height: 96px; resize: vertical; line-height: 1.8; }
+    .form input:focus, .form textarea:focus { outline: 2px solid var(--ink); outline-offset: -1px; background: var(--white); }
+    .form .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr)); gap: 13px; }
+    .form button { justify-self: start; cursor: pointer; }
+    .form .privacy { margin: 0; font-size: 12px; line-height: 1.75; color: var(--ink-2); }
+
+    /* ── フッター ── */
+    .ft { border-top: 1px solid var(--line); padding: 22px 24px 32px; }
+    .ft .wrap { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: baseline; }
+    .ft-name { font-family: var(--disp); font-weight: 700; font-size: 15px; }
+    .ft-meta { font-family: var(--mono); font-size: 11px; letter-spacing: .12em; color: var(--ink-2); }
+
+    @media (max-width: 560px) {
+      .a { padding-left: 18px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="hd">
+  <div class="wrap">
+    <div class="brand">
+      <span class="brand-name">株式会社Wing</span>
+      <span class="brand-tag">AI / SME</span>
+    </div>
+    <a href="#contact" class="btn-s">無料で診断を受ける</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">FOR SMALL &amp; MEDIUM BUSINESS</div>
+    <h1>
+      <span>その業務、</span>
+      <span><span class="mark">AIで解決できるかもしれません。</span></span>
+    </h1>
+    <div class="hero-grid">
+      <p class="lead">無料で、確かめてみませんか。<br>AI化の余地を、クイックに診断します。</p>
+      <div>
+        <a href="#contact" class="btn-l">無料で診断を受ける</a>
+        <p class="note">訪問60〜90分</p>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-k">診断費用</div>
+        <div class="stat-v b"><span class="mark">0円</span></div>
+      </div>
+      <div class="stat">
+        <div class="stat-k">所要時間</div>
+        <div class="stat-v">60〜90分</div>
+      </div>
+      <div class="stat">
+        <div class="stat-k">対象</div>
+        <div class="stat-v jp">従業員20〜80名の企業</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec white">
+  <div class="wrap">
+    <div class="sec-label">
+      <span class="sec-no">01</span>
+      <span class="sec-nm">対象業務</span>
+      <span class="rule"></span>
+    </div>
+    <h2>たとえば、こんな業務</h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="card-no">01</span>
+        <div class="card-hd">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#16233F" stroke-width="1.75" aria-hidden="true"><path d="M4 3h11l4 4v14H4z"></path><path d="M15 3v4h4"></path><path d="M7 11h8M7 14h8M7 17h5"></path></svg>
+          <span class="card-ttl">日報・作業記録</span>
+        </div>
+        <div class="ba">
+          <span class="tag tag-now">いま</span>
+          <span class="txt-now">集めて、打ち直して、集計</span>
+          <span class="tag tag-ai">AIなら</span>
+          <span class="txt-ai">写真に撮れば、表とグラフに</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="card-no">02</span>
+        <div class="card-hd">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#16233F" stroke-width="1.75" aria-hidden="true"><path d="M3 5h18v14H3z"></path><path d="M3 16l5-5 4 4 3-3 6 6"></path><path d="M15 8h3"></path></svg>
+          <span class="card-ttl">現場写真と報告書</span>
+        </div>
+        <div class="ba">
+          <span class="tag tag-now">いま</span>
+          <span class="txt-now">撮ったまま、数百枚</span>
+          <span class="tag tag-ai">AIなら</span>
+          <span class="txt-ai">現場ごとに整理され、報告書の下書きまで</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="card-no">03</span>
+        <div class="card-hd">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#16233F" stroke-width="1.75" aria-hidden="true"><path d="M4 3h16v18H4z"></path><path d="M7 7h10M7 11h6"></path><path d="M7 15h10v3H7z"></path></svg>
+          <span class="card-ttl">見積書</span>
+        </div>
+        <div class="ba">
+          <span class="tag tag-now">いま</span>
+          <span class="txt-now">毎回ゼロから</span>
+          <span class="tag tag-ai">AIなら</span>
+          <span class="txt-ai">過去の似た案件を探し、たたき台を数分で</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="card-no">04</span>
+        <div class="card-hd">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#16233F" stroke-width="1.75" aria-hidden="true"><path d="M5 3h14v18H5z"></path><path d="M9 1h6v4H9z"></path><path d="M8 11l2.5 2.5L16 8"></path><path d="M8 17h8"></path></svg>
+          <span class="card-ttl">温度・衛生のチェック帳票</span>
+        </div>
+        <div class="ba">
+          <span class="tag tag-now">いま</span>
+          <span class="txt-now">書いて、綴じて、終わり</span>
+          <span class="tag tag-ai">AIなら</span>
+          <span class="txt-ai">写真から一覧に。異常のあった日だけ拾える</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="card-no">05</span>
+        <div class="card-hd">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#16233F" stroke-width="1.75" aria-hidden="true"><path d="M3 5h18v16H3z"></path><path d="M3 10h18"></path><path d="M7 3v4M17 3v4"></path><path d="M7 14h3v3H7z"></path></svg>
+          <span class="card-ttl">シフトと発注</span>
+        </div>
+        <div class="ba">
+          <span class="tag tag-now">いま</span>
+          <span class="txt-now">毎週、数時間の頭の体操</span>
+          <span class="tag tag-ai">AIなら</span>
+          <span class="txt-ai">条件を覚えさせて、たたき台は自動で</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="card-no">06</span>
+        <div class="card-hd">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#16233F" stroke-width="1.75" aria-hidden="true"><path d="M3 3h12v12H3z"></path><path d="M9 9h12v12H9z"></path><path d="M12 15h6"></path><path d="M12 18h4"></path></svg>
+          <span class="card-ttl">作業手順書</span>
+        </div>
+        <div class="ba">
+          <span class="tag tag-now">いま</span>
+          <span class="txt-now">口頭とジェスチャー頼み</span>
+          <span class="tag tag-ai">AIなら</span>
+          <span class="txt-ai">日本語で作れば、母国語版も同時に</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="card-no">07</span>
+        <div class="card-hd">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#16233F" stroke-width="1.75" aria-hidden="true"><path d="M3 4h18v12H8l-5 5z"></path><path d="M7 8h10M7 12h6"></path></svg>
+          <span class="card-ttl">申し送り・面談メモ</span>
+        </div>
+        <div class="ba">
+          <span class="tag tag-now">いま</span>
+          <span class="txt-now">手が止まる、記録の時間</span>
+          <span class="tag tag-ai">AIなら</span>
+          <span class="txt-ai">話すだけで、文章に</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="card-no">08</span>
+        <div class="card-hd">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#16233F" stroke-width="1.75" aria-hidden="true"><path d="M4 3h16v18H4z"></path><path d="M7 7h10M7 10h7"></path><path d="M13 14h5v5h-5z"></path></svg>
+          <span class="card-ttl">届出・申請書類</span>
+        </div>
+        <div class="ba">
+          <span class="tag tag-now">いま</span>
+          <span class="txt-now">期限前に、まとめて残業</span>
+          <span class="tag tag-ai">AIなら</span>
+          <span class="txt-ai">必要な情報を集めて、下書きまで</span>
+        </div>
+      </div>
+
+    </div>
+    <p class="foot-note">ここに無い業務も、診断の対象です。</p>
+  </div>
+</section>
+
+<section class="sec" id="price">
+  <div class="wrap">
+    <div class="sec-label">
+      <span class="sec-no">02</span>
+      <span class="sec-nm">サービス</span>
+      <span class="rule"></span>
+    </div>
+    <h2>3つのご支援</h2>
+    <div class="svcs">
+
+      <div class="svc">
+        <div>
+          <div class="svc-k">A</div>
+          <h3>AI顧問</h3>
+          <p class="svc-sub">社外のAI担当者として、毎月そばに</p>
+        </div>
+        <div class="rows">
+          <div class="row">
+            <div>
+              <div class="row-ttl">ライト</div>
+              <div class="row-sub">2週に1回1時間＋必要なアウトプット作成（モック・試作品構築など）</div>
+            </div>
+            <div class="price">月5万円</div>
+          </div>
+          <div class="row">
+            <div>
+              <div class="row-hd">
+                <span class="row-ttl">スタンダード</span>
+                <span class="pill">おすすめ</span>
+              </div>
+              <div class="row-sub">週1回＋必要なアウトプット作成</div>
+            </div>
+            <div class="price hi">月10万円</div>
+          </div>
+          <div class="row">
+            <div>
+              <div class="row-ttl">伴走</div>
+              <div class="row-sub">週3回＋必要なアウトプット作成</div>
+            </div>
+            <div class="price">月30万円</div>
+          </div>
+          <p class="terms">＊初期費用0円／最低3か月・以降1か月単位で解約可・違約金なし</p>
+        </div>
+      </div>
+
+      <div class="svc">
+        <div>
+          <div class="svc-k">B</div>
+          <h3>AI導入</h3>
+          <p class="svc-sub">確かめて、作って、渡す</p>
+        </div>
+        <div class="rows">
+          <div class="row">
+            <div>
+              <div class="row-ttl">既存サービスの導入</div>
+              <div class="row-sub">設定・雛形・操作説明</div>
+            </div>
+            <div class="price">30〜50万円</div>
+          </div>
+          <div class="row">
+            <div class="row-ttl">専用の仕組みの開発</div>
+            <div class="price">60〜150万円</div>
+          </div>
+          <div class="row">
+            <div class="row-ttl">保守・改善</div>
+            <div class="price">月3〜8万円</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc">
+        <div>
+          <div class="svc-k">C</div>
+          <h3>AIコンサルティング</h3>
+          <p class="svc-sub">作る前に、考える</p>
+        </div>
+        <div class="rows">
+          <div class="row">
+            <div>
+              <div class="row-ttl">業務棚卸し</div>
+              <div class="row-sub">作業時間の実測と優先順位づけ・2週間</div>
+            </div>
+            <div class="price">20万円</div>
+          </div>
+          <div class="row">
+            <div>
+              <div class="row-ttl">テーマ別コンサルティング</div>
+              <div class="row-sub">3〜4週間</div>
+            </div>
+            <div class="price">40〜60万円</div>
+          </div>
+          <div class="themes">
+            <div class="themes-k">テーマ例</div>
+            <ul>
+              <li>社内のAI利用ルールと情報漏洩対策</li>
+              <li>補助金を前提とした導入計画</li>
+              <li>多言語対応の設計</li>
+              <li>2027年4月・育成就労制度への対応整理</li>
+            </ul>
+          </div>
+          <div class="row">
+            <div>
+              <div class="row-ttl">社内研修</div>
+              <div class="row-sub">自社の業務を題材に手を動かす・半日15名まで</div>
+            </div>
+            <div class="price">15万円</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <p class="foot-note">価格は税別／補助金の対象になる場合があります</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-label">
+      <span class="sec-no">03</span>
+      <span class="sec-nm">FAQ</span>
+      <span class="rule"></span>
+    </div>
+    <h2>よくあるご質問</h2>
+    <div class="faq">
+
+      <details>
+        <summary>
+          <span class="q-no">Q1</span>
+          <span class="q-t">社内にAIに詳しい人間がいません</span>
+          <span class="q-p" aria-hidden="true">＋</span>
+        </summary>
+        <div class="a">
+          <p>それを前提としたサービスです。専門用語を使わずにご説明します。詳しい方がいないからお任せいただく、が本来の使い方です。</p>
+          <p>新しく担当者を置いていただく必要もありません。まずは社長ご自身とのやりとりだけで始められます。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <span class="q-no">Q2</span>
+          <span class="q-t">会社の情報を渡して大丈夫ですか</span>
+          <span class="q-p" aria-hidden="true">＋</span>
+        </summary>
+        <div class="a">
+          <p>契約前に秘密保持契約を締結し、入力した情報が学習に使われない設定・サービスを選定します。</p>
+          <p>お預かりする資料は必要な範囲だけとし、作業の終了後は返却または削除します。取引先名や個人名を伏せた状態でも診断はできます。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <span class="q-no">Q3</span>
+          <span class="q-t">補助金は使えますか</span>
+          <span class="q-p" aria-hidden="true">＋</span>
+        </summary>
+        <div class="a">
+          <p>使える可能性があります。対象になるかの確認からご一緒します。</p>
+          <p>制度は年度ごとに要件も締切も変わり、採択をお約束することはできません。補助金が前提の場合は最初にその旨をお聞かせください。申請が必要かどうかから一緒に整理します。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <span class="q-no">Q4</span>
+          <span class="q-t">途中でやめられますか</span>
+          <span class="q-p" aria-hidden="true">＋</span>
+        </summary>
+        <div class="a">
+          <p>顧問は3か月経過後、1か月単位で終了できます。違約金はありません。前月末までにお申し出いただければ、手続きは以上です。</p>
+          <p>AI導入とコンサルティングは案件ごとのお見積りです。着手前でしたら費用はかかりません。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <span class="q-no">Q5</span>
+          <span class="q-t">診断だけで終わっても構いませんか</span>
+          <span class="q-p" aria-hidden="true">＋</span>
+        </summary>
+        <div class="a">
+          <p>構いません。その場での売り込みはいたしませんし、提案書もお見積りも当日はお持ちしません。</p>
+          <p>拝見した業務がすでに十分効率的であれば、AIを入れる必要はないとお伝えして終わります。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <span class="q-no">Q6</span>
+          <span class="q-t">どのくらいで形になりますか</span>
+          <span class="q-p" aria-hidden="true">＋</span>
+        </summary>
+        <div class="a">
+          <p>既存サービスの導入であれば2〜4週間、専用の仕組みの開発は1〜3か月が目安です。</p>
+          <p>顧問の場合は、初月から実際に使える試作をお渡しすることを基本にしています。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <span class="q-no">Q7</span>
+          <span class="q-t">遠方でも来ていただけますか</span>
+          <span class="q-p" aria-hidden="true">＋</span>
+        </summary>
+        <div class="a">
+          <p>伺います。訪問できない距離の場合は、オンラインでの診断もお受けしています。</p>
+          <p>その際は、対象の書類を撮影した写真をご用意いただければ、同じようにお見せできます。</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <span class="q-no">Q8</span>
+          <span class="q-t">社員がAIを嫌がりそうです</span>
+          <span class="q-p" aria-hidden="true">＋</span>
+        </summary>
+        <div class="a">
+          <p>仕事を取り上げる道具として入れると、まず嫌われます。ですので、いま人が手でやっていて誰も得をしていない作業から始めます。</p>
+          <p>使い方の説明と、現場で使える手順書までをお渡しします。社内研修（半日）で実際に手を動かしていただくこともできます。</p>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="wrap">
+    <div class="stamp">診断無料</div>
+    <h2>まずは、お気軽にご相談ください。</h2>
+    <div class="cta-grid">
+      <p class="cta-lead">「何をどう聞けばいいか分からない」という段階でも構いません。気になる業務をひとつ挙げていただければ、AI化の余地があるかどうかを、訪問の場でお伝えします。</p>
+      <form class="form" action="https://formspree.io/f/xpqopzdj" method="POST">
+        <input type="hidden" name="_subject" value="【中小企業LP】無料診断のご相談">
+        <div>
+          <label for="f-name">お名前 *</label>
+          <input id="f-name" type="text" name="name" required>
+        </div>
+        <div class="two">
+          <div>
+            <label for="f-company">会社名</label>
+            <input id="f-company" type="text" name="company">
+          </div>
+          <div>
+            <label for="f-email">メールアドレス *</label>
+            <input id="f-email" type="email" name="email" required>
+          </div>
+        </div>
+        <div>
+          <label for="f-message">気になる業務 *</label>
+          <textarea id="f-message" name="message" required placeholder="例：日報の集計に毎週3時間かかっている／見積書を毎回ゼロから作っている"></textarea>
+        </div>
+        <button type="submit" class="btn-l">日程を相談する</button>
+        <p class="note">訪問60〜90分</p>
+        <p class="privacy">送信をもって<a href="/privacy">プライバシーポリシー</a>に同意したものとみなします。</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="wrap">
+    <span class="ft-name">株式会社Wing</span>
+    <span class="ft-meta"><a href="/">ホーム</a>　／　<a href="/about">会社概要</a>　／　<a href="/privacy">プライバシーポリシー</a>　／　記載の金額はすべて税別です</span>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://wingconsulting.org/sme#faq",
+  "mainEntity": [
+    { "@type": "Question", "name": "社内にAIに詳しい人間がいません", "acceptedAnswer": { "@type": "Answer", "text": "それを前提としたサービスです。専門用語を使わずにご説明します。詳しい方がいないからお任せいただく、が本来の使い方です。新しく担当者を置いていただく必要もありません。まずは社長ご自身とのやりとりだけで始められます。" } },
+    { "@type": "Question", "name": "会社の情報を渡して大丈夫ですか", "acceptedAnswer": { "@type": "Answer", "text": "契約前に秘密保持契約を締結し、入力した情報が学習に使われない設定・サービスを選定します。お預かりする資料は必要な範囲だけとし、作業の終了後は返却または削除します。取引先名や個人名を伏せた状態でも診断はできます。" } },
+    { "@type": "Question", "name": "補助金は使えますか", "acceptedAnswer": { "@type": "Answer", "text": "使える可能性があります。対象になるかの確認からご一緒します。制度は年度ごとに要件も締切も変わり、採択をお約束することはできません。補助金が前提の場合は最初にその旨をお聞かせください。申請が必要かどうかから一緒に整理します。" } },
+    { "@type": "Question", "name": "途中でやめられますか", "acceptedAnswer": { "@type": "Answer", "text": "顧問は3か月経過後、1か月単位で終了できます。違約金はありません。前月末までにお申し出いただければ、手続きは以上です。AI導入とコンサルティングは案件ごとのお見積りです。着手前でしたら費用はかかりません。" } },
+    { "@type": "Question", "name": "診断だけで終わっても構いませんか", "acceptedAnswer": { "@type": "Answer", "text": "構いません。その場での売り込みはいたしませんし、提案書もお見積りも当日はお持ちしません。拝見した業務がすでに十分効率的であれば、AIを入れる必要はないとお伝えして終わります。" } },
+    { "@type": "Question", "name": "どのくらいで形になりますか", "acceptedAnswer": { "@type": "Answer", "text": "既存サービスの導入であれば2〜4週間、専用の仕組みの開発は1〜3か月が目安です。顧問の場合は、初月から実際に使える試作をお渡しすることを基本にしています。" } },
+    { "@type": "Question", "name": "遠方でも来ていただけますか", "acceptedAnswer": { "@type": "Answer", "text": "伺います。訪問できない距離の場合は、オンラインでの診断もお受けしています。その際は、対象の書類を撮影した写真をご用意いただければ、同じようにお見せできます。" } },
+    { "@type": "Question", "name": "社員がAIを嫌がりそうです", "acceptedAnswer": { "@type": "Answer", "text": "仕事を取り上げる道具として入れると、まず嫌われます。ですので、いま人が手でやっていて誰も得をしていない作業から始めます。使い方の説明と、現場で使える手順書までをお渡しします。社内研修（半日）で実際に手を動かしていただくこともできます。" } }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://wingconsulting.org/sme#service",
+  "name": "中小企業向けAI導入支援",
+  "serviceType": "AIコンサルティング・AI導入支援",
+  "url": "https://wingconsulting.org/sme",
+  "provider": { "@id": "https://wingconsulting.org/#organization" },
+  "areaServed": { "@type": "Country", "name": "日本" },
+  "audience": { "@type": "BusinessAudience", "name": "従業員20〜80名の中小企業" },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "3つのご支援",
+    "itemListElement": [
+      { "@type": "Offer", "name": "AI顧問 ライト", "description": "2週に1回1時間＋必要なアウトプット作成（モック・試作品構築など）", "price": "50000", "priceCurrency": "JPY" },
+      { "@type": "Offer", "name": "AI顧問 スタンダード", "description": "週1回＋必要なアウトプット作成", "price": "100000", "priceCurrency": "JPY" },
+      { "@type": "Offer", "name": "AI顧問 伴走", "description": "週3回＋必要なアウトプット作成", "price": "300000", "priceCurrency": "JPY" },
+      { "@type": "Offer", "name": "AI導入", "description": "既存サービスの導入から専用の仕組みの開発まで" },
+      { "@type": "Offer", "name": "AIコンサルティング", "description": "業務棚卸し・テーマ別コンサルティング・社内研修" }
+    ]
+  }
+}
+</script>
+
+</body>
+</html>
