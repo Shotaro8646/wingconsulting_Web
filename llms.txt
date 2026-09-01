@@ -21,6 +21,7 @@
 - [通関DXとは](https://wingconsulting.org/blog/customs-dx-guide): AI-OCR・次世代NACCS・電子通関
 - [PFAS規制 2026年最新動向](https://wingconsulting.org/blog/pfas-global-regulation-2026): 米国TSCA・EU PPWR・日本化審法
 - [グローバル企業のIT組織モデル](https://wingconsulting.org/blog/global-it-organization-model): 集中型・分担型・自律型の比較
+- [貿易規制インテリジェンス](https://wingconsulting.org/trade-regulation-hub): PFAS規制・chemSHERPA・安全保障貿易管理の動向を集約したハブ
 - [インサイト一覧](https://wingconsulting.org/blog/): 全記事のカテゴリ別索引
 
 ## 補足
