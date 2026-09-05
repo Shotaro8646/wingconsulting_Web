@@ -53,9 +53,9 @@ tailwind.config = {
     extend: {
       colors: {
         navy: { DEFAULT: '#0F2342', dark: '#081830' },
-        gold: { DEFAULT: '#A8965A', light: '#C4AD72', muted: '#7A6B3E', pale: '#F8F5ED', mid: '#B8A560' },
+        gold: { DEFAULT: '#A8965A', deep: '#7A6D40', deeper: '#635834', light: '#C4AD72', muted: '#7A6B3E', pale: '#F8F5ED', mid: '#B8A560' },
         slate: { warm: '#F7F6F3', cool: '#EEECe7' },
-        ink: { DEFAULT: '#1A1A1F', mid: '#4A4A55', light: '#8A8A96' },
+        ink: { DEFAULT: '#1A1A1F', mid: '#4A4A55', light: '#6C6C79' },
       },
       fontFamily: {
         serif: ['"Yu Gothic"', '"YuGothic"', 'sans-serif'],
@@ -77,23 +77,23 @@ article p { margin-bottom: 1.2rem; }
 article ul { margin-bottom: 1.2rem; padding-left: 1.5rem; }
 article li { margin-bottom: 0.5rem; }
 .diag-wrap { background:#fff; border:1px solid #E2E0DA; border-top:3px solid #A8965A; padding:1.4rem 1.5rem 1rem; margin:1.6rem 0 0.5rem; font-size:0.85rem; }
-.diag-caption { text-align:center; font-size:0.72rem; color:#8A8A96; margin-top:0.5rem; margin-bottom:1.4rem; }
-.diag-label { font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#A8965A; margin-bottom:0.8rem; }
+.diag-caption { text-align:center; font-size:0.72rem; color:#6C6C79; margin-top:0.5rem; margin-bottom:1.4rem; }
+.diag-label { font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#7A6D40; margin-bottom:0.8rem; }
 .diag-step-row { display:flex; flex-wrap:wrap; gap:0.7rem; }
 .diag-step-card { flex:1 1 140px; background:#fff; border:1px solid #E2E0DA; padding:0.9rem; position:relative; }
 .diag-step-card .step-num { width:28px; height:28px; background:#0F2342; color:#A8965A; font-size:0.78rem; font-weight:700; display:flex; align-items:center; justify-content:center; margin-bottom:0.55rem; }
 .diag-step-card .step-title { font-size:0.78rem; font-weight:700; color:#0F2342; margin-bottom:0.3rem; line-height:1.4; }
 .diag-step-card .step-body { font-size:0.72rem; color:#4A4A55; line-height:1.5; }
 .diag-checklist-item { display:flex; align-items:flex-start; gap:0.5rem; background:#F8F5ED; border-left:3px solid #A8965A; padding:0.6rem 0.8rem; flex:1 1 220px; font-size:0.8rem; line-height:1.55; }
-.diag-checklist-item .chk { color:#A8965A; font-weight:700; flex-shrink:0; margin-top:0.05rem; }
+.diag-checklist-item .chk { color:#7A6D40; font-weight:700; flex-shrink:0; margin-top:0.05rem; }
 .priority-row { display:flex; flex-wrap:wrap; gap:0; }
 .priority-item { flex:1 1 160px; padding:0.9rem; border:1px solid #E2E0DA; margin:0 -1px -1px 0; }
 .priority-item.a { background:#F0F7F0; border-top:3px solid #5A9A6A; }
-.priority-item.a .p-label { color:#5A9A6A; }
+.priority-item.a .p-label { color:#487B55; }
 .priority-item.b { background:#FBF8F0; border-top:3px solid #A8965A; }
 .priority-item.b .p-label { color:#7A6B3E; }
 .priority-item.c { background:#FFF8F5; border-top:3px solid #C45C3A; }
-.priority-item.c .p-label { color:#C45C3A; }
+.priority-item.c .p-label { color:#B55536; }
 .p-label { font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:0.4rem; }
 .p-title { font-size:0.78rem; font-weight:700; color:#0F2342; margin-bottom:0.3rem; line-height:1.4; }
 .p-body { font-size:0.72rem; color:#4A4A55; line-height:1.5; }
@@ -141,7 +141,7 @@ article li { margin-bottom: 0.5rem; }
 </header>
 <!-- ARTICLE -->
 <main class="py-16 px-6 md:px-10">
-<div class="max-w-3xl mx-auto" data-ja-html='&lt;p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3"&gt;B2B Marketing&lt;/p&gt;
+<div class="max-w-3xl mx-auto" data-ja-html='&lt;p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold-deep mb-3"&gt;B2B Marketing&lt;/p&gt;
 &lt;h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4" data-ja-html="ダークファネルとは？&amp;lt;br/&amp;gt;B2B見込み客の90%が「見えない」場所で意思決定している" data-en-html="ダークファネルとは？&amp;lt;br/&amp;gt;B2B見込み客の90%が「見えない」場所で意思決定している"&gt;ダークファネルとは？&lt;br/&gt;B2B見込み客の90%が「見えない」場所で意思決定している&lt;/h1&gt;
 &lt;div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2"&gt;
 &lt;time datetime="2026-03-28"&gt;2026.03.28&lt;/time&gt;
@@ -166,7 +166,7 @@ article li { margin-bottom: 0.5rem; }
 &lt;div style="display:flex;flex-direction:column;gap:0.5rem;"&gt;
 &lt;!-- 見えない層 --&gt;
 &lt;div style="background:#F0F4FA;border:1px dashed #B0BDD0;padding:1rem 1.2rem;border-radius:2px;"&gt;
-&lt;div style="font-size:0.72rem;font-weight:700;color:#8A8A96;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.6rem;"&gt;Dark Funnel — 追跡不能な検討プロセス&lt;/div&gt;
+&lt;div style="font-size:0.72rem;font-weight:700;color:#6C6C79;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.6rem;"&gt;Dark Funnel — 追跡不能な検討プロセス&lt;/div&gt;
 &lt;div style="display:flex;flex-wrap:wrap;gap:0.5rem;"&gt;
 &lt;div style="flex:1 1 140px;background:#fff;border:1px solid #D8DCE8;padding:0.6rem 0.8rem;font-size:0.75rem;color:#4A4A55;line-height:1.5;"&gt;
 &lt;div style="font-weight:700;color:#0F2342;margin-bottom:0.2rem;"&gt;LinkedInコンテンツ消費&lt;/div&gt;
@@ -187,7 +187,7 @@ article li { margin-bottom: 0.5rem; }
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;!-- 矢印 --&gt;
-&lt;div style="text-align:center;color:#A8965A;font-size:1.1rem;font-weight:700;"&gt;↓ ここで初めて「可視化」される&lt;/div&gt;
+&lt;div style="text-align:center;color:#7A6D40;font-size:1.1rem;font-weight:700;"&gt;↓ ここで初めて「可視化」される&lt;/div&gt;
 &lt;!-- 見える層 --&gt;
 &lt;div style="background:#F8F5ED;border:1px solid #D4C89A;padding:1rem 1.2rem;border-radius:2px;"&gt;
 &lt;div style="font-size:0.72rem;font-weight:700;color:#A8965A;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.6rem;"&gt;Visible Funnel — GA・CRMで追跡可能&lt;/div&gt;
@@ -262,11 +262,11 @@ article li { margin-bottom: 0.5rem; }
 &lt;/article&gt;
  CTA 
 &lt;div class="mt-16 border border-[#E2E0DA] bg-navy/[.03] p-8 rounded-sm"&gt;
-&lt;p class="display text-[.6rem] font-medium tracking-[.18em] uppercase text-gold mb-3"&gt;Contact Wing&lt;/p&gt;
+&lt;p class="display text-[.6rem] font-medium tracking-[.18em] uppercase text-gold-deep mb-3"&gt;Contact Wing&lt;/p&gt;
 &lt;p class="text-[1rem] font-medium text-ink mb-2" data-ja="B2Bマーケティング戦略の見直しをご検討ですか？"&gt;B2Bマーケティング戦略の見直しをご検討ですか？&lt;/p&gt;
 &lt;p class="text-[.82rem] text-ink-mid leading-relaxed mb-6" data-ja="ダークファネル対策を含むB2Bマーケ戦略の設計から実装まで、Wingがご支援します。コンテンツ戦略・MA導入・CRM統合を一気通貫で対応します。"&gt;ダークファネル対策を含むB2Bマーケ戦略の設計から実装まで、Wingがご支援します。コンテンツ戦略・MA導入・CRM統合を一気通貫で対応します。&lt;/p&gt;
 &lt;a class="inline-block bg-navy text-white text-[.78rem] font-medium tracking-wider px-7 py-3 hover:bg-navy-dark transition-colors" data-en="Book a Free Consultation →" data-ja="無料相談を予約する →" data-en="無料相談を予約する →" href="/#contact"&gt;無料相談を予約する →&lt;/a&gt;
-&lt;/div&gt;' data-en-html='&lt;p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3"&gt;B2B Marketing&lt;/p&gt;
+&lt;/div&gt;' data-en-html='&lt;p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold-deep mb-3"&gt;B2B Marketing&lt;/p&gt;
 &lt;h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4" data-ja-html="ダークファネルとは？&amp;lt;br/&amp;gt;B2B見込み客の90%が「見えない」場所で意思決定している" data-en-html="ダークファネルとは？&amp;lt;br/&amp;gt;B2B見込み客の90%が「見えない」場所で意思決定している"&gt;ダークファネルとは？&lt;br/&gt;B2B見込み客の90%が「見えない」場所で意思決定している&lt;/h1&gt;
 &lt;div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2"&gt;
 &lt;time datetime="2026-03-28"&gt;2026.03.28&lt;/time&gt;
@@ -291,7 +291,7 @@ article li { margin-bottom: 0.5rem; }
 &lt;div style="display:flex;flex-direction:column;gap:0.5rem;"&gt;
 &lt;!-- 見えない層 --&gt;
 &lt;div style="background:#F0F4FA;border:1px dashed #B0BDD0;padding:1rem 1.2rem;border-radius:2px;"&gt;
-&lt;div style="font-size:0.72rem;font-weight:700;color:#8A8A96;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.6rem;"&gt;Dark Funnel — 追跡不能な検討プロセス&lt;/div&gt;
+&lt;div style="font-size:0.72rem;font-weight:700;color:#6C6C79;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.6rem;"&gt;Dark Funnel — 追跡不能な検討プロセス&lt;/div&gt;
 &lt;div style="display:flex;flex-wrap:wrap;gap:0.5rem;"&gt;
 &lt;div style="flex:1 1 140px;background:#fff;border:1px solid #D8DCE8;padding:0.6rem 0.8rem;font-size:0.75rem;color:#4A4A55;line-height:1.5;"&gt;
 &lt;div style="font-weight:700;color:#0F2342;margin-bottom:0.2rem;"&gt;LinkedInコンテンツ消費&lt;/div&gt;
@@ -387,12 +387,12 @@ article li { margin-bottom: 0.5rem; }
 &lt;/article&gt;
  CTA 
 &lt;div class="mt-16 border border-[#E2E0DA] bg-navy/[.03] p-8 rounded-sm"&gt;
-&lt;p class="display text-[.6rem] font-medium tracking-[.18em] uppercase text-gold mb-3"&gt;Contact Wing&lt;/p&gt;
+&lt;p class="display text-[.6rem] font-medium tracking-[.18em] uppercase text-gold-deep mb-3"&gt;Contact Wing&lt;/p&gt;
 &lt;p class="text-[1rem] font-medium text-ink mb-2" data-ja="B2Bマーケティング戦略の見直しをご検討ですか？"&gt;B2Bマーケティング戦略の見直しをご検討ですか？&lt;/p&gt;
 &lt;p class="text-[.82rem] text-ink-mid leading-relaxed mb-6" data-ja="ダークファネル対策を含むB2Bマーケ戦略の設計から実装まで、Wingがご支援します。コンテンツ戦略・MA導入・CRM統合を一気通貫で対応します。"&gt;ダークファネル対策を含むB2Bマーケ戦略の設計から実装まで、Wingがご支援します。コンテンツ戦略・MA導入・CRM統合を一気通貫で対応します。&lt;/p&gt;
 &lt;a class="inline-block bg-navy text-white text-[.78rem] font-medium tracking-wider px-7 py-3 hover:bg-navy-dark transition-colors" data-en="Book a Free Consultation →" data-ja="無料相談を予約する →" data-en="無料相談を予約する →" href="/#contact"&gt;無料相談を予約する →&lt;/a&gt;
 &lt;/div&gt;'>
-<p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3">B2B Marketing</p>
+<p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold-deep mb-3">B2B Marketing</p>
 <h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4" data-ja-html="ダークファネルとは？&lt;br/&gt;B2B見込み客の90%が「見えない」場所で意思決定している" data-en-html="ダークファネルとは？&lt;br/&gt;B2B見込み客の90%が「見えない」場所で意思決定している">ダークファネルとは？<br/>B2B見込み客の90%が「見えない」場所で意思決定している</h1>
 <div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2" data-ja-html='&lt;time datetime="2026-03-28"&gt;2026.03.28&lt;/time&gt;
 &lt;span&gt;Wing編集部&lt;/span&gt;' data-en-html='&lt;time datetime="2026-03-28"&gt;2026.03.28&lt;/time&gt;
@@ -418,7 +418,7 @@ article li { margin-bottom: 0.5rem; }
 &lt;div style="display:flex;flex-direction:column;gap:0.5rem;"&gt;
 &lt;!-- 見えない層 --&gt;
 &lt;div style="background:#F0F4FA;border:1px dashed #B0BDD0;padding:1rem 1.2rem;border-radius:2px;"&gt;
-&lt;div style="font-size:0.72rem;font-weight:700;color:#8A8A96;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.6rem;"&gt;Dark Funnel — 追跡不能な検討プロセス&lt;/div&gt;
+&lt;div style="font-size:0.72rem;font-weight:700;color:#6C6C79;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.6rem;"&gt;Dark Funnel — 追跡不能な検討プロセス&lt;/div&gt;
 &lt;div style="display:flex;flex-wrap:wrap;gap:0.5rem;"&gt;
 &lt;div style="flex:1 1 140px;background:#fff;border:1px solid #D8DCE8;padding:0.6rem 0.8rem;font-size:0.75rem;color:#4A4A55;line-height:1.5;"&gt;
 &lt;div style="font-weight:700;color:#0F2342;margin-bottom:0.2rem;"&gt;LinkedInコンテンツ消費&lt;/div&gt;
@@ -439,7 +439,7 @@ article li { margin-bottom: 0.5rem; }
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;!-- 矢印 --&gt;
-&lt;div style="text-align:center;color:#A8965A;font-size:1.1rem;font-weight:700;"&gt;↓ ここで初めて「可視化」される&lt;/div&gt;
+&lt;div style="text-align:center;color:#7A6D40;font-size:1.1rem;font-weight:700;"&gt;↓ ここで初めて「可視化」される&lt;/div&gt;
 &lt;!-- 見える層 --&gt;
 &lt;div style="background:#F8F5ED;border:1px solid #D4C89A;padding:1rem 1.2rem;border-radius:2px;"&gt;
 &lt;div style="font-size:0.72rem;font-weight:700;color:#A8965A;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.6rem;"&gt;Visible Funnel — GA・CRMで追跡可能&lt;/div&gt;
@@ -463,7 +463,7 @@ article li { margin-bottom: 0.5rem; }
 &lt;div style="display:flex;flex-direction:column;gap:0.5rem;"&gt;
 &lt;!-- 見えない層 --&gt;
 &lt;div style="background:#F0F4FA;border:1px dashed #B0BDD0;padding:1rem 1.2rem;border-radius:2px;"&gt;
-&lt;div style="font-size:0.72rem;font-weight:700;color:#8A8A96;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.6rem;"&gt;Dark Funnel — 追跡不能な検討プロセス&lt;/div&gt;
+&lt;div style="font-size:0.72rem;font-weight:700;color:#6C6C79;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.6rem;"&gt;Dark Funnel — 追跡不能な検討プロセス&lt;/div&gt;
 &lt;div style="display:flex;flex-wrap:wrap;gap:0.5rem;"&gt;
 &lt;div style="flex:1 1 140px;background:#fff;border:1px solid #D8DCE8;padding:0.6rem 0.8rem;font-size:0.75rem;color:#4A4A55;line-height:1.5;"&gt;
 &lt;div style="font-weight:700;color:#0F2342;margin-bottom:0.2rem;"&gt;LinkedInコンテンツ消費&lt;/div&gt;
@@ -508,7 +508,7 @@ article li { margin-bottom: 0.5rem; }
 <div class="diag-label" data-ja="Figure — ダークファネルの可視化：見える部分と見えない部分" data-en="Figure — ダークファネルの可視化：見える部分と見えない部分">Figure — ダークファネルの可視化：見える部分と見えない部分</div>
 <div data-ja-html='見えない層 
 &lt;div style="background:#F0F4FA;border:1px dashed #B0BDD0;padding:1rem 1.2rem;border-radius:2px;"&gt;
-&lt;div style="font-size:0.72rem;font-weight:700;color:#8A8A96;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.6rem;"&gt;Dark Funnel — 追跡不能な検討プロセス&lt;/div&gt;
+&lt;div style="font-size:0.72rem;font-weight:700;color:#6C6C79;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.6rem;"&gt;Dark Funnel — 追跡不能な検討プロセス&lt;/div&gt;
 &lt;div style="display:flex;flex-wrap:wrap;gap:0.5rem;"&gt;
 &lt;div style="flex:1 1 140px;background:#fff;border:1px solid #D8DCE8;padding:0.6rem 0.8rem;font-size:0.75rem;color:#4A4A55;line-height:1.5;"&gt;
 &lt;div style="font-weight:700;color:#0F2342;margin-bottom:0.2rem;"&gt;LinkedInコンテンツ消費&lt;/div&gt;
@@ -529,7 +529,7 @@ article li { margin-bottom: 0.5rem; }
 &lt;/div&gt;
 &lt;/div&gt;
  矢印 
-&lt;div style="text-align:center;color:#A8965A;font-size:1.1rem;font-weight:700;"&gt;↓ ここで初めて「可視化」される&lt;/div&gt;
+&lt;div style="text-align:center;color:#7A6D40;font-size:1.1rem;font-weight:700;"&gt;↓ ここで初めて「可視化」される&lt;/div&gt;
  見える層 
 &lt;div style="background:#F8F5ED;border:1px solid #D4C89A;padding:1rem 1.2rem;border-radius:2px;"&gt;
 &lt;div style="font-size:0.72rem;font-weight:700;color:#A8965A;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.6rem;"&gt;Visible Funnel — GA・CRMで追跡可能&lt;/div&gt;
@@ -549,7 +549,7 @@ article li { margin-bottom: 0.5rem; }
 &lt;/div&gt;
 &lt;/div&gt;' data-en-html='見えない層 
 &lt;div style="background:#F0F4FA;border:1px dashed #B0BDD0;padding:1rem 1.2rem;border-radius:2px;"&gt;
-&lt;div style="font-size:0.72rem;font-weight:700;color:#8A8A96;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.6rem;"&gt;Dark Funnel — 追跡不能な検討プロセス&lt;/div&gt;
+&lt;div style="font-size:0.72rem;font-weight:700;color:#6C6C79;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.6rem;"&gt;Dark Funnel — 追跡不能な検討プロセス&lt;/div&gt;
 &lt;div style="display:flex;flex-wrap:wrap;gap:0.5rem;"&gt;
 &lt;div style="flex:1 1 140px;background:#fff;border:1px solid #D8DCE8;padding:0.6rem 0.8rem;font-size:0.75rem;color:#4A4A55;line-height:1.5;"&gt;
 &lt;div style="font-weight:700;color:#0F2342;margin-bottom:0.2rem;"&gt;LinkedInコンテンツ消費&lt;/div&gt;
@@ -590,7 +590,7 @@ article li { margin-bottom: 0.5rem; }
 &lt;/div&gt;
 &lt;/div&gt;' style="display:flex;flex-direction:column;gap:0.5rem;">
 <!-- 見えない層 -->
-<div data-ja-html='&lt;div style="font-size:0.72rem;font-weight:700;color:#8A8A96;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.6rem;"&gt;Dark Funnel — 追跡不能な検討プロセス&lt;/div&gt;
+<div data-ja-html='&lt;div style="font-size:0.72rem;font-weight:700;color:#6C6C79;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.6rem;"&gt;Dark Funnel — 追跡不能な検討プロセス&lt;/div&gt;
 &lt;div style="display:flex;flex-wrap:wrap;gap:0.5rem;"&gt;
 &lt;div style="flex:1 1 140px;background:#fff;border:1px solid #D8DCE8;padding:0.6rem 0.8rem;font-size:0.75rem;color:#4A4A55;line-height:1.5;"&gt;
 &lt;div style="font-weight:700;color:#0F2342;margin-bottom:0.2rem;"&gt;LinkedInコンテンツ消費&lt;/div&gt;
@@ -608,7 +608,7 @@ article li { margin-bottom: 0.5rem; }
 &lt;div style="font-weight:700;color:#0F2342;margin-bottom:0.2rem;"&gt;指名検索・閲覧のみ&lt;/div&gt;
                 GAに残るがコンバージョンなし
               &lt;/div&gt;
-&lt;/div&gt;' data-en-html='&lt;div style="font-size:0.72rem;font-weight:700;color:#8A8A96;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.6rem;"&gt;Dark Funnel — 追跡不能な検討プロセス&lt;/div&gt;
+&lt;/div&gt;' data-en-html='&lt;div style="font-size:0.72rem;font-weight:700;color:#6C6C79;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.6rem;"&gt;Dark Funnel — 追跡不能な検討プロセス&lt;/div&gt;
 &lt;div style="display:flex;flex-wrap:wrap;gap:0.5rem;"&gt;
 &lt;div style="flex:1 1 140px;background:#fff;border:1px solid #D8DCE8;padding:0.6rem 0.8rem;font-size:0.75rem;color:#4A4A55;line-height:1.5;"&gt;
 &lt;div style="font-weight:700;color:#0F2342;margin-bottom:0.2rem;"&gt;LinkedInコンテンツ消費&lt;/div&gt;
@@ -627,7 +627,7 @@ article li { margin-bottom: 0.5rem; }
                 GAに残るがコンバージョンなし
               &lt;/div&gt;
 &lt;/div&gt;' style="background:#F0F4FA;border:1px dashed #B0BDD0;padding:1rem 1.2rem;border-radius:2px;">
-<div data-ja="Dark Funnel — 追跡不能な検討プロセス" data-en="Dark Funnel — 追跡不能な検討プロセス" style="font-size:0.72rem;font-weight:700;color:#8A8A96;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.6rem;">Dark Funnel — 追跡不能な検討プロセス</div>
+<div data-ja="Dark Funnel — 追跡不能な検討プロセス" data-en="Dark Funnel — 追跡不能な検討プロセス" style="font-size:0.72rem;font-weight:700;color:#6C6C79;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.6rem;">Dark Funnel — 追跡不能な検討プロセス</div>
 <div data-ja-html='&lt;div style="flex:1 1 140px;background:#fff;border:1px solid #D8DCE8;padding:0.6rem 0.8rem;font-size:0.75rem;color:#4A4A55;line-height:1.5;"&gt;
 &lt;div style="font-weight:700;color:#0F2342;margin-bottom:0.2rem;"&gt;LinkedInコンテンツ消費&lt;/div&gt;
                 インプレッションのみ。閲覧者の企業名・氏名は不明
@@ -686,9 +686,9 @@ article li { margin-bottom: 0.5rem; }
 </div>
 </div>
 <!-- 矢印 -->
-<div data-ja="↓ ここで初めて「可視化」される" data-en="↓ ここで初めて「可視化」される" style="text-align:center;color:#A8965A;font-size:1.1rem;font-weight:700;">↓ ここで初めて「可視化」される</div>
+<div data-ja="↓ ここで初めて「可視化」される" data-en="↓ ここで初めて「可視化」される" style="text-align:center;color:#7A6D40;font-size:1.1rem;font-weight:700;">↓ ここで初めて「可視化」される</div>
 <!-- 見える層 -->
-<div data-ja-html='&lt;div style="font-size:0.72rem;font-weight:700;color:#A8965A;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.6rem;"&gt;Visible Funnel — GA・CRMで追跡可能&lt;/div&gt;
+<div data-ja-html='&lt;div style="font-size:0.72rem;font-weight:700;color:#7A6D40;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.6rem;"&gt;Visible Funnel — GA・CRMで追跡可能&lt;/div&gt;
 &lt;div style="display:flex;flex-wrap:wrap;gap:0.5rem;"&gt;
 &lt;div style="flex:1 1 120px;background:#fff;border:1px solid #D4C89A;padding:0.6rem 0.8rem;font-size:0.75rem;color:#4A4A55;line-height:1.5;"&gt;
 &lt;div style="font-weight:700;color:#0F2342;margin-bottom:0.2rem;"&gt;Webサイト訪問&lt;/div&gt;
@@ -717,7 +717,7 @@ article li { margin-bottom: 0.5rem; }
                 ファネルの最終段階
               &lt;/div&gt;
 &lt;/div&gt;' style="background:#F8F5ED;border:1px solid #D4C89A;padding:1rem 1.2rem;border-radius:2px;">
-<div data-ja="Visible Funnel — GA・CRMで追跡可能" data-en="Visible Funnel — GA・CRMで追跡可能" style="font-size:0.72rem;font-weight:700;color:#A8965A;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.6rem;">Visible Funnel — GA・CRMで追跡可能</div>
+<div data-ja="Visible Funnel — GA・CRMで追跡可能" data-en="Visible Funnel — GA・CRMで追跡可能" style="font-size:0.72rem;font-weight:700;color:#7A6D40;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.6rem;">Visible Funnel — GA・CRMで追跡可能</div>
 <div data-ja-html='&lt;div style="flex:1 1 120px;background:#fff;border:1px solid #D4C89A;padding:0.6rem 0.8rem;font-size:0.75rem;color:#4A4A55;line-height:1.5;"&gt;
 &lt;div style="font-weight:700;color:#0F2342;margin-bottom:0.2rem;"&gt;Webサイト訪問&lt;/div&gt;
                 セッション・PV計測
@@ -914,22 +914,25 @@ article li { margin-bottom: 0.5rem; }
 <p data-ja="B2Bマーケティングにおいて「見えない」は「存在しない」ではない。ダークファネルは常に動いており、そこで勝つためには、計測できないところへの投資を意思決定できる組織の成熟度が問われる。" data-en="B2Bマーケティングにおいて「見えない」は「存在しない」ではない。ダークファネルは常に動いており、そこで勝つためには、計測できないところへの投資を意思決定できる組織の成熟度が問われる。">B2Bマーケティングにおいて「見えない」は「存在しない」ではない。ダークファネルは常に動いており、そこで勝つためには、計測できないところへの投資を意思決定できる組織の成熟度が問われる。</p>
 </article>
 <!-- CTA -->
-<div class="mt-16 border border-[#E2E0DA] bg-navy/[.03] p-8 rounded-sm" data-ja-html='&lt;p class="display text-[.6rem] font-medium tracking-[.18em] uppercase text-gold mb-3"&gt;Contact Wing&lt;/p&gt;
+<div class="mt-16 border border-[#E2E0DA] bg-navy/[.03] p-8 rounded-sm" data-ja-html='&lt;p class="display text-[.6rem] font-medium tracking-[.18em] uppercase text-gold-deep mb-3"&gt;Contact Wing&lt;/p&gt;
 &lt;p class="text-[1rem] font-medium text-ink mb-2" data-ja="B2Bマーケティング戦略の見直しをご検討ですか？"&gt;B2Bマーケティング戦略の見直しをご検討ですか？&lt;/p&gt;
 &lt;p class="text-[.82rem] text-ink-mid leading-relaxed mb-6" data-ja="ダークファネル対策を含むB2Bマーケ戦略の設計から実装まで、Wingがご支援します。コンテンツ戦略・MA導入・CRM統合を一気通貫で対応します。"&gt;ダークファネル対策を含むB2Bマーケ戦略の設計から実装まで、Wingがご支援します。コンテンツ戦略・MA導入・CRM統合を一気通貫で対応します。&lt;/p&gt;
-&lt;a class="inline-block bg-navy text-white text-[.78rem] font-medium tracking-wider px-7 py-3 hover:bg-navy-dark transition-colors" data-en="Book a Free Consultation →" data-ja="無料相談を予約する →" data-en="無料相談を予約する →" href="/#contact"&gt;無料相談を予約する →&lt;/a&gt;' data-en-html='&lt;p class="display text-[.6rem] font-medium tracking-[.18em] uppercase text-gold mb-3"&gt;Contact Wing&lt;/p&gt;
+&lt;a class="inline-block bg-navy text-white text-[.78rem] font-medium tracking-wider px-7 py-3 hover:bg-navy-dark transition-colors" data-en="Book a Free Consultation →" data-ja="無料相談を予約する →" data-en="無料相談を予約する →" href="/#contact"&gt;無料相談を予約する →&lt;/a&gt;' data-en-html='&lt;p class="display text-[.6rem] font-medium tracking-[.18em] uppercase text-gold-deep mb-3"&gt;Contact Wing&lt;/p&gt;
 &lt;p class="text-[1rem] font-medium text-ink mb-2" data-ja="B2Bマーケティング戦略の見直しをご検討ですか？"&gt;B2Bマーケティング戦略の見直しをご検討ですか？&lt;/p&gt;
 &lt;p class="text-[.82rem] text-ink-mid leading-relaxed mb-6" data-ja="ダークファネル対策を含むB2Bマーケ戦略の設計から実装まで、Wingがご支援します。コンテンツ戦略・MA導入・CRM統合を一気通貫で対応します。"&gt;ダークファネル対策を含むB2Bマーケ戦略の設計から実装まで、Wingがご支援します。コンテンツ戦略・MA導入・CRM統合を一気通貫で対応します。&lt;/p&gt;
 &lt;a class="inline-block bg-navy text-white text-[.78rem] font-medium tracking-wider px-7 py-3 hover:bg-navy-dark transition-colors" data-en="Book a Free Consultation →" data-ja="無料相談を予約する →" data-en="無料相談を予約する →" href="/#contact"&gt;無料相談を予約する →&lt;/a&gt;'>
-<p class="display text-[.6rem] font-medium tracking-[.18em] uppercase text-gold mb-3">Contact Wing</p>
+<p class="display text-[.6rem] font-medium tracking-[.18em] uppercase text-gold-deep mb-3">Contact Wing</p>
 <p class="text-[1rem] font-medium text-ink mb-2" data-ja="B2Bマーケティング戦略の見直しをご検討ですか？" data-en="B2Bマーケティング戦略の見直しをご検討ですか？">B2Bマーケティング戦略の見直しをご検討ですか？</p>
 <p class="text-[.82rem] text-ink-mid leading-relaxed mb-6" data-ja="ダークファネル対策を含むB2Bマーケ戦略の設計から実装まで、Wingがご支援します。コンテンツ戦略・MA導入・CRM統合を一気通貫で対応します。" data-en="ダークファネル対策を含むB2Bマーケ戦略の設計から実装まで、Wingがご支援します。コンテンツ戦略・MA導入・CRM統合を一気通貫で対応します。">ダークファネル対策を含むB2Bマーケ戦略の設計から実装まで、Wingがご支援します。コンテンツ戦略・MA導入・CRM統合を一気通貫で対応します。</p>
+<div>
 <a class="inline-block bg-navy text-white text-[.78rem] font-medium tracking-wider px-7 py-3 hover:bg-navy-dark transition-colors" data-en="Book a Free Consultation →" data-ja="無料相談を予約する →" data-en="無料相談を予約する →" href="/#contact">無料相談を予約する →</a>
 </div>
 </div>
-</main>
+</div>
 <!-- FOOTER -->
 
+</main>
+<aside aria-label="関連する案内">
 <!-- assessment-cta (auto) -->
 <section style="max-width:800px;margin:3rem auto 0;padding:0 1.5rem;font-family:'Noto Sans JP',sans-serif;">
   <div style="border:1px solid #E8E5DE;border-left:3px solid #A98A4B;background:#FBFAF7;padding:1.5rem 1.6rem;">
@@ -940,18 +943,19 @@ article li { margin-bottom: 0.5rem; }
 </section>
 <!-- related-articles (auto) -->
 <section style="max-width:800px;margin:3.5rem auto 0;padding:2rem 1.5rem 0;border-top:1px solid #E5E7EB;font-family:'Noto Sans JP',sans-serif;">
-  <p style="font-family:'Outfit','Noto Sans JP',sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#B8A882;margin:0 0 .7rem;">Related</p>
+  <p style="font-family:'Outfit','Noto Sans JP',sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#7A6B3E;margin:0 0 .7rem;">Related</p>
   <h2 style="font-size:1.15rem;font-weight:500;color:#1A1A1F;margin:0 0 1.3rem;">関連記事</h2>
   <div style="display:grid;gap:.8rem;">
-    <a href="/blog/geo-aeo-ai-search-b2b" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">GEO・AEO完全ガイド：AI検索時代にB2Bコンテンツが引用されるための戦略</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
-    <a href="/blog/gtm-engineer-b2b-japan" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">GTMエンジニアとは？B2B営業・マーケ自動化を担う新職種の実態と日本での活用法</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
-    <a href="/blog/vibe-marketing-b2b" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">バイブ・マーケティングとは？AIコンテンツ洪水の時代に選ばれるB2Bブランドの法則</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
-    <a href="/blog/first-party-data-b2b" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">クッキーレス時代のB2Bデータ戦略：ファーストパーティ・ゼロパーティデータの実践活用法</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/geo-aeo-ai-search-b2b" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">GEO・AEO完全ガイド：AI検索時代にB2Bコンテンツが引用されるための戦略</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/gtm-engineer-b2b-japan" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">GTMエンジニアとは？B2B営業・マーケ自動化を担う新職種の実態と日本での活用法</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/vibe-marketing-b2b" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">バイブ・マーケティングとは？AIコンテンツ洪水の時代に選ばれるB2Bブランドの法則</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/first-party-data-b2b" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">クッキーレス時代のB2Bデータ戦略：ファーストパーティ・ゼロパーティデータの実践活用法</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
   </div>
   <p style="margin:1.5rem 0 0;"><a href="/blog/" style="font-family:'Outfit','Noto Sans JP',sans-serif;font-size:.8rem;letter-spacing:.03em;color:#1E4E7E;text-decoration:none;">すべての記事を見る →</a></p>
 </section>
+</aside>
 <footer class="mt-20 border-t border-[#E2E0DA] py-10 px-6 md:px-10 text-center">
-<a class="inline-block mb-4" href="/">
+<a class="inline-block mb-4" href="/" aria-label="Wing トップページへ">
 <svg fill="none" height="24" viewbox="0 0 120 36" width="80">
 <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#0F2342"></path>
 <path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#0F2342" opacity=".32"></path>

@@ -68,9 +68,9 @@ tailwind.config = {
     extend: {
       colors: {
         navy: { DEFAULT: '#0F2342', dark: '#081830' },
-        gold: { DEFAULT: '#A8965A', light: '#C4AD72', muted: '#7A6B3E', pale: '#F8F5ED', mid: '#B8A560' },
+        gold: { DEFAULT: '#A8965A', deep: '#7A6D40', deeper: '#635834', light: '#C4AD72', muted: '#7A6B3E', pale: '#F8F5ED', mid: '#B8A560' },
         slate: { warm: '#F7F6F3', cool: '#EEECe7' },
-        ink: { DEFAULT: '#1A1A1F', mid: '#4A4A55', light: '#8A8A96' },
+        ink: { DEFAULT: '#1A1A1F', mid: '#4A4A55', light: '#6C6C79' },
       },
       fontFamily: {
         serif: ['"Yu Gothic"', '"YuGothic"', 'sans-serif'],
@@ -94,9 +94,9 @@ article li { margin-bottom: 0.5rem; }
 
 /* ── Diagram styles ── */
 .diag-wrap { background:#fff; border:1px solid #E2E0DA; border-top:3px solid #A8965A; padding:1.4rem 1.5rem 1rem; margin:1.6rem 0 0.5rem; font-size:0.85rem; }
-.diag-caption { text-align:center; font-size:0.72rem; color:#8A8A96; margin-top:0.5rem; margin-bottom:1.4rem; }
+.diag-caption { text-align:center; font-size:0.72rem; color:#6C6C79; margin-top:0.5rem; margin-bottom:1.4rem; }
 .diag-row { display:flex; flex-wrap:wrap; gap:0.7rem; }
-.diag-label { font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#A8965A; margin-bottom:0.8rem; }
+.diag-label { font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#7A6D40; margin-bottom:0.8rem; }
 .diag-step-row { display:flex; flex-wrap:wrap; gap:0.7rem; }
 .diag-step-card { flex:1 1 140px; background:#fff; border:1px solid #E2E0DA; padding:0.9rem; position:relative; }
 .diag-step-card .step-num { width:28px; height:28px; background:#0F2342; color:#A8965A; font-size:0.78rem; font-weight:700; display:flex; align-items:center; justify-content:center; margin-bottom:0.55rem; }
@@ -109,7 +109,7 @@ article li { margin-bottom: 0.5rem; }
 .diag-compare-col li { font-size:0.78rem; padding:0.25rem 0; border-bottom:1px solid #F0EDE8; color:#4A4A55; line-height:1.5; }
 .diag-compare-col li:last-child { border-bottom:none; }
 .diag-checklist-item { display:flex; align-items:flex-start; gap:0.5rem; background:#F8F5ED; border-left:3px solid #A8965A; padding:0.6rem 0.8rem; flex:1 1 220px; font-size:0.8rem; line-height:1.55; }
-.diag-checklist-item .chk { color:#A8965A; font-weight:700; flex-shrink:0; margin-top:0.05rem; }
+.diag-checklist-item .chk { color:#7A6D40; font-weight:700; flex-shrink:0; margin-top:0.05rem; }
 </style>
 <!-- Google Analytics GA4 -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
@@ -155,7 +155,7 @@ article li { margin-bottom: 0.5rem; }
 <!-- ─── ARTICLE ─────────────────────────────────────────── -->
 <main class="py-16 px-6 md:px-10">
 <div class="max-w-3xl mx-auto">
-<p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3">AI Customs</p>
+<p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold-deep mb-3">AI Customs</p>
 <h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4">AI通関とは？<br/>HS分類・申告業務の自動化が変えるもの</h1>
 <div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2">
 <time datetime="2026-03-28">2026.03.28</time>
@@ -241,22 +241,22 @@ article li { margin-bottom: 0.5rem; }
 <div class="diag-step-card">
 <div class="step-num" style="width:auto;padding:0 6px;font-size:0.65rem;">HS</div>
 <div class="step-title" data-en="HS Classification Research Time" data-ja="HS分類の調査時間">HS分類の調査時間</div>
-<div class="step-body" style="font-size:0.85rem;font-weight:700;color:#5A9A6A;">一品目あたり平均<br/>40〜60%短縮</div>
+<div class="step-body" style="font-size:0.85rem;font-weight:700;color:#487B55;">一品目あたり平均<br/>40〜60%短縮</div>
 </div>
 <div class="diag-step-card">
 <div class="step-num" data-en="Manual Declaration Data Entry" data-ja="申告書の手入力作業" style="width:auto;padding:0 6px;font-size:0.65rem;">入力</div>
 <div class="step-title" data-en="Manual Declaration Data Entry" data-ja="申告書の手入力作業">申告書の手入力作業</div>
-<div class="step-body" style="font-size:0.85rem;font-weight:700;color:#5A9A6A;">書類読み取り自動化で<br/>80%以上削減</div>
+<div class="step-body" style="font-size:0.85rem;font-weight:700;color:#487B55;">書類読み取り自動化で<br/>80%以上削減</div>
 </div>
 <div class="diag-step-card">
 <div class="step-num" style="width:auto;padding:0 6px;font-size:0.65rem;">精度</div>
 <div class="step-title" data-en="Filing Error and Rejection Rate" data-ja="申告誤り・差戻し率">申告誤り・差戻し率</div>
-<div class="step-body" style="font-size:0.85rem;font-weight:700;color:#5A9A6A;">照合自動化により<br/>大幅に減少</div>
+<div class="step-body" style="font-size:0.85rem;font-weight:700;color:#487B55;">照合自動化により<br/>大幅に減少</div>
 </div>
 <div class="diag-step-card">
 <div class="step-num" style="width:auto;padding:0 6px;font-size:0.65rem;">生産性</div>
 <div class="step-title" data-en="Cases Processed Per Staff Member" data-ja="担当者一人あたりの処理件数">担当者一人あたりの処理件数</div>
-<div class="step-body" style="font-size:0.85rem;font-weight:700;color:#5A9A6A;">1.5〜2倍に増加</div>
+<div class="step-body" style="font-size:0.85rem;font-weight:700;color:#487B55;">1.5〜2倍に増加</div>
 </div>
 </div>
 </div>
@@ -278,9 +278,10 @@ article li { margin-bottom: 0.5rem; }
 </div>
 </article>
 </div>
-</main>
 <!-- ─── FOOTER ─────────────────────────────────────────── -->
 
+</main>
+<aside aria-label="関連する案内">
 <!-- assessment-cta (auto) -->
 <section style="max-width:800px;margin:3rem auto 0;padding:0 1.5rem;font-family:'Noto Sans JP',sans-serif;">
   <div style="border:1px solid #E8E5DE;border-left:3px solid #A98A4B;background:#FBFAF7;padding:1.5rem 1.6rem;">
@@ -291,23 +292,24 @@ article li { margin-bottom: 0.5rem; }
 </section>
 <!-- related-articles (auto) -->
 <section style="max-width:800px;margin:3.5rem auto 0;padding:2rem 1.5rem 0;border-top:1px solid #E5E7EB;font-family:'Noto Sans JP',sans-serif;">
-  <p style="font-family:'Outfit','Noto Sans JP',sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#B8A882;margin:0 0 .7rem;">Related</p>
+  <p style="font-family:'Outfit','Noto Sans JP',sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#7A6B3E;margin:0 0 .7rem;">Related</p>
   <h2 style="font-size:1.15rem;font-weight:500;color:#1A1A1F;margin:0 0 1.3rem;">関連記事</h2>
   <div style="display:grid;gap:.8rem;">
-    <a href="/blog/trade-dx-complete-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">貿易DX完全ガイド｜輸入・輸出業務の課題とAI活用の全体像</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
-    <a href="/blog/trade-dx-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">貿易業務のデジタル化（貿易DX）入門｜中小商社が今すぐ着手すべき理由と進め方</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
-    <a href="/blog/trade-operations-overview" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">商社の貿易事務とは？輸入フローの全体像と担当者が直面する課題</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
-    <a href="/blog/trade-dx-ai-agent" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/trade-dx-complete-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">貿易DX完全ガイド｜輸入・輸出業務の課題とAI活用の全体像</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/trade-dx-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">貿易業務のデジタル化（貿易DX）入門｜中小商社が今すぐ着手すべき理由と進め方</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/trade-operations-overview" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">商社の貿易事務とは？輸入フローの全体像と担当者が直面する課題</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/trade-dx-ai-agent" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
   </div>
   <p style="margin:1.5rem 0 0;"><a href="/blog/" style="font-family:'Outfit','Noto Sans JP',sans-serif;font-size:.8rem;letter-spacing:.03em;color:#1E4E7E;text-decoration:none;">すべての記事を見る →</a></p>
 </section>
+</aside>
 <footer class="bg-navy py-10 px-6 md:px-10 mt-16">
 <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
 <svg aria-label="Wing" fill="none" height="28" viewbox="0 0 120 36" width="80">
 <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff" opacity=".6"></path>
 <text fill="#fff" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" opacity=".6" x="46" y="25">Wing</text>
 </svg>
-<p class="text-[.68rem] text-white/30">© 2026 Wing. All rights reserved.</p>
+<p class="text-[.68rem] text-white/60">© 2026 Wing. All rights reserved.</p>
 </div>
 </footer>
 </body>

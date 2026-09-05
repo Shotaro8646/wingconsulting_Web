@@ -18,7 +18,7 @@
 :root {
   --navy: #1A2E5A;
   --navy-deep: #0F1D3D;
-  --gold: #917816;
+  --gold: #826B14;
   --gold-light: #B89E2B;
   --gold-pale: #F5EDD0;
   --dark: #1A1A1A;
@@ -29,7 +29,7 @@
   --gray-100: #F4F4F2;
   --white: #FEFEFE;
   --red-alert: #C62828;
-  --amber: #E68A00;
+  --amber: #A26100;
   --green: #2E7D32;
   --blue-info: #1565C0;
 }
@@ -242,7 +242,7 @@ body {
   font-size: clamp(1.5rem, 3vw, 2.2rem);
   font-weight: 700;
   color: var(--navy);
-  margin-bottom: 16px;
+  margin: 0 0 16px;
   line-height: 1.4;
 }
 
@@ -655,6 +655,9 @@ body {
   border-radius: 50%;
   animation: blink 1.5s infinite;
 }
+/* 使いやすさ点検で拾った薄い色の手当て：暗い地のフッターは濃くした金だと読めないので明るい金に、更新日時の灰は濃くする */
+.footer a { color: var(--gold-light); }
+.update-stamp { color: #767676; }
 </style>
 <meta name="description" content="貿易規制の最新動向をまとめたハブページ。PFAS規制、chemSHERPA対応、輸出管理など、貿易コンプライアンスに必要な情報を集約。">
 <link rel="canonical" href="https://wingconsulting.org/trade-regulation-hub">
@@ -723,6 +726,7 @@ body {
 </nav>
 
 <!-- ALERT -->
+<main>
 <div class="alert-banner" style="margin-top:64px;">
   <span class="mono">[2026.03.21]</span>
   米国: 通商法122条に基づく全世界一律10%追加関税が2/24発効（7/24まで150日間） ｜ 中国: 日本企業40社を輸出管理リストに追加（2/24施行）
@@ -764,7 +768,7 @@ body {
     Last updated: 2026-03-21 — Sources: JETRO, 経産省, 商務部, EU Commission
   </div>
   <div class="section-label">01 — Regulation Tracker</div>
-  <div class="section-title">主要規制動向</div>
+  <h2 class="section-title">主要規制動向</h2>
   <p class="section-desc">
     日系企業の貿易実務に直接影響する3つの規制領域を継続的に追跡。
     各トピックの緊急度とビジネスインパクトを明示しています。
@@ -907,7 +911,7 @@ body {
 <!-- TIMELINE -->
 <section class="section" id="timeline">
   <div class="section-label">02 — Regulatory Timeline</div>
-  <div class="section-title">2026年 規制タイムライン</div>
+  <h2 class="section-title">2026年 規制タイムライン</h2>
   <p class="section-desc">
     今年の主要な規制イベントを時系列で整理。対応準備のマイルストーン設定にご活用ください。
   </p>
@@ -956,12 +960,12 @@ body {
 <!-- TARIFF TABLE -->
 <section class="section" id="tariffs">
   <div class="section-label">03 — Tariff Overview</div>
-  <div class="section-title">米国追加関税 主要措置一覧</div>
+  <h2 class="section-title">米国追加関税 主要措置一覧</h2>
   <p class="section-desc">
     2026年3月時点で発動中の主な米国追加関税措置。複数の根拠法に基づく関税が累積適用される点に注意。
   </p>
 
-  <div class="table-wrapper">
+  <div class="table-wrapper" tabindex="0" role="region" aria-label="関税措置の一覧表（横にスクロールできます）">
     <table class="data-table">
       <thead>
         <tr>
@@ -1024,7 +1028,7 @@ body {
 <section class="dx-section" id="dx">
   <div class="section" style="padding-top:0;padding-bottom:0;">
     <div class="section-label">04 — DX Response Strategy</div>
-    <div class="section-title">規制対応を支えるDX施策</div>
+    <h2 class="section-title">規制対応を支えるDX施策</h2>
     <p class="section-desc">
       規制の複雑化に人力で対処し続けることは限界があります。
       テクノロジーによる自動化・可視化が、コンプライアンスとオペレーション効率の両立を可能にします。
@@ -1082,6 +1086,7 @@ body {
 </section>
 
 <!-- FOOTER -->
+</main>
 <footer class="footer">
   <p class="footer-text">
     © 2026 Wing — Trade Regulation Intelligence<br>

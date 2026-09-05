@@ -68,9 +68,9 @@ tailwind.config = {
     extend: {
       colors: {
         navy: { DEFAULT: '#0F2342', dark: '#081830' },
-        gold: { DEFAULT: '#A8965A', light: '#C4AD72', muted: '#7A6B3E', pale: '#F8F5ED', mid: '#B8A560' },
+        gold: { DEFAULT: '#A8965A', deep: '#7A6D40', deeper: '#635834', light: '#C4AD72', muted: '#7A6B3E', pale: '#F8F5ED', mid: '#B8A560' },
         slate: { warm: '#F7F6F3', cool: '#EEECe7' },
-        ink: { DEFAULT: '#1A1A1F', mid: '#4A4A55', light: '#8A8A96' },
+        ink: { DEFAULT: '#1A1A1F', mid: '#4A4A55', light: '#6C6C79' },
       },
       fontFamily: {
         serif: ['"Yu Gothic"', '"YuGothic"', 'sans-serif'],
@@ -93,10 +93,10 @@ article li { margin-bottom: 0.5rem; }
 
 /* ── Diagram styles ── */
 .diag-wrap { background:#fff; border:1px solid #E2E0DA; border-top:3px solid #A8965A; padding:1.4rem 1.5rem 1rem; margin:1.6rem 0 0.5rem; font-size:0.85rem; }
-.diag-caption { text-align:center; font-size:0.72rem; color:#8A8A96; margin-top:0.5rem; margin-bottom:1.4rem; }
+.diag-caption { text-align:center; font-size:0.72rem; color:#6C6C79; margin-top:0.5rem; margin-bottom:1.4rem; }
 .diag-row { display:flex; flex-wrap:wrap; gap:0.7rem; }
 .diag-checklist-item { display:flex; align-items:flex-start; gap:0.5rem; background:#F8F5ED; border-left:3px solid #A8965A; padding:0.6rem 0.8rem; flex:1 1 220px; font-size:0.8rem; line-height:1.55; }
-.diag-checklist-item .chk { color:#A8965A; font-weight:700; flex-shrink:0; margin-top:0.05rem; }
+.diag-checklist-item .chk { color:#7A6D40; font-weight:700; flex-shrink:0; margin-top:0.05rem; }
 .diag-compare-col { flex:1 1 200px; border:1px solid #E2E0DA; padding:1rem; }
 .diag-compare-col .col-head { font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#fff; background:#0F2342; padding:0.4rem 0.6rem; margin:-1rem -1rem 0.8rem; }
 .diag-compare-col.highlight .col-head { background:#A8965A; color:#0F2342; }
@@ -114,9 +114,9 @@ article li { margin-bottom: 0.5rem; }
 .diag-fail-col:nth-child(2) { background:#FAFAF7; border-top:3px solid #A8965A; }
 .diag-fail-col:last-child { background:#F0F7F0; border-top:3px solid #5A9A6A; }
 .diag-fail-col .col-label { font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:0.5rem; }
-.diag-fail-col:first-child .col-label { color:#C45C3A; }
+.diag-fail-col:first-child .col-label { color:#B55536; }
 .diag-fail-col:nth-child(2) .col-label { color:#7A6B3E; }
-.diag-fail-col:last-child .col-label { color:#5A9A6A; }
+.diag-fail-col:last-child .col-label { color:#487B55; }
 .diag-fail-item { font-size:0.75rem; color:#4A4A55; line-height:1.55; padding:0.3rem 0; border-bottom:1px dashed #E2E0DA; }
 .diag-fail-item:last-child { border-bottom:none; }
 </style>
@@ -283,13 +283,13 @@ article li { margin-bottom: 0.5rem; }
 &lt;div style=&quot;background:#0F2342;color:#A8965A;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;padding:0.5rem 0.7rem;border-right:1px solid rgba(255,255,255,0.1);&quot;&gt;失敗パターン&lt;/div&gt;
 &lt;div style=&quot;background:#0F2342;color:#A8965A;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;padding:0.5rem 0.7rem;border-right:1px solid rgba(255,255,255,0.1);&quot;&gt;主な原因&lt;/div&gt;
 &lt;div style=&quot;background:#0F2342;color:#A8965A;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;padding:0.5rem 0.7rem;&quot;&gt;対策・解決策&lt;/div&gt;
-&lt;div style=&quot;padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#C45C3A;font-weight:700;line-height:1.5;&quot;&gt;戦略止まりで現場に落ちない&lt;/div&gt;
+&lt;div style=&quot;padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#B55536;font-weight:700;line-height:1.5;&quot;&gt;戦略止まりで現場に落ちない&lt;/div&gt;
 &lt;div style=&quot;padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;&quot;&gt;構想と実行を別チームが担当&lt;/div&gt;
 &lt;div style=&quot;padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;&quot;&gt;構想段階から現場担当者を巻き込む&lt;/div&gt;
-&lt;div style=&quot;padding:0.6rem 0.7rem;background:#FAFAF7;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#C45C3A;font-weight:700;line-height:1.5;&quot;&gt;ツール先行でROIが出ない&lt;/div&gt;
+&lt;div style=&quot;padding:0.6rem 0.7rem;background:#FAFAF7;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#B55536;font-weight:700;line-height:1.5;&quot;&gt;ツール先行でROIが出ない&lt;/div&gt;
 &lt;div style=&quot;padding:0.6rem 0.7rem;background:#FAFAF7;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;&quot;&gt;業務課題特定前にツールを選定&lt;/div&gt;
 &lt;div style=&quot;padding:0.6rem 0.7rem;background:#FAFAF7;border-top:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;&quot;&gt;業務可視化→ボトルネック特定→ツール選定の順で進める&lt;/div&gt;
-&lt;div style=&quot;padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#C45C3A;font-weight:700;line-height:1.5;&quot;&gt;丸投げで社内にノウハウが残らない&lt;/div&gt;
+&lt;div style=&quot;padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#B55536;font-weight:700;line-height:1.5;&quot;&gt;丸投げで社内にノウハウが残らない&lt;/div&gt;
 &lt;div style=&quot;padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;&quot;&gt;外部依存・内製化計画の欠如&lt;/div&gt;
 &lt;div style=&quot;padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;&quot;&gt;ナレッジトランスファーと内製化計画を最初から組み込む&lt;/div&gt;
 &lt;/div&gt;
@@ -443,13 +443,13 @@ article li { margin-bottom: 0.5rem; }
 &lt;div style=&quot;background:#0F2342;color:#A8965A;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;padding:0.5rem 0.7rem;border-right:1px solid rgba(255,255,255,0.1);&quot;&gt;失敗パターン&lt;/div&gt;
 &lt;div style=&quot;background:#0F2342;color:#A8965A;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;padding:0.5rem 0.7rem;border-right:1px solid rgba(255,255,255,0.1);&quot;&gt;主な原因&lt;/div&gt;
 &lt;div style=&quot;background:#0F2342;color:#A8965A;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;padding:0.5rem 0.7rem;&quot;&gt;対策・解決策&lt;/div&gt;
-&lt;div style=&quot;padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#C45C3A;font-weight:700;line-height:1.5;&quot;&gt;戦略止まりで現場に落ちない&lt;/div&gt;
+&lt;div style=&quot;padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#B55536;font-weight:700;line-height:1.5;&quot;&gt;戦略止まりで現場に落ちない&lt;/div&gt;
 &lt;div style=&quot;padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;&quot;&gt;構想と実行を別チームが担当&lt;/div&gt;
 &lt;div style=&quot;padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;&quot;&gt;構想段階から現場担当者を巻き込む&lt;/div&gt;
-&lt;div style=&quot;padding:0.6rem 0.7rem;background:#FAFAF7;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#C45C3A;font-weight:700;line-height:1.5;&quot;&gt;ツール先行でROIが出ない&lt;/div&gt;
+&lt;div style=&quot;padding:0.6rem 0.7rem;background:#FAFAF7;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#B55536;font-weight:700;line-height:1.5;&quot;&gt;ツール先行でROIが出ない&lt;/div&gt;
 &lt;div style=&quot;padding:0.6rem 0.7rem;background:#FAFAF7;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;&quot;&gt;業務課題特定前にツールを選定&lt;/div&gt;
 &lt;div style=&quot;padding:0.6rem 0.7rem;background:#FAFAF7;border-top:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;&quot;&gt;業務可視化→ボトルネック特定→ツール選定の順で進める&lt;/div&gt;
-&lt;div style=&quot;padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#C45C3A;font-weight:700;line-height:1.5;&quot;&gt;丸投げで社内にノウハウが残らない&lt;/div&gt;
+&lt;div style=&quot;padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#B55536;font-weight:700;line-height:1.5;&quot;&gt;丸投げで社内にノウハウが残らない&lt;/div&gt;
 &lt;div style=&quot;padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;&quot;&gt;外部依存・内製化計画の欠如&lt;/div&gt;
 &lt;div style=&quot;padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;&quot;&gt;ナレッジトランスファーと内製化計画を最初から組み込む&lt;/div&gt;
 &lt;/div&gt;
@@ -489,7 +489,7 @@ article li { margin-bottom: 0.5rem; }
 &lt;/a&gt;
 &lt;/div&gt;
 &lt;/div&gt;">
-<p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3">DX Strategy</p>
+<p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold-deep mb-3">DX Strategy</p>
 <h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4" data-ja="DXコンサルティングとは？失敗しない選び方と成功のポイント" data-en="DXコンサルティングとは？失敗しない選び方と成功のポイント">DXコンサルティングとは？失敗しない選び方と成功のポイント</h1>
 <div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2" data-ja-html='&lt;time datetime="2026-03-25"&gt;2026.03.25&lt;/time&gt;
 &lt;span&gt;Wing編集部&lt;/span&gt;' data-en-html='&lt;time datetime="2026-03-25"&gt;2026.03.25&lt;/time&gt;
@@ -513,7 +513,7 @@ article li { margin-bottom: 0.5rem; }
 </ul>
 <p data-ja="こうした課題は、技術的な問題だけでなく、組織・人材・プロセスが複雑に絡み合っています。だからこそ、俯瞰的な視点と実行力の両方を持つDXコンサルティングが有効です。" data-en="こうした課題は、技術的な問題だけでなく、組織・人材・プロセスが複雑に絡み合っています。だからこそ、俯瞰的な視点と実行力の両方を持つDXコンサルティングが有効です。">こうした課題は、技術的な問題だけでなく、組織・人材・プロセスが複雑に絡み合っています。だからこそ、俯瞰的な視点と実行力の両方を持つDXコンサルティングが有効です。</p>
 <!-- DIAGRAM: 5 symptoms checklist -->
-<div class="diag-wrap" data-ja-html='&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;"&gt;DXコンサルが必要な企業の5つのサイン&lt;/div&gt;
+<div class="diag-wrap" data-ja-html='&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.8rem;"&gt;DXコンサルが必要な企業の5つのサイン&lt;/div&gt;
 &lt;div class="diag-row"&gt;
 &lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;&lt;strong&gt;DX戦略が描けない&lt;/strong&gt;&lt;br/&gt;経営ビジョンとIT施策が結びついていない&lt;/span&gt;&lt;/div&gt;
 &lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;&lt;strong&gt;ツールが定着しない&lt;/strong&gt;&lt;br/&gt;SaaS・AIを入れたが現場で使われない&lt;/span&gt;&lt;/div&gt;
@@ -528,7 +528,7 @@ article li { margin-bottom: 0.5rem; }
 &lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;&lt;strong&gt;プロジェクトが頓挫&lt;/strong&gt;&lt;br/&gt;開発・BPRが途中で止まってしまう&lt;/span&gt;&lt;/div&gt;
 &lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;&lt;strong&gt;グローバル統合が進まない&lt;/strong&gt;&lt;br/&gt;海外拠点との連携・標準化が停滞&lt;/span&gt;&lt;/div&gt;
 &lt;/div&gt;'>
-<div data-ja="DXコンサルが必要な企業の5つのサイン" data-en="DXコンサルが必要な企業の5つのサイン" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;">DXコンサルが必要な企業の5つのサイン</div>
+<div data-ja="DXコンサルが必要な企業の5つのサイン" data-en="DXコンサルが必要な企業の5つのサイン" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.8rem;">DXコンサルが必要な企業の5つのサイン</div>
 <div class="diag-row" data-ja-html='&lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;&lt;strong&gt;DX戦略が描けない&lt;/strong&gt;&lt;br/&gt;経営ビジョンとIT施策が結びついていない&lt;/span&gt;&lt;/div&gt;
 &lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;&lt;strong&gt;ツールが定着しない&lt;/strong&gt;&lt;br/&gt;SaaS・AIを入れたが現場で使われない&lt;/span&gt;&lt;/div&gt;
 &lt;div class="diag-checklist-item"&gt;&lt;span class="chk"&gt;✓&lt;/span&gt;&lt;span&gt;&lt;strong&gt;DX人材が不足&lt;/strong&gt;&lt;br/&gt;業務とテクノロジーを橋渡しできる人材がいない&lt;/span&gt;&lt;/div&gt;
@@ -551,7 +551,7 @@ article li { margin-bottom: 0.5rem; }
 <p data-ja-html="&lt;strong&gt;大手総合コンサルティングファーム&lt;/strong&gt;は、グローバルなリソースとブランド力を強みに、大規模なDXプログラムに対応します。一方で、プロジェクト単価が高額になりがちで、現場レベルの実装は下請けに委託するケースも少なくありません。戦略提言は優れていても、実行フェーズで成果が出にくいという声が聞かれることもあります。" data-en-html="&lt;strong&gt;大手総合コンサルティングファーム&lt;/strong&gt;は、グローバルなリソースとブランド力を強みに、大規模なDXプログラムに対応します。一方で、プロジェクト単価が高額になりがちで、現場レベルの実装は下請けに委託するケースも少なくありません。戦略提言は優れていても、実行フェーズで成果が出にくいという声が聞かれることもあります。"><strong>大手総合コンサルティングファーム</strong>は、グローバルなリソースとブランド力を強みに、大規模なDXプログラムに対応します。一方で、プロジェクト単価が高額になりがちで、現場レベルの実装は下請けに委託するケースも少なくありません。戦略提言は優れていても、実行フェーズで成果が出にくいという声が聞かれることもあります。</p>
 <p data-ja-html="&lt;strong&gt;専門特化ファーム&lt;/strong&gt;は、特定の業界やテーマに深い知見を持ち、戦略から実装まで一気通貫で対応できる機動力が特徴です。Wingのような専門ファームでは、コンサルタント自身がシステム要件の定義や開発パートナーの管理、現場への定着支援までハンズオンで携わります。経営層への提言と、現場での実行を同じチームが担うため、「戦略と実装の断絶」が起きにくいのが大きな利点です。" data-en-html="&lt;strong&gt;専門特化ファーム&lt;/strong&gt;は、特定の業界やテーマに深い知見を持ち、戦略から実装まで一気通貫で対応できる機動力が特徴です。Wingのような専門ファームでは、コンサルタント自身がシステム要件の定義や開発パートナーの管理、現場への定着支援までハンズオンで携わります。経営層への提言と、現場での実行を同じチームが担うため、「戦略と実装の断絶」が起きにくいのが大きな利点です。"><strong>専門特化ファーム</strong>は、特定の業界やテーマに深い知見を持ち、戦略から実装まで一気通貫で対応できる機動力が特徴です。Wingのような専門ファームでは、コンサルタント自身がシステム要件の定義や開発パートナーの管理、現場への定着支援までハンズオンで携わります。経営層への提言と、現場での実行を同じチームが担うため、「戦略と実装の断絶」が起きにくいのが大きな利点です。</p>
 <!-- DIAGRAM: 大手 vs 専門ファーム comparison -->
-<div class="diag-wrap" data-ja-html='&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;"&gt;ファームタイプ比較&lt;/div&gt;
+<div class="diag-wrap" data-ja-html='&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.8rem;"&gt;ファームタイプ比較&lt;/div&gt;
 &lt;div class="diag-row"&gt;
 &lt;div class="diag-compare-col"&gt;
 &lt;div class="col-head"&gt;大手総合ファーム&lt;/div&gt;
@@ -600,7 +600,7 @@ article li { margin-bottom: 0.5rem; }
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;'>
-<div data-ja="ファームタイプ比較" data-en="ファームタイプ比較" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;">ファームタイプ比較</div>
+<div data-ja="ファームタイプ比較" data-en="ファームタイプ比較" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.8rem;">ファームタイプ比較</div>
 <div class="diag-row" data-ja-html='&lt;div class="diag-compare-col"&gt;
 &lt;div class="col-head"&gt;大手総合ファーム&lt;/div&gt;
 &lt;ul&gt;
@@ -711,7 +711,7 @@ article li { margin-bottom: 0.5rem; }
 <li data-ja-html="&lt;strong&gt;柔軟なスコープ調整：&lt;/strong&gt;DXは進行中に要件が変わることが多いため、スコープの見直しに柔軟に対応できるパートナーが理想です。" data-en-html="&lt;strong&gt;柔軟なスコープ調整：&lt;/strong&gt;DXは進行中に要件が変わることが多いため、スコープの見直しに柔軟に対応できるパートナーが理想です。"><strong>柔軟なスコープ調整：</strong>DXは進行中に要件が変わることが多いため、スコープの見直しに柔軟に対応できるパートナーが理想です。</li>
 </ul>
 <!-- DIAGRAM: 5 selection points as cards -->
-<div class="diag-wrap" data-ja-html='&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;"&gt;DXコンサル選定 5つの視点&lt;/div&gt;
+<div class="diag-wrap" data-ja-html='&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.8rem;"&gt;DXコンサル選定 5つの視点&lt;/div&gt;
 &lt;div class="diag-step-row"&gt;
 &lt;div class="diag-step-card"&gt;
 &lt;div class="step-num"&gt;1&lt;/div&gt;
@@ -766,7 +766,7 @@ article li { margin-bottom: 0.5rem; }
 &lt;div class="step-body"&gt;要件変化に柔軟に対応できるパートナーか&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;'>
-<div data-ja="DXコンサル選定 5つの視点" data-en="DXコンサル選定 5つの視点" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;">DXコンサル選定 5つの視点</div>
+<div data-ja="DXコンサル選定 5つの視点" data-en="DXコンサル選定 5つの視点" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.8rem;">DXコンサル選定 5つの視点</div>
 <div class="diag-step-row" data-ja-html='&lt;div class="diag-step-card"&gt;
 &lt;div class="step-num"&gt;1&lt;/div&gt;
 &lt;div class="step-title"&gt;実行力&lt;/div&gt;
@@ -870,18 +870,18 @@ article li { margin-bottom: 0.5rem; }
 <p data-ja-html="&lt;strong&gt;失敗2：ツール先行でROIが出ない&lt;/strong&gt;&lt;br/&gt;「とりあえずAIを入れよう」というアプローチでは、業務課題とツールが噛み合わず投資が無駄になります。導入前に業務プロセスを可視化し、ボトルネックを特定してからツールを選定すべきです。" data-en-html="&lt;strong&gt;失敗2：ツール先行でROIが出ない&lt;/strong&gt;&lt;br/&gt;「とりあえずAIを入れよう」というアプローチでは、業務課題とツールが噛み合わず投資が無駄になります。導入前に業務プロセスを可視化し、ボトルネックを特定してからツールを選定すべきです。"><strong>失敗2：ツール先行でROIが出ない</strong><br/>「とりあえずAIを入れよう」というアプローチでは、業務課題とツールが噛み合わず投資が無駄になります。導入前に業務プロセスを可視化し、ボトルネックを特定してからツールを選定すべきです。</p>
 <p data-ja-html="&lt;strong&gt;失敗3：コンサルに丸投げして社内にノウハウが残らない&lt;/strong&gt;&lt;br/&gt;外部依存が強すぎると、コンサルの契約終了後にプロジェクトが止まります。ナレッジトランスファーと内製化の計画を最初から組み込むことが重要です。" data-en-html="&lt;strong&gt;失敗3：コンサルに丸投げして社内にノウハウが残らない&lt;/strong&gt;&lt;br/&gt;外部依存が強すぎると、コンサルの契約終了後にプロジェクトが止まります。ナレッジトランスファーと内製化の計画を最初から組み込むことが重要です。"><strong>失敗3：コンサルに丸投げして社内にノウハウが残らない</strong><br/>外部依存が強すぎると、コンサルの契約終了後にプロジェクトが止まります。ナレッジトランスファーと内製化の計画を最初から組み込むことが重要です。</p>
 <!-- DIAGRAM: Failure → Cause → Solution -->
-<div class="diag-wrap" data-ja-html='&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;"&gt;失敗パターン分析&lt;/div&gt;
+<div class="diag-wrap" data-ja-html='&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.8rem;"&gt;失敗パターン分析&lt;/div&gt;
 &lt;div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid #E2E0DA;font-size:0.78rem;"&gt;
 &lt;div style="background:#0F2342;color:#A8965A;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;padding:0.5rem 0.7rem;border-right:1px solid rgba(255,255,255,0.1);"&gt;失敗パターン&lt;/div&gt;
 &lt;div style="background:#0F2342;color:#A8965A;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;padding:0.5rem 0.7rem;border-right:1px solid rgba(255,255,255,0.1);"&gt;主な原因&lt;/div&gt;
 &lt;div style="background:#0F2342;color:#A8965A;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;padding:0.5rem 0.7rem;"&gt;対策・解決策&lt;/div&gt;
-&lt;div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#C45C3A;font-weight:700;line-height:1.5;"&gt;戦略止まりで現場に落ちない&lt;/div&gt;
+&lt;div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#B55536;font-weight:700;line-height:1.5;"&gt;戦略止まりで現場に落ちない&lt;/div&gt;
 &lt;div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;"&gt;構想と実行を別チームが担当&lt;/div&gt;
 &lt;div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;"&gt;構想段階から現場担当者を巻き込む&lt;/div&gt;
-&lt;div style="padding:0.6rem 0.7rem;background:#FAFAF7;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#C45C3A;font-weight:700;line-height:1.5;"&gt;ツール先行でROIが出ない&lt;/div&gt;
+&lt;div style="padding:0.6rem 0.7rem;background:#FAFAF7;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#B55536;font-weight:700;line-height:1.5;"&gt;ツール先行でROIが出ない&lt;/div&gt;
 &lt;div style="padding:0.6rem 0.7rem;background:#FAFAF7;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;"&gt;業務課題特定前にツールを選定&lt;/div&gt;
 &lt;div style="padding:0.6rem 0.7rem;background:#FAFAF7;border-top:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;"&gt;業務可視化→ボトルネック特定→ツール選定の順で進める&lt;/div&gt;
-&lt;div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#C45C3A;font-weight:700;line-height:1.5;"&gt;丸投げで社内にノウハウが残らない&lt;/div&gt;
+&lt;div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#B55536;font-weight:700;line-height:1.5;"&gt;丸投げで社内にノウハウが残らない&lt;/div&gt;
 &lt;div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;"&gt;外部依存・内製化計画の欠如&lt;/div&gt;
 &lt;div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;"&gt;ナレッジトランスファーと内製化計画を最初から組み込む&lt;/div&gt;
 &lt;/div&gt;' data-en-html='&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;"&gt;失敗パターン分析&lt;/div&gt;
@@ -889,50 +889,50 @@ article li { margin-bottom: 0.5rem; }
 &lt;div style="background:#0F2342;color:#A8965A;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;padding:0.5rem 0.7rem;border-right:1px solid rgba(255,255,255,0.1);"&gt;失敗パターン&lt;/div&gt;
 &lt;div style="background:#0F2342;color:#A8965A;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;padding:0.5rem 0.7rem;border-right:1px solid rgba(255,255,255,0.1);"&gt;主な原因&lt;/div&gt;
 &lt;div style="background:#0F2342;color:#A8965A;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;padding:0.5rem 0.7rem;"&gt;対策・解決策&lt;/div&gt;
-&lt;div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#C45C3A;font-weight:700;line-height:1.5;"&gt;戦略止まりで現場に落ちない&lt;/div&gt;
+&lt;div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#B55536;font-weight:700;line-height:1.5;"&gt;戦略止まりで現場に落ちない&lt;/div&gt;
 &lt;div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;"&gt;構想と実行を別チームが担当&lt;/div&gt;
 &lt;div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;"&gt;構想段階から現場担当者を巻き込む&lt;/div&gt;
-&lt;div style="padding:0.6rem 0.7rem;background:#FAFAF7;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#C45C3A;font-weight:700;line-height:1.5;"&gt;ツール先行でROIが出ない&lt;/div&gt;
+&lt;div style="padding:0.6rem 0.7rem;background:#FAFAF7;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#B55536;font-weight:700;line-height:1.5;"&gt;ツール先行でROIが出ない&lt;/div&gt;
 &lt;div style="padding:0.6rem 0.7rem;background:#FAFAF7;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;"&gt;業務課題特定前にツールを選定&lt;/div&gt;
 &lt;div style="padding:0.6rem 0.7rem;background:#FAFAF7;border-top:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;"&gt;業務可視化→ボトルネック特定→ツール選定の順で進める&lt;/div&gt;
-&lt;div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#C45C3A;font-weight:700;line-height:1.5;"&gt;丸投げで社内にノウハウが残らない&lt;/div&gt;
+&lt;div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#B55536;font-weight:700;line-height:1.5;"&gt;丸投げで社内にノウハウが残らない&lt;/div&gt;
 &lt;div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;"&gt;外部依存・内製化計画の欠如&lt;/div&gt;
 &lt;div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;"&gt;ナレッジトランスファーと内製化計画を最初から組み込む&lt;/div&gt;
 &lt;/div&gt;'>
-<div data-ja="失敗パターン分析" data-en="失敗パターン分析" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;">失敗パターン分析</div>
+<div data-ja="失敗パターン分析" data-en="失敗パターン分析" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.8rem;">失敗パターン分析</div>
 <div data-ja-html='&lt;div style="background:#0F2342;color:#A8965A;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;padding:0.5rem 0.7rem;border-right:1px solid rgba(255,255,255,0.1);"&gt;失敗パターン&lt;/div&gt;
 &lt;div style="background:#0F2342;color:#A8965A;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;padding:0.5rem 0.7rem;border-right:1px solid rgba(255,255,255,0.1);"&gt;主な原因&lt;/div&gt;
 &lt;div style="background:#0F2342;color:#A8965A;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;padding:0.5rem 0.7rem;"&gt;対策・解決策&lt;/div&gt;
-&lt;div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#C45C3A;font-weight:700;line-height:1.5;"&gt;戦略止まりで現場に落ちない&lt;/div&gt;
+&lt;div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#B55536;font-weight:700;line-height:1.5;"&gt;戦略止まりで現場に落ちない&lt;/div&gt;
 &lt;div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;"&gt;構想と実行を別チームが担当&lt;/div&gt;
 &lt;div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;"&gt;構想段階から現場担当者を巻き込む&lt;/div&gt;
-&lt;div style="padding:0.6rem 0.7rem;background:#FAFAF7;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#C45C3A;font-weight:700;line-height:1.5;"&gt;ツール先行でROIが出ない&lt;/div&gt;
+&lt;div style="padding:0.6rem 0.7rem;background:#FAFAF7;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#B55536;font-weight:700;line-height:1.5;"&gt;ツール先行でROIが出ない&lt;/div&gt;
 &lt;div style="padding:0.6rem 0.7rem;background:#FAFAF7;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;"&gt;業務課題特定前にツールを選定&lt;/div&gt;
 &lt;div style="padding:0.6rem 0.7rem;background:#FAFAF7;border-top:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;"&gt;業務可視化→ボトルネック特定→ツール選定の順で進める&lt;/div&gt;
-&lt;div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#C45C3A;font-weight:700;line-height:1.5;"&gt;丸投げで社内にノウハウが残らない&lt;/div&gt;
+&lt;div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#B55536;font-weight:700;line-height:1.5;"&gt;丸投げで社内にノウハウが残らない&lt;/div&gt;
 &lt;div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;"&gt;外部依存・内製化計画の欠如&lt;/div&gt;
 &lt;div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;"&gt;ナレッジトランスファーと内製化計画を最初から組み込む&lt;/div&gt;' data-en-html='&lt;div style="background:#0F2342;color:#A8965A;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;padding:0.5rem 0.7rem;border-right:1px solid rgba(255,255,255,0.1);"&gt;失敗パターン&lt;/div&gt;
 &lt;div style="background:#0F2342;color:#A8965A;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;padding:0.5rem 0.7rem;border-right:1px solid rgba(255,255,255,0.1);"&gt;主な原因&lt;/div&gt;
 &lt;div style="background:#0F2342;color:#A8965A;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;padding:0.5rem 0.7rem;"&gt;対策・解決策&lt;/div&gt;
-&lt;div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#C45C3A;font-weight:700;line-height:1.5;"&gt;戦略止まりで現場に落ちない&lt;/div&gt;
+&lt;div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#B55536;font-weight:700;line-height:1.5;"&gt;戦略止まりで現場に落ちない&lt;/div&gt;
 &lt;div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;"&gt;構想と実行を別チームが担当&lt;/div&gt;
 &lt;div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;"&gt;構想段階から現場担当者を巻き込む&lt;/div&gt;
-&lt;div style="padding:0.6rem 0.7rem;background:#FAFAF7;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#C45C3A;font-weight:700;line-height:1.5;"&gt;ツール先行でROIが出ない&lt;/div&gt;
+&lt;div style="padding:0.6rem 0.7rem;background:#FAFAF7;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#B55536;font-weight:700;line-height:1.5;"&gt;ツール先行でROIが出ない&lt;/div&gt;
 &lt;div style="padding:0.6rem 0.7rem;background:#FAFAF7;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;"&gt;業務課題特定前にツールを選定&lt;/div&gt;
 &lt;div style="padding:0.6rem 0.7rem;background:#FAFAF7;border-top:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;"&gt;業務可視化→ボトルネック特定→ツール選定の順で進める&lt;/div&gt;
-&lt;div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#C45C3A;font-weight:700;line-height:1.5;"&gt;丸投げで社内にノウハウが残らない&lt;/div&gt;
+&lt;div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#B55536;font-weight:700;line-height:1.5;"&gt;丸投げで社内にノウハウが残らない&lt;/div&gt;
 &lt;div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;"&gt;外部依存・内製化計画の欠如&lt;/div&gt;
 &lt;div style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;"&gt;ナレッジトランスファーと内製化計画を最初から組み込む&lt;/div&gt;' style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid #E2E0DA;font-size:0.78rem;">
 <div data-ja="失敗パターン" data-en="失敗パターン" style="background:#0F2342;color:#A8965A;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;padding:0.5rem 0.7rem;border-right:1px solid rgba(255,255,255,0.1);">失敗パターン</div>
 <div data-ja="主な原因" data-en="主な原因" style="background:#0F2342;color:#A8965A;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;padding:0.5rem 0.7rem;border-right:1px solid rgba(255,255,255,0.1);">主な原因</div>
 <div data-ja="対策・解決策" data-en="対策・解決策" style="background:#0F2342;color:#A8965A;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;padding:0.5rem 0.7rem;">対策・解決策</div>
-<div data-ja="戦略止まりで現場に落ちない" data-en="戦略止まりで現場に落ちない" style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#C45C3A;font-weight:700;line-height:1.5;">戦略止まりで現場に落ちない</div>
+<div data-ja="戦略止まりで現場に落ちない" data-en="戦略止まりで現場に落ちない" style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#B55536;font-weight:700;line-height:1.5;">戦略止まりで現場に落ちない</div>
 <div data-ja="構想と実行を別チームが担当" data-en="構想と実行を別チームが担当" style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;">構想と実行を別チームが担当</div>
 <div data-ja="構想段階から現場担当者を巻き込む" data-en="構想段階から現場担当者を巻き込む" style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;">構想段階から現場担当者を巻き込む</div>
-<div data-ja="ツール先行でROIが出ない" data-en="ツール先行でROIが出ない" style="padding:0.6rem 0.7rem;background:#FAFAF7;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#C45C3A;font-weight:700;line-height:1.5;">ツール先行でROIが出ない</div>
+<div data-ja="ツール先行でROIが出ない" data-en="ツール先行でROIが出ない" style="padding:0.6rem 0.7rem;background:#FAFAF7;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#B55536;font-weight:700;line-height:1.5;">ツール先行でROIが出ない</div>
 <div data-ja="業務課題特定前にツールを選定" data-en="業務課題特定前にツールを選定" style="padding:0.6rem 0.7rem;background:#FAFAF7;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;">業務課題特定前にツールを選定</div>
 <div data-ja="業務可視化→ボトルネック特定→ツール選定の順で進める" data-en="業務可視化→ボトルネック特定→ツール選定の順で進める" style="padding:0.6rem 0.7rem;background:#FAFAF7;border-top:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;">業務可視化→ボトルネック特定→ツール選定の順で進める</div>
-<div data-ja="丸投げで社内にノウハウが残らない" data-en="丸投げで社内にノウハウが残らない" style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#C45C3A;font-weight:700;line-height:1.5;">丸投げで社内にノウハウが残らない</div>
+<div data-ja="丸投げで社内にノウハウが残らない" data-en="丸投げで社内にノウハウが残らない" style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#B55536;font-weight:700;line-height:1.5;">丸投げで社内にノウハウが残らない</div>
 <div data-ja="外部依存・内製化計画の欠如" data-en="外部依存・内製化計画の欠如" style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;border-right:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;">外部依存・内製化計画の欠如</div>
 <div data-ja="ナレッジトランスファーと内製化計画を最初から組み込む" data-en="ナレッジトランスファーと内製化計画を最初から組み込む" style="padding:0.6rem 0.7rem;border-top:1px solid #E2E0DA;color:#4A4A55;line-height:1.5;">ナレッジトランスファーと内製化計画を最初から組み込む</div>
 </div>
@@ -990,7 +990,7 @@ article li { margin-bottom: 0.5rem; }
 &lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&gt;2026.03.25&lt;/p&gt;
 &lt;/a&gt;
 &lt;/div&gt;">
-<p class="display text-[.65rem] font-medium tracking-[.18em] uppercase text-gold mb-4">Related Articles</p>
+<p class="display text-[.65rem] font-medium tracking-[.18em] uppercase text-gold-deep mb-4">Related Articles</p>
 <div class="grid md:grid-cols-2 gap-4" data-ja-html="&lt;a class=&quot;group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors&quot; data-ja-html='&amp;lt;p class=&quot;display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2&quot;&amp;gt;Trade DX&amp;lt;/p&amp;gt;
 &amp;lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot;&amp;gt;貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来&amp;lt;/p&amp;gt;
 &amp;lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&amp;gt;2026.03.25&amp;lt;/p&amp;gt;' href=&quot;/blog/trade-dx-ai-agent&quot;&gt;
@@ -1022,29 +1022,30 @@ article li { margin-bottom: 0.5rem; }
 &lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot; data-ja=&quot;PFAS規制とchemSHERPA対応の実務ガイド&quot;&gt;PFAS規制とchemSHERPA対応の実務ガイド&lt;/p&gt;
 &lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&gt;2026.03.25&lt;/p&gt;
 &lt;/a&gt;">
-<a class="group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors" data-ja-html='&lt;p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2"&gt;Trade DX&lt;/p&gt;
+<a class="group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors" data-ja-html='&lt;p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold-deep mb-2"&gt;Trade DX&lt;/p&gt;
 &lt;p class="text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors"&gt;貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来&lt;/p&gt;
-&lt;p class="text-[.68rem] text-ink-light mt-2"&gt;2026.03.25&lt;/p&gt;' data-en-html='&lt;p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2"&gt;Trade DX&lt;/p&gt;
+&lt;p class="text-[.68rem] text-ink-light mt-2"&gt;2026.03.25&lt;/p&gt;' data-en-html='&lt;p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold-deep mb-2"&gt;Trade DX&lt;/p&gt;
 &lt;p class="text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors"&gt;貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来&lt;/p&gt;
 &lt;p class="text-[.68rem] text-ink-light mt-2"&gt;2026.03.25&lt;/p&gt;' href="/blog/trade-dx-ai-agent">
-<p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2">Trade DX</p>
+<p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold-deep mb-2">Trade DX</p>
 <p class="text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors" data-ja="貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来" data-en="貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来">貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来</p>
 <p class="text-[.68rem] text-ink-light mt-2">2026.03.25</p>
 </a>
-<a class="group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors" data-ja-html='&lt;p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2"&gt;Compliance&lt;/p&gt;
+<a class="group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors" data-ja-html='&lt;p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold-deep mb-2"&gt;Compliance&lt;/p&gt;
 &lt;p class="text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors"&gt;PFAS規制とchemSHERPA対応の実務ガイド&lt;/p&gt;
-&lt;p class="text-[.68rem] text-ink-light mt-2"&gt;2026.03.25&lt;/p&gt;' data-en-html='&lt;p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2"&gt;Compliance&lt;/p&gt;
+&lt;p class="text-[.68rem] text-ink-light mt-2"&gt;2026.03.25&lt;/p&gt;' data-en-html='&lt;p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold-deep mb-2"&gt;Compliance&lt;/p&gt;
 &lt;p class="text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors"&gt;PFAS規制とchemSHERPA対応の実務ガイド&lt;/p&gt;
 &lt;p class="text-[.68rem] text-ink-light mt-2"&gt;2026.03.25&lt;/p&gt;' href="/blog/pfas-chemsherpa-guide">
-<p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2">Compliance</p>
+<p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold-deep mb-2">Compliance</p>
 <p class="text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors" data-ja="PFAS規制とchemSHERPA対応の実務ガイド" data-en="PFAS規制とchemSHERPA対応の実務ガイド">PFAS規制とchemSHERPA対応の実務ガイド</p>
 <p class="text-[.68rem] text-ink-light mt-2">2026.03.25</p>
 </a>
 </div>
 </div>
 </div>
-</main>
 <!-- ─── FOOTER ──────────────────────────────────────────── -->
+</main>
+<aside aria-label="関連する案内">
 <!-- assessment-cta (auto) -->
 <section style="max-width:800px;margin:3rem auto 0;padding:0 1.5rem;font-family:'Noto Sans JP',sans-serif;">
   <div style="border:1px solid #E8E5DE;border-left:3px solid #A98A4B;background:#FBFAF7;padding:1.5rem 1.6rem;">
@@ -1053,6 +1054,7 @@ article li { margin-bottom: 0.5rem; }
     <a href="/dx-assessment" style="display:inline-block;background:#14181F;color:#fff;font-size:.8rem;font-weight:700;letter-spacing:.04em;padding:.85rem 1.7rem;text-decoration:none;">無料診断を受ける（5分・登録不要）</a>
   </div>
 </section>
+</aside>
 <footer class="bg-navy py-10 px-6 md:px-10">
 <div class="max-w-5xl mx-auto flex flex-wrap justify-between items-center gap-5">
 <a class="leading-none" href="/">

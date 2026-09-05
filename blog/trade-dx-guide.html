@@ -587,24 +587,24 @@
 
         /* ── Diagram styles ── */
         .diag-wrap { background:#fff; border:1px solid #e8e6e0; border-top:3px solid #A8965A; padding:1.4rem 1.5rem 1rem; margin:1.8rem 0 0.4rem; font-size:0.85rem; }
-        .diag-caption { text-align:center; font-size:0.72rem; color:#7a7a8a; margin-top:0.4rem; margin-bottom:1.6rem; }
+        .diag-caption { text-align:center; font-size:0.72rem; color:#757585; margin-top:0.4rem; margin-bottom:1.6rem; }
         .diag-gap-row { display:flex; flex-wrap:wrap; gap:0.8rem; align-items:flex-end; }
         .diag-gap-bar-wrap { flex:1 1 120px; display:flex; flex-direction:column; align-items:center; gap:0.4rem; }
         .diag-gap-bar-label { font-size:0.72rem; font-weight:700; text-align:center; line-height:1.4; }
         .diag-gap-bar { width:100%; border-radius:2px 2px 0 0; display:flex; align-items:flex-end; justify-content:center; padding-bottom:0.3rem; }
         .diag-gap-bar span { font-size:0.68rem; font-weight:700; color:#fff; }
-        .diag-gap-arrow { display:flex; align-items:center; justify-content:center; font-size:1.6rem; color:#A8965A; flex-shrink:0; padding:0 0.3rem; align-self:center; }
+        .diag-gap-arrow { display:flex; align-items:center; justify-content:center; font-size:1.6rem; color:#7A6D40; flex-shrink:0; padding:0 0.3rem; align-self:center; }
         .diag-platform-row { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:0.6rem; margin:0.5rem 0; }
         .diag-platform-node { background:#0a1628; color:#fff; border:1px solid rgba(168,150,90,0.4); padding:0.9rem 1.2rem; text-align:center; font-size:0.78rem; font-weight:700; min-width:110px; line-height:1.4; }
-        .diag-platform-node.center { background:#A8965A; color:#0a1628; border-color:#A8965A; }
+        .diag-platform-node.center { background:#A8965A; color:#0a1628; border-color:#7A6D40; }
         .diag-platform-node .nd-sub { font-weight:400; font-size:0.68rem; opacity:0.7; display:block; margin-top:0.2rem; }
-        .diag-platform-conn { color:#A8965A; font-size:1.1rem; font-weight:700; }
+        .diag-platform-conn { color:#7A6D40; font-size:1.1rem; font-weight:700; }
         .diag-onboard-row { display:flex; flex-wrap:wrap; align-items:center; gap:0; }
         .diag-onboard-step { flex:1 1 130px; padding:1rem; border:1px solid #e8e6e0; background:#fff; position:relative; }
         .diag-onboard-step .os-num { width:28px; height:28px; background:#0a1628; color:#A8965A; font-size:0.72rem; font-weight:700; display:flex; align-items:center; justify-content:center; border-radius:50%; margin-bottom:0.5rem; }
         .diag-onboard-step .os-title { font-size:0.8rem; font-weight:700; color:#0a1628; margin-bottom:0.3rem; }
         .diag-onboard-step .os-body { font-size:0.73rem; color:#4a4a5a; line-height:1.5; }
-        .diag-onboard-arrow { color:#A8965A; font-size:1rem; padding:0 0.3rem; flex-shrink:0; display:flex; align-items:center; }
+        .diag-onboard-arrow { color:#7A6D40; font-size:1rem; padding:0 0.3rem; flex-shrink:0; display:flex; align-items:center; }
         @media (max-width:500px) { .diag-onboard-row { flex-direction:column; } .diag-onboard-arrow { transform:rotate(90deg); } }
     </style>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;family=Noto+Sans+JP:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
@@ -650,6 +650,7 @@
 </div>
 </header>
 <!-- Hero -->
+<main>
 <section class="article-hero">
 <div class="hero-inner" data-ja-html='&lt;div class="hero-meta"&gt;
 &lt;span class="hero-category"&gt;貿易DX&lt;/span&gt;
@@ -689,18 +690,18 @@
             &lt;/div&gt;
  DIAGRAM: 人手減少 vs 業務量増加 gap diagram 
 &lt;div class="diag-wrap"&gt;
-&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;"&gt;人手 vs 業務量 — 拡大するギャップ&lt;/div&gt;
+&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.9rem;"&gt;人手 vs 業務量 — 拡大するギャップ&lt;/div&gt;
 &lt;div class="diag-gap-row"&gt;
 &lt;div class="diag-gap-bar-wrap"&gt;
 &lt;div class="diag-gap-bar-label" style="color:#c4453c;"&gt;人手（担当者数）&lt;/div&gt;
 &lt;div class="diag-gap-bar" style="background:#c4453c;height:60px;"&gt;&lt;span&gt;減少傾向&lt;/span&gt;&lt;/div&gt;
-&lt;div style="font-size:0.68rem;color:#7a7a8a;text-align:center;"&gt;高齢化・採用難・属人化&lt;/div&gt;
+&lt;div style="font-size:0.68rem;color:#757585;text-align:center;"&gt;高齢化・採用難・属人化&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="diag-gap-arrow"&gt;↕&lt;br/&gt;&lt;span style="font-size:0.65rem;font-weight:700;display:block;margin-top:-0.3rem;"&gt;ギャップ&lt;br/&gt;拡大中&lt;/span&gt;&lt;/div&gt;
 &lt;div class="diag-gap-bar-wrap"&gt;
 &lt;div class="diag-gap-bar-label" style="color:#0a1628;"&gt;業務量・複雑性&lt;/div&gt;
 &lt;div class="diag-gap-bar" style="background:#0a1628;height:120px;"&gt;&lt;span&gt;増加傾向&lt;/span&gt;&lt;/div&gt;
-&lt;div style="font-size:0.68rem;color:#7a7a8a;text-align:center;"&gt;少量多品種・多国間取引の増加&lt;/div&gt;
+&lt;div style="font-size:0.68rem;color:#757585;text-align:center;"&gt;少量多品種・多国間取引の増加&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div style="margin-top:0.8rem;padding:0.6rem 0.8rem;background:#fdf8ed;border-left:3px solid #A8965A;font-size:0.78rem;color:#4a4a5a;line-height:1.55;"&gt;
@@ -868,13 +869,13 @@
 &lt;div class="diag-gap-bar-wrap"&gt;
 &lt;div class="diag-gap-bar-label" style="color:#c4453c;"&gt;人手（担当者数）&lt;/div&gt;
 &lt;div class="diag-gap-bar" style="background:#c4453c;height:60px;"&gt;&lt;span&gt;減少傾向&lt;/span&gt;&lt;/div&gt;
-&lt;div style="font-size:0.68rem;color:#7a7a8a;text-align:center;"&gt;高齢化・採用難・属人化&lt;/div&gt;
+&lt;div style="font-size:0.68rem;color:#757585;text-align:center;"&gt;高齢化・採用難・属人化&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="diag-gap-arrow"&gt;↕&lt;br/&gt;&lt;span style="font-size:0.65rem;font-weight:700;display:block;margin-top:-0.3rem;"&gt;ギャップ&lt;br/&gt;拡大中&lt;/span&gt;&lt;/div&gt;
 &lt;div class="diag-gap-bar-wrap"&gt;
 &lt;div class="diag-gap-bar-label" style="color:#0a1628;"&gt;業務量・複雑性&lt;/div&gt;
 &lt;div class="diag-gap-bar" style="background:#0a1628;height:120px;"&gt;&lt;span&gt;増加傾向&lt;/span&gt;&lt;/div&gt;
-&lt;div style="font-size:0.68rem;color:#7a7a8a;text-align:center;"&gt;少量多品種・多国間取引の増加&lt;/div&gt;
+&lt;div style="font-size:0.68rem;color:#757585;text-align:center;"&gt;少量多品種・多国間取引の増加&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div style="margin-top:0.8rem;padding:0.6rem 0.8rem;background:#fdf8ed;border-left:3px solid #A8965A;font-size:0.78rem;color:#4a4a5a;line-height:1.55;"&gt;
@@ -1039,18 +1040,18 @@
                 「今の人数で、今のやり方を続ける」という選択肢が、静かに消えつつある。
             </div>
 <!-- DIAGRAM: 人手減少 vs 業務量増加 gap diagram -->
-<div class="diag-wrap" data-ja-html='&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;"&gt;人手 vs 業務量 — 拡大するギャップ&lt;/div&gt;
+<div class="diag-wrap" data-ja-html='&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.9rem;"&gt;人手 vs 業務量 — 拡大するギャップ&lt;/div&gt;
 &lt;div class="diag-gap-row"&gt;
 &lt;div class="diag-gap-bar-wrap"&gt;
 &lt;div class="diag-gap-bar-label" style="color:#c4453c;"&gt;人手（担当者数）&lt;/div&gt;
 &lt;div class="diag-gap-bar" style="background:#c4453c;height:60px;"&gt;&lt;span&gt;減少傾向&lt;/span&gt;&lt;/div&gt;
-&lt;div style="font-size:0.68rem;color:#7a7a8a;text-align:center;"&gt;高齢化・採用難・属人化&lt;/div&gt;
+&lt;div style="font-size:0.68rem;color:#757585;text-align:center;"&gt;高齢化・採用難・属人化&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="diag-gap-arrow"&gt;↕&lt;br/&gt;&lt;span style="font-size:0.65rem;font-weight:700;display:block;margin-top:-0.3rem;"&gt;ギャップ&lt;br/&gt;拡大中&lt;/span&gt;&lt;/div&gt;
 &lt;div class="diag-gap-bar-wrap"&gt;
 &lt;div class="diag-gap-bar-label" style="color:#0a1628;"&gt;業務量・複雑性&lt;/div&gt;
 &lt;div class="diag-gap-bar" style="background:#0a1628;height:120px;"&gt;&lt;span&gt;増加傾向&lt;/span&gt;&lt;/div&gt;
-&lt;div style="font-size:0.68rem;color:#7a7a8a;text-align:center;"&gt;少量多品種・多国間取引の増加&lt;/div&gt;
+&lt;div style="font-size:0.68rem;color:#757585;text-align:center;"&gt;少量多品種・多国間取引の増加&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div style="margin-top:0.8rem;padding:0.6rem 0.8rem;background:#fdf8ed;border-left:3px solid #A8965A;font-size:0.78rem;color:#4a4a5a;line-height:1.55;"&gt;
@@ -1060,58 +1061,58 @@
 &lt;div class="diag-gap-bar-wrap"&gt;
 &lt;div class="diag-gap-bar-label" style="color:#c4453c;"&gt;人手（担当者数）&lt;/div&gt;
 &lt;div class="diag-gap-bar" style="background:#c4453c;height:60px;"&gt;&lt;span&gt;減少傾向&lt;/span&gt;&lt;/div&gt;
-&lt;div style="font-size:0.68rem;color:#7a7a8a;text-align:center;"&gt;高齢化・採用難・属人化&lt;/div&gt;
+&lt;div style="font-size:0.68rem;color:#757585;text-align:center;"&gt;高齢化・採用難・属人化&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="diag-gap-arrow"&gt;↕&lt;br/&gt;&lt;span style="font-size:0.65rem;font-weight:700;display:block;margin-top:-0.3rem;"&gt;ギャップ&lt;br/&gt;拡大中&lt;/span&gt;&lt;/div&gt;
 &lt;div class="diag-gap-bar-wrap"&gt;
 &lt;div class="diag-gap-bar-label" style="color:#0a1628;"&gt;業務量・複雑性&lt;/div&gt;
 &lt;div class="diag-gap-bar" style="background:#0a1628;height:120px;"&gt;&lt;span&gt;増加傾向&lt;/span&gt;&lt;/div&gt;
-&lt;div style="font-size:0.68rem;color:#7a7a8a;text-align:center;"&gt;少量多品種・多国間取引の増加&lt;/div&gt;
+&lt;div style="font-size:0.68rem;color:#757585;text-align:center;"&gt;少量多品種・多国間取引の増加&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div style="margin-top:0.8rem;padding:0.6rem 0.8rem;background:#fdf8ed;border-left:3px solid #A8965A;font-size:0.78rem;color:#4a4a5a;line-height:1.55;"&gt;
                 「今の人数で、今のやり方を続ける」という選択肢が消えつつある。DXによる業務自動化が唯一の解だ。
               &lt;/div&gt;'>
-<div data-ja="人手 vs 業務量 — 拡大するギャップ" data-en="人手 vs 業務量 — 拡大するギャップ" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;">人手 vs 業務量 — 拡大するギャップ</div>
+<div data-ja="人手 vs 業務量 — 拡大するギャップ" data-en="人手 vs 業務量 — 拡大するギャップ" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.9rem;">人手 vs 業務量 — 拡大するギャップ</div>
 <div class="diag-gap-row" data-ja-html='&lt;div class="diag-gap-bar-wrap"&gt;
 &lt;div class="diag-gap-bar-label" style="color:#c4453c;"&gt;人手（担当者数）&lt;/div&gt;
 &lt;div class="diag-gap-bar" style="background:#c4453c;height:60px;"&gt;&lt;span&gt;減少傾向&lt;/span&gt;&lt;/div&gt;
-&lt;div style="font-size:0.68rem;color:#7a7a8a;text-align:center;"&gt;高齢化・採用難・属人化&lt;/div&gt;
+&lt;div style="font-size:0.68rem;color:#757585;text-align:center;"&gt;高齢化・採用難・属人化&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="diag-gap-arrow"&gt;↕&lt;br/&gt;&lt;span style="font-size:0.65rem;font-weight:700;display:block;margin-top:-0.3rem;"&gt;ギャップ&lt;br/&gt;拡大中&lt;/span&gt;&lt;/div&gt;
 &lt;div class="diag-gap-bar-wrap"&gt;
 &lt;div class="diag-gap-bar-label" style="color:#0a1628;"&gt;業務量・複雑性&lt;/div&gt;
 &lt;div class="diag-gap-bar" style="background:#0a1628;height:120px;"&gt;&lt;span&gt;増加傾向&lt;/span&gt;&lt;/div&gt;
-&lt;div style="font-size:0.68rem;color:#7a7a8a;text-align:center;"&gt;少量多品種・多国間取引の増加&lt;/div&gt;
+&lt;div style="font-size:0.68rem;color:#757585;text-align:center;"&gt;少量多品種・多国間取引の増加&lt;/div&gt;
 &lt;/div&gt;' data-en-html='&lt;div class="diag-gap-bar-wrap"&gt;
 &lt;div class="diag-gap-bar-label" style="color:#c4453c;"&gt;人手（担当者数）&lt;/div&gt;
 &lt;div class="diag-gap-bar" style="background:#c4453c;height:60px;"&gt;&lt;span&gt;減少傾向&lt;/span&gt;&lt;/div&gt;
-&lt;div style="font-size:0.68rem;color:#7a7a8a;text-align:center;"&gt;高齢化・採用難・属人化&lt;/div&gt;
+&lt;div style="font-size:0.68rem;color:#757585;text-align:center;"&gt;高齢化・採用難・属人化&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="diag-gap-arrow"&gt;↕&lt;br/&gt;&lt;span style="font-size:0.65rem;font-weight:700;display:block;margin-top:-0.3rem;"&gt;ギャップ&lt;br/&gt;拡大中&lt;/span&gt;&lt;/div&gt;
 &lt;div class="diag-gap-bar-wrap"&gt;
 &lt;div class="diag-gap-bar-label" style="color:#0a1628;"&gt;業務量・複雑性&lt;/div&gt;
 &lt;div class="diag-gap-bar" style="background:#0a1628;height:120px;"&gt;&lt;span&gt;増加傾向&lt;/span&gt;&lt;/div&gt;
-&lt;div style="font-size:0.68rem;color:#7a7a8a;text-align:center;"&gt;少量多品種・多国間取引の増加&lt;/div&gt;
+&lt;div style="font-size:0.68rem;color:#757585;text-align:center;"&gt;少量多品種・多国間取引の増加&lt;/div&gt;
 &lt;/div&gt;'>
 <div class="diag-gap-bar-wrap" data-ja-html='&lt;div class="diag-gap-bar-label" style="color:#c4453c;"&gt;人手（担当者数）&lt;/div&gt;
 &lt;div class="diag-gap-bar" style="background:#c4453c;height:60px;"&gt;&lt;span&gt;減少傾向&lt;/span&gt;&lt;/div&gt;
-&lt;div style="font-size:0.68rem;color:#7a7a8a;text-align:center;"&gt;高齢化・採用難・属人化&lt;/div&gt;' data-en-html='&lt;div class="diag-gap-bar-label" style="color:#c4453c;"&gt;人手（担当者数）&lt;/div&gt;
+&lt;div style="font-size:0.68rem;color:#757585;text-align:center;"&gt;高齢化・採用難・属人化&lt;/div&gt;' data-en-html='&lt;div class="diag-gap-bar-label" style="color:#c4453c;"&gt;人手（担当者数）&lt;/div&gt;
 &lt;div class="diag-gap-bar" style="background:#c4453c;height:60px;"&gt;&lt;span&gt;減少傾向&lt;/span&gt;&lt;/div&gt;
-&lt;div style="font-size:0.68rem;color:#7a7a8a;text-align:center;"&gt;高齢化・採用難・属人化&lt;/div&gt;'>
+&lt;div style="font-size:0.68rem;color:#757585;text-align:center;"&gt;高齢化・採用難・属人化&lt;/div&gt;'>
 <div class="diag-gap-bar-label" data-ja="人手（担当者数）" data-en="人手（担当者数）" style="color:#c4453c;">人手（担当者数）</div>
 <div class="diag-gap-bar" data-ja-html="&lt;span&gt;減少傾向&lt;/span&gt;" data-en-html="&lt;span&gt;減少傾向&lt;/span&gt;" style="background:#c4453c;height:60px;"><span data-ja="減少傾向" data-en="減少傾向">減少傾向</span></div>
-<div data-ja="高齢化・採用難・属人化" data-en="高齢化・採用難・属人化" style="font-size:0.68rem;color:#7a7a8a;text-align:center;">高齢化・採用難・属人化</div>
+<div data-ja="高齢化・採用難・属人化" data-en="高齢化・採用難・属人化" style="font-size:0.68rem;color:#757585;text-align:center;">高齢化・採用難・属人化</div>
 </div>
 <div class="diag-gap-arrow" data-ja-html='↕&lt;br/&gt;&lt;span style="font-size:0.65rem;font-weight:700;display:block;margin-top:-0.3rem;"&gt;ギャップ&lt;br/&gt;拡大中&lt;/span&gt;' data-en-html='↕&lt;br/&gt;&lt;span style="font-size:0.65rem;font-weight:700;display:block;margin-top:-0.3rem;"&gt;ギャップ&lt;br/&gt;拡大中&lt;/span&gt;'>↕<br/><span data-ja-html="ギャップ&lt;br/&gt;拡大中" data-en-html="ギャップ&lt;br/&gt;拡大中" style="font-size:0.65rem;font-weight:700;display:block;margin-top:-0.3rem;">ギャップ<br/>拡大中</span></div>
 <div class="diag-gap-bar-wrap" data-ja-html='&lt;div class="diag-gap-bar-label" style="color:#0a1628;"&gt;業務量・複雑性&lt;/div&gt;
 &lt;div class="diag-gap-bar" style="background:#0a1628;height:120px;"&gt;&lt;span&gt;増加傾向&lt;/span&gt;&lt;/div&gt;
-&lt;div style="font-size:0.68rem;color:#7a7a8a;text-align:center;"&gt;少量多品種・多国間取引の増加&lt;/div&gt;' data-en-html='&lt;div class="diag-gap-bar-label" style="color:#0a1628;"&gt;業務量・複雑性&lt;/div&gt;
+&lt;div style="font-size:0.68rem;color:#757585;text-align:center;"&gt;少量多品種・多国間取引の増加&lt;/div&gt;' data-en-html='&lt;div class="diag-gap-bar-label" style="color:#0a1628;"&gt;業務量・複雑性&lt;/div&gt;
 &lt;div class="diag-gap-bar" style="background:#0a1628;height:120px;"&gt;&lt;span&gt;増加傾向&lt;/span&gt;&lt;/div&gt;
-&lt;div style="font-size:0.68rem;color:#7a7a8a;text-align:center;"&gt;少量多品種・多国間取引の増加&lt;/div&gt;'>
+&lt;div style="font-size:0.68rem;color:#757585;text-align:center;"&gt;少量多品種・多国間取引の増加&lt;/div&gt;'>
 <div class="diag-gap-bar-label" data-ja="業務量・複雑性" data-en="業務量・複雑性" style="color:#0a1628;">業務量・複雑性</div>
 <div class="diag-gap-bar" data-ja-html="&lt;span&gt;増加傾向&lt;/span&gt;" data-en-html="&lt;span&gt;増加傾向&lt;/span&gt;" style="background:#0a1628;height:120px;"><span data-ja="増加傾向" data-en="増加傾向">増加傾向</span></div>
-<div data-ja="少量多品種・多国間取引の増加" data-en="少量多品種・多国間取引の増加" style="font-size:0.68rem;color:#7a7a8a;text-align:center;">少量多品種・多国間取引の増加</div>
+<div data-ja="少量多品種・多国間取引の増加" data-en="少量多品種・多国間取引の増加" style="font-size:0.68rem;color:#757585;text-align:center;">少量多品種・多国間取引の増加</div>
 </div>
 </div>
 <div data-ja="「今の人数で、今のやり方を続ける」という選択肢が消えつつある。DXによる業務自動化が唯一の解だ。" data-en="「今の人数で、今のやり方を続ける」という選択肢が消えつつある。DXによる業務自動化が唯一の解だ。" style="margin-top:0.8rem;padding:0.6rem 0.8rem;background:#fdf8ed;border-left:3px solid #A8965A;font-size:0.78rem;color:#4a4a5a;line-height:1.55;">
@@ -1131,7 +1132,7 @@
 <p data-ja="つまり、大手商社や大手物流事業者は、もう「手入力」の世界にはいない。デジタルでデータを受け渡す前提でインフラが組まれ始めている。" data-en="つまり、大手商社や大手物流事業者は、もう「手入力」の世界にはいない。デジタルでデータを受け渡す前提でインフラが組まれ始めている。">つまり、大手商社や大手物流事業者は、もう「手入力」の世界にはいない。デジタルでデータを受け渡す前提でインフラが組まれ始めている。</p>
 <p data-ja-html="ここで起きるのは、紙とExcelで業務を回している中小事業者が、&lt;strong&gt;デジタル化されたサプライチェーンの中で「接続できない存在」になるリスク&lt;/strong&gt;だ。取引先から「データで送ってほしい」と言われたとき、対応できるかどうか。これは近い将来の話ではなく、今まさに始まっている現実だ。" data-en-html="ここで起きるのは、紙とExcelで業務を回している中小事業者が、&lt;strong&gt;デジタル化されたサプライチェーンの中で「接続できない存在」になるリスク&lt;/strong&gt;だ。取引先から「データで送ってほしい」と言われたとき、対応できるかどうか。これは近い将来の話ではなく、今まさに始まっている現実だ。">ここで起きるのは、紙とExcelで業務を回している中小事業者が、<strong>デジタル化されたサプライチェーンの中で「接続できない存在」になるリスク</strong>だ。取引先から「データで送ってほしい」と言われたとき、対応できるかどうか。これは近い将来の話ではなく、今まさに始まっている現実だ。</p>
 <!-- DIAGRAM: NACCS ↔ TradeWaltz ↔ 自社システム platform diagram -->
-<div class="diag-wrap" data-ja-html='&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;"&gt;貿易プラットフォーム連携マップ&lt;/div&gt;
+<div class="diag-wrap" data-ja-html='&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.9rem;"&gt;貿易プラットフォーム連携マップ&lt;/div&gt;
 &lt;div class="diag-platform-row"&gt;
 &lt;div class="diag-platform-node"&gt;
                   自社システム&lt;br/&gt;
@@ -1200,7 +1201,7 @@
 &lt;span class="nd-sub"&gt;申告・許可書連携&lt;/span&gt;
 &lt;/div&gt;
 &lt;/div&gt;'>
-<div data-ja="貿易プラットフォーム連携マップ" data-en="貿易プラットフォーム連携マップ" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;">貿易プラットフォーム連携マップ</div>
+<div data-ja="貿易プラットフォーム連携マップ" data-en="貿易プラットフォーム連携マップ" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.9rem;">貿易プラットフォーム連携マップ</div>
 <div class="diag-platform-row" data-ja-html='&lt;div class="diag-platform-node"&gt;
                   自社システム&lt;br/&gt;
 &lt;span class="nd-sub"&gt;ERP / WMS / Excel&lt;/span&gt;
@@ -1394,7 +1395,7 @@
 <p data-ja="Wingが開発を進めている「BorderFlow AI」は、中小商社の貿易実務に特化したAIエージェントです。大手向けプラットフォームへの高額な投資ではなく、「書類を投げ込むだけ」で輸出入データをデジタル化する——最小コストでDXの第一歩を踏み出せる設計になっています。" data-en="Wingが開発を進めている「BorderFlow AI」は、中小商社の貿易実務に特化したAIエージェントです。大手向けプラットフォームへの高額な投資ではなく、「書類を投げ込むだけ」で輸出入データをデジタル化する——最小コストでDXの第一歩を踏み出せる設計になっています。">Wingが開発を進めている「BorderFlow AI」は、中小商社の貿易実務に特化したAIエージェントです。大手向けプラットフォームへの高額な投資ではなく、「書類を投げ込むだけ」で輸出入データをデジタル化する——最小コストでDXの第一歩を踏み出せる設計になっています。</p>
 </div>
 <!-- DIAGRAM: 3-step onboarding visual -->
-<div class="diag-wrap" data-ja-html='&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;"&gt;BorderFlow AI — 3ステップで始めるDX&lt;/div&gt;
+<div class="diag-wrap" data-ja-html='&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.9rem;"&gt;BorderFlow AI — 3ステップで始めるDX&lt;/div&gt;
 &lt;div class="diag-onboard-row"&gt;
 &lt;div class="diag-onboard-step"&gt;
 &lt;div class="os-num"&gt;1&lt;/div&gt;
@@ -1433,7 +1434,7 @@
 &lt;div class="os-body"&gt;書類の読取・データ化・NACCS連携が自動化。担当者は確認のみ。手入力ゼロの環境が稼働を開始する。&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;'>
-<div data-ja="BorderFlow AI — 3ステップで始めるDX" data-en="BorderFlow AI — 3ステップで始めるDX" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;">BorderFlow AI — 3ステップで始めるDX</div>
+<div data-ja="BorderFlow AI — 3ステップで始めるDX" data-en="BorderFlow AI — 3ステップで始めるDX" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.9rem;">BorderFlow AI — 3ステップで始めるDX</div>
 <div class="diag-onboard-row" data-ja-html='&lt;div class="diag-onboard-step"&gt;
 &lt;div class="os-num"&gt;1&lt;/div&gt;
 &lt;div class="os-title"&gt;データ接続&lt;/div&gt;
@@ -1574,16 +1575,17 @@
 </section>
 <!-- related-articles (auto) -->
 <section style="max-width:800px;margin:3.5rem auto 0;padding:2rem 1.5rem 0;border-top:1px solid #E5E7EB;font-family:'Noto Sans JP',sans-serif;">
-  <p style="font-family:'Outfit','Noto Sans JP',sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#B8A882;margin:0 0 .7rem;">Related</p>
+  <p style="font-family:'Outfit','Noto Sans JP',sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#7A6B3E;margin:0 0 .7rem;">Related</p>
   <h2 style="font-size:1.15rem;font-weight:500;color:#1A1A1F;margin:0 0 1.3rem;">関連記事</h2>
   <div style="display:grid;gap:.8rem;">
-    <a href="/blog/trade-dx-complete-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">貿易DX完全ガイド｜輸入・輸出業務の課題とAI活用の全体像</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
-    <a href="/blog/trade-operations-overview" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">商社の貿易事務とは？輸入フローの全体像と担当者が直面する課題</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
-    <a href="/blog/trade-dx-ai-agent" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
-    <a href="/blog/ai-trade-automation" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">AIで貿易業務を自動化する：どこから手をつけるか</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/trade-dx-complete-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">貿易DX完全ガイド｜輸入・輸出業務の課題とAI活用の全体像</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/trade-operations-overview" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">商社の貿易事務とは？輸入フローの全体像と担当者が直面する課題</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/trade-dx-ai-agent" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/ai-trade-automation" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">AIで貿易業務を自動化する：どこから手をつけるか</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
   </div>
   <p style="margin:1.5rem 0 0;"><a href="/blog/" style="font-family:'Outfit','Noto Sans JP',sans-serif;font-size:.8rem;letter-spacing:.03em;color:#1E4E7E;text-decoration:none;">すべての記事を見る →</a></p>
 </section>
+</main>
 <footer class="site-footer">
 <p class="footer-text" data-ja="© 2026 Wing Inc. All rights reserved." data-en="© 2026 Wing Inc. All rights reserved.">© 2026 Wing Inc. All rights reserved.</p>
 </footer>

@@ -74,7 +74,7 @@
   --navy: #1A2E5A;
   --navy-light: #2A4A7A;
   --navy-pale: #E8EDF4;
-  --gold: #917816;
+  --gold: #826B14;
   --gold-light: #C4A82A;
   --gold-pale: #F5F0DC;
   --dark: #1a1a1a;
@@ -268,7 +268,7 @@ body {
   justify-content: center;
   margin-bottom: 16px;
 }
-.robot-card h4 {
+.robot-card h4{
   font-size: 16px;
   font-weight: 700;
   color: var(--navy);
@@ -414,7 +414,7 @@ body {
   font-size: 20px;
   font-weight: 900;
 }
-.takeaway-content h4 {
+.takeaway-content h4{
   font-size: 16px;
   font-weight: 700;
   color: var(--navy);
@@ -561,7 +561,7 @@ body {
   padding-top: 24px;
   border-top: 1px solid var(--border);
 }
-.references h4 {
+.references h4{
   font-size: 13px;
   color: var(--muted);
   font-weight: 700;
@@ -825,7 +825,8 @@ body {
 <circle cx="29" cy="7.5" fill="#2E7D32" opacity="0.5" r="2"></circle>
 </svg>
 </div>
-<h4>Stretch</h4>
+<!-- 見た目は h4 のまま、読み上げの段だけ h3 にしている（h2 の直下に h4 が来る段飛ばしを解消するため。h3 に変えると大きさと余白が変わる） -->
+<h4 role="heading" aria-level="3">Stretch</h4>
 <p class="maker">Boston Dynamics</p>
 <p class="desc" data-ja="コンテナ荷下ろしの自動化。高度なビジョンシステムで多種多様な箱を認識し、2シフト連続で稼働。" data-en="コンテナ荷下ろしの自動化。高度なビジョンシステムで多種多様な箱を認識し、2シフト連続で稼働。">コンテナ荷下ろしの自動化。高度なビジョンシステムで多種多様な箱を認識し、2シフト連続で稼働。</p>
 <div class="stat" data-ja="800〜1,000個/時" data-en="800〜1,000個/時">800〜1,000個/時</div>
@@ -871,7 +872,7 @@ body {
 <rect fill="#E3F2FD" height="3" rx="1" width="4" x="17" y="9"></rect>
 </svg>
 </div>
-<h4>AmbiSort</h4>
+<h4 role="heading" aria-level="3">AmbiSort</h4>
 <p class="maker">Ambi Robotics</p>
 <p class="desc" data-ja="eコマース仕分け特化。Sim2Real学習で数百万パターンを習得し、24時間稼働。" data-en="eコマース仕分け特化。Sim2Real学習で数百万パターンを習得し、24時間稼働。">eコマース仕分け特化。Sim2Real学習で数百万パターンを習得し、24時間稼働。</p>
 <div class="stat" data-ja="人間超えの速度・精度" data-en="人間超えの速度・精度">人間超えの速度・精度</div>
@@ -917,7 +918,7 @@ body {
 <line stroke="#E65100" stroke-linecap="round" stroke-width="2" x1="19" x2="20" y1="22" y2="28"></line>
 </svg>
 </div>
-<h4>Digit</h4>
+<h4 role="heading" aria-level="3">Digit</h4>
 <p class="maker">Agility Robotics</p>
 <p class="desc" data-ja="人型ロボット。AmazonやGXOの倉庫で実稼働。既存インフラを無改造で利用可能。" data-en="人型ロボット。AmazonやGXOの倉庫で実稼働。既存インフラを無改造で利用可能。">人型ロボット。AmazonやGXOの倉庫で実稼働。既存インフラを無改造で利用可能。</p>
 <div class="stat" data-ja="10万個のトート移動達成" data-en="10万個のトート移動達成">10万個のトート移動達成</div>
@@ -966,7 +967,7 @@ body {
 <rect fill="#7B1FA2" height="3" opacity="0.5" rx="1" width="4" x="9" y="17"></rect>
 </svg>
 </div>
-<h4>Apollo</h4>
+<h4 role="heading" aria-level="3">Apollo</h4>
 <p class="maker">Apptronik</p>
 <p class="desc" data-ja="汎用ヒューマノイド。ホットスワップ式バッテリーで最大22時間連続稼働。" data-en="汎用ヒューマノイド。ホットスワップ式バッテリーで最大22時間連続稼働。">汎用ヒューマノイド。ホットスワップ式バッテリーで最大22時間連続稼働。</p>
 <div class="stat" data-ja="55ポンド可搬" data-en="55ポンド可搬">55ポンド可搬</div>
@@ -981,7 +982,7 @@ body {
 <p data-ja-html="従来のAIは「予測型」だった。過去データをもとに需要を予測し、人間がその予測をもとに判断する。だが現在の最前線では、&lt;strong&gt;自ら判断し、自ら行動する「エージェンティックAI」&lt;/strong&gt;が台頭している。" data-en-html="従来のAIは「予測型」だった。過去データをもとに需要を予測し、人間がその予測をもとに判断する。だが現在の最前線では、&lt;strong&gt;自ら判断し、自ら行動する「エージェンティックAI」&lt;/strong&gt;が台頭している。">従来のAIは「予測型」だった。過去データをもとに需要を予測し、人間がその予測をもとに判断する。だが現在の最前線では、<strong>自ら判断し、自ら行動する「エージェンティックAI」</strong>が台頭している。</p>
 <h3 data-ja="従来型AI vs. エージェンティックAI" data-en="従来型AI vs. エージェンティックAI">従来型AI vs. エージェンティックAI</h3>
 <p data-ja="配送ルートの最適化を例に取ろう。従来型AIは渋滞を考慮したルートを「提示」するまでだった。一方エージェンティックAIは、突発的な事故を検知すると、荷主への通知、後続スケジュールの自動再調整、代替輸送手段の手配までを自律的に実行する。人間が介入するのは、例外的な判断が必要なときだけだ。" data-en="配送ルートの最適化を例に取ろう。従来型AIは渋滞を考慮したルートを「提示」するまでだった。一方エージェンティックAIは、突発的な事故を検知すると、荷主への通知、後続スケジュールの自動再調整、代替輸送手段の手配までを自律的に実行する。人間が介入するのは、例外的な判断が必要なときだけだ。">配送ルートの最適化を例に取ろう。従来型AIは渋滞を考慮したルートを「提示」するまでだった。一方エージェンティックAIは、突発的な事故を検知すると、荷主への通知、後続スケジュールの自動再調整、代替輸送手段の手配までを自律的に実行する。人間が介入するのは、例外的な判断が必要なときだけだ。</p>
-<div class="data-table-wrap" data-ja-html="&lt;table class=&quot;data-table&quot;&gt;
+<div class="data-table-wrap" tabindex="0" role="region" aria-label="物流ロボットの指標の表（横にスクロールできます）" data-ja-html="&lt;table class=&quot;data-table&quot;&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th data-ja=&quot;指標&quot;&gt;指標&lt;/th&gt;
@@ -1379,7 +1380,7 @@ body {
 <div class="takeaway-content" data-ja-html='&lt;h4&gt;データ基盤の整備を「最優先」にする&lt;/h4&gt;
 &lt;p data-ja-html="AIの性能はデータの質に完全に依存する。米国企業がエージェンティックAIで成果を出せているのは、クリーンなデータ基盤を数年かけて整備してきたからだ。Excel台帳が乱立し、基幹システムとの連携が手作業の状態では、いくら高度なAIを導入しても効果は出ない。&amp;lt;strong&amp;gt;「データが正しく、リアルタイムに、一箇所に集まる」状態を作ることが出発点。&amp;lt;/strong&amp;gt;" data-en-html="AIの性能はデータの質に完全に依存する。米国企業がエージェンティックAIで成果を出せているのは、クリーンなデータ基盤を数年かけて整備してきたからだ。Excel台帳が乱立し、基幹システムとの連携が手作業の状態では、いくら高度なAIを導入しても効果は出ない。&amp;lt;strong&amp;gt;「データが正しく、リアルタイムに、一箇所に集まる」状態を作ることが出発点。&amp;lt;/strong&amp;gt;"&gt;AIの性能はデータの質に完全に依存する。米国企業がエージェンティックAIで成果を出せているのは、クリーンなデータ基盤を数年かけて整備してきたからだ。Excel台帳が乱立し、基幹システムとの連携が手作業の状態では、いくら高度なAIを導入しても効果は出ない。&lt;strong&gt;「データが正しく、リアルタイムに、一箇所に集まる」状態を作ることが出発点。&lt;/strong&gt;&lt;/p&gt;' data-en-html='&lt;h4&gt;データ基盤の整備を「最優先」にする&lt;/h4&gt;
 &lt;p data-ja-html="AIの性能はデータの質に完全に依存する。米国企業がエージェンティックAIで成果を出せているのは、クリーンなデータ基盤を数年かけて整備してきたからだ。Excel台帳が乱立し、基幹システムとの連携が手作業の状態では、いくら高度なAIを導入しても効果は出ない。&amp;lt;strong&amp;gt;「データが正しく、リアルタイムに、一箇所に集まる」状態を作ることが出発点。&amp;lt;/strong&amp;gt;" data-en-html="AIの性能はデータの質に完全に依存する。米国企業がエージェンティックAIで成果を出せているのは、クリーンなデータ基盤を数年かけて整備してきたからだ。Excel台帳が乱立し、基幹システムとの連携が手作業の状態では、いくら高度なAIを導入しても効果は出ない。&amp;lt;strong&amp;gt;「データが正しく、リアルタイムに、一箇所に集まる」状態を作ることが出発点。&amp;lt;/strong&amp;gt;"&gt;AIの性能はデータの質に完全に依存する。米国企業がエージェンティックAIで成果を出せているのは、クリーンなデータ基盤を数年かけて整備してきたからだ。Excel台帳が乱立し、基幹システムとの連携が手作業の状態では、いくら高度なAIを導入しても効果は出ない。&lt;strong&gt;「データが正しく、リアルタイムに、一箇所に集まる」状態を作ることが出発点。&lt;/strong&gt;&lt;/p&gt;'>
-<h4 data-ja="データ基盤の整備を「最優先」にする" data-en="データ基盤の整備を「最優先」にする">データ基盤の整備を「最優先」にする</h4>
+<h4 role="heading" aria-level="3" data-ja="データ基盤の整備を「最優先」にする" data-en="データ基盤の整備を「最優先」にする">データ基盤の整備を「最優先」にする</h4>
 <p data-ja-html="AIの性能はデータの質に完全に依存する。米国企業がエージェンティックAIで成果を出せているのは、クリーンなデータ基盤を数年かけて整備してきたからだ。Excel台帳が乱立し、基幹システムとの連携が手作業の状態では、いくら高度なAIを導入しても効果は出ない。&lt;strong&gt;「データが正しく、リアルタイムに、一箇所に集まる」状態を作ることが出発点。&lt;/strong&gt;" data-en-html="AIの性能はデータの質に完全に依存する。米国企業がエージェンティックAIで成果を出せているのは、クリーンなデータ基盤を数年かけて整備してきたからだ。Excel台帳が乱立し、基幹システムとの連携が手作業の状態では、いくら高度なAIを導入しても効果は出ない。&lt;strong&gt;「データが正しく、リアルタイムに、一箇所に集まる」状態を作ることが出発点。&lt;/strong&gt;">AIの性能はデータの質に完全に依存する。米国企業がエージェンティックAIで成果を出せているのは、クリーンなデータ基盤を数年かけて整備してきたからだ。Excel台帳が乱立し、基幹システムとの連携が手作業の状態では、いくら高度なAIを導入しても効果は出ない。<strong>「データが正しく、リアルタイムに、一箇所に集まる」状態を作ることが出発点。</strong></p>
 </div>
 </div>
@@ -1396,7 +1397,7 @@ body {
 <div class="takeaway-content" data-ja-html='&lt;h4&gt;「痛点」を一つ選び、小さく始めて速く拡げる&lt;/h4&gt;
 &lt;p data-ja-html="Amazonの100万台ロボットに目を奪われる必要はない。Stretchが解決しているのは「コンテナの荷下ろし」という極めて具体的な一つの痛点だ。自社で最も人手がかかり、最も離職を生み、最も生産性のボトルネックになっている作業は何か。&amp;lt;strong&amp;gt;その一点を特定し、小規模な自動化から着手する「Start Small, Scale Fast」が最も高い成功率を示している。&amp;lt;/strong&amp;gt;" data-en-html="Amazonの100万台ロボットに目を奪われる必要はない。Stretchが解決しているのは「コンテナの荷下ろし」という極めて具体的な一つの痛点だ。自社で最も人手がかかり、最も離職を生み、最も生産性のボトルネックになっている作業は何か。&amp;lt;strong&amp;gt;その一点を特定し、小規模な自動化から着手する「Start Small, Scale Fast」が最も高い成功率を示している。&amp;lt;/strong&amp;gt;"&gt;Amazonの100万台ロボットに目を奪われる必要はない。Stretchが解決しているのは「コンテナの荷下ろし」という極めて具体的な一つの痛点だ。自社で最も人手がかかり、最も離職を生み、最も生産性のボトルネックになっている作業は何か。&lt;strong&gt;その一点を特定し、小規模な自動化から着手する「Start Small, Scale Fast」が最も高い成功率を示している。&lt;/strong&gt;&lt;/p&gt;' data-en-html='&lt;h4&gt;「痛点」を一つ選び、小さく始めて速く拡げる&lt;/h4&gt;
 &lt;p data-ja-html="Amazonの100万台ロボットに目を奪われる必要はない。Stretchが解決しているのは「コンテナの荷下ろし」という極めて具体的な一つの痛点だ。自社で最も人手がかかり、最も離職を生み、最も生産性のボトルネックになっている作業は何か。&amp;lt;strong&amp;gt;その一点を特定し、小規模な自動化から着手する「Start Small, Scale Fast」が最も高い成功率を示している。&amp;lt;/strong&amp;gt;" data-en-html="Amazonの100万台ロボットに目を奪われる必要はない。Stretchが解決しているのは「コンテナの荷下ろし」という極めて具体的な一つの痛点だ。自社で最も人手がかかり、最も離職を生み、最も生産性のボトルネックになっている作業は何か。&amp;lt;strong&amp;gt;その一点を特定し、小規模な自動化から着手する「Start Small, Scale Fast」が最も高い成功率を示している。&amp;lt;/strong&amp;gt;"&gt;Amazonの100万台ロボットに目を奪われる必要はない。Stretchが解決しているのは「コンテナの荷下ろし」という極めて具体的な一つの痛点だ。自社で最も人手がかかり、最も離職を生み、最も生産性のボトルネックになっている作業は何か。&lt;strong&gt;その一点を特定し、小規模な自動化から着手する「Start Small, Scale Fast」が最も高い成功率を示している。&lt;/strong&gt;&lt;/p&gt;'>
-<h4 data-ja="「痛点」を一つ選び、小さく始めて速く拡げる" data-en="「痛点」を一つ選び、小さく始めて速く拡げる">「痛点」を一つ選び、小さく始めて速く拡げる</h4>
+<h4 role="heading" aria-level="3" data-ja="「痛点」を一つ選び、小さく始めて速く拡げる" data-en="「痛点」を一つ選び、小さく始めて速く拡げる">「痛点」を一つ選び、小さく始めて速く拡げる</h4>
 <p data-ja-html="Amazonの100万台ロボットに目を奪われる必要はない。Stretchが解決しているのは「コンテナの荷下ろし」という極めて具体的な一つの痛点だ。自社で最も人手がかかり、最も離職を生み、最も生産性のボトルネックになっている作業は何か。&lt;strong&gt;その一点を特定し、小規模な自動化から着手する「Start Small, Scale Fast」が最も高い成功率を示している。&lt;/strong&gt;" data-en-html="Amazonの100万台ロボットに目を奪われる必要はない。Stretchが解決しているのは「コンテナの荷下ろし」という極めて具体的な一つの痛点だ。自社で最も人手がかかり、最も離職を生み、最も生産性のボトルネックになっている作業は何か。&lt;strong&gt;その一点を特定し、小規模な自動化から着手する「Start Small, Scale Fast」が最も高い成功率を示している。&lt;/strong&gt;">Amazonの100万台ロボットに目を奪われる必要はない。Stretchが解決しているのは「コンテナの荷下ろし」という極めて具体的な一つの痛点だ。自社で最も人手がかかり、最も離職を生み、最も生産性のボトルネックになっている作業は何か。<strong>その一点を特定し、小規模な自動化から着手する「Start Small, Scale Fast」が最も高い成功率を示している。</strong></p>
 </div>
 </div>
@@ -1413,7 +1414,7 @@ body {
 <div class="takeaway-content" data-ja-html='&lt;h4&gt;テクノロジーの前に「人の変革」を設計する&lt;/h4&gt;
 &lt;p data-ja-html="30年以上同じやり方で仕事をしてきたベテラン職員に、ある日突然「明日からロボットと一緒に」と言っても機能しない。成功企業は、現場のベテランを「変化の伝道師」として任命し、共感と信頼をベースに導入を進めている。&amp;lt;strong&amp;gt;テクノロジー予算の20〜30%を人材育成と組織変革に充てる発想が不可欠だ。&amp;lt;/strong&amp;gt;" data-en-html="30年以上同じやり方で仕事をしてきたベテラン職員に、ある日突然「明日からロボットと一緒に」と言っても機能しない。成功企業は、現場のベテランを「変化の伝道師」として任命し、共感と信頼をベースに導入を進めている。&amp;lt;strong&amp;gt;テクノロジー予算の20〜30%を人材育成と組織変革に充てる発想が不可欠だ。&amp;lt;/strong&amp;gt;"&gt;30年以上同じやり方で仕事をしてきたベテラン職員に、ある日突然「明日からロボットと一緒に」と言っても機能しない。成功企業は、現場のベテランを「変化の伝道師」として任命し、共感と信頼をベースに導入を進めている。&lt;strong&gt;テクノロジー予算の20〜30%を人材育成と組織変革に充てる発想が不可欠だ。&lt;/strong&gt;&lt;/p&gt;' data-en-html='&lt;h4&gt;テクノロジーの前に「人の変革」を設計する&lt;/h4&gt;
 &lt;p data-ja-html="30年以上同じやり方で仕事をしてきたベテラン職員に、ある日突然「明日からロボットと一緒に」と言っても機能しない。成功企業は、現場のベテランを「変化の伝道師」として任命し、共感と信頼をベースに導入を進めている。&amp;lt;strong&amp;gt;テクノロジー予算の20〜30%を人材育成と組織変革に充てる発想が不可欠だ。&amp;lt;/strong&amp;gt;" data-en-html="30年以上同じやり方で仕事をしてきたベテラン職員に、ある日突然「明日からロボットと一緒に」と言っても機能しない。成功企業は、現場のベテランを「変化の伝道師」として任命し、共感と信頼をベースに導入を進めている。&amp;lt;strong&amp;gt;テクノロジー予算の20〜30%を人材育成と組織変革に充てる発想が不可欠だ。&amp;lt;/strong&amp;gt;"&gt;30年以上同じやり方で仕事をしてきたベテラン職員に、ある日突然「明日からロボットと一緒に」と言っても機能しない。成功企業は、現場のベテランを「変化の伝道師」として任命し、共感と信頼をベースに導入を進めている。&lt;strong&gt;テクノロジー予算の20〜30%を人材育成と組織変革に充てる発想が不可欠だ。&lt;/strong&gt;&lt;/p&gt;'>
-<h4 data-ja="テクノロジーの前に「人の変革」を設計する" data-en="テクノロジーの前に「人の変革」を設計する">テクノロジーの前に「人の変革」を設計する</h4>
+<h4 role="heading" aria-level="3" data-ja="テクノロジーの前に「人の変革」を設計する" data-en="テクノロジーの前に「人の変革」を設計する">テクノロジーの前に「人の変革」を設計する</h4>
 <p data-ja-html="30年以上同じやり方で仕事をしてきたベテラン職員に、ある日突然「明日からロボットと一緒に」と言っても機能しない。成功企業は、現場のベテランを「変化の伝道師」として任命し、共感と信頼をベースに導入を進めている。&lt;strong&gt;テクノロジー予算の20〜30%を人材育成と組織変革に充てる発想が不可欠だ。&lt;/strong&gt;" data-en-html="30年以上同じやり方で仕事をしてきたベテラン職員に、ある日突然「明日からロボットと一緒に」と言っても機能しない。成功企業は、現場のベテランを「変化の伝道師」として任命し、共感と信頼をベースに導入を進めている。&lt;strong&gt;テクノロジー予算の20〜30%を人材育成と組織変革に充てる発想が不可欠だ。&lt;/strong&gt;">30年以上同じやり方で仕事をしてきたベテラン職員に、ある日突然「明日からロボットと一緒に」と言っても機能しない。成功企業は、現場のベテランを「変化の伝道師」として任命し、共感と信頼をベースに導入を進めている。<strong>テクノロジー予算の20〜30%を人材育成と組織変革に充てる発想が不可欠だ。</strong></p>
 </div>
 </div>
@@ -1465,7 +1466,7 @@ body {
 &lt;li&gt;Agility Robotics / Apptronik — Company Disclosures&lt;/li&gt;
 &lt;li&gt;Deloitte — AI Blockchain Integration for Supply Chain 2026 Guide&lt;/li&gt;
 &lt;/ul&gt;">
-<h4 data-ja="参考文献" data-en="参考文献">参考文献</h4>
+<h4 role="heading" aria-level="3" data-ja="参考文献" data-en="参考文献">参考文献</h4>
 <ul>
 <li>Ryder — 2026 Supply Chain Trends You Should Be Anticipating</li>
 <li>Microsoft — The future of logistics: How generative AI and agentic AI is creating a new era</li>
@@ -1489,13 +1490,13 @@ body {
 </section>
 <!-- related-articles (auto) -->
 <section style="max-width:800px;margin:3.5rem auto 0;padding:2rem 1.5rem 0;border-top:1px solid #E5E7EB;font-family:'Noto Sans JP',sans-serif;">
-  <p style="font-family:'Outfit','Noto Sans JP',sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#B8A882;margin:0 0 .7rem;">Related</p>
+  <p style="font-family:'Outfit','Noto Sans JP',sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#7A6B3E;margin:0 0 .7rem;">Related</p>
   <h2 style="font-size:1.15rem;font-weight:500;color:#1A1A1F;margin:0 0 1.3rem;">関連記事</h2>
   <div style="display:grid;gap:.8rem;">
-    <a href="/blog/china-logistics-dx" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">中国の物流DXが日本の5年先を行く理由｜ロボット・AI活用の最新事情</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
-    <a href="/blog/supply-chain-resilience-ai" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">地政学リスクに備える「サプライチェーン強靱化」：AI需要予測とグローバル貿易の再構築戦略</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
-    <a href="/blog/trade-dx-complete-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">貿易DX完全ガイド｜輸入・輸出業務の課題とAI活用の全体像</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
-    <a href="/blog/trade-dx-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">貿易業務のデジタル化（貿易DX）入門｜中小商社が今すぐ着手すべき理由と進め方</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/china-logistics-dx" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">中国の物流DXが日本の5年先を行く理由｜ロボット・AI活用の最新事情</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/supply-chain-resilience-ai" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">地政学リスクに備える「サプライチェーン強靱化」：AI需要予測とグローバル貿易の再構築戦略</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/trade-dx-complete-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">貿易DX完全ガイド｜輸入・輸出業務の課題とAI活用の全体像</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/trade-dx-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">貿易業務のデジタル化（貿易DX）入門｜中小商社が今すぐ着手すべき理由と進め方</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
   </div>
   <p style="margin:1.5rem 0 0;"><a href="/blog/" style="font-family:'Outfit','Noto Sans JP',sans-serif;font-size:.8rem;letter-spacing:.03em;color:#1E4E7E;text-decoration:none;">すべての記事を見る →</a></p>
 </section>

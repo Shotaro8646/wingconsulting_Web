@@ -44,7 +44,7 @@
     --border2: rgba(168,150,90,0.10);
     --text:    #E8EDF5;
     --text-2:  #9FAABF;
-    --text-3:  #5A6680;
+    --text-3:  #7A87A2;
     --red:     #E05252;
     --green:   #3CB97A;
     --amber:   #D4893A;
@@ -199,6 +199,7 @@
 </nav>
 
 <!-- ==================== HERO ==================== -->
+<main>
 <section style="padding:100px 32px 80px;position:relative;overflow:hidden">
   <!-- BG glow -->
   <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);width:800px;height:400px;background:radial-gradient(ellipse at top,rgba(168,150,90,0.07) 0%,transparent 65%);pointer-events:none"></div>
@@ -432,19 +433,19 @@
 
       <div class="card" style="padding:28px">
         <div style="font-size:28px;margin-bottom:16px">⚙</div>
-        <h4 style="font-size:15px;font-weight:700;margin:0 0 10px" data-ja="chemSHERPAネイティブ対応" data-en="Native chemSHERPA Support">chemSHERPAネイティブ対応</h4>
+        <h3 data-was="h4" style="font-size:15px;font-weight:700;margin:0 0 10px" data-ja="chemSHERPAネイティブ対応" data-en="Native chemSHERPA Support">chemSHERPAネイティブ対応</h3>
         <p style="font-size:13px;color:var(--text-2);line-height:1.7;margin:0" data-ja="日本の電子部品業界標準であるchemSHERPA（XML/ZIP）をネイティブ解析。海外汎用ツールが対応できない国内業界特有の業務フローに完全対応。" data-en="Natively parses chemSHERPA (XML/ZIP), the industry standard for Japanese electronic components. Fully supports domestic workflows that overseas generic tools cannot handle.">日本の電子部品業界標準であるchemSHERPA（XML/ZIP）をネイティブ解析。海外汎用ツールが対応できない国内業界特有の業務フローに完全対応。</p>
       </div>
 
       <div class="card" style="padding:28px;border-color:var(--border)">
         <div style="font-size:28px;margin-bottom:16px">📂</div>
-        <h4 style="font-size:15px;font-weight:700;margin:0 0 10px" data-ja="証跡が事業資産になる" data-en="Evidence Becomes a Business Asset">証跡が事業資産になる</h4>
+        <h3 data-was="h4" style="font-size:15px;font-weight:700;margin:0 0 10px" data-ja="証跡が事業資産になる" data-en="Evidence Becomes a Business Asset">証跡が事業資産になる</h3>
         <p style="font-size:13px;color:var(--text-2);line-height:1.7;margin:0" data-ja="案件を重ねるたびに、過去回答・サプライヤー照会履歴・SDS辞書が蓄積。2回目以降の同物質スクリーニングが大幅に高速化。データの使い捨てがなくなります。" data-en="With every case completed, past responses, supplier inquiry history, and SDS dictionaries accumulate. Screening the same substances next time is dramatically faster. No more throwaway data.">案件を重ねるたびに、過去回答・サプライヤー照会履歴・SDS辞書が蓄積。2回目以降の同物質スクリーニングが大幅に高速化。データの使い捨てがなくなります。</p>
       </div>
 
       <div class="card" style="padding:28px">
         <div style="font-size:28px;margin-bottom:16px">✅</div>
-        <h4 style="font-size:15px;font-weight:700;margin:0 0 10px" data-ja="判定ではなく、完走が価値" data-en="Completion, Not Just Screening, Is the Value">判定ではなく、完走が価値</h4>
+        <h3 data-was="h4" style="font-size:15px;font-weight:700;margin:0 0 10px" data-ja="判定ではなく、完走が価値" data-en="Completion, Not Just Screening, Is the Value">判定ではなく、完走が価値</h3>
         <p style="font-size:13px;color:var(--text-2);line-height:1.7;margin:0" data-ja="AI精度より、期限内に顧客フォーマットで提出物を完走させることが目的。Unknownを管理し切る設計で、誤判定リスクと差し戻しを同時に排除。" data-en="The goal is not AI accuracy, but completing submissions in the customer's format on time. Designed to fully manage Unknowns, eliminating both misclassification risk and resubmission.">AI精度より、期限内に顧客フォーマットで提出物を完走させることが目的。Unknownを管理し切る設計で、誤判定リスクと差し戻しを同時に排除。</p>
       </div>
     </div>
@@ -564,21 +565,21 @@
     <div style="background:var(--navy-3);border:1px solid var(--border);border-radius:12px;padding:36px">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
         <div>
-          <label style="font-size:11px;color:var(--text-3);display:block;margin-bottom:6px;font-family:'IBM Plex Mono',monospace" data-ja="会社名" data-en="Company Name">会社名</label>
-          <input type="text" placeholder="株式会社○○" data-ja-placeholder="株式会社○○" data-en-placeholder="Your Company, Inc." style="width:100%;background:var(--navy);border:1px solid var(--border2);border-radius:6px;padding:10px 14px;font-size:13px;color:var(--text);font-family:'Noto Sans JP',sans-serif;outline:none">
+          <label for="c-company" style="font-size:11px;color:var(--text-3);display:block;margin-bottom:6px;font-family:'IBM Plex Mono',monospace" data-ja="会社名" data-en="Company Name">会社名</label>
+          <input id="c-company" type="text" placeholder="株式会社○○" data-ja-placeholder="株式会社○○" data-en-placeholder="Your Company, Inc." style="width:100%;background:var(--navy);border:1px solid var(--border2);border-radius:6px;padding:10px 14px;font-size:13px;color:var(--text);font-family:'Noto Sans JP',sans-serif;outline:none">
         </div>
         <div>
-          <label style="font-size:11px;color:var(--text-3);display:block;margin-bottom:6px;font-family:'IBM Plex Mono',monospace" data-ja="お名前" data-en="Your Name">お名前</label>
-          <input type="text" placeholder="山田 太郎" data-ja-placeholder="山田 太郎" data-en-placeholder="Taro Yamada" style="width:100%;background:var(--navy);border:1px solid var(--border2);border-radius:6px;padding:10px 14px;font-size:13px;color:var(--text);font-family:'Noto Sans JP',sans-serif;outline:none">
+          <label for="c-name" style="font-size:11px;color:var(--text-3);display:block;margin-bottom:6px;font-family:'IBM Plex Mono',monospace" data-ja="お名前" data-en="Your Name">お名前</label>
+          <input id="c-name" type="text" placeholder="山田 太郎" data-ja-placeholder="山田 太郎" data-en-placeholder="Taro Yamada" style="width:100%;background:var(--navy);border:1px solid var(--border2);border-radius:6px;padding:10px 14px;font-size:13px;color:var(--text);font-family:'Noto Sans JP',sans-serif;outline:none">
         </div>
       </div>
       <div style="margin-bottom:14px">
-        <label style="font-size:11px;color:var(--text-3);display:block;margin-bottom:6px;font-family:'IBM Plex Mono',monospace" data-ja="メールアドレス" data-en="Email Address">メールアドレス</label>
-        <input type="email" placeholder="yourname@company.co.jp" data-ja-placeholder="yourname@company.co.jp" data-en-placeholder="yourname@company.com" style="width:100%;background:var(--navy);border:1px solid var(--border2);border-radius:6px;padding:10px 14px;font-size:13px;color:var(--text);font-family:'Noto Sans JP',sans-serif;outline:none">
+        <label for="c-email" style="font-size:11px;color:var(--text-3);display:block;margin-bottom:6px;font-family:'IBM Plex Mono',monospace" data-ja="メールアドレス" data-en="Email Address">メールアドレス</label>
+        <input id="c-email" type="email" placeholder="yourname@company.co.jp" data-ja-placeholder="yourname@company.co.jp" data-en-placeholder="yourname@company.com" style="width:100%;background:var(--navy);border:1px solid var(--border2);border-radius:6px;padding:10px 14px;font-size:13px;color:var(--text);font-family:'Noto Sans JP',sans-serif;outline:none">
       </div>
       <div style="margin-bottom:20px">
-        <label style="font-size:11px;color:var(--text-3);display:block;margin-bottom:6px;font-family:'IBM Plex Mono',monospace" data-ja="ご相談内容（任意）" data-en="Inquiry Details (Optional)">ご相談内容（任意）</label>
-        <textarea placeholder="現在の課題・対応している調査票の概要など、お気軽にご記入ください" data-ja-placeholder="現在の課題・対応している調査票の概要など、お気軽にご記入ください" data-en-placeholder="Describe your current challenges, survey types you handle, etc." rows="3" style="width:100%;background:var(--navy);border:1px solid var(--border2);border-radius:6px;padding:10px 14px;font-size:13px;color:var(--text);font-family:'Noto Sans JP',sans-serif;outline:none;resize:vertical"></textarea>
+        <label for="c-message" style="font-size:11px;color:var(--text-3);display:block;margin-bottom:6px;font-family:'IBM Plex Mono',monospace" data-ja="ご相談内容（任意）" data-en="Inquiry Details (Optional)">ご相談内容（任意）</label>
+        <textarea id="c-message" placeholder="現在の課題・対応している調査票の概要など、お気軽にご記入ください" data-ja-placeholder="現在の課題・対応している調査票の概要など、お気軽にご記入ください" data-en-placeholder="Describe your current challenges, survey types you handle, etc." rows="3" style="width:100%;background:var(--navy);border:1px solid var(--border2);border-radius:6px;padding:10px 14px;font-size:13px;color:var(--text);font-family:'Noto Sans JP',sans-serif;outline:none;resize:vertical"></textarea>
       </div>
       <button style="width:100%;padding:14px;border-radius:6px;background:var(--gold-bg);border:1px solid var(--gold);color:var(--gold);font-size:14px;font-weight:700;cursor:pointer;font-family:'Noto Sans JP',sans-serif;transition:all 0.2s" onclick="this.textContent='送信しました ✓'" data-ja="無料相談を申し込む →" data-en="Request a Free Consultation &rarr;">
         無料相談を申し込む →
@@ -591,6 +592,7 @@
 </section>
 
 <!-- Footer -->
+</main>
 <footer style="padding:24px 48px;border-top:1px solid var(--border2);display:flex;justify-content:space-between;align-items:center">
   <div style="font-size:12px;color:var(--text-3);font-family:'IBM Plex Mono',monospace">© 2026 Wing Inc. · ChemOS</div>
   <div style="display:flex;gap:24px">

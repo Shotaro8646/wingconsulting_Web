@@ -81,7 +81,7 @@
     --cream: #FDFBF7;
     --text: #2C2C2C;
     --text-light: #5A5A5A;
-    --text-lighter: #8A8A8A;
+    --text-lighter: #747474;
     --border: #E8E4DC;
     --white: #FFFFFF;
   }
@@ -257,7 +257,7 @@
     font-weight: 700;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: #7A6D40; /* 薄い地の上の小さな文字。var(--gold) のままだと 4.5:1 に届かない */
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid var(--border);
@@ -318,7 +318,7 @@
     scroll-margin-top: 80px;
   }
 
-  .article-body h4 {
+  .article-body h4{
     font-weight: 700;
     font-size: 1rem;
     color: var(--navy);
@@ -344,7 +344,7 @@
     font-size: 0.7rem;
     font-weight: 700;
     letter-spacing: 0.15em;
-    color: var(--gold);
+    color: #7A6D40; /* 薄い地の上の小さな文字。var(--gold) のままだと 4.5:1 に届かない */
     margin-bottom: 0.5rem;
     display: flex;
     align-items: center;
@@ -463,7 +463,7 @@
     margin-top: 2px;
   }
 
-  .step-flow .step-content h4 {
+  .step-flow .step-content h4{
     margin-top: 0;
     margin-bottom: 0.3rem;
     font-size: 0.95rem;
@@ -567,7 +567,7 @@
 
   /* ── Diagram styles ── */
   .diag-wrap { background:#fff; border:1px solid #E8E4DC; border-top:3px solid #A8965A; padding:1.4rem 1.5rem 1rem; margin:1.8rem 0 0.4rem; font-size:0.85rem; }
-  .diag-caption { text-align:center; font-size:0.72rem; color:#8A8A8A; margin-top:0.4rem; margin-bottom:1.6rem; }
+  .diag-caption { text-align:center; font-size:0.72rem; color:#747474; margin-top:0.4rem; margin-bottom:1.6rem; }
   .diag-hs-row { display:flex; flex-wrap:wrap; align-items:center; gap:0.3rem; margin:0.5rem 0; }
   .diag-hs-block { padding:0.7rem 1rem; text-align:center; border-radius:2px; }
   .diag-hs-block .hs-code { font-family:'Source Serif 4',serif; font-size:1.3rem; font-weight:700; line-height:1; margin-bottom:0.3rem; }
@@ -588,7 +588,7 @@
   .diag-adv-tl::before { content:''; position:absolute; left:0.55rem; top:0.3rem; bottom:0.3rem; width:2px; background:linear-gradient(to bottom,#A8965A,#E8E4DC); }
   .diag-adv-item { position:relative; margin-bottom:0.9rem; }
   .diag-adv-item::before { content:''; position:absolute; left:-1.65rem; top:0.35rem; width:10px; height:10px; border-radius:50%; background:#A8965A; border:2px solid #fff; box-shadow:0 0 0 2px #A8965A; }
-  .diag-adv-item .adv-step { font-size:0.68rem; font-weight:700; color:#A8965A; letter-spacing:0.08em; margin-bottom:0.1rem; }
+  .diag-adv-item .adv-step { font-size:0.68rem; font-weight:700; color:#7A6D40; letter-spacing:0.08em; margin-bottom:0.1rem; }
   .diag-adv-item .adv-desc { font-size:0.78rem; color:#5A5A5A; line-height:1.5; }
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;family=Noto+Sans+JP:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
@@ -629,6 +629,7 @@
   </div>
 </header>
 <!-- ─── Hero ─── -->
+<main>
 <section class="hero">
 <div class="hero-inner" data-ja-html='&lt;div class="category-label"&gt;Trade &amp;amp; Logistics&lt;/div&gt;
 &lt;h1 data-ja-html="HSコード完全ガイド：&amp;lt;br/&amp;gt;国際貿易の&amp;lt;em&amp;gt;品目分類&amp;lt;/em&amp;gt;を&amp;lt;br/&amp;gt;戦略的武器に変える" data-en-html="HSコード完全ガイド：&amp;lt;br/&amp;gt;国際貿易の&amp;lt;em&amp;gt;品目分類&amp;lt;/em&amp;gt;を&amp;lt;br/&amp;gt;戦略的武器に変える"&gt;HSコード完全ガイド：&lt;br/&gt;国際貿易の&lt;em&gt;品目分類&lt;/em&gt;を&lt;br/&gt;戦略的武器に変える&lt;/h1&gt;
@@ -783,7 +784,7 @@
 &lt;/div&gt;
 &lt;!-- DIAGRAM: HS code structure breakdown --&gt;
 &lt;div class="diag-wrap"&gt;
-&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;"&gt;HSコード階層構造の読み方&lt;/div&gt;
+&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.9rem;"&gt;HSコード階層構造の読み方&lt;/div&gt;
 &lt;div class="diag-hs-row"&gt;
 &lt;div class="diag-hs-block" style="background:#0B1A33;color:#fff;"&gt;
 &lt;div class="hs-code"&gt;84&lt;/div&gt;
@@ -873,7 +874,7 @@
       &lt;/p&gt;
 &lt;!-- DIAGRAM: GRI 1→6 decision flow --&gt;
 &lt;div class="diag-wrap"&gt;
-&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;"&gt;通則（GRI）適用フロー — 優先順位に従って判断&lt;/div&gt;
+&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.9rem;"&gt;通則（GRI）適用フロー — 優先順位に従って判断&lt;/div&gt;
 &lt;div class="diag-gri-flow"&gt;
 &lt;div class="diag-gri-item"&gt;
 &lt;div class="diag-gri-num"&gt;1&lt;/div&gt;
@@ -896,7 +897,7 @@
 &lt;div class="diag-gri-body"&gt;&lt;div class="gri-title"&gt;容器・包装の取扱い&lt;/div&gt;&lt;div class="gri-desc"&gt;特定物品専用の容器（カメラケース等）は内容物と同じ項に分類。&lt;/div&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="diag-gri-item"&gt;
-&lt;div class="diag-gri-num" style="background:#A8965A;color:#fff;"&gt;6&lt;/div&gt;
+&lt;div class="diag-gri-num" style="background:#7A6D40;color:#fff;"&gt;6&lt;/div&gt;
 &lt;div class="diag-gri-body"&gt;&lt;div class="gri-title"&gt;号レベルの分類決定&lt;/div&gt;&lt;div class="gri-desc"&gt;6桁の号は号の規定・号の注に従い、同レベルの号同士を比較して決定。&lt;/div&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -953,7 +954,7 @@
 &lt;/div&gt;
 &lt;!-- DIAGRAM: Webtariff search flow --&gt;
 &lt;div class="diag-wrap"&gt;
-&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;"&gt;Webタリフ 品目検索フロー&lt;/div&gt;
+&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.9rem;"&gt;Webタリフ 品目検索フロー&lt;/div&gt;
 &lt;div class="diag-search-row"&gt;
 &lt;div class="diag-search-step"&gt;📝&lt;br/&gt;商品仕様&lt;br/&gt;の把握&lt;/div&gt;
 &lt;div class="diag-search-arrow"&gt;→&lt;/div&gt;
@@ -1041,7 +1042,7 @@
 &lt;/div&gt;
 &lt;!-- DIAGRAM: 事前教示申請プロセス timeline --&gt;
 &lt;div class="diag-wrap"&gt;
-&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;"&gt;事前教示申請プロセス&lt;/div&gt;
+&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.9rem;"&gt;事前教示申請プロセス&lt;/div&gt;
 &lt;div class="diag-adv-tl"&gt;
 &lt;div class="diag-adv-item"&gt;
 &lt;div class="adv-step"&gt;STEP 1 — 照会書の作成&lt;/div&gt;
@@ -1255,7 +1256,7 @@
 &lt;/div&gt;
 &lt;!-- DIAGRAM: HS code structure breakdown --&gt;
 &lt;div class="diag-wrap"&gt;
-&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;"&gt;HSコード階層構造の読み方&lt;/div&gt;
+&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.9rem;"&gt;HSコード階層構造の読み方&lt;/div&gt;
 &lt;div class="diag-hs-row"&gt;
 &lt;div class="diag-hs-block" style="background:#0B1A33;color:#fff;"&gt;
 &lt;div class="hs-code"&gt;84&lt;/div&gt;
@@ -1345,7 +1346,7 @@
       &lt;/p&gt;
 &lt;!-- DIAGRAM: GRI 1→6 decision flow --&gt;
 &lt;div class="diag-wrap"&gt;
-&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;"&gt;通則（GRI）適用フロー — 優先順位に従って判断&lt;/div&gt;
+&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.9rem;"&gt;通則（GRI）適用フロー — 優先順位に従って判断&lt;/div&gt;
 &lt;div class="diag-gri-flow"&gt;
 &lt;div class="diag-gri-item"&gt;
 &lt;div class="diag-gri-num"&gt;1&lt;/div&gt;
@@ -1368,7 +1369,7 @@
 &lt;div class="diag-gri-body"&gt;&lt;div class="gri-title"&gt;容器・包装の取扱い&lt;/div&gt;&lt;div class="gri-desc"&gt;特定物品専用の容器（カメラケース等）は内容物と同じ項に分類。&lt;/div&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="diag-gri-item"&gt;
-&lt;div class="diag-gri-num" style="background:#A8965A;color:#fff;"&gt;6&lt;/div&gt;
+&lt;div class="diag-gri-num" style="background:#7A6D40;color:#fff;"&gt;6&lt;/div&gt;
 &lt;div class="diag-gri-body"&gt;&lt;div class="gri-title"&gt;号レベルの分類決定&lt;/div&gt;&lt;div class="gri-desc"&gt;6桁の号は号の規定・号の注に従い、同レベルの号同士を比較して決定。&lt;/div&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1425,7 +1426,7 @@
 &lt;/div&gt;
 &lt;!-- DIAGRAM: Webtariff search flow --&gt;
 &lt;div class="diag-wrap"&gt;
-&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;"&gt;Webタリフ 品目検索フロー&lt;/div&gt;
+&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.9rem;"&gt;Webタリフ 品目検索フロー&lt;/div&gt;
 &lt;div class="diag-search-row"&gt;
 &lt;div class="diag-search-step"&gt;📝&lt;br/&gt;商品仕様&lt;br/&gt;の把握&lt;/div&gt;
 &lt;div class="diag-search-arrow"&gt;→&lt;/div&gt;
@@ -1513,7 +1514,7 @@
 &lt;/div&gt;
 &lt;!-- DIAGRAM: 事前教示申請プロセス timeline --&gt;
 &lt;div class="diag-wrap"&gt;
-&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;"&gt;事前教示申請プロセス&lt;/div&gt;
+&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.9rem;"&gt;事前教示申請プロセス&lt;/div&gt;
 &lt;div class="diag-adv-tl"&gt;
 &lt;div class="diag-adv-item"&gt;
 &lt;div class="adv-step"&gt;STEP 1 — 照会書の作成&lt;/div&gt;
@@ -1751,7 +1752,7 @@
 <p data-ja="6桁までの「国際基準」と、それ以降の「各国事情」を明確に区別して理解することが、実務上の混乱を避ける鍵となる。" data-en="6桁までの「国際基準」と、それ以降の「各国事情」を明確に区別して理解することが、実務上の混乱を避ける鍵となる。">6桁までの「国際基準」と、それ以降の「各国事情」を明確に区別して理解することが、実務上の混乱を避ける鍵となる。</p>
 </div>
 <!-- DIAGRAM: HS code structure breakdown -->
-<div class="diag-wrap" data-ja-html='&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;"&gt;HSコード階層構造の読み方&lt;/div&gt;
+<div class="diag-wrap" data-ja-html='&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.9rem;"&gt;HSコード階層構造の読み方&lt;/div&gt;
 &lt;div class="diag-hs-row"&gt;
 &lt;div class="diag-hs-block" style="background:#0B1A33;color:#fff;"&gt;
 &lt;div class="hs-code"&gt;84&lt;/div&gt;
@@ -1776,7 +1777,7 @@
 &lt;div class="hs-label"&gt;統計細分&lt;/div&gt;
 &lt;div class="hs-desc"&gt;9〜10桁（各国独自）&lt;br/&gt;日本の実行関税率表&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;' data-en-html='&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;"&gt;HSコード階層構造の読み方&lt;/div&gt;
+&lt;/div&gt;' data-en-html='&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.9rem;"&gt;HSコード階層構造の読み方&lt;/div&gt;
 &lt;div class="diag-hs-row"&gt;
 &lt;div class="diag-hs-block" style="background:#0B1A33;color:#fff;"&gt;
 &lt;div class="hs-code"&gt;84&lt;/div&gt;
@@ -1802,7 +1803,7 @@
 &lt;div class="hs-desc"&gt;9〜10桁（各国独自）&lt;br/&gt;日本の実行関税率表&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;'>
-<div data-ja="HSコード階層構造の読み方" data-en="HSコード階層構造の読み方" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;">HSコード階層構造の読み方</div>
+<div data-ja="HSコード階層構造の読み方" data-en="HSコード階層構造の読み方" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.9rem;">HSコード階層構造の読み方</div>
 <div class="diag-hs-row" data-ja-html='&lt;div class="diag-hs-block" style="background:#0B1A33;color:#fff;"&gt;
 &lt;div class="hs-code"&gt;84&lt;/div&gt;
 &lt;div class="hs-label" style="color:#A8965A;"&gt;類（Chapter）&lt;/div&gt;
@@ -1971,7 +1972,7 @@
 <strong>通則6：</strong>6桁の号の分類は、号の規定・号の注に従い、同レベルの号同士を比較して決定する。
       </p>
 <!-- DIAGRAM: GRI 1→6 decision flow -->
-<div class="diag-wrap" data-ja-html='&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;"&gt;通則（GRI）適用フロー — 優先順位に従って判断&lt;/div&gt;
+<div class="diag-wrap" data-ja-html='&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.9rem;"&gt;通則（GRI）適用フロー — 優先順位に従って判断&lt;/div&gt;
 &lt;div class="diag-gri-flow"&gt;
 &lt;div class="diag-gri-item"&gt;
 &lt;div class="diag-gri-num"&gt;1&lt;/div&gt;
@@ -1994,10 +1995,10 @@
 &lt;div class="diag-gri-body"&gt;&lt;div class="gri-title"&gt;容器・包装の取扱い&lt;/div&gt;&lt;div class="gri-desc"&gt;特定物品専用の容器（カメラケース等）は内容物と同じ項に分類。&lt;/div&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="diag-gri-item"&gt;
-&lt;div class="diag-gri-num" style="background:#A8965A;color:#fff;"&gt;6&lt;/div&gt;
+&lt;div class="diag-gri-num" style="background:#7A6D40;color:#fff;"&gt;6&lt;/div&gt;
 &lt;div class="diag-gri-body"&gt;&lt;div class="gri-title"&gt;号レベルの分類決定&lt;/div&gt;&lt;div class="gri-desc"&gt;6桁の号は号の規定・号の注に従い、同レベルの号同士を比較して決定。&lt;/div&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;' data-en-html='&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;"&gt;通則（GRI）適用フロー — 優先順位に従って判断&lt;/div&gt;
+&lt;/div&gt;' data-en-html='&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.9rem;"&gt;通則（GRI）適用フロー — 優先順位に従って判断&lt;/div&gt;
 &lt;div class="diag-gri-flow"&gt;
 &lt;div class="diag-gri-item"&gt;
 &lt;div class="diag-gri-num"&gt;1&lt;/div&gt;
@@ -2020,11 +2021,11 @@
 &lt;div class="diag-gri-body"&gt;&lt;div class="gri-title"&gt;容器・包装の取扱い&lt;/div&gt;&lt;div class="gri-desc"&gt;特定物品専用の容器（カメラケース等）は内容物と同じ項に分類。&lt;/div&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="diag-gri-item"&gt;
-&lt;div class="diag-gri-num" style="background:#A8965A;color:#fff;"&gt;6&lt;/div&gt;
+&lt;div class="diag-gri-num" style="background:#7A6D40;color:#fff;"&gt;6&lt;/div&gt;
 &lt;div class="diag-gri-body"&gt;&lt;div class="gri-title"&gt;号レベルの分類決定&lt;/div&gt;&lt;div class="gri-desc"&gt;6桁の号は号の規定・号の注に従い、同レベルの号同士を比較して決定。&lt;/div&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;'>
-<div data-ja="通則（GRI）適用フロー — 優先順位に従って判断" data-en="通則（GRI）適用フロー — 優先順位に従って判断" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;">通則（GRI）適用フロー — 優先順位に従って判断</div>
+<div data-ja="通則（GRI）適用フロー — 優先順位に従って判断" data-en="通則（GRI）適用フロー — 優先順位に従って判断" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.9rem;">通則（GRI）適用フロー — 優先順位に従って判断</div>
 <div class="diag-gri-flow" data-ja-html='&lt;div class="diag-gri-item"&gt;
 &lt;div class="diag-gri-num"&gt;1&lt;/div&gt;
 &lt;div class="diag-gri-body"&gt;&lt;div class="gri-title"&gt;項の規定と注による分類&lt;/div&gt;&lt;div class="gri-desc"&gt;「部・類の注」と「項の規定文」を読み、当てはまる項を特定。これが最優先。&lt;/div&gt;&lt;/div&gt;
@@ -2046,7 +2047,7 @@
 &lt;div class="diag-gri-body"&gt;&lt;div class="gri-title"&gt;容器・包装の取扱い&lt;/div&gt;&lt;div class="gri-desc"&gt;特定物品専用の容器（カメラケース等）は内容物と同じ項に分類。&lt;/div&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="diag-gri-item"&gt;
-&lt;div class="diag-gri-num" style="background:#A8965A;color:#fff;"&gt;6&lt;/div&gt;
+&lt;div class="diag-gri-num" style="background:#7A6D40;color:#fff;"&gt;6&lt;/div&gt;
 &lt;div class="diag-gri-body"&gt;&lt;div class="gri-title"&gt;号レベルの分類決定&lt;/div&gt;&lt;div class="gri-desc"&gt;6桁の号は号の規定・号の注に従い、同レベルの号同士を比較して決定。&lt;/div&gt;&lt;/div&gt;
 &lt;/div&gt;' data-en-html='&lt;div class="diag-gri-item"&gt;
 &lt;div class="diag-gri-num"&gt;1&lt;/div&gt;
@@ -2069,7 +2070,7 @@
 &lt;div class="diag-gri-body"&gt;&lt;div class="gri-title"&gt;容器・包装の取扱い&lt;/div&gt;&lt;div class="gri-desc"&gt;特定物品専用の容器（カメラケース等）は内容物と同じ項に分類。&lt;/div&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="diag-gri-item"&gt;
-&lt;div class="diag-gri-num" style="background:#A8965A;color:#fff;"&gt;6&lt;/div&gt;
+&lt;div class="diag-gri-num" style="background:#7A6D40;color:#fff;"&gt;6&lt;/div&gt;
 &lt;div class="diag-gri-body"&gt;&lt;div class="gri-title"&gt;号レベルの分類決定&lt;/div&gt;&lt;div class="gri-desc"&gt;6桁の号は号の規定・号の注に従い、同レベルの号同士を比較して決定。&lt;/div&gt;&lt;/div&gt;
 &lt;/div&gt;'>
 <div class="diag-gri-item" data-ja-html='&lt;div class="diag-gri-num"&gt;1&lt;/div&gt;
@@ -2102,10 +2103,10 @@
 <div class="diag-gri-num">5</div>
 <div class="diag-gri-body" data-ja-html='&lt;div class="gri-title"&gt;容器・包装の取扱い&lt;/div&gt;&lt;div class="gri-desc"&gt;特定物品専用の容器（カメラケース等）は内容物と同じ項に分類。&lt;/div&gt;' data-en-html='&lt;div class="gri-title"&gt;容器・包装の取扱い&lt;/div&gt;&lt;div class="gri-desc"&gt;特定物品専用の容器（カメラケース等）は内容物と同じ項に分類。&lt;/div&gt;'><div class="gri-title" data-ja="容器・包装の取扱い" data-en="容器・包装の取扱い">容器・包装の取扱い</div><div class="gri-desc" data-ja="特定物品専用の容器（カメラケース等）は内容物と同じ項に分類。" data-en="特定物品専用の容器（カメラケース等）は内容物と同じ項に分類。">特定物品専用の容器（カメラケース等）は内容物と同じ項に分類。</div></div>
 </div>
-<div class="diag-gri-item" data-ja-html='&lt;div class="diag-gri-num" style="background:#A8965A;color:#fff;"&gt;6&lt;/div&gt;
-&lt;div class="diag-gri-body"&gt;&lt;div class="gri-title"&gt;号レベルの分類決定&lt;/div&gt;&lt;div class="gri-desc"&gt;6桁の号は号の規定・号の注に従い、同レベルの号同士を比較して決定。&lt;/div&gt;&lt;/div&gt;' data-en-html='&lt;div class="diag-gri-num" style="background:#A8965A;color:#fff;"&gt;6&lt;/div&gt;
+<div class="diag-gri-item" data-ja-html='&lt;div class="diag-gri-num" style="background:#7A6D40;color:#fff;"&gt;6&lt;/div&gt;
+&lt;div class="diag-gri-body"&gt;&lt;div class="gri-title"&gt;号レベルの分類決定&lt;/div&gt;&lt;div class="gri-desc"&gt;6桁の号は号の規定・号の注に従い、同レベルの号同士を比較して決定。&lt;/div&gt;&lt;/div&gt;' data-en-html='&lt;div class="diag-gri-num" style="background:#7A6D40;color:#fff;"&gt;6&lt;/div&gt;
 &lt;div class="diag-gri-body"&gt;&lt;div class="gri-title"&gt;号レベルの分類決定&lt;/div&gt;&lt;div class="gri-desc"&gt;6桁の号は号の規定・号の注に従い、同レベルの号同士を比較して決定。&lt;/div&gt;&lt;/div&gt;'>
-<div class="diag-gri-num" style="background:#A8965A;color:#fff;">6</div>
+<div class="diag-gri-num" style="background:#7A6D40;color:#fff;">6</div>
 <div class="diag-gri-body" data-ja-html='&lt;div class="gri-title"&gt;号レベルの分類決定&lt;/div&gt;&lt;div class="gri-desc"&gt;6桁の号は号の規定・号の注に従い、同レベルの号同士を比較して決定。&lt;/div&gt;' data-en-html='&lt;div class="gri-title"&gt;号レベルの分類決定&lt;/div&gt;&lt;div class="gri-desc"&gt;6桁の号は号の規定・号の注に従い、同レベルの号同士を比較して決定。&lt;/div&gt;'><div class="gri-title" data-ja="号レベルの分類決定" data-en="号レベルの分類決定">号レベルの分類決定</div><div class="gri-desc" data-ja="6桁の号は号の規定・号の注に従い、同レベルの号同士を比較して決定。" data-en="6桁の号は号の規定・号の注に従い、同レベルの号同士を比較して決定。">6桁の号は号の規定・号の注に従い、同レベルの号同士を比較して決定。</div></div>
 </div>
 </div>
@@ -2201,7 +2202,8 @@
 <div class="step-content" data-ja-html='&lt;h4&gt;商品仕様の完全な把握&lt;/h4&gt;
 &lt;p data-ja="原材料、構造、用途、製造工程を整理。情報が欠けるとWebタリフ上の「条件分岐」に対応できない。" data-en="原材料、構造、用途、製造工程を整理。情報が欠けるとWebタリフ上の「条件分岐」に対応できない。"&gt;原材料、構造、用途、製造工程を整理。情報が欠けるとWebタリフ上の「条件分岐」に対応できない。&lt;/p&gt;' data-en-html='&lt;h4&gt;商品仕様の完全な把握&lt;/h4&gt;
 &lt;p data-ja="原材料、構造、用途、製造工程を整理。情報が欠けるとWebタリフ上の「条件分岐」に対応できない。" data-en="原材料、構造、用途、製造工程を整理。情報が欠けるとWebタリフ上の「条件分岐」に対応できない。"&gt;原材料、構造、用途、製造工程を整理。情報が欠けるとWebタリフ上の「条件分岐」に対応できない。&lt;/p&gt;'>
-<h4 data-ja="商品仕様の完全な把握" data-en="商品仕様の完全な把握">商品仕様の完全な把握</h4>
+<!-- 見た目は h4 のまま、読み上げの段だけ h3 にしている（h2 の直下に h4 が来る段飛ばしを解消するため。h3 に変えると大きさと余白が変わる） -->
+<h4 role="heading" aria-level="3" data-ja="商品仕様の完全な把握" data-en="商品仕様の完全な把握">商品仕様の完全な把握</h4>
 <p data-ja="原材料、構造、用途、製造工程を整理。情報が欠けるとWebタリフ上の「条件分岐」に対応できない。" data-en="原材料、構造、用途、製造工程を整理。情報が欠けるとWebタリフ上の「条件分岐」に対応できない。">原材料、構造、用途、製造工程を整理。情報が欠けるとWebタリフ上の「条件分岐」に対応できない。</p>
 </div>
 </div>
@@ -2218,7 +2220,7 @@
 <div class="step-content" data-ja-html='&lt;h4&gt;上位分類（部・類）からの絞り込み&lt;/h4&gt;
 &lt;p data-ja="キーワード検索でいきなり特定番号に飛びつくのは危険。まず21の「部」から大分類を選択し、「類」へ進む。" data-en="キーワード検索でいきなり特定番号に飛びつくのは危険。まず21の「部」から大分類を選択し、「類」へ進む。"&gt;キーワード検索でいきなり特定番号に飛びつくのは危険。まず21の「部」から大分類を選択し、「類」へ進む。&lt;/p&gt;' data-en-html='&lt;h4&gt;上位分類（部・類）からの絞り込み&lt;/h4&gt;
 &lt;p data-ja="キーワード検索でいきなり特定番号に飛びつくのは危険。まず21の「部」から大分類を選択し、「類」へ進む。" data-en="キーワード検索でいきなり特定番号に飛びつくのは危険。まず21の「部」から大分類を選択し、「類」へ進む。"&gt;キーワード検索でいきなり特定番号に飛びつくのは危険。まず21の「部」から大分類を選択し、「類」へ進む。&lt;/p&gt;'>
-<h4 data-ja="上位分類（部・類）からの絞り込み" data-en="上位分類（部・類）からの絞り込み">上位分類（部・類）からの絞り込み</h4>
+<h4 role="heading" aria-level="3" data-ja="上位分類（部・類）からの絞り込み" data-en="上位分類（部・類）からの絞り込み">上位分類（部・類）からの絞り込み</h4>
 <p data-ja="キーワード検索でいきなり特定番号に飛びつくのは危険。まず21の「部」から大分類を選択し、「類」へ進む。" data-en="キーワード検索でいきなり特定番号に飛びつくのは危険。まず21の「部」から大分類を選択し、「類」へ進む。">キーワード検索でいきなり特定番号に飛びつくのは危険。まず21の「部」から大分類を選択し、「類」へ進む。</p>
 </div>
 </div>
@@ -2235,7 +2237,7 @@
 <div class="step-content" data-ja-html='&lt;h4&gt;類注・部注の徹底確認&lt;/h4&gt;
 &lt;p data-ja="選択した類の冒頭にある「類注」を確認。自分の商品がその類から除外されていないかを必ずチェック。" data-en="選択した類の冒頭にある「類注」を確認。自分の商品がその類から除外されていないかを必ずチェック。"&gt;選択した類の冒頭にある「類注」を確認。自分の商品がその類から除外されていないかを必ずチェック。&lt;/p&gt;' data-en-html='&lt;h4&gt;類注・部注の徹底確認&lt;/h4&gt;
 &lt;p data-ja="選択した類の冒頭にある「類注」を確認。自分の商品がその類から除外されていないかを必ずチェック。" data-en="選択した類の冒頭にある「類注」を確認。自分の商品がその類から除外されていないかを必ずチェック。"&gt;選択した類の冒頭にある「類注」を確認。自分の商品がその類から除外されていないかを必ずチェック。&lt;/p&gt;'>
-<h4 data-ja="類注・部注の徹底確認" data-en="類注・部注の徹底確認">類注・部注の徹底確認</h4>
+<h4 role="heading" aria-level="3" data-ja="類注・部注の徹底確認" data-en="類注・部注の徹底確認">類注・部注の徹底確認</h4>
 <p data-ja="選択した類の冒頭にある「類注」を確認。自分の商品がその類から除外されていないかを必ずチェック。" data-en="選択した類の冒頭にある「類注」を確認。自分の商品がその類から除外されていないかを必ずチェック。">選択した類の冒頭にある「類注」を確認。自分の商品がその類から除外されていないかを必ずチェック。</p>
 </div>
 </div>
@@ -2252,7 +2254,7 @@
 <div class="step-content" data-ja-html='&lt;h4&gt;段落ち（インデント）による横並び比較&lt;/h4&gt;
 &lt;p data-ja="同じ数のダッシュを持つ項目同士を横並びで比較する。階層構造を無視して深い項目を選ぶのは誤分類の原因。" data-en="同じ数のダッシュを持つ項目同士を横並びで比較する。階層構造を無視して深い項目を選ぶのは誤分類の原因。"&gt;同じ数のダッシュを持つ項目同士を横並びで比較する。階層構造を無視して深い項目を選ぶのは誤分類の原因。&lt;/p&gt;' data-en-html='&lt;h4&gt;段落ち（インデント）による横並び比較&lt;/h4&gt;
 &lt;p data-ja="同じ数のダッシュを持つ項目同士を横並びで比較する。階層構造を無視して深い項目を選ぶのは誤分類の原因。" data-en="同じ数のダッシュを持つ項目同士を横並びで比較する。階層構造を無視して深い項目を選ぶのは誤分類の原因。"&gt;同じ数のダッシュを持つ項目同士を横並びで比較する。階層構造を無視して深い項目を選ぶのは誤分類の原因。&lt;/p&gt;'>
-<h4 data-ja="段落ち（インデント）による横並び比較" data-en="段落ち（インデント）による横並び比較">段落ち（インデント）による横並び比較</h4>
+<h4 role="heading" aria-level="3" data-ja="段落ち（インデント）による横並び比較" data-en="段落ち（インデント）による横並び比較">段落ち（インデント）による横並び比較</h4>
 <p data-ja="同じ数のダッシュを持つ項目同士を横並びで比較する。階層構造を無視して深い項目を選ぶのは誤分類の原因。" data-en="同じ数のダッシュを持つ項目同士を横並びで比較する。階層構造を無視して深い項目を選ぶのは誤分類の原因。">同じ数のダッシュを持つ項目同士を横並びで比較する。階層構造を無視して深い項目を選ぶのは誤分類の原因。</p>
 </div>
 </div>
@@ -2269,7 +2271,7 @@
 <div class="step-content" data-ja-html='&lt;h4&gt;他法令と条件文の確認&lt;/h4&gt;
 &lt;p data-ja="「～に限る」「～を除く」の条件文を確認。右側の「他法令」欄で規制対象かどうかもチェック。" data-en="「～に限る」「～を除く」の条件文を確認。右側の「他法令」欄で規制対象かどうかもチェック。"&gt;「～に限る」「～を除く」の条件文を確認。右側の「他法令」欄で規制対象かどうかもチェック。&lt;/p&gt;' data-en-html='&lt;h4&gt;他法令と条件文の確認&lt;/h4&gt;
 &lt;p data-ja="「～に限る」「～を除く」の条件文を確認。右側の「他法令」欄で規制対象かどうかもチェック。" data-en="「～に限る」「～を除く」の条件文を確認。右側の「他法令」欄で規制対象かどうかもチェック。"&gt;「～に限る」「～を除く」の条件文を確認。右側の「他法令」欄で規制対象かどうかもチェック。&lt;/p&gt;'>
-<h4 data-ja="他法令と条件文の確認" data-en="他法令と条件文の確認">他法令と条件文の確認</h4>
+<h4 role="heading" aria-level="3" data-ja="他法令と条件文の確認" data-en="他法令と条件文の確認">他法令と条件文の確認</h4>
 <p data-ja="「～に限る」「～を除く」の条件文を確認。右側の「他法令」欄で規制対象かどうかもチェック。" data-en="「～に限る」「～を除く」の条件文を確認。右側の「他法令」欄で規制対象かどうかもチェック。">「～に限る」「～を除く」の条件文を確認。右側の「他法令」欄で規制対象かどうかもチェック。</p>
 </div>
 </div>
@@ -2281,7 +2283,7 @@
 <p data-ja="品名だけを見て類注を読まずに進めること。これが誤分類の最大の原因である。" data-en="品名だけを見て類注を読まずに進めること。これが誤分類の最大の原因である。">品名だけを見て類注を読まずに進めること。これが誤分類の最大の原因である。</p>
 </div>
 <!-- DIAGRAM: Webtariff search flow -->
-<div class="diag-wrap" data-ja-html='&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;"&gt;Webタリフ 品目検索フロー&lt;/div&gt;
+<div class="diag-wrap" data-ja-html='&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.9rem;"&gt;Webタリフ 品目検索フロー&lt;/div&gt;
 &lt;div class="diag-search-row"&gt;
 &lt;div class="diag-search-step"&gt;📝&lt;br/&gt;商品仕様&lt;br/&gt;の把握&lt;/div&gt;
 &lt;div class="diag-search-arrow"&gt;→&lt;/div&gt;
@@ -2294,7 +2296,7 @@
 &lt;div class="diag-search-step"&gt;🔢&lt;br/&gt;号の確認&lt;br/&gt;（上6桁）&lt;/div&gt;
 &lt;div class="diag-search-arrow"&gt;→&lt;/div&gt;
 &lt;div class="diag-search-step highlight"&gt;💴&lt;br/&gt;税率確認&lt;br/&gt;・他法令チェック&lt;/div&gt;
-&lt;/div&gt;' data-en-html='&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;"&gt;Webタリフ 品目検索フロー&lt;/div&gt;
+&lt;/div&gt;' data-en-html='&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.9rem;"&gt;Webタリフ 品目検索フロー&lt;/div&gt;
 &lt;div class="diag-search-row"&gt;
 &lt;div class="diag-search-step"&gt;📝&lt;br/&gt;商品仕様&lt;br/&gt;の把握&lt;/div&gt;
 &lt;div class="diag-search-arrow"&gt;→&lt;/div&gt;
@@ -2308,7 +2310,7 @@
 &lt;div class="diag-search-arrow"&gt;→&lt;/div&gt;
 &lt;div class="diag-search-step highlight"&gt;💴&lt;br/&gt;税率確認&lt;br/&gt;・他法令チェック&lt;/div&gt;
 &lt;/div&gt;'>
-<div data-ja="Webタリフ 品目検索フロー" data-en="Webタリフ 品目検索フロー" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;">Webタリフ 品目検索フロー</div>
+<div data-ja="Webタリフ 品目検索フロー" data-en="Webタリフ 品目検索フロー" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.9rem;">Webタリフ 品目検索フロー</div>
 <div class="diag-search-row" data-ja-html='&lt;div class="diag-search-step"&gt;📝&lt;br/&gt;商品仕様&lt;br/&gt;の把握&lt;/div&gt;
 &lt;div class="diag-search-arrow"&gt;→&lt;/div&gt;
 &lt;div class="diag-search-step"&gt;📂&lt;br/&gt;類の確認&lt;br/&gt;（上2桁）&lt;/div&gt;
@@ -2445,7 +2447,7 @@
 <p data-ja="電話やメールによる口頭照会の回答は単なる「参考」であり、実際の通関審査において法的拘束力を持たない。法的確実性を得るには、必ず文書による照会を行うこと。" data-en="電話やメールによる口頭照会の回答は単なる「参考」であり、実際の通関審査において法的拘束力を持たない。法的確実性を得るには、必ず文書による照会を行うこと。">電話やメールによる口頭照会の回答は単なる「参考」であり、実際の通関審査において法的拘束力を持たない。法的確実性を得るには、必ず文書による照会を行うこと。</p>
 </div>
 <!-- DIAGRAM: 事前教示申請プロセス timeline -->
-<div class="diag-wrap" data-ja-html='&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;"&gt;事前教示申請プロセス&lt;/div&gt;
+<div class="diag-wrap" data-ja-html='&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.9rem;"&gt;事前教示申請プロセス&lt;/div&gt;
 &lt;div class="diag-adv-tl"&gt;
 &lt;div class="diag-adv-item"&gt;
 &lt;div class="adv-step"&gt;STEP 1 — 照会書の作成&lt;/div&gt;
@@ -2467,7 +2469,7 @@
 &lt;div class="adv-step"&gt;STEP 5 — 文書回答の受領・活用（有効期間3年）&lt;/div&gt;
 &lt;div class="adv-desc"&gt;回答書を通関審査時に提示することで全国の税関で尊重される。内容に不服がある場合は異議申立てが可能。&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;' data-en-html='&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;"&gt;事前教示申請プロセス&lt;/div&gt;
+&lt;/div&gt;' data-en-html='&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.9rem;"&gt;事前教示申請プロセス&lt;/div&gt;
 &lt;div class="diag-adv-tl"&gt;
 &lt;div class="diag-adv-item"&gt;
 &lt;div class="adv-step"&gt;STEP 1 — 照会書の作成&lt;/div&gt;
@@ -2490,7 +2492,7 @@
 &lt;div class="adv-desc"&gt;回答書を通関審査時に提示することで全国の税関で尊重される。内容に不服がある場合は異議申立てが可能。&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;'>
-<div data-ja="事前教示申請プロセス" data-en="事前教示申請プロセス" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.9rem;">事前教示申請プロセス</div>
+<div data-ja="事前教示申請プロセス" data-en="事前教示申請プロセス" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.9rem;">事前教示申請プロセス</div>
 <div class="diag-adv-tl" data-ja-html='&lt;div class="diag-adv-item"&gt;
 &lt;div class="adv-step"&gt;STEP 1 — 照会書の作成&lt;/div&gt;
 &lt;div class="adv-desc"&gt;様式C-1000に、品名・成分・製法・用途・包装状態を精緻に記載する。情報が不足すると審査が遅延する原因になる。&lt;/div&gt;
@@ -2723,17 +2725,18 @@
 </section>
 <!-- related-articles (auto) -->
 <section style="max-width:800px;margin:3.5rem auto 0;padding:2rem 1.5rem 0;border-top:1px solid #E5E7EB;font-family:'Noto Sans JP',sans-serif;">
-  <p style="font-family:'Outfit','Noto Sans JP',sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#B8A882;margin:0 0 .7rem;">Related</p>
+  <p style="font-family:'Outfit','Noto Sans JP',sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#7A6B3E;margin:0 0 .7rem;">Related</p>
   <h2 style="font-size:1.15rem;font-weight:500;color:#1A1A1F;margin:0 0 1.3rem;">関連記事</h2>
   <div style="display:grid;gap:.8rem;">
-    <a href="/blog/export-control-ai" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">安全保障貿易管理とは？該非判定の実務とAI・DXによる輸出管理の効率化</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
-    <a href="/blog/trade-dx-complete-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">貿易DX完全ガイド｜輸入・輸出業務の課題とAI活用の全体像</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
-    <a href="/blog/trade-dx-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">貿易業務のデジタル化（貿易DX）入門｜中小商社が今すぐ着手すべき理由と進め方</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
-    <a href="/blog/trade-operations-overview" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">商社の貿易事務とは？輸入フローの全体像と担当者が直面する課題</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
-    <a href="/blog/trade-dx-ai-agent" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/export-control-ai" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">安全保障貿易管理とは？該非判定の実務とAI・DXによる輸出管理の効率化</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/trade-dx-complete-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">貿易DX完全ガイド｜輸入・輸出業務の課題とAI活用の全体像</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/trade-dx-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">貿易業務のデジタル化（貿易DX）入門｜中小商社が今すぐ着手すべき理由と進め方</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/trade-operations-overview" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">商社の貿易事務とは？輸入フローの全体像と担当者が直面する課題</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/trade-dx-ai-agent" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
   </div>
   <p style="margin:1.5rem 0 0;"><a href="/blog/" style="font-family:'Outfit','Noto Sans JP',sans-serif;font-size:.8rem;letter-spacing:.03em;color:#1E4E7E;text-decoration:none;">すべての記事を見る →</a></p>
 </section>
+</main>
 <footer class="site-footer">
   © 2026 Wing. All rights reserved.
 </footer>

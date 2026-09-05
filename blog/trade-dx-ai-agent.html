@@ -68,9 +68,9 @@ tailwind.config = {
     extend: {
       colors: {
         navy: { DEFAULT: '#0F2342', dark: '#081830' },
-        gold: { DEFAULT: '#A8965A', light: '#C4AD72', muted: '#7A6B3E', pale: '#F8F5ED', mid: '#B8A560' },
+        gold: { DEFAULT: '#A8965A', deep: '#7A6D40', deeper: '#635834', light: '#C4AD72', muted: '#7A6B3E', pale: '#F8F5ED', mid: '#B8A560' },
         slate: { warm: '#F7F6F3', cool: '#EEECe7' },
-        ink: { DEFAULT: '#1A1A1F', mid: '#4A4A55', light: '#8A8A96' },
+        ink: { DEFAULT: '#1A1A1F', mid: '#4A4A55', light: '#6C6C79' },
       },
       fontFamily: {
         serif: ['"Yu Gothic"', '"YuGothic"', 'sans-serif'],
@@ -93,7 +93,7 @@ article li { margin-bottom: 0.5rem; }
 
 /* ── Diagram styles ── */
 .diag-wrap { background:#fff; border:1px solid #E2E0DA; border-top:3px solid #A8965A; padding:1.4rem 1.5rem 1rem; margin:1.6rem 0 0.5rem; font-size:0.85rem; }
-.diag-caption { text-align:center; font-size:0.72rem; color:#8A8A96; margin-top:0.5rem; margin-bottom:1.4rem; }
+.diag-caption { text-align:center; font-size:0.72rem; color:#6C6C79; margin-top:0.5rem; margin-bottom:1.4rem; }
 .diag-compare-row { display:flex; flex-wrap:wrap; gap:1rem; align-items:stretch; }
 .diag-compare-box { flex:1 1 200px; border:1px solid #E2E0DA; padding:1rem; }
 .diag-compare-box .box-head { font-size:0.7rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:0.35rem 0.6rem; margin:-1rem -1rem 0.8rem; }
@@ -104,8 +104,8 @@ article li { margin-bottom: 0.5rem; }
 .diag-compare-box li:last-child { border-bottom:none; }
 .diag-compare-box .box-badge { font-size:0.65rem; font-weight:700; display:inline-block; padding:0.15rem 0.5rem; border-radius:2px; margin-bottom:0.5rem; }
 .diag-compare-box.rpa .box-badge { background:#E2E0DA; color:#4A4A55; }
-.diag-compare-box.ai .box-badge { background:#A8965A; color:#fff; }
-.diag-arrow-mid { display:flex; align-items:center; justify-content:center; font-size:1.4rem; color:#A8965A; flex-shrink:0; padding:0 0.3rem; }
+.diag-compare-box.ai .box-badge { background:#7A6D40; color:#fff; }
+.diag-arrow-mid { display:flex; align-items:center; justify-content:center; font-size:1.4rem; color:#7A6D40; flex-shrink:0; padding:0 0.3rem; }
 .diag-usecase-row { display:flex; flex-wrap:wrap; gap:0.7rem; }
 .diag-usecase-card { flex:1 1 160px; border:1px solid #E2E0DA; padding:1rem; background:#FAFAF7; }
 .diag-usecase-card .uc-icon { font-size:1.5rem; margin-bottom:0.4rem; }
@@ -114,7 +114,7 @@ article li { margin-bottom: 0.5rem; }
 .diag-flow-row { display:flex; flex-wrap:wrap; align-items:center; gap:0; }
 .diag-flow-step { background:#0F2342; color:#fff; padding:0.6rem 0.9rem; font-size:0.78rem; font-weight:700; text-align:center; flex:1 1 100px; min-width:80px; line-height:1.4; }
 .diag-flow-step.done { background:#A8965A; color:#0F2342; }
-.diag-flow-arrow { color:#A8965A; font-size:1.1rem; padding:0 0.2rem; flex-shrink:0; }
+.diag-flow-arrow { color:#7A6D40; font-size:1.1rem; padding:0 0.2rem; flex-shrink:0; }
 @media (max-width:500px) { .diag-flow-row { flex-direction:column; } .diag-flow-arrow { transform:rotate(90deg); } }
 </style>
 <!-- Google Analytics GA4 -->
@@ -438,7 +438,7 @@ article li { margin-bottom: 0.5rem; }
 &lt;/a&gt;
 &lt;/div&gt;
 &lt;/div&gt;">
-<p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3" data-en="Trade DX" data-ja="Trade DX" data-en="Trade DX">Trade DX</p>
+<p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold-deep mb-3" data-en="Trade DX" data-ja="Trade DX" data-en="Trade DX">Trade DX</p>
 <h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4" data-en="AI Agents: The Key to Trade DX. How Automation Is Transforming the Future of Trading Companies" data-ja="貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来" data-en="貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来">貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来</h1>
 <div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2" data-ja-html='&lt;time datetime="2026-03-25"&gt;2026.03.25&lt;/time&gt;
 &lt;span data-en="Wing Editorial Team" data-ja="Wing編集部" data-en="Wing Editorial"&gt;Wing編集部&lt;/span&gt;' data-en-html='&lt;time datetime="2026-03-25"&gt;2026.03.25&lt;/time&gt;
@@ -457,7 +457,7 @@ article li { margin-bottom: 0.5rem; }
 <p data-en="RPA automates routine tasks by following predefined rules but cannot handle processes that deviate from those rules. AI agents, on the other hand, understand natural language and make context-aware decisions. For example, they can analyze incoming emails from counterparties to determine appropriate responses, or extract data from non-standardized documents." data-ja="RPAは事前に定義されたルールに従って定型作業を自動化しますが、ルールから外れた処理には対応できません。一方、AIエージェントは自然言語を理解し、文脈に応じた判断を行えます。たとえば、取引先から届いたメールの内容を解析して適切な対応を判断したり、不定形の書類からデータを抽出したりすることが可能です。" data-en="RPAは事前に定義されたルールに従って定型作業を自動化しますが、ルールから外れた処理には対応できません。一方、AIエージェントは自然言語を理解し、文脈に応じた判断を行えます。たとえば、取引先から届いたメールの内容を解析して適切な対応を判断したり、不定形の書類からデータを抽出したりすることが可能です。">RPAは事前に定義されたルールに従って定型作業を自動化しますが、ルールから外れた処理には対応できません。一方、AIエージェントは自然言語を理解し、文脈に応じた判断を行えます。たとえば、取引先から届いたメールの内容を解析して適切な対応を判断したり、不定形の書類からデータを抽出したりすることが可能です。</p>
 <p data-en="In domains like trade operations, where exception handling is frequent and formats are not standardized, the flexibility of AI agents proves highly effective. Even for tasks where RPA could only achieve a 30% automation rate, AI agents can push automation to 70-80%." data-ja="貿易業務のように例外処理が多くフォーマットが統一されていない領域では、AIエージェントの柔軟性が大きな威力を発揮します。RPAでは自動化率30%が限界だった業務でも、AIエージェントを活用すれば70〜80%まで自動化できるケースもあります。" data-en="貿易業務のように例外処理が多くフォーマットが統一されていない領域では、AIエージェントの柔軟性が大きな威力を発揮します。RPAでは自動化率30%が限界だった業務でも、AIエージェントを活用すれば70〜80%まで自動化できるケースもあります。">貿易業務のように例外処理が多くフォーマットが統一されていない領域では、AIエージェントの柔軟性が大きな威力を発揮します。RPAでは自動化率30%が限界だった業務でも、AIエージェントを活用すれば70〜80%まで自動化できるケースもあります。</p>
 <!-- DIAGRAM: RPA vs AIエージェント comparison -->
-<div class="diag-wrap" data-ja-html='&lt;div data-en="RPA vs AI Agent — Comparison" data-ja="RPA vs AIエージェント — 比較" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;"&gt;RPA vs AIエージェント — 比較&lt;/div&gt;
+<div class="diag-wrap" data-ja-html='&lt;div data-en="RPA vs AI Agent — Comparison" data-ja="RPA vs AIエージェント — 比較" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.8rem;"&gt;RPA vs AIエージェント — 比較&lt;/div&gt;
 &lt;div class="diag-compare-row"&gt;
 &lt;div class="diag-compare-box rpa"&gt;
 &lt;div class="box-head" data-en="RPA (Traditional)" data-ja="RPA（従来型）"&gt;RPA（従来型）&lt;/div&gt;
@@ -508,7 +508,7 @@ article li { margin-bottom: 0.5rem; }
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;'>
-<div data-en="RPA vs AI Agent — Comparison" data-ja="RPA vs AIエージェント — 比較" data-en="RPA vs AIエージェント — 比較" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;">RPA vs AIエージェント — 比較</div>
+<div data-en="RPA vs AI Agent — Comparison" data-ja="RPA vs AIエージェント — 比較" data-en="RPA vs AIエージェント — 比較" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.8rem;">RPA vs AIエージェント — 比較</div>
 <div class="diag-compare-row" data-ja-html='&lt;div class="diag-compare-box rpa"&gt;
 &lt;div class="box-head" data-en="RPA (Traditional)" data-ja="RPA（従来型）"&gt;RPA（従来型）&lt;/div&gt;
 &lt;div class="box-badge" data-en="Simple Rules" data-ja="単純ルール"&gt;単純ルール&lt;/div&gt;
@@ -622,7 +622,7 @@ article li { margin-bottom: 0.5rem; }
 <li data-en-html="&lt;strong&gt;Counterparty communication support:&lt;/strong&gt; Handles multilingual inquiries and auto-generates standardized confirmation emails" data-ja-html="&lt;strong&gt;取引先とのコミュニケーション支援：&lt;/strong&gt;多言語での問い合わせ対応や、定型的な確認メールの自動生成" data-en-html="&lt;strong&gt;取引先とのコミュニケーション支援：&lt;/strong&gt;多言語での問い合わせ対応や、定型的な確認メールの自動生成"><strong>取引先とのコミュニケーション支援：</strong>多言語での問い合わせ対応や、定型的な確認メールの自動生成</li>
 </ul>
 <!-- DIAGRAM: 3 use-cases visual table -->
-<div class="diag-wrap" data-ja-html='&lt;div data-en="Key AI Agent Use Cases" data-ja="代表的なAIエージェント活用シーン" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;"&gt;代表的なAIエージェント活用シーン&lt;/div&gt;
+<div class="diag-wrap" data-ja-html='&lt;div data-en="Key AI Agent Use Cases" data-ja="代表的なAIエージェント活用シーン" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.8rem;"&gt;代表的なAIエージェント活用シーン&lt;/div&gt;
 &lt;div class="diag-usecase-row"&gt;
 &lt;div class="diag-usecase-card"&gt;
 &lt;div class="uc-icon"&gt;📄&lt;/div&gt;
@@ -657,7 +657,7 @@ article li { margin-bottom: 0.5rem; }
 &lt;div class="uc-body" data-en="Automatically assesses compliance with export controls, security trade management, and national import regulations. Comprehensively evaluates target cargo, destination, and counterparty." data-ja="輸出管理規制・安全保障貿易管理・各国輸入規制への適合を自動判定。対象貨物・仕向地・取引先を総合的に評価。" data-en="輸出管理規制・安全保障貿易管理・各国輸入規制への適合を自動判定。対象貨物・仕向地・取引先を総合的に評価。"&gt;輸出管理規制・安全保障貿易管理・各国輸入規制への適合を自動判定。対象貨物・仕向地・取引先を総合的に評価。&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;'>
-<div data-en="Key AI Agent Use Cases" data-ja="代表的なAIエージェント活用シーン" data-en="代表的なAIエージェント活用シーン" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;">代表的なAIエージェント活用シーン</div>
+<div data-en="Key AI Agent Use Cases" data-ja="代表的なAIエージェント活用シーン" data-en="代表的なAIエージェント活用シーン" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.8rem;">代表的なAIエージェント活用シーン</div>
 <div class="diag-usecase-row" data-ja-html='&lt;div class="diag-usecase-card"&gt;
 &lt;div class="uc-icon"&gt;📄&lt;/div&gt;
 &lt;div class="uc-title" data-en="Document Processing Automation" data-ja="書類処理の自動化"&gt;書類処理の自動化&lt;/div&gt;
@@ -745,7 +745,7 @@ article li { margin-bottom: 0.5rem; }
 &lt;div class=&quot;diag-flow-arrow&quot;&gt;→&lt;/div&gt;
 &lt;div class=&quot;diag-flow-step done&quot; data-en-html='✅&amp;lt;br&amp;gt;Complete&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;Staff performs final review only&amp;lt;/span&amp;gt;' data-ja-html='✅&amp;lt;br&amp;gt;完了&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;担当者が最終確認のみ&amp;lt;/span&amp;gt;' data-en-html='✅&amp;lt;br&amp;gt;完了&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;担当者が最終確認のみ&amp;lt;/span&amp;gt;'&gt;✅&lt;br/&gt;完了&lt;br/&gt;&lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&gt;担当者が最終確認のみ&lt;/span&gt;&lt;/div&gt;
 &lt;/div&gt;">
-<div data-en="BorderFlow AI — Processing Flow" data-ja="BorderFlow AI — 処理フロー" data-en="BorderFlow AI — 処理フロー" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#A8965A;margin-bottom:0.8rem;">BorderFlow AI — 処理フロー</div>
+<div data-en="BorderFlow AI — Processing Flow" data-ja="BorderFlow AI — 処理フロー" data-en="BorderFlow AI — 処理フロー" style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.8rem;">BorderFlow AI — 処理フロー</div>
 <div class="diag-flow-row" data-ja-html="&lt;div class=&quot;diag-flow-step&quot; data-en-html='📥&amp;lt;br&amp;gt;Document Receipt&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;Email / Portal&amp;lt;/span&amp;gt;' data-ja-html='📥&amp;lt;br&amp;gt;書類受取&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;メール・ポータル&amp;lt;/span&amp;gt;'&gt;📥&lt;br/&gt;書類受取&lt;br/&gt;&lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&gt;メール・ポータル&lt;/span&gt;&lt;/div&gt;
 &lt;div class=&quot;diag-flow-arrow&quot;&gt;→&lt;/div&gt;
 &lt;div class=&quot;diag-flow-step&quot; data-en-html='🔍&amp;lt;br&amp;gt;OCR Analysis&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;Non-standard Format Support&amp;lt;/span&amp;gt;' data-ja-html='🔍&amp;lt;br&amp;gt;OCR解析&amp;lt;br&amp;gt;&amp;lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&amp;gt;非定型フォーマット対応&amp;lt;/span&amp;gt;'&gt;🔍&lt;br/&gt;OCR解析&lt;br/&gt;&lt;span style=&quot;font-weight:400;font-size:0.68rem;&quot;&gt;非定型フォーマット対応&lt;/span&gt;&lt;/div&gt;
@@ -837,7 +837,7 @@ article li { margin-bottom: 0.5rem; }
 &lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&gt;2026.03.25&lt;/p&gt;
 &lt;/a&gt;
 &lt;/div&gt;">
-<p class="display text-[.65rem] font-medium tracking-[.18em] uppercase text-gold mb-4">Related Articles</p>
+<p class="display text-[.65rem] font-medium tracking-[.18em] uppercase text-gold-deep mb-4">Related Articles</p>
 <div class="grid md:grid-cols-2 gap-4" data-ja-html="&lt;a class=&quot;group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors&quot; data-ja-html='&amp;lt;p class=&quot;display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2&quot;&amp;gt;DX Strategy&amp;lt;/p&amp;gt;
 &amp;lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot; data-en=&quot;What Is DX Consulting? How to Choose the Right Partner and Succeed&quot; data-ja=&quot;DXコンサルティングとは？失敗しない選び方と成功のポイント&quot;&amp;gt;DXコンサルティングとは？失敗しない選び方と成功のポイント&amp;lt;/p&amp;gt;
 &amp;lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&amp;gt;2026.03.25&amp;lt;/p&amp;gt;' href=&quot;/blog/dx-consulting-guide&quot;&gt;
@@ -869,29 +869,30 @@ article li { margin-bottom: 0.5rem; }
 &lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot; data-en=&quot;A Practical Guide to PFAS Regulations and chemSHERPA Compliance&quot; data-ja=&quot;PFAS規制とchemSHERPA対応の実務ガイド&quot;&gt;PFAS規制とchemSHERPA対応の実務ガイド&lt;/p&gt;
 &lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&gt;2026.03.25&lt;/p&gt;
 &lt;/a&gt;">
-<a class="group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors" data-ja-html='&lt;p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2"&gt;DX Strategy&lt;/p&gt;
+<a class="group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors" data-ja-html='&lt;p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold-deep mb-2"&gt;DX Strategy&lt;/p&gt;
 &lt;p class="text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors" data-en="What Is DX Consulting? How to Choose the Right Partner and Succeed" data-ja="DXコンサルティングとは？失敗しない選び方と成功のポイント" data-en="DXコンサルティングとは？失敗しない選び方と成功のポイント"&gt;DXコンサルティングとは？失敗しない選び方と成功のポイント&lt;/p&gt;
-&lt;p class="text-[.68rem] text-ink-light mt-2"&gt;2026.03.25&lt;/p&gt;' data-en-html='&lt;p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2"&gt;DX Strategy&lt;/p&gt;
+&lt;p class="text-[.68rem] text-ink-light mt-2"&gt;2026.03.25&lt;/p&gt;' data-en-html='&lt;p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold-deep mb-2"&gt;DX Strategy&lt;/p&gt;
 &lt;p class="text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors" data-en="What Is DX Consulting? How to Choose the Right Partner and Succeed" data-ja="DXコンサルティングとは？失敗しない選び方と成功のポイント" data-en="DXコンサルティングとは？失敗しない選び方と成功のポイント"&gt;DXコンサルティングとは？失敗しない選び方と成功のポイント&lt;/p&gt;
 &lt;p class="text-[.68rem] text-ink-light mt-2"&gt;2026.03.25&lt;/p&gt;' href="/blog/dx-consulting-guide">
-<p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2">DX Strategy</p>
+<p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold-deep mb-2">DX Strategy</p>
 <p class="text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors" data-en="What Is DX Consulting? How to Choose the Right Partner and Succeed" data-ja="DXコンサルティングとは？失敗しない選び方と成功のポイント" data-en="DXコンサルティングとは？失敗しない選び方と成功のポイント">DXコンサルティングとは？失敗しない選び方と成功のポイント</p>
 <p class="text-[.68rem] text-ink-light mt-2">2026.03.25</p>
 </a>
-<a class="group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors" data-ja-html='&lt;p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2"&gt;Compliance&lt;/p&gt;
+<a class="group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors" data-ja-html='&lt;p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold-deep mb-2"&gt;Compliance&lt;/p&gt;
 &lt;p class="text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors" data-en="A Practical Guide to PFAS Regulations and chemSHERPA Compliance" data-ja="PFAS規制とchemSHERPA対応の実務ガイド" data-en="PFAS規制とchemSHERPA対応の実務ガイド"&gt;PFAS規制とchemSHERPA対応の実務ガイド&lt;/p&gt;
-&lt;p class="text-[.68rem] text-ink-light mt-2"&gt;2026.03.25&lt;/p&gt;' data-en-html='&lt;p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2"&gt;Compliance&lt;/p&gt;
+&lt;p class="text-[.68rem] text-ink-light mt-2"&gt;2026.03.25&lt;/p&gt;' data-en-html='&lt;p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold-deep mb-2"&gt;Compliance&lt;/p&gt;
 &lt;p class="text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors" data-en="A Practical Guide to PFAS Regulations and chemSHERPA Compliance" data-ja="PFAS規制とchemSHERPA対応の実務ガイド" data-en="PFAS規制とchemSHERPA対応の実務ガイド"&gt;PFAS規制とchemSHERPA対応の実務ガイド&lt;/p&gt;
 &lt;p class="text-[.68rem] text-ink-light mt-2"&gt;2026.03.25&lt;/p&gt;' href="/blog/pfas-chemsherpa-guide">
-<p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2">Compliance</p>
+<p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold-deep mb-2">Compliance</p>
 <p class="text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors" data-en="A Practical Guide to PFAS Regulations and chemSHERPA Compliance" data-ja="PFAS規制とchemSHERPA対応の実務ガイド" data-en="PFAS規制とchemSHERPA対応の実務ガイド">PFAS規制とchemSHERPA対応の実務ガイド</p>
 <p class="text-[.68rem] text-ink-light mt-2">2026.03.25</p>
 </a>
 </div>
 </div>
 </div>
-</main>
 <!-- ─── FOOTER ──────────────────────────────────────────── -->
+</main>
+<aside aria-label="関連する案内">
 <!-- assessment-cta (auto) -->
 <section style="max-width:800px;margin:3rem auto 0;padding:0 1.5rem;font-family:'Noto Sans JP',sans-serif;">
   <div style="border:1px solid #E8E5DE;border-left:3px solid #A98A4B;background:#FBFAF7;padding:1.5rem 1.6rem;">
@@ -900,6 +901,7 @@ article li { margin-bottom: 0.5rem; }
     <a href="/dx-assessment" style="display:inline-block;background:#14181F;color:#fff;font-size:.8rem;font-weight:700;letter-spacing:.04em;padding:.85rem 1.7rem;text-decoration:none;">無料診断を受ける（5分・登録不要）</a>
   </div>
 </section>
+</aside>
 <footer class="bg-navy py-10 px-6 md:px-10">
 <div class="max-w-5xl mx-auto flex flex-wrap justify-between items-center gap-5">
 <a class="leading-none" href="/">

@@ -68,9 +68,9 @@ tailwind.config = {
     extend: {
       colors: {
         navy: { DEFAULT: '#0F2342', dark: '#081830' },
-        gold: { DEFAULT: '#A8965A', light: '#C4AD72', muted: '#7A6B3E', pale: '#F8F5ED', mid: '#B8A560' },
+        gold: { DEFAULT: '#A8965A', deep: '#7A6D40', deeper: '#635834', light: '#C4AD72', muted: '#7A6B3E', pale: '#F8F5ED', mid: '#B8A560' },
         slate: { warm: '#F7F6F3', cool: '#EEECe7' },
-        ink: { DEFAULT: '#1A1A1F', mid: '#4A4A55', light: '#8A8A96' },
+        ink: { DEFAULT: '#1A1A1F', mid: '#4A4A55', light: '#6C6C79' },
       },
       fontFamily: {
         serif: ['"Yu Gothic"', '"YuGothic"', 'sans-serif'],
@@ -146,13 +146,13 @@ article li { margin-bottom: 0.5rem; }
   text-align: center;
 }
 .flow-box.gold-bg {
-  background: #A8965A;
+  background: #7A6D40;
 }
 .flow-box.teal-bg {
   background: #4A7C6F;
 }
 .flow-arrow {
-  color: #A8965A;
+  color: #7A6D40;
   font-size: 1.2rem;
   font-weight: bold;
 }
@@ -181,8 +181,8 @@ article li { margin-bottom: 0.5rem; }
   background: #fff;
 }
 .org-node.hq { background: #0F2342; color: #fff; }
-.org-node.shared { background: #A8965A; color: #fff; border-color: #A8965A; }
-.org-node.local { background: #F8F5ED; border-color: #A8965A; }
+.org-node.shared { background: #7A6D40; color: #fff; border-color: #7A6D40; }
+.org-node.local { background: #F8F5ED; border-color: #7A6D40; }
 .org-connector {
   width: 1.5px;
   height: 20px;
@@ -214,8 +214,8 @@ article li { margin-bottom: 0.5rem; }
 }
 
 .score-high { color: #2D7A4F; font-weight: 500; }
-.score-mid { color: #A8965A; font-weight: 500; }
-.score-low { color: #C4534A; font-weight: 500; }
+.score-mid { color: #7A6D40; font-weight: 500; }
+.score-low { color: #C1493F; font-weight: 500; }
 
 .insight-box {
   background: #F8F5ED;
@@ -1048,7 +1048,7 @@ article li { margin-bottom: 0.5rem; }
 &lt;/a&gt;
 &lt;/div&gt;
 &lt;/div&gt;">
-<p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3">IT Organization</p>
+<p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold-deep mb-3">IT Organization</p>
 <h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4" data-ja="グローバル企業のIT組織モデル｜海外拠点のIT機能をどう設計するか" data-en="グローバル企業のIT組織モデル｜海外拠点のIT機能をどう設計するか">グローバル企業のIT組織モデル｜海外拠点のIT機能をどう設計するか</h1>
 <div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2" data-ja-html='&lt;time datetime="2026-03-26"&gt;2026.03.26&lt;/time&gt;
 &lt;span&gt;Wing編集部&lt;/span&gt;' data-en-html='&lt;time datetime="2026-03-26"&gt;2026.03.26&lt;/time&gt;
@@ -1080,77 +1080,77 @@ article li { margin-bottom: 0.5rem; }
 <p data-ja-html="IT組織モデルを検討する前に、まず&lt;strong&gt;どの業務をグループ全体で統制すべきか&lt;/strong&gt;を整理する必要があります。判断の軸となるのは「統制の必要性」と「共通性」の2つです。" data-en-html="IT組織モデルを検討する前に、まず&lt;strong&gt;どの業務をグループ全体で統制すべきか&lt;/strong&gt;を整理する必要があります。判断の軸となるのは「統制の必要性」と「共通性」の2つです。">IT組織モデルを検討する前に、まず<strong>どの業務をグループ全体で統制すべきか</strong>を整理する必要があります。判断の軸となるのは「統制の必要性」と「共通性」の2つです。</p>
 <!-- Governance Matrix Diagram -->
 <div class="governance-matrix" data-ja-html='&lt;div&gt;
-&lt;p class="text-[.7rem] text-gold font-medium mb-1" data-ja="監督" data-en="監督"&gt;監督&lt;/p&gt;
+&lt;p class="text-[.7rem] text-gold-deep font-medium mb-1" data-ja="監督" data-en="監督"&gt;監督&lt;/p&gt;
 &lt;p class="text-[.78rem] font-medium" data-ja="リスク管理領域" data-en="リスク管理領域"&gt;リスク管理領域&lt;/p&gt;
 &lt;p class="text-[.7rem] text-ink-mid mt-1" data-ja-html="ルールによる統治&amp;lt;br/&amp;gt;過剰介入を抑制" data-en-html="ルールによる統治&amp;lt;br/&amp;gt;過剰介入を抑制"&gt;ルールによる統治&lt;br/&gt;過剰介入を抑制&lt;/p&gt;
 &lt;/div&gt;
 &lt;div&gt;
-&lt;p class="text-[.7rem] text-gold font-medium mb-1" data-ja="義務" data-en="義務"&gt;義務&lt;/p&gt;
+&lt;p class="text-[.7rem] text-gold-deep font-medium mb-1" data-ja="義務" data-en="義務"&gt;義務&lt;/p&gt;
 &lt;p class="text-[.78rem] font-medium" data-ja="グループ管理機能" data-en="グループ管理機能"&gt;グループ管理機能&lt;/p&gt;
 &lt;p class="text-[.7rem] text-ink-mid mt-1" data-ja-html="集中管理が必須&amp;lt;br/&amp;gt;連結決算・統制機能" data-en-html="集中管理が必須&amp;lt;br/&amp;gt;連結決算・統制機能"&gt;集中管理が必須&lt;br/&gt;連結決算・統制機能&lt;/p&gt;
 &lt;/div&gt;
 &lt;div&gt;
-&lt;p class="text-[.7rem] text-gold font-medium mb-1" data-ja="独立" data-en="独立"&gt;独立&lt;/p&gt;
+&lt;p class="text-[.7rem] text-gold-deep font-medium mb-1" data-ja="独立" data-en="独立"&gt;独立&lt;/p&gt;
 &lt;p class="text-[.78rem] font-medium" data-ja="事業独自の領域" data-en="事業独自の領域"&gt;事業独自の領域&lt;/p&gt;
 &lt;p class="text-[.7rem] text-ink-mid mt-1" data-ja-html="各社で自立運営&amp;lt;br/&amp;gt;先行投資的な領域" data-en-html="各社で自立運営&amp;lt;br/&amp;gt;先行投資的な領域"&gt;各社で自立運営&lt;br/&gt;先行投資的な領域&lt;/p&gt;
 &lt;/div&gt;
 &lt;div&gt;
-&lt;p class="text-[.7rem] text-gold font-medium mb-1" data-ja="選択" data-en="選択"&gt;選択&lt;/p&gt;
+&lt;p class="text-[.7rem] text-gold-deep font-medium mb-1" data-ja="選択" data-en="選択"&gt;選択&lt;/p&gt;
 &lt;p class="text-[.78rem] font-medium" data-ja="コモディティ業務" data-en="コモディティ業務"&gt;コモディティ業務&lt;/p&gt;
 &lt;p class="text-[.7rem] text-ink-mid mt-1" data-ja-html="シェアードサービス化&amp;lt;br/&amp;gt;利用の選択性を確保" data-en-html="シェアードサービス化&amp;lt;br/&amp;gt;利用の選択性を確保"&gt;シェアードサービス化&lt;br/&gt;利用の選択性を確保&lt;/p&gt;
 &lt;/div&gt;' data-en-html='&lt;div&gt;
-&lt;p class="text-[.7rem] text-gold font-medium mb-1" data-ja="監督" data-en="監督"&gt;監督&lt;/p&gt;
+&lt;p class="text-[.7rem] text-gold-deep font-medium mb-1" data-ja="監督" data-en="監督"&gt;監督&lt;/p&gt;
 &lt;p class="text-[.78rem] font-medium" data-ja="リスク管理領域" data-en="リスク管理領域"&gt;リスク管理領域&lt;/p&gt;
 &lt;p class="text-[.7rem] text-ink-mid mt-1" data-ja-html="ルールによる統治&amp;lt;br/&amp;gt;過剰介入を抑制" data-en-html="ルールによる統治&amp;lt;br/&amp;gt;過剰介入を抑制"&gt;ルールによる統治&lt;br/&gt;過剰介入を抑制&lt;/p&gt;
 &lt;/div&gt;
 &lt;div&gt;
-&lt;p class="text-[.7rem] text-gold font-medium mb-1" data-ja="義務" data-en="義務"&gt;義務&lt;/p&gt;
+&lt;p class="text-[.7rem] text-gold-deep font-medium mb-1" data-ja="義務" data-en="義務"&gt;義務&lt;/p&gt;
 &lt;p class="text-[.78rem] font-medium" data-ja="グループ管理機能" data-en="グループ管理機能"&gt;グループ管理機能&lt;/p&gt;
 &lt;p class="text-[.7rem] text-ink-mid mt-1" data-ja-html="集中管理が必須&amp;lt;br/&amp;gt;連結決算・統制機能" data-en-html="集中管理が必須&amp;lt;br/&amp;gt;連結決算・統制機能"&gt;集中管理が必須&lt;br/&gt;連結決算・統制機能&lt;/p&gt;
 &lt;/div&gt;
 &lt;div&gt;
-&lt;p class="text-[.7rem] text-gold font-medium mb-1" data-ja="独立" data-en="独立"&gt;独立&lt;/p&gt;
+&lt;p class="text-[.7rem] text-gold-deep font-medium mb-1" data-ja="独立" data-en="独立"&gt;独立&lt;/p&gt;
 &lt;p class="text-[.78rem] font-medium" data-ja="事業独自の領域" data-en="事業独自の領域"&gt;事業独自の領域&lt;/p&gt;
 &lt;p class="text-[.7rem] text-ink-mid mt-1" data-ja-html="各社で自立運営&amp;lt;br/&amp;gt;先行投資的な領域" data-en-html="各社で自立運営&amp;lt;br/&amp;gt;先行投資的な領域"&gt;各社で自立運営&lt;br/&gt;先行投資的な領域&lt;/p&gt;
 &lt;/div&gt;
 &lt;div&gt;
-&lt;p class="text-[.7rem] text-gold font-medium mb-1" data-ja="選択" data-en="選択"&gt;選択&lt;/p&gt;
+&lt;p class="text-[.7rem] text-gold-deep font-medium mb-1" data-ja="選択" data-en="選択"&gt;選択&lt;/p&gt;
 &lt;p class="text-[.78rem] font-medium" data-ja="コモディティ業務" data-en="コモディティ業務"&gt;コモディティ業務&lt;/p&gt;
 &lt;p class="text-[.7rem] text-ink-mid mt-1" data-ja-html="シェアードサービス化&amp;lt;br/&amp;gt;利用の選択性を確保" data-en-html="シェアードサービス化&amp;lt;br/&amp;gt;利用の選択性を確保"&gt;シェアードサービス化&lt;br/&gt;利用の選択性を確保&lt;/p&gt;
 &lt;/div&gt;'>
-<div data-ja-html='&lt;p class="text-[.7rem] text-gold font-medium mb-1" data-ja="監督" data-en="監督"&gt;監督&lt;/p&gt;
+<div data-ja-html='&lt;p class="text-[.7rem] text-gold-deep font-medium mb-1" data-ja="監督" data-en="監督"&gt;監督&lt;/p&gt;
 &lt;p class="text-[.78rem] font-medium" data-ja="リスク管理領域" data-en="リスク管理領域"&gt;リスク管理領域&lt;/p&gt;
-&lt;p class="text-[.7rem] text-ink-mid mt-1" data-ja-html="ルールによる統治&amp;lt;br/&amp;gt;過剰介入を抑制" data-en-html="ルールによる統治&amp;lt;br/&amp;gt;過剰介入を抑制"&gt;ルールによる統治&lt;br/&gt;過剰介入を抑制&lt;/p&gt;' data-en-html='&lt;p class="text-[.7rem] text-gold font-medium mb-1" data-ja="監督" data-en="監督"&gt;監督&lt;/p&gt;
+&lt;p class="text-[.7rem] text-ink-mid mt-1" data-ja-html="ルールによる統治&amp;lt;br/&amp;gt;過剰介入を抑制" data-en-html="ルールによる統治&amp;lt;br/&amp;gt;過剰介入を抑制"&gt;ルールによる統治&lt;br/&gt;過剰介入を抑制&lt;/p&gt;' data-en-html='&lt;p class="text-[.7rem] text-gold-deep font-medium mb-1" data-ja="監督" data-en="監督"&gt;監督&lt;/p&gt;
 &lt;p class="text-[.78rem] font-medium" data-ja="リスク管理領域" data-en="リスク管理領域"&gt;リスク管理領域&lt;/p&gt;
 &lt;p class="text-[.7rem] text-ink-mid mt-1" data-ja-html="ルールによる統治&amp;lt;br/&amp;gt;過剰介入を抑制" data-en-html="ルールによる統治&amp;lt;br/&amp;gt;過剰介入を抑制"&gt;ルールによる統治&lt;br/&gt;過剰介入を抑制&lt;/p&gt;'>
-<p class="text-[.7rem] text-gold font-medium mb-1" data-ja="監督" data-en="監督">監督</p>
+<p class="text-[.7rem] text-gold-deep font-medium mb-1" data-ja="監督" data-en="監督">監督</p>
 <p class="text-[.78rem] font-medium" data-ja="リスク管理領域" data-en="リスク管理領域">リスク管理領域</p>
 <p class="text-[.7rem] text-ink-mid mt-1" data-ja-html="ルールによる統治&lt;br/&gt;過剰介入を抑制" data-en-html="ルールによる統治&lt;br/&gt;過剰介入を抑制">ルールによる統治<br/>過剰介入を抑制</p>
 </div>
-<div data-ja-html='&lt;p class="text-[.7rem] text-gold font-medium mb-1" data-ja="義務" data-en="義務"&gt;義務&lt;/p&gt;
+<div data-ja-html='&lt;p class="text-[.7rem] text-gold-deep font-medium mb-1" data-ja="義務" data-en="義務"&gt;義務&lt;/p&gt;
 &lt;p class="text-[.78rem] font-medium" data-ja="グループ管理機能" data-en="グループ管理機能"&gt;グループ管理機能&lt;/p&gt;
-&lt;p class="text-[.7rem] text-ink-mid mt-1" data-ja-html="集中管理が必須&amp;lt;br/&amp;gt;連結決算・統制機能" data-en-html="集中管理が必須&amp;lt;br/&amp;gt;連結決算・統制機能"&gt;集中管理が必須&lt;br/&gt;連結決算・統制機能&lt;/p&gt;' data-en-html='&lt;p class="text-[.7rem] text-gold font-medium mb-1" data-ja="義務" data-en="義務"&gt;義務&lt;/p&gt;
+&lt;p class="text-[.7rem] text-ink-mid mt-1" data-ja-html="集中管理が必須&amp;lt;br/&amp;gt;連結決算・統制機能" data-en-html="集中管理が必須&amp;lt;br/&amp;gt;連結決算・統制機能"&gt;集中管理が必須&lt;br/&gt;連結決算・統制機能&lt;/p&gt;' data-en-html='&lt;p class="text-[.7rem] text-gold-deep font-medium mb-1" data-ja="義務" data-en="義務"&gt;義務&lt;/p&gt;
 &lt;p class="text-[.78rem] font-medium" data-ja="グループ管理機能" data-en="グループ管理機能"&gt;グループ管理機能&lt;/p&gt;
 &lt;p class="text-[.7rem] text-ink-mid mt-1" data-ja-html="集中管理が必須&amp;lt;br/&amp;gt;連結決算・統制機能" data-en-html="集中管理が必須&amp;lt;br/&amp;gt;連結決算・統制機能"&gt;集中管理が必須&lt;br/&gt;連結決算・統制機能&lt;/p&gt;'>
-<p class="text-[.7rem] text-gold font-medium mb-1" data-ja="義務" data-en="義務">義務</p>
+<p class="text-[.7rem] text-gold-deep font-medium mb-1" data-ja="義務" data-en="義務">義務</p>
 <p class="text-[.78rem] font-medium" data-ja="グループ管理機能" data-en="グループ管理機能">グループ管理機能</p>
 <p class="text-[.7rem] text-ink-mid mt-1" data-ja-html="集中管理が必須&lt;br/&gt;連結決算・統制機能" data-en-html="集中管理が必須&lt;br/&gt;連結決算・統制機能">集中管理が必須<br/>連結決算・統制機能</p>
 </div>
-<div data-ja-html='&lt;p class="text-[.7rem] text-gold font-medium mb-1" data-ja="独立" data-en="独立"&gt;独立&lt;/p&gt;
+<div data-ja-html='&lt;p class="text-[.7rem] text-gold-deep font-medium mb-1" data-ja="独立" data-en="独立"&gt;独立&lt;/p&gt;
 &lt;p class="text-[.78rem] font-medium" data-ja="事業独自の領域" data-en="事業独自の領域"&gt;事業独自の領域&lt;/p&gt;
-&lt;p class="text-[.7rem] text-ink-mid mt-1" data-ja-html="各社で自立運営&amp;lt;br/&amp;gt;先行投資的な領域" data-en-html="各社で自立運営&amp;lt;br/&amp;gt;先行投資的な領域"&gt;各社で自立運営&lt;br/&gt;先行投資的な領域&lt;/p&gt;' data-en-html='&lt;p class="text-[.7rem] text-gold font-medium mb-1" data-ja="独立" data-en="独立"&gt;独立&lt;/p&gt;
+&lt;p class="text-[.7rem] text-ink-mid mt-1" data-ja-html="各社で自立運営&amp;lt;br/&amp;gt;先行投資的な領域" data-en-html="各社で自立運営&amp;lt;br/&amp;gt;先行投資的な領域"&gt;各社で自立運営&lt;br/&gt;先行投資的な領域&lt;/p&gt;' data-en-html='&lt;p class="text-[.7rem] text-gold-deep font-medium mb-1" data-ja="独立" data-en="独立"&gt;独立&lt;/p&gt;
 &lt;p class="text-[.78rem] font-medium" data-ja="事業独自の領域" data-en="事業独自の領域"&gt;事業独自の領域&lt;/p&gt;
 &lt;p class="text-[.7rem] text-ink-mid mt-1" data-ja-html="各社で自立運営&amp;lt;br/&amp;gt;先行投資的な領域" data-en-html="各社で自立運営&amp;lt;br/&amp;gt;先行投資的な領域"&gt;各社で自立運営&lt;br/&gt;先行投資的な領域&lt;/p&gt;'>
-<p class="text-[.7rem] text-gold font-medium mb-1" data-ja="独立" data-en="独立">独立</p>
+<p class="text-[.7rem] text-gold-deep font-medium mb-1" data-ja="独立" data-en="独立">独立</p>
 <p class="text-[.78rem] font-medium" data-ja="事業独自の領域" data-en="事業独自の領域">事業独自の領域</p>
 <p class="text-[.7rem] text-ink-mid mt-1" data-ja-html="各社で自立運営&lt;br/&gt;先行投資的な領域" data-en-html="各社で自立運営&lt;br/&gt;先行投資的な領域">各社で自立運営<br/>先行投資的な領域</p>
 </div>
-<div data-ja-html='&lt;p class="text-[.7rem] text-gold font-medium mb-1" data-ja="選択" data-en="選択"&gt;選択&lt;/p&gt;
+<div data-ja-html='&lt;p class="text-[.7rem] text-gold-deep font-medium mb-1" data-ja="選択" data-en="選択"&gt;選択&lt;/p&gt;
 &lt;p class="text-[.78rem] font-medium" data-ja="コモディティ業務" data-en="コモディティ業務"&gt;コモディティ業務&lt;/p&gt;
-&lt;p class="text-[.7rem] text-ink-mid mt-1" data-ja-html="シェアードサービス化&amp;lt;br/&amp;gt;利用の選択性を確保" data-en-html="シェアードサービス化&amp;lt;br/&amp;gt;利用の選択性を確保"&gt;シェアードサービス化&lt;br/&gt;利用の選択性を確保&lt;/p&gt;' data-en-html='&lt;p class="text-[.7rem] text-gold font-medium mb-1" data-ja="選択" data-en="選択"&gt;選択&lt;/p&gt;
+&lt;p class="text-[.7rem] text-ink-mid mt-1" data-ja-html="シェアードサービス化&amp;lt;br/&amp;gt;利用の選択性を確保" data-en-html="シェアードサービス化&amp;lt;br/&amp;gt;利用の選択性を確保"&gt;シェアードサービス化&lt;br/&gt;利用の選択性を確保&lt;/p&gt;' data-en-html='&lt;p class="text-[.7rem] text-gold-deep font-medium mb-1" data-ja="選択" data-en="選択"&gt;選択&lt;/p&gt;
 &lt;p class="text-[.78rem] font-medium" data-ja="コモディティ業務" data-en="コモディティ業務"&gt;コモディティ業務&lt;/p&gt;
 &lt;p class="text-[.7rem] text-ink-mid mt-1" data-ja-html="シェアードサービス化&amp;lt;br/&amp;gt;利用の選択性を確保" data-en-html="シェアードサービス化&amp;lt;br/&amp;gt;利用の選択性を確保"&gt;シェアードサービス化&lt;br/&gt;利用の選択性を確保&lt;/p&gt;'>
-<p class="text-[.7rem] text-gold font-medium mb-1" data-ja="選択" data-en="選択">選択</p>
+<p class="text-[.7rem] text-gold-deep font-medium mb-1" data-ja="選択" data-en="選択">選択</p>
 <p class="text-[.78rem] font-medium" data-ja="コモディティ業務" data-en="コモディティ業務">コモディティ業務</p>
 <p class="text-[.7rem] text-ink-mid mt-1" data-ja-html="シェアードサービス化&lt;br/&gt;利用の選択性を確保" data-en-html="シェアードサービス化&lt;br/&gt;利用の選択性を確保">シェアードサービス化<br/>利用の選択性を確保</p>
 </div>
@@ -1885,7 +1885,7 @@ article li { margin-bottom: 0.5rem; }
 </div>
 <!-- Comparison Table -->
 <h3 class="text-[1rem] font-medium text-ink mb-3" data-ja="3つのモデルの比較表" data-en="3つのモデルの比較表">3つのモデルの比較表</h3>
-<div class="overflow-x-auto" data-ja-html='&lt;table class="comparison-table"&gt;
+<div class="overflow-x-auto" tabindex="0" role="region" aria-label="評価軸ごとの比較表（横にスクロールできます）" data-ja-html='&lt;table class="comparison-table"&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th data-ja="評価軸" data-en="評価軸" style="width:22%"&gt;評価軸&lt;/th&gt;
@@ -2034,7 +2034,7 @@ article li { margin-bottom: 0.5rem; }
 <p data-ja-html="モデルを選んだ後に重要なのが、&lt;strong&gt;具体的なIT業務の役割分担&lt;/strong&gt;です。「誰が責任を持ち、誰が実行するか」を明確にしなければ、組織モデルは絵に描いた餅になります。" data-en-html="モデルを選んだ後に重要なのが、&lt;strong&gt;具体的なIT業務の役割分担&lt;/strong&gt;です。「誰が責任を持ち、誰が実行するか」を明確にしなければ、組織モデルは絵に描いた餅になります。">モデルを選んだ後に重要なのが、<strong>具体的なIT業務の役割分担</strong>です。「誰が責任を持ち、誰が実行するか」を明確にしなければ、組織モデルは絵に描いた餅になります。</p>
 <h3 class="text-[.95rem] font-medium text-ink" data-ja="IT業務の13分類フレームワーク" data-en="IT業務の13分類フレームワーク">IT業務の13分類フレームワーク</h3>
 <p data-ja-html="IT部門の業務は、大きく&lt;strong&gt;戦略構想・導入実現・全体管理&lt;/strong&gt;の3層、13カテゴリに分類できます。" data-en-html="IT部門の業務は、大きく&lt;strong&gt;戦略構想・導入実現・全体管理&lt;/strong&gt;の3層、13カテゴリに分類できます。">IT部門の業務は、大きく<strong>戦略構想・導入実現・全体管理</strong>の3層、13カテゴリに分類できます。</p>
-<div class="overflow-x-auto" data-ja-html='&lt;table class="comparison-table"&gt;
+<div class="overflow-x-auto" tabindex="0" role="region" aria-label="業務層ごとの比較表（横にスクロールできます）" data-ja-html='&lt;table class="comparison-table"&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th data-ja="業務層" data-en="業務層" style="width:15%"&gt;業務層&lt;/th&gt;
@@ -2352,7 +2352,7 @@ article li { margin-bottom: 0.5rem; }
 &lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&gt;2026.03.25&lt;/p&gt;
 &lt;/a&gt;
 &lt;/div&gt;">
-<p class="display text-[.65rem] font-medium tracking-[.18em] uppercase text-gold mb-4">Related Articles</p>
+<p class="display text-[.65rem] font-medium tracking-[.18em] uppercase text-gold-deep mb-4">Related Articles</p>
 <div class="grid md:grid-cols-2 gap-4" data-ja-html="&lt;a class=&quot;group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors&quot; data-ja-html='&amp;lt;p class=&quot;display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2&quot;&amp;gt;DX Strategy&amp;lt;/p&amp;gt;
 &amp;lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot;&amp;gt;DXコンサルティングとは？失敗しない選び方と成功のポイント&amp;lt;/p&amp;gt;
 &amp;lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&amp;gt;2026.03.25&amp;lt;/p&amp;gt;' href=&quot;/blog/dx-consulting-guide&quot;&gt;
@@ -2384,29 +2384,30 @@ article li { margin-bottom: 0.5rem; }
 &lt;p class=&quot;text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors&quot; data-ja=&quot;貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来&quot;&gt;貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来&lt;/p&gt;
 &lt;p class=&quot;text-[.68rem] text-ink-light mt-2&quot;&gt;2026.03.25&lt;/p&gt;
 &lt;/a&gt;">
-<a class="group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors" data-ja-html='&lt;p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2"&gt;DX Strategy&lt;/p&gt;
+<a class="group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors" data-ja-html='&lt;p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold-deep mb-2"&gt;DX Strategy&lt;/p&gt;
 &lt;p class="text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors"&gt;DXコンサルティングとは？失敗しない選び方と成功のポイント&lt;/p&gt;
-&lt;p class="text-[.68rem] text-ink-light mt-2"&gt;2026.03.25&lt;/p&gt;' data-en-html='&lt;p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2"&gt;DX Strategy&lt;/p&gt;
+&lt;p class="text-[.68rem] text-ink-light mt-2"&gt;2026.03.25&lt;/p&gt;' data-en-html='&lt;p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold-deep mb-2"&gt;DX Strategy&lt;/p&gt;
 &lt;p class="text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors"&gt;DXコンサルティングとは？失敗しない選び方と成功のポイント&lt;/p&gt;
 &lt;p class="text-[.68rem] text-ink-light mt-2"&gt;2026.03.25&lt;/p&gt;' href="/blog/dx-consulting-guide">
-<p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2">DX Strategy</p>
+<p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold-deep mb-2">DX Strategy</p>
 <p class="text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors" data-ja="DXコンサルティングとは？失敗しない選び方と成功のポイント" data-en="DXコンサルティングとは？失敗しない選び方と成功のポイント">DXコンサルティングとは？失敗しない選び方と成功のポイント</p>
 <p class="text-[.68rem] text-ink-light mt-2">2026.03.25</p>
 </a>
-<a class="group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors" data-ja-html='&lt;p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2"&gt;Trade DX&lt;/p&gt;
+<a class="group block border border-[#E2E0DA] rounded-sm p-5 hover:border-gold/40 transition-colors" data-ja-html='&lt;p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold-deep mb-2"&gt;Trade DX&lt;/p&gt;
 &lt;p class="text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors"&gt;貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来&lt;/p&gt;
-&lt;p class="text-[.68rem] text-ink-light mt-2"&gt;2026.03.25&lt;/p&gt;' data-en-html='&lt;p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2"&gt;Trade DX&lt;/p&gt;
+&lt;p class="text-[.68rem] text-ink-light mt-2"&gt;2026.03.25&lt;/p&gt;' data-en-html='&lt;p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold-deep mb-2"&gt;Trade DX&lt;/p&gt;
 &lt;p class="text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors"&gt;貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来&lt;/p&gt;
 &lt;p class="text-[.68rem] text-ink-light mt-2"&gt;2026.03.25&lt;/p&gt;' href="/blog/trade-dx-ai-agent">
-<p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold/70 mb-2">Trade DX</p>
+<p class="display text-[.58rem] font-medium tracking-[.16em] uppercase text-gold-deep mb-2">Trade DX</p>
 <p class="text-[.88rem] font-medium text-ink group-hover:text-gold-muted transition-colors" data-ja="貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来" data-en="貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来">貿易DXの鍵はAIエージェント。業務自動化で変わる商社の未来</p>
 <p class="text-[.68rem] text-ink-light mt-2">2026.03.25</p>
 </a>
 </div>
 </div>
 </div>
-</main>
 <!-- ─── FOOTER ──────────────────────────────────────────── -->
+</main>
+<aside aria-label="関連する案内">
 <!-- assessment-cta (auto) -->
 <section style="max-width:800px;margin:3rem auto 0;padding:0 1.5rem;font-family:'Noto Sans JP',sans-serif;">
   <div style="border:1px solid #E8E5DE;border-left:3px solid #A98A4B;background:#FBFAF7;padding:1.5rem 1.6rem;">
@@ -2415,6 +2416,7 @@ article li { margin-bottom: 0.5rem; }
     <a href="/dx-assessment" style="display:inline-block;background:#14181F;color:#fff;font-size:.8rem;font-weight:700;letter-spacing:.04em;padding:.85rem 1.7rem;text-decoration:none;">無料診断を受ける（5分・登録不要）</a>
   </div>
 </section>
+</aside>
 <footer class="bg-navy py-10 px-6 md:px-10">
 <div class="max-w-5xl mx-auto flex flex-wrap justify-between items-center gap-5">
 <a class="leading-none" href="/">

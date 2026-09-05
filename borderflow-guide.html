@@ -31,7 +31,7 @@ a{color:#d4b978;text-decoration:none}a:hover{text-decoration:underline}
 .hero-cta{display:inline-block;background:#d4b978;color:#0b1632;font-size:14px;font-weight:700;padding:12px 32px;border-radius:6px;letter-spacing:.05em;transition:.2s}.hero-cta:hover{background:#c5a862;text-decoration:none}
 
 /* Section */
-.sec{padding:48px 0}.sec-label{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#d4b978;opacity:.6;margin-bottom:8px}.sec-title{font-size:22px;font-weight:900;margin-bottom:6px}.sec-sub{font-size:13px;color:#8892a8;margin-bottom:28px;line-height:1.7}
+.sec{padding:48px 0}.sec-label{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#d4b978;opacity:.75;margin:0 0 8px}.sec-title{font-size:22px;font-weight:900;margin-bottom:6px}.sec-sub{font-size:13px;color:#8892a8;margin-bottom:28px;line-height:1.7}
 .gold-line{width:40px;height:2px;background:#d4b978;margin-bottom:24px}
 
 /* Feature cards */
@@ -51,7 +51,7 @@ a{color:#d4b978;text-decoration:none}a:hover{text-decoration:underline}
 .pat-card{background:#16181f;border:1px solid #252830;border-radius:12px;padding:16px;text-align:center;transition:.15s}
 .pat-card:hover{border-color:#d4b978}
 .pat-card .p-icon{font-size:24px;margin-bottom:6px}
-.pat-card h4{font-size:13px;font-weight:700;margin-bottom:4px}
+.pat-card h4, .pat-card h3[data-was="h4"]{font-size:13px;font-weight:700;margin-bottom:4px}
 .pat-card p{font-size:10px;color:#8892a8;line-height:1.5}
 .pat-card .p-steps{font-size:9px;color:#60a5fa;font-weight:600;margin-top:6px}
 
@@ -75,13 +75,13 @@ a{color:#d4b978;text-decoration:none}a:hover{text-decoration:underline}
 .impact-card{background:#16181f;border:1px solid #252830;border-radius:14px;padding:24px;text-align:center}
 .impact-card .ic-num{font-size:40px;font-weight:900;color:#d4b978;line-height:1}
 .impact-card .ic-lbl{font-size:12px;color:#8892a8;margin-top:6px}
-.impact-card .ic-sub{font-size:10px;color:#5a6178;margin-top:4px}
+.impact-card .ic-sub{font-size:10px;color:#878EA5;margin-top:4px}
 .chart-wrap{margin-bottom:32px}
 .chart-row{display:flex;align-items:center;gap:10px;margin-bottom:6px}
 .chart-label{width:140px;font-size:11px;color:#8892a8;text-align:right;flex-shrink:0}
 .chart-bar-bg{flex:1;height:24px;background:#1c1f28;border-radius:4px;overflow:hidden;position:relative;display:flex}
 .chart-bar-ai{height:100%;background:linear-gradient(90deg,#3b82f6,#60a5fa);border-radius:4px 0 0 4px;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;color:#fff;transition:width .6s ease}
-.chart-bar-manual{height:100%;background:#252830;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:600;color:#5a6178}
+.chart-bar-manual{height:100%;background:#252830;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:600;color:#878EA5}
 .chart-pct{width:40px;font-size:11px;font-weight:700;color:#60a5fa;text-align:right;flex-shrink:0}
 .chart-legend{display:flex;gap:16px;justify-content:center;margin-top:14px;font-size:11px;color:#8892a8}
 .chart-legend span{display:flex;align-items:center;gap:5px}
@@ -90,8 +90,8 @@ a{color:#d4b978;text-decoration:none}a:hover{text-decoration:underline}
 
 .before-after{display:grid;grid-template-columns:1fr auto 1fr;gap:20px;align-items:center;margin-bottom:16px}
 .ba-col{background:#16181f;border:1px solid #252830;border-radius:14px;padding:20px;text-align:center}
-.ba-col h4{font-size:13px;font-weight:700;margin-bottom:12px;color:#8892a8}
-.ba-col.after h4{color:#d4b978}
+.ba-col h4, .ba-col h3[data-was="h4"]{font-size:13px;font-weight:700;margin-bottom:12px;color:#8892a8}
+.ba-col.after h4, .ba-col.after h3[data-was="h4"]{color:#d4b978}
 .ba-item{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #1c1f28;font-size:11px;color:#8892a8}
 .ba-item .ba-v{font-weight:700;color:#f0f2f7}
 .ba-col.after .ba-item .ba-v{color:#34d399}
@@ -118,8 +118,8 @@ a{color:#d4b978;text-decoration:none}a:hover{text-decoration:underline}
 .badge{font-size:8px;padding:2px 6px;border-radius:3px;font-weight:700}
 .b-ai{background:rgba(59,130,246,.12);color:#60a5fa}
 .b-nw{background:rgba(212,185,120,.12);color:#d4b978}
-.b-lp{font-size:7px;padding:2px 5px;border-radius:3px;background:#1c1f28;color:#5a6178;flex-shrink:0}
-.arrow{color:#5a6178;font-size:14px;flex-shrink:0;transition:transform .15s}
+.b-lp{font-size:7px;padding:2px 5px;border-radius:3px;background:#1c1f28;color:#878EA5;flex-shrink:0}
+.arrow{color:#878EA5;font-size:14px;flex-shrink:0;transition:transform .15s}
 .step.open .arrow{transform:rotate(90deg)}
 .step-b{border-top:1px solid #252830;padding:14px 16px 14px 60px;display:none}
 .step.open .step-b{display:block}
@@ -170,6 +170,7 @@ a{color:#d4b978;text-decoration:none}a:hover{text-decoration:underline}
 #bf-lang-btn{position:fixed;top:14px;right:16px;z-index:999;font-size:11px;font-weight:700;letter-spacing:.1em;color:#0d0f14;background:#d4b978;border:none;border-radius:4px;padding:5px 14px;cursor:pointer;transition:.2s}
 #bf-lang-btn:hover{background:#c5a862}
 </style>
+<main>
 <button id="bf-lang-btn" onclick="bfToggle()">EN</button>
 
 
@@ -191,7 +192,7 @@ a{color:#d4b978;text-decoration:none}a:hover{text-decoration:underline}
 
 <!-- ═══ AI AGENT HIGHLIGHT ═══ -->
 <div class="sec">
-  <div class="sec-label">Core Innovation</div>
+  <h2 class="sec-label">Core Innovation</h2>
   <div class="sec-title" data-ja="AIチャットエージェント — 対話だけで業務が完結" data-en="AI Chat Agent — Complete Operations Through Conversation">AIチャットエージェント — 対話だけで業務が完結</div>
   <div class="sec-sub" data-ja="メニューを操作する必要はありません。自然言語で指示するだけで、案件の登録・検索・書類作成・進捗確認をAIが実行します。" data-en="No menus to navigate. Just give instructions in natural language — the AI handles deal registration, search, document creation, and status tracking.">メニューを操作する必要はありません。自然言語で指示するだけで、案件の登録・検索・書類作成・進捗確認をAIが実行します。</div>
 
@@ -221,7 +222,7 @@ a{color:#d4b978;text-decoration:none}a:hover{text-decoration:underline}
 
 <!-- ═══ KEY FEATURES ═══ -->
 <div class="sec">
-  <div class="sec-label">Key Features</div>
+  <h2 class="sec-label">Key Features</h2>
   <div class="sec-title" data-ja="BorderFlow AIの主な機能" data-en="Core Features of BorderFlow AI">BorderFlow AIの主な機能</div>
   <div class="sec-sub" data-ja="貿易業務に必要なすべての機能を、1つのプラットフォームに統合しています。" data-en="Every function required for trade operations, integrated into a single platform.">貿易業務に必要なすべての機能を、1つのプラットフォームに統合しています。</div>
 
@@ -285,24 +286,24 @@ a{color:#d4b978;text-decoration:none}a:hover{text-decoration:underline}
 
 <!-- ═══ 7 TRADE PATTERNS ═══ -->
 <div class="sec">
-  <div class="sec-label">Trade Patterns</div>
+  <h2 class="sec-label">Trade Patterns</h2>
   <div class="sec-title" data-ja="7つの取引パターンに完全対応" data-en="Full Coverage of 7 Trade Patterns">7つの取引パターンに完全対応</div>
   <div class="sec-sub" data-ja="輸入在庫販売から仲介まで、商社・メーカーが扱う全取引パターンをカバー。パターンに応じて必要なステップが自動構成されます。" data-en="Covers all trade patterns handled by trading companies and manufacturers — from import-stock sales to intermediary deals. Required steps are automatically configured per pattern.">輸入在庫販売から仲介まで、商社・メーカーが扱う全取引パターンをカバー。パターンに応じて必要なステップが自動構成されます。</div>
 
   <div class="pat-grid">
-    <div class="pat-card"><div class="p-icon">📥</div><h4 data-ja="輸入在庫販売" data-en="Import Stock Sales">輸入在庫販売</h4><p data-ja="海外仕入 → 国内倉庫 → 国内販売" data-en="Overseas Purchase → Warehouse → Domestic Sales">海外仕入 → 国内倉庫 → 国内販売</p><div class="p-steps">14ステップ</div></div>
-    <div class="pat-card"><div class="p-icon">📦</div><h4 data-ja="輸入直送" data-en="Direct Import">輸入直送</h4><p data-ja="海外仕入 → 国内顧客に直送" data-en="Overseas Purchase → Direct to Domestic Customer">海外仕入 → 国内顧客に直送</p><div class="p-steps">12ステップ</div></div>
-    <div class="pat-card"><div class="p-icon">📤</div><h4 data-ja="輸出" data-en="Export">輸出</h4><p data-ja="日本 → 海外顧客に販売" data-en="Japan → Sales to Overseas Customer">日本 → 海外顧客に販売</p><div class="p-steps">11ステップ</div></div>
-    <div class="pat-card"><div class="p-icon">🔄</div><h4 data-ja="三国間(B2B)" data-en="Triangular Trade">三国間(B2B)</h4><p data-ja="海外A → 海外B（日本を経由しない）" data-en="Overseas A → Overseas B (bypassing Japan)">海外A → 海外B（日本を経由しない）</p><div class="p-steps">10ステップ</div></div>
-    <div class="pat-card"><div class="p-icon">🌐</div><h4 data-ja="オフショア" data-en="Offshore">オフショア</h4><p data-ja="海外子会社経由の取引" data-en="Transactions via Overseas Subsidiary">海外子会社経由の取引</p><div class="p-steps">11ステップ</div></div>
-    <div class="pat-card"><div class="p-icon">🏠</div><h4 data-ja="国内取引" data-en="Domestic Trade">国内取引</h4><p data-ja="日本国内の仕入販売" data-en="Domestic Purchase & Sales in Japan">日本国内の仕入販売</p><div class="p-steps">8ステップ</div></div>
-    <div class="pat-card"><div class="p-icon">🤝</div><h4 data-ja="仲介" data-en="Intermediary">仲介</h4><p data-ja="契約当事者にならず仲介" data-en="Brokering Without Being a Contract Party">契約当事者にならず仲介</p><div class="p-steps">5ステップ</div></div>
+    <div class="pat-card"><div class="p-icon">📥</div><h3 data-was="h4" data-ja="輸入在庫販売" data-en="Import Stock Sales">輸入在庫販売</h3><p data-ja="海外仕入 → 国内倉庫 → 国内販売" data-en="Overseas Purchase → Warehouse → Domestic Sales">海外仕入 → 国内倉庫 → 国内販売</p><div class="p-steps">14ステップ</div></div>
+    <div class="pat-card"><div class="p-icon">📦</div><h3 data-was="h4" data-ja="輸入直送" data-en="Direct Import">輸入直送</h3><p data-ja="海外仕入 → 国内顧客に直送" data-en="Overseas Purchase → Direct to Domestic Customer">海外仕入 → 国内顧客に直送</p><div class="p-steps">12ステップ</div></div>
+    <div class="pat-card"><div class="p-icon">📤</div><h3 data-was="h4" data-ja="輸出" data-en="Export">輸出</h3><p data-ja="日本 → 海外顧客に販売" data-en="Japan → Sales to Overseas Customer">日本 → 海外顧客に販売</p><div class="p-steps">11ステップ</div></div>
+    <div class="pat-card"><div class="p-icon">🔄</div><h3 data-was="h4" data-ja="三国間(B2B)" data-en="Triangular Trade">三国間(B2B)</h3><p data-ja="海外A → 海外B（日本を経由しない）" data-en="Overseas A → Overseas B (bypassing Japan)">海外A → 海外B（日本を経由しない）</p><div class="p-steps">10ステップ</div></div>
+    <div class="pat-card"><div class="p-icon">🌐</div><h3 data-was="h4" data-ja="オフショア" data-en="Offshore">オフショア</h3><p data-ja="海外子会社経由の取引" data-en="Transactions via Overseas Subsidiary">海外子会社経由の取引</p><div class="p-steps">11ステップ</div></div>
+    <div class="pat-card"><div class="p-icon">🏠</div><h3 data-was="h4" data-ja="国内取引" data-en="Domestic Trade">国内取引</h3><p data-ja="日本国内の仕入販売" data-en="Domestic Purchase & Sales in Japan">日本国内の仕入販売</p><div class="p-steps">8ステップ</div></div>
+    <div class="pat-card"><div class="p-icon">🤝</div><h3 data-was="h4" data-ja="仲介" data-en="Intermediary">仲介</h3><p data-ja="契約当事者にならず仲介" data-en="Brokering Without Being a Contract Party">契約当事者にならず仲介</p><div class="p-steps">5ステップ</div></div>
   </div>
 </div>
 
 <!-- ═══ AI IMPACT CHART ═══ -->
 <div class="sec">
-  <div class="sec-label">AI Impact</div>
+  <h2 class="sec-label">AI Impact</h2>
   <div class="sec-title" data-ja="どの工程がAIに置き換わるのか" data-en="Which Steps Does AI Replace?">どの工程がAIに置き換わるのか</div>
   <div class="sec-sub" data-ja="輸入在庫販売フロー（15ステップ）を例に、各工程のAI自動化率を示します。青い部分がAIによる自動処理、グレーが人の判断が必要な工程です。" data-en="Using the import stock sales flow (15 steps) as an example, this shows the AI automation rate per step. Blue = AI-automated; grey = requires human judgment.">輸入在庫販売フロー（15ステップ）を例に、各工程のAI自動化率を示します。青い部分がAIによる自動処理、グレーが人の判断が必要な工程です。</div>
 
@@ -334,7 +335,7 @@ a{color:#d4b978;text-decoration:none}a:hover{text-decoration:underline}
 
   <div class="before-after">
     <div class="ba-col">
-      <h4 data-ja="Before（従来の手作業）" data-en="Before (Manual Operations)">Before（従来の手作業）</h4>
+      <h3 data-was="h4" data-ja="Before（従来の手作業）" data-en="Before (Manual Operations)">Before（従来の手作業）</h3>
       <div class="ba-item"><span data-ja="書類入力" data-en="Data Entry">書類入力</span><span class="ba-v">45分 / 件</span></div>
       <div class="ba-item"><span data-ja="書類照合" data-en="Doc Verification">書類照合</span><span class="ba-v">30分 / 件</span></div>
       <div class="ba-item"><span data-ja="HS分類" data-en="HS Classification">HS分類</span><span class="ba-v">20分 / 件</span></div>
@@ -346,7 +347,7 @@ a{color:#d4b978;text-decoration:none}a:hover{text-decoration:underline}
     </div>
     <div class="ba-arrow">→</div>
     <div class="ba-col after">
-      <h4 data-ja="After（BorderFlow AI導入後）" data-en="After (With BorderFlow AI)">After（BorderFlow AI導入後）</h4>
+      <h3 data-was="h4" data-ja="After（BorderFlow AI導入後）" data-en="After (With BorderFlow AI)">After（BorderFlow AI導入後）</h3>
       <div class="ba-item"><span data-ja="書類入力" data-en="Data Entry">書類入力</span><span class="ba-v">3秒（OCR）</span></div>
       <div class="ba-item"><span data-ja="書類照合" data-en="Doc Verification">書類照合</span><span class="ba-v">5秒（AI照合）</span></div>
       <div class="ba-item"><span data-ja="HS分類" data-en="HS Classification">HS分類</span><span class="ba-v">2秒（AI判定）</span></div>
@@ -369,7 +370,7 @@ a{color:#d4b978;text-decoration:none}a:hover{text-decoration:underline}
 
 <!-- ═══ HR / ORG BENEFITS ═══ -->
 <div class="sec">
-  <div class="sec-label">People & Organization</div>
+  <h2 class="sec-label">People & Organization</h2>
   <div class="sec-title" data-ja="「ベテランがいなくても回る組織」を実現する" data-en="Build an Organization That Runs Without Trade Experts">「ベテランがいなくても回る組織」を実現する</div>
   <div class="sec-sub" data-ja="BorderFlow AIが業務知識を内包することで、人に依存しない安定した貿易オペレーションが可能になります。" data-en="By embedding domain knowledge into BorderFlow AI, your trade operations become stable and independent of individual expertise.">BorderFlow AIが業務知識を内包することで、人に依存しない安定した貿易オペレーションが可能になります。</div>
 
@@ -401,7 +402,7 @@ a{color:#d4b978;text-decoration:none}a:hover{text-decoration:underline}
   <!-- HR Before/After -->
   <div class="before-after">
     <div class="ba-col">
-      <h4 data-ja="Before（従来の体制）" data-en="Before (Traditional Setup)">Before（従来の体制）</h4>
+      <h3 data-was="h4" data-ja="Before（従来の体制）" data-en="Before (Traditional Setup)">Before（従来の体制）</h3>
       <div class="ba-item"><span data-ja="必要なスキル" data-en="Skills Required">必要なスキル</span><span class="ba-v" style="color:#f87171">貿易実務 3〜5年</span></div>
       <div class="ba-item"><span data-ja="新人の戦力化" data-en="Time to Productivity">新人の戦力化</span><span class="ba-v" style="color:#f87171">6〜12ヶ月</span></div>
       <div class="ba-item"><span data-ja="引き継ぎ工数" data-en="Handover Hours">引き継ぎ工数</span><span class="ba-v" style="color:#f87171">40〜80時間</span></div>
@@ -410,7 +411,7 @@ a{color:#d4b978;text-decoration:none}a:hover{text-decoration:underline}
     </div>
     <div class="ba-arrow">→</div>
     <div class="ba-col after">
-      <h4 data-ja="After（BorderFlow AI導入後）" data-en="After (With BorderFlow AI)">After（BorderFlow AI導入後）</h4>
+      <h3 data-was="h4" data-ja="After（BorderFlow AI導入後）" data-en="After (With BorderFlow AI)">After（BorderFlow AI導入後）</h3>
       <div class="ba-item"><span data-ja="必要なスキル" data-en="Skills Required">必要なスキル</span><span class="ba-v">PC操作のみ</span></div>
       <div class="ba-item"><span data-ja="新人の戦力化" data-en="Time to Productivity">新人の戦力化</span><span class="ba-v">即日〜数日</span></div>
       <div class="ba-item"><span data-ja="引き継ぎ工数" data-en="Handover Hours">引き継ぎ工数</span><span class="ba-v">ほぼゼロ</span></div>
@@ -422,7 +423,7 @@ a{color:#d4b978;text-decoration:none}a:hover{text-decoration:underline}
 
 <!-- ═══ STEP-BY-STEP DETAIL ═══ -->
 <div class="sec">
-  <div class="sec-label">Workflow Detail</div>
+  <h2 class="sec-label">Workflow Detail</h2>
   <div class="sec-title" data-ja="すべての業務ステップで、何ができるか" data-en="What Can Be Done at Every Step">すべての業務ステップで、何ができるか</div>
   <div class="sec-sub" data-ja="各ステップをクリックすると、機能の詳細とデータの入出力が表示されます。" data-en="Click each step to see feature details and data inputs/outputs.">各ステップをクリックすると、機能の詳細とデータの入出力が表示されます。</div>
   <div class="tabs" id="tabs"></div>
@@ -439,6 +440,7 @@ a{color:#d4b978;text-decoration:none}a:hover{text-decoration:underline}
   <div style="margin-top:16px"><a href="https://wingconsulting.org/" style="font-size:12px;color:#8892a8" data-ja="← Wing トップページに戻る" data-en="← Back to Wing Top Page">← Wing トップページに戻る</a></div>
 </div>
 
+</main>
 <script>
 var D={
 import:[

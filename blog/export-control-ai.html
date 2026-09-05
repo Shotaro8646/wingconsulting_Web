@@ -316,7 +316,7 @@
       align-items: center;
       justify-content: center;
     }
-    .numbered-item-body h4 {
+    .numbered-item-body h4{
       font-size: 15px;
       font-weight: 700;
       color: var(--navy);
@@ -386,7 +386,7 @@
       font-weight: 700;
       font-size: 18px;
     }
-    .author-info h4 {
+    .author-info h4{
       font-size: 14px;
       font-weight: 700;
       color: var(--navy);
@@ -485,6 +485,7 @@
 </div>
 </header>
 
+<main>
 <section class="hero">
 <div class="hero-inner">
 <div class="hero-meta">
@@ -518,7 +519,7 @@
 
 <p>規制は大きく二本柱で構成される。<strong>リスト規制</strong>と<strong>キャッチオール規制（補完的輸出規制）</strong>である。この二つは判断の起点が異なるため、実務ではまず「どちらの規制に照らして確認するか」を切り分けることが出発点になる。</p>
 
-<div class="compare-table-wrap" style="overflow-x:auto;">
+<div class="compare-table-wrap" style="overflow-x:auto;" tabindex="0" role="region" aria-label="リスト規制とキャッチオール規制の比較表（横にスクロールできます）">
 <table class="compare-table" style="min-width:520px;">
 <tr><th>観点</th><th>リスト規制</th><th>キャッチオール規制</th></tr>
 <tr><td>判断の起点</td><td>「貨物・技術の仕様」が規制リストに該当するか</td><td>「仕向地・用途・需要者」が懸念に該当するか</td></tr>
@@ -539,28 +540,29 @@
 <div class="numbered-item">
 <div class="numbered-item-num">1</div>
 <div class="numbered-item-body">
-<h4>品目・技術の特定</h4>
+<!-- 見た目は h4 のまま、読み上げの段だけ h3 にしている（h2 の直下に h4 が来る段飛ばしを解消するため。h3 に変えると大きさと余白が変わる） -->
+<h4 role="heading" aria-level="3">品目・技術の特定</h4>
 <p>輸出しようとする貨物、または提供する技術（設計図・製造ノウハウ・プログラム等）を正確に特定する。同じ製品でも、含まれる機能や性能によって判定が変わる。</p>
 </div>
 </div>
 <div class="numbered-item">
 <div class="numbered-item-num">2</div>
 <div class="numbered-item-body">
-<h4>リスト規制の該非判定</h4>
+<h4 role="heading" aria-level="3">リスト規制の該非判定</h4>
 <p>パラメータシートを用い、仕様を規制項目と照合する。仕入品は製造業者の判定書を取り付け、自社の責任で内容を確認する。</p>
 </div>
 </div>
 <div class="numbered-item">
 <div class="numbered-item-num">3</div>
 <div class="numbered-item-body">
-<h4>キャッチオール規制の確認</h4>
+<h4 role="heading" aria-level="3">キャッチオール規制の確認</h4>
 <p>非該当の場合も、仕向地・用途・需要者を確認する。契約書・仕様書・カタログ等から用途を確認し、需要者が懸念先でないかを照合する。</p>
 </div>
 </div>
 <div class="numbered-item">
 <div class="numbered-item-num">4</div>
 <div class="numbered-item-body">
-<h4>判断根拠の記録・保管</h4>
+<h4 role="heading" aria-level="3">判断根拠の記録・保管</h4>
 <p>判定結果とその根拠資料を社内に保管する。監査や事後確認に耐える「なぜ、そう判断したか」の記録こそが、コンプライアンスの実体である。</p>
 </div>
 </div>
@@ -574,21 +576,21 @@
 <div class="numbered-item">
 <div class="numbered-item-num">①</div>
 <div class="numbered-item-body">
-<h4>属人化 ― 判定がベテランの頭の中にある</h4>
+<h4 role="heading" aria-level="3">属人化 ― 判定がベテランの頭の中にある</h4>
 <p>該非判定は、規制の条文解釈と製品知識の両方を要する。結果として、一部の熟練担当者しか的確に判定できず、その退職や異動が事業継続リスクになる。</p>
 </div>
 </div>
 <div class="numbered-item">
 <div class="numbered-item-num">②</div>
 <div class="numbered-item-body">
-<h4>工数 ― 品目が増えるほど判定が積み上がる</h4>
+<h4 role="heading" aria-level="3">工数 ― 品目が増えるほど判定が積み上がる</h4>
 <p>取扱品目が増え、取引先が変わるたびに判定は再度必要になる。判定書の取り付け・催促・保管といった付随作業も含め、輸出量の拡大がそのまま管理工数の増大に直結する。</p>
 </div>
 </div>
 <div class="numbered-item">
 <div class="numbered-item-num">③</div>
 <div class="numbered-item-body">
-<h4>改正追随 ― 規制は頻繁に変わる</h4>
+<h4 role="heading" aria-level="3">改正追随 ― 規制は頻繁に変わる</h4>
 <p>国際情勢を反映し、規制リストや運用は頻繁に見直される。改正のたびに、過去に「非該当」とした品目まで再判定が必要になりうるが、その影響範囲を人手で追い切るのは難しい。</p>
 </div>
 </div>
@@ -620,28 +622,28 @@
 <div class="numbered-item">
 <div class="numbered-item-num">1</div>
 <div class="numbered-item-body">
-<h4>該非判定の下調べを半自動化する</h4>
+<h4 role="heading" aria-level="3">該非判定の下調べを半自動化する</h4>
 <p>製品仕様書やデータシートをAIが読み取り、パラメータシートの該当項目や過去の類似判定を提示する。担当者はゼロから調べるのではなく、AIが用意した「たたき台」を検証・確定する形に変わり、判定の初動工数が大きく減る。</p>
 </div>
 </div>
 <div class="numbered-item">
 <div class="numbered-item-num">2</div>
 <div class="numbered-item-body">
-<h4>取引審査（需要者・用途）を仕組み化する</h4>
+<h4 role="heading" aria-level="3">取引審査（需要者・用途）を仕組み化する</h4>
 <p>取引先や需要者を、外国ユーザーリストや各種の懸念先情報と自動照合し、名称の表記揺れや類似名も含めて検知する。用途に関する懸念表現を契約書・仕様書から拾い上げ、確認漏れを防ぐ。</p>
 </div>
 </div>
 <div class="numbered-item">
 <div class="numbered-item-num">3</div>
 <div class="numbered-item-body">
-<h4>判定書と根拠資料をナレッジ化する</h4>
+<h4 role="heading" aria-level="3">判定書と根拠資料をナレッジ化する</h4>
 <p>散在しがちな判定書・パラメータシート・確認記録を一元管理し、品目・取引単位で検索可能にする。ベテランの頭の中にあった判断根拠が、組織の資産として蓄積・再利用される。</p>
 </div>
 </div>
 <div class="numbered-item">
 <div class="numbered-item-num">4</div>
 <div class="numbered-item-body">
-<h4>改正の影響を追跡可能にする</h4>
+<h4 role="heading" aria-level="3">改正の影響を追跡可能にする</h4>
 <p>規制改正があった際に、過去の判定のうち再確認が必要な品目を絞り込む。人手では追い切れない「改正の波及先」を可視化し、再判定の抜け漏れを防ぐ。</p>
 </div>
 </div>
@@ -657,28 +659,28 @@
 <div class="numbered-item">
 <div class="numbered-item-num">1</div>
 <div class="numbered-item-body">
-<h4>棚卸し ― どこに負担が集中しているか</h4>
+<h4 role="heading" aria-level="3">棚卸し ― どこに負担が集中しているか</h4>
 <p>判定件数・工数・属人度を可視化し、最も負担の重い品目群や工程を特定する。「どの業務から手をつけるか」を数字で決める。</p>
 </div>
 </div>
 <div class="numbered-item">
 <div class="numbered-item-num">2</div>
 <div class="numbered-item-body">
-<h4>一点集中のパイロット</h4>
+<h4 role="heading" aria-level="3">一点集中のパイロット</h4>
 <p>負担の大きい一領域（例：仕入品の判定書管理、取引先の名簿照合）に絞り、小さく試す。既存の運用を壊さず、並走で効果を測る。</p>
 </div>
 </div>
 <div class="numbered-item">
 <div class="numbered-item-num">3</div>
 <div class="numbered-item-body">
-<h4>ナレッジの標準化</h4>
+<h4 role="heading" aria-level="3">ナレッジの標準化</h4>
 <p>パイロットで得た判定ロジックや確認手順を、テンプレートとして標準化する。属人化していた判断基準を、誰もが使える形に落とし込む。</p>
 </div>
 </div>
 <div class="numbered-item">
 <div class="numbered-item-num">4</div>
 <div class="numbered-item-body">
-<h4>横展開と定着</h4>
+<h4 role="heading" aria-level="3">横展開と定着</h4>
 <p>効果が確認できた仕組みを他品目・他部門へ広げ、日常業務に組み込む。改正時の再確認までを含めて、運用を回し続けられる状態にする。</p>
 </div>
 </div>
@@ -692,7 +694,7 @@
 <div class="author-card">
 <div class="author-avatar">W</div>
 <div class="author-info">
-<h4>Wing ― IT/DX Consulting</h4>
+<h4 role="heading" aria-level="3">Wing ― IT/DX Consulting</h4>
 <div class="author-role">AI・デジタル変革を、確実な「ビジネス成果」へ</div>
 <p>大手外資系・日系コンサルティングファーム出身。貿易実務とIT/DXの両領域に精通し、戦略の策定から実行・定着までを一貫して支援。</p>
 </div>
@@ -716,16 +718,17 @@
 </section>
 <!-- related-articles (auto) -->
 <section style="max-width:800px;margin:3.5rem auto 0;padding:2rem 1.5rem 0;border-top:1px solid #E5E7EB;font-family:'Noto Sans JP',sans-serif;">
-  <p style="font-family:'Outfit','Noto Sans JP',sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#B8A882;margin:0 0 .7rem;">Related</p>
+  <p style="font-family:'Outfit','Noto Sans JP',sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#7A6B3E;margin:0 0 .7rem;">Related</p>
   <h2 style="font-size:1.15rem;font-weight:500;color:#1A1A1F;margin:0 0 1.3rem;">関連記事</h2>
   <div style="display:grid;gap:.8rem;">
-    <a href="/blog/customs-dx-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">通関DXとは？AI・自動化で変わる輸出入手続きの効率化</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
-    <a href="/blog/hs-code-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">HSコードの調べ方・決め方を徹底解説｜品目分類の基礎から事前教示・EPA活用まで</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
-    <a href="/blog/chemical-import-automation" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">化学品輸入の自動化入門：書類処理から法規制チェックまで</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
-    <a href="/blog/trade-dx-complete-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">貿易DX完全ガイド｜輸入・輸出業務の課題とAI活用の全体像</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/customs-dx-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">通関DXとは？AI・自動化で変わる輸出入手続きの効率化</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/hs-code-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">HSコードの調べ方・決め方を徹底解説｜品目分類の基礎から事前教示・EPA活用まで</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/chemical-import-automation" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">化学品輸入の自動化入門：書類処理から法規制チェックまで</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/trade-dx-complete-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">貿易DX完全ガイド｜輸入・輸出業務の課題とAI活用の全体像</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
   </div>
   <p style="margin:1.5rem 0 0;"><a href="/blog/" style="font-family:'Outfit','Noto Sans JP',sans-serif;font-size:.8rem;letter-spacing:.03em;color:#1E4E7E;text-decoration:none;">すべての記事を見る →</a></p>
 </section>
+</main>
 <footer class="site-footer">
     © 2026 Wing. All rights reserved.
   </footer>

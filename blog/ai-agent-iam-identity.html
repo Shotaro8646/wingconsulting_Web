@@ -52,9 +52,9 @@ tailwind.config = {
     extend: {
       colors: {
         navy: { DEFAULT: '#0F2342', dark: '#081830' },
-        gold: { DEFAULT: '#A8965A', light: '#C4AD72', muted: '#7A6B3E', pale: '#F8F5ED', mid: '#B8A560' },
+        gold: { DEFAULT: '#A8965A', deep: '#7A6D40', deeper: '#635834', light: '#C4AD72', muted: '#7A6B3E', pale: '#F8F5ED', mid: '#B8A560' },
         slate: { warm: '#F7F6F3', cool: '#EEECe7' },
-        ink: { DEFAULT: '#1A1A1F', mid: '#4A4A55', light: '#8A8A96' },
+        ink: { DEFAULT: '#1A1A1F', mid: '#4A4A55', light: '#6C6C79' },
       },
       fontFamily: {
         serif: ['"Yu Gothic"', '"YuGothic"', 'sans-serif'],
@@ -76,8 +76,8 @@ article p { margin-bottom: 1.2rem; }
 article ul { margin-bottom: 1.2rem; padding-left: 1.5rem; }
 article li { margin-bottom: 0.5rem; }
 .diag-wrap { background:#fff; border:1px solid #E2E0DA; border-top:3px solid #A8965A; padding:1.4rem 1.5rem 1rem; margin:1.6rem 0 0.5rem; font-size:0.85rem; }
-.diag-caption { text-align:center; font-size:0.72rem; color:#8A8A96; margin-top:0.5rem; margin-bottom:1.4rem; }
-.diag-label { font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#A8965A; margin-bottom:0.8rem; }
+.diag-caption { text-align:center; font-size:0.72rem; color:#6C6C79; margin-top:0.5rem; margin-bottom:1.4rem; }
+.diag-label { font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#7A6D40; margin-bottom:0.8rem; }
 .diag-step-row { display:flex; flex-wrap:wrap; gap:0.7rem; }
 .diag-step-card { flex:1 1 140px; background:#fff; border:1px solid #E2E0DA; padding:0.9rem; position:relative; }
 .diag-step-card .step-num { width:28px; height:28px; background:#0F2342; color:#A8965A; font-size:0.78rem; font-weight:700; display:flex; align-items:center; justify-content:center; margin-bottom:0.55rem; }
@@ -88,13 +88,13 @@ article li { margin-bottom: 0.5rem; }
 .compare-table td { padding:0.6rem 0.8rem; border-bottom:1px solid #E2E0DA; vertical-align:top; line-height:1.55; }
 .compare-table tr:nth-child(even) td { background:#F8F5ED; }
 .insight-box { background:#F0F7F0; border-left:3px solid #5A9A6A; padding:1rem 1.2rem; margin:1.4rem 0; font-size:0.83rem; line-height:1.7; }
-.insight-box .insight-label { font-size:0.65rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#5A9A6A; margin-bottom:0.4rem; }
+.insight-box .insight-label { font-size:0.65rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#487B55; margin-bottom:0.4rem; }
 .warn-box { background:#FFF8F0; border-left:3px solid #C45C3A; padding:1rem 1.2rem; margin:1.4rem 0; font-size:0.83rem; line-height:1.7; }
-.warn-box .warn-label { font-size:0.65rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#C45C3A; margin-bottom:0.4rem; }
+.warn-box .warn-label { font-size:0.65rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#B55536; margin-bottom:0.4rem; }
 .kpi-row { display:flex; flex-wrap:wrap; gap:0.8rem; margin:1.2rem 0; }
 .kpi-item { flex:1 1 150px; background:#fff; border:1px solid #E2E0DA; border-top:3px solid #A8965A; padding:0.9rem 1rem; }
 .kpi-item .kpi-val { font-size:1.4rem; font-weight:700; color:#0F2342; line-height:1.1; margin-bottom:0.25rem; }
-.kpi-item .kpi-label { font-size:0.7rem; color:#8A8A96; line-height:1.4; }
+.kpi-item .kpi-label { font-size:0.7rem; color:#6C6C79; line-height:1.4; }
 </style>
 <!-- Google Analytics GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
@@ -142,7 +142,7 @@ article li { margin-bottom: 0.5rem; }
 <!-- ARTICLE -->
 <main class="py-16 px-6 md:px-10">
   <div class="max-w-3xl mx-auto">
-    <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3">AI Security / Identity Management</p>
+    <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold-deep mb-3">AI Security / Identity Management</p>
     <h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4">AIエージェントのID管理（IAM）：<br>エンタープライズが直面するアイデンティティ危機と対策</h1>
     <div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2">
       <time datetime="2026-03-29">2026.03.29</time>
@@ -153,20 +153,20 @@ article li { margin-bottom: 0.5rem; }
     <!-- Series Navigation -->
     <div style="background:#fff;border:1px solid #E2E0DA;border-left:4px solid #A8965A;padding:1rem 1.2rem;margin-bottom:2.5rem">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.7rem">
-        <span style="font-size:0.6rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#A8965A">AIエージェント完全ガイド — 7ステップシリーズ</span>
-        <a href="/blog/ai-agent-guide" style="font-size:0.65rem;color:#8A8A96;text-decoration:underline">一覧へ</a>
+        <span style="font-size:0.6rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#7A6D40">AIエージェント完全ガイド — 7ステップシリーズ</span>
+        <a href="/blog/ai-agent-guide" style="font-size:0.65rem;color:#6C6C79;text-decoration:underline">一覧へ</a>
       </div>
       <div style="display:flex;gap:0.3rem;flex-wrap:wrap">
         <a href="/blog/agentic-ai-b2b-shift" style="flex:1 1 68px;background:#F0F0EC;padding:0.45rem 0.6rem;border-radius:3px;text-decoration:none;display:block">
-          <div style="font-size:0.55rem;color:#8A8A96;font-weight:700;margin-bottom:0.1rem">Lv.1 概念</div>
+          <div style="font-size:0.55rem;color:#6C6C79;font-weight:700;margin-bottom:0.1rem">Lv.1 概念</div>
           <div style="font-size:0.68rem;color:#4A4A55;line-height:1.3">エージェント革命</div>
         </a>
         <a href="/blog/agentic-ai-saas-design-patterns" style="flex:1 1 68px;background:#F0F0EC;padding:0.45rem 0.6rem;border-radius:3px;text-decoration:none;display:block">
-          <div style="font-size:0.55rem;color:#8A8A96;font-weight:700;margin-bottom:0.1rem">Lv.2 設計</div>
+          <div style="font-size:0.55rem;color:#6C6C79;font-weight:700;margin-bottom:0.1rem">Lv.2 設計</div>
           <div style="font-size:0.68rem;color:#4A4A55;line-height:1.3">設計パターン</div>
         </a>
         <a href="/blog/ai-agent-sprawl-governance" style="flex:1 1 68px;background:#F0F0EC;padding:0.45rem 0.6rem;border-radius:3px;text-decoration:none;display:block">
-          <div style="font-size:0.55rem;color:#8A8A96;font-weight:700;margin-bottom:0.1rem">Lv.3 リスク</div>
+          <div style="font-size:0.55rem;color:#6C6C79;font-weight:700;margin-bottom:0.1rem">Lv.3 リスク</div>
           <div style="font-size:0.68rem;color:#4A4A55;line-height:1.3">スプロール</div>
         </a>
         <div style="flex:1 1 68px;background:#0F2342;padding:0.45rem 0.6rem;border-radius:3px">
@@ -174,15 +174,15 @@ article li { margin-bottom: 0.5rem; }
           <div style="font-size:0.68rem;color:#fff;line-height:1.3">IAM</div>
         </div>
         <a href="/blog/guardian-agents-ai-oversight" style="flex:1 1 68px;background:#F0F0EC;padding:0.45rem 0.6rem;border-radius:3px;text-decoration:none;display:block">
-          <div style="font-size:0.55rem;color:#8A8A96;font-weight:700;margin-bottom:0.1rem">Lv.5 監視</div>
+          <div style="font-size:0.55rem;color:#6C6C79;font-weight:700;margin-bottom:0.1rem">Lv.5 監視</div>
           <div style="font-size:0.68rem;color:#4A4A55;line-height:1.3">ガーディアン</div>
         </a>
         <a href="/blog/universal-orchestrator-ai-agents" style="flex:1 1 68px;background:#F0F0EC;padding:0.45rem 0.6rem;border-radius:3px;text-decoration:none;display:block">
-          <div style="font-size:0.55rem;color:#8A8A96;font-weight:700;margin-bottom:0.1rem">Lv.6 統合</div>
+          <div style="font-size:0.55rem;color:#6C6C79;font-weight:700;margin-bottom:0.1rem">Lv.6 統合</div>
           <div style="font-size:0.68rem;color:#4A4A55;line-height:1.3">オーケストレーター</div>
         </a>
         <a href="/blog/ai-agent-management-platform" style="flex:1 1 68px;background:#F0F0EC;padding:0.45rem 0.6rem;border-radius:3px;text-decoration:none;display:block">
-          <div style="font-size:0.55rem;color:#8A8A96;font-weight:700;margin-bottom:0.1rem">Lv.7 管理</div>
+          <div style="font-size:0.55rem;color:#6C6C79;font-weight:700;margin-bottom:0.1rem">Lv.7 管理</div>
           <div style="font-size:0.68rem;color:#4A4A55;line-height:1.3">AMP</div>
         </a>
       </div>
@@ -390,25 +390,28 @@ article li { margin-bottom: 0.5rem; }
 
     <!-- CTA -->
     <div class="mt-16 bg-navy text-white px-8 py-10 text-center">
-      <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold/80 mb-3">Consulting</p>
+      <p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3">Consulting</p>
       <h2 class="text-[1.2rem] font-medium mb-4 leading-snug">AIエージェントのID管理設計と<br>ゼロトラスト実装を Wing がご支援します</h2>
       <p class="text-[.82rem] text-white/70 leading-relaxed mb-6">NHI管理ポリシーの策定からIAMツール選定、JITアクセス実装、オフボーディング自動化まで。エージェントセキュリティの専門家が伴走します。</p>
-      <a href="/#contact" class="inline-block bg-gold text-white text-[.78rem] font-medium tracking-wider px-7 py-3 hover:bg-gold-light transition-colors">無料相談を予約する →</a>
+      <div>
+      <a href="/#contact" class="inline-block bg-gold-deep text-white text-[.78rem] font-medium tracking-wider px-7 py-3 hover:bg-gold-deeper transition-colors">無料相談を予約する →</a>
+      </div>
     </div>
 
     <!-- Series Next -->
     <div style="margin-top:2.5rem;padding:1.2rem 1.4rem;background:#F8F5ED;border:1px solid #E2E0DA">
-      <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#A8965A;margin-bottom:0.6rem">Next in Series</div>
+      <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#7A6D40;margin-bottom:0.6rem">Next in Series</div>
       <a href="/blog/guardian-agents-ai-oversight" style="text-decoration:none;display:flex;align-items:center;gap:0.8rem">
         <div style="background:#0F2342;color:#A8965A;font-size:0.65rem;font-weight:700;padding:0.3rem 0.5rem;white-space:nowrap;border-radius:2px">Lv.5</div>
         <div>
           <div style="font-size:0.85rem;font-weight:700;color:#0F2342;line-height:1.4">ガーディアンエージェント：AI監視・制御の新パラダイムとGartner AI TRiSMフレームワーク</div>
-          <div style="font-size:0.72rem;color:#8A8A96;margin-top:0.2rem">AIエージェントを「別のAI」で監視するアーキテクチャを解説 →</div>
+          <div style="font-size:0.72rem;color:#6C6C79;margin-top:0.2rem">AIエージェントを「別のAI」で監視するアーキテクチャを解説 →</div>
         </div>
       </a>
     </div>
   </div>
 </main>
+<aside aria-label="関連する案内">
 <!-- assessment-cta (auto) -->
 <section style="max-width:800px;margin:3rem auto 0;padding:0 1.5rem;font-family:'Noto Sans JP',sans-serif;">
   <div style="border:1px solid #E8E5DE;border-left:3px solid #A98A4B;background:#FBFAF7;padding:1.5rem 1.6rem;">
@@ -417,8 +420,9 @@ article li { margin-bottom: 0.5rem; }
     <a href="/dx-assessment" style="display:inline-block;background:#14181F;color:#fff;font-size:.8rem;font-weight:700;letter-spacing:.04em;padding:.85rem 1.7rem;text-decoration:none;">無料診断を受ける（5分・登録不要）</a>
   </div>
 </section>
+</aside>
 <footer class="mt-20 border-t border-[#E2E0DA] py-10 px-6 md:px-10 text-center">
-  <a href="/" class="inline-block mb-4">
+  <a href="/" class="inline-block mb-4" aria-label="Wing トップページへ">
     <svg width="80" height="24" viewBox="0 0 120 36" fill="none">
       <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#0F2342"/>
       <path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#0F2342" opacity=".32"/>

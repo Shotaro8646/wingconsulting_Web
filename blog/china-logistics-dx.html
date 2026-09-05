@@ -74,7 +74,7 @@
   --navy: #1A2E5A;
   --navy-light: #2A4A7A;
   --navy-pale: #E8EDF4;
-  --gold: #917816;
+  --gold: #826B14;
   --gold-light: #C4A82A;
   --gold-pale: #F5F0DC;
   --dark: #1a1a1a;
@@ -298,7 +298,7 @@ body {
   justify-content: center;
   margin-bottom: 16px;
 }
-.robot-card h4 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+.robot-card h4{ font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
 .robot-card .maker { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
 .robot-card .desc { font-size: 13px; color: var(--body); line-height: 1.7; }
 .robot-card .stat { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); font-size: 13px; font-weight: 700; color: var(--china-red); }
@@ -349,9 +349,9 @@ body {
   font-weight: 900;
   color: var(--muted);
 }
-.vs-side h4 { font-size: 15px; font-weight: 700; margin-bottom: 12px; }
-.vs-side.china h4 { color: var(--china-red); }
-.vs-side.japan h4 { color: var(--navy); }
+.vs-side h4{ font-size: 15px; font-weight: 700; margin-bottom: 12px; }
+.vs-side.china h4{ color: var(--china-red); }
+.vs-side.japan h4{ color: var(--navy); }
 .vs-side ul { list-style: none; font-size: 13px; line-height: 2; }
 .vs-side ul li::before { content: '•'; margin-right: 8px; font-weight: 700; }
 .vs-side.china ul li::before { color: var(--china-red); }
@@ -498,7 +498,7 @@ body {
   font-size: 20px;
   font-weight: 900;
 }
-.takeaway-content h4 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 8px; line-height: 1.5; }
+.takeaway-content h4{ font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 8px; line-height: 1.5; }
 .takeaway-content p { font-size: 14px; line-height: 1.8; margin-bottom: 0; }
 
 /* ===== CALLOUT ===== */
@@ -558,7 +558,7 @@ body {
   padding-top: 24px;
   border-top: 1px solid var(--border);
 }
-.references h4 { font-size: 13px; color: var(--muted); font-weight: 700; letter-spacing: 0.05em; margin-bottom: 12px; }
+.references h4{ font-size: 13px; color: var(--muted); font-weight: 700; letter-spacing: 0.05em; margin-bottom: 12px; }
 .references ul { list-style: none; font-size: 12px; color: var(--muted); line-height: 2; }
 
 /* ===== RESPONSIVE ===== */
@@ -840,7 +840,8 @@ body {
 <rect fill="#FDE8E8" height="1.5" rx="0.5" width="2" x="17" y="9"></rect>
 </svg>
 </div>
-<h4>AgiBot A2-W</h4>
+<!-- 見た目は h4 のまま、読み上げの段だけ h3 にしている（h2 の直下に h4 が来る段飛ばしを解消するため。h3 に変えると大きさと余白が変わる） -->
+<h4 role="heading" aria-level="3">AgiBot A2-W</h4>
 <p class="maker" data-ja="智元ロボット（上海）" data-en="智元ロボット（上海）">智元ロボット（上海）</p>
 <p class="desc" data-ja="世界シェア39%のトップ企業。工業用A2-Wは倉庫・工場向けに特化。「WorkGPT」搭載。" data-en="世界シェア39%のトップ企業。工業用A2-Wは倉庫・工場向けに特化。「WorkGPT」搭載。">世界シェア39%のトップ企業。工業用A2-Wは倉庫・工場向けに特化。「WorkGPT」搭載。</p>
 <div class="stat" data-ja="5,100台出荷 ｜ 15kg可搬/片腕" data-en="5,100台出荷 ｜ 15kg可搬/片腕">5,100台出荷 ｜ 15kg可搬/片腕</div>
@@ -885,7 +886,7 @@ body {
 <line stroke="#1ABC9C" stroke-linecap="round" stroke-width="2" x1="19" x2="20" y1="22" y2="28"></line>
 </svg>
 </div>
-<h4>Unitree H1/G1</h4>
+<h4 role="heading" aria-level="3">Unitree H1/G1</h4>
 <p class="maker" data-ja="宇樹科技（杭州）" data-en="宇樹科技（杭州）">宇樹科技（杭州）</p>
 <p class="desc" data-ja="圧倒的な低価格で研究・教育・消費者市場を席巻。運動制御技術に定評あり。" data-en="圧倒的な低価格で研究・教育・消費者市場を席巻。運動制御技術に定評あり。">圧倒的な低価格で研究・教育・消費者市場を席巻。運動制御技術に定評あり。</p>
 <div class="stat" data-ja="4,200〜5,500台出荷" data-en="4,200〜5,500台出荷">4,200〜5,500台出荷</div>
@@ -933,7 +934,7 @@ body {
 <rect fill="#2980B9" height="3" opacity="0.5" rx="1" width="5" x="8" y="18"></rect>
 </svg>
 </div>
-<h4>Walker S</h4>
+<h4 role="heading" aria-level="3">Walker S</h4>
 <p class="maker" data-ja="UBTECH 優必選（深セン）" data-en="UBTECH 優必選（深セン）">UBTECH 優必選（深セン）</p>
 <p class="desc" data-ja="自動車製造ライン統合に強み。SFエクスプレスと物流現場での実証を推進中。" data-en="自動車製造ライン統合に強み。SFエクスプレスと物流現場での実証を推進中。">自動車製造ライン統合に強み。SFエクスプレスと物流現場での実証を推進中。</p>
 <div class="stat" data-ja="デパレタイズ成功率 95%+" data-en="デパレタイズ成功率 95%+">デパレタイズ成功率 95%+</div>
@@ -946,7 +947,7 @@ body {
 <h2 data-ja="3. 自動運転トラック：「段階的実装」で圧倒的データを蓄積" data-en="3. 自動運転トラック：「段階的実装」で圧倒的データを蓄積">3. 自動運転トラック：「段階的実装」で圧倒的データを蓄積</h2>
 <p data-ja="米国が自律走行トラックの法規制で州ごとの「パッチワーク」に苦しんでいる間に、中国のInceptio Technology（嬴徹科技）は極めて現実的なアプローチで市場をリードしている。" data-en="米国が自律走行トラックの法規制で州ごとの「パッチワーク」に苦しんでいる間に、中国のInceptio Technology（嬴徹科技）は極めて現実的なアプローチで市場をリードしている。">米国が自律走行トラックの法規制で州ごとの「パッチワーク」に苦しんでいる間に、中国のInceptio Technology（嬴徹科技）は極めて現実的なアプローチで市場をリードしている。</p>
 <p data-ja-html="彼らの戦略は明快だ。完全無人のレベル4に一気に飛ぶのではなく、まずレベル2+/3の自動運転システムを大規模に商用展開し、そこから得られる膨大な走行データでレベル4を完成させる。2025年11月時点で、&lt;strong&gt;4,000台以上が商業運用中、累計走行距離は4億km超&lt;/strong&gt;。" data-en-html="彼らの戦略は明快だ。完全無人のレベル4に一気に飛ぶのではなく、まずレベル2+/3の自動運転システムを大規模に商用展開し、そこから得られる膨大な走行データでレベル4を完成させる。2025年11月時点で、&lt;strong&gt;4,000台以上が商業運用中、累計走行距離は4億km超&lt;/strong&gt;。">彼らの戦略は明快だ。完全無人のレベル4に一気に飛ぶのではなく、まずレベル2+/3の自動運転システムを大規模に商用展開し、そこから得られる膨大な走行データでレベル4を完成させる。2025年11月時点で、<strong>4,000台以上が商業運用中、累計走行距離は4億km超</strong>。</p>
-<div class="data-table-wrap" data-ja-html="&lt;table class=&quot;data-table&quot;&gt;
+<div class="data-table-wrap" tabindex="0" role="region" aria-label="中国と日本の物流指標の比較表（横にスクロールできます）" data-ja-html="&lt;table class=&quot;data-table&quot;&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th data-ja=&quot;運用指標&quot;&gt;運用指標&lt;/th&gt;
@@ -1389,7 +1390,7 @@ body {
 &lt;li&gt;社会物流コスト/GDP比を毎年改善&lt;/li&gt;
 &lt;li&gt;グローバル7カ国にAIロボット倉庫展開&lt;/li&gt;
 &lt;/ul&gt;">
-<h4 data-ja="中国の現在地（2025-2026）" data-en="中国の現在地（2025-2026）">中国の現在地（2025-2026）</h4>
+<h4 role="heading" aria-level="3" data-ja="中国の現在地（2025-2026）" data-en="中国の現在地（2025-2026）">中国の現在地（2025-2026）</h4>
 <ul>
 <li data-ja="ヒューマノイド年間出荷1万台超" data-en="ヒューマノイド年間出荷1万台超">ヒューマノイド年間出荷1万台超</li>
 <li data-ja="自動運転トラック4,000台商用稼働" data-en="自動運転トラック4,000台商用稼働">自動運転トラック4,000台商用稼働</li>
@@ -1417,7 +1418,7 @@ body {
 &lt;li&gt;「2024年問題」への対応が最優先課題&lt;/li&gt;
 &lt;li&gt;海外物流は3PL委託が中心&lt;/li&gt;
 &lt;/ul&gt;">
-<h4 data-ja="日本の典型的な現場" data-en="日本の典型的な現場">日本の典型的な現場</h4>
+<h4 role="heading" aria-level="3" data-ja="日本の典型的な現場" data-en="日本の典型的な現場">日本の典型的な現場</h4>
 <ul>
 <li data-ja="AMR導入は大手の一部に限定" data-en="AMR導入は大手の一部に限定">AMR導入は大手の一部に限定</li>
 <li data-ja="長距離輸送の自動化は実証実験段階" data-en="長距離輸送の自動化は実証実験段階">長距離輸送の自動化は実証実験段階</li>
@@ -1499,7 +1500,7 @@ body {
 <div class="takeaway-content" data-ja-html='&lt;h4&gt;「中国は安いだけ」という認識を捨てる&lt;/h4&gt;
 &lt;p data-ja="中国物流の競争力は、もはや人件費の安さではなく、AI・ロボティクスの垂直統合と、それを社会実装する速度にある。この認識を経営層と共有できていなければ、競争環境の変化に対する意思決定が遅れる。まず、本稿で示したデータを社内の戦略議論に持ち込むことから始めてほしい。" data-en="中国物流の競争力は、もはや人件費の安さではなく、AI・ロボティクスの垂直統合と、それを社会実装する速度にある。この認識を経営層と共有できていなければ、競争環境の変化に対する意思決定が遅れる。まず、本稿で示したデータを社内の戦略議論に持ち込むことから始めてほしい。"&gt;中国物流の競争力は、もはや人件費の安さではなく、AI・ロボティクスの垂直統合と、それを社会実装する速度にある。この認識を経営層と共有できていなければ、競争環境の変化に対する意思決定が遅れる。まず、本稿で示したデータを社内の戦略議論に持ち込むことから始めてほしい。&lt;/p&gt;' data-en-html='&lt;h4&gt;「中国は安いだけ」という認識を捨てる&lt;/h4&gt;
 &lt;p data-ja="中国物流の競争力は、もはや人件費の安さではなく、AI・ロボティクスの垂直統合と、それを社会実装する速度にある。この認識を経営層と共有できていなければ、競争環境の変化に対する意思決定が遅れる。まず、本稿で示したデータを社内の戦略議論に持ち込むことから始めてほしい。" data-en="中国物流の競争力は、もはや人件費の安さではなく、AI・ロボティクスの垂直統合と、それを社会実装する速度にある。この認識を経営層と共有できていなければ、競争環境の変化に対する意思決定が遅れる。まず、本稿で示したデータを社内の戦略議論に持ち込むことから始めてほしい。"&gt;中国物流の競争力は、もはや人件費の安さではなく、AI・ロボティクスの垂直統合と、それを社会実装する速度にある。この認識を経営層と共有できていなければ、競争環境の変化に対する意思決定が遅れる。まず、本稿で示したデータを社内の戦略議論に持ち込むことから始めてほしい。&lt;/p&gt;'>
-<h4 data-ja="「中国は安いだけ」という認識を捨てる" data-en="「中国は安いだけ」という認識を捨てる">「中国は安いだけ」という認識を捨てる</h4>
+<h4 role="heading" aria-level="3" data-ja="「中国は安いだけ」という認識を捨てる" data-en="「中国は安いだけ」という認識を捨てる">「中国は安いだけ」という認識を捨てる</h4>
 <p data-ja="中国物流の競争力は、もはや人件費の安さではなく、AI・ロボティクスの垂直統合と、それを社会実装する速度にある。この認識を経営層と共有できていなければ、競争環境の変化に対する意思決定が遅れる。まず、本稿で示したデータを社内の戦略議論に持ち込むことから始めてほしい。" data-en="中国物流の競争力は、もはや人件費の安さではなく、AI・ロボティクスの垂直統合と、それを社会実装する速度にある。この認識を経営層と共有できていなければ、競争環境の変化に対する意思決定が遅れる。まず、本稿で示したデータを社内の戦略議論に持ち込むことから始めてほしい。">中国物流の競争力は、もはや人件費の安さではなく、AI・ロボティクスの垂直統合と、それを社会実装する速度にある。この認識を経営層と共有できていなければ、競争環境の変化に対する意思決定が遅れる。まず、本稿で示したデータを社内の戦略議論に持ち込むことから始めてほしい。</p>
 </div>
 </div>
@@ -1516,7 +1517,7 @@ body {
 <div class="takeaway-content" data-ja-html='&lt;h4&gt;「チャイナ・プラスワン」の物流設計を自社の強みに変える&lt;/h4&gt;
 &lt;p data-ja="地政学リスクにより、ベトナム・カンボジア等を経由するサプライチェーンの再配置が加速している。この複雑化する物流ルートの設計・最適化こそ、日本の物流企業が付加価値を発揮できる領域だ。単なる「運ぶ」から「サプライチェーン全体を設計する」への転換が求められる。" data-en="地政学リスクにより、ベトナム・カンボジア等を経由するサプライチェーンの再配置が加速している。この複雑化する物流ルートの設計・最適化こそ、日本の物流企業が付加価値を発揮できる領域だ。単なる「運ぶ」から「サプライチェーン全体を設計する」への転換が求められる。"&gt;地政学リスクにより、ベトナム・カンボジア等を経由するサプライチェーンの再配置が加速している。この複雑化する物流ルートの設計・最適化こそ、日本の物流企業が付加価値を発揮できる領域だ。単なる「運ぶ」から「サプライチェーン全体を設計する」への転換が求められる。&lt;/p&gt;' data-en-html='&lt;h4&gt;「チャイナ・プラスワン」の物流設計を自社の強みに変える&lt;/h4&gt;
 &lt;p data-ja="地政学リスクにより、ベトナム・カンボジア等を経由するサプライチェーンの再配置が加速している。この複雑化する物流ルートの設計・最適化こそ、日本の物流企業が付加価値を発揮できる領域だ。単なる「運ぶ」から「サプライチェーン全体を設計する」への転換が求められる。" data-en="地政学リスクにより、ベトナム・カンボジア等を経由するサプライチェーンの再配置が加速している。この複雑化する物流ルートの設計・最適化こそ、日本の物流企業が付加価値を発揮できる領域だ。単なる「運ぶ」から「サプライチェーン全体を設計する」への転換が求められる。"&gt;地政学リスクにより、ベトナム・カンボジア等を経由するサプライチェーンの再配置が加速している。この複雑化する物流ルートの設計・最適化こそ、日本の物流企業が付加価値を発揮できる領域だ。単なる「運ぶ」から「サプライチェーン全体を設計する」への転換が求められる。&lt;/p&gt;'>
-<h4 data-ja="「チャイナ・プラスワン」の物流設計を自社の強みに変える" data-en="「チャイナ・プラスワン」の物流設計を自社の強みに変える">「チャイナ・プラスワン」の物流設計を自社の強みに変える</h4>
+<h4 role="heading" aria-level="3" data-ja="「チャイナ・プラスワン」の物流設計を自社の強みに変える" data-en="「チャイナ・プラスワン」の物流設計を自社の強みに変える">「チャイナ・プラスワン」の物流設計を自社の強みに変える</h4>
 <p data-ja="地政学リスクにより、ベトナム・カンボジア等を経由するサプライチェーンの再配置が加速している。この複雑化する物流ルートの設計・最適化こそ、日本の物流企業が付加価値を発揮できる領域だ。単なる「運ぶ」から「サプライチェーン全体を設計する」への転換が求められる。" data-en="地政学リスクにより、ベトナム・カンボジア等を経由するサプライチェーンの再配置が加速している。この複雑化する物流ルートの設計・最適化こそ、日本の物流企業が付加価値を発揮できる領域だ。単なる「運ぶ」から「サプライチェーン全体を設計する」への転換が求められる。">地政学リスクにより、ベトナム・カンボジア等を経由するサプライチェーンの再配置が加速している。この複雑化する物流ルートの設計・最適化こそ、日本の物流企業が付加価値を発揮できる領域だ。単なる「運ぶ」から「サプライチェーン全体を設計する」への転換が求められる。</p>
 </div>
 </div>
@@ -1533,7 +1534,7 @@ body {
 <div class="takeaway-content" data-ja-html='&lt;h4&gt;自動化投資の「判断基準」を持つ&lt;/h4&gt;
 &lt;p data-ja="中国のInceptioが示した「10〜24ヶ月のROI」は、自動化投資の判断基準として極めて参考になる。自社の現場で最もコストがかかっている工程を特定し、自動化した場合のROIを算出する。2年以内に回収できるなら、それは「将来への投資」ではなく「今やるべき経営判断」だ。" data-en="中国のInceptioが示した「10〜24ヶ月のROI」は、自動化投資の判断基準として極めて参考になる。自社の現場で最もコストがかかっている工程を特定し、自動化した場合のROIを算出する。2年以内に回収できるなら、それは「将来への投資」ではなく「今やるべき経営判断」だ。"&gt;中国のInceptioが示した「10〜24ヶ月のROI」は、自動化投資の判断基準として極めて参考になる。自社の現場で最もコストがかかっている工程を特定し、自動化した場合のROIを算出する。2年以内に回収できるなら、それは「将来への投資」ではなく「今やるべき経営判断」だ。&lt;/p&gt;' data-en-html='&lt;h4&gt;自動化投資の「判断基準」を持つ&lt;/h4&gt;
 &lt;p data-ja="中国のInceptioが示した「10〜24ヶ月のROI」は、自動化投資の判断基準として極めて参考になる。自社の現場で最もコストがかかっている工程を特定し、自動化した場合のROIを算出する。2年以内に回収できるなら、それは「将来への投資」ではなく「今やるべき経営判断」だ。" data-en="中国のInceptioが示した「10〜24ヶ月のROI」は、自動化投資の判断基準として極めて参考になる。自社の現場で最もコストがかかっている工程を特定し、自動化した場合のROIを算出する。2年以内に回収できるなら、それは「将来への投資」ではなく「今やるべき経営判断」だ。"&gt;中国のInceptioが示した「10〜24ヶ月のROI」は、自動化投資の判断基準として極めて参考になる。自社の現場で最もコストがかかっている工程を特定し、自動化した場合のROIを算出する。2年以内に回収できるなら、それは「将来への投資」ではなく「今やるべき経営判断」だ。&lt;/p&gt;'>
-<h4 data-ja="自動化投資の「判断基準」を持つ" data-en="自動化投資の「判断基準」を持つ">自動化投資の「判断基準」を持つ</h4>
+<h4 role="heading" aria-level="3" data-ja="自動化投資の「判断基準」を持つ" data-en="自動化投資の「判断基準」を持つ">自動化投資の「判断基準」を持つ</h4>
 <p data-ja="中国のInceptioが示した「10〜24ヶ月のROI」は、自動化投資の判断基準として極めて参考になる。自社の現場で最もコストがかかっている工程を特定し、自動化した場合のROIを算出する。2年以内に回収できるなら、それは「将来への投資」ではなく「今やるべき経営判断」だ。" data-en="中国のInceptioが示した「10〜24ヶ月のROI」は、自動化投資の判断基準として極めて参考になる。自社の現場で最もコストがかかっている工程を特定し、自動化した場合のROIを算出する。2年以内に回収できるなら、それは「将来への投資」ではなく「今やるべき経営判断」だ。">中国のInceptioが示した「10〜24ヶ月のROI」は、自動化投資の判断基準として極めて参考になる。自社の現場で最もコストがかかっている工程を特定し、自動化した場合のROIを算出する。2年以内に回収できるなら、それは「将来への投資」ではなく「今やるべき経営判断」だ。</p>
 </div>
 </div>
@@ -1550,7 +1551,7 @@ body {
 <div class="takeaway-content" data-ja-html='&lt;h4&gt;菜鳥・京東が来る前に、荷主との関係を「OS」レベルに深化させる&lt;/h4&gt;
 &lt;p data-ja="中国の物流大手が提供しているのは「倉庫サービス」ではなく「物流OS」だ。AIによる需要予測、在庫最適化、配送ルート設計までが一体化されたプラットフォームに荷主が乗れば、切り替えコストは極めて高くなる。日本の物流企業も、単なる「委託先」から「荷主の意思決定に不可欠なデータパートナー」へとポジションを上げる必要がある。" data-en="中国の物流大手が提供しているのは「倉庫サービス」ではなく「物流OS」だ。AIによる需要予測、在庫最適化、配送ルート設計までが一体化されたプラットフォームに荷主が乗れば、切り替えコストは極めて高くなる。日本の物流企業も、単なる「委託先」から「荷主の意思決定に不可欠なデータパートナー」へとポジションを上げる必要がある。"&gt;中国の物流大手が提供しているのは「倉庫サービス」ではなく「物流OS」だ。AIによる需要予測、在庫最適化、配送ルート設計までが一体化されたプラットフォームに荷主が乗れば、切り替えコストは極めて高くなる。日本の物流企業も、単なる「委託先」から「荷主の意思決定に不可欠なデータパートナー」へとポジションを上げる必要がある。&lt;/p&gt;' data-en-html='&lt;h4&gt;菜鳥・京東が来る前に、荷主との関係を「OS」レベルに深化させる&lt;/h4&gt;
 &lt;p data-ja="中国の物流大手が提供しているのは「倉庫サービス」ではなく「物流OS」だ。AIによる需要予測、在庫最適化、配送ルート設計までが一体化されたプラットフォームに荷主が乗れば、切り替えコストは極めて高くなる。日本の物流企業も、単なる「委託先」から「荷主の意思決定に不可欠なデータパートナー」へとポジションを上げる必要がある。" data-en="中国の物流大手が提供しているのは「倉庫サービス」ではなく「物流OS」だ。AIによる需要予測、在庫最適化、配送ルート設計までが一体化されたプラットフォームに荷主が乗れば、切り替えコストは極めて高くなる。日本の物流企業も、単なる「委託先」から「荷主の意思決定に不可欠なデータパートナー」へとポジションを上げる必要がある。"&gt;中国の物流大手が提供しているのは「倉庫サービス」ではなく「物流OS」だ。AIによる需要予測、在庫最適化、配送ルート設計までが一体化されたプラットフォームに荷主が乗れば、切り替えコストは極めて高くなる。日本の物流企業も、単なる「委託先」から「荷主の意思決定に不可欠なデータパートナー」へとポジションを上げる必要がある。&lt;/p&gt;'>
-<h4 data-ja="菜鳥・京東が来る前に、荷主との関係を「OS」レベルに深化させる" data-en="菜鳥・京東が来る前に、荷主との関係を「OS」レベルに深化させる">菜鳥・京東が来る前に、荷主との関係を「OS」レベルに深化させる</h4>
+<h4 role="heading" aria-level="3" data-ja="菜鳥・京東が来る前に、荷主との関係を「OS」レベルに深化させる" data-en="菜鳥・京東が来る前に、荷主との関係を「OS」レベルに深化させる">菜鳥・京東が来る前に、荷主との関係を「OS」レベルに深化させる</h4>
 <p data-ja="中国の物流大手が提供しているのは「倉庫サービス」ではなく「物流OS」だ。AIによる需要予測、在庫最適化、配送ルート設計までが一体化されたプラットフォームに荷主が乗れば、切り替えコストは極めて高くなる。日本の物流企業も、単なる「委託先」から「荷主の意思決定に不可欠なデータパートナー」へとポジションを上げる必要がある。" data-en="中国の物流大手が提供しているのは「倉庫サービス」ではなく「物流OS」だ。AIによる需要予測、在庫最適化、配送ルート設計までが一体化されたプラットフォームに荷主が乗れば、切り替えコストは極めて高くなる。日本の物流企業も、単なる「委託先」から「荷主の意思決定に不可欠なデータパートナー」へとポジションを上げる必要がある。">中国の物流大手が提供しているのは「倉庫サービス」ではなく「物流OS」だ。AIによる需要予測、在庫最適化、配送ルート設計までが一体化されたプラットフォームに荷主が乗れば、切り替えコストは極めて高くなる。日本の物流企業も、単なる「委託先」から「荷主の意思決定に不可欠なデータパートナー」へとポジションを上げる必要がある。</p>
 </div>
 </div>
@@ -1602,7 +1603,7 @@ body {
 &lt;li&gt;USTR / 中国交通運輸部 — 関税・港湾手数料に関する各種発表&lt;/li&gt;
 &lt;li&gt;重慶市政府 — 低空経済産業クラスターレポート&lt;/li&gt;
 &lt;/ul&gt;">
-<h4 data-ja="参考文献" data-en="参考文献">参考文献</h4>
+<h4 role="heading" aria-level="3" data-ja="参考文献" data-en="参考文献">参考文献</h4>
 <ul>
 <li>Mordor Intelligence — China Freight &amp; Logistics Market (2025-2030)</li>
 <li data-ja="中国国家発展改革委員会 — 第14次五カ年計画 インフラ目標" data-en="中国国家発展改革委員会 — 第14次五カ年計画 インフラ目標">中国国家発展改革委員会 — 第14次五カ年計画 インフラ目標</li>
@@ -1626,13 +1627,13 @@ body {
 </section>
 <!-- related-articles (auto) -->
 <section style="max-width:800px;margin:3.5rem auto 0;padding:2rem 1.5rem 0;border-top:1px solid #E5E7EB;font-family:'Noto Sans JP',sans-serif;">
-  <p style="font-family:'Outfit','Noto Sans JP',sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#B8A882;margin:0 0 .7rem;">Related</p>
+  <p style="font-family:'Outfit','Noto Sans JP',sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#7A6B3E;margin:0 0 .7rem;">Related</p>
   <h2 style="font-size:1.15rem;font-weight:500;color:#1A1A1F;margin:0 0 1.3rem;">関連記事</h2>
   <div style="display:grid;gap:.8rem;">
-    <a href="/blog/logistics-dx" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">物流DXとは？倉庫自動化・AIロボット活用で変わる物流現場の最新動向</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
-    <a href="/blog/supply-chain-resilience-ai" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">地政学リスクに備える「サプライチェーン強靱化」：AI需要予測とグローバル貿易の再構築戦略</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
-    <a href="/blog/trade-dx-complete-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">貿易DX完全ガイド｜輸入・輸出業務の課題とAI活用の全体像</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
-    <a href="/blog/trade-dx-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">貿易業務のデジタル化（貿易DX）入門｜中小商社が今すぐ着手すべき理由と進め方</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/logistics-dx" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">物流DXとは？倉庫自動化・AIロボット活用で変わる物流現場の最新動向</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/supply-chain-resilience-ai" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">地政学リスクに備える「サプライチェーン強靱化」：AI需要予測とグローバル貿易の再構築戦略</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/trade-dx-complete-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">貿易DX完全ガイド｜輸入・輸出業務の課題とAI活用の全体像</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/trade-dx-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">貿易業務のデジタル化（貿易DX）入門｜中小商社が今すぐ着手すべき理由と進め方</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
   </div>
   <p style="margin:1.5rem 0 0;"><a href="/blog/" style="font-family:'Outfit','Noto Sans JP',sans-serif;font-size:.8rem;letter-spacing:.03em;color:#1E4E7E;text-decoration:none;">すべての記事を見る →</a></p>
 </section>

@@ -53,9 +53,9 @@ tailwind.config = {
     extend: {
       colors: {
         navy: { DEFAULT: '#0F2342', dark: '#081830' },
-        gold: { DEFAULT: '#A8965A', light: '#C4AD72', muted: '#7A6B3E', pale: '#F8F5ED', mid: '#B8A560' },
+        gold: { DEFAULT: '#A8965A', deep: '#7A6D40', deeper: '#635834', light: '#C4AD72', muted: '#7A6B3E', pale: '#F8F5ED', mid: '#B8A560' },
         slate: { warm: '#F7F6F3', cool: '#EEECe7' },
-        ink: { DEFAULT: '#1A1A1F', mid: '#4A4A55', light: '#8A8A96' },
+        ink: { DEFAULT: '#1A1A1F', mid: '#4A4A55', light: '#6C6C79' },
       },
       fontFamily: {
         serif: ['"Yu Gothic"', '"YuGothic"', 'sans-serif'],
@@ -77,8 +77,8 @@ article p { margin-bottom: 1.2rem; }
 article ul { margin-bottom: 1.2rem; padding-left: 1.5rem; }
 article li { margin-bottom: 0.5rem; }
 .diag-wrap { background:#fff; border:1px solid #E2E0DA; border-top:3px solid #A8965A; padding:1.4rem 1.5rem 1rem; margin:1.6rem 0 0.5rem; font-size:0.85rem; }
-.diag-caption { text-align:center; font-size:0.72rem; color:#8A8A96; margin-top:0.5rem; margin-bottom:1.4rem; }
-.diag-label { font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#A8965A; margin-bottom:0.8rem; }
+.diag-caption { text-align:center; font-size:0.72rem; color:#6C6C79; margin-top:0.5rem; margin-bottom:1.4rem; }
+.diag-label { font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#7A6D40; margin-bottom:0.8rem; }
 .diag-step-row { display:flex; flex-wrap:wrap; gap:0.7rem; }
 .diag-step-card { flex:1 1 140px; background:#fff; border:1px solid #E2E0DA; padding:0.9rem; position:relative; }
 .diag-step-card .step-num { width:28px; height:28px; background:#0F2342; color:#A8965A; font-size:0.78rem; font-weight:700; display:flex; align-items:center; justify-content:center; margin-bottom:0.55rem; }
@@ -89,13 +89,13 @@ article li { margin-bottom: 0.5rem; }
 .compare-table td { padding:0.6rem 0.8rem; border-bottom:1px solid #E2E0DA; vertical-align:top; line-height:1.55; }
 .compare-table tr:nth-child(even) td { background:#F8F5ED; }
 .insight-box { background:#F0F7F0; border-left:3px solid #5A9A6A; padding:1rem 1.2rem; margin:1.4rem 0; font-size:0.83rem; line-height:1.7; }
-.insight-box .insight-label { font-size:0.65rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#5A9A6A; margin-bottom:0.4rem; }
+.insight-box .insight-label { font-size:0.65rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#487B55; margin-bottom:0.4rem; }
 .warn-box { background:#FFF8F0; border-left:3px solid #C45C3A; padding:1rem 1.2rem; margin:1.4rem 0; font-size:0.83rem; line-height:1.7; }
-.warn-box .warn-label { font-size:0.65rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#C45C3A; margin-bottom:0.4rem; }
+.warn-box .warn-label { font-size:0.65rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#B55536; margin-bottom:0.4rem; }
 .kpi-row { display:flex; flex-wrap:wrap; gap:0.8rem; margin:1.2rem 0; }
 .kpi-item { flex:1 1 150px; background:#fff; border:1px solid #E2E0DA; border-top:3px solid #A8965A; padding:0.9rem 1rem; }
 .kpi-item .kpi-val { font-size:1.4rem; font-weight:700; color:#0F2342; line-height:1.1; margin-bottom:0.25rem; }
-.kpi-item .kpi-label { font-size:0.7rem; color:#8A8A96; line-height:1.4; }
+.kpi-item .kpi-label { font-size:0.7rem; color:#6C6C79; line-height:1.4; }
 </style>
 <!-- Google Analytics GA4 -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
@@ -131,7 +131,7 @@ article li { margin-bottom: 0.5rem; }
 </header>
 <main class="py-16 px-6 md:px-10">
 <div class="max-w-3xl mx-auto">
-<p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3">B2B Marketing / SaaS Strategy</p>
+<p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold-deep mb-3">B2B Marketing / SaaS Strategy</p>
 <h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4">B2B SaaS KPI完全ガイド：<br/>LTV:CAC・NRRとインテントデータ活用で営業効率を最大化する</h1>
 <div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2">
 <time datetime="2026-03-29">2026.03.29</time>
@@ -246,14 +246,17 @@ article li { margin-bottom: 0.5rem; }
 </article>
 <!-- CTA -->
 <div class="mt-16 bg-navy text-white px-8 py-10 text-center">
-<p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold/80 mb-3">Consulting</p>
+<p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3">Consulting</p>
 <h2 class="text-[1.2rem] font-medium mb-4 leading-snug">B2B SaaS のKPI設計・インテントデータ活用を<br/>Wing がご支援します</h2>
 <p class="text-[.82rem] text-white/70 leading-relaxed mb-6" data-en="From KPI design for LTV:CAC improvement, NRR enhancement, and SQL conversion maximization to intent data utilization. Wing builds data-driven sales and marketing operations." data-ja="LTV:CAC改善、NRR向上、SQL転換率最大化のためのKPI設計からインテントデータ活用まで。Wing がデータドリブンな営業・マーケ体制を構築します。">LTV:CAC改善、NRR向上、SQL転換率最大化のためのKPI設計からインテントデータ活用まで。Wing がデータドリブンな営業・マーケ体制を構築します。</p>
-<a class="inline-block bg-gold text-white text-[.78rem] font-medium tracking-wider px-7 py-3 hover:bg-gold-light transition-colors" data-en="Book a Free Consultation →" data-ja="無料相談を予約する →" href="/#contact">無料相談を予約する →</a>
+<div>
+<a class="inline-block bg-gold-deep text-white text-[.78rem] font-medium tracking-wider px-7 py-3 hover:bg-gold-deeper transition-colors" data-en="Book a Free Consultation →" data-ja="無料相談を予約する →" href="/#contact">無料相談を予約する →</a>
 </div>
 </div>
-</main>
+</div>
 
+</main>
+<aside aria-label="関連する案内">
 <!-- assessment-cta (auto) -->
 <section style="max-width:800px;margin:3rem auto 0;padding:0 1.5rem;font-family:'Noto Sans JP',sans-serif;">
   <div style="border:1px solid #E8E5DE;border-left:3px solid #A98A4B;background:#FBFAF7;padding:1.5rem 1.6rem;">
@@ -264,18 +267,19 @@ article li { margin-bottom: 0.5rem; }
 </section>
 <!-- related-articles (auto) -->
 <section style="max-width:800px;margin:3.5rem auto 0;padding:2rem 1.5rem 0;border-top:1px solid #E5E7EB;font-family:'Noto Sans JP',sans-serif;">
-  <p style="font-family:'Outfit','Noto Sans JP',sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#B8A882;margin:0 0 .7rem;">Related</p>
+  <p style="font-family:'Outfit','Noto Sans JP',sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#7A6B3E;margin:0 0 .7rem;">Related</p>
   <h2 style="font-size:1.15rem;font-weight:500;color:#1A1A1F;margin:0 0 1.3rem;">関連記事</h2>
   <div style="display:grid;gap:.8rem;">
-    <a href="/blog/geo-aeo-ai-search-b2b" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">GEO・AEO完全ガイド：AI検索時代にB2Bコンテンツが引用されるための戦略</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
-    <a href="/blog/gtm-engineer-b2b-japan" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">GTMエンジニアとは？B2B営業・マーケ自動化を担う新職種の実態と日本での活用法</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
-    <a href="/blog/vibe-marketing-b2b" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">バイブ・マーケティングとは？AIコンテンツ洪水の時代に選ばれるB2Bブランドの法則</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
-    <a href="/blog/first-party-data-b2b" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">クッキーレス時代のB2Bデータ戦略：ファーストパーティ・ゼロパーティデータの実践活用法</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/geo-aeo-ai-search-b2b" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">GEO・AEO完全ガイド：AI検索時代にB2Bコンテンツが引用されるための戦略</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/gtm-engineer-b2b-japan" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">GTMエンジニアとは？B2B営業・マーケ自動化を担う新職種の実態と日本での活用法</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/vibe-marketing-b2b" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">バイブ・マーケティングとは？AIコンテンツ洪水の時代に選ばれるB2Bブランドの法則</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/first-party-data-b2b" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">クッキーレス時代のB2Bデータ戦略：ファーストパーティ・ゼロパーティデータの実践活用法</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
   </div>
   <p style="margin:1.5rem 0 0;"><a href="/blog/" style="font-family:'Outfit','Noto Sans JP',sans-serif;font-size:.8rem;letter-spacing:.03em;color:#1E4E7E;text-decoration:none;">すべての記事を見る →</a></p>
 </section>
+</aside>
 <footer class="mt-20 border-t border-[#E2E0DA] py-10 px-6 md:px-10 text-center">
-<a class="inline-block mb-4" href="/">
+<a class="inline-block mb-4" href="/" aria-label="Wing トップページへ">
 <svg fill="none" height="24" viewbox="0 0 120 36" width="80">
 <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#0F2342"></path>
 <path d="M11 27C15 15,26 6,40 5C32 11,23 20,22 29Z" fill="#0F2342" opacity=".32"></path>

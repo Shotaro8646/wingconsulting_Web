@@ -68,9 +68,9 @@ tailwind.config = {
     extend: {
       colors: {
         navy: { DEFAULT: '#0F2342', dark: '#081830' },
-        gold: { DEFAULT: '#A8965A', light: '#C4AD72', muted: '#7A6B3E', pale: '#F8F5ED', mid: '#B8A560' },
+        gold: { DEFAULT: '#A8965A', deep: '#7A6D40', deeper: '#635834', light: '#C4AD72', muted: '#7A6B3E', pale: '#F8F5ED', mid: '#B8A560' },
         slate: { warm: '#F7F6F3', cool: '#EEECe7' },
-        ink: { DEFAULT: '#1A1A1F', mid: '#4A4A55', light: '#8A8A96' },
+        ink: { DEFAULT: '#1A1A1F', mid: '#4A4A55', light: '#6C6C79' },
       },
       fontFamily: {
         serif: ['"Yu Gothic"', '"YuGothic"', 'sans-serif'],
@@ -93,9 +93,9 @@ article li { margin-bottom: 0.5rem; }
 
 /* ── Diagram styles ── */
 .diag-wrap { background:#fff; border:1px solid #E2E0DA; border-top:3px solid #A8965A; padding:1.4rem 1.5rem 1rem; margin:1.6rem 0 0.5rem; font-size:0.85rem; }
-.diag-caption { text-align:center; font-size:0.72rem; color:#8A8A96; margin-top:0.5rem; margin-bottom:1.4rem; }
+.diag-caption { text-align:center; font-size:0.72rem; color:#6C6C79; margin-top:0.5rem; margin-bottom:1.4rem; }
 .diag-row { display:flex; flex-wrap:wrap; gap:0.7rem; }
-.diag-label { font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#A8965A; margin-bottom:0.8rem; }
+.diag-label { font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#7A6D40; margin-bottom:0.8rem; }
 .diag-step-row { display:flex; flex-wrap:wrap; gap:0.7rem; }
 .diag-step-card { flex:1 1 140px; background:#fff; border:1px solid #E2E0DA; padding:0.9rem; position:relative; }
 .diag-step-card .step-num { width:28px; height:28px; background:#0F2342; color:#A8965A; font-size:0.78rem; font-weight:700; display:flex; align-items:center; justify-content:center; margin-bottom:0.55rem; }
@@ -108,21 +108,21 @@ article li { margin-bottom: 0.5rem; }
 .diag-compare-col li { font-size:0.78rem; padding:0.25rem 0; border-bottom:1px solid #F0EDE8; color:#4A4A55; line-height:1.5; }
 .diag-compare-col li:last-child { border-bottom:none; }
 .diag-checklist-item { display:flex; align-items:flex-start; gap:0.5rem; background:#F8F5ED; border-left:3px solid #A8965A; padding:0.6rem 0.8rem; flex:1 1 220px; font-size:0.8rem; line-height:1.55; }
-.diag-checklist-item .chk { color:#A8965A; font-weight:700; flex-shrink:0; margin-top:0.05rem; }
+.diag-checklist-item .chk { color:#7A6D40; font-weight:700; flex-shrink:0; margin-top:0.05rem; }
 .diag-fail-row { display:flex; flex-wrap:wrap; gap:0; }
 .diag-fail-col { flex:1 1 130px; padding:0.9rem; border:1px solid #E2E0DA; margin:0 -1px -1px 0; }
 .diag-fail-col:first-child { background:#FFF8F5; border-top:3px solid #C45C3A; }
 .diag-fail-col:nth-child(2) { background:#FAFAF7; border-top:3px solid #A8965A; }
 .diag-fail-col:last-child { background:#F0F7F0; border-top:3px solid #5A9A6A; }
 .diag-fail-col .col-label { font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:0.5rem; }
-.diag-fail-col:first-child .col-label { color:#C45C3A; }
+.diag-fail-col:first-child .col-label { color:#B55536; }
 .diag-fail-col:nth-child(2) .col-label { color:#7A6B3E; }
-.diag-fail-col:last-child .col-label { color:#5A9A6A; }
+.diag-fail-col:last-child .col-label { color:#487B55; }
 .diag-fail-item { font-size:0.75rem; color:#4A4A55; line-height:1.55; padding:0.3rem 0; border-bottom:1px dashed #E2E0DA; }
 .diag-fail-item:last-child { border-bottom:none; }
 .phase-bar { display:flex; flex-wrap:wrap; gap:0; }
 .phase-item { flex:1 1 120px; text-align:center; padding:0.7rem 0.5rem; border:1px solid #E2E0DA; margin:0 -1px -1px 0; font-size:0.72rem; }
-.phase-item .phase-num { font-size:0.6rem; font-weight:700; color:#A8965A; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.3rem; }
+.phase-item .phase-num { font-size:0.6rem; font-weight:700; color:#7A6D40; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.3rem; }
 .phase-item .phase-name { font-weight:700; color:#0F2342; font-size:0.75rem; margin-bottom:0.25rem; line-height:1.3; }
 .phase-item .phase-desc { color:#4A4A55; font-size:0.68rem; line-height:1.4; }
 .phase-item.dead { background:#FFF5F5; border-top:3px solid #C45C3A; }
@@ -173,7 +173,7 @@ article li { margin-bottom: 0.5rem; }
 </header>
 <!-- ─── ARTICLE ─────────────────────────────────────────── -->
 <main class="py-16 px-6 md:px-10">
-<div class="max-w-3xl mx-auto" data-ja-html='&lt;p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3" data-ja="AI・DX Strategy"&gt;AI・DX Strategy&lt;/p&gt;
+<div class="max-w-3xl mx-auto" data-ja-html='&lt;p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold-deep mb-3" data-ja="AI・DX Strategy"&gt;AI・DX Strategy&lt;/p&gt;
 &lt;h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4" data-ja-html="AI導入の「PoC死」をどう乗り越えるか？&amp;lt;br/&amp;gt;本稼働へ導くDX伴走支援の選び方" data-en-html="AI導入の「PoC死」をどう乗り越えるか？&amp;lt;br/&amp;gt;本稼働へ導くDX伴走支援の選び方"&gt;AI導入の「PoC死」をどう乗り越えるか？&lt;br/&gt;本稼働へ導くDX伴走支援の選び方&lt;/h1&gt;
 &lt;div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2"&gt;
 &lt;time datetime="2026-03-26"&gt;2026.03.26&lt;/time&gt;
@@ -329,14 +329,14 @@ article li { margin-bottom: 0.5rem; }
 &lt;span style="flex:1 1 80px; background:#E8F4E8; border:1px solid #5A9A6A; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#2A6A3A; font-weight:600;"&gt;本番環境構築&lt;/span&gt;
 &lt;span style="flex:1 1 80px; background:#E8F4E8; border:1px solid #5A9A6A; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#2A6A3A; font-weight:600;"&gt;パイロット・展開&lt;/span&gt;
 &lt;/div&gt;
-&lt;div style="font-weight:700; color:#A8965A; padding:0.4rem 0.5rem; background:#FBF8F0; border-left:3px solid #A8965A; display:flex; align-items:center;"&gt;業務設計トラック&lt;/div&gt;
+&lt;div style="font-weight:700; color:#7A6D40; padding:0.4rem 0.5rem; background:#FBF8F0; border-left:3px solid #A8965A; display:flex; align-items:center;"&gt;業務設計トラック&lt;/div&gt;
 &lt;div style="display:flex; gap:0.4rem; flex-wrap:wrap;"&gt;
 &lt;span style="flex:1 1 80px; background:#FBF8F0; border:1px solid #D4C080; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#7A6B3E; font-weight:600;"&gt;業務フロー設計&lt;/span&gt;
 &lt;span style="flex:1 1 80px; background:#FBF8F0; border:1px solid #D4C080; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#7A6B3E; font-weight:600;"&gt;運用体制案・費用試算&lt;/span&gt;
 &lt;span style="flex:1 1 80px; background:#E8F4E8; border:1px solid #5A9A6A; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#2A6A3A; font-weight:600;"&gt;現場研修・定着支援&lt;/span&gt;
 &lt;span style="flex:1 1 80px; background:#E8F4E8; border:1px solid #5A9A6A; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#2A6A3A; font-weight:600;"&gt;KPI計測・改善&lt;/span&gt;
 &lt;/div&gt;
-&lt;div style="font-weight:700; color:#C45C3A; padding:0.4rem 0.5rem; background:#FFF8F5; border-left:3px solid #C45C3A; display:flex; align-items:center;"&gt;経営判断トラック&lt;/div&gt;
+&lt;div style="font-weight:700; color:#B55536; padding:0.4rem 0.5rem; background:#FFF8F5; border-left:3px solid #C45C3A; display:flex; align-items:center;"&gt;経営判断トラック&lt;/div&gt;
 &lt;div style="display:flex; gap:0.4rem; flex-wrap:wrap;"&gt;
 &lt;span style="flex:1 1 80px; background:#FFF8F5; border:1px solid #E8A080; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#A03A1A; font-weight:600;"&gt;Go基準合意&lt;/span&gt;
 &lt;span style="flex:1 1 80px; background:#FFF8F5; border:1px solid #E8A080; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#A03A1A; font-weight:600;"&gt;移行判定・予算確保&lt;/span&gt;
@@ -344,7 +344,7 @@ article li { margin-bottom: 0.5rem; }
 &lt;span style="flex:1 1 80px; background:#E8F4E8; border:1px solid #5A9A6A; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#2A6A3A; font-weight:600;"&gt;ROI評価・次テーマ設定&lt;/span&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div style="margin-top:0.8rem; font-size:0.68rem; color:#8A8A96; text-align:center;"&gt;3つのトラックを並列で進めることでPoC完了時に移行判定が即座に行える&lt;/div&gt;
+&lt;div style="margin-top:0.8rem; font-size:0.68rem; color:#6C6C79; text-align:center;"&gt;3つのトラックを並列で進めることでPoC完了時に移行判定が即座に行える&lt;/div&gt;
 &lt;/div&gt;
 &lt;p class="diag-caption" data-ja="[図] 技術・業務・経営の3トラックを並列で進める設計"&gt;[図] 技術・業務・経営の3トラックを並列で進める設計&lt;/p&gt;
 &lt;h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4"&gt;5. DX伴走型コンサルの選び方——PoC後も離れないパートナーを見つける&lt;/h2&gt;
@@ -392,7 +392,7 @@ article li { margin-bottom: 0.5rem; }
 &lt;p class="text-[.78rem] text-white/60 mb-6" data-ja="構想段階から本番稼働・定着まで、一気通貫で伴走します。"&gt;構想段階から本番稼働・定着まで、一気通貫で伴走します。&lt;/p&gt;
 &lt;a class="inline-block bg-gold text-navy text-[.78rem] font-medium px-8 py-3 hover:bg-gold-light transition-colors" data-en="Contact Us" data-ja="お問い合わせ・ご相談" data-en="お問い合わせ・ご相談" href="/#contact"&gt;お問い合わせ・ご相談&lt;/a&gt;
 &lt;/div&gt;
-&lt;/article&gt;' data-en-html='&lt;p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3" data-ja="AI・DX Strategy"&gt;AI・DX Strategy&lt;/p&gt;
+&lt;/article&gt;' data-en-html='&lt;p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold-deep mb-3" data-ja="AI・DX Strategy"&gt;AI・DX Strategy&lt;/p&gt;
 &lt;h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4" data-ja-html="AI導入の「PoC死」をどう乗り越えるか？&amp;lt;br/&amp;gt;本稼働へ導くDX伴走支援の選び方" data-en-html="AI導入の「PoC死」をどう乗り越えるか？&amp;lt;br/&amp;gt;本稼働へ導くDX伴走支援の選び方"&gt;AI導入の「PoC死」をどう乗り越えるか？&lt;br/&gt;本稼働へ導くDX伴走支援の選び方&lt;/h1&gt;
 &lt;div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2"&gt;
 &lt;time datetime="2026-03-26"&gt;2026.03.26&lt;/time&gt;
@@ -555,7 +555,7 @@ article li { margin-bottom: 0.5rem; }
 &lt;span style="flex:1 1 80px; background:#E8F4E8; border:1px solid #5A9A6A; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#2A6A3A; font-weight:600;"&gt;現場研修・定着支援&lt;/span&gt;
 &lt;span style="flex:1 1 80px; background:#E8F4E8; border:1px solid #5A9A6A; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#2A6A3A; font-weight:600;"&gt;KPI計測・改善&lt;/span&gt;
 &lt;/div&gt;
-&lt;div style="font-weight:700; color:#C45C3A; padding:0.4rem 0.5rem; background:#FFF8F5; border-left:3px solid #C45C3A; display:flex; align-items:center;"&gt;経営判断トラック&lt;/div&gt;
+&lt;div style="font-weight:700; color:#B55536; padding:0.4rem 0.5rem; background:#FFF8F5; border-left:3px solid #C45C3A; display:flex; align-items:center;"&gt;経営判断トラック&lt;/div&gt;
 &lt;div style="display:flex; gap:0.4rem; flex-wrap:wrap;"&gt;
 &lt;span style="flex:1 1 80px; background:#FFF8F5; border:1px solid #E8A080; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#A03A1A; font-weight:600;"&gt;Go基準合意&lt;/span&gt;
 &lt;span style="flex:1 1 80px; background:#FFF8F5; border:1px solid #E8A080; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#A03A1A; font-weight:600;"&gt;移行判定・予算確保&lt;/span&gt;
@@ -563,7 +563,7 @@ article li { margin-bottom: 0.5rem; }
 &lt;span style="flex:1 1 80px; background:#E8F4E8; border:1px solid #5A9A6A; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#2A6A3A; font-weight:600;"&gt;ROI評価・次テーマ設定&lt;/span&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div style="margin-top:0.8rem; font-size:0.68rem; color:#8A8A96; text-align:center;"&gt;3つのトラックを並列で進めることでPoC完了時に移行判定が即座に行える&lt;/div&gt;
+&lt;div style="margin-top:0.8rem; font-size:0.68rem; color:#6C6C79; text-align:center;"&gt;3つのトラックを並列で進めることでPoC完了時に移行判定が即座に行える&lt;/div&gt;
 &lt;/div&gt;
 &lt;p class="diag-caption" data-ja="[図] 技術・業務・経営の3トラックを並列で進める設計"&gt;[図] 技術・業務・経営の3トラックを並列で進める設計&lt;/p&gt;
 &lt;h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4"&gt;5. DX伴走型コンサルの選び方——PoC後も離れないパートナーを見つける&lt;/h2&gt;
@@ -612,7 +612,7 @@ article li { margin-bottom: 0.5rem; }
 &lt;a class="inline-block bg-gold text-navy text-[.78rem] font-medium px-8 py-3 hover:bg-gold-light transition-colors" data-en="Contact Us" data-ja="お問い合わせ・ご相談" data-en="お問い合わせ・ご相談" href="/#contact"&gt;お問い合わせ・ご相談&lt;/a&gt;
 &lt;/div&gt;
 &lt;/article&gt;'>
-<p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold mb-3" data-ja="AI・DX Strategy" data-en="AI・DX Strategy">AI・DX Strategy</p>
+<p class="display text-[.62rem] font-medium tracking-[.18em] uppercase text-gold-deep mb-3" data-ja="AI・DX Strategy" data-en="AI・DX Strategy">AI・DX Strategy</p>
 <h1 class="serif text-[clamp(1.6rem,3.5vw,2.6rem)] font-medium text-ink leading-snug mb-4" data-ja-html="AI導入の「PoC死」をどう乗り越えるか？&lt;br/&gt;本稼働へ導くDX伴走支援の選び方" data-en-html="AI導入の「PoC死」をどう乗り越えるか？&lt;br/&gt;本稼働へ導くDX伴走支援の選び方">AI導入の「PoC死」をどう乗り越えるか？<br/>本稼働へ導くDX伴走支援の選び方</h1>
 <div class="flex items-center gap-4 text-[.75rem] text-ink-light mb-2" data-ja-html='&lt;time datetime="2026-03-26"&gt;2026.03.26&lt;/time&gt;
 &lt;span&gt;Wing編集部&lt;/span&gt;' data-en-html='&lt;time datetime="2026-03-26"&gt;2026.03.26&lt;/time&gt;
@@ -1011,14 +1011,14 @@ article li { margin-bottom: 0.5rem; }
 &lt;span style="flex:1 1 80px; background:#E8F4E8; border:1px solid #5A9A6A; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#2A6A3A; font-weight:600;"&gt;本番環境構築&lt;/span&gt;
 &lt;span style="flex:1 1 80px; background:#E8F4E8; border:1px solid #5A9A6A; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#2A6A3A; font-weight:600;"&gt;パイロット・展開&lt;/span&gt;
 &lt;/div&gt;
-&lt;div style="font-weight:700; color:#A8965A; padding:0.4rem 0.5rem; background:#FBF8F0; border-left:3px solid #A8965A; display:flex; align-items:center;"&gt;業務設計トラック&lt;/div&gt;
+&lt;div style="font-weight:700; color:#7A6D40; padding:0.4rem 0.5rem; background:#FBF8F0; border-left:3px solid #A8965A; display:flex; align-items:center;"&gt;業務設計トラック&lt;/div&gt;
 &lt;div style="display:flex; gap:0.4rem; flex-wrap:wrap;"&gt;
 &lt;span style="flex:1 1 80px; background:#FBF8F0; border:1px solid #D4C080; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#7A6B3E; font-weight:600;"&gt;業務フロー設計&lt;/span&gt;
 &lt;span style="flex:1 1 80px; background:#FBF8F0; border:1px solid #D4C080; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#7A6B3E; font-weight:600;"&gt;運用体制案・費用試算&lt;/span&gt;
 &lt;span style="flex:1 1 80px; background:#E8F4E8; border:1px solid #5A9A6A; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#2A6A3A; font-weight:600;"&gt;現場研修・定着支援&lt;/span&gt;
 &lt;span style="flex:1 1 80px; background:#E8F4E8; border:1px solid #5A9A6A; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#2A6A3A; font-weight:600;"&gt;KPI計測・改善&lt;/span&gt;
 &lt;/div&gt;
-&lt;div style="font-weight:700; color:#C45C3A; padding:0.4rem 0.5rem; background:#FFF8F5; border-left:3px solid #C45C3A; display:flex; align-items:center;"&gt;経営判断トラック&lt;/div&gt;
+&lt;div style="font-weight:700; color:#B55536; padding:0.4rem 0.5rem; background:#FFF8F5; border-left:3px solid #C45C3A; display:flex; align-items:center;"&gt;経営判断トラック&lt;/div&gt;
 &lt;div style="display:flex; gap:0.4rem; flex-wrap:wrap;"&gt;
 &lt;span style="flex:1 1 80px; background:#FFF8F5; border:1px solid #E8A080; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#A03A1A; font-weight:600;"&gt;Go基準合意&lt;/span&gt;
 &lt;span style="flex:1 1 80px; background:#FFF8F5; border:1px solid #E8A080; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#A03A1A; font-weight:600;"&gt;移行判定・予算確保&lt;/span&gt;
@@ -1026,7 +1026,7 @@ article li { margin-bottom: 0.5rem; }
 &lt;span style="flex:1 1 80px; background:#E8F4E8; border:1px solid #5A9A6A; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#2A6A3A; font-weight:600;"&gt;ROI評価・次テーマ設定&lt;/span&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div style="margin-top:0.8rem; font-size:0.68rem; color:#8A8A96; text-align:center;"&gt;3つのトラックを並列で進めることでPoC完了時に移行判定が即座に行える&lt;/div&gt;' data-en-html='&lt;div class="diag-label"&gt;PoC死を防ぐ「並列型」プロジェクトフェーズ設計&lt;/div&gt;
+&lt;div style="margin-top:0.8rem; font-size:0.68rem; color:#6C6C79; text-align:center;"&gt;3つのトラックを並列で進めることでPoC完了時に移行判定が即座に行える&lt;/div&gt;' data-en-html='&lt;div class="diag-label"&gt;PoC死を防ぐ「並列型」プロジェクトフェーズ設計&lt;/div&gt;
 &lt;div style="display:grid; grid-template-columns: 120px 1fr; gap:0.5rem; font-size:0.75rem;"&gt;
 &lt;div style="font-weight:700; color:#0F2342; padding:0.4rem 0.5rem; background:#F0F4FA; border-left:3px solid #0F2342; display:flex; align-items:center;"&gt;技術検証トラック&lt;/div&gt;
 &lt;div style="display:flex; gap:0.4rem; flex-wrap:wrap;"&gt;
@@ -1042,7 +1042,7 @@ article li { margin-bottom: 0.5rem; }
 &lt;span style="flex:1 1 80px; background:#E8F4E8; border:1px solid #5A9A6A; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#2A6A3A; font-weight:600;"&gt;現場研修・定着支援&lt;/span&gt;
 &lt;span style="flex:1 1 80px; background:#E8F4E8; border:1px solid #5A9A6A; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#2A6A3A; font-weight:600;"&gt;KPI計測・改善&lt;/span&gt;
 &lt;/div&gt;
-&lt;div style="font-weight:700; color:#C45C3A; padding:0.4rem 0.5rem; background:#FFF8F5; border-left:3px solid #C45C3A; display:flex; align-items:center;"&gt;経営判断トラック&lt;/div&gt;
+&lt;div style="font-weight:700; color:#B55536; padding:0.4rem 0.5rem; background:#FFF8F5; border-left:3px solid #C45C3A; display:flex; align-items:center;"&gt;経営判断トラック&lt;/div&gt;
 &lt;div style="display:flex; gap:0.4rem; flex-wrap:wrap;"&gt;
 &lt;span style="flex:1 1 80px; background:#FFF8F5; border:1px solid #E8A080; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#A03A1A; font-weight:600;"&gt;Go基準合意&lt;/span&gt;
 &lt;span style="flex:1 1 80px; background:#FFF8F5; border:1px solid #E8A080; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#A03A1A; font-weight:600;"&gt;移行判定・予算確保&lt;/span&gt;
@@ -1050,7 +1050,7 @@ article li { margin-bottom: 0.5rem; }
 &lt;span style="flex:1 1 80px; background:#E8F4E8; border:1px solid #5A9A6A; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#2A6A3A; font-weight:600;"&gt;ROI評価・次テーマ設定&lt;/span&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div style="margin-top:0.8rem; font-size:0.68rem; color:#8A8A96; text-align:center;"&gt;3つのトラックを並列で進めることでPoC完了時に移行判定が即座に行える&lt;/div&gt;'>
+&lt;div style="margin-top:0.8rem; font-size:0.68rem; color:#6C6C79; text-align:center;"&gt;3つのトラックを並列で進めることでPoC完了時に移行判定が即座に行える&lt;/div&gt;'>
 <div class="diag-label" data-ja="PoC死を防ぐ「並列型」プロジェクトフェーズ設計" data-en="PoC死を防ぐ「並列型」プロジェクトフェーズ設計">PoC死を防ぐ「並列型」プロジェクトフェーズ設計</div>
 <div data-ja-html='&lt;div style="font-weight:700; color:#0F2342; padding:0.4rem 0.5rem; background:#F0F4FA; border-left:3px solid #0F2342; display:flex; align-items:center;"&gt;技術検証トラック&lt;/div&gt;
 &lt;div style="display:flex; gap:0.4rem; flex-wrap:wrap;"&gt;
@@ -1059,14 +1059,14 @@ article li { margin-bottom: 0.5rem; }
 &lt;span style="flex:1 1 80px; background:#E8F4E8; border:1px solid #5A9A6A; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#2A6A3A; font-weight:600;"&gt;本番環境構築&lt;/span&gt;
 &lt;span style="flex:1 1 80px; background:#E8F4E8; border:1px solid #5A9A6A; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#2A6A3A; font-weight:600;"&gt;パイロット・展開&lt;/span&gt;
 &lt;/div&gt;
-&lt;div style="font-weight:700; color:#A8965A; padding:0.4rem 0.5rem; background:#FBF8F0; border-left:3px solid #A8965A; display:flex; align-items:center;"&gt;業務設計トラック&lt;/div&gt;
+&lt;div style="font-weight:700; color:#7A6D40; padding:0.4rem 0.5rem; background:#FBF8F0; border-left:3px solid #A8965A; display:flex; align-items:center;"&gt;業務設計トラック&lt;/div&gt;
 &lt;div style="display:flex; gap:0.4rem; flex-wrap:wrap;"&gt;
 &lt;span style="flex:1 1 80px; background:#FBF8F0; border:1px solid #D4C080; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#7A6B3E; font-weight:600;"&gt;業務フロー設計&lt;/span&gt;
 &lt;span style="flex:1 1 80px; background:#FBF8F0; border:1px solid #D4C080; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#7A6B3E; font-weight:600;"&gt;運用体制案・費用試算&lt;/span&gt;
 &lt;span style="flex:1 1 80px; background:#E8F4E8; border:1px solid #5A9A6A; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#2A6A3A; font-weight:600;"&gt;現場研修・定着支援&lt;/span&gt;
 &lt;span style="flex:1 1 80px; background:#E8F4E8; border:1px solid #5A9A6A; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#2A6A3A; font-weight:600;"&gt;KPI計測・改善&lt;/span&gt;
 &lt;/div&gt;
-&lt;div style="font-weight:700; color:#C45C3A; padding:0.4rem 0.5rem; background:#FFF8F5; border-left:3px solid #C45C3A; display:flex; align-items:center;"&gt;経営判断トラック&lt;/div&gt;
+&lt;div style="font-weight:700; color:#B55536; padding:0.4rem 0.5rem; background:#FFF8F5; border-left:3px solid #C45C3A; display:flex; align-items:center;"&gt;経営判断トラック&lt;/div&gt;
 &lt;div style="display:flex; gap:0.4rem; flex-wrap:wrap;"&gt;
 &lt;span style="flex:1 1 80px; background:#FFF8F5; border:1px solid #E8A080; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#A03A1A; font-weight:600;"&gt;Go基準合意&lt;/span&gt;
 &lt;span style="flex:1 1 80px; background:#FFF8F5; border:1px solid #E8A080; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#A03A1A; font-weight:600;"&gt;移行判定・予算確保&lt;/span&gt;
@@ -1086,7 +1086,7 @@ article li { margin-bottom: 0.5rem; }
 &lt;span style="flex:1 1 80px; background:#E8F4E8; border:1px solid #5A9A6A; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#2A6A3A; font-weight:600;"&gt;現場研修・定着支援&lt;/span&gt;
 &lt;span style="flex:1 1 80px; background:#E8F4E8; border:1px solid #5A9A6A; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#2A6A3A; font-weight:600;"&gt;KPI計測・改善&lt;/span&gt;
 &lt;/div&gt;
-&lt;div style="font-weight:700; color:#C45C3A; padding:0.4rem 0.5rem; background:#FFF8F5; border-left:3px solid #C45C3A; display:flex; align-items:center;"&gt;経営判断トラック&lt;/div&gt;
+&lt;div style="font-weight:700; color:#B55536; padding:0.4rem 0.5rem; background:#FFF8F5; border-left:3px solid #C45C3A; display:flex; align-items:center;"&gt;経営判断トラック&lt;/div&gt;
 &lt;div style="display:flex; gap:0.4rem; flex-wrap:wrap;"&gt;
 &lt;span style="flex:1 1 80px; background:#FFF8F5; border:1px solid #E8A080; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#A03A1A; font-weight:600;"&gt;Go基準合意&lt;/span&gt;
 &lt;span style="flex:1 1 80px; background:#FFF8F5; border:1px solid #E8A080; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#A03A1A; font-weight:600;"&gt;移行判定・予算確保&lt;/span&gt;
@@ -1106,7 +1106,7 @@ article li { margin-bottom: 0.5rem; }
 <span data-ja="本番環境構築" data-en="本番環境構築" style="flex:1 1 80px; background:#E8F4E8; border:1px solid #5A9A6A; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#2A6A3A; font-weight:600;">本番環境構築</span>
 <span data-ja="パイロット・展開" data-en="パイロット・展開" style="flex:1 1 80px; background:#E8F4E8; border:1px solid #5A9A6A; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#2A6A3A; font-weight:600;">パイロット・展開</span>
 </div>
-<div data-ja="業務設計トラック" data-en="業務設計トラック" style="font-weight:700; color:#A8965A; padding:0.4rem 0.5rem; background:#FBF8F0; border-left:3px solid #A8965A; display:flex; align-items:center;">業務設計トラック</div>
+<div data-ja="業務設計トラック" data-en="業務設計トラック" style="font-weight:700; color:#7A6D40; padding:0.4rem 0.5rem; background:#FBF8F0; border-left:3px solid #A8965A; display:flex; align-items:center;">業務設計トラック</div>
 <div data-ja-html='&lt;span style="flex:1 1 80px; background:#FBF8F0; border:1px solid #D4C080; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#7A6B3E; font-weight:600;"&gt;業務フロー設計&lt;/span&gt;
 &lt;span style="flex:1 1 80px; background:#FBF8F0; border:1px solid #D4C080; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#7A6B3E; font-weight:600;"&gt;運用体制案・費用試算&lt;/span&gt;
 &lt;span style="flex:1 1 80px; background:#E8F4E8; border:1px solid #5A9A6A; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#2A6A3A; font-weight:600;"&gt;現場研修・定着支援&lt;/span&gt;
@@ -1119,7 +1119,7 @@ article li { margin-bottom: 0.5rem; }
 <span data-ja="現場研修・定着支援" data-en="現場研修・定着支援" style="flex:1 1 80px; background:#E8F4E8; border:1px solid #5A9A6A; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#2A6A3A; font-weight:600;">現場研修・定着支援</span>
 <span data-ja="KPI計測・改善" data-en="KPI計測・改善" style="flex:1 1 80px; background:#E8F4E8; border:1px solid #5A9A6A; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#2A6A3A; font-weight:600;">KPI計測・改善</span>
 </div>
-<div data-ja="経営判断トラック" data-en="経営判断トラック" style="font-weight:700; color:#C45C3A; padding:0.4rem 0.5rem; background:#FFF8F5; border-left:3px solid #C45C3A; display:flex; align-items:center;">経営判断トラック</div>
+<div data-ja="経営判断トラック" data-en="経営判断トラック" style="font-weight:700; color:#B55536; padding:0.4rem 0.5rem; background:#FFF8F5; border-left:3px solid #C45C3A; display:flex; align-items:center;">経営判断トラック</div>
 <div data-ja-html='&lt;span style="flex:1 1 80px; background:#FFF8F5; border:1px solid #E8A080; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#A03A1A; font-weight:600;"&gt;Go基準合意&lt;/span&gt;
 &lt;span style="flex:1 1 80px; background:#FFF8F5; border:1px solid #E8A080; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#A03A1A; font-weight:600;"&gt;移行判定・予算確保&lt;/span&gt;
 &lt;span style="flex:1 1 80px; background:#E8F4E8; border:1px solid #5A9A6A; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#2A6A3A; font-weight:600;"&gt;展開承認・投資判断&lt;/span&gt;
@@ -1133,7 +1133,7 @@ article li { margin-bottom: 0.5rem; }
 <span data-ja="ROI評価・次テーマ設定" data-en="ROI評価・次テーマ設定" style="flex:1 1 80px; background:#E8F4E8; border:1px solid #5A9A6A; padding:0.4rem 0.6rem; font-size:0.7rem; text-align:center; color:#2A6A3A; font-weight:600;">ROI評価・次テーマ設定</span>
 </div>
 </div>
-<div data-ja="3つのトラックを並列で進めることでPoC完了時に移行判定が即座に行える" data-en="3つのトラックを並列で進めることでPoC完了時に移行判定が即座に行える" style="margin-top:0.8rem; font-size:0.68rem; color:#8A8A96; text-align:center;">3つのトラックを並列で進めることでPoC完了時に移行判定が即座に行える</div>
+<div data-ja="3つのトラックを並列で進めることでPoC完了時に移行判定が即座に行える" data-en="3つのトラックを並列で進めることでPoC完了時に移行判定が即座に行える" style="margin-top:0.8rem; font-size:0.68rem; color:#6C6C79; text-align:center;">3つのトラックを並列で進めることでPoC完了時に移行判定が即座に行える</div>
 </div>
 <p class="diag-caption" data-ja="[図] 技術・業務・経営の3トラックを並列で進める設計" data-en="[図] 技術・業務・経営の3トラックを並列で進める設計">[図] 技術・業務・経営の3トラックを並列で進める設計</p>
 <h2 class="text-[1.15rem] font-medium text-ink border-l-2 border-gold pl-4" data-ja="5. DX伴走型コンサルの選び方——PoC後も離れないパートナーを見つける" data-en="5. DX伴走型コンサルの選び方——PoC後も離れないパートナーを見つける">5. DX伴走型コンサルの選び方——PoC後も離れないパートナーを見つける</h2>
@@ -1207,9 +1207,10 @@ article li { margin-bottom: 0.5rem; }
 </div>
 </article>
 </div>
-</main>
 <!-- ─── FOOTER ─────────────────────────────────────────── -->
 
+</main>
+<aside aria-label="関連する案内">
 <!-- assessment-cta (auto) -->
 <section style="max-width:800px;margin:3rem auto 0;padding:0 1.5rem;font-family:'Noto Sans JP',sans-serif;">
   <div style="border:1px solid #E8E5DE;border-left:3px solid #A98A4B;background:#FBFAF7;padding:1.5rem 1.6rem;">
@@ -1220,23 +1221,24 @@ article li { margin-bottom: 0.5rem; }
 </section>
 <!-- related-articles (auto) -->
 <section style="max-width:800px;margin:3.5rem auto 0;padding:2rem 1.5rem 0;border-top:1px solid #E5E7EB;font-family:'Noto Sans JP',sans-serif;">
-  <p style="font-family:'Outfit','Noto Sans JP',sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#B8A882;margin:0 0 .7rem;">Related</p>
+  <p style="font-family:'Outfit','Noto Sans JP',sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#7A6B3E;margin:0 0 .7rem;">Related</p>
   <h2 style="font-size:1.15rem;font-weight:500;color:#1A1A1F;margin:0 0 1.3rem;">関連記事</h2>
   <div style="display:grid;gap:.8rem;">
-    <a href="/blog/dx-consulting-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">DXコンサルティングとは？失敗しない選び方と成功のポイント</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
-    <a href="/blog/global-it-organization-model" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">グローバル企業のIT組織モデル｜海外拠点のIT機能をどう設計するか</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
-    <a href="/blog/trade-dx-complete-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">貿易DX完全ガイド｜輸入・輸出業務の課題とAI活用の全体像</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
-    <a href="/blog/trade-dx-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">貿易業務のデジタル化（貿易DX）入門｜中小商社が今すぐ着手すべき理由と進め方</span><span style="color:#9E8E6E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/dx-consulting-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">DXコンサルティングとは？失敗しない選び方と成功のポイント</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/global-it-organization-model" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">グローバル企業のIT組織モデル｜海外拠点のIT機能をどう設計するか</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/trade-dx-complete-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">貿易DX完全ガイド｜輸入・輸出業務の課題とAI活用の全体像</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/trade-dx-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">貿易業務のデジタル化（貿易DX）入門｜中小商社が今すぐ着手すべき理由と進め方</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
   </div>
   <p style="margin:1.5rem 0 0;"><a href="/blog/" style="font-family:'Outfit','Noto Sans JP',sans-serif;font-size:.8rem;letter-spacing:.03em;color:#1E4E7E;text-decoration:none;">すべての記事を見る →</a></p>
 </section>
+</aside>
 <footer class="bg-navy py-10 px-6 md:px-10 mt-16">
 <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
 <svg aria-label="Wing" fill="none" height="28" viewbox="0 0 120 36" width="80">
 <path d="M6 26C9 16,18 8,30 7C23 12,16 19,15 28Z" fill="#fff" opacity=".6"></path>
 <text fill="#fff" font-family="Cormorant Garamond,serif" font-size="22" font-weight="500" letter-spacing=".05em" opacity=".6" x="46" y="25">Wing</text>
 </svg>
-<p class="text-[.68rem] text-white/30">© 2026 Wing. All rights reserved.</p>
+<p class="text-[.68rem] text-white/60">© 2026 Wing. All rights reserved.</p>
 </div>
 </footer>
 </body>
