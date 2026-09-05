@@ -11,6 +11,7 @@
   gtag('config', 'G-KN7NWHFK9G');
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FFFFFF">
 <title>AI・DXコンサルティング｜構想から実装・運用まで | Wing</title>
 <meta name="description" content="経営・業務とテクノロジーの双方に精通したエンジニアが現場に入り、AI活用の構想から開発・運用定着までを一貫して担います。貿易DX・AIエージェント導入が専門領域。初回相談は無料です。">
 <meta name="keywords" content="AIコンサルティング, DXコンサルティング, FDE, Forward Deployed Engineer, 伴走型支援, PoC 本番展開, 内製化支援, 貿易DX, グローバルDX, AI導入">
@@ -89,7 +90,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "戦略構想・アドバイザリー",
-          "description": "経営・IT・業務の三視点から現状を診断し、実行可能なDX・AI戦略を策定。",
+          "description": "経営・IT・業務の三つの面から現状を見て、実行できる計画に落とします。",
           "provider": {
             "@id": "https://wingconsulting.org/#organization"
           }
@@ -100,7 +101,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "実装・PMO",
-          "description": "要件定義から現場定着まで一貫関与し、成果が出るまで推進します。",
+          "description": "要件の整理から現場に根づくまで関わり、成果が出るまで続けます。",
           "provider": {
             "@id": "https://wingconsulting.org/#organization"
           }
@@ -111,7 +112,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "内製化・人材育成",
-          "description": "「知っている」から「現場で使える」へ。支援終了後も自走できる状態をつくります。",
+          "description": "知っているだけで終わらせず、現場で使えるようにします。支援が終わったあとも自分たちで回せることが目標です。",
           "provider": {
             "@id": "https://wingconsulting.org/#organization"
           }
@@ -153,7 +154,7 @@
       "name": "少人数体制で、当社の規模に対応できますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "構想・意思決定支援と実装の初期段階は、経験を積んだシニアメンバーが直接担当します。全社展開で体制が必要な局面や、高度な機械学習・大規模データ基盤など専門性の高い実装課題については、AIスタートアップをはじめとする技術パートナーと連携して対応します。貴社の窓口はFDEに一本化されるため、複数社との調整をお任せいただく必要はありません。"
+        "text": "構想・意思決定支援と実装の初期段階は、経験を積んだシニアメンバーが直接担当します。全社展開で体制が必要な局面や、高度な機械学習・大規模データ基盤など専門性の高い実装課題については、AIスタートアップをはじめとする技術パートナーと連携して対応します。窓口はFDE一人にまとまるので、貴社が複数の会社と調整する必要はありません。"
       }
     },
     {
@@ -169,7 +170,7 @@
       "name": "途中でやめることはできますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "できます。契約は段階ごとに区切っており、診断だけ・試作までという終わり方も想定した設計です。実物を見て「この投資はしない」と判断していただくのも、正しい結論の一つだと考えています。"
+        "text": "できます。契約は段階ごとに区切っており、診断だけ、試作までで終える形も最初から想定しています。実物を見て「この投資はしない」と判断していただくのも、正しい結論の一つだと考えています。"
       }
     },
     {
@@ -185,7 +186,7 @@
       "name": "最終的に社内で運用できるようになりますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "それを目標に設計しています。ソースコード・設計資料は成果物としてお渡しし、運用体制の立ち上げと人材育成まで支援します。当社への依存が続く状態は、成功とは考えていません。"
+        "text": "それを目標にしています。ソースコード・設計資料は成果物としてお渡しし、運用体制の立ち上げと人材育成まで支援します。当社への依存が続く状態は、成功とは考えていません。"
       }
     }
   ]
@@ -194,6 +195,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="/images/hero-nyc.jpg" fetchpriority="high">
 <style>
 :root{
   --ink:#14181F; --sub:#4A515C; --sub2:#5C6470; --faint:#6B7280;
@@ -202,19 +204,26 @@
   --sans:'Noto Sans JP','Outfit',sans-serif; --en:'Outfit',sans-serif; --disp:"Yu Gothic Medium","YuGothic","游ゴシック Medium","Yu Gothic","Noto Sans JP",sans-serif;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;color-scheme:light;scroll-padding-top:84px}
+/* 見出しが固定ヘッダー（72px）の下に潜らないよう、目次で飛んだ先を下げる */
+section[id]{scroll-margin-top:72px}
 /* 横溢れの保険 */
 html,body{overflow-x:hidden}
 img,svg{max-width:100%;height:auto}
 
-@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}[data-grow]{transition:none !important;transform:none !important}}
-a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}[data-grow]{transition:none !important;transform:none !important}.mnav summary span::before,.mnav summary span::after{transition:none !important}}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid var(--gold-deep);outline-offset:3px}
 h1,h2.sec{text-wrap:balance}
 .sec-lead,.opt p,.phase p,.faq .a,.ct-l p{text-wrap:pretty}
 .g4 p,.phase .dur,.vs-wing,.vs-trad{font-variant-numeric:tabular-nums}
 body{margin:0;background:#FFFFFF;-webkit-font-smoothing:antialiased;font-family:var(--sans);color:var(--ink)}
 a{color:var(--ink);text-decoration:none}
 a:hover{color:var(--gold-deep)}
+a,button,summary{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.nb{display:inline-block}
+/* キーボード操作の人向け：Tab を押したときだけ現れる「本文へ」の近道 */
+.skip{position:absolute;left:-9999px;top:12px;z-index:100;background:var(--ink);color:#fff !important;padding:10px 16px;font-size:13px}
+.skip:focus{left:12px}
 .wrap{max-width:1160px;margin:0 auto;padding:0 40px}
 @media(max-width:720px){.wrap{padding:0 22px}}
 .kicker{margin:0 0 10px 0;font-family:var(--en);font-weight:500;font-size:11px;letter-spacing:.2em;color:var(--gold-deep)}
@@ -289,7 +298,7 @@ section .wrap{padding:0}
 .pillar h3{margin:12px 0 8px;font-size:17px;font-weight:700;color:var(--ink);line-height:1.6}
 .pillar>p.tag-en{margin:0}
 .pillar>p:not(.tag-en){margin:0 0 16px;font-size:13px;color:var(--sub2);line-height:2;text-wrap:pretty}
-.pillar ul{margin:auto 0 0;padding:0;list-style:none;border-top:1px solid var(--line)}
+.pillar ul{margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}
 .pillar li{font-size:13px;color:var(--sub2);padding:8px 0 8px 16px;border-bottom:1px dashed var(--line);position:relative;line-height:1.8}
 .pillar li::before{content:'─';position:absolute;left:0;color:var(--gold);font-size:11px}
 .pillar li:last-child{border-bottom:none}
@@ -412,6 +421,19 @@ section .wrap{padding:0}
 .prod.dev .free{color:var(--sub2);border-color:var(--line2)}
 .prod .cust{margin:0 0 14px;font-size:12px;color:var(--gold-deep);line-height:1.9;border-left:2px solid var(--gold);padding-left:12px}
 .prod .go{font-size:13px;color:var(--gold-deep);font-weight:700;letter-spacing:.04em}
+/* ── AIプロダクトの一覧（トップ用）。全体像と各製品の詳細は /products に置いた ── */
+.pl{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:900px){.pl{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.pl{grid-template-columns:1fr}}
+.pl-i{display:flex;flex-direction:column;gap:6px;border:1px solid var(--line);border-top:2px solid var(--line2);background:#fff;padding:16px 16px 14px;color:var(--ink);transition:border-color .2s}
+.pl-i.live{border-top-color:var(--gold)}
+.pl-i:hover{border-color:var(--gold);color:var(--ink)}
+.pl-s{font-size:10px;font-weight:700;letter-spacing:.04em;color:var(--sub2)}
+.pl-i.live .pl-s{color:var(--gold-deep)}
+.pl-i b{font-size:14px;font-weight:700;line-height:1.5}
+.pl-d{font-size:12px;color:var(--sub2);line-height:1.8}
+.pl-more{margin:18px 0 0;display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px}
+.pl-more span{font-size:12px;color:var(--sub2)}
 /* why */
 .why{display:flex;gap:44px;align-items:flex-start}
 @media(max-width:860px){.why{flex-direction:column}}
@@ -453,8 +475,8 @@ table.co td{color:var(--sub2)}
 .ct-l p{margin:0 0 16px;font-size:14px;color:var(--sub);line-height:2.1}
 .form{display:flex;flex-direction:column;gap:16px;border:1px solid var(--line);padding:32px;background:#fff}
 .form label{font-size:12px;font-weight:700;color:var(--sub2);display:block;margin-bottom:6px;letter-spacing:.05em}
-.form input,.form textarea{width:100%;background:#FBFAF7;border:1px solid var(--line);padding:12px 14px;font-family:var(--sans);font-size:13px;color:var(--ink)}
-.form input:focus,.form textarea:focus{outline:none;border-color:var(--gold)}
+.form input,.form textarea{width:100%;background:#FBFAF7;border:1px solid #9A9382;padding:12px 14px;font-family:var(--sans);font-size:13px;color:var(--ink)}
+.form input:focus,.form textarea:focus{border-color:var(--gold-deep)}
 .form textarea{min-height:120px;resize:vertical}
 .form .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 @media(max-width:560px){.form .two{grid-template-columns:1fr}}
@@ -464,7 +486,7 @@ table.co td{color:var(--sub2)}
 /* footer */
 footer{border-top:1px solid var(--line);padding:30px 40px;font-size:12px;color:var(--faint)}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:0}
-footer a{color:var(--faint)}
+footer a{color:var(--faint);display:inline-block;padding:4px 0}
 @media(max-width:1120px){}
 @media(max-width:860px){}
 @media(max-width:720px){br.pc{display:none}}
@@ -483,17 +505,25 @@ footer a{color:var(--faint)}
 .vs-trad{font-size:13px;color:var(--sub2);line-height:1.9}
 .vs-wing{background:var(--ink);color:#fff;font-size:13px;font-weight:500;line-height:1.9}
 .vs-wing em{font-style:normal;color:var(--gold-soft);font-weight:700}
-.str-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
-@media(max-width:1000px){.str-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.str-grid{grid-template-columns:1fr}}
-.str{background:#fff;padding:26px 22px 22px;display:flex;flex-direction:column;position:relative}
+/* ── 強み（Why Wing?）──
+   4項目は順番ではないので番号は振らない。代わりに「FDE一人が持つ力（3枚）」と
+   「会社として持つ型（1枚）」の二群に分け、4枚目だけ金色なのはそのためだと分かるようにする */
+.str-wrap{display:grid;grid-template-columns:3fr 1fr;gap:18px;align-items:stretch}
+.str-g{display:flex;flex-direction:column;min-width:0}
+.str-gl{margin:0 0 10px;font-size:12px;color:var(--sub2);letter-spacing:.02em}
+.str-g.asset .str-gl{color:var(--gold-deep)}
+.str-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);flex:1}
+.str-grid.one{grid-template-columns:1fr}
+.str{background:#fff;padding:26px 24px 22px;display:flex;flex-direction:column;position:relative}
 .str::before{content:'';position:absolute;top:0;left:0;width:34px;height:2px;background:var(--ink)}
-.str:nth-child(4)::before{background:var(--gold)}
-.str-n{margin:0 0 14px;font-family:var(--en);font-weight:600;font-size:26px;letter-spacing:.02em;color:var(--line2);line-height:1}
-.str:nth-child(4) .str-n{color:var(--gold-soft)}
-.str h3{margin:0 0 12px;font-size:16px;font-weight:700;color:var(--ink);letter-spacing:.02em}
-.str p{margin:0 0 16px;font-size:12.5px;color:var(--sub2);line-height:1.95;flex:1}
-.str-l{font-size:11.5px;color:var(--gold-deep);font-weight:700;letter-spacing:.03em;border-top:1px dashed var(--line);padding-top:12px}
+.str-g.asset .str::before{background:var(--gold)}
+.str h3{margin:0 0 10px;font-size:17px;font-weight:700;color:var(--ink);letter-spacing:.02em;line-height:1.5}
+.str-d{margin:0 0 18px;font-size:13px;color:var(--sub2);line-height:1.95;flex:1;text-wrap:pretty}
+.str-l{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--gold-deep);font-weight:700;letter-spacing:.03em;border-top:1px dashed var(--line);padding-top:12px}
+.str-l::after{content:'→';content:'→' / '';display:inline-block}
+.str-l:hover{color:var(--ink)}
+@media(max-width:1000px){.str-wrap{grid-template-columns:1fr}}
+@media(max-width:720px){.str-grid{grid-template-columns:1fr}}
 .wall{display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch;margin-top:8px}
 @media(max-width:900px){.wall{grid-template-columns:1fr}}
 .wall-ar{display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--gold);padding:0 18px}
@@ -505,18 +535,26 @@ footer a{color:var(--faint)}
 .wall-h.gold{color:var(--gold-deep)}
 .wall-h.gold span{color:var(--ink)}
 .wall-body{flex:1}
+/* BEFORE 側は AFTER 側より内容が少なく、下に空白が残っていた。
+   境界線の帯を伸ばして、発注者と受注者の距離として見せる */
+.wall-p:not(.win) .wall-body{display:flex;flex-direction:column}
 .cbox{border:1px solid var(--line2);background:#FBFAF7;padding:14px}
 .cbox-t{margin:0 0 10px;font-size:11px;letter-spacing:.06em;color:var(--faint);text-align:center;font-weight:700}
 .cbox-t small{display:block;font-weight:400;font-size:11px;color:var(--gold-deep);margin-top:2px}
 .cbox-r{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .cbox-r>span{border:1px solid var(--line);background:#fff;padding:10px 8px;text-align:center;font-size:13px;font-weight:700;color:var(--ink)}
 .cbox-r>span small{display:block;font-weight:400;font-size:11px;color:var(--sub2);margin-top:4px;line-height:1.6}
-.barrier{position:relative;margin:0;padding:26px 0;display:flex;align-items:center;justify-content:center}
+.barrier{position:relative;margin:0;padding:26px 0;display:flex;align-items:center;justify-content:center;flex:1}
 .barrier::before{content:'';position:absolute;left:0;right:0;top:50%;border-top:3px double #C9CDD4}
-.bar-l{position:relative;background:#fff;padding:0 12px;font-size:11px;font-weight:700;letter-spacing:.14em;color:#8A909B}
+.bar-l{position:relative;background:#fff;padding:0 12px;font-size:11px;font-weight:700;letter-spacing:.14em;color:#6B7280}
 .ex{position:absolute;font-size:11px;color:var(--faint);white-space:nowrap}
 .ex.out{left:2px;top:2px}
 .ex.in{right:2px;bottom:2px}
+/* 帯が伸びたぶん、書類が下りて納品物が上がる道筋を点線で示す。横並びのときだけ出す */
+.ex-line{position:absolute;width:0;border-left:1px dashed #C9CDD4;display:none}
+.ex-line.out{left:48px;top:24px;bottom:calc(50% + 12px)}
+.ex-line.in{right:32px;top:calc(50% + 12px);bottom:24px}
+@media(min-width:901px){.ex-line{display:block}}
 .vend{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .vend>span{border:1px solid var(--line);background:#fff;padding:9px 6px;text-align:center;font-size:12px;color:var(--sub2)}
 .cbox.inside{border-color:var(--ink);border-width:2px;background:#fff;padding:18px 16px}
@@ -561,7 +599,27 @@ footer a{color:var(--faint)}
 .wall-r b{color:var(--ink);font-size:14px;margin:0 2px}
 .wall-r span{display:block;font-size:11px;color:var(--faint);margin-top:3px}
 .wall-r.gold b{color:var(--gold-deep)}
-@media(max-width:900px){.navlinks a:not(.btn-dark){display:none}}
+/* ── ヘッダー ── */
+.hd{height:72px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.hd-r{display:flex;align-items:center;gap:6px}
+.navlinks a:not(.btn-dark){padding:6px 0}
+/* スマホの目次：900px 以下では横並びのリンクを隠していたが、代わりの目次が無く「相談する」しか押せなかった。
+   折りたたみ（details）で同じ行き先を出す。JS が無くても開閉できる */
+.mnav{display:none}
+.mnav summary{list-style:none;cursor:pointer;width:44px;height:44px;display:flex;align-items:center;justify-content:center;margin-right:-10px}
+.mnav summary::-webkit-details-marker{display:none}
+.mnav summary span{position:relative;display:block;width:20px;height:2px;background:var(--ink)}
+.mnav summary span::before,.mnav summary span::after{content:'';position:absolute;left:0;width:20px;height:2px;background:var(--ink);transition:transform .25s}
+.mnav summary span::before{top:-6px}
+.mnav summary span::after{top:6px}
+.mnav[open] summary span{background:transparent}
+.mnav[open] summary span::before{transform:translateY(6px) rotate(45deg)}
+.mnav[open] summary span::after{transform:translateY(-6px) rotate(-45deg)}
+.mnav-p{position:fixed;top:72px;left:0;right:0;z-index:60;background:#fff;border-bottom:1px solid var(--line);padding:6px 22px 18px;display:flex;flex-direction:column;max-height:calc(100vh - 72px);overflow:auto;overscroll-behavior:contain;box-shadow:0 18px 30px rgba(20,24,31,.08)}
+.mnav-p a{padding:14px 0;border-bottom:1px solid var(--line);font-size:15px;color:var(--ink)}
+.mnav-p a:last-child{border-bottom:none}
+.mnav-p a.gold{color:var(--gold-deep)}
+@media(max-width:900px){.navlinks a:not(.btn-dark){display:none}.mnav{display:block}}
 
 /* ── ヒーロー：モバイル最適化 ── */
 @media(max-width:720px){
@@ -638,31 +696,46 @@ footer a{color:var(--faint)}
 .cta-strip{border-top:1px solid var(--line);padding:44px 40px;text-align:center;background:#fff}
 .cta-strip p{margin:0 0 20px;font-weight:700;font-size:17px;color:var(--ink);line-height:1.9}
 .cta-strip .sub-l{font-weight:400;font-size:13px;color:var(--faint);margin-top:14px}
-.cta-strip .sub-l a{color:var(--gold-deep);border-bottom:1px solid var(--line2)}
+.cta-strip .sub-l a{color:var(--gold-deep);border-bottom:1px solid var(--line2);white-space:nowrap}
 </style>
 </head>
 <body>
 <div style="font-family:'Noto Sans JP','Outfit',sans-serif; color:#14181F; background:#FFFFFF;">
+  <a class="skip" href="#main">本文へ移動</a>
 
   <header style="background:#FFFFFF; border-bottom:1px solid #E8E5DE; position:sticky; top:0; z-index:50;">
-    <div class="wrap" style="height:72px; display:flex; align-items:center; justify-content:space-between;">
+    <div class="wrap hd">
       <a href="/" style="line-height:0;">
-        <img src="/wing-logo.svg" alt="Wing" style="height:46px;width:auto;">
+        <img src="/wing-logo.svg" alt="Wing" width="53" height="46" style="height:46px;width:auto;">
       </a>
-      <nav class="navlinks" style="display:flex; gap:28px; align-items:center;">
-        <a href="#fde" style="font-size:13px; color:#5C6470; white-space:nowrap;">FDEとは</a>
-        <a href="#strength" style="font-size:13px; color:#5C6470; white-space:nowrap;">強み</a>
-        <a href="#consulting" style="font-size:13px; color:#5C6470; white-space:nowrap;">提供サービス</a>
-        <a href="#expertise" style="font-size:13px; color:#5C6470; white-space:nowrap;">対応領域</a>
-        <a href="#products" style="font-size:13px; color:#5C6470; white-space:nowrap;">AIプロダクト</a>
-        <a href="#other-solutions" style="font-size:13px; color:#5C6470; white-space:nowrap;">その他</a>
-        <a href="#insights" style="font-size:13px; color:#5C6470; white-space:nowrap;">インサイト</a>
-        <a href="/dx-assessment" style="font-size:13px; color:#8A6E33; white-space:nowrap;">無料診断</a>
-        <a href="#contact" class="btn-dark" style="padding:11px 22px; font-size:13px;">相談する</a>
-      </nav>
+      <div class="hd-r">
+        <nav class="navlinks" aria-label="サイト内" style="display:flex; gap:28px; align-items:center;">
+          <a href="#fde" style="font-size:13px; color:#5C6470; white-space:nowrap;">FDEとは</a>
+          <a href="#strength" style="font-size:13px; color:#5C6470; white-space:nowrap;">強み</a>
+          <a href="#consulting" style="font-size:13px; color:#5C6470; white-space:nowrap;">提供サービス</a>
+          <a href="#expertise" style="font-size:13px; color:#5C6470; white-space:nowrap;">対応領域</a>
+          <a href="/products" style="font-size:13px; color:#5C6470; white-space:nowrap;">AIプロダクト</a>
+          <a href="#insights" style="font-size:13px; color:#5C6470; white-space:nowrap;">インサイト</a>
+          <a href="/dx-assessment" style="font-size:13px; color:#8A6E33; white-space:nowrap;">無料診断</a>
+          <a href="#contact" class="btn-dark" style="padding:11px 22px; font-size:13px;">相談する</a>
+        </nav>
+        <details class="mnav">
+          <summary aria-label="メニュー"><span></span></summary>
+          <nav class="mnav-p" aria-label="サイト内（スマートフォン）">
+            <a href="#fde">FDEとは</a>
+            <a href="#strength">強み</a>
+            <a href="#consulting">提供サービス</a>
+            <a href="#expertise">対応領域</a>
+            <a href="/products">AIプロダクト</a>
+            <a href="#insights">インサイト</a>
+            <a href="/dx-assessment" class="gold">無料診断</a>
+          </nav>
+        </details>
+      </div>
     </div>
   </header>
 
+  <main id="main">
   <!-- ═══════ HERO ═══════ -->
   <section class="hero-sec rail">
     <div class="hero-bg" aria-hidden="true"></div>
@@ -676,11 +749,11 @@ footer a{color:var(--faint)}
         <div class="hero-pts" style="display:flex; flex-direction:column; gap:14px; margin-bottom:30px;">
           <div style="display:flex; gap:14px; align-items:flex-start;">
             <div style="flex:none; width:6px; height:6px; background:#A98A4B; margin-top:11px;"></div>
-            <p style="margin:0; font-size:14px; line-height:1.95; color:#4A515C; text-wrap:pretty;">AI時代の成功は、実装力だけでは実現できません。<br><span style="color:#14181F; font-weight:500;">経営と現場が一体となり、貴社にとって最適な形でAIを取り込めるかどうか</span>です。</p>
+            <p style="margin:0; font-size:14px; line-height:1.95; color:#4A515C;">AIは、入れただけでは成果になりません。<br><span style="color:#14181F; font-weight:500;">経営と現場が同じ方向を向き、自社の業務に合う形で組み込めるかどうか</span>で差がつきます。</p>
           </div>
           <div style="display:flex; gap:14px; align-items:flex-start;">
             <div style="flex:none; width:6px; height:6px; background:#A98A4B; margin-top:11px;"></div>
-            <p style="margin:0; font-size:14px; line-height:1.95; color:#4A515C; text-wrap:pretty;">Wingは、<span style="color:#14181F; font-weight:500;">ビジネス・オペレーションの理解とAIネイティブな実装力を併せ持つFDE／コンサルタント</span>が<br class="pc">AIを駆使したビジネスモデル・オペレーションの構想デザインから実装、定着までを一気通貫で伴走します。<a href="#fde" style="color:#14181F; border-bottom:1px solid #A98A4B;">（FDE : Forward Deployed Engineer）</a></p>
+            <p style="margin:0; font-size:14px; line-height:1.95; color:#4A515C;">Wingでは、<span style="color:#14181F; font-weight:500;">業務を知っていて、自分でAIを作れるコンサルタント兼エンジニア（FDE）</span>が<br class="pc">何をAIに任せるかの設計から、開発、現場に根づくまでを、担当を替えずに担います。<a href="#fde" style="color:#14181F; border-bottom:1px solid #A98A4B; white-space:nowrap;">（FDE : Forward Deployed Engineer）</a></p>
           </div>
         </div>
         <div style="display:flex; gap:12px; align-items:center; margin-bottom:8px; flex-wrap:wrap;">
@@ -698,13 +771,13 @@ footer a{color:var(--faint)}
         <div>
           <h2 class="sec"><span style="display:inline-block;">AIの格差は始まっています。</span><br><span style="display:inline-block;">導入するだけでは、</span><br><span style="display:inline-block;">企業価値は高まりません。</span></h2>
         </div>
-        <p class="sec-lead">McKinseyとPwCコンサルティングの調査によると、AI活用による生産性格差が急速に広がる一方、効果を利益として実感できている企業はごく一部であることが分かります。<b style="color:#14181F;">経営とテクノロジーが噛み合わず、部分最適（部署や個人）とPoCが乱立しがちです。</b>貴社の置かれたビジネスモデルを踏まえた、全体最適の視点に立った設計が必要です。</p>
+        <p class="sec-lead">McKinseyとPwCの調査では、AIで生産性を伸ばした企業とそうでない企業の差が開く一方、利益にまでつなげられた企業は少数にとどまります。<b style="color:#14181F;">部署や個人がばらばらにAIを試し、PoCばかりが増えていく。</b>そうならないために、まず自社の商売の仕組みに沿って、どこで使えば利益に効くかを決める必要があります。</p>
       </div>
 
       <div class="g4">
         <div style="padding:26px 36px 24px 0; border-right:1px solid #E8E5DE; display:flex; flex-direction:column;">
           <p class="tag-en">ADOPTION TRAP</p>
-          <p style="margin:0 0 12px 0; font-family:'Outfit',sans-serif; font-weight:500; font-size:38px; line-height:.9; color:#14181F; white-space:nowrap;">88<span style="font-size:17px;">%</span><span style="font-size:17px; color:#8A909B; margin:0 6px;">→</span>39<span style="font-size:17px;">%</span></p>
+          <p style="margin:0 0 12px 0; font-family:'Outfit',sans-serif; font-weight:500; font-size:38px; line-height:.9; color:#14181F; white-space:nowrap;">88<span style="font-size:17px;">%</span><span style="font-size:17px; color:#6B7280; margin:0 6px;">→</span>39<span style="font-size:17px;">%</span></p>
           <div style="display:flex; flex-direction:column; gap:4px; margin-bottom:14px;">
             <div style="height:8px; width:100%; background:#F1EEE7;"><div data-grow style="height:100%; width:88%; background:#2A3241;"></div></div>
             <div style="height:8px; width:100%; background:#F1EEE7;"><div data-grow style="height:100%; width:39%; background:#B8A882;"></div></div>
@@ -739,7 +812,7 @@ footer a{color:var(--faint)}
       </div>
 
       <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:40px; margin-top:20px; flex-wrap:wrap;">
-        <p style="margin:4px 0 0 0; font-size:11px; line-height:1.9; color:#8A909B; max-width:520px;">出典：<a href="https://www.pwc.com/gx/en/issues/artificial-intelligence/ai-jobs-barometer.html" style="color:#8A6E33; text-decoration:underline; text-decoration-color:#D6D0C2;">PwC「2026 Global AI Jobs Barometer」</a>（6大陸・10億件超の求人データ分析）／ McKinsey「The State of AI 2025」</p>
+        <p style="margin:4px 0 0 0; font-size:11px; line-height:1.9; color:#6B7280; max-width:520px;">出典：<a href="https://www.pwc.com/gx/en/issues/artificial-intelligence/ai-jobs-barometer.html" style="color:#8A6E33; text-decoration:underline; text-decoration-color:#D6D0C2;">PwC「2026 Global AI Jobs Barometer」</a>（6大陸・10億件超の求人データ分析）／ McKinsey「The State of AI 2025」</p>
       </div>
     </div>
   </section>
@@ -751,7 +824,7 @@ footer a{color:var(--faint)}
         <div>
           <h2 class="sec"><span style="display:inline-block;">現場に入り込み、</span><br><span style="display:inline-block;">経営課題の改善に取り組み、</span><span style="display:inline-block;">企業価値を高める。</span></h2>
         </div>
-        <p class="sec-lead">FDE（Forward Deployed Engineer）とは、経営層と現場の双方に入り込み、課題の特定から実装・定着までを担うコンサルタント兼AIエンジニアです。<b style="color:#14181F;">目指すゴールはROICの改善と企業価値の向上。<br>（AI・IT／デジタルは、そのための手段にすぎません。）</b></p>
+        <p class="sec-lead">FDE（Forward Deployed Engineer）は、経営層と現場の両方に入って、課題を見つけるところから、作って現場に根づかせるところまでを担うコンサルタント兼AIエンジニアです。<b style="color:#14181F;">狙いはROIC（投じたお金に対する利益）を上げ、企業価値を高めること。<br>AIやITは、そのための手段です。</b></p>
       </div>
 
       <div class="wall">
@@ -765,25 +838,27 @@ footer a{color:var(--faint)}
             </div>
             <div class="barrier">
               <span class="ex out">RFP・仕様書 ↓</span>
+              <i class="ex-line out" aria-hidden="true"></i>
               <span class="bar-l">発注者と受注者の境界</span>
+              <i class="ex-line in" aria-hidden="true"></i>
               <span class="ex in">↑ 納品物</span>
             </div>
             <div class="vend"><span>コンサル</span><span>開発会社</span><span>製品ベンダー</span><span>SIer</span></div>
           </div>
-          <p class="wall-n">経営・現場・ITで一貫した打ち手が取られず、現場に落ちる前に立ち消えになる</p>
+          <p class="wall-n">経営・現場・ITの判断がつながらず、現場で使われる前に立ち消えになる</p>
           <div class="wall-sp">
             <p class="sp-t">工程ごとに担当が替わり、段階的に開発</p>
             <p class="sp-v"><b>数ヶ月</b><span>初期版が出るまで</span></p>
             <p class="sp-d">前工程の完了を待って次へ進むため、途中で方針を変えられない</p>
           </div>
-          <div class="wall-r">結果：<b>約95%のAIパイロットが失敗</b><span>MIT "State of AI in Business"（2025）</span></div>
+          <div class="wall-r">結果：<b>約95%のAIパイロットが失敗</b><span>MIT “State of AI in Business”（2025）</span></div>
         </div>
 
         <div class="wall-ar" aria-hidden="true">→</div>
 
         <!-- AFTER -->
         <div class="wall-p win">
-          <p class="wall-h gold">AFTER<span>内部の旗振り役として変革を牽引（Wing）</span></p>
+          <p class="wall-h gold">AFTER<span>内側に入って、推進役を務める（Wing）</span></p>
           <div class="wall-body">
             <div class="cbox inside">
               <p class="cbox-t">クライアント企業様<small>推進チームの一員として内部に入る</small></p>
@@ -796,12 +871,12 @@ footer a{color:var(--faint)}
                 </div>
                 <div class="side ops"><b>現場部門</b><span>現場課題（業務実態）</span></div>
               </div>
-              <p class="bridge-cap">経営と現場の間に入り、経営課題に効果的かつ実現性の高いソリューションを実装</p>
+              <p class="bridge-cap">経営と現場の間に入り、利益に効いて、かつ現場で回る仕組みを作る</p>
               <div class="fde-role">
                 <span><b>経営課題を特定</b>ROIC・収益への影響で優先順位を決める</span>
                 <span><b>現場実態で設計</b>業務・人・データ</span>
-                <span><b>AIで成果を高速に勝ち取る</b>実装から効果創出まで最短距離で</span>
-                <span><b>変革を定着させる</b>チェンジマネジメント（合意形成・業務移行・教育）</span>
+                <span><b>早く成果を出す</b>AIで作り、効果が出るまでを短く</span>
+                <span><b>現場に根づかせる</b>合意づくり・業務の切り替え・教育</span>
               </div>
             </div>
           </div>
@@ -812,13 +887,13 @@ footer a{color:var(--faint)}
               <p class="bl-d">高度な機械学習、大規模データ基盤、専門技術を要する実装課題はパートナー各社と連携。FDEが窓口となり、貴社は複数社との調整を負いません。</p>
             </div>
           </div>
-          <p class="wall-n gold">経営・現場・ITを一人が貫くから、打ち手が現場で使われる状態まで到達する</p>
+          <p class="wall-n gold">経営・現場・ITを一人が通して見るから、作ったものが現場で使われるところまで行き着く</p>
           <div class="wall-sp gold">
-            <p class="sp-t">多段階の導入ステップをFDEが一貫して推進</p>
+            <p class="sp-t">導入の各段階を、同じFDEが最後まで進める</p>
             <p class="sp-v"><b class="g">数週間</b><span>初期版を実装</span></p>
-            <p class="sp-d">経営・ビジネスとAIの双方を理解したコンサルタント／AIエンジニアが高速に解決。専門性の高い実装課題は技術パートナーと連携</p>
+            <p class="sp-d">経営とAIの両方が分かる担当者が、その場で作って直す。専門性の高い部分は技術パートナーと組む</p>
           </div>
-          <div class="wall-r gold">結果：<b>ROICの改善と企業価値の向上</b><span>投下資本に対する収益性が上がり、模倣されない強み（Moat）が残る</span></div>
+          <div class="wall-r gold">結果：<b>ROICの改善と企業価値の向上</b><span>投じたお金に対する利益が上がり、他社が真似しにくい仕組みが残る</span></div>
         </div>
       </div>
     </div>
@@ -833,30 +908,36 @@ footer a{color:var(--faint)}
         </div>
       </div>
 
-      <div class="str-grid">
-        <div class="str">
-          <p class="str-n">01</p>
-          <h3>業務理解</h3>
-          <p>大手日系・外資コンサルティングファームで10年以上、調達・貿易・経理・IT組織の実務に携わったメンバーが在籍。現場の帳票と例外処理まで理解しているため、初回から具体的な論点に入れます。</p>
-          <a class="str-l" href="#expertise">対応領域を見る →</a>
+      <div class="str-wrap">
+        <div class="str-g">
+          <p class="str-gl">FDE一人が併せ持つ、三つの力</p>
+          <div class="str-grid">
+            <div class="str">
+              <h3>業務理解</h3>
+              <p class="str-d">大手日系・外資コンサルティングファームで10年以上、調達・貿易・経理・IT組織の実務に携わったメンバーが在籍。現場の帳票と例外処理まで理解しているため、初回から具体的な論点に入れます。</p>
+              <a class="str-l" href="#expertise">対応領域を見る</a>
+            </div>
+            <div class="str">
+              <h3>コンサルティング力</h3>
+              <p class="str-d">経営課題をROIC・収益構造の観点で特定し、投資対効果で優先順位をつけ、経営層の合意形成まで持っていく力。何を作るかを検討する前に、そもそも着手すべきかを見極めます。</p>
+              <a class="str-l" href="#consulting">提供サービスを見る</a>
+            </div>
+            <div class="str">
+              <h3>AI実装力</h3>
+              <p class="str-d">要件の整理から開発、運用の設計までを同じ担当者が手がけます。数週間で動くものをお見せし、触ってもらいながら直します。高度な専門性が要る部分は、AIスタートアップなどの技術パートナーと組んで解決します。</p>
+              <a class="str-l" href="#fde">進め方を見る</a>
+            </div>
+          </div>
         </div>
-        <div class="str">
-          <p class="str-n">02</p>
-          <h3>コンサルティング力</h3>
-          <p>経営課題をROIC・収益構造の観点で特定し、投資対効果で優先順位をつけ、経営層の合意形成まで持っていく力。何を作るかを検討する前に、そもそも着手すべきかを見極めます。</p>
-          <a class="str-l" href="#consulting">提供サービスを見る →</a>
-        </div>
-        <div class="str">
-          <p class="str-n">03</p>
-          <h3>AI実装力</h3>
-          <p>要件定義から実装、運用設計までを同じ担当者が一貫して手がけます。最新のAI開発環境を活用し、数週間で動作するプロトタイプをご提示します。高度な専門性を要する技術課題は、AIスタートアップ等の技術パートナーと連携して解決します。</p>
-          <a class="str-l" href="#fde">進め方を見る →</a>
-        </div>
-        <div class="str">
-          <p class="str-n">04</p>
-          <h3>テンプレート</h3>
-          <p>自社プロダクトと標準業務プロセスの型を保有。ゼロから作らないため立ち上げが速く、他社事例で検証済みの設計をそのまま使えます。</p>
-          <a class="str-l" href="#products">プロダクトを見る →</a>
+        <div class="str-g asset">
+          <p class="str-gl">会社として蓄積してきた、型</p>
+          <div class="str-grid one">
+            <div class="str">
+              <h3>テンプレート</h3>
+              <p class="str-d">自社プロダクトと標準業務プロセスの型を保有。ゼロから作らないため立ち上げが速く、他社事例で検証済みの設計をそのまま使えます。</p>
+              <a class="str-l" href="/products">プロダクトを見る</a>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -868,15 +949,15 @@ footer a{color:var(--faint)}
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <h2 class="sec">小さく試して、着実に効果を獲得。</h2>
+          <h2 class="sec"><span class="nb">小さく試して、</span><span class="nb">効いたところから広げる。</span></h2>
         </div>
-        <p class="sec-lead">契約は段階ごとに区切ります。診断のみで終える、試作をご覧いただいてから判断する——いずれも想定内の設計です。大きな投資判断を、実物をご覧いただく前に迫ることはありません。着手の仕方は2通りご用意しており、<b style="color:#14181F;">貴社の状況に合わせてご提案します。</b></p>
+        <p class="sec-lead">契約は段階ごとに区切ります。診断だけで終えることも、試作を見てから続けるかを決めることもできます。実物を見る前に、大きな投資判断を迫ることはしません。始め方は2通りあり、<b style="color:#14181F;">状況に合うほうをご提案します。</b></p>
       </div>
       <div class="g2 entry" style="margin-bottom:36px;">
         <div class="opt">
           <p class="tag-en" style="margin-bottom:0;">ENTRY A</p>
           <h3>全体設計から始める</h3>
-          <p>まず社内の業務・IT化の現状を棚卸しし、AI実装の優先度と必要な機能を明確にします。「どこから手をつけるべきか」を固めてから、優先領域の試作へ進みます。</p>
+          <p>まず社内の業務とITの現状を棚卸しして、AIをどこに、どの順で入れるかを決めます。「どこから手をつけるか」を固めてから、最初の領域の試作に進みます。</p>
           <p class="opt-fit">こんな場合に ── AI活用の方向性がまだ固まっていない ／ 部門ごとにバラバラにAIツールが動いている ／ 投資の優先順位を整理したい</p>
         </div>
         <div class="opt">
@@ -886,10 +967,10 @@ footer a{color:var(--faint)}
           <p class="opt-fit">こんな場合に ── 開発要望・対象業務が決まっている ／ PoCや要件のたたき台が既にある ／ まず一つ動かして社内の理解を得たい</p>
         </div>
       </div>
-      <p style="margin:0 0 14px; font-size:13px; color:#8A909B;">どちらの入口でも、「試作で確かめてから本格展開する」という流れは共通です。</p>
+      <p style="margin:0 0 14px; font-size:13px; color:#6B7280;">どちらの入口でも、「試作で確かめてから本格展開する」という流れは共通です。</p>
 <div style="margin-top:46px;">
         <p class="tag-en" style="margin-bottom:6px;">COMPARISON</p>
-        <p style="margin:0 0 22px; font-weight:700; font-size:17px; color:#14181F;">従来型のご支援との違い</p>
+        <h3 style="margin:0 0 22px; font-weight:700; font-size:17px; color:#14181F;">従来型のご支援との違い</h3>
         <div style="overflow-x:auto;">
         <div class="vs">
           <div class="vs-r vs-hr">
@@ -905,7 +986,7 @@ footer a{color:var(--faint)}
           <div class="vs-r">
             <div class="vs-label">体制</div>
             <div class="vs-trad">実装エリアごとに分業。要件が人を跨ぐたび伝達コストと解釈のズレが積み上がる</div>
-            <div class="vs-wing">ビジネスプロセスとテクノロジー（AI・アーキテクチャ・データ）を理解した<em>フルスタック人材</em>が一貫して担当</div>
+            <div class="vs-wing">業務と技術（AI・仕組み・データ）の両方が分かる<em>同じ担当者</em>が通しで担当</div>
           </div>
           <div class="vs-r">
             <div class="vs-label">要件の固め方</div>
@@ -938,14 +1019,14 @@ footer a{color:var(--faint)}
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <h2 class="sec">一気通貫から、特定領域の強化まで。</h2>
+          <h2 class="sec"><span class="nb">全部まとめても、</span><span class="nb">一部分だけでも。</span></h2>
         </div>
         <p class="sec-lead">構想から実装・内製化までをまとめて担うこともできますし、「PMOだけ」「ベンダー選定だけ」「研修だけ」といった特定機能の強化だけでもお引き受けします。<b style="color:#14181F;">貴社に足りている部分は、無理に置き換えません。</b></p>
       </div>
       <div class="g3 pillars">
-        <div class="pillar"><p class="tag-en" style="margin-bottom:0;">SERVICE 01</p><h3>戦略構想・アドバイザリー</h3><p>経営・IT・業務の三視点から現状を診断し、実行可能なDX・AI戦略を策定。</p><ul><li>DX現状診断・課題定義</li><li>AI活用ロードマップ策定</li><li>CxO・経営層アドバイザリー</li><li>ITデューデリジェンス・PMI支援</li></ul></div>
-        <div class="pillar"><p class="tag-en" style="margin-bottom:0;">SERVICE 02</p><h3>実装・PMO</h3><p>要件定義から現場定着まで一貫関与し、成果が出るまで推進します。</p><ul><li>PMO・プロジェクト推進</li><li>システム実装・開発管理</li><li>運用設計（権限・承認フロー・監視）</li><li>チェンジマネジメント・現場定着支援</li><li>ベンダー選定・要件定義支援</li><li>グローバル・ASEAN展開支援</li></ul></div>
-        <div class="pillar"><p class="tag-en" style="margin-bottom:0;">SERVICE 03</p><h3>内製化・人材育成</h3><p>「知っている」から「現場で使える」へ。支援終了後も自走できる状態をつくります。</p><ul><li>DX・生成AI活用研修</li><li>データ分析・可視化基盤の構築</li><li>プロジェクトマネジメント研修</li><li>推進体制の設計・立ち上げ</li></ul></div>
+        <div class="pillar"><p class="tag-en" style="margin-bottom:0;">SERVICE 01</p><h3>戦略構想・アドバイザリー</h3><p>経営・IT・業務の三つの面から現状を見て、実行できる計画に落とします。</p><ul><li>DX現状診断・課題定義</li><li>AI活用ロードマップ策定</li><li>CxO・経営層アドバイザリー</li><li>ITデューデリジェンス・PMI支援</li></ul></div>
+        <div class="pillar"><p class="tag-en" style="margin-bottom:0;">SERVICE 02</p><h3>実装・PMO</h3><p>要件の整理から現場に根づくまで関わり、成果が出るまで続けます。</p><ul><li>PMO・プロジェクト推進</li><li>システム実装・開発管理</li><li>運用設計（権限・承認フロー・監視）</li><li>チェンジマネジメント・現場定着支援</li><li>ベンダー選定・要件定義支援</li><li>グローバル・ASEAN展開支援</li></ul></div>
+        <div class="pillar"><p class="tag-en" style="margin-bottom:0;">SERVICE 03</p><h3>内製化・人材育成</h3><p>知っているだけで終わらせず、現場で使えるようにします。支援が終わったあとも自分たちで回せることが目標です。</p><ul><li>DX・生成AI活用研修</li><li>データ分析・可視化基盤の構築</li><li>プロジェクトマネジメント研修</li><li>推進体制の設計・立ち上げ</li></ul></div>
       </div>
     </div>
   </section>
@@ -955,7 +1036,7 @@ footer a{color:var(--faint)}
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <h2 class="sec">これまで関わってきた業界と業務。</h2>
+          <h2 class="sec"><span class="nb">これまで関わってきた</span><span class="nb">業界と業務。</span></h2>
         </div>
         <p class="sec-lead">AIを業務に組み込むには、その業務を知っていることが前提です。大手日系・外資コンサルティングファームでチームリーダーやアカウントマネジメントを担ってきたメンバーが、日本とアメリカで<b style="color:#14181F;">30社を超える企業のDXを支援</b>してきました。</p>
       </div>
@@ -1001,168 +1082,34 @@ footer a{color:var(--faint)}
         </div>
       </div>
 
-      <p class="exp-note">記載のない業界・業務でも、まず理解するところから始めます。<b>「どの業務のどこに時間が溶けているか」</b>が特定できれば、AIの使いどころは見えてきます。</p>
+      <p class="exp-note">記載のない業界・業務でも、まず理解するところから始めます。<b>「どの業務のどこで手間がかかっているか」</b>が分かれば、AIの使いどころは見えてきます。</p>
     </div>
   </section>
 
-  <!-- ═══════ 05 プロダクト ═══════ -->
+  <!-- ═══════ 05 AIプロダクト（一覧だけ。全体像と詳細は /products） ═══════ -->
   <section id="products" class="hairline-t warm rail">
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <h2 class="sec">自社プロダクトを土台に、貴社仕様にカスタマイズ。</h2>
+          <h2 class="sec"><span class="nb">自社プロダクトを土台に、</span><span class="nb">貴社仕様にカスタマイズ。</span></h2>
         </div>
-        <p class="sec-lead">計画・調達・輸出入・販売は、担当も帳票も分かれています。ただし、扱う取引そのものは同じものです。<b style="color:#14181F;">全工程に共通する処理を1つの基盤にまとめ、工程ごとの違いは個別のソリューションで受け止めます。</b>読み取り・照合・判定はAIが担い、承認は人が行う設計です。</p>
+        <p class="sec-lead">計画・調達・輸出入・販売は、担当も帳票も分かれています。ただし、扱う取引そのものは同じものです。<b style="color:#14181F;">全工程に共通する処理を1つの基盤にまとめ、工程ごとの違いは個別のソリューションで受け止めます。</b>読み取り・照合・判定はAIがやり、承認は人がします。</p>
       </div>
-      <div class="arch">
-        <div class="arch-lbl"><span>PROCESS ／ 工程</span><i></i></div>
-        <div class="procs"><div class="proc"><div class="proc-b"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18v16H3z"/><path d="M3 10h18"/><path d="M8 3v4M16 3v4"/><path d="M7 14l3 3 4-5"/></svg><span>計画</span></div><div class="proc-c">需要予測・在庫計画</div></div><div class="proc"><div class="proc-b"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg><span>調達</span></div><div class="proc-c">仕入先・材料メーカー</div></div><div class="proc"><div class="proc-b"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 16V6h11v10"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7.5" cy="18" r="1.8"/><circle cx="17.5" cy="18" r="1.8"/></svg><span>輸出入</span></div><div class="proc-c">配送業者・通関</div></div><div class="proc"><div class="proc-b"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l1.6-5h14.8L21 9"/><path d="M4.5 9v11h15V9"/><path d="M9.5 20v-6h5v6"/></svg><span>販売</span></div><div class="proc-c">卸売・小売・顧客</div></div></div>
-
-        <div class="arch-ar" aria-hidden="true"><span>↓</span><span>↓</span><span>↓</span><span>↓</span></div>
-
-        <div class="plat">
-          <div class="plat-h">
-            <strong>BorderFlow AI</strong>
-            <span>全工程を貫く共通基盤</span>
-          </div>
-          <div class="plat-s">
-            <p>裏側で動く共通技術</p>
-            <div class="stack"><i>文書理解</i><i>判定・照合</i><i>エージェント</i><i>データ基盤</i><i>基幹連携</i><i>権限・証跡</i></div>
-          </div>
-        </div>
-
-        <div class="arch-ar" aria-hidden="true"><span>↓</span><span>↓</span><span>↓</span><span>↓</span></div>
-
-        <div class="arch-lbl gold"><span>AI SOLUTIONS ／ 工程 × 業界別</span><i></i></div>
-        <div class="sols"><div class="sol"><span class="sol-st">構想中</span><div class="sol-p">工程：計画</div><div class="sol-n">需給・在庫最適化</div><div class="sol-d">需要予測から発注点・安全在庫を算出</div></div><div class="sol-stack"><div class="sol"><span class="sol-st">開発中</span><div class="sol-p">工程：調達・購買</div><div class="sol-n">Procurement AI</div><div class="sol-d">見積比較と単価差異の検出</div></div><div class="sol live"><span class="sol-st">提供中</span><div class="sol-p">工程：調達・品質規制</div><div class="sol-n">ChemOS</div><div class="sol-d">含有物質の解析とPFAS判定</div></div></div><div class="sol live"><span class="sol-st">提供中</span><div class="sol-p">工程：輸出入・物流</div><div class="sol-n">貿易事務エージェント</div><div class="sol-d">通関申告と原価計算まで自律処理</div></div><div class="sol"><span class="sol-st">開発中</span><div class="sol-p">工程：販売・輸出管理</div><div class="sol-n">Export Control AI</div><div class="sol-d">該非判定を条文引用付きで下書き</div></div></div>
-
-        <p class="split-n"><span>役割分担</span>基盤は案件の進行と記録を担い、<b>該非判定や含有物質の該当性といった判断そのものは、専門のエンジンが行います。</b>BorderFlow AI の各ステップから呼び出すことも、個別に導入することもできます。</p>
-
-        <div class="loop">
-          <span class="loop-l">AGENT LOOP</span>
-          <b>読み取る</b><em>→</em><b>判定する</b><em>→</em><b>成果物を作る</b><em>→</em><b class="hu">人が承認</b>
-          <span class="loop-n">↺ 例外は差し戻して再開</span>
-        </div>
+      <div class="pl">
+        <a class="pl-i live" href="/borderflow-guide"><span class="pl-s">提供中</span><b>BorderFlow AI</b><span class="pl-d">貿易事務エージェント。契約書・Invoice・BLを読み取り、通関申告と原価計算まで進める</span></a>
+        <a class="pl-i live" href="/chemos-guide"><span class="pl-s">提供中</span><b>ChemOS</b><span class="pl-d">PFAS・chemSHERPA対応。含有物質の解析と判定から、照会メールと提出物の作成まで</span></a>
+        <a class="pl-i live" href="/staypath-guide"><span class="pl-s">デモ公開中</span><b>StayPath</b><span class="pl-d">外国人材受入支援の業務管理。人材・企業・申請・面談・請求を一つのデータベースで</span></a>
+        <a class="pl-i" href="/products#export-control"><span class="pl-s">開発中</span><b>Export Control AI</b><span class="pl-d">該非判定の下調べ。仕様書から該当候補を抜き出し、条文の引用付きで下書きする</span></a>
+        <a class="pl-i" href="/products#procurement"><span class="pl-s">開発中</span><b>Procurement AI</b><span class="pl-d">見積書をまとめて読み取り、条件を揃えた比較表と稟議に使える資料を作る</span></a>
+        <a class="pl-i" href="/products#demand-inventory"><span class="pl-s">構想中</span><b>需給・在庫最適化</b><span class="pl-d">需要予測から発注点と安全在庫を出し、過剰在庫と欠品のどちらに寄っているかを見る</span></a>
       </div>
-
-      <p class="dataloop"><span>DATA LOOP</span>工程が違っても、蓄積先は同じデータ基盤です。<b>調達で読み取った品目情報が、規制判定にも通関申告にもそのまま効きます。</b></p>
-
-      <div class="eco">
-        <div class="arch-lbl"><span>CONNECTIONS ／ 外部システム・取引先との接続</span><i></i></div>
-        <div class="eco-body">
-          <div class="eco-side">
-            <p class="eco-h">社内システム</p>
-            <div class="eco-i"><b>基幹・会計システム</b><span>仕訳・債権債務・原価</span></div><div class="eco-i"><b>共有メールボックス</b><span>Microsoft 365 ／ Gmail</span></div><div class="eco-i"><b>既存の在庫・購買システム</b><span>入出庫・発注残</span></div>
-          </div>
-          <div class="eco-hub">
-            <span class="eco-ar l" aria-hidden="true">⇄</span>
-            <div class="eco-hub-b">
-              <strong>BorderFlow AI</strong>
-              <span>案件の記録と進行を一元管理</span>
-            </div>
-            <span class="eco-ar r" aria-hidden="true">⇄</span>
-          </div>
-          <div class="eco-side">
-            <p class="eco-h">社外の相手先・機関</p>
-            <div class="eco-g"><p>金融</p><div class="eco-i"><b>銀行</b><span>L/C開設・決済・為替予約</span></div><div class="eco-i"><b>損害保険会社</b><span>海上保険の付保・求償</span></div><div class="eco-i"><b>信用調査機関</b><span>与信枠・格付の更新</span></div></div><div class="eco-g"><p>物流・通関</p><div class="eco-i"><b>NACCS</b><span>輸出入申告・関税納付</span></div><div class="eco-i"><b>通関業者・乙仲</b><span>申告依頼・許可通知</span></div><div class="eco-i"><b>倉庫事業者</b><span>入出庫・在庫照合</span></div><div class="eco-i"><b>船社・フォワーダー</b><span>B/L・本船動静</span></div></div><div class="eco-g"><p>取引先</p><div class="eco-i"><b>仕入先</b><span>契約・Invoice・船積書類</span></div><div class="eco-i"><b>販売先</b><span>受注・請求・入金</span></div></div>
-          </div>
-        </div>
-        <p class="eco-n">接続方式は貴社の環境に合わせて設計します。既存の基幹システムやメール環境を置き換えず、そのまま繋ぐことを前提とした構成です。</p>
-      </div>
-
-      <div class="prods">
-        <div class="prod">
-          <p class="tag-en" style="margin-bottom:0;">BORDERFLOW AI</p>
-          <h3>自律型 貿易事務エージェント</h3>
-          <p class="sub">契約書・Invoice・BLをドラッグ＆ドロップするだけ</p>
-          <p>AI-OCRが書類を読み取り案件情報を自動入力。取引パターンの自動判定からHS分類・通関申告・原価計算まで、貿易事務の全ステップをAIが自律処理します。</p>
-          <p class="cust">貴社の取引パターン・帳票様式・基幹システム連携に合わせて作り込みます。</p>
-          <span class="free">1ヶ月無料PoC受付中（ソフトウェア使用料 完全無料）</span><br>
-          <a class="go" href="/borderflow-guide">ソリューション詳細 →</a>
-        </div>
-        <div class="prod">
-          <p class="tag-en" style="margin-bottom:0;">CHEMOS</p>
-          <h3>PFAS・chemSHERPA 対応の自動化</h3>
-          <p class="sub">chemSHERPAファイルをドロップするだけ</p>
-          <p>AIが含有物質を自動解析し、PFAS該当物質を3段階で判定。サプライヤーへの照会メール生成から提出物の自動作成まで、7ステップを証跡付きで完走します。</p>
-          <p class="cust">貴社の調査票様式・社内規程・サプライヤー体制に合わせて作り込みます。</p>
-          <span class="free">1ヶ月無料PoC受付中（ソフトウェア使用料 完全無料）</span><br>
-          <a class="go" href="/chemos-guide">ソリューション詳細 →</a>
-        </div>
-        <div class="prod dev">
-          <p class="tag-en" style="margin-bottom:0;">EXPORT CONTROL AI<span class="badge">開発中</span></p>
-          <h3>該非判定の下調べ自動化</h3>
-          <p class="sub">製品仕様書をアップロードするだけ</p>
-          <p>仕様書・データシートをAIが読み取り、輸出令別表第1の該当候補となる項番を抽出。貨物等省令のスペックと突合し、パラメータシートの下書きを条文の引用付きで生成します。判定履歴を蓄積するため、法改正時に再確認が必要な品目も洗い出せます。</p>
-          <p class="cust">最終判定は貴社の責任で行う前提の設計です。AIが担うのは、判定に至るまでの検索・照合・記録です。</p>
-          <span class="free">2026年内リリース予定・先行導入企業を募集中</span><br>
-          <a class="go" href="/blog/export-control-ai">安全保障貿易管理の解説記事 →</a>
-        </div>
-        <div class="prod dev">
-          <p class="tag-en" style="margin-bottom:0;">PROCUREMENT AI<span class="badge">開発中</span></p>
-          <h3>AI搭載 調達プラットフォーム</h3>
-          <p class="sub">見積書をまとめてアップロードするだけ</p>
-          <p>各社バラバラの様式で届く見積書をAIが読み取り、条件を揃えた比較表に自動整形。仕様との適合チェック、過去単価との差異検出、サプライヤーの与信・法規制スクリーニングまでを一連で処理し、稟議に使える資料を生成します。</p>
-          <p class="cust">大規模な調達基盤の導入が過剰な中堅企業向けに、既存の購買フローを活かしたまま導入できる設計です。</p>
-          <span class="free">2026年内リリース予定・先行導入企業を募集中</span><br>
-          <a class="go" href="#contact">導入について相談する →</a>
-        </div>
-        <div class="prod dev road">
-          <p class="tag-en" style="margin-bottom:0;">DEMAND &amp; INVENTORY AI<span class="badge road">ロードマップ</span></p>
-          <h3>需給・在庫最適化</h3>
-          <p class="sub">出荷実績と受注残をつなぐだけ</p>
-          <p>需要予測をもとに、品目ごとの発注点と安全在庫を算出。リードタイムの変動と欠品リスクを織り込み、過剰在庫と欠品のどちらに寄っているかを可視化します。貿易事務エージェントが持つ入出庫・洋上在庫のデータをそのまま使うため、別途のデータ整備は不要です。</p>
-          <p class="cust">構想段階です。対象品目・拠点構成・需要変動の特性について、ご一緒に検討いただける企業を探しています。</p>
-          <a class="go" href="#contact">構想段階から相談する →</a>
-        </div>
-      </div>
-
-      <div class="goal">
-        <div class="goal-h">
-          <p>GOAL</p>
-          <h3>AI・データによる、サプライチェーンの最適化</h3>
-        </div>
-        <div class="goal-g">
-          <div><b>コスト</b>調達単価・物流費・事務工数の削減</div>
-          <div><b>リードタイム</b>判定・照合の待ち時間を短縮</div>
-          <div><b>コンプライアンス</b>属人化を解き、証跡を標準装備</div>
-          <div><b>意思決定</b>「勘と経験」を数値に置き換える</div>
-        </div>
-        <div class="goal-f">
-          <b>ROICの改善と企業価値の向上へ</b>
-          AI・ITは手段です。投下資本に対する収益性を上げ、模倣されない強み（Moat）を残すことを目的に設計します。
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════ その他のソリューション（サプライチェーン以外の領域） ═══════ -->
-  <section id="other-solutions" class="hairline-t rail">
-    <div class="wrap">
-      <div class="sec-head">
-        <div>
-          <p class="kicker">OTHER SOLUTIONS</p>
-          <h2 class="sec">その他のソリューション。</h2>
-        </div>
-        <p class="sec-lead"><b style="color:#14181F;">探す・転記する・作り直す</b>といった、判断の手前にある作業を自動化します。確定は人の承認で行い、誰がいつ承認したかを記録に残します。</p>
-      </div>
-      <div class="prods">
-        <div class="prod" style="grid-column:1/-1;">
-          <p class="tag-en" style="margin-bottom:0;">STAYPATH<span class="badge">領域：外国人材</span></p>
-          <h3>外国人材受入支援 業務管理システム</h3>
-          <p class="sub">営業から配属後の管理まで、1つのデータベースで回す</p>
-          <p>人材・企業・求人・申請・面談・請求を同じ場所に置き、在留期限の走査、申請に必要な書類の展開、様式への差し込みによる契約書作成、受け取った契約書の照合、面談録音からの要約とリスク抽出を自動化します。AIの出力はすべて下書きで、承認した人と日時が記録に残ります。</p>
-          <p class="cust">貴社の様式・料金体系・支援体制に合わせて作り込みます。既存のスプレッドシートからの移行を含めて支援します。</p>
-          <span class="free">デモ公開中（4つのロールで見え方の違いを確認できます）</span><br>
-          <a class="go" href="/staypath-guide">ソリューション詳細 →</a>
-        </div>
-      </div>
+      <p class="pl-more"><a class="btn-line" href="/products">共通基盤・接続先・各製品の詳細を見る</a><span>BorderFlow AI を土台にした全体像と、外部システム・取引先との接続先をまとめています。</span></p>
     </div>
   </section>
 
   <!-- ═══════ MID CTA ═══════ -->
   <div class="cta-strip">
-    <p>貴社の業務では、どこからAIを始めるべきか。<br>まずは30分、お話ししませんか。</p>
+    <p><span class="nb">貴社の業務では、</span><span class="nb">どこからAIを始めるべきか。</span><br><span class="nb">まずは30分、</span><span class="nb">お話ししませんか。</span></p>
     <a href="#contact" class="btn-dark">無料相談を申し込む</a>
     <p class="sub-l">まだ相談段階でない方へ ── <a href="/dx-assessment">5分でできる無料DX診断</a> もご用意しています</p>
   </div>
@@ -1177,11 +1124,11 @@ footer a{color:var(--faint)}
       </div>
       <div class="faq">
         <details><summary>大手コンサルティングファームとの違いは何ですか？</summary><div class="a">最大の違いは、提案した人間が実装まで担う点です。大手では提案フェーズのシニアが実行フェーズで交代することが少なくありません。Wingでは、診断で課題を理解した本人が、開発・定着まで通しで担当します。</div></details>
-        <details><summary>少人数体制で、当社の規模に対応できますか？</summary><div class="a">構想・意思決定支援と実装の初期段階は、経験を積んだシニアメンバーが直接担当します。全社展開で体制が必要な局面や、高度な機械学習・大規模データ基盤など専門性の高い実装課題については、AIスタートアップをはじめとする技術パートナーと連携して対応します。貴社の窓口はFDEに一本化されるため、複数社との調整をお任せいただく必要はありません。</div></details>
+        <details><summary>少人数体制で、当社の規模に対応できますか？</summary><div class="a">構想・意思決定支援と実装の初期段階は、経験を積んだシニアメンバーが直接担当します。全社展開で体制が必要な局面や、高度な機械学習・大規模データ基盤など専門性の高い実装課題については、AIスタートアップをはじめとする技術パートナーと連携して対応します。窓口はFDE一人にまとまるので、貴社が複数の会社と調整する必要はありません。</div></details>
         <details><summary>セキュリティや情報管理の要件に対応できますか？</summary><div class="a">秘密保持契約を締結のうえ、データは国内リージョンで管理し、アクセス権限・バックアップ体制を整えて運用します。貴社の情報セキュリティ規程・調達要件に沿った対応を前提とし、詳細は契約前に書面でご説明します。貴社のデータを外部のAI学習に使うことはありません。</div></details>
-        <details><summary>途中でやめることはできますか？</summary><div class="a">できます。契約は段階ごとに区切っており、診断だけ・試作までという終わり方も想定した設計です。実物を見て「この投資はしない」と判断していただくのも、正しい結論の一つだと考えています。</div></details>
+        <details><summary>途中でやめることはできますか？</summary><div class="a">できます。契約は段階ごとに区切っており、診断だけ、試作までで終える形も最初から想定しています。実物を見て「この投資はしない」と判断していただくのも、正しい結論の一つだと考えています。</div></details>
         <details><summary>既存のベンダーやSIerとの取引があるのですが。</summary><div class="a">併用いただけます。既存の基幹システムはそのまま活かし、その周辺を変えるのが当社の領域です。ベンダー提案の妥当性評価や条件交渉を、発注側の立場でお手伝いすることも可能です。</div></details>
-        <details><summary>最終的に社内で運用できるようになりますか？</summary><div class="a">それを目標に設計しています。ソースコード・設計資料は成果物としてお渡しし、運用体制の立ち上げと人材育成まで支援します。当社への依存が続く状態は、成功とは考えていません。</div></details>
+        <details><summary>最終的に社内で運用できるようになりますか？</summary><div class="a">それを目標にしています。ソースコード・設計資料は成果物としてお渡しし、運用体制の立ち上げと人材育成まで支援します。当社への依存が続く状態は、成功とは考えていません。</div></details>
       </div>
     </div>
   </section>
@@ -1203,7 +1150,7 @@ footer a{color:var(--faint)}
         <a class="ins" href="/blog/trade-dx-complete-guide"><p class="cat">TRADE DX</p><h3>貿易DX完全ガイド｜業務フロー・課題・AI活用まで</h3><p>輸入・輸出の全業務フローとAI・RPA活用による自動化。</p></a>
         <a class="ins" href="/blog/export-control-ai"><p class="cat">TRADE DX</p><h3>安全保障貿易管理とは？該非判定の実務とAI・DXによる効率化</h3><p>リスト規制・キャッチオール規制と、該非判定の属人化を解く方法。</p></a>
       </div>
-      <p style="margin:28px 0 0;"><a href="/blog/" style="font-size:13px; color:#8A6E33; font-weight:700; letter-spacing:.05em; border-bottom:1px solid #D6D0C2; padding-bottom:2px;">すべての記事を見る →</a></p>
+      <p style="margin:28px 0 0;"><a href="/blog/" style="font-size:13px; color:#8A6E33; font-weight:700; letter-spacing:.05em; border-bottom:1px solid #D6D0C2; padding-bottom:2px;">すべての記事を見る <span aria-hidden="true">→</span></a></p>
     </div>
   </section>
 
@@ -1216,9 +1163,9 @@ footer a{color:var(--faint)}
         </div>
       </div>
       <table class="co">
-        <tr><th>社名</th><td>Wing</td></tr>
-        <tr><th>設立</th><td>2026年</td></tr>
-        <tr><th>事業内容</th><td>自社AIプロダクト（BorderFlow AI・ChemOS・該非判定AI・調達プラットフォーム）を軸としたカスタマイズソリューションの開発・提供、AI・DXコンサルティング、実装・伴走支援</td></tr>
+        <tr><th scope="row">社名</th><td>Wing</td></tr>
+        <tr><th scope="row">設立</th><td>2026年</td></tr>
+        <tr><th scope="row">事業内容</th><td>自社AIプロダクト（BorderFlow AI・ChemOS・該非判定AI・調達プラットフォーム）を軸としたカスタマイズソリューションの開発・提供、AI・DXコンサルティング、実装・定着支援</td></tr>
       </table>
     </div>
   </section>
@@ -1228,28 +1175,30 @@ footer a{color:var(--faint)}
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <h2 class="sec">長年の経営コンサルティングの知見から、<br>貴社に合わせた打ち手を。</h2>
+          <h2 class="sec"><span class="nb">長年の経営コンサルティングの</span><span class="nb">知見から、</span><br class="pc"><span class="nb">貴社に合わせた打ち手を。</span></h2>
         </div>
       </div>
       <div class="ct">
         <div class="ct-l">
-          <p>30分の無料相談では、業界・規模・現在のIT環境を伺ったうえで、これまで培った知見をもとに、貴社の状況に合わせた打ち手をご提案します。一般論ではなく、貴社が次に取るべき一手をお持ち帰りいただける時間にします。営業のお電話は一切いたしません。</p>
-          <p style="font-size:12px; color:#8A909B;">※ 伴走の質を保つため、同時にご一緒するのは数社までとしています。<br>返信目安：1〜2営業日以内　／　構想段階からのご相談も歓迎します。</p>
+          <p>30分の無料相談では、業界・規模・いまのIT環境を伺ったうえで、これまでの経験をもとに、貴社に合う進め方をお話しします。一般論ではなく、次に何をすればよいかが決まる時間にします。営業の電話はしません。</p>
+          <p style="font-size:12px; color:#6B7280;">※ 手が回らなくなるのを避けるため、同時にお受けするのは数社までにしています。<br>返信目安：1〜2営業日以内　／　構想段階からのご相談も歓迎します。</p>
           <p style="font-size:13px; color:#5C6470; border:1px solid #E8E5DE; padding:14px 18px; background:#fff;">お問い合わせの前に現在地を知りたい方は、<a href="/dx-assessment" style="color:#8A6E33; font-weight:700;">無料DX診断（5分・登録不要）</a>をお試しください。</p>
         </div>
         <form class="form" action="https://formspree.io/f/xpqopzdj" method="POST">
-          <div><label>お名前 *</label><input type="text" name="name" required></div>
+          <div><label for="f-name">お名前 *</label><input id="f-name" type="text" name="name" autocomplete="name" required></div>
           <div class="two">
-            <div><label>会社名</label><input type="text" name="company"></div>
-            <div><label>メールアドレス *</label><input type="email" name="email" required></div>
+            <div><label for="f-company">会社名</label><input id="f-company" type="text" name="company" autocomplete="organization"></div>
+            <div><label for="f-email">メールアドレス *</label><input id="f-email" type="email" name="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" required></div>
           </div>
-          <div><label>ご相談内容 *</label><textarea name="message" required placeholder="現状の課題や、実現したいことをお書きください（箇条書きで構いません）"></textarea></div>
+          <div><label for="f-message">ご相談内容 *</label><textarea id="f-message" name="message" required placeholder="例：見積の突合に時間がかかっている／PoCが本番に進まない…（箇条書きで構いません）"></textarea></div>
           <button type="submit">無料相談を申し込む</button>
-          <p class="note" style="margin:0;">送信をもってプライバシーポリシーに同意したものとみなします。</p>
+          <p class="note" style="margin:0;">送信をもって<a href="/privacy" style="color:var(--gold-deep); text-decoration:underline; text-decoration-color:var(--line2);">プライバシーポリシー</a>に同意したものとみなします。</p>
         </form>
       </div>
     </div>
   </section>
+
+  </main>
 
   <footer class="rail">
     <div class="wrap">
@@ -1262,30 +1211,45 @@ footer a{color:var(--faint)}
 
 <script>
 (function(){
+  // 数字の棒が、見えたときに伸びる演出。動きを減らす設定のときは出さない
   var els = Array.prototype.slice.call(document.querySelectorAll('[data-grow]'));
-  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) { return; }
-  els.forEach(function(el){
-    el.style.transformOrigin = 'left center';
-    el.style.transform = 'scaleX(0)';
-    el.style.transition = 'transform 1.05s cubic-bezier(.22,.75,.24,1)';
-  });
-  function reveal(el, i){
-    if (el._shown) return;
-    el._shown = true;
-    setTimeout(function(){ el.style.transform = 'none'; }, (i % 4) * 110);
-  }
-  function check(){
-    var h = window.innerHeight || 800;
-    els.forEach(function(el, i){
-      if (el._shown) return;
-      var r = (el.parentElement || el).getBoundingClientRect();
-      if (r.top < h * 0.92 && r.bottom > 0) reveal(el, i);
+  var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (els.length && !still) {
+    els.forEach(function(el){
+      el.style.transformOrigin = 'left center';
+      el.style.transform = 'scaleX(0)';
+      el.style.transition = 'transform 1.05s cubic-bezier(.22,.75,.24,1)';
     });
+    var reveal = function(el){
+      if (el._shown) return;
+      el._shown = true;
+      setTimeout(function(){ el.style.transform = 'none'; }, (els.indexOf(el) % 4) * 110);
+    };
+    if ('IntersectionObserver' in window) {
+      // 棒そのものは幅0に縮めてあるので、見えたかどうかは親（下地の帯）で判定する
+      var byTrack = new Map();
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){
+          if (!en.isIntersecting) return;
+          reveal(byTrack.get(en.target));
+          io.unobserve(en.target);
+        });
+      }, { rootMargin: '0px 0px -8% 0px' });
+      els.forEach(function(el){ var t = el.parentElement || el; byTrack.set(t, el); io.observe(t); });
+    } else {
+      els.forEach(reveal);
+    }
+    setTimeout(function(){ els.forEach(reveal); }, 2500);
   }
-  window.addEventListener('scroll', check, { passive: true });
-  window.addEventListener('resize', check, { passive: true });
-  requestAnimationFrame(function(){ requestAnimationFrame(check); });
-  setTimeout(function(){ els.forEach(reveal); }, 2500);
+
+  // スマホの目次：行き先を押したら閉じる。Esc でも閉じる
+  var mn = document.querySelector('.mnav');
+  if (mn) {
+    Array.prototype.forEach.call(mn.querySelectorAll('a'), function(a){
+      a.addEventListener('click', function(){ mn.removeAttribute('open'); });
+    });
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape') mn.removeAttribute('open'); });
+  }
 })();
 </script>
 </body>
