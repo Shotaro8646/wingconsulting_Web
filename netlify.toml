@@ -16,14 +16,20 @@
 # 別の Netlify サイトから取りに行き、URL は wingconsulting.org/profile のまま見せる。
 # 名刺やメールで渡したリンクからだけ開く前提なので、検索には載せない。
 [[headers]]
+  for = "/profile"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
   for = "/profile/*"
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
 
+# /profile と /profile/ は Netlify では同じ扱い。301 で寄せると自分に飛んでループするので、両方とも 200 で取り込む。
 [[redirects]]
   from = "/profile"
-  to = "/profile/"
-  status = 301
+  to = "https://wingconsulting-profile.netlify.app/"
+  status = 200
 
 [[redirects]]
   from = "/profile/*"
