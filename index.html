@@ -469,6 +469,9 @@ table.co{width:100%;max-width:760px;border-collapse:collapse;border:1px solid va
 table.co th,table.co td{padding:14px 22px;border-bottom:1px solid var(--line);text-align:left}
 table.co th{width:150px;color:var(--faint);font-size:12px;font-weight:700;letter-spacing:.06em;background:#FBFAF7}
 table.co td{color:var(--sub2)}
+.co-wrap{display:grid;grid-template-columns:minmax(0,760px) auto;gap:24px 40px;align-items:start}
+@media(max-width:860px){.co-wrap{grid-template-columns:1fr}}
+.co-badge img{display:block;width:150px;height:150px}
 /* contact */
 .ct{display:grid;grid-template-columns:1fr 1.15fr;gap:52px;align-items:start}
 @media(max-width:860px){.ct{grid-template-columns:1fr;gap:32px}}
@@ -506,65 +509,58 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
 .vs-wing{background:var(--ink);color:#fff;font-size:13px;font-weight:500;line-height:1.9}
 .vs-wing em{font-style:normal;color:var(--gold-soft);font-weight:700}
 /* ── 強み（Why Wing?）──
-   4項目は順番ではないので番号は振らない。代わりに「FDE一人が持つ力（3枚）」と
-   「会社として持つ型（1枚）」の二群に分け、4枚目だけ金色なのはそのためだと分かるようにする */
-.str-wrap{display:grid;grid-template-columns:3fr 1fr;gap:18px;align-items:stretch}
-.str-g{display:flex;flex-direction:column;min-width:0}
+   3項目は順番ではないので番号は振らない。以前あった4枚目「テンプレート」は
+   AI実装力の説明に溶かした（型があるから速い、という理由として読ませる） */
 .str-gl{margin:0 0 10px;font-size:12px;color:var(--sub2);letter-spacing:.02em}
-.str-g.asset .str-gl{color:var(--gold-deep)}
-.str-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);flex:1}
-.str-grid.one{grid-template-columns:1fr}
+.str-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
 .str{background:#fff;padding:26px 24px 22px;display:flex;flex-direction:column;position:relative}
 .str::before{content:'';position:absolute;top:0;left:0;width:34px;height:2px;background:var(--ink)}
-.str-g.asset .str::before{background:var(--gold)}
 .str h3{margin:0 0 10px;font-size:17px;font-weight:700;color:var(--ink);letter-spacing:.02em;line-height:1.5}
 .str-d{margin:0 0 18px;font-size:13px;color:var(--sub2);line-height:1.95;flex:1;text-wrap:pretty}
+.str-d a{color:var(--ink);border-bottom:1px solid var(--gold)}
 .str-l{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--gold-deep);font-weight:700;letter-spacing:.03em;border-top:1px dashed var(--line);padding-top:12px}
 .str-l::after{content:'→';content:'→' / '';display:inline-block}
 .str-l:hover{color:var(--ink)}
-@media(max-width:1000px){.str-wrap{grid-template-columns:1fr}}
 @media(max-width:720px){.str-grid{grid-template-columns:1fr}}
-.wall{display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch;margin-top:8px}
-@media(max-width:900px){.wall{grid-template-columns:1fr}}
-.wall-ar{display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--gold);padding:0 18px}
-@media(max-width:900px){.wall-ar{transform:rotate(90deg);padding:14px 0}}
-.wall-p{border:1px solid var(--line);background:#fff;padding:20px 20px 18px;display:flex;flex-direction:column}
-.wall-p.win{border-color:var(--ink)}
-.wall-h{margin:0 0 18px;font-family:var(--en);font-weight:600;font-size:12px;letter-spacing:.2em;color:var(--faint)}
-.wall-h span{display:block;font-family:var(--sans);font-size:14px;font-weight:700;color:var(--sub2);letter-spacing:.02em;margin-top:4px}
-.wall-h.gold{color:var(--gold-deep)}
-.wall-h.gold span{color:var(--ink)}
-.wall-body{flex:1}
-/* BEFORE 側は AFTER 側より内容が少なく、下に空白が残っていた。
-   境界線の帯を伸ばして、発注者と受注者の距離として見せる */
-.wall-p:not(.win) .wall-body{display:flex;flex-direction:column}
-.cbox{border:1px solid var(--line2);background:#FBFAF7;padding:14px}
-.cbox-t{margin:0 0 10px;font-size:11px;letter-spacing:.06em;color:var(--faint);text-align:center;font-weight:700}
+/* ── FDEの立ち位置（#fde）──
+   以前は BEFORE（外から関わる従来型）と AFTER（Wing）を2枚並べて対比させていたが、
+   BEFORE 側を外した。1枚だけを元の幅のまま置くと縦長の札が横に間延びするので、
+   左に「貴社の中に入った FDE」の図、右に速さと結果、という2列に組み替えている */
+.fde-box{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:8px}
+@media(max-width:900px){.fde-box{grid-template-columns:1fr}}
+.fde-fig{position:relative;background:#fff;padding:24px 26px 26px}
+.fde-fig::before{content:'';position:absolute;top:0;left:0;width:34px;height:2px;background:var(--gold)}
+.fde-h{margin:0 0 16px;font-size:14px;font-weight:700;color:var(--ink);letter-spacing:.02em;line-height:1.6}
+.fde-out{background:#FBFAF7;padding:24px 26px 26px;display:flex;flex-direction:column;justify-content:center}
+.fde-why{margin:0 0 16px;font-size:13px;color:var(--gold-deep);line-height:1.9}
+.fde-sp{padding:16px 0;border-top:1px dashed var(--line2)}
+.fde-sp .sp-t{margin:0 0 10px;font-size:13px;font-weight:700;color:var(--ink);line-height:1.7}
+.fde-sp .sp-v{margin:0 0 10px;display:flex;align-items:baseline;gap:10px}
+.fde-sp .sp-v b{font-family:var(--en);font-size:30px;font-weight:600;color:var(--gold-deep);line-height:1;letter-spacing:.02em}
+.fde-sp .sp-v span{font-size:12px;color:var(--sub2)}
+.fde-sp .sp-d{margin:0;font-size:12px;color:var(--sub2);line-height:1.85}
+.fde-r{padding-top:16px;border-top:1px dashed var(--line2);font-size:13px;color:var(--sub2)}
+.fde-r b{color:var(--gold-deep);font-size:15px;margin:0 2px}
+.fde-r span{display:block;font-size:12px;color:var(--sub2);margin-top:5px;line-height:1.8}
+/* 担当者の認定。Anthropic が出しているのは「Claude Certified Architect – Professional」という資格で、
+   FDE という肩書きを認定しているわけではないので、資格名を必ず併記する。
+   画像は Credly から取った自社控え（images/credly-claude-architect.png）。
+   Credly へのリンクや埋め込みカードは本人の意向で置かない（画像だけ載せる）。
+   保有者は1名なので「認定の FDE が担当します」とは書かず、「持つ FDE が在籍」に留める */
+.fde-cred{display:flex;gap:14px;align-items:center;padding:14px 0;border-top:1px dashed var(--line2)}
+.fde-cred img{display:block;width:84px;height:84px;flex:none}
+.fde-cred-t{margin:0 0 4px;font-size:13px;font-weight:700;color:var(--ink);line-height:1.7}
+.fde-cred-d{margin:0;font-size:12px;color:var(--sub2);line-height:1.8}
+@media(max-width:720px){.fde-fig,.fde-out{padding:18px 16px 20px}}
+/* 図の中身。太い枠が「貴社」の内側で、FDE はその中に立つ */
+.cbox{border:2px solid var(--ink);background:#fff;padding:18px 16px}
+.cbox-t{margin:0 0 10px;font-size:12px;letter-spacing:.06em;color:var(--ink);text-align:center;font-weight:700}
 .cbox-t small{display:block;font-weight:400;font-size:11px;color:var(--gold-deep);margin-top:2px}
-.cbox-r{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.cbox-r>span{border:1px solid var(--line);background:#fff;padding:10px 8px;text-align:center;font-size:13px;font-weight:700;color:var(--ink)}
-.cbox-r>span small{display:block;font-weight:400;font-size:11px;color:var(--sub2);margin-top:4px;line-height:1.6}
-.barrier{position:relative;margin:0;padding:26px 0;display:flex;align-items:center;justify-content:center;flex:1}
-.barrier::before{content:'';position:absolute;left:0;right:0;top:50%;border-top:3px double #C9CDD4}
-.bar-l{position:relative;background:#fff;padding:0 12px;font-size:11px;font-weight:700;letter-spacing:.14em;color:#6B7280}
-.ex{position:absolute;font-size:11px;color:var(--faint);white-space:nowrap}
-.ex.out{left:2px;top:2px}
-.ex.in{right:2px;bottom:2px}
-/* 帯が伸びたぶん、書類が下りて納品物が上がる道筋を点線で示す。横並びのときだけ出す */
-.ex-line{position:absolute;width:0;border-left:1px dashed #C9CDD4;display:none}
-.ex-line.out{left:48px;top:24px;bottom:calc(50% + 12px)}
-.ex-line.in{right:32px;top:calc(50% + 12px);bottom:24px}
-@media(min-width:901px){.ex-line{display:block}}
-.vend{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.vend>span{border:1px solid var(--line);background:#fff;padding:9px 6px;text-align:center;font-size:12px;color:var(--sub2)}
-.cbox.inside{border-color:var(--ink);border-width:2px;background:#fff;padding:18px 16px}
-.cbox.inside .cbox-t{color:var(--ink);font-size:12px}
-.cbox.inside .cbox-t small{color:var(--gold-deep)}
 .bridge{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;margin-top:4px}
 @media(max-width:560px){.bridge{grid-template-columns:1fr;gap:6px}}
 .side{border:1px solid var(--line2);background:#FBFAF7;padding:14px 10px;text-align:center}
 .side b{display:block;font-size:14px;color:var(--ink)}
-.side span{display:block;font-size:11px;color:var(--sub2);margin-top:5px;line-height:1.6}
+.side span{display:block;font-size:11.5px;color:var(--sub2);margin-top:5px;line-height:1.6}
 .side.mgmt{border-top:3px solid var(--ink)}
 .side.ops{border-top:3px solid var(--gold)}
 .mid{display:flex;flex-direction:column;align-items:center;gap:4px;padding:0 4px}
@@ -574,31 +570,16 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
 .fde-n{width:84px;height:84px;border-radius:50%;background:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(20,24,31,.3);flex:none}
 .fde-n b{font-family:var(--en);font-weight:600;font-size:19px;letter-spacing:.12em;color:var(--gold-soft);line-height:1}
 .fde-n em{font-style:normal;font-family:var(--en);font-size:11px;color:rgba(255,255,255,.75);margin-top:3px;letter-spacing:.1em}
-.bridge-cap{margin:12px 0 14px;font-size:12px;color:var(--gold-deep);text-align:center;line-height:1.8}
+.bridge-cap{margin:12px 0 14px;font-size:12.5px;color:var(--gold-deep);text-align:center;line-height:1.8}
 .fde-role{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-@media(max-width:1080px){.fde-role{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.fde-role{grid-template-columns:1fr}}
-.fde-role>span{border-top:2px solid var(--gold-soft);background:#fff;padding:10px 8px;font-size:11px;color:var(--sub2);line-height:1.7;text-align:center}
-.fde-role>span b{display:block;font-size:12px;color:var(--ink);margin-bottom:3px}
+@media(max-width:640px){.fde-role{grid-template-columns:repeat(2,1fr)}}
+.fde-role>span{border-top:2px solid var(--gold-soft);background:#fff;padding:10px 8px;font-size:11.5px;color:var(--sub2);line-height:1.7;text-align:center}
+.fde-role>span b{display:block;font-size:12.5px;color:var(--ink);margin-bottom:3px}
 .backline{margin-top:14px;display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start}
 .bl-ar{font-size:15px;color:var(--gold);line-height:1.6;padding-top:8px}
 .bl-box{border:1px dashed var(--gold);background:#FDFBF6;padding:12px 14px}
-.bl-t{margin:0 0 5px;font-size:12px;font-weight:700;color:var(--gold-deep)}
-.bl-d{margin:0;font-size:11.5px;color:var(--sub2);line-height:1.85}
-.wall-n{margin:16px 0 0;font-size:12px;color:var(--faint);line-height:1.9}
-.wall-n.gold{color:var(--gold-deep)}
-.wall-sp{margin-top:12px;padding:14px 16px;background:#FBFAF7;border:1px solid var(--line2);display:block}
-.wall-sp.gold{border-color:var(--gold);background:#FDFBF6}
-.wall-sp .sp-t{margin:0 0 8px;font-size:12px;font-weight:700;color:var(--ink);line-height:1.7}
-.wall-sp .sp-v{margin:0 0 8px;display:flex;align-items:baseline;gap:8px;border-top:1px dashed var(--line2);border-bottom:1px dashed var(--line2);padding:8px 0}
-.wall-sp .sp-v b{font-family:var(--en);font-size:22px;color:var(--sub);line-height:1}
-.wall-sp .sp-v b.g{color:var(--gold-deep)}
-.wall-sp .sp-v span{font-size:11px;color:var(--faint)}
-.wall-sp .sp-d{margin:0;font-size:11px;color:var(--sub2);line-height:1.8}
-.wall-r{margin-top:12px;border-top:1px solid var(--line);padding-top:12px;font-size:13px;color:var(--sub2)}
-.wall-r b{color:var(--ink);font-size:14px;margin:0 2px}
-.wall-r span{display:block;font-size:11px;color:var(--faint);margin-top:3px}
-.wall-r.gold b{color:var(--gold-deep)}
+.bl-t{margin:0 0 5px;font-size:12.5px;font-weight:700;color:var(--gold-deep)}
+.bl-d{margin:0;font-size:12px;color:var(--sub2);line-height:1.85}
 /* ── ヘッダー ── */
 .hd{height:72px;display:flex;align-items:center;justify-content:space-between;gap:12px}
 .hd-r{display:flex;align-items:center;gap:6px}
@@ -677,9 +658,6 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
   footer.rail::before{bottom:auto;height:34px}
 }
 .warm{background:#FBFAF7}
-/* 従来型パネルだけ、継続が断たれていることを示す */
-.wall-p{border-left:3px dashed var(--line2)}
-.wall-p.win{border-left:3px solid var(--gold)}
 .hero-sec{position:relative;overflow:hidden;background:#fff;border-bottom:1px solid var(--line)}
 .hero-bg{position:absolute;inset:0;background:url('/images/hero-nyc.jpg') center 38%/cover no-repeat;opacity:.40;filter:saturate(1.1) brightness(1.12) contrast(.94)}
 .hero-veil{position:absolute;inset:0;pointer-events:none;background:linear-gradient(100deg,#fff 0%,rgba(255,255,255,.94) 34%,rgba(255,255,255,.72) 62%,rgba(255,255,255,.48) 100%)}
@@ -746,6 +724,8 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
         <p class="kicker" style="letter-spacing:.22em;">AI / FDE CONSULTING &amp; EXECUTION</p>
         <h1 class="hero-h1" style="font-family:'Yu Gothic Medium','YuGothic','游ゴシック Medium','Yu Gothic','Noto Sans JP',sans-serif; font-weight:500; font-size:clamp(22px,3.6vw,50px); line-height:1.42; letter-spacing:.01em; margin:0 0 16px 0;"><span style="display:inline-block;">AIネイティブな実装力<span style="font-family:'Outfit',sans-serif; font-weight:400; color:#A98A4B; margin-left:.2em; font-size:.8em;">×</span></span><br><span style="display:inline-block;">ビジネス現場の解像度</span></h1>
         <p class="hero-tag" style="margin:0 0 26px 0; font-weight:700; font-size:clamp(16px,2vw,20px); line-height:1.75; letter-spacing:.05em; color:#8A6E33;">新たな時代の貴社の成長に、変革の翼を。</p>
+        <!-- 2つの文は行数を決めて見せる（1つ目は太字の1文を1行に、2つ目は「が」で折って2行）。
+             Safari は text-wrap:pretty が付くと短い語尾を次行に送るので、ここには付けない -->
         <div class="hero-pts" style="display:flex; flex-direction:column; gap:14px; margin-bottom:30px;">
           <div style="display:flex; gap:14px; align-items:flex-start;">
             <div style="flex:none; width:6px; height:6px; background:#A98A4B; margin-top:11px;"></div>
@@ -753,7 +733,7 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
           </div>
           <div style="display:flex; gap:14px; align-items:flex-start;">
             <div style="flex:none; width:6px; height:6px; background:#A98A4B; margin-top:11px;"></div>
-            <p style="margin:0; font-size:14px; line-height:1.95; color:#4A515C;">Wingでは、<span style="color:#14181F; font-weight:500;">業務を知っていて、自分でAIを作れるコンサルタント兼エンジニア（FDE）</span>が<br class="pc">何をAIに任せるかの設計から、開発、現場に根づくまでを、担当を替えずに担います。<a href="#fde" style="color:#14181F; border-bottom:1px solid #A98A4B; white-space:nowrap;">（FDE : Forward Deployed Engineer）</a></p>
+            <p style="margin:0; font-size:14px; line-height:1.95; color:#4A515C;">Wingでは、<span style="color:#14181F; font-weight:500;">業務を知っていて、自分でAIを作れるコンサルタント兼エンジニア（<a href="#fde" title="Forward Deployed Engineer" style="color:#14181F; border-bottom:1px solid #A98A4B;">FDE</a>）</span>が<br class="pc">何をAIに任せるかの設計から、開発、現場に根づくまでを、担当を替えずに担います。</p>
           </div>
         </div>
         <div style="display:flex; gap:12px; align-items:center; margin-bottom:8px; flex-wrap:wrap;">
@@ -827,57 +807,26 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
         <p class="sec-lead">FDE（Forward Deployed Engineer）は、経営層と現場の両方に入って、課題を見つけるところから、作って現場に根づかせるところまでを担うコンサルタント兼AIエンジニアです。<b style="color:#14181F;">狙いはROIC（投じたお金に対する利益）を上げ、企業価値を高めること。<br>AIやITは、そのための手段です。</b></p>
       </div>
 
-      <div class="wall">
-        <!-- BEFORE -->
-        <div class="wall-p">
-          <p class="wall-h">BEFORE<span>外からアドバイス・サービスを提供</span></p>
-          <div class="wall-body">
-            <div class="cbox">
-              <p class="cbox-t">クライアント企業様</p>
-              <div class="cbox-r"><span>経営層</span><span>現場部門</span></div>
-            </div>
-            <div class="barrier">
-              <span class="ex out">RFP・仕様書 ↓</span>
-              <i class="ex-line out" aria-hidden="true"></i>
-              <span class="bar-l">発注者と受注者の境界</span>
-              <i class="ex-line in" aria-hidden="true"></i>
-              <span class="ex in">↑ 納品物</span>
-            </div>
-            <div class="vend"><span>コンサル</span><span>開発会社</span><span>製品ベンダー</span><span>SIer</span></div>
-          </div>
-          <p class="wall-n">経営・現場・ITの判断がつながらず、現場で使われる前に立ち消えになる</p>
-          <div class="wall-sp">
-            <p class="sp-t">工程ごとに担当が替わり、段階的に開発</p>
-            <p class="sp-v"><b>数ヶ月</b><span>初期版が出るまで</span></p>
-            <p class="sp-d">前工程の完了を待って次へ進むため、途中で方針を変えられない</p>
-          </div>
-          <div class="wall-r">結果：<b>約95%のAIパイロットが失敗</b><span>MIT “State of AI in Business”（2025）</span></div>
-        </div>
-
-        <div class="wall-ar" aria-hidden="true">→</div>
-
-        <!-- AFTER -->
-        <div class="wall-p win">
-          <p class="wall-h gold">AFTER<span>内側に入って、推進役を務める（Wing）</span></p>
-          <div class="wall-body">
-            <div class="cbox inside">
-              <p class="cbox-t">クライアント企業様<small>推進チームの一員として内部に入る</small></p>
-              <div class="bridge">
-                <div class="side mgmt"><b>経営層</b><span>経営課題（KPI・収益）</span></div>
-                <div class="mid">
-                  <span class="ar">↕</span>
-                  <div class="fde-n"><b>FDE</b><em>Wing</em></div>
-                  <span class="ar">↕</span>
-                </div>
-                <div class="side ops"><b>現場部門</b><span>現場課題（業務実態）</span></div>
+      <div class="fde-box">
+        <div class="fde-fig">
+          <p class="fde-h">内側に入って、推進役を務める</p>
+          <div class="cbox">
+            <p class="cbox-t">クライアント企業様<small>推進チームの一員として内部に入る</small></p>
+            <div class="bridge">
+              <div class="side mgmt"><b>経営層</b><span>経営課題（KPI・収益）</span></div>
+              <div class="mid">
+                <span class="ar">↕</span>
+                <div class="fde-n"><b>FDE</b><em>Wing</em></div>
+                <span class="ar">↕</span>
               </div>
-              <p class="bridge-cap">経営と現場の間に入り、利益に効いて、かつ現場で回る仕組みを作る</p>
-              <div class="fde-role">
-                <span><b>経営課題を特定</b>ROIC・収益への影響で優先順位を決める</span>
-                <span><b>現場実態で設計</b>業務・人・データ</span>
-                <span><b>早く成果を出す</b>AIで作り、効果が出るまでを短く</span>
-                <span><b>現場に根づかせる</b>合意づくり・業務の切り替え・教育</span>
-              </div>
+              <div class="side ops"><b>現場部門</b><span>現場課題（業務実態）</span></div>
+            </div>
+            <p class="bridge-cap">経営と現場の間に入り、利益に効いて、かつ現場で回る仕組みを作る</p>
+            <div class="fde-role">
+              <span><b>経営課題を特定</b>ROIC・収益への影響で優先順位を決める</span>
+              <span><b>現場実態で設計</b>業務・人・データ</span>
+              <span><b>早く成果を出す</b>AIで作り、効果が出るまでを短く</span>
+              <span><b>現場に根づかせる</b>合意づくり・業務の切り替え・教育</span>
             </div>
           </div>
           <div class="backline">
@@ -887,13 +836,22 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
               <p class="bl-d">高度な機械学習、大規模データ基盤、専門技術を要する実装課題はパートナー各社と連携。FDEが窓口となり、貴社は複数社との調整を負いません。</p>
             </div>
           </div>
-          <p class="wall-n gold">経営・現場・ITを一人が通して見るから、作ったものが現場で使われるところまで行き着く</p>
-          <div class="wall-sp gold">
+        </div>
+        <div class="fde-out">
+          <p class="fde-why">経営・現場・ITを一人が通して見るから、作ったものが現場で使われるところまで行き着く</p>
+          <div class="fde-cred">
+            <img src="/images/credly-claude-architect.png" alt="Claude Certified Architect – Professional のバッジ" width="84" height="84">
+            <div>
+              <p class="fde-cred-t">Anthropic 認定資格を持つ FDE が在籍しています</p>
+              <p class="fde-cred-d">Claude Certified Architect – Professional <span style="white-space:nowrap;">（Anthropic 社）</span></p>
+            </div>
+          </div>
+          <div class="fde-sp">
             <p class="sp-t">導入の各段階を、同じFDEが最後まで進める</p>
-            <p class="sp-v"><b class="g">数週間</b><span>初期版を実装</span></p>
+            <p class="sp-v"><b>数週間</b><span>初期版を実装</span></p>
             <p class="sp-d">経営とAIの両方が分かる担当者が、その場で作って直す。専門性の高い部分は技術パートナーと組む</p>
           </div>
-          <div class="wall-r gold">結果：<b>ROICの改善と企業価値の向上</b><span>投じたお金に対する利益が上がり、他社が真似しにくい仕組みが残る</span></div>
+          <div class="fde-r">結果：<b>ROICの改善と企業価値の向上</b><span>投じたお金に対する利益が上がり、他社が真似しにくい仕組みが残る</span></div>
         </div>
       </div>
     </div>
@@ -908,36 +866,22 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
         </div>
       </div>
 
-      <div class="str-wrap">
-        <div class="str-g">
-          <p class="str-gl">FDE一人が併せ持つ、三つの力</p>
-          <div class="str-grid">
-            <div class="str">
-              <h3>業務理解</h3>
-              <p class="str-d">大手日系・外資コンサルティングファームで10年以上、調達・貿易・経理・IT組織の実務に携わったメンバーが在籍。現場の帳票と例外処理まで理解しているため、初回から具体的な論点に入れます。</p>
-              <a class="str-l" href="#expertise">対応領域を見る</a>
-            </div>
-            <div class="str">
-              <h3>コンサルティング力</h3>
-              <p class="str-d">経営課題をROIC・収益構造の観点で特定し、投資対効果で優先順位をつけ、経営層の合意形成まで持っていく力。何を作るかを検討する前に、そもそも着手すべきかを見極めます。</p>
-              <a class="str-l" href="#consulting">提供サービスを見る</a>
-            </div>
-            <div class="str">
-              <h3>AI実装力</h3>
-              <p class="str-d">要件の整理から開発、運用の設計までを同じ担当者が手がけます。数週間で動くものをお見せし、触ってもらいながら直します。高度な専門性が要る部分は、AIスタートアップなどの技術パートナーと組んで解決します。</p>
-              <a class="str-l" href="#fde">進め方を見る</a>
-            </div>
-          </div>
+      <p class="str-gl">FDE一人が併せ持つ、三つの力</p>
+      <div class="str-grid">
+        <div class="str">
+          <h3>幅広い業種のビジネスプロセスの理解</h3>
+          <p class="str-d">大手日系・外資コンサルティングファームで10年以上、調達・貿易・経理・IT組織の実務に携わったメンバーが在籍。現場の帳票と例外処理まで理解しているため、初回から具体的な論点に入れます。</p>
+          <a class="str-l" href="#expertise">対応領域を見る</a>
         </div>
-        <div class="str-g asset">
-          <p class="str-gl">会社として蓄積してきた、型</p>
-          <div class="str-grid one">
-            <div class="str">
-              <h3>テンプレート</h3>
-              <p class="str-d">自社プロダクトと標準業務プロセスの型を保有。ゼロから作らないため立ち上げが速く、他社事例で検証済みの設計をそのまま使えます。</p>
-              <a class="str-l" href="/products">プロダクトを見る</a>
-            </div>
-          </div>
+        <div class="str">
+          <h3>コンサルティング力</h3>
+          <p class="str-d">経営課題を解決するためのドライバーと、投資対効果に基づく優先順位を見極め、経営にインパクトをもたらす施策を立案・計画します。</p>
+          <a class="str-l" href="#consulting">提供サービスを見る</a>
+        </div>
+        <div class="str">
+          <h3>AI実装力</h3>
+          <p class="str-d">要件の整理から開発、運用の設計までを同じ担当者が手がけます。<a href="/products">自社プロダクト</a>と標準業務プロセスの型があるので、ゼロから作らずに数週間で動くものをお見せし、触ってもらいながら直します。高度な専門性が要る部分は、AIスタートアップなどの技術パートナーと組んで解決します。</p>
+          <a class="str-l" href="#fde">進め方を見る</a>
         </div>
       </div>
 
@@ -1162,11 +1106,15 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
           <h2 class="sec">会社概要</h2>
         </div>
       </div>
-      <table class="co">
-        <tr><th scope="row">社名</th><td>Wing</td></tr>
-        <tr><th scope="row">設立</th><td>2026年</td></tr>
-        <tr><th scope="row">事業内容</th><td>自社AIプロダクト（BorderFlow AI・ChemOS・該非判定AI・調達プラットフォーム）を軸としたカスタマイズソリューションの開発・提供、AI・DXコンサルティング、実装・定着支援</td></tr>
-      </table>
+      <div class="co-wrap">
+        <table class="co">
+          <tr><th scope="row">社名</th><td>Wing</td></tr>
+          <tr><th scope="row">設立</th><td>2026年</td></tr>
+          <tr><th scope="row">事業内容</th><td>自社AIプロダクト（BorderFlow AI・ChemOS・該非判定AI・調達プラットフォーム）を軸としたカスタマイズソリューションの開発・提供、AI・DXコンサルティング、実装・定着支援</td></tr>
+          <tr><th scope="row">認定資格</th><td>Claude Certified Architect – Professional（Anthropic 社）</td></tr>
+        </table>
+        <div class="co-badge"><img src="/images/credly-claude-architect.png" alt="Claude Certified Architect – Professional のバッジ" width="150" height="150" loading="lazy"></div>
+      </div>
     </div>
   </section>
 
