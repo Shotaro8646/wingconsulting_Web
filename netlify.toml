@@ -11,6 +11,25 @@
     Permissions-Policy = "geolocation=(), microphone=(), camera=(), payment=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains"
 
+# ── 経歴紹介（/profile）──────────────────────────────
+# 中身はこのリポジトリに置かない（GitHub で公開されているため）。
+# 別の Netlify サイトから取りに行き、URL は wingconsulting.org/profile のまま見せる。
+# 名刺やメールで渡したリンクからだけ開く前提なので、検索には載せない。
+[[headers]]
+  for = "/profile/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[redirects]]
+  from = "/profile"
+  to = "/profile/"
+  status = 301
+
+[[redirects]]
+  from = "/profile/*"
+  to = "https://wingconsulting-profile.netlify.app/:splat"
+  status = 200
+
 # ── StayPath デモ（/staypath/）──────────────────────────────
 # 面談の録音にマイクを使うため、この配下だけ microphone を許可する。
 # 検索結果には製品ページ（/staypath-guide）を出したいので、アプリ本体は noindex。
