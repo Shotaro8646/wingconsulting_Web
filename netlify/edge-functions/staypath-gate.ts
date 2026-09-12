@@ -74,21 +74,28 @@ export default async (request: Request, context: Context) => {
   const user = Deno.env.get('STAYPATH_USER')
   const pass = Deno.env.get('STAYPATH_PASS')
 
-  // 設定前は開けない。「掛けたつもりで開いていた」を作らないため、
-  // 通してしまうのではなく、何を設定すればよいかを出して止める
-  // 未設定のあいだは通す。設定が済むまで運用側まで入れなくなり、
-  // 実際に締め出してしまった。環境変数を入れた瞬間に下の判定が効く。
+  // 未設定のあいだは通す。止める作りにしたら、設定が済むまで運用側まで入れなくなり、
+  // 実際に締め出してしまった。そのかわり、素通しになっていることを印（X-StayPath-Gate）で出す。
+  // 環境変数を入れて配信し直した時点で、下の判定が効く。
   if (!user || !pass) {
     const res = await context.next()
     res.headers.set('X-StayPath-Gate', 'off: unset')
     return res
   }
 
-
   const auth = request.headers.get('authorization') ?? ''
   if (auth.startsWith('Basic ')) {
     let decoded = ''
-    try { decoded = atob(auth.slice(6)) } catch { decoded = '' }
+    /*
+     * atob はバイトの並びを返す。そのまま比べると、日本語の合言葉は絶対に一致しない。
+     * 「任」はUTF-8で3バイトなので、7文字の合言葉が21文字分の化けた文字として届き、
+     * 長さの時点で食い違う。実際に日本語の値が入っていて、正しく打っても開かなかった。
+     * バイトを UTF-8 として戻してから比べる（門は charset="UTF-8" で求めている）。
+     */
+    try {
+      const bin = atob(auth.slice(6))
+      decoded = new TextDecoder().decode(Uint8Array.from(bin, (c) => c.charCodeAt(0)))
+    } catch { decoded = '' }
     const at = decoded.indexOf(':')
     if (at > 0 && same(decoded.slice(0, at), user) && same(decoded.slice(at + 1), pass)) {
       return context.next()
