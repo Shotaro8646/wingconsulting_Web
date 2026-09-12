@@ -9,7 +9,7 @@ wingconsulting.org の公開サイト。**ビルド工程を持たない静的 H
 編集した HTML がそのまま本番の HTML になるので、書いた内容が即公開物になる前提で扱う。
 
 このリポジトリは **GitHub で公開されている**。合言葉・キー・顧客名など、
-出せない値は一切置かない（`netlify/edge-functions/staypath-gate.ts` の冒頭コメントに経緯がある）。
+出せない値は一切置かない。
 
 ## 構成
 
@@ -62,9 +62,12 @@ Google Drive 配下で同期事故が起きやすいので、**編集は `~/dev/
 
 - バックエンドは Supabase（プロジェクト `wpocesolyipjnfnkmhwi`）。データは行レベル権限で保護
 - SPA のため `netlify.toml` のリダイレクトで、実ファイルが無ければ `index.html` を返す
-- 入口に Basic 認証。合言葉は Netlify 環境変数 `STAYPATH_USER` / `STAYPATH_PASS`
-- 受付フォーム（`/staypath/form/`, `/staypath/liff/`）は `?t=` 付きのときだけ門を通す。
-  応募者・企業・送り出し機関は LINE から届いた URL を開くだけの相手で、合言葉を渡せないため
+- 入口の Basic 認証は外した（2026-09-12）。アプリのログインと鍵が2つになり、
+  合言葉を忘れて入れなくなったため。ログインはアプリの1回だけ。
+  守りは Supabase の行レベル権限で、ログインしないと1件も読めない。
+  Netlify の環境変数 `STAYPATH_USER` / `STAYPATH_PASS` はもう使っていない
+- 受付フォーム（`/staypath/form/`, `/staypath/liff/`）は `?t=` の合言葉つき URL で開く。
+  合言葉の正しさは画面と行レベル権限が確かめる
 - 面談の録音にマイクを使うので、この配下だけ `Permissions-Policy` で microphone を許可している
 - 検索避けは `X-Robots-Tag: noindex`。**robots.txt では弾かない**（理由は robots.txt のコメント参照）
 
@@ -102,4 +105,4 @@ Google Drive 配下で同期事故が起きやすいので、**編集は `~/dev/
 
 サイト本文・コード内コメント・コミットのすべてで**平易な日本語**を使う。
 カタカナの専門用語を並べず、「合言葉」「置き場」「門」のように普通の言葉に置き換える。
-`netlify.toml` / `robots.txt` / `staypath-gate.ts` のコメントが見本。
+`netlify.toml` / `robots.txt` のコメントが見本。
