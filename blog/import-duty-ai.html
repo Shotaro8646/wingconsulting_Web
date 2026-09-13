@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KN7NWHFK9G');
+</script>
+
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AIで輸入申告を洗い直し、関税を減らす | Wing Blog</title>
+<meta content="中国からの輸入でRCEPの税率を使っていない品目や、申告の誤りで多く払った関税を、過去の輸入申告からAIとプログラムで探す手順です。差額の試算、税関の表から読み出した税率の見本、誤りの向きごとの手続の比較表を載せています。" name="description"/>
+<meta content="関税 削減, RCEP 中国 関税率, 更正の請求, 輸入申告 見直し, 実行関税率表, 原産地証明書識別コード, AI 読み取り, 商社" name="keywords"/>
+<meta content="AIで輸入申告を洗い直し、関税を減らす" property="og:title"/>
+<meta content="中国からの輸入でRCEPの税率を使っていない品目や、申告の誤りで多く払った関税を、過去の輸入申告からAIとプログラムで探す手順です。差額の試算、税関の表から読み出した税率の見本、誤りの向きごとの手続の比較表を載せています。" property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://wingconsulting.org/blog/import-duty-ai" property="og:url"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="https://wingconsulting.org/images/og/import-duty-ai.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Wing" property="og:site_name"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="AIで輸入申告を洗い直し、関税を減らす" name="twitter:title"/>
+<meta content="中国からの輸入でRCEPの税率を使っていない品目や、申告の誤りで多く払った関税を、過去の輸入申告からAIとプログラムで探す手順です。差額の試算、税関の表から読み出した税率の見本、誤りの向きごとの手続の比較表を載せています。" name="twitter:description"/>
+<meta content="https://wingconsulting.org/images/og/import-duty-ai.png" name="twitter:image"/>
+<link href="https://wingconsulting.org/blog/import-duty-ai" rel="canonical"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AIで輸入申告を洗い直し、関税を減らす",
+  "description": "中国からの輸入でRCEPの税率を使っていない品目や、申告の誤りで多く払った関税を、過去の輸入申告からAIとプログラムで探す手順です。差額の試算、税関の表から読み出した税率の見本、誤りの向きごとの手続の比較表を載せています。",
+  "author": {
+    "@type": "Organization",
+    "name": "Wing編集部",
+    "url": "https://wingconsulting.org"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Wing",
+    "url": "https://wingconsulting.org",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wingconsulting.org/images/og/import-duty-ai.png"
+    }
+  },
+  "datePublished": "2026-09-13",
+  "dateModified": "2026-09-13",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://wingconsulting.org/blog/import-duty-ai"
+  },
+  "image": "https://wingconsulting.org/images/og/import-duty-ai.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Wing", "item": "https://wingconsulting.org"},
+    {"@type": "ListItem", "position": 2, "name": "インサイト", "item": "https://wingconsulting.org/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "AIで輸入申告を洗い直し、関税を減らす", "item": "https://wingconsulting.org/blog/import-duty-ai"}
+  ]
+}
+</script>
+<style>
+  :root {
+    --navy: #0B1A2E;
+    --navy-light: #132742;
+    --gold: #A8965A;
+    --gold-deep: #7A6D40;
+    --gold-light: #C4B278;
+    --gold-pale: #F5F0E3;
+    --text: #1A1A1A;
+    --text-secondary: #4A4A4A;
+    --text-light: #6B6B6B;
+    --bg: #FAFAF7;
+    --white: #FFFFFF;
+    --border: #E0DDD4;
+    --rule: #F0EDE8;
+    --track: #ECE7DB;
+    --link: #1E4E7E;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.9;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  a:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+  /* ── ヘッダー ── */
+  .site-header { background: var(--navy); padding: 16px 0; position: sticky; top: 0; z-index: 100; }
+  .site-header-inner { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; }
+  .site-logo { color: var(--gold); font-size: 20px; font-weight: 700; letter-spacing: .15em; text-decoration: none; }
+  .site-nav { font-size: 13px; color: rgba(255,255,255,.5); letter-spacing: .05em; }
+  .site-nav a { color: rgba(255,255,255,.75); text-decoration: none; }
+  .site-nav a:hover { color: var(--gold-light); }
+  .site-nav span { margin: 0 8px; }
+
+  /* ── 冒頭 ── */
+  .hero { background: var(--navy); padding: 64px 24px 72px; position: relative; overflow: hidden; }
+  .hero::after { content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 120px; background: linear-gradient(to bottom, transparent, var(--bg)); }
+  .hero-inner { max-width: 720px; margin: 0 auto; position: relative; z-index: 1; }
+  .hero-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+  .hero-tag { background: var(--gold); color: var(--navy); font-size: 11px; font-weight: 700; padding: 4px 14px; letter-spacing: .1em; }
+  .hero-date { color: rgba(255,255,255,.6); font-size: 13px; letter-spacing: .05em; }
+  .hero h1 { color: var(--white); font-size: clamp(24px, 4vw, 34px); font-weight: 900; line-height: 1.55; margin-bottom: 20px; text-wrap: balance; }
+  .hero-lead { color: rgba(255,255,255,.75); font-size: 15px; line-height: 1.85; max-width: 600px; }
+  .nb { display: inline-block; }
+
+  /* ── 読了目安 ── */
+  .reading-bar { max-width: 720px; margin: -24px auto 0; padding: 0 24px; position: relative; z-index: 2; }
+  .reading-bar-inner { background: var(--white); border: 1px solid var(--border); padding: 14px 24px; display: flex; align-items: center; gap: 24px; font-size: 13px; color: var(--text-light); box-shadow: 0 2px 12px rgba(0,0,0,.04); }
+  .reading-bar-inner svg { flex-shrink: 0; }
+
+  /* ── 本文 ── */
+  .article { max-width: 720px; margin: 0 auto; padding: 56px 24px 80px; }
+  .article p { margin-bottom: 24px; font-size: 15.5px; line-height: 2; color: var(--text-secondary); }
+  .article h2 { font-size: 21px; font-weight: 700; color: var(--navy); margin: 56px 0 20px; padding-left: 16px; border-left: 3px solid var(--gold); line-height: 1.6; }
+  .article h3 { font-size: 16.5px; font-weight: 700; color: var(--text); margin: 36px 0 12px; line-height: 1.6; }
+  .article a { color: var(--link); }
+  .article .list { margin: 0 0 24px; padding-left: 1.3em; }
+  .article .list li { font-size: 15.5px; line-height: 1.9; color: var(--text-secondary); margin-bottom: 6px; }
+
+  /* ── 要点・架空の例 ── */
+  .summary { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--gold); padding: 18px 22px; margin: 0 0 36px; }
+  .article .summary .summary-title { font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 6px; letter-spacing: .04em; }
+  .article .summary ul { margin: 0; padding-left: 1.2em; }
+  .article .summary li { font-size: 14.5px; line-height: 1.85; color: var(--text); margin-bottom: 4px; }
+  .case { background: var(--gold-pale); border: 1px solid #E3D9BC; padding: 18px 22px; margin: 8px 0 36px; }
+  .article .case .case-label { display: inline-block; font-size: 11.5px; font-weight: 700; color: var(--gold-deep); border: 1px solid #CDBF94; background: var(--white); padding: 0 8px; margin-bottom: 10px; line-height: 1.8; }
+  .article .case p { font-size: 15px; color: var(--text); margin-bottom: 12px; }
+  .article .case .list li { font-size: 15px; color: var(--text); }
+  .article .case .case-note { font-size: 13px; color: var(--text-light); margin-bottom: 0; }
+
+  /* ── 表 ── */
+  .tbl { margin: 28px 0 36px; }
+  .tbl figcaption { font-size: 12.5px; color: var(--text-light); text-align: center; margin-top: 10px; line-height: 1.7; text-wrap: balance; }
+  .table-wrap { overflow-x: auto; }
+  .compare-table { width: 100%; min-width: 600px; border-collapse: collapse; font-size: 14px; background: var(--white); }
+  .compare-table th { background: var(--navy); color: var(--white); padding: 11px 14px; text-align: left; font-weight: 500; font-size: 12.5px; letter-spacing: .03em; }
+  .compare-table td { padding: 11px 14px; border-bottom: 1px solid var(--border); color: var(--text-secondary); line-height: 1.6; vertical-align: middle; }
+  .compare-table .num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .compare-table td:first-child { min-width: 10.5em; }
+  .compare-table .code { display: block; font-size: 12px; color: var(--text-light); font-variant-numeric: tabular-nums; }
+  .compare-table td.codecell { white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--text); min-width: 0; }
+  .compare-table.proc td:nth-child(2), .compare-table.proc th:nth-child(2) { white-space: nowrap; }
+  .compare-table.proc td:first-child { min-width: 8em; }
+  .compare-table.proc { min-width: 660px; }
+  .compare-table.proc td:nth-child(3) { min-width: 9em; }
+  .compare-table.proc th { white-space: nowrap; }
+  .bar-cell { display: flex; align-items: center; gap: 10px; white-space: nowrap; }
+  .bar-track { display: inline-block; width: 90px; height: 10px; background: var(--track); flex-shrink: 0; }
+  .bar-fill { display: block; height: 100%; background: var(--gold); }
+  .bar-val { font-weight: 700; color: var(--text); font-variant-numeric: tabular-nums; }
+
+  /* ── 図 ── */
+  .fig { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--gold); padding: 22px 20px 16px; margin: 32px 0 36px; }
+  .fig figcaption { font-size: 12.5px; color: var(--text-light); text-align: center; margin-top: 16px; line-height: 1.7; text-wrap: balance; }
+  .article .fig p { margin: 0; font-size: inherit; line-height: 1.6; color: inherit; }
+  .article .fig .fig-note { font-size: 12.5px; color: var(--text-light); margin-top: 14px; }
+  .arrow { display: flex; align-items: center; justify-content: center; }
+  .arrow svg { width: 22px; height: 22px; display: block; }
+
+  /* 資料をつなぐ流れ */
+  .flow { display: grid; grid-template-columns: minmax(0,1.5fr) 26px minmax(0,1fr) 26px minmax(0,1fr); align-items: center; gap: 6px; }
+  .flow-col { display: flex; flex-direction: column; gap: 8px; }
+  .box { border: 1px solid var(--border); background: var(--bg); padding: 9px 12px; line-height: 1.5; }
+  .box b { display: block; font-size: 14px; color: var(--navy); }
+  .box small { display: block; font-size: 12px; color: var(--text-light); }
+  .box.key { background: var(--navy); border-color: var(--navy); text-align: center; padding: 14px 12px; }
+  .box.key b { color: var(--white); }
+  .box.key small { color: rgba(255,255,255,.8); }
+  .box.out { background: var(--gold-pale); border-color: #D8CDAA; text-align: center; padding: 14px 12px; }
+
+  /* 試算 */
+  .article .fig .calc-title { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 12px; }
+  .calc-grid2 { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.5fr); gap: 8px 12px; align-items: center; font-size: 13.5px; }
+  .calc-grid2 label { color: var(--text); line-height: 1.5; }
+  .calc-grid2 input, .calc-grid2 select { width: 100%; min-width: 0; padding: 6px 8px; border: 1px solid #CFCABD; background: var(--white); font: inherit; font-size: 14px; color: var(--text); }
+  .calc-grid2 input[type="number"] { text-align: right; font-variant-numeric: tabular-nums; }
+  .calc-out { margin-top: 16px; border-top: 1px solid var(--rule); padding-top: 12px; display: grid; gap: 6px; }
+  .calc-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 12px; font-size: 14px; color: var(--text-secondary); }
+  .calc-row b { color: var(--text); font-variant-numeric: tabular-nums; }
+  .calc-row.total { font-size: 15.5px; color: var(--navy); font-weight: 700; }
+  .calc-row.total b { color: var(--navy); }
+
+  /* 段階と分担 */
+  .steps { list-style: none; display: flex; flex-direction: column; }
+  .step { display: grid; grid-template-columns: 30px minmax(0,1fr); gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--rule); }
+  .step:first-child { padding-top: 0; }
+  .step:last-child { border-bottom: none; padding-bottom: 0; }
+  .step-no { width: 30px; height: 30px; background: var(--navy); color: var(--white); font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; font-variant-numeric: tabular-nums; }
+  .article .fig .step-name { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .roles { display: flex; flex-direction: column; gap: 4px; }
+  .role { display: grid; grid-template-columns: 5.8em minmax(0,1fr); gap: 10px; align-items: baseline; font-size: 13.5px; color: var(--text-secondary); line-height: 1.65; }
+  .chip { display: inline-block; justify-self: start; font-size: 11.5px; font-weight: 700; padding: 0 7px; border: 1px solid; line-height: 1.75; white-space: nowrap; }
+  .chip-ai { background: var(--navy); border-color: var(--navy); color: var(--white); }
+  .chip-prog { background: var(--gold-pale); border-color: #CDBF94; color: var(--gold-deep); }
+  .chip-human { background: var(--white); border-color: var(--navy); color: var(--navy); }
+  .article .fig .role-note { font-size: 12.5px; color: var(--text-light); margin-top: 2px; }
+
+  /* ── 出典・書き手 ── */
+  .sources { list-style: none; margin: 0 0 8px; }
+  .sources li { font-size: 13.5px; line-height: 1.8; color: var(--text-secondary); padding: 7px 0; border-bottom: 1px solid var(--rule); }
+  .author { margin-top: 48px; border: 1px solid var(--border); background: var(--white); padding: 20px 22px; display: grid; grid-template-columns: 48px minmax(0,1fr); gap: 16px; }
+  .author-mark { width: 48px; height: 48px; background: var(--navy); color: var(--gold); font-weight: 700; font-size: 13px; letter-spacing: .1em; display: flex; align-items: center; justify-content: center; }
+  .article .author .author-title { font-size: 12.5px; color: var(--text-light); margin-bottom: 2px; }
+  .article .author .author-name { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .article .author p { font-size: 13.5px; line-height: 1.8; margin-bottom: 6px; }
+
+  /* ── 相談の案内 ── */
+  .cta-section { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); padding: 44px 28px; text-align: center; margin-top: 40px; }
+  .article .cta-section .cta-title { color: var(--white); font-size: 19px; font-weight: 700; margin-bottom: 12px; line-height: 1.6; }
+  .article .cta-section p { color: rgba(255,255,255,.75); font-size: 13.5px; margin-bottom: 24px; line-height: 1.8; }
+  .article .cta-btn { display: inline-block; background: var(--gold); color: var(--navy); font-size: 13px; font-weight: 700; padding: 14px 36px; text-decoration: none; letter-spacing: .08em; }
+  .article .cta-btn:hover { background: var(--gold-light); }
+
+  .site-footer { text-align: center; padding: 32px 24px; font-size: 12px; color: var(--text-light); }
+
+  @media (max-width: 600px) {
+    .hero { padding: 48px 20px 56px; }
+    .hero h1 { font-size: 22px; }
+    .article { padding: 40px 20px 64px; }
+    .reading-bar-inner { flex-wrap: wrap; gap: 6px 16px; }
+    .site-nav { font-size: 12px; }
+    .site-nav span { margin: 0 5px; }
+    .fig { padding: 18px 14px 14px; }
+    .flow { grid-template-columns: 1fr; }
+    .arrow svg { transform: rotate(90deg); }
+    .role { display: block; }
+    .role .chip { margin-right: 8px; }
+    .calc-grid2 { grid-template-columns: 1fr; gap: 2px; }
+    .calc-grid2 input, .calc-grid2 select { margin-bottom: 8px; }
+    .case { padding: 16px 16px; }
+    .author { grid-template-columns: 1fr; }
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">WING</a>
+<nav class="site-nav">
+<a href="/#approach">サービス</a><span>·</span>
+<a href="/blog/">ブログ</a><span>·</span>
+<a href="/about">会社概要</a><span>·</span>
+<a href="/#contact">お問い合わせ</a>
+</nav>
+</div>
+</header>
+
+<main>
+<section class="hero">
+<div class="hero-inner">
+<div class="hero-meta">
+<span class="hero-tag">貿易DX</span>
+<time class="hero-date" datetime="2026-09-13">2026.09.13</time>
+</div>
+<h1><span class="nb">AIで輸入申告を洗い直し、</span><span class="nb">関税を減らす</span></h1>
+<p class="hero-lead"><span class="nb">過去の輸入申告から、</span><span class="nb">RCEP の税率を使っていない輸入と、</span><span class="nb">申告の誤りで多く払った関税を探す手順です。</span></p>
+</div>
+</section>
+
+<div class="reading-bar">
+<div class="reading-bar-inner">
+<svg fill="none" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#A8965A" stroke-width="1.5"></circle><path d="M8 4.5V8l2.5 1.5" stroke="#A8965A" stroke-linecap="round" stroke-width="1.5"></path></svg>
+<span>読了目安 約11分</span>
+<span>関税 / RCEP / 輸入申告 / AI</span>
+</div>
+</div>
+
+<article class="article">
+
+<div class="summary">
+<p class="summary-title">要点</p>
+<ul>
+<li>中国原産の輸入品は、RCEP の税率で申告すると関税が下がる品目があります。たとえば綿のニットのTシャツ類は、7.4%が4.6%になります（2026年4月1日版の実行関税率表）。</li>
+<li>申告の誤りで多く払った関税は、輸入の許可の日から5年以内なら「更正の請求」で戻ります。RCEP を使い忘れた過去の分は、基本的に戻りません。</li>
+<li>数千行の申告を確かめる作業は、AI の読み取りとプログラムの計算で短くできます。税率の数字と最終の判断は、税関の表と専門家で確かめます。</li>
+</ul>
+</div>
+
+<p>中国から輸入している品物は、RCEP の税率で申告すると関税が下がる場合があります。申告の誤りで多く払った関税は、輸入の許可から5年以内なら「更正の請求」で戻ります。こうした仕組みは、調べればすぐに分かります。</p>
+
+<p>ただ、実際にやろうとすると、過去の輸入申告を1行ずつ確かめる作業で止まります。この記事では、その作業を AI とプログラムでどう短くするかを説明します。</p>
+
+<h2><span class="nb">架空の例：化学品と雑貨を</span><span class="nb">輸入する商社</span></h2>
+
+<div class="case">
+<p class="case-label">架空の例</p>
+<p>A社は、化学品と雑貨を扱う専門商社です。1年の輸入は20億円で、そのうち8億円が中国からです。社長から「関税の見直しで、いくら戻り、いくら減るのか」と聞かれました。しかし輸入の担当は1人で、過去5年の申告の明細は1万5,000行あります。</p>
+<p>この記事の手順で洗い直すと、次のことが分かりました。</p>
+<ul class="list">
+<li>中国原産で、国定・WTO協定税率のまま申告していた行が、約2,000行あった</li>
+<li>差額の大きい上位10品目だけで、1年あたりの差額は約900万円だった</li>
+<li>同じ品番が別の品目番号で申告されていたものが3品番、国内の配送費を課税価格に入れていた申告が12件あり、更正の請求を検討する候補になった</li>
+</ul>
+<p class="case-note">会社も数字も、説明のための例です。実在の会社の結果ではありません。</p>
+</div>
+
+<h2>作業が止まる理由</h2>
+
+<p>輸入が月に50件あり、1件の申告に5欄あれば、明細は1年で3,000行になります。5年さかのぼれば1万5,000行です。</p>
+
+<p>1行ごとに確かめるには、申告の明細、その品目の税率、仕入先の情報の3つを並べる必要があります。ところが、この3つは置き場所がばらばらです。</p>
+
+<figure class="fig">
+<div class="flow">
+<div class="flow-col">
+<div class="box"><small>通関業者から届く PDF</small><b>輸入申告の明細</b><small>品目番号・原産地・課税価格・関税額</small></div>
+<div class="box"><small>税関の Web ページ</small><b>税率</b><small>WTO協定税率・RCEP（中国）</small></div>
+<div class="box"><small>メールや Excel</small><b>仕入先の情報</b><small>どこで、どんな材料から作っているか</small></div>
+</div>
+<div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h13M12 6l6 6-6 6" stroke="#A8965A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="box key"><b>品目番号でつなぐ</b><small>AI とプログラムで表にそろえる</small></div>
+<div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h13M12 6l6 6-6 6" stroke="#A8965A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="box out"><b>差額の一覧</b><small>品目ごとに、大きい順に並べる</small></div>
+</div>
+<figcaption>図1　確かめるのに要る資料と、そのつなぎ方</figcaption>
+</figure>
+
+<h2>最初に作りたい表</h2>
+
+<p>目指すのは、品目ごとに1年あたりの差額を並べた表です。税率は実行関税率表（2026年4月1日版）の数字です。課税価格は説明のための例です。</p>
+
+<figure class="tbl">
+<div class="table-wrap" tabindex="0" role="region" aria-label="品目ごとの差額の表（横にスクロールできます）">
+<table class="compare-table">
+<thead>
+<tr><th>品目（統計品目番号）</th><th class="num">年間の<br>課税価格</th><th class="num">WTO協定<br>税率</th><th class="num">RCEP<br>（中国）</th><th>1年あたりの差額</th></tr>
+</thead>
+<tbody>
+<tr><td>綿のニットのTシャツ類<span class="code">6109.10-020</span></td><td class="num">1億円</td><td class="num">7.4%</td><td class="num">4.6%</td><td><div class="bar-cell"><span class="bar-track"><span class="bar-fill" style="width:100%"></span></span><span class="bar-val">280万円</span></div></td></tr>
+<tr><td>酢酸エチル<span class="code">2915.31-000</span></td><td class="num">5,000万円</td><td class="num">3.7%</td><td class="num">2.3%</td><td><div class="bar-cell"><span class="bar-track"><span class="bar-fill" style="width:25%"></span></span><span class="bar-val">70万円</span></div></td></tr>
+<tr><td>ポリエチレンの袋<span class="code">3923.21-000</span></td><td class="num">3,000万円</td><td class="num">3.9%</td><td class="num">1.8%</td><td><div class="bar-cell"><span class="bar-track"><span class="bar-fill" style="width:22.5%"></span></span><span class="bar-val">63万円</span></div></td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>表1　品目ごとの1年あたりの差額（課税価格は例）</figcaption>
+</figure>
+
+<p>差額の大きい順に並べれば、どの品目から、どの仕入先に原産地の証明を頼むかが決まります。</p>
+
+<h2>税関の表から読み出した税率</h2>
+
+<p>税率の表は、税関の実行関税率表をプログラムで読み込んで作ります。表は改定日ごとに、類ごとの Web ページで公開されています。1行には、基本・暫定・WTO協定・特恵・特別特恵の5つの税率と、経済連携協定ごとの22列の税率が並んでいます。</p>
+
+<p>表2は、2026年4月1日版の第29類・第39類・第42類・第61類・第69類のページから、実際に読み出した行の一部です。</p>
+
+<figure class="tbl">
+<div class="table-wrap" tabindex="0" role="region" aria-label="実行関税率表から読み出した税率の表（横にスクロールできます）">
+<table class="compare-table">
+<thead>
+<tr><th>統計品目番号</th><th>品名（表の書き方のまま）</th><th class="num">基本</th><th class="num">WTO協定</th><th class="num">RCEP<br>（中国）</th><th class="num">RCEP<br>（韓国）</th></tr>
+</thead>
+<tbody>
+<tr><td class="codecell">6109.10-020</td><td>綿製のもの　その他のもの</td><td class="num">11.2%</td><td class="num">7.4%</td><td class="num">4.6%</td><td class="num">4.6%</td></tr>
+<tr><td class="codecell">4202.92-000</td><td>外面がプラスチックシート製又は紡織用繊維製のもの</td><td class="num">10%</td><td class="num">8%</td><td class="num">5.7%</td><td class="num">空欄</td></tr>
+<tr><td class="codecell">3923.21-000</td><td>エチレンの重合体製のもの</td><td class="num">5.8%</td><td class="num">3.9%</td><td class="num">1.8%</td><td class="num">1.8%</td></tr>
+<tr><td class="codecell">2915.31-000</td><td>酢酸エチル</td><td class="num">5.6%</td><td class="num">3.7%</td><td class="num">2.3%</td><td class="num">2.3%</td></tr>
+<tr><td class="codecell">6911.10-000</td><td>食卓用品及び台所用品</td><td class="num">3.4%</td><td class="num">2.3%</td><td class="num">1%</td><td class="num">1%</td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>表2　実行関税率表（2026年4月1日版）から読み出した行の一部</figcaption>
+</figure>
+
+<p>同じ品目でも、RCEP の税率は相手国によって違うことがあります。4202.92-000 のように、韓国の欄に税率が載っていない品目もあります。原産国ごとに正しい列を引くことが、プログラムにさせる理由の1つです。</p>
+
+<h2>差額を試算する</h2>
+
+<p>品目を選び、1年の課税価格を入れると、RCEP の税率との差額をその場で計算します。税率を自分で入れることもできます。</p>
+
+<figure class="fig">
+<p class="calc-title" id="calc-title">RCEP の税率との差額の試算</p>
+<div class="calc-grid2" role="group" aria-labelledby="calc-title">
+<label for="item">品目</label>
+<select id="item">
+<option value="7.4|4.6" selected>綿のニットのTシャツ類（6109.10-020）</option>
+<option value="8|5.7">リュック・スポーツバッグ類で、外面が布かプラスチックシート（4202.92-000）</option>
+<option value="3.9|1.8">ポリエチレンの袋（3923.21-000）</option>
+<option value="3.7|2.3">酢酸エチル（2915.31-000）</option>
+<option value="2.3|1">磁器の食器・台所用品（6911.10-000）</option>
+<option value="custom">税率を自分で入れる</option>
+</select>
+<label for="val">1年の課税価格（万円）</label><input id="val" type="number" inputmode="decimal" min="0" step="100" value="10000"/>
+<label for="wto">WTO協定税率（%）</label><input id="wto" type="number" inputmode="decimal" min="0" step="0.1" value="7.4"/>
+<label for="rcep">RCEP（中国）の税率（%）</label><input id="rcep" type="number" inputmode="decimal" min="0" step="0.1" value="4.6"/>
+</div>
+<div class="calc-out" aria-live="polite">
+<div class="calc-row total"><span>1年あたりの差額</span><b id="o-year">280万円</b></div>
+<div class="calc-row"><span>5年間の差額（税率が変わらない場合）</span><b id="o-5y">1,400万円</b></div>
+</div>
+<p class="fig-note">品目の税率は、実行関税率表（2026年4月1日版）の数字です。RCEP の税率は毎年4月1日に下がる品目があるため、実際の差は年ごとに変わります。原産地規則を満たすことが前提です。入力した数字は、この画面の中だけで計算します。</p>
+</figure>
+
+<h2>作業の流れ</h2>
+
+<p>作業は4つの段階に分かれます。段階ごとに、AI にさせること、プログラムにさせること、人が決めることを分けておきます。</p>
+
+<figure class="fig">
+<ol class="steps">
+<li class="step">
+<div class="step-no">1</div>
+<div>
+<p class="step-name">申告の明細を表にする</p>
+<div class="roles">
+<p class="role"><span class="chip chip-ai">AI</span><span>PDF の明細を読み取る</span></p>
+<p class="role"><span class="chip chip-prog">プログラム</span><span>課税価格×税率と関税額を突き合わせる</span></p>
+<p class="role"><span class="chip chip-human">人</span><span>合わなかった行を PDF で見直す</span></p>
+</div>
+</div>
+</li>
+<li class="step">
+<div class="step-no">2</div>
+<div>
+<p class="step-name">税率を当てる</p>
+<div class="roles">
+<p class="role"><span class="chip chip-prog">プログラム</span><span>税関の実行関税率表を読み込み、品目番号ごとに税率を並べる</span></p>
+<p class="role-note">税率は生成 AI に聞いて埋めない</p>
+</div>
+</div>
+</li>
+<li class="step">
+<div class="step-no">3</div>
+<div>
+<p class="step-name">差額を計算して並べる</p>
+<div class="roles">
+<p class="role"><span class="chip chip-prog">プログラム</span><span>中国原産で「WK」の行を抜き出し、差額の大きい順に並べる</span></p>
+</div>
+</div>
+</li>
+<li class="step">
+<div class="step-no">4</div>
+<div>
+<p class="step-name">原産地と分類を確かめる</p>
+<div class="roles">
+<p class="role"><span class="chip chip-ai">AI</span><span>仕入先への質問と依頼文、分類の理由を下書きする</span></p>
+<p class="role"><span class="chip chip-human">人</span><span>通関業者や税関の事前教示で確かめて決める</span></p>
+</div>
+</div>
+</li>
+</ol>
+<figcaption>図2　作業の4段階と、AI・プログラム・人の分担</figcaption>
+</figure>
+
+<h3>1. 申告の明細を表にする</h3>
+
+<p>まず、過去の輸入申告の明細をデータ（CSV など）で出してもらえるか、通関業者に聞きます。PDF しかない場合は、AI で読み取って表にします。</p>
+
+<p>AI の読み取りは、ときどき数字を読み違えます。そこで、読み取ったあとに次の2つを計算で確かめます。端数を切り捨てた分のずれは許します。</p>
+
+<ul class="list">
+<li>課税価格に税率を掛けた額が、関税額と合っているか</li>
+<li>欄ごとの関税額を足した額が、申告全体の関税額と合っているか</li>
+</ul>
+
+<p>合わなかった行だけを、人が PDF で見直します。重さや数量に対して税がかかる品目（従量税）は、1つめの確かめ方が使えないので、別に見ます。</p>
+
+<h3>2. 税率を当てる</h3>
+
+<p>税率は、生成 AI に聞いて埋めてはいけません。AI は、もっともらしい数字を間違えて答えることがあります。表2のように、税率は税関の表をプログラムで読み込んで使います。</p>
+
+<p>プログラムを書く作業も、いまは AI に手伝わせることができます。日本の RCEP の税率は毎年4月1日に下がるので、4月の改定のあとに読み込み直せば、税率の表はいつも最新になります。</p>
+
+<h3>3. 差額を計算して並べる</h3>
+
+<p>1の明細と2の税率を、品目番号でつなぎます。そのうえで、原産地が中国で、原産地証明書識別コードの先頭2桁が「WK」の行を抜き出します。「WK」は、国定・WTO協定税率で申告したことを表します。</p>
+
+<p>抜き出した行の課税価格に税率の差を掛け、品目ごと・仕入先ごとに足して、大きい順に並べます。ここは決まった計算なので、AI の判断は入れません。</p>
+
+<h3>4. 原産地と分類を確かめる</h3>
+
+<p>差額の大きい品目から、RCEP の原産地規則を満たすかを確かめます。ここは AI に下書きをさせ、人が決めます。</p>
+
+<ul class="list">
+<li>その品目の品目別規則を AI に読ませ、仕入先に聞くことを一覧にさせます。使っている材料、その品目番号、材料の原産地などです。</li>
+<li>仕入先への依頼文を、中国語や英語で AI に下書きさせます。</li>
+</ul>
+
+<p>日本では RCEP について、輸入者が自分で原産品申告書を作る方法（輸入者自己申告）も使えます。どの方法でも、その品目が原産地規則を満たすことを確かめる必要があります。</p>
+
+<p>品目分類の見直しも、同じように進めます。同じ品番が、輸入のたびに違う品目番号で申告されていないかを、データで拾います。通関業者がインボイスの品目ごとに振った番号を、品番と並べてもらうと見つけられます。</p>
+
+<p>拾った品番については、仕様書と分類のルール（関税率表の通則）を AI に照らさせ、どちらの番号が合っていそうか、理由を書かせます。決めるのは通関業者や税関の事前教示で、AI の答えをそのまま申告に使うことはしません。分類の考え方は「<a href="/blog/hs-code-guide">HSコードの調べ方・決め方</a>」で詳しく書いています。</p>
+
+<h2>誤りが見つかったときの手続</h2>
+
+<p>洗い直しで見つかる誤りには、払いすぎと払い足りないの両方があります。関税を納める義務は、貨物を輸入する者にあります（関税法第6条）。通関業者に申告を任せていても、この点は変わりません。手続そのものは、通関業者に頼むことができます。</p>
+
+<figure class="tbl">
+<div class="table-wrap" tabindex="0" role="region" aria-label="誤りの向きと手続の表（横にスクロールできます）">
+<table class="compare-table proc">
+<thead>
+<tr><th>見つかったこと</th><th>手続</th><th>期限</th><th>加算税・延滞税</th><th>出す書類</th></tr>
+</thead>
+<tbody>
+<tr><td>関税を多く払っていた</td><td>更正の請求</td><td>輸入の許可の日から5年以内</td><td>かからない</td><td>関税更正請求書（税関様式<span class="nb">C-1030）</span></td></tr>
+<tr><td>関税が足りなかった</td><td>修正申告</td><td>できるだけ早く</td><td>調査の通知を受ける前なら、過少申告加算税はかからない。延滞税はかかる</td><td>修正申告書</td></tr>
+<tr><td>契約と違う品物を返送・廃棄する</td><td>違約品等の戻し税</td><td>原則、輸入の許可の日から6か月以内に保税地域に入れる</td><td>—</td><td>違約品等保税地域搬入届（税関様式T第1630号）など。輸出か廃棄かで書類が違う</td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>表3　誤りの向きと手続</figcaption>
+</figure>
+
+<p>調査の通知を受けたあとに修正申告をすると、増えた税額の5%の過少申告加算税がかかります。更正を予知したあとや、税関から更正を受けた場合は10%です。延滞税の割合は年ごとに決まっていて、2026年は期間によって年2.8%または年9.1%です。更正の請求をするときは、誤りの根拠になる書類（仕入書、契約書、運賃の請求書など）を手元にそろえておきます。</p>
+
+<h2>よくある誤解</h2>
+
+<h3><span class="nb">中国で作られた物なら、</span><span class="nb">RCEP の税率で申告できる</span></h3>
+
+<p>RCEP の税率を使うには、品目ごとに決められた原産地規則を満たし、そのことを証明する必要があります。材料や作り方によっては、中国で作られていても原産品にならない場合があります。</p>
+
+<h3><span class="nb">あとから RCEP の税率に直せば、</span><span class="nb">払いすぎた関税は戻る</span></h3>
+
+<p>RCEP 協定には輸入の後から特恵税率を求められる条文（第3.23条）がありますが、税関の説明では、日本はこの仕組みを使っていません。証明が間に合わないときは、輸入の許可の前に貨物を引き取る制度（BP）を使い、あとから証明を出します。</p>
+
+<h3><span class="nb">通関業者に任せているので、</span><span class="nb">誤りは通関業者の責任になる</span></h3>
+
+<p>関税を納める義務は、貨物を輸入する者にあります。財務省によると、税関は令和6事務年度（2024年7月〜2025年6月）に3,609者の輸入者を事後調査し、そのうち2,690者（約75%）に申告漏れなどがありました。</p>
+
+<h3><span class="nb">AI に聞けば、</span><span class="nb">税率はすぐ分かる</span></h3>
+
+<p>生成 AI は、税率のような細かい数字を間違えて答えることがあります。税率は、税関の表をプログラムで読み込んで使います。</p>
+
+<h3><span class="nb">5年分をすべて見直すのは、</span><span class="nb">手間に見合わない</span></h3>
+
+<p>すべてを同じように見る必要はありません。差額の大きい順に並べれば、上位の品目から先に確かめられます。</p>
+
+<h2>AI に任せないこと</h2>
+
+<ul class="list">
+<li>税率の数字を決めること。数字は必ず税関の表から引きます。</li>
+<li>原産地規則を満たすかどうかの最終判断</li>
+<li>品目分類の最終判断</li>
+<li>申告や更正の請求を出すこと</li>
+</ul>
+
+<p>顧客名や価格が入ったデータを外部の AI サービスに入れる場合は、入力した内容が学習に使われない契約や設定になっているかを、先に確かめます。</p>
+
+<h2>社長が決めること</h2>
+
+<ul class="list">
+<li>どこまでさかのぼるか。更正の請求ができるのは、輸入の許可の日から5年以内です。</li>
+<li>申告の明細をデータで出してもらうよう、通関業者に頼むこと</li>
+<li>差額の大きい品目について、仕入先に原産地の証明を頼むかどうか</li>
+</ul>
+
+<h2>出典</h2>
+
+<ul class="sources">
+<li>税関「<a href="https://www.customs.go.jp/tariff/2026_04_01/index.htm">実行関税率表（2026年4月1日版）</a>」</li>
+<li>財務省関税局・EPA原産地センター「<a href="https://www.customs.go.jp/kyotsu/kokusai/news/rcep/202108rcep_qa.pdf">RCEP協定 業務説明会Q&amp;A解説</a>」（2021年8月）</li>
+<li>財務省関税局経済連携室「<a href="https://www.customs.go.jp/kyotsu/kokusai/news/rcep/shiryou.pdf">地域的な包括的経済連携（RCEP）協定【概要】</a>」（2021年12月）</li>
+<li>税関「<a href="https://www.customs.go.jp/tetsuzuki/c-answer/imtsukan/1305_jr.htm">1305 納税申告に誤りがあった場合（修正申告、更正の請求、過少申告加算税）</a>」</li>
+<li>税関「<a href="https://www.customs.go.jp/tetsuzuki/c-answer/imtsukan/1604_jr.htm">1604 違約品等の再輸出又は廃棄する場合の戻し税の手続</a>」</li>
+<li>税関「<a href="https://www.customs.go.jp/roo/information/epa/gensan_naccscode.pdf">原産地証明書識別コード（NACCS）</a>」（令和6年9月現在）</li>
+<li>日本関税協会「<a href="https://www.kanzei.or.jp/kanzei_law/329AC0000000061.ja.html">関税法</a>」第6条・第7条の15</li>
+<li>財務省「<a href="https://www.mof.go.jp/policy/customs_tariff/trade/collection/ka20251112b.html">令和６事務年度の関税等の申告に係る輸入事後調査の結果</a>」（2025年11月12日）</li>
+</ul>
+
+<div class="author">
+<div class="author-mark" aria-hidden="true">WING</div>
+<div>
+<p class="author-title">この記事を書いた会社</p>
+<p class="author-name">Wing</p>
+<p>大手日系・外資コンサルティングファームで10年以上、調達・貿易・経理・IT組織の実務に携わったメンバーが在籍しています。Anthropic社などのAI導入の認定資格を持つFDEが在籍しています。</p>
+<p><a href="/about">会社概要を見る</a></p>
+</div>
+</div>
+
+<div class="cta-section">
+<p class="cta-title">輸入申告の洗い直しについて相談する</p>
+<p>申告の明細の読み取りから、税率の表づくり、差額の一覧までを、まず1年分・数品目で試す形でお手伝いしています。</p>
+<a class="cta-btn" href="/#contact">無料で相談する</a>
+</div>
+
+</article>
+
+<aside aria-label="無料診断の案内">
+<section style="max-width:800px;margin:3rem auto 0;padding:0 1.5rem;font-family:'Noto Sans JP',sans-serif;">
+  <div style="border:1px solid #E8E5DE;border-left:3px solid #A98A4B;background:#FBFAF7;padding:1.5rem 1.6rem;">
+    <p style="margin:0 0 .5rem;font-size:.95rem;font-weight:700;color:#14181F;line-height:1.7;">自社は今、どの段階にいるのか。</p>
+    <p style="margin:0 0 1.1rem;font-size:.82rem;color:#5C6470;line-height:1.95;">業種・規模・IT環境を入力するだけで、IT投資比率の業界比較とDX成熟度、組織のボトルネック類型と推奨アクションを自動で診断します。</p>
+    <a href="/dx-assessment" style="display:inline-block;background:#14181F;color:#fff;font-size:.8rem;font-weight:700;letter-spacing:.04em;padding:.85rem 1.7rem;text-decoration:none;">無料診断を受ける（5分・登録不要）</a>
+  </div>
+</section>
+</aside>
+<aside aria-label="関連記事">
+<section style="max-width:800px;margin:3.5rem auto 0;padding:2rem 1.5rem 0;border-top:1px solid #E5E7EB;font-family:'Noto Sans JP',sans-serif;">
+  <h2 style="font-size:1.15rem;font-weight:500;color:#1A1A1F;margin:0 0 1.3rem;">関連記事</h2>
+  <div style="display:grid;gap:.8rem;">
+    <a href="/blog/landed-cost-ai" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">AIで品目ごとの原価を出し、値上げの根拠をそろえる</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/us-tariff-refund-ai" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">AIで米国向けの取引を洗い出し、払った関税を回収する</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/hs-code-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">HSコードの調べ方・決め方を徹底解説｜品目分類の基礎から事前教示・EPA活用まで</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+  </div>
+  <p style="margin:1.5rem 0 0;"><a href="/blog/" style="font-size:.8rem;letter-spacing:.03em;color:#1E4E7E;text-decoration:none;">すべての記事を見る →</a></p>
+</section>
+</aside>
+</main>
+<footer class="site-footer">
+  © 2026 Wing. All rights reserved.
+</footer>
+<script>
+(function () {
+  var item = document.getElementById('item'), val = document.getElementById('val');
+  var wto = document.getElementById('wto'), rcep = document.getElementById('rcep');
+  if (!item) return;
+  function num(e) { var x = parseFloat(e.value); return isFinite(x) ? x : NaN; }
+  function money(x) { return x >= 10000 ? Math.round(x / 10000).toLocaleString('ja-JP') + '万円' : Math.round(x).toLocaleString('ja-JP') + '円'; }
+  function put(id, s) { document.getElementById(id).textContent = s; }
+  function calc() {
+    var v = num(val), a = num(wto), b = num(rcep);
+    if ([v, a, b].some(isNaN)) { put('o-year', '—'); put('o-5y', '—'); return; }
+    var d = v * 10000 * (a - b) / 100;
+    if (d <= 0) { put('o-year', '差なし'); put('o-5y', '差なし'); return; }
+    put('o-year', money(d));
+    put('o-5y', money(d * 5));
+  }
+  item.addEventListener('change', function () {
+    if (item.value !== 'custom') { var r = item.value.split('|'); wto.value = r[0]; rcep.value = r[1]; }
+    calc();
+  });
+  [wto, rcep].forEach(function (e) {
+    e.addEventListener('input', function () {
+      if (item.value !== 'custom') { var r = item.value.split('|'); if (wto.value !== r[0] || rcep.value !== r[1]) item.value = 'custom'; }
+      calc();
+    });
+  });
+  val.addEventListener('input', calc);
+  calc();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KN7NWHFK9G');
+</script>
+
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AIで米国向けの取引を洗い出し、払った関税を回収する | Wing Blog</title>
+<meta content="IEEPA関税の還付は自動では戻りません。米国の申告データから対象の申告を洗い出し、清算日から請求の段階と期限を出す手順です。経緯の年表、期限の試算、よくある誤解を載せています。" name="description"/>
+<meta content="IEEPA 関税 還付, CAPE, 米国 関税 還付 手続き, ES-003, 第99類, 清算 80日, 米国 輸出 商社, AI" name="keywords"/>
+<meta content="AIで米国向けの取引を洗い出し、払った関税を回収する" property="og:title"/>
+<meta content="IEEPA関税の還付は自動では戻りません。米国の申告データから対象の申告を洗い出し、清算日から請求の段階と期限を出す手順です。経緯の年表、期限の試算、よくある誤解を載せています。" property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://wingconsulting.org/blog/us-tariff-refund-ai" property="og:url"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="https://wingconsulting.org/images/og/us-tariff-refund-ai.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Wing" property="og:site_name"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="AIで米国向けの取引を洗い出し、払った関税を回収する" name="twitter:title"/>
+<meta content="IEEPA関税の還付は自動では戻りません。米国の申告データから対象の申告を洗い出し、清算日から請求の段階と期限を出す手順です。経緯の年表、期限の試算、よくある誤解を載せています。" name="twitter:description"/>
+<meta content="https://wingconsulting.org/images/og/us-tariff-refund-ai.png" name="twitter:image"/>
+<link href="https://wingconsulting.org/blog/us-tariff-refund-ai" rel="canonical"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AIで米国向けの取引を洗い出し、払った関税を回収する",
+  "description": "IEEPA関税の還付は自動では戻りません。米国の申告データから対象の申告を洗い出し、清算日から請求の段階と期限を出す手順です。経緯の年表、期限の試算、よくある誤解を載せています。",
+  "author": {
+    "@type": "Organization",
+    "name": "Wing編集部",
+    "url": "https://wingconsulting.org"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Wing",
+    "url": "https://wingconsulting.org",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wingconsulting.org/images/og/us-tariff-refund-ai.png"
+    }
+  },
+  "datePublished": "2026-09-13",
+  "dateModified": "2026-09-13",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://wingconsulting.org/blog/us-tariff-refund-ai"
+  },
+  "image": "https://wingconsulting.org/images/og/us-tariff-refund-ai.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Wing", "item": "https://wingconsulting.org"},
+    {"@type": "ListItem", "position": 2, "name": "インサイト", "item": "https://wingconsulting.org/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "AIで米国向けの取引を洗い出し、払った関税を回収する", "item": "https://wingconsulting.org/blog/us-tariff-refund-ai"}
+  ]
+}
+</script>
+<style>
+  :root {
+    --navy: #0B1A2E;
+    --navy-light: #132742;
+    --gold: #A8965A;
+    --gold-deep: #7A6D40;
+    --gold-light: #C4B278;
+    --gold-pale: #F5F0E3;
+    --text: #1A1A1A;
+    --text-secondary: #4A4A4A;
+    --text-light: #6B6B6B;
+    --bg: #FAFAF7;
+    --white: #FFFFFF;
+    --border: #E0DDD4;
+    --rule: #F0EDE8;
+    --link: #1E4E7E;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.9;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  a:focus-visible, input:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+  /* ── ヘッダー ── */
+  .site-header { background: var(--navy); padding: 16px 0; position: sticky; top: 0; z-index: 100; }
+  .site-header-inner { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; }
+  .site-logo { color: var(--gold); font-size: 20px; font-weight: 700; letter-spacing: .15em; text-decoration: none; }
+  .site-nav { font-size: 13px; color: rgba(255,255,255,.5); letter-spacing: .05em; }
+  .site-nav a { color: rgba(255,255,255,.75); text-decoration: none; }
+  .site-nav a:hover { color: var(--gold-light); }
+  .site-nav span { margin: 0 8px; }
+
+  /* ── 冒頭 ── */
+  .hero { background: var(--navy); padding: 64px 24px 72px; position: relative; overflow: hidden; }
+  .hero::after { content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 120px; background: linear-gradient(to bottom, transparent, var(--bg)); }
+  .hero-inner { max-width: 720px; margin: 0 auto; position: relative; z-index: 1; }
+  .hero-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+  .hero-tag { background: var(--gold); color: var(--navy); font-size: 11px; font-weight: 700; padding: 4px 14px; letter-spacing: .1em; }
+  .hero-date { color: rgba(255,255,255,.6); font-size: 13px; letter-spacing: .05em; }
+  .hero h1 { color: var(--white); font-size: clamp(24px, 4vw, 34px); font-weight: 900; line-height: 1.55; margin-bottom: 20px; text-wrap: balance; }
+  .hero-lead { color: rgba(255,255,255,.75); font-size: 15px; line-height: 1.85; max-width: 600px; }
+  .nb { display: inline-block; }
+
+  /* ── 読了目安 ── */
+  .reading-bar { max-width: 720px; margin: -24px auto 0; padding: 0 24px; position: relative; z-index: 2; }
+  .reading-bar-inner { background: var(--white); border: 1px solid var(--border); padding: 14px 24px; display: flex; align-items: center; gap: 24px; font-size: 13px; color: var(--text-light); box-shadow: 0 2px 12px rgba(0,0,0,.04); }
+  .reading-bar-inner svg { flex-shrink: 0; }
+
+  /* ── 本文 ── */
+  .article { max-width: 720px; margin: 0 auto; padding: 56px 24px 80px; }
+  .article p { margin-bottom: 24px; font-size: 15.5px; line-height: 2; color: var(--text-secondary); }
+  .article h2 { font-size: 21px; font-weight: 700; color: var(--navy); margin: 56px 0 20px; padding-left: 16px; border-left: 3px solid var(--gold); line-height: 1.6; }
+  .article h3 { font-size: 16.5px; font-weight: 700; color: var(--text); margin: 36px 0 12px; line-height: 1.6; }
+  .article a { color: var(--link); }
+  .article .list { margin: 0 0 24px; padding-left: 1.3em; }
+  .article .list li { font-size: 15.5px; line-height: 1.9; color: var(--text-secondary); margin-bottom: 6px; }
+
+  /* ── 要点 ── */
+  .summary { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--gold); padding: 18px 22px; margin: 0 0 36px; }
+  .article .summary .summary-title { font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 6px; letter-spacing: .04em; }
+  .article .summary ul { margin: 0; padding-left: 1.2em; }
+  .article .summary li { font-size: 14.5px; line-height: 1.85; color: var(--text); margin-bottom: 4px; }
+
+  /* ── 表 ── */
+  .tbl { margin: 28px 0 36px; }
+  .tbl figcaption { font-size: 12.5px; color: var(--text-light); text-align: center; margin-top: 10px; line-height: 1.7; text-wrap: balance; }
+  .table-wrap { overflow-x: auto; }
+  .compare-table { width: 100%; min-width: 560px; border-collapse: collapse; font-size: 14px; background: var(--white); }
+  .compare-table th { background: var(--navy); color: var(--white); padding: 11px 14px; text-align: left; font-weight: 500; font-size: 12.5px; letter-spacing: .03em; }
+  .compare-table td { padding: 11px 14px; border-bottom: 1px solid var(--border); color: var(--text-secondary); line-height: 1.6; vertical-align: middle; }
+  .compare-table .num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .compare-table .code { white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--text); }
+  .compare-table td:first-child { min-width: 9em; }
+  .compare-table.fit { min-width: 0; }
+  .compare-table.dates td:first-child, .compare-table.dates th:first-child { min-width: 0; width: 3.5em; white-space: nowrap; }
+  .compare-table.dates .nowrap { white-space: nowrap; }
+
+  /* ── 図 ── */
+  .fig { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--gold); padding: 22px 20px 16px; margin: 32px 0 36px; }
+  .fig figcaption { font-size: 12.5px; color: var(--text-light); text-align: center; margin-top: 16px; line-height: 1.7; text-wrap: balance; }
+  .article .fig p { margin: 0; font-size: inherit; line-height: 1.6; color: inherit; }
+  .article .fig .fig-note { font-size: 12.5px; color: var(--text-light); margin-top: 14px; }
+  .arrow { display: flex; align-items: center; justify-content: center; }
+  .arrow svg { width: 22px; height: 22px; display: block; }
+
+  /* 経緯 */
+  .timeline { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .timeline li { display: grid; grid-template-columns: 7.4em minmax(0,1fr); gap: 14px; align-items: baseline; }
+  .timeline time { font-size: 13px; font-weight: 700; color: var(--navy); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .article .fig .timeline p { font-size: 13.5px; color: var(--text-secondary); line-height: 1.7; border-left: 2px solid var(--gold); padding-left: 12px; }
+
+  /* お金の流れ */
+  .chain { display: flex; align-items: stretch; gap: 4px; }
+  .node { flex: 1 1 0; min-width: 0; background: var(--bg); border: 1px solid var(--border); padding: 10px 11px; line-height: 1.5; }
+  .node b { display: block; font-size: 14px; color: var(--navy); margin-bottom: 4px; }
+  .node small { display: block; font-size: 12.5px; color: var(--text-secondary); line-height: 1.6; }
+  .node.key { background: var(--navy); border-color: var(--navy); }
+  .node.key b { color: var(--white); }
+  .node.key small { color: rgba(255,255,255,.82); }
+  .chain .arrow { flex: 0 0 18px; }
+  .chain .arrow svg { width: 18px; height: 18px; }
+  .article .fig .callout { margin-top: 12px; border: 1px dashed #CDBF94; background: var(--gold-pale); padding: 10px 14px; font-size: 13.5px; color: var(--text); line-height: 1.7; }
+
+  /* 試算 */
+  .article .fig .calc-title { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 12px; }
+  .calc-grid2 { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.5fr); gap: 8px 12px; align-items: center; font-size: 13.5px; }
+  .calc-grid2 label { color: var(--text); line-height: 1.5; }
+  .calc-grid2 input { width: 100%; min-width: 0; padding: 6px 8px; border: 1px solid #CFCABD; background: var(--white); font: inherit; font-size: 14px; color: var(--text); font-variant-numeric: tabular-nums; }
+  .calc-out { margin-top: 16px; border-top: 1px solid var(--rule); padding-top: 12px; display: grid; gap: 6px; }
+  .calc-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 12px; font-size: 14px; color: var(--text-secondary); }
+  .calc-row b { color: var(--text); font-variant-numeric: tabular-nums; }
+  .calc-row.total { font-size: 15.5px; color: var(--navy); font-weight: 700; }
+  .calc-row.total b { color: var(--navy); }
+
+  /* 段階と分担 */
+  .steps { list-style: none; display: flex; flex-direction: column; }
+  .step { display: grid; grid-template-columns: 30px minmax(0,1fr); gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--rule); }
+  .step:first-child { padding-top: 0; }
+  .step:last-child { border-bottom: none; padding-bottom: 0; }
+  .step-no { width: 30px; height: 30px; background: var(--navy); color: var(--white); font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; font-variant-numeric: tabular-nums; }
+  .article .fig .step-name { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .roles { display: flex; flex-direction: column; gap: 4px; }
+  .role { display: grid; grid-template-columns: 5.8em minmax(0,1fr); gap: 10px; align-items: baseline; font-size: 13.5px; color: var(--text-secondary); line-height: 1.65; }
+  .chip { display: inline-block; justify-self: start; font-size: 11.5px; font-weight: 700; padding: 0 7px; border: 1px solid; line-height: 1.75; white-space: nowrap; }
+  .chip-ai { background: var(--navy); border-color: var(--navy); color: var(--white); }
+  .chip-prog { background: var(--gold-pale); border-color: #CDBF94; color: var(--gold-deep); }
+  .chip-human { background: var(--white); border-color: var(--navy); color: var(--navy); }
+
+  /* ── 出典・書き手 ── */
+  .sources { list-style: none; margin: 0 0 8px; }
+  .sources li { font-size: 13.5px; line-height: 1.8; color: var(--text-secondary); padding: 7px 0; border-bottom: 1px solid var(--rule); }
+  .author { margin-top: 48px; border: 1px solid var(--border); background: var(--white); padding: 20px 22px; display: grid; grid-template-columns: 48px minmax(0,1fr); gap: 16px; }
+  .author-mark { width: 48px; height: 48px; background: var(--navy); color: var(--gold); font-weight: 700; font-size: 13px; letter-spacing: .1em; display: flex; align-items: center; justify-content: center; }
+  .article .author .author-title { font-size: 12.5px; color: var(--text-light); margin-bottom: 2px; }
+  .article .author .author-name { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .article .author p { font-size: 13.5px; line-height: 1.8; margin-bottom: 6px; }
+
+  /* ── 相談の案内 ── */
+  .cta-section { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); padding: 44px 28px; text-align: center; margin-top: 40px; }
+  .article .cta-section .cta-title { color: var(--white); font-size: 19px; font-weight: 700; margin-bottom: 12px; line-height: 1.6; }
+  .article .cta-section p { color: rgba(255,255,255,.75); font-size: 13.5px; margin-bottom: 24px; line-height: 1.8; }
+  .article .cta-btn { display: inline-block; background: var(--gold); color: var(--navy); font-size: 13px; font-weight: 700; padding: 14px 36px; text-decoration: none; letter-spacing: .08em; }
+  .article .cta-btn:hover { background: var(--gold-light); }
+
+  .site-footer { text-align: center; padding: 32px 24px; font-size: 12px; color: var(--text-light); }
+
+  @media (max-width: 600px) {
+    .hero { padding: 48px 20px 56px; }
+    .hero h1 { font-size: 22px; }
+    .article { padding: 40px 20px 64px; }
+    .reading-bar-inner { flex-wrap: wrap; gap: 6px 16px; }
+    .site-nav { font-size: 12px; }
+    .site-nav span { margin: 0 5px; }
+    .fig { padding: 18px 14px 14px; }
+    .chain { flex-direction: column; }
+    .chain .arrow { flex: 0 0 auto; padding: 2px 0; }
+    .arrow svg { transform: rotate(90deg); }
+    .timeline li { grid-template-columns: 1fr; gap: 2px; }
+    .role { display: block; }
+    .role .chip { margin-right: 8px; }
+    .calc-grid2 { grid-template-columns: 1fr; gap: 2px; }
+    .calc-grid2 input { margin-bottom: 8px; }
+    .author { grid-template-columns: 1fr; }
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">WING</a>
+<nav class="site-nav">
+<a href="/#approach">サービス</a><span>·</span>
+<a href="/blog/">ブログ</a><span>·</span>
+<a href="/about">会社概要</a><span>·</span>
+<a href="/#contact">お問い合わせ</a>
+</nav>
+</div>
+</header>
+
+<main>
+<section class="hero">
+<div class="hero-inner">
+<div class="hero-meta">
+<span class="hero-tag">貿易DX</span>
+<time class="hero-date" datetime="2026-09-13">2026.09.13</time>
+</div>
+<h1><span class="nb">AIで米国向けの取引を洗い出し、</span><span class="nb">払った関税を回収する</span></h1>
+<p class="hero-lead"><span class="nb">IEEPA 関税の還付は、自動では戻りません。</span><span class="nb">対象の申告を洗い出して請求するまでの手順と、</span><span class="nb">日本の輸出者が確かめることです。</span></p>
+</div>
+</section>
+
+<div class="reading-bar">
+<div class="reading-bar-inner">
+<svg fill="none" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#A8965A" stroke-width="1.5"></circle><path d="M8 4.5V8l2.5 1.5" stroke="#A8965A" stroke-linecap="round" stroke-width="1.5"></path></svg>
+<span>読了目安 約13分</span>
+<span>米国の関税 / 還付 / AI</span>
+</div>
+</div>
+
+<article class="article">
+
+<div class="summary">
+<p class="summary-title">要点</p>
+<ul>
+<li>IEEPA 関税の還付は自動では戻りません。請求できるのは、米国の輸入者か、その申告をした通関業者です。</li>
+<li>いま受け付けているのは、清算の前か清算から80日以内の申告などです。清算が確定した申告の受付時期は決まっていません（2026年9月12日時点）。</li>
+<li>申告データから IEEPA 関税の行と清算日を抜き出せば、請求できる申告と期限はプログラムで出せます。</li>
+</ul>
+</div>
+
+<p>米国の連邦最高裁判所は2026年2月20日、IEEPA（国際緊急経済権限法）は大統領に関税を課す権限を与えていない、と判断しました。これを受けて、米国の税関（CBP）は、払われた IEEPA 関税の還付を始めています。</p>
+
+<p>ただ、還付は自動では戻りません。請求できるのは、米国で輸入者として申告した者（IOR）か、その申告をした通関業者です。対象の申告番号を一覧にして、CBP のシステムから請求します。この記事では、その洗い出しを AI とプログラムでどう進めるか、日本の輸出者が何を確かめるかを説明します。</p>
+
+<p>なお、IEEPA 関税がなくなったあとも、別の法律に基づく関税はかかっています。還付の対象は IEEPA 関税だけです。</p>
+
+<h2>これまでの経緯</h2>
+
+<figure class="fig">
+<ol class="timeline">
+<li><time datetime="2026-02-20">2026年2月20日</time><p>米国の連邦最高裁判所が、IEEPA では関税を課せないと判断した</p></li>
+<li><time datetime="2026-02-24">2月24日</time><p>CBP が、この日以降の輸入分から IEEPA 関税の徴収を止めた。同じ日から、通商法122条に基づく10%の追加関税が150日間かかった</p></li>
+<li><time datetime="2026-04-17">4月17日</time><p>国際貿易裁判所が、清算の前か後か、確定したかどうかを問わず、IEEPA 関税を除いて清算し直すよう命じた</p></li>
+<li><time datetime="2026-04-20">4月20日</time><p>CBP が、CAPE と呼ぶ仕組みで還付の受付を始めた（第1段階）</p></li>
+<li><time datetime="2026-06">6月</time><p>政府が、国際貿易裁判所の命令に対して控訴した</p></li>
+<li><time datetime="2026-06-29">6月29日</time><p>還付の受付の第2段階が始まった</p></li>
+<li><time datetime="2026-07-24">7月24日</time><p>通商法301条に基づく措置が始まった。日本からの輸入品には、通常の税率と合わせて12.5%がかかる（通常の税率が12.5%以上の品目と、通商拡大法232条の対象品目は上乗せなし）</p></li>
+<li><time datetime="2026-08">8月下旬</time><p>清算が確定した申告を扱う第3段階の開始が延期された。9月12日時点で、新しい日程は出ていない</p></li>
+</ol>
+<figcaption>図1　還付をめぐる主な出来事（2026年）</figcaption>
+</figure>
+
+<h2><span class="nb">誰が請求し、</span><span class="nb">誰にお金が戻るか</span></h2>
+
+<p>還付は、米国財務省から輸入者の米国の銀行口座に振り込まれます。受け取るには還付用の口座の登録が必要で、還付には利息が付きます。</p>
+
+<figure class="fig">
+<div class="chain">
+<div class="node"><b>日本の商社</b><small>米国へ輸出する</small></div>
+<div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h13M12 6l6 6-6 6" stroke="#A8965A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="node key"><b>米国の輸入者</b><small>申告番号を一覧にして請求する。通関業者も請求できる</small></div>
+<div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h13M12 6l6 6-6 6" stroke="#A8965A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="node"><b>米国の税関（CBP）</b><small>請求を受け付けて、中身を確かめる</small></div>
+<div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h13M12 6l6 6-6 6" stroke="#A8965A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="node"><b>米国財務省</b><small>輸入者の米国の口座に、利息を付けて振り込む</small></div>
+</div>
+<p class="callout">日本の商社が関税の分を値引きで負担していた場合、戻ったお金の分け方は、輸入者との話し合いで決めます。</p>
+<figcaption>図2　還付を請求する人と、お金の流れ</figcaption>
+</figure>
+
+<p>日本の商社の立場は、取引の形によって分かれます。</p>
+
+<ul class="list">
+<li>米国子会社が輸入者になっている場合は、子会社が請求します。</li>
+<li>米国の取引先が輸入者の場合は、取引先が請求します。関税の分を値引きなどで負担していたなら、精算のしかたを取引先と話し合います。</li>
+<li>日本の会社が自ら米国の輸入者として申告している取引は、請求と受け取りのしかたを、米国の通関業者に確かめます。</li>
+</ul>
+
+<p>請求は、米国の税関の電子申告システム（ACE）から行います。輸入者は ACE のアカウントを持ち、還付を受け取る米国の銀行口座を登録しておく必要があります。還付を輸入者以外の相手（通関業者など）で受け取る場合は、CBP の Form 4811 で受取先を指定します。還付は、請求が受け付けられてから60〜90日ほどで振り込まれる見込みです。</p>
+
+<h2>いま請求できる申告</h2>
+
+<p>CBP は、申告の状態によって受付の時期を分けています。ここで言う「清算」は、申告した関税の額を CBP が確定させる手続で、通常は輸入から314日以内に行われます。清算から90日以内なら CBP が自ら清算をやり直せるため、第1段階は清算から80日までの申告を対象にしています。</p>
+
+<figure class="tbl">
+<div class="table-wrap" tabindex="0" role="region" aria-label="申告の状態と還付の受付の表（横にスクロールできます）">
+<table class="compare-table fit">
+<thead>
+<tr><th>申告の状態</th><th>還付の受付</th></tr>
+</thead>
+<tbody>
+<tr><td>清算の前、または清算から80日以内</td><td>第1段階。2026年4月20日から受け付けている</td></tr>
+<tr><td>後から金額を確定させる申告（reconciliation）の対象で、その申告をまだ出していないもの</td><td>第2段階。2026年6月29日から受け付けている</td></tr>
+<tr><td>清算が確定したもの</td><td>第3段階。受付の時期は決まっていない</td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>表1　申告の状態と、還付の受付（2026年9月12日時点）</figcaption>
+</figure>
+
+<p>清算が確定した申告の扱いは、国際貿易裁判所の命令に対する政府の控訴が続いていて、まだ決まっていません。また、戻し税（drawback）を請求中の申告や、異議申立て（protest）の手続中の申告などは、いまの受付の対象外です。</p>
+
+<h2>作業が止まる理由</h2>
+
+<p>対象になる申告は、輸入の件数だけあります。米国向けの輸入が月に30件あれば、1年で360件です。</p>
+
+<p>申告ごとに、IEEPA 関税がいくら含まれているか、清算日はいつか、どの段階で請求できるかを確かめる必要があります。IEEPA 関税は、関税率表の第99類の番号で申告の行に載っています。日本からの輸入品では、この番号が途中で変わっています。</p>
+
+<figure class="tbl">
+<div class="table-wrap" tabindex="0" role="region" aria-label="日本からの輸入品にかかったIEEPA関税の番号の表（横にスクロールできます）">
+<table class="compare-table fit">
+<thead>
+<tr><th>第99類の番号</th><th>中身</th></tr>
+</thead>
+<tbody>
+<tr><td class="code">9903.01.25</td><td>基本の相互関税（10%）</td></tr>
+<tr><td class="code">9903.02.30</td><td>日本向けの相互関税。2025年9月15日まで使われた番号</td></tr>
+<tr><td class="code">9903.02.73</td><td>通常の税率と合わせて15%になるように上乗せする分。2025年8月7日にさかのぼって適用</td></tr>
+<tr><td class="code">9903.02.72</td><td>通常の税率が15%以上の品目。上乗せがないので、この番号だけの行から還付は出ない</td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>表2　日本からの輸入品にかかった IEEPA 関税の主な番号（番号の一覧は CBP の案内で最新のものを確かめる）</figcaption>
+</figure>
+
+<p>自動車と部品にかかっている 9903.94.40〜9903.94.43 は、IEEPA ではなく通商拡大法232条の番号で、還付の対象ではありません。番号を取り違えると、請求額が合わなくなります。</p>
+
+<h2>期限を試算する</h2>
+
+<p>清算日を入れると、第1段階の期限（清算日から80日）と、異議申立ての期限（清算日から180日）を計算します。基準日には、開いた日の日付が入ります。</p>
+
+<figure class="fig">
+<p class="calc-title" id="calc-title">清算日からの期限の試算</p>
+<div class="calc-grid2" role="group" aria-labelledby="calc-title">
+<label for="liq">清算日</label><input id="liq" type="date" value="2026-07-01"/>
+<label for="base">基準日</label><input id="base" type="date" value="2026-09-13"/>
+</div>
+<div class="calc-out" aria-live="polite">
+<div class="calc-row total"><span>第1段階の期限（清算日から80日）</span><b id="o-80">2026年9月19日（あと6日）</b></div>
+<div class="calc-row"><span>異議申立ての期限（清算日から180日）</span><b id="o-180">2026年12月28日（あと106日）</b></div>
+</div>
+<p class="fig-note">暦の日数で足した目安です。実際の期限は、CBP の案内と通関業者で確かめます。入力した日付は、この画面の中だけで計算します。</p>
+</figure>
+
+<h2>作業の流れ</h2>
+
+<p>作業は6つの段階に分かれます。段階ごとに、AI にさせること、プログラムにさせること、人が決めることを分けておきます。</p>
+
+<figure class="fig">
+<ol class="steps">
+<li class="step">
+<div class="step-no">1</div>
+<div>
+<p class="step-name">申告データを集める</p>
+<div class="roles">
+<p class="role"><span class="chip chip-human">人</span><span>米国子会社や取引先、通関業者に、申告データを頼む</span></p>
+<p class="role"><span class="chip chip-ai">AI</span><span>形式の違うファイルを読み取り、1つの表にそろえる</span></p>
+</div>
+</div>
+</li>
+<li class="step">
+<div class="step-no">2</div>
+<div>
+<p class="step-name">IEEPA 関税の行を抜き出す</p>
+<div class="roles">
+<p class="role"><span class="chip chip-prog">プログラム</span><span>第99類の番号で行を抜き出し、申告ごとに関税額を足す</span></p>
+<p class="role"><span class="chip chip-human">人</span><span>使う番号の一覧を、CBP の最新の案内で確かめる</span></p>
+</div>
+</div>
+</li>
+<li class="step">
+<div class="step-no">3</div>
+<div>
+<p class="step-name">清算日から段階と期限を出す</p>
+<div class="roles">
+<p class="role"><span class="chip chip-prog">プログラム</span><span>清算日に80日と180日を足し、請求できる段階と期限を出す</span></p>
+</div>
+</div>
+</li>
+<li class="step">
+<div class="step-no">4</div>
+<div>
+<p class="step-name">請求する申告の一覧を作る</p>
+<div class="roles">
+<p class="role"><span class="chip chip-prog">プログラム</span><span>請求する申告番号を、CBP の決まった形のファイルにする</span></p>
+<p class="role"><span class="chip chip-human">人</span><span>輸入者か通関業者が、CBP のシステムから請求する</span></p>
+</div>
+</div>
+</li>
+<li class="step">
+<div class="step-no">5</div>
+<div>
+<p class="step-name">取引先と話す材料をそろえる</p>
+<div class="roles">
+<p class="role"><span class="chip chip-ai">AI</span><span>契約書やメールから、関税の負担の取り決めを探して一覧にする</span></p>
+<p class="role"><span class="chip chip-human">人</span><span>精算のしかたを取引先と話し合う</span></p>
+</div>
+</div>
+</li>
+<li class="step">
+<div class="step-no">6</div>
+<div>
+<p class="step-name">案内の変更を見張る</p>
+<div class="roles">
+<p class="role"><span class="chip chip-ai">AI</span><span>CBP の案内や裁判の動きを読み、自社の申告に関係する変更をまとめる</span></p>
+<p class="role"><span class="chip chip-human">人</span><span>請求の時期を決める</span></p>
+</div>
+</div>
+</li>
+</ol>
+<figcaption>図3　作業の6段階と、AI・プログラム・人の分担</figcaption>
+</figure>
+
+<h3>1. 申告データを集める</h3>
+
+<p>米国の税関の電子申告システム（ACE）には、申告の明細を出す ES-003 というレポートがあり、IEEPA 関税の行には印が付いています。まず、輸入者か通関業者に、このレポートを出してもらうよう頼みます。</p>
+
+<p>取引先や通関業者によって、届くファイルの形式はばらばらです。列の名前や並びが違うファイルは、AI で読み取って1つの表にそろえます。そろえたあとは、申告ごとの関税額の合計が元のファイルと合うかを計算で確かめます。</p>
+
+<h3>2. IEEPA 関税の行を抜き出す</h3>
+
+<p>表2の番号をもとに、IEEPA 関税の行をプログラムで抜き出し、申告ごとに関税額を足します。番号の一覧は変わることがあるので、使う前に CBP の案内で確かめます。232条の番号は外します。</p>
+
+<h3>3. 清算日から段階と期限を出す</h3>
+
+<p>申告ごとの清算日から、請求できる段階と期限を計算します。清算から80日を過ぎると、第1段階の対象から外れます。異議申立ての期限は、清算から180日です。日付の足し算なので、プログラムで間違いなく出せます。</p>
+
+<figure class="tbl">
+<div class="table-wrap" tabindex="0" role="region" aria-label="申告ごとの請求の段階と期限の表（横にスクロールできます）">
+<table class="compare-table dates">
+<thead>
+<tr><th>申告</th><th>清算の状態</th><th class="num">IEEPA関税</th><th class="nowrap">請求の段階</th><th>期限の目安</th></tr>
+</thead>
+<tbody>
+<tr><td>A</td><td>清算の前</td><td class="num">12,400ドル</td><td class="nowrap">第1段階</td><td>清算されたら、その日から80日以内</td></tr>
+<tr><td>B</td><td>2026年7月1日に清算</td><td class="num">8,300ドル</td><td class="nowrap">第1段階</td><td>第1段階は9月19日まで。異議申立ては12月28日まで</td></tr>
+<tr><td>C</td><td>2026年3月2日に清算</td><td class="num">5,100ドル</td><td class="nowrap">第3段階</td><td>受付の時期は決まっていない</td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>表3　申告ごとの請求の段階と期限（申告と金額は例）</figcaption>
+</figure>
+
+<p>期限の近い申告から請求を急ぐよう、この表をもとに米国側と相談します。</p>
+
+<h3>4. 請求する申告の一覧を作る</h3>
+
+<p>請求は、申告番号だけを並べたファイルを、CBP のシステムに上げて行います。1つのファイルに入れられるのは9,999件までです。ファイルはプログラムで作り、請求は輸入者か通関業者が行います。</p>
+
+<h3>5. 取引先と話す材料をそろえる</h3>
+
+<p>関税の分を値引きで負担したか、別に上乗せして受け取ったかは、契約書やメール、見積の改定の記録に残っています。AI にこれらを読ませ、取引先ごと・時期ごとに取り決めを一覧にさせます。これと2・3で出した申告ごとの関税額を並べれば、話し合いの材料になります。</p>
+
+<h3>6. 案内の変更を見張る</h3>
+
+<p>還付の受付は段階を追って広がっていて、案内も更新されています。CBP の案内や裁判の動きを AI に読ませ、自社の申告に関係する変更だけをまとめさせます。請求の時期を決めるのは人です。</p>
+
+<h2>よくある誤解</h2>
+
+<h3><span class="nb">IEEPA 関税が無効になったので、</span><span class="nb">米国の追加関税はすべて戻る</span></h3>
+
+<p>戻るのは、IEEPA に基づいて払った関税だけです。通商拡大法232条の関税（自動車・部品など）や、2月24日以降にかかっている通商法122条・301条の関税は、この還付の対象ではありません。</p>
+
+<h3><span class="nb">待っていれば、</span><span class="nb">自動で戻る</span></h3>
+
+<p>還付は、輸入者か通関業者が CAPE で請求して、はじめて手続が進みます。</p>
+
+<h3><span class="nb">日本の輸出者も、</span><span class="nb">CAPE で請求できる</span></h3>
+
+<p>請求できるのは、米国の輸入者か、その申告をした通関業者です。自社が輸入者でない取引は、輸入者である取引先と話し合います。</p>
+
+<h3><span class="nb">申告を訂正（PSC）すれば、</span><span class="nb">還付を受けられる</span></h3>
+
+<p>申告の訂正（PSC）で IEEPA 関税の還付を求めることは、禁止されています。</p>
+
+<h3><span class="nb">第99類の番号が付いた行なら、</span><span class="nb">どれでも還付額が出る</span></h3>
+
+<p>日本からの輸入品で使われた 9903.02.72 は、通常の税率が15%以上の品目に使う番号で、上乗せがありません。この番号だけの行から、還付額は出ません。</p>
+
+<h2>AI に任せないこと</h2>
+
+<ul class="list">
+<li>請求するかどうか、いつ請求するかの判断</li>
+<li>対象の番号の一覧を決めること。CBP の案内で確かめます。</li>
+<li>取引先との精算のしかたを決めること</li>
+<li>請求そのもの。輸入者か通関業者が行います。</li>
+</ul>
+
+<p>顧客名や金額が入ったデータを外部の AI サービスに入れる場合は、入力した内容が学習に使われない契約や設定になっているかを、先に確かめます。</p>
+
+<h2>社長が決めること</h2>
+
+<ul class="list">
+<li>米国子会社や取引先に、申告データを出してもらうよう頼むこと</li>
+<li>関税を値引きなどで負担していた取引について、取引先と精算を話し合うかどうか</li>
+<li>期限の近い申告から請求を急ぐよう、米国側に頼むこと</li>
+</ul>
+
+<h2>出典</h2>
+
+<ul class="sources">
+<li>米国連邦最高裁判所「<a href="https://www.supremecourt.gov/opinions/25pdf/24-1287_4gcj.pdf">Learning Resources, Inc. v. Trump</a>」（2026年2月20日）</li>
+<li>CBP「<a href="https://www.cbp.gov/trade/programs-administration/trade-remedies/ieepa-duty-refunds">IEEPA Duty Refunds</a>」、「<a href="https://www.cbp.gov/sites/default/files/2026-07/26_0723_trade_information_notice_CAPE.pdf">CAPE に関する案内</a>」（2026年7月更新）</li>
+<li>CBP「<a href="https://content.govdelivery.com/accounts/USDHSCBP/bulletins/40b11c9">CSMS #67834313</a>」（2026年2月22日）、「<a href="https://content.govdelivery.com/accounts/USDHSCBP/bulletins/412cc7f">CSMS #68340863</a>」（2026年4月13日）、「<a href="https://content.govdelivery.com/accounts/USDHSCBP/bulletins/41de055">CSMS #69066837</a>」（2026年6月29日）</li>
+<li>CBP「<a href="https://content.govdelivery.com/accounts/USDHSCBP/bulletins/3f2c91c">CSMS #66242844</a>」（2025年9月15日）、「<a href="https://www.cbp.gov/trade/programs-administration/trade-remedies/IEEPA-FAQ">IEEPA FAQ</a>」</li>
+<li>米国国際貿易裁判所「<a href="https://www.cit.uscourts.gov/sites/cit/files/26-94.pdf">Slip Op. 26-94</a>」（2026年8月13日）</li>
+<li>ホワイトハウス「<a href="https://www.whitehouse.gov/presidential-actions/2026/02/imposing-a-temporary-import-surcharge-to-address-fundamental-international-payments-problems/">通商法122条に基づく一時的な輸入課徴金の布告</a>」（2026年2月20日）</li>
+<li>米国通商代表部「<a href="https://ustr.gov/about/policy-offices/press-office/press-releases/2026/july/ustr-takes-action-forced-labor-section-301-investigations">通商法301条に基づく措置の発表</a>」（2026年7月23日）</li>
+<li>日本貿易振興機構（ジェトロ）「<a href="https://www.jetro.go.jp/biznews/2026/04/bf6da55e910010f4.html">米税関、IEEPA関税を還付する「統合通関管理・処理システム（CAPE）」を4月20日から運用開始</a>」（2026年4月13日）</li>
+<li>日本貿易振興機構（ジェトロ）「<a href="https://www.jetro.go.jp/biznews/2026/08/7e2bcdd6c551fcda.html">ビジネス短信</a>」（2026年8月27日）、「<a href="https://www.jetro.go.jp/ext_images/world/us_tariff/pdf/IEEPA_v3.pdf">IEEPA関税還付プロセスの解説</a>」</li>
+</ul>
+
+<div class="author">
+<div class="author-mark" aria-hidden="true">WING</div>
+<div>
+<p class="author-title">この記事を書いた会社</p>
+<p class="author-name">Wing</p>
+<p>大手日系・外資コンサルティングファームで10年以上、調達・貿易・経理・IT組織の実務に携わったメンバーが在籍しています。Anthropic社などのAI導入の認定資格を持つFDEが在籍しています。</p>
+<p><a href="/about">会社概要を見る</a></p>
+</div>
+</div>
+
+<div class="cta-section">
+<p class="cta-title">米国向けの取引の洗い出しについて相談する</p>
+<p>申告データの取りまとめから、IEEPA 関税の抜き出し、請求の段階と期限の一覧までをお手伝いしています。</p>
+<a class="cta-btn" href="/#contact">無料で相談する</a>
+</div>
+
+</article>
+
+<aside aria-label="無料診断の案内">
+<section style="max-width:800px;margin:3rem auto 0;padding:0 1.5rem;font-family:'Noto Sans JP',sans-serif;">
+  <div style="border:1px solid #E8E5DE;border-left:3px solid #A98A4B;background:#FBFAF7;padding:1.5rem 1.6rem;">
+    <p style="margin:0 0 .5rem;font-size:.95rem;font-weight:700;color:#14181F;line-height:1.7;">自社は今、どの段階にいるのか。</p>
+    <p style="margin:0 0 1.1rem;font-size:.82rem;color:#5C6470;line-height:1.95;">業種・規模・IT環境を入力するだけで、IT投資比率の業界比較とDX成熟度、組織のボトルネック類型と推奨アクションを自動で診断します。</p>
+    <a href="/dx-assessment" style="display:inline-block;background:#14181F;color:#fff;font-size:.8rem;font-weight:700;letter-spacing:.04em;padding:.85rem 1.7rem;text-decoration:none;">無料診断を受ける（5分・登録不要）</a>
+  </div>
+</section>
+</aside>
+<aside aria-label="関連記事">
+<section style="max-width:800px;margin:3.5rem auto 0;padding:2rem 1.5rem 0;border-top:1px solid #E5E7EB;font-family:'Noto Sans JP',sans-serif;">
+  <h2 style="font-size:1.15rem;font-weight:500;color:#1A1A1F;margin:0 0 1.3rem;">関連記事</h2>
+  <div style="display:grid;gap:.8rem;">
+    <a href="/blog/import-duty-ai" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">AIで輸入申告を洗い直し、関税を減らす</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/landed-cost-ai" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">AIで品目ごとの原価を出し、値上げの根拠をそろえる</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/trade-dx-complete-guide" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">貿易DX完全ガイド｜輸入・輸出業務の課題とAI活用の全体像</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+  </div>
+  <p style="margin:1.5rem 0 0;"><a href="/blog/" style="font-size:.8rem;letter-spacing:.03em;color:#1E4E7E;text-decoration:none;">すべての記事を見る →</a></p>
+</section>
+</aside>
+</main>
+<footer class="site-footer">
+  © 2026 Wing. All rights reserved.
+</footer>
+<script>
+(function () {
+  var liq = document.getElementById('liq'), base = document.getElementById('base');
+  if (!liq) return;
+  var DAY = 86400000;
+  function parse(s) { var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s || ''); return m ? Date.UTC(+m[1], +m[2] - 1, +m[3]) : NaN; }
+  function fmt(t) { var d = new Date(t); return d.getUTCFullYear() + '年' + (d.getUTCMonth() + 1) + '月' + d.getUTCDate() + '日'; }
+  function rest(t, b) { var n = Math.round((t - b) / DAY); return n >= 0 ? '（あと' + n + '日）' : '（' + (-n) + '日過ぎています）'; }
+  function put(id, s) { document.getElementById(id).textContent = s; }
+  function calc() {
+    var l = parse(liq.value), b = parse(base.value);
+    if (isNaN(l) || isNaN(b)) { put('o-80', '—'); put('o-180', '—'); return; }
+    var d80 = l + 80 * DAY, d180 = l + 180 * DAY;
+    put('o-80', fmt(d80) + rest(d80, b));
+    put('o-180', fmt(d180) + rest(d180, b));
+  }
+  var now = new Date();
+  base.value = now.getFullYear() + '-' + ('0' + (now.getMonth() + 1)).slice(-2) + '-' + ('0' + now.getDate()).slice(-2);
+  liq.addEventListener('input', calc);
+  base.addEventListener('input', calc);
+  calc();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KN7NWHFK9G');
+</script>
+
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AIで品目ごとの原価を出し、値上げの根拠をそろえる | Wing Blog</title>
+<meta content="運賃や通関の請求書を品目ごとの原価に割り振り、為替と仕入値の上がり方を分けて、値上げの根拠をそろえる手順です。自社の数字で原価の上がり方を試算できる表と、架空の請求書の読み取り例を載せています。" name="description"/>
+<meta content="値上げ交渉 根拠, 価格転嫁, 輸入 原価計算, 為替 原価, 運賃 値上がり, 請求書 AI 読み取り, 粗利 管理, 商社" name="keywords"/>
+<meta content="AIで品目ごとの原価を出し、値上げの根拠をそろえる" property="og:title"/>
+<meta content="運賃や通関の請求書を品目ごとの原価に割り振り、為替と仕入値の上がり方を分けて、値上げの根拠をそろえる手順です。自社の数字で原価の上がり方を試算できる表と、架空の請求書の読み取り例を載せています。" property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://wingconsulting.org/blog/landed-cost-ai" property="og:url"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="https://wingconsulting.org/images/og/landed-cost-ai.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Wing" property="og:site_name"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="AIで品目ごとの原価を出し、値上げの根拠をそろえる" name="twitter:title"/>
+<meta content="運賃や通関の請求書を品目ごとの原価に割り振り、為替と仕入値の上がり方を分けて、値上げの根拠をそろえる手順です。自社の数字で原価の上がり方を試算できる表と、架空の請求書の読み取り例を載せています。" name="twitter:description"/>
+<meta content="https://wingconsulting.org/images/og/landed-cost-ai.png" name="twitter:image"/>
+<link href="https://wingconsulting.org/blog/landed-cost-ai" rel="canonical"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AIで品目ごとの原価を出し、値上げの根拠をそろえる",
+  "description": "運賃や通関の請求書を品目ごとの原価に割り振り、為替と仕入値の上がり方を分けて、値上げの根拠をそろえる手順です。自社の数字で原価の上がり方を試算できる表と、架空の請求書の読み取り例を載せています。",
+  "author": {
+    "@type": "Organization",
+    "name": "Wing編集部",
+    "url": "https://wingconsulting.org"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Wing",
+    "url": "https://wingconsulting.org",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://wingconsulting.org/images/og/landed-cost-ai.png"
+    }
+  },
+  "datePublished": "2026-09-13",
+  "dateModified": "2026-09-13",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://wingconsulting.org/blog/landed-cost-ai"
+  },
+  "image": "https://wingconsulting.org/images/og/landed-cost-ai.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Wing", "item": "https://wingconsulting.org"},
+    {"@type": "ListItem", "position": 2, "name": "インサイト", "item": "https://wingconsulting.org/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "AIで品目ごとの原価を出し、値上げの根拠をそろえる", "item": "https://wingconsulting.org/blog/landed-cost-ai"}
+  ]
+}
+</script>
+<style>
+  :root {
+    --navy: #0B1A2E;
+    --navy-light: #132742;
+    --gold: #A8965A;
+    --gold-deep: #7A6D40;
+    --gold-light: #C4B278;
+    --gold-pale: #F5F0E3;
+    --text: #1A1A1A;
+    --text-secondary: #4A4A4A;
+    --text-light: #6B6B6B;
+    --bg: #FAFAF7;
+    --white: #FFFFFF;
+    --border: #E0DDD4;
+    --rule: #F0EDE8;
+    --track: #ECE7DB;
+    --link: #1E4E7E;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.9;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  a:focus-visible, input:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+  /* ── ヘッダー ── */
+  .site-header { background: var(--navy); padding: 16px 0; position: sticky; top: 0; z-index: 100; }
+  .site-header-inner { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; }
+  .site-logo { color: var(--gold); font-size: 20px; font-weight: 700; letter-spacing: .15em; text-decoration: none; }
+  .site-nav { font-size: 13px; color: rgba(255,255,255,.5); letter-spacing: .05em; }
+  .site-nav a { color: rgba(255,255,255,.75); text-decoration: none; }
+  .site-nav a:hover { color: var(--gold-light); }
+  .site-nav span { margin: 0 8px; }
+
+  /* ── 冒頭 ── */
+  .hero { background: var(--navy); padding: 64px 24px 72px; position: relative; overflow: hidden; }
+  .hero::after { content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 120px; background: linear-gradient(to bottom, transparent, var(--bg)); }
+  .hero-inner { max-width: 720px; margin: 0 auto; position: relative; z-index: 1; }
+  .hero-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+  .hero-tag { background: var(--gold); color: var(--navy); font-size: 11px; font-weight: 700; padding: 4px 14px; letter-spacing: .1em; }
+  .hero-date { color: rgba(255,255,255,.6); font-size: 13px; letter-spacing: .05em; }
+  .hero h1 { color: var(--white); font-size: clamp(24px, 4vw, 34px); font-weight: 900; line-height: 1.55; margin-bottom: 20px; text-wrap: balance; }
+  .hero-lead { color: rgba(255,255,255,.75); font-size: 15px; line-height: 1.85; max-width: 600px; }
+  .nb { display: inline-block; }
+
+  /* ── 読了目安 ── */
+  .reading-bar { max-width: 720px; margin: -24px auto 0; padding: 0 24px; position: relative; z-index: 2; }
+  .reading-bar-inner { background: var(--white); border: 1px solid var(--border); padding: 14px 24px; display: flex; align-items: center; gap: 24px; font-size: 13px; color: var(--text-light); box-shadow: 0 2px 12px rgba(0,0,0,.04); }
+  .reading-bar-inner svg { flex-shrink: 0; }
+
+  /* ── 本文 ── */
+  .article { max-width: 720px; margin: 0 auto; padding: 56px 24px 80px; }
+  .article p { margin-bottom: 24px; font-size: 15.5px; line-height: 2; color: var(--text-secondary); }
+  .article h2 { font-size: 21px; font-weight: 700; color: var(--navy); margin: 56px 0 20px; padding-left: 16px; border-left: 3px solid var(--gold); line-height: 1.6; }
+  .article h3 { font-size: 16.5px; font-weight: 700; color: var(--text); margin: 36px 0 12px; line-height: 1.6; }
+  .article a { color: var(--link); }
+  .article .list { margin: 0 0 24px; padding-left: 1.3em; }
+  .article .list li { font-size: 15.5px; line-height: 1.9; color: var(--text-secondary); margin-bottom: 6px; }
+
+  /* ── 要点 ── */
+  .summary { background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--gold); padding: 18px 22px; margin: 0 0 36px; }
+  .article .summary .summary-title { font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 6px; letter-spacing: .04em; }
+  .article .summary ul { margin: 0; padding-left: 1.2em; }
+  .article .summary li { font-size: 14.5px; line-height: 1.85; color: var(--text); margin-bottom: 4px; }
+
+  /* ── 表 ── */
+  .tbl { margin: 28px 0 36px; }
+  .tbl figcaption { font-size: 12.5px; color: var(--text-light); text-align: center; margin-top: 10px; line-height: 1.7; text-wrap: balance; }
+  .table-wrap { overflow-x: auto; }
+  .compare-table { width: 100%; min-width: 520px; border-collapse: collapse; font-size: 14px; background: var(--white); }
+  .compare-table th { background: var(--navy); color: var(--white); padding: 11px 14px; text-align: left; font-weight: 500; font-size: 12.5px; letter-spacing: .03em; }
+  .compare-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); color: var(--text-secondary); line-height: 1.6; vertical-align: middle; }
+  .compare-table .num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .compare-table td:first-child { min-width: 10.5em; }
+  .compare-table tr.total td { font-weight: 700; color: var(--text); background: var(--gold-pale); }
+  .compare-table.fit { min-width: 0; }
+
+  /* ── 図 ── */
+  .fig { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--gold); padding: 22px 20px 16px; margin: 32px 0 36px; }
+  .fig figcaption { font-size: 12.5px; color: var(--text-light); text-align: center; margin-top: 16px; line-height: 1.7; text-wrap: balance; }
+  .article .fig p { margin: 0; font-size: inherit; line-height: 1.6; color: inherit; }
+  .article .fig .fig-note { font-size: 12.5px; color: var(--text-light); margin-top: 14px; }
+  .arrow { display: flex; align-items: center; justify-content: center; }
+  .arrow svg { width: 22px; height: 22px; display: block; }
+
+  /* 費用が品目の原価になるまで */
+  .flow { display: grid; grid-template-columns: minmax(0,1.4fr) 26px minmax(0,1fr) 26px minmax(0,1fr); align-items: center; gap: 6px; }
+  .flow-col { display: flex; flex-direction: column; gap: 8px; }
+  .box { border: 1px solid var(--border); background: var(--bg); padding: 9px 12px; line-height: 1.5; }
+  .box b { display: block; font-size: 14px; color: var(--navy); }
+  .box small { display: block; font-size: 12px; color: var(--text-light); }
+  .box.key { background: var(--navy); border-color: var(--navy); text-align: center; padding: 14px 12px; }
+  .box.key b { color: var(--white); }
+  .box.key small { color: rgba(255,255,255,.8); }
+  .box.out { background: var(--gold-pale); border-color: #D8CDAA; text-align: center; }
+
+  /* 原因ごとの内訳 */
+  .hbars { display: flex; flex-direction: column; gap: 10px; }
+  .hbar { display: grid; grid-template-columns: 8.2em minmax(0,1fr) 5em; gap: 10px; align-items: center; font-size: 13.5px; }
+  .hbar-label { color: var(--text); }
+  .hbar-track { height: 14px; background: var(--track); }
+  .hbar-fill { display: block; height: 100%; background: var(--gold); }
+  .hbar-val { text-align: right; font-weight: 700; color: var(--text); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+  /* 試算 */
+  .article .fig .calc-title { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 12px; }
+  .calc-grid { display: grid; grid-template-columns: minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr); gap: 8px 10px; align-items: center; font-size: 13.5px; }
+  .calc-grid .ch { font-size: 12px; font-weight: 700; color: var(--text-light); text-align: right; }
+  .calc-grid label { color: var(--text); line-height: 1.5; }
+  .calc-grid input { width: 100%; min-width: 0; padding: 6px 8px; border: 1px solid #CFCABD; background: var(--white); font: inherit; font-size: 14px; text-align: right; font-variant-numeric: tabular-nums; color: var(--text); }
+  .calc-grid .span2 { grid-column: span 2; }
+  .calc-out { margin-top: 16px; border-top: 1px solid var(--rule); padding-top: 12px; display: grid; gap: 6px; }
+  .calc-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 12px; font-size: 14px; color: var(--text-secondary); }
+  .calc-row b { color: var(--text); font-variant-numeric: tabular-nums; }
+  .calc-row.total { font-size: 15.5px; color: var(--navy); font-weight: 700; }
+  .calc-row.total b { color: var(--navy); }
+
+  /* 請求書の読み取り例 */
+  .doc-pair { display: grid; grid-template-columns: minmax(0,1fr) 26px minmax(0,1.25fr); gap: 8px; align-items: center; }
+  .doc { border: 1px solid var(--border); background: var(--bg); padding: 12px; }
+  .article .fig .doc-label { font-size: 12px; font-weight: 700; color: var(--text-light); margin-bottom: 8px; }
+  .doc-lines { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 0 12px; font-size: 12.5px; line-height: 1.8; color: var(--text); }
+  .doc-lines .amt { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .doc-lines .sum { border-top: 1px solid var(--border); font-weight: 700; padding-top: 2px; }
+  .doc-lines .sum-2 { font-weight: 700; }
+  .mini-table { width: 100%; border-collapse: collapse; font-size: 12.5px; background: var(--white); }
+  .mini-table th { background: var(--navy); color: var(--white); font-weight: 500; padding: 5px 8px; text-align: left; white-space: nowrap; }
+  .mini-table td { padding: 5px 8px; border-bottom: 1px solid var(--rule); color: var(--text); }
+  .mini-table .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .article .fig .doc-check { font-size: 12.5px; color: var(--gold-deep); margin-top: 8px; font-weight: 700; }
+
+  /* 段階と分担 */
+  .steps { list-style: none; display: flex; flex-direction: column; }
+  .step { display: grid; grid-template-columns: 30px minmax(0,1fr); gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--rule); }
+  .step:first-child { padding-top: 0; }
+  .step:last-child { border-bottom: none; padding-bottom: 0; }
+  .step-no { width: 30px; height: 30px; background: var(--navy); color: var(--white); font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; font-variant-numeric: tabular-nums; }
+  .article .fig .step-name { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .roles { display: flex; flex-direction: column; gap: 4px; }
+  .role { display: grid; grid-template-columns: 5.8em minmax(0,1fr); gap: 10px; align-items: baseline; font-size: 13.5px; color: var(--text-secondary); line-height: 1.65; }
+  .chip { display: inline-block; justify-self: start; font-size: 11.5px; font-weight: 700; padding: 0 7px; border: 1px solid; line-height: 1.75; white-space: nowrap; }
+  .chip-ai { background: var(--navy); border-color: var(--navy); color: var(--white); }
+  .chip-prog { background: var(--gold-pale); border-color: #CDBF94; color: var(--gold-deep); }
+  .chip-human { background: var(--white); border-color: var(--navy); color: var(--navy); }
+
+  /* 毎月の更新 */
+  .cycle { display: flex; align-items: stretch; gap: 4px; }
+  .cyc { flex: 1 1 0; min-width: 0; background: var(--bg); border: 1px solid var(--border); padding: 10px; font-size: 13px; line-height: 1.55; color: var(--text); }
+  .cyc .chip { display: table; margin-bottom: 6px; }
+  .cycle .arrow { flex: 0 0 18px; }
+  .cycle .arrow svg { width: 18px; height: 18px; }
+
+  /* ── 出典・書き手 ── */
+  .sources { list-style: none; margin: 0 0 8px; }
+  .sources li { font-size: 13.5px; line-height: 1.8; color: var(--text-secondary); padding: 7px 0; border-bottom: 1px solid var(--rule); }
+  .author { margin-top: 48px; border: 1px solid var(--border); background: var(--white); padding: 20px 22px; display: grid; grid-template-columns: 48px minmax(0,1fr); gap: 16px; }
+  .author-mark { width: 48px; height: 48px; background: var(--navy); color: var(--gold); font-weight: 700; font-size: 13px; letter-spacing: .1em; display: flex; align-items: center; justify-content: center; }
+  .article .author .author-title { font-size: 12.5px; color: var(--text-light); margin-bottom: 2px; }
+  .article .author .author-name { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .article .author p { font-size: 13.5px; line-height: 1.8; margin-bottom: 6px; }
+
+  /* ── 相談の案内 ── */
+  .cta-section { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); padding: 44px 28px; text-align: center; margin-top: 40px; }
+  .article .cta-section .cta-title { color: var(--white); font-size: 19px; font-weight: 700; margin-bottom: 12px; line-height: 1.6; }
+  .article .cta-section p { color: rgba(255,255,255,.75); font-size: 13.5px; margin-bottom: 24px; line-height: 1.8; }
+  .article .cta-btn { display: inline-block; background: var(--gold); color: var(--navy); font-size: 13px; font-weight: 700; padding: 14px 36px; text-decoration: none; letter-spacing: .08em; }
+  .article .cta-btn:hover { background: var(--gold-light); }
+
+  .site-footer { text-align: center; padding: 32px 24px; font-size: 12px; color: var(--text-light); }
+
+  @media (max-width: 600px) {
+    .hero { padding: 48px 20px 56px; }
+    .hero h1 { font-size: 22px; }
+    .article { padding: 40px 20px 64px; }
+    .reading-bar-inner { flex-wrap: wrap; gap: 6px 16px; }
+    .site-nav { font-size: 12px; }
+    .site-nav span { margin: 0 5px; }
+    .fig { padding: 18px 14px 14px; }
+    .flow, .doc-pair { grid-template-columns: 1fr; }
+    .arrow svg { transform: rotate(90deg); }
+    .cycle { flex-direction: column; }
+    .cycle .arrow { flex: 0 0 auto; padding: 2px 0; }
+    .hbar { grid-template-columns: 7.4em minmax(0,1fr) 4.6em; gap: 8px; font-size: 13px; }
+    .role { display: block; }
+    .role .chip { margin-right: 8px; }
+    .calc-grid { grid-template-columns: minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr); gap: 6px 6px; font-size: 13px; }
+    .calc-grid input { padding: 5px 6px; font-size: 13.5px; }
+    .author { grid-template-columns: 1fr; }
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a class="site-logo" href="/">WING</a>
+<nav class="site-nav">
+<a href="/#approach">サービス</a><span>·</span>
+<a href="/blog/">ブログ</a><span>·</span>
+<a href="/about">会社概要</a><span>·</span>
+<a href="/#contact">お問い合わせ</a>
+</nav>
+</div>
+</header>
+
+<main>
+<section class="hero">
+<div class="hero-inner">
+<div class="hero-meta">
+<span class="hero-tag">貿易DX</span>
+<time class="hero-date" datetime="2026-09-13">2026.09.13</time>
+</div>
+<h1><span class="nb">AIで品目ごとの原価を出し、</span><span class="nb">値上げの根拠をそろえる</span></h1>
+<p class="hero-lead"><span class="nb">運賃や通関の請求書を、</span><span class="nb">品目ごとの原価に割り振り、</span><span class="nb">値上げの根拠になる表を作る手順です。</span></p>
+</div>
+</section>
+
+<div class="reading-bar">
+<div class="reading-bar-inner">
+<svg fill="none" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#A8965A" stroke-width="1.5"></circle><path d="M8 4.5V8l2.5 1.5" stroke="#A8965A" stroke-linecap="round" stroke-width="1.5"></path></svg>
+<span>読了目安 約12分</span>
+<span>価格転嫁 / 原価 / 為替 / AI</span>
+</div>
+</div>
+
+<article class="article">
+
+<div class="summary">
+<p class="summary-title">要点</p>
+<ul>
+<li>輸入物価は円ベースで1年前より24.8%上がりました（2026年8月）。卸売業が販売価格に反映できたのは、上がった原価の62.9%です。</li>
+<li>値上げの根拠は、品目ごとに「為替・仕入先の値上げ・運賃・関税・国内の費用」に分けて示します。一律の率では説明がつきません。</li>
+<li>請求書の読み取りは AI、割り振りと計算はプログラムに任せます。ルールと値上げの幅は人が決めます。</li>
+</ul>
+</div>
+
+<p>円安と運賃の上昇で、輸入品の原価が上がっています。日本銀行の企業物価指数（2026年8月速報）では、輸入物価指数が円ベースで1年前より24.8%上がりました。中小企業庁の2026年3月の調査では、卸売業が販売価格に反映できたのは、上がった原価の62.9%でした。</p>
+
+<p>値上げを頼むには、品目ごとに原価がどれだけ上がったかを示す必要があります。ここまでは多くの会社が分かっています。ただ、実際にはその数字を出す集計で止まります。この記事では、請求書の読み取りから交渉資料の下書きまでを、AI とプログラムでどう短くするかを説明します。</p>
+
+<h2>一律の値上げ率では通りにくい理由</h2>
+
+<p>原価の上がり方は、品目ごとに違います。ドル建てで仕入れる品目は為替の影響を強く受け、重くてかさばる品目は運賃の影響を強く受けます。国内で仕入れる品目は、為替の影響をほとんど受けません。</p>
+
+<figure class="tbl">
+<div class="table-wrap" tabindex="0" role="region" aria-label="品目ごとの原価の上がり方の表（横にスクロールできます）">
+<table class="compare-table">
+<thead>
+<tr><th>品目（架空）</th><th class="num">前回の原価</th><th class="num">いまの原価</th><th class="num">上がり方</th><th>主な原因</th></tr>
+</thead>
+<tbody>
+<tr><td>A　ドル建ての輸入品</td><td class="num">1,557円</td><td class="num">1,759円</td><td class="num">+13.0%</td><td>為替と仕入値</td></tr>
+<tr><td>B　重くかさばる輸入品</td><td class="num">910円</td><td class="num">1,056円</td><td class="num">+16.0%</td><td>運賃と為替</td></tr>
+<tr><td>C　国内で仕入れる品</td><td class="num">1,000円</td><td class="num">1,030円</td><td class="num">+3.0%</td><td>仕入値</td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>表1　品目ごとの原価の上がり方（数字は説明のための例）</figcaption>
+</figure>
+
+<p>この3品目に一律で10%の値上げを頼むと、品目AとBでは上がった原価に届きません。品目Cでは、上がった原価を大きく超える額を求めることになり、根拠を聞かれたときに説明がつきません。品目ごとの上がり方を出しておけば、品目ごとに筋の通った改定案を出せます。</p>
+
+<h2>作業が止まる理由</h2>
+
+<p>輸入品1個あたりの原価は、仕入単価に為替レートを掛けた額に、輸入港までの運賃・保険料、関税、通関・国内の運送・保管の費用を足したものです。</p>
+
+<p>このうち、仕入単価は品目ごとに記録があります。関税も、申告の欄ごとに分かれています。一方、運賃や通関・保管の費用は、出荷ごと・コンテナごとの請求書でしか届きません。多くは PDF です。</p>
+
+<p>1本のコンテナに何十品目も入っていれば、費用を品目ごとに割り振らないと、品目の原価になりません。手作業では、品目や出荷が多いほど時間がかかります。</p>
+
+<figure class="fig">
+<div class="flow">
+<div class="flow-col">
+<div class="box"><small>フォワーダーから</small><b>運賃・保険料の請求書</b><small>出荷・コンテナごと</small></div>
+<div class="box"><small>通関業者から</small><b>通関の費用と関税</b><small>申告の欄ごと</small></div>
+<div class="box"><small>倉庫から</small><b>保管・配送の費用</b><small>月ごと・出荷ごと</small></div>
+</div>
+<div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h13M12 6l6 6-6 6" stroke="#A8965A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="box key"><b>割り振りのルール</b><small>重さ・容積・金額・保管日数</small></div>
+<div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h13M12 6l6 6-6 6" stroke="#A8965A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="flow-col">
+<div class="box out"><b>品目Aの原価</b></div>
+<div class="box out"><b>品目Bの原価</b></div>
+<div class="box out"><b>品目Cの原価</b></div>
+</div>
+</div>
+<figcaption>図1　出荷ごとの費用を、品目ごとの原価にするまで</figcaption>
+</figure>
+
+<h2>最初に作りたい表</h2>
+
+<p>目指すのは、品目ごとの原価の上がり方を、原因別に分けた表です。表2の数字は、表1の品目Aの内訳です。</p>
+
+<figure class="tbl">
+<div class="table-wrap" tabindex="0" role="region" aria-label="1個あたりの原価の表（横にスクロールできます）">
+<table class="compare-table">
+<thead>
+<tr><th>1個あたり</th><th class="num">前回の価格改定時</th><th class="num">いま</th><th class="num">差</th></tr>
+</thead>
+<tbody>
+<tr><td>仕入単価</td><td class="num">10.00ドル</td><td class="num">10.40ドル</td><td class="num">—</td></tr>
+<tr><td>為替レート</td><td class="num">140円</td><td class="num">150円</td><td class="num">—</td></tr>
+<tr><td>仕入単価 × 為替</td><td class="num">1,400円</td><td class="num">1,560円</td><td class="num">+160円</td></tr>
+<tr><td>輸入港までの運賃・保険料</td><td class="num">60円</td><td class="num">90円</td><td class="num">+30円</td></tr>
+<tr><td>関税（CIF価格の3.9%）</td><td class="num">57円</td><td class="num">64円</td><td class="num">+7円</td></tr>
+<tr><td>通関・国内の費用</td><td class="num">40円</td><td class="num">45円</td><td class="num">+5円</td></tr>
+<tr class="total"><td>原価</td><td class="num">1,557円</td><td class="num">1,759円</td><td class="num">+202円</td></tr>
+<tr><td>販売価格（据え置き）</td><td class="num">1,800円</td><td class="num">1,800円</td><td class="num">—</td></tr>
+<tr class="total"><td>粗利</td><td class="num">243円（13.5%）</td><td class="num">41円（2.3%）</td><td class="num">−202円</td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>表2　品目Aの1個あたりの原価（数字は例）</figcaption>
+</figure>
+
+<p>仕入単価×為替の増加160円は、為替の分の100円（10.00ドル×10円）と、仕入先の値上げの分の60円（0.40ドル×150円）に分けられます。関税も7円増えています。関税は運賃と保険料を含めた価格（CIF価格）にかかるので、仕入値や為替、運賃が上がると、関税も一緒に増えます。</p>
+
+<p>この品目が年に3万個売れていれば、1年で減った粗利は606万円です。原因ごとに分けると、図2のようになります。</p>
+
+<figure class="fig">
+<div class="hbars">
+<div class="hbar"><span class="hbar-label">為替</span><span class="hbar-track"><span class="hbar-fill" style="width:100%"></span></span><span class="hbar-val">300万円</span></div>
+<div class="hbar"><span class="hbar-label">仕入先の値上げ</span><span class="hbar-track"><span class="hbar-fill" style="width:60%"></span></span><span class="hbar-val">180万円</span></div>
+<div class="hbar"><span class="hbar-label">運賃・保険料</span><span class="hbar-track"><span class="hbar-fill" style="width:30%"></span></span><span class="hbar-val">90万円</span></div>
+<div class="hbar"><span class="hbar-label">関税</span><span class="hbar-track"><span class="hbar-fill" style="width:7%"></span></span><span class="hbar-val">21万円</span></div>
+<div class="hbar"><span class="hbar-label">国内の費用</span><span class="hbar-track"><span class="hbar-fill" style="width:5%"></span></span><span class="hbar-val">15万円</span></div>
+</div>
+<p class="fig-note">1個あたりの増加202円に、年間の数量3万個を掛けた額です。合計は606万円です。数字は例です。</p>
+<figcaption>図2　1年で減った粗利の、原因ごとの内訳</figcaption>
+</figure>
+
+<p>全品目についてこの表を作り、減った粗利の大きい順に並べます。そうすれば、どの取引先の、どの品目から交渉するかが決まります。</p>
+
+<h2>自社の数字で試算する</h2>
+
+<p>1つの品目について、前回の改定時といまの数字を入れると、原価の上がり方と1年で減った粗利をその場で計算します。初期値は表2の例です。</p>
+
+<figure class="fig">
+<p class="calc-title" id="calc-title">原価の上がり方の試算</p>
+<div class="calc-grid" role="group" aria-labelledby="calc-title">
+<span></span><span class="ch">前回の改定時</span><span class="ch">いま</span>
+<label for="usd0">仕入単価（ドル）</label><input id="usd0" type="number" inputmode="decimal" step="0.01" min="0" value="10.00"/><input id="usd1" type="number" inputmode="decimal" step="0.01" min="0" value="10.40" aria-label="いまの仕入単価（ドル）"/>
+<label for="fx0">為替レート（円）</label><input id="fx0" type="number" inputmode="decimal" step="0.1" min="0" value="140"/><input id="fx1" type="number" inputmode="decimal" step="0.1" min="0" value="150" aria-label="いまの為替レート（円）"/>
+<label for="fr0">輸入港までの運賃・保険料（円）</label><input id="fr0" type="number" inputmode="decimal" step="1" min="0" value="60"/><input id="fr1" type="number" inputmode="decimal" step="1" min="0" value="90" aria-label="いまの運賃・保険料（円）"/>
+<label for="dom0">通関・国内の費用（円）</label><input id="dom0" type="number" inputmode="decimal" step="1" min="0" value="40"/><input id="dom1" type="number" inputmode="decimal" step="1" min="0" value="45" aria-label="いまの通関・国内の費用（円）"/>
+<label for="rate">関税率（%）</label><input id="rate" class="span2" type="number" inputmode="decimal" step="0.1" min="0" value="3.9"/>
+<label for="price">販売価格（円）</label><input id="price" class="span2" type="number" inputmode="decimal" step="1" min="0" value="1800"/>
+<label for="qty">1年の販売数量（個）</label><input id="qty" class="span2" type="number" inputmode="numeric" step="1" min="0" value="30000"/>
+</div>
+<div class="calc-out" aria-live="polite">
+<div class="calc-row"><span>1個あたりの原価</span><b id="o-cost">1,557円 → 1,759円（+202円）</b></div>
+<div class="calc-row"><span>1個あたりの粗利</span><b id="o-gp">243円（13.5%） → 41円（2.3%）</b></div>
+<div class="calc-row"><span>増えた原価の内訳</span><b id="o-break"><span class="nb">為替 +100円・</span><span class="nb">仕入先 +60円・</span><span class="nb">運賃 +30円・</span><span class="nb">関税 +7円・</span><span class="nb">国内 +5円</span></b></div>
+<div class="calc-row total"><span>1年で減った粗利</span><b id="o-year">606万円</b></div>
+</div>
+<p class="fig-note">関税は、仕入単価×為替に運賃・保険料を足した額に税率を掛け、1円単位に丸めています。入力した数字は、この画面の中だけで計算します。</p>
+</figure>
+
+<h2>作業の流れ</h2>
+
+<p>作業は6つの段階に分かれます。段階ごとに、AI にさせること、プログラムにさせること、人が決めることを分けておきます。</p>
+
+<figure class="fig">
+<ol class="steps">
+<li class="step">
+<div class="step-no">1</div>
+<div>
+<p class="step-name">請求書を読み取る</p>
+<div class="roles">
+<p class="role"><span class="chip chip-ai">AI</span><span>PDF から、出荷・費目・金額・通貨を取り出す</span></p>
+<p class="role"><span class="chip chip-prog">プログラム</span><span>費目の合計と、請求書の合計額を突き合わせる</span></p>
+<p class="role"><span class="chip chip-human">人</span><span>合わなかった請求書を見直す</span></p>
+</div>
+</div>
+</li>
+<li class="step">
+<div class="step-no">2</div>
+<div>
+<p class="step-name">出荷と品目をつなぐ</p>
+<div class="roles">
+<p class="role"><span class="chip chip-ai">AI</span><span>仕入書と包装明細を読み取る</span></p>
+<p class="role"><span class="chip chip-prog">プログラム</span><span>出荷ごとに、品目と数量を並べる</span></p>
+</div>
+</div>
+</li>
+<li class="step">
+<div class="step-no">3</div>
+<div>
+<p class="step-name">費用を品目に割り振る</p>
+<div class="roles">
+<p class="role"><span class="chip chip-human">人</span><span>割り振りのルールを決める</span></p>
+<p class="role"><span class="chip chip-prog">プログラム</span><span>ルールどおりに計算する</span></p>
+</div>
+</div>
+</li>
+<li class="step">
+<div class="step-no">4</div>
+<div>
+<p class="step-name">為替の分と仕入値の分を分ける</p>
+<div class="roles">
+<p class="role"><span class="chip chip-prog">プログラム</span><span>前回の改定時と今の、単価と為替を比べて分ける</span></p>
+</div>
+</div>
+</li>
+<li class="step">
+<div class="step-no">5</div>
+<div>
+<p class="step-name">減った粗利を並べる</p>
+<div class="roles">
+<p class="role"><span class="chip chip-prog">プログラム</span><span>年間の数量を掛け、大きい順に並べる</span></p>
+</div>
+</div>
+</li>
+<li class="step">
+<div class="step-no">6</div>
+<div>
+<p class="step-name">交渉資料の下書きを作る</p>
+<div class="roles">
+<p class="role"><span class="chip chip-ai">AI</span><span>文章と並べ方を下書きする。数字は表から入れる</span></p>
+<p class="role"><span class="chip chip-human">人</span><span>見直して、値上げの幅と進め方を決める</span></p>
+</div>
+</div>
+</li>
+</ol>
+<figcaption>図3　作業の6段階と、AI・プログラム・人の分担</figcaption>
+</figure>
+
+<h3>1. 請求書を読み取る</h3>
+
+<p>輸送を手配する会社（フォワーダー）、通関業者、倉庫から届く請求書の PDF を、AI で読み取って表にします。取り出すのは、どの出荷の費用か、費目、金額、通貨の4つです。出荷は、船荷証券の番号などで見分けます。</p>
+
+<figure class="fig">
+<div class="doc-pair">
+<div class="doc">
+<p class="doc-label">架空の請求書（フォワーダーから）</p>
+<div class="doc-lines">
+<span>請求書番号</span><span class="amt">INV-0815</span>
+<span>船荷証券の番号</span><span class="amt">BL-0001</span>
+<span>海上運賃</span><span class="amt">USD 1,200.00</span>
+<span>燃料の割増料金</span><span class="amt">USD 180.00</span>
+<span>港での荷役の費用</span><span class="amt">JPY 45,000</span>
+<span>書類の手数料</span><span class="amt">JPY 5,500</span>
+<span class="sum">合計（ドル）</span><span class="amt sum">USD 1,380.00</span>
+<span class="sum-2">合計（円）</span><span class="amt sum-2">JPY 50,500</span>
+</div>
+</div>
+<div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h13M12 6l6 6-6 6" stroke="#A8965A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="doc">
+<p class="doc-label">AI が取り出した表</p>
+<table class="mini-table">
+<thead><tr><th>出荷</th><th>費目</th><th class="num">金額</th><th>通貨</th></tr></thead>
+<tbody>
+<tr><td>BL-0001</td><td>海上運賃</td><td class="num">1,200.00</td><td>USD</td></tr>
+<tr><td>BL-0001</td><td>燃料の割増料金</td><td class="num">180.00</td><td>USD</td></tr>
+<tr><td>BL-0001</td><td>港での荷役の費用</td><td class="num">45,000</td><td>JPY</td></tr>
+<tr><td>BL-0001</td><td>書類の手数料</td><td class="num">5,500</td><td>JPY</td></tr>
+</tbody>
+</table>
+<p class="doc-check">合計の確かめ：USD 1,380.00、JPY 50,500。請求書の合計と一致</p>
+</div>
+</div>
+<figcaption>図4　架空の請求書から取り出す項目と、合計での確かめ</figcaption>
+</figure>
+
+<p>読み違いは計算で見つけます。読み取った費目を通貨ごとに足した額が、請求書の合計額と合わないものだけ、人が見直します。</p>
+
+<h3>2. 出荷と品目をつなぐ</h3>
+
+<p>仕入書（インボイス）と包装明細（パッキングリスト）から、どの出荷にどの品目が何個入っていたかを表にします。これも PDF なら AI で読み取ります。</p>
+
+<h3>3. 費用を品目に割り振る</h3>
+
+<p>出荷ごとの費用を、決めたルールで品目に割り振ります。たとえば次のようなルールです。</p>
+
+<ul class="list">
+<li>運賃は、重さか容積の割合で分ける</li>
+<li>保険料は、金額の割合で分ける</li>
+<li>関税は、同じ欄に入っている品目の間で、金額の割合で分ける</li>
+<li>保管料は、容積と保管した日数で分ける</li>
+</ul>
+
+<p>ルールは人が決め、計算はプログラムにさせます。取引先に理由を聞かれても説明できるルールにしておきます。</p>
+
+<h3>4. 為替の分と仕入値の分を分ける</h3>
+
+<p>前回の価格改定のときと今とで、仕入単価と、決済した為替レートを比べます。そのうえで、表2のように、原価の増加を為替の分と仕入先の値上げの分に分けます。</p>
+
+<h3>5. 減った粗利を並べる</h3>
+
+<p>品目ごとに、前回の改定時から増えた原価に年間の数量を掛け、減った粗利の大きい順に並べます。取引先ごとの合計も出します。</p>
+
+<h3>6. 交渉資料の下書きを作る</h3>
+
+<p>取引先ごとに、対象の品目、原価が上がった原因の内訳、公的な指標、改定後の価格の案をまとめた資料の下書きを、AI に作らせます。公的な指標には、日本銀行の輸入物価指数などを使います。</p>
+
+<p>数字は5までの表から入れ、AI には文章と並べ方だけを任せます。送る前に、担当者が見直します。</p>
+
+<h2>手で集計する場合との違い</h2>
+
+<figure class="tbl">
+<div class="table-wrap" tabindex="0" role="region" aria-label="手で集計する場合と仕組みにする場合の比較表（横にスクロールできます）">
+<table class="compare-table">
+<thead>
+<tr><th>作業</th><th>Excel で手で集計する場合</th><th>AI とプログラムの仕組みにする場合</th></tr>
+</thead>
+<tbody>
+<tr><td>請求書の数字を入れる</td><td>人が打ち込む</td><td>AI が読み取り、合計で確かめる</td></tr>
+<tr><td>費用を品目に割り振る</td><td>担当者が式を作る</td><td>決めたルールで、毎回同じ計算をする</td></tr>
+<tr><td>表を新しくする</td><td>交渉のたびに作り直す</td><td>毎月の請求書を読み込むと新しくなる</td></tr>
+<tr><td>担当者が替わったとき</td><td>式の意味を引き継ぐ必要がある</td><td>ルールと計算の手順が残る</td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>表3　手で集計する場合と、仕組みにする場合</figcaption>
+</figure>
+
+<h2>毎月の更新</h2>
+
+<p>一度この仕組みを作れば、毎月の請求書を読み込むだけで表が新しくなります。</p>
+
+<figure class="fig">
+<div class="cycle">
+<div class="cyc"><p>毎月の請求書が届く</p></div>
+<div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h13M12 6l6 6-6 6" stroke="#A8965A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="cyc"><span class="chip chip-ai">AI</span><p>請求書を読み取る</p></div>
+<div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h13M12 6l6 6-6 6" stroke="#A8965A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="cyc"><span class="chip chip-prog">プログラム</span><p>原価と粗利を計算し直す</p></div>
+<div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h13M12 6l6 6-6 6" stroke="#A8965A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="cyc"><span class="chip chip-prog">プログラム</span><p>決めた水準を下回った品目を知らせる</p></div>
+<div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h13M12 6l6 6-6 6" stroke="#A8965A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="cyc"><span class="chip chip-human">人</span><p>交渉するかを決める</p></div>
+</div>
+<figcaption>図5　毎月の更新の流れ</figcaption>
+</figure>
+
+<p>為替が、取引条件で決めた幅を超えて動いたときは、改定後の価格を計算して知らせることもできます。次の交渉のときに、また一から集計し直す必要がなくなります。</p>
+
+<h2>よくある質問</h2>
+
+<h3><span class="nb">規格品を売る取引でも、</span><span class="nb">取適法を根拠に値上げの協議を求められますか</span></h3>
+
+<p>公正取引委員会の取適法の Q&amp;A では、規格品や標準品を買うことは、原則として製造委託に当たらないとされています。ただし、発注者の社名を印刷する、決まった長さに切るなど、仕様を指定して作らせる場合は委託に当たります。まず、取引の形を確かめます。</p>
+
+<h3><span class="nb">労務費の上がった分も、</span><span class="nb">価格に乗せてよいのですか</span></h3>
+
+<p>国は「労務費の適切な転嫁のための価格交渉に関する指針」を出しています。2023年11月に作られ、2025年12月に改正されました。中小企業庁の2026年3月の調査では、価格交渉をした企業の7割超が、労務費についても交渉しています。</p>
+
+<h3><span class="nb">輸入のときに払った消費税は、</span><span class="nb">原価に入れますか</span></h3>
+
+<p>輸入申告をした課税事業者なら、輸入のときの消費税は仕入税額控除の対象になります。そのため原価には入れません。関税は差し引けないので、原価に入れます。</p>
+
+<h3><span class="nb">為替レートは、</span><span class="nb">どの値を使えばよいですか</span></h3>
+
+<p>品目ごとの原価の上がり方を見るときは、実際に決済したレートを使います。見積や改定の案には、前提にしたレートを書いておきます。次に見直すときの基準になります。</p>
+
+<h2>AI に任せないこと</h2>
+
+<ul class="list">
+<li>費用の割り振りのルールを決めること</li>
+<li>値上げの幅と、交渉の進め方を決めること</li>
+<li>数字を決めること。読み取りは計算で確かめ、原価の計算はプログラムで行います。</li>
+</ul>
+
+<p>顧客名や価格が入ったデータを外部の AI サービスに入れる場合は、入力した内容が学習に使われない契約や設定になっているかを、先に確かめます。</p>
+
+<h2>社長が決めること</h2>
+
+<ul class="list">
+<li>費用の割り振りのルール</li>
+<li>知らせる粗利率の水準</li>
+<li>為替と運賃の見直しの条項を、自社の標準の取引条件にするかどうか</li>
+</ul>
+
+<h2>出典</h2>
+
+<ul class="sources">
+<li>日本銀行「<a href="https://www.boj.or.jp/statistics/pi/cgpi_release/cgpi2608.pdf">企業物価指数（2026年8月速報）</a>」（2026年9月11日）</li>
+<li>中小企業庁「<a href="https://www.meti.go.jp/files/000001911.pdf">価格交渉促進月間（2026年3月）フォローアップ調査結果</a>」（2026年6月26日）</li>
+<li>公正取引委員会「<a href="https://www.jftc.go.jp/toriteki/toriteki_qa.html">よくある質問コーナー（取適法）</a>」</li>
+<li>公正取引委員会「<a href="https://www.jftc.go.jp/houdou/pressrelease/2025/dec/202512_roumuhi.html">「労務費の適切な転嫁のための価格交渉に関する指針」の改正について</a>」（2025年12月26日）</li>
+<li>国税庁 質疑応答事例「<a href="https://www.nta.go.jp/law/shitsugi/shohi/16/26.htm">輸入取引に係る輸入手続を委託した場合の仕入税額控除の取扱いについて</a>」</li>
+<li>国税庁「<a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6563.htm">No.6563 輸入取引</a>」</li>
+</ul>
+
+<div class="author">
+<div class="author-mark" aria-hidden="true">WING</div>
+<div>
+<p class="author-title">この記事を書いた会社</p>
+<p class="author-name">Wing</p>
+<p>大手日系・外資コンサルティングファームで10年以上、調達・貿易・経理・IT組織の実務に携わったメンバーが在籍しています。Anthropic社などのAI導入の認定資格を持つFDEが在籍しています。</p>
+<p><a href="/about">会社概要を見る</a></p>
+</div>
+</div>
+
+<div class="cta-section">
+<p class="cta-title">品目ごとの原価の出し方について相談する</p>
+<p>請求書や基幹システムのデータから品目ごとの原価を出し、毎月見られるようにするところまでをお手伝いしています。</p>
+<a class="cta-btn" href="/#contact">無料で相談する</a>
+</div>
+
+</article>
+
+<aside aria-label="無料診断の案内">
+<section style="max-width:800px;margin:3rem auto 0;padding:0 1.5rem;font-family:'Noto Sans JP',sans-serif;">
+  <div style="border:1px solid #E8E5DE;border-left:3px solid #A98A4B;background:#FBFAF7;padding:1.5rem 1.6rem;">
+    <p style="margin:0 0 .5rem;font-size:.95rem;font-weight:700;color:#14181F;line-height:1.7;">自社は今、どの段階にいるのか。</p>
+    <p style="margin:0 0 1.1rem;font-size:.82rem;color:#5C6470;line-height:1.95;">業種・規模・IT環境を入力するだけで、IT投資比率の業界比較とDX成熟度、組織のボトルネック類型と推奨アクションを自動で診断します。</p>
+    <a href="/dx-assessment" style="display:inline-block;background:#14181F;color:#fff;font-size:.8rem;font-weight:700;letter-spacing:.04em;padding:.85rem 1.7rem;text-decoration:none;">無料診断を受ける（5分・登録不要）</a>
+  </div>
+</section>
+</aside>
+<aside aria-label="関連記事">
+<section style="max-width:800px;margin:3.5rem auto 0;padding:2rem 1.5rem 0;border-top:1px solid #E5E7EB;font-family:'Noto Sans JP',sans-serif;">
+  <h2 style="font-size:1.15rem;font-weight:500;color:#1A1A1F;margin:0 0 1.3rem;">関連記事</h2>
+  <div style="display:grid;gap:.8rem;">
+    <a href="/blog/import-duty-ai" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">AIで輸入申告を洗い直し、関税を減らす</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/us-tariff-refund-ai" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">AIで米国向けの取引を洗い出し、払った関税を回収する</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+    <a href="/blog/trade-operations-overview" style="display:block;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:3px;text-decoration:none;color:#1A1A1F;background:#fff;"><span style="font-size:.9rem;font-weight:500;line-height:1.55;">商社の貿易事務とは？輸入フローの全体像と担当者が直面する課題</span><span style="color:#7A6B3E;font-size:.76rem;white-space:nowrap;"> 続きを読む →</span></a>
+  </div>
+  <p style="margin:1.5rem 0 0;"><a href="/blog/" style="font-size:.8rem;letter-spacing:.03em;color:#1E4E7E;text-decoration:none;">すべての記事を見る →</a></p>
+</section>
+</aside>
+</main>
+<footer class="site-footer">
+  © 2026 Wing. All rights reserved.
+</footer>
+<script>
+(function () {
+  var ids = ['usd0','usd1','fx0','fx1','fr0','fr1','dom0','dom1','rate','price','qty'];
+  var el = {};
+  ids.forEach(function (k) { el[k] = document.getElementById(k); });
+  if (!el.usd0) return;
+  function v(k) { var x = parseFloat(el[k].value); return isFinite(x) ? x : NaN; }
+  function yen(x) { return Math.round(x).toLocaleString('ja-JP') + '円'; }
+  function signed(x) { var r = Math.round(x); return (r >= 0 ? '+' : '−') + Math.abs(r).toLocaleString('ja-JP') + '円'; }
+  function man(x) { return Math.abs(x) >= 10000 ? Math.round(x / 10000).toLocaleString('ja-JP') + '万円' : yen(x); }
+  function put(id, s) { document.getElementById(id).textContent = s; }
+  function calc() {
+    var u0 = v('usd0'), u1 = v('usd1'), f0 = v('fx0'), f1 = v('fx1'), r0 = v('fr0'), r1 = v('fr1');
+    var d0 = v('dom0'), d1 = v('dom1'), t = v('rate') / 100, p = v('price'), q = v('qty');
+    if ([u0,u1,f0,f1,r0,r1,d0,d1,t,p,q].some(isNaN)) { ['o-cost','o-gp','o-break','o-year'].forEach(function (i) { put(i, '—'); }); return; }
+    var duty0 = Math.round((u0 * f0 + r0) * t), duty1 = Math.round((u1 * f1 + r1) * t);
+    var c0 = u0 * f0 + r0 + duty0 + d0, c1 = u1 * f1 + r1 + duty1 + d1, inc = c1 - c0;
+    var g0 = p - c0, g1 = p - c1;
+    function pct(g) { return p > 0 ? (Math.round(g / p * 1000) / 10).toFixed(1) + '%' : '—'; }
+    put('o-cost', yen(c0) + ' → ' + yen(c1) + '（' + signed(inc) + '）');
+    put('o-gp', yen(g0) + '（' + pct(g0) + '） → ' + yen(g1) + '（' + pct(g1) + '）');
+    var parts = ['為替 ' + signed(u0 * (f1 - f0)), '仕入先 ' + signed((u1 - u0) * f1), '運賃 ' + signed(r1 - r0), '関税 ' + signed(duty1 - duty0), '国内 ' + signed(d1 - d0)];
+    var box = document.getElementById('o-break'); box.textContent = '';
+    parts.forEach(function (t, i) { var sp = document.createElement('span'); sp.className = 'nb'; sp.textContent = t + (i < parts.length - 1 ? '・' : ''); box.appendChild(sp); });
+    put('o-year', man(inc * q));
+  }
+  ids.forEach(function (k) { el[k].addEventListener('input', calc); });
+  calc();
+})();
+</script>
+</body>
+</html>

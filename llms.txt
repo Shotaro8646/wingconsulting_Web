@@ -16,6 +16,9 @@
 - [貿易DX完全ガイド](https://wingconsulting.org/blog/trade-dx-complete-guide): 輸出入の全業務フローとAI活用による自動化
 - [HSコードの調べ方・決め方](https://wingconsulting.org/blog/hs-code-guide): 品目分類の基礎から事前教示・EPA活用まで
 - [安全保障貿易管理と該非判定](https://wingconsulting.org/blog/export-control-ai): リスト規制・キャッチオール規制とAIによる効率化
+- [輸入申告の洗い直しで関税を減らす](https://wingconsulting.org/blog/import-duty-ai): RCEPの税率の使い忘れと関税の払いすぎを、過去の輸入申告からAIとプログラムで探す手順。実行関税率表から読み出した税率、差額の試算、更正の請求などの手続の比較
+- [品目ごとの原価と値上げの根拠](https://wingconsulting.org/blog/landed-cost-ai): 運賃・通関の請求書を品目ごとの原価に割り振り、為替・仕入値・運賃・関税の上昇を分けて価格交渉の根拠にする手順。原価と減った粗利の試算
+- [米国のIEEPA関税の還付](https://wingconsulting.org/blog/us-tariff-refund-ai): CAPEで請求できる申告の洗い出し、清算日からの請求期限、請求する人とお金の流れ（2026年9月12日時点）
 - [AIエージェント完全ガイド](https://wingconsulting.org/blog/ai-agent-guide): 概念から導入・ガバナンスまでの7ステップ
 - [AI導入が本番稼働に届かない理由](https://wingconsulting.org/blog/poc-death-dx-consulting): PoC失敗の5大原因と対策
 - [DXコンサルティングの選び方](https://wingconsulting.org/blog/dx-consulting-guide): 大手と専門ファームの違い、失敗パターン
