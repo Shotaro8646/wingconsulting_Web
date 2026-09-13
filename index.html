@@ -13,7 +13,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#FFFFFF">
 <title>AI・DXコンサルティング｜構想から実装・運用まで | Wing</title>
-<meta name="description" content="経営・業務とテクノロジーの双方に精通したエンジニアが現場に入り、AI活用の構想から開発・運用定着までを一貫して担います。貿易DX・AIエージェント導入が専門領域。初回相談は無料です。">
+<meta name="description" content="大手コンサルティングファームなどで経験を積んだFDEが経営層と現場に入り、AI活用の構想から開発、現場への定着までを受け持ちます。専門は貿易DXとAIエージェントの導入です。初回のご相談は無料です。">
 <meta name="keywords" content="AIコンサルティング, DXコンサルティング, FDE, Forward Deployed Engineer, 伴走型支援, PoC 本番展開, 内製化支援, 貿易DX, グローバルDX, AI導入">
 <meta property="og:title" content="Wing｜貴社のビジネスに、変革の翼を。">
 <meta property="og:description" content="AIネイティブな実装力 × ビジネス現場の解像度。構想から実装・運用まで一貫して担うAI・DXコンサルティング。">
@@ -90,7 +90,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "戦略構想・アドバイザリー",
-          "description": "経営・IT・業務の三つの面から現状を見て、実行できる計画に落とします。",
+          "description": "業務とITの現状を調べ、利益への影響をもとにAI活用の計画を立てます。",
           "provider": {
             "@id": "https://wingconsulting.org/#organization"
           }
@@ -101,7 +101,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "実装・PMO",
-          "description": "要件の整理から現場に根づくまで関わり、成果が出るまで続けます。",
+          "description": "試作を開発し、効果を確かめたものを本番の業務で使える形に仕上げます。",
           "provider": {
             "@id": "https://wingconsulting.org/#organization"
           }
@@ -112,7 +112,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "内製化・人材育成",
-          "description": "知っているだけで終わらせず、現場で使えるようにします。支援が終わったあとも自分たちで回せることが目標です。",
+          "description": "ソースコードと設計資料をお渡しします。あわせて研修と推進体制の立ち上げをお手伝いし、支援の終了後も社内で運用を続けられる状態を目標にします。",
           "provider": {
             "@id": "https://wingconsulting.org/#organization"
           }
@@ -143,10 +143,18 @@
   "mainEntity": [
     {
       "@type": "Question",
+      "name": "セキュリティや情報管理の要件に対応できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "秘密保持契約を結んだうえで、データは国内リージョンで管理し、アクセス権限とバックアップの体制を整えて運用します。貴社の情報セキュリティ規程と調達要件に沿って進め、詳しくは契約前に書面でご説明します。貴社のデータを外部のAI学習に使うことはありません。"
+      }
+    },
+    {
+      "@type": "Question",
       "name": "大手コンサルティングファームとの違いは何ですか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "最大の違いは、提案した人間が実装まで担う点です。大手では提案フェーズのシニアが実行フェーズで交代することが少なくありません。Wingでは、診断で課題を理解した本人が、開発・定着まで通しで担当します。"
+        "text": "対象業務の選定を行ったFDEが、そのまま試作と本番の業務への展開も担当します。弊社オリジナルのテンプレートを使うため、初回の打ち合わせから貴社の業務に当てはめて話を進めます。少人数で推進するため、費用は大手ファームと比べて最大で半分以下に抑えることも可能です。"
       }
     },
     {
@@ -154,15 +162,7 @@
       "name": "少人数体制で、当社の規模に対応できますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "構想・意思決定支援と実装の初期段階は、経験を積んだシニアメンバーが直接担当します。全社展開で体制が必要な局面や、高度な機械学習・大規模データ基盤など専門性の高い実装課題については、AIスタートアップをはじめとする技術パートナーと連携して対応します。窓口はFDE一人にまとまるので、貴社が複数の会社と調整する必要はありません。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "セキュリティや情報管理の要件に対応できますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "秘密保持契約を締結のうえ、データは国内リージョンで管理し、アクセス権限・バックアップ体制を整えて運用します。貴社の情報セキュリティ規程・調達要件に沿った対応を前提とし、詳細は契約前に書面でご説明します。貴社のデータを外部のAI学習に使うことはありません。"
+        "text": "対象業務の選定と試作は、FDEが直接担当します。全社への展開で人数が必要な場合や、高度な機械学習・大規模なデータ基盤など専門の技術が要る部分は、AIスタートアップなどの技術パートナーと組んで対応します。その場合も窓口はFDEが務めるので、貴社が複数の会社と調整する必要はありません。"
       }
     },
     {
@@ -170,15 +170,15 @@
       "name": "途中でやめることはできますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "できます。契約は段階ごとに区切っており、診断だけ、試作までで終える形も最初から想定しています。実物を見て「この投資はしない」と判断していただくのも、正しい結論の一つだと考えています。"
+        "text": "できます。契約は段階ごとに区切っているので、対象業務の選定や試作を終えた段階でやめていただけます。実物を見たうえで、その先に投資しないと決めていただいて構いません。"
       }
     },
     {
       "@type": "Question",
-      "name": "既存のベンダーやSIerとの取引があるのですが。",
+      "name": "既存のベンダーやSIerと併用できますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "併用いただけます。既存の基幹システムはそのまま活かし、その周辺を変えるのが当社の領域です。ベンダー提案の妥当性評価や条件交渉を、発注側の立場でお手伝いすることも可能です。"
+        "text": "併用いただけます。既存の基幹システムはそのまま活かし、その周辺の業務にAIを組み込みます。ベンダー提案の妥当性評価や条件交渉を、発注側の立場でお手伝いします。"
       }
     },
     {
@@ -186,7 +186,7 @@
       "name": "最終的に社内で運用できるようになりますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "それを目標にしています。ソースコード・設計資料は成果物としてお渡しし、運用体制の立ち上げと人材育成まで支援します。当社への依存が続く状態は、成功とは考えていません。"
+        "text": "それを目標に進めます。ソースコードと設計資料は成果物としてお渡しし、運用体制の立ち上げと人材育成まで支援します。"
       }
     }
   ]
@@ -227,8 +227,8 @@ a,button,summary{touch-action:manipulation;-webkit-tap-highlight-color:transpare
 .wrap{max-width:1160px;margin:0 auto;padding:0 40px}
 @media(max-width:720px){.wrap{padding:0 22px}}
 .kicker{margin:0 0 10px 0;font-family:var(--en);font-weight:500;font-size:11px;letter-spacing:.2em;color:var(--gold-deep)}
-h2.sec{font-family:var(--disp);font-weight:500;font-size:clamp(22px,2.1vw,29px);line-height:1.55;margin:0;color:var(--ink);letter-spacing:.01em;text-wrap:balance}
-.sec-head{display:grid;grid-template-columns:minmax(0,520px) 1fr;gap:48px;align-items:start;margin-bottom:30px}
+h2.sec{font-family:'Yu Gothic','YuGothic','游ゴシック','Noto Sans JP',sans-serif;font-weight:700;font-size:clamp(22px,2.1vw,29px);line-height:1.55;margin:0;color:var(--ink);letter-spacing:.01em;text-wrap:balance}
+.sec-head{display:grid;grid-template-columns:minmax(0,360px) 1fr;gap:48px;align-items:start;margin-bottom:30px}
 .sec-head>*{min-width:0}
 .sec-head:not(:has(.sec-lead)){grid-template-columns:1fr;gap:0;margin-bottom:30px}
 @media(max-width:860px){.sec-head{grid-template-columns:1fr;gap:18px}}
@@ -464,14 +464,6 @@ section .wrap{padding:0}
 .ins .cat{font-family:var(--en);font-weight:500;font-size:11px;letter-spacing:.22em;color:var(--gold-deep);margin:0 0 12px}
 .ins h3{margin:0 0 8px;font-size:13px;font-weight:700;color:var(--ink);line-height:1.75}
 .ins p{margin:0;font-size:12px;color:var(--faint);line-height:1.9}
-/* company */
-table.co{width:100%;max-width:760px;border-collapse:collapse;border:1px solid var(--line);font-size:13px;background:#fff}
-table.co th,table.co td{padding:14px 22px;border-bottom:1px solid var(--line);text-align:left}
-table.co th{width:150px;color:var(--faint);font-size:12px;font-weight:700;letter-spacing:.06em;background:#FBFAF7}
-table.co td{color:var(--sub2)}
-.co-wrap{display:grid;grid-template-columns:minmax(0,760px) auto;gap:24px 40px;align-items:start}
-@media(max-width:860px){.co-wrap{grid-template-columns:1fr}}
-.co-badge img{display:block;width:150px;height:150px}
 /* contact */
 .ct{display:grid;grid-template-columns:1fr 1.15fr;gap:52px;align-items:start}
 @media(max-width:860px){.ct{grid-template-columns:1fr;gap:32px}}
@@ -531,7 +523,7 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
 .fde-fig{position:relative;background:#fff;padding:24px 26px 26px}
 .fde-fig::before{content:'';position:absolute;top:0;left:0;width:34px;height:2px;background:var(--gold)}
 .fde-h{margin:0 0 16px;font-size:14px;font-weight:700;color:var(--ink);letter-spacing:.02em;line-height:1.6}
-.fde-out{background:#FBFAF7;padding:24px 26px 26px;display:flex;flex-direction:column;justify-content:center}
+.fde-out{background:#FBFAF7;padding:24px 26px 26px;display:flex;flex-direction:column;justify-content:flex-start}
 .fde-why{margin:0 0 16px;font-size:13px;color:var(--gold-deep);line-height:1.9}
 .fde-sp{padding:16px 0;border-top:1px dashed var(--line2)}
 .fde-sp .sp-t{margin:0 0 10px;font-size:13px;font-weight:700;color:var(--ink);line-height:1.7}
@@ -539,9 +531,6 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
 .fde-sp .sp-v b{font-family:var(--en);font-size:30px;font-weight:600;color:var(--gold-deep);line-height:1;letter-spacing:.02em}
 .fde-sp .sp-v span{font-size:12px;color:var(--sub2)}
 .fde-sp .sp-d{margin:0;font-size:12px;color:var(--sub2);line-height:1.85}
-.fde-r{padding-top:16px;border-top:1px dashed var(--line2);font-size:13px;color:var(--sub2)}
-.fde-r b{color:var(--gold-deep);font-size:15px;margin:0 2px}
-.fde-r span{display:block;font-size:12px;color:var(--sub2);margin-top:5px;line-height:1.8}
 /* 担当者の認定。Anthropic が出しているのは「Claude Certified Architect – Professional」という資格で、
    FDE という肩書きを認定しているわけではないので、資格名を必ず併記する。
    画像は Credly から取った自社控え（images/credly-claude-architect.png）。
@@ -690,23 +679,25 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
         <nav class="navlinks" aria-label="サイト内" style="display:flex; gap:28px; align-items:center;">
           <a href="#fde" style="font-size:13px; color:#5C6470; white-space:nowrap;">FDEとは</a>
           <a href="#strength" style="font-size:13px; color:#5C6470; white-space:nowrap;">強み</a>
-          <a href="#consulting" style="font-size:13px; color:#5C6470; white-space:nowrap;">提供サービス</a>
           <a href="#expertise" style="font-size:13px; color:#5C6470; white-space:nowrap;">対応領域</a>
-          <a href="/products" style="font-size:13px; color:#5C6470; white-space:nowrap;">AIプロダクト</a>
+          <a href="#consulting" style="font-size:13px; color:#5C6470; white-space:nowrap;">提供サービス</a>
+          <a href="#products" style="font-size:13px; color:#5C6470; white-space:nowrap;">AIプロダクト</a>
+          <a href="#model" style="font-size:13px; color:#5C6470; white-space:nowrap;">進め方</a>
           <a href="#insights" style="font-size:13px; color:#5C6470; white-space:nowrap;">インサイト</a>
-          <a href="/dx-assessment" style="font-size:13px; color:#8A6E33; white-space:nowrap;">無料診断</a>
-          <a href="#contact" class="btn-dark" style="padding:11px 22px; font-size:13px;">相談する</a>
+          <a href="/dx-assessment" style="font-size:13px; color:#8A6E33; white-space:nowrap;">無料DX診断</a>
+          <a href="#contact" class="btn-dark" style="padding:11px 22px; font-size:13px;">無料相談</a>
         </nav>
         <details class="mnav">
           <summary aria-label="メニュー"><span></span></summary>
           <nav class="mnav-p" aria-label="サイト内（スマートフォン）">
             <a href="#fde">FDEとは</a>
             <a href="#strength">強み</a>
-            <a href="#consulting">提供サービス</a>
             <a href="#expertise">対応領域</a>
-            <a href="/products">AIプロダクト</a>
+            <a href="#consulting">提供サービス</a>
+            <a href="#products">AIプロダクト</a>
+            <a href="#model">進め方</a>
             <a href="#insights">インサイト</a>
-            <a href="/dx-assessment" class="gold">無料診断</a>
+            <a href="/dx-assessment" class="gold">無料DX診断</a>
           </nav>
         </details>
       </div>
@@ -722,18 +713,19 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
     <div class="wrap hero-grid hero-pad" style="padding-top:26px; padding-bottom:40px;">
       <div>
         <p class="kicker" style="letter-spacing:.22em;">AI / FDE CONSULTING &amp; EXECUTION</p>
-        <h1 class="hero-h1" style="font-family:'Yu Gothic Medium','YuGothic','游ゴシック Medium','Yu Gothic','Noto Sans JP',sans-serif; font-weight:500; font-size:clamp(22px,3.6vw,50px); line-height:1.42; letter-spacing:.01em; margin:0 0 16px 0;"><span style="display:inline-block;">AIネイティブな実装力<span style="font-family:'Outfit',sans-serif; font-weight:400; color:#A98A4B; margin-left:.2em; font-size:.8em;">×</span></span><br><span style="display:inline-block;">ビジネス現場の解像度</span></h1>
-        <p class="hero-tag" style="margin:0 0 26px 0; font-weight:700; font-size:clamp(16px,2vw,20px); line-height:1.75; letter-spacing:.05em; color:#8A6E33;">新たな時代の貴社の成長に、変革の翼を。</p>
-        <!-- 2つの文は行数を決めて見せる（1つ目は太字の1文を1行に、2つ目は「が」で折って2行）。
+        <!-- 見出しは太字。「Yu Gothic Medium」は中太しか持たない名前で、太字を頼むと Windows では文字を重ね塗りした太字になるので、先頭には置かない -->
+        <h1 class="hero-h1" style="font-family:'Yu Gothic','YuGothic','游ゴシック','Noto Sans JP',sans-serif; font-weight:700; font-size:clamp(22px,3.6vw,50px); line-height:1.42; letter-spacing:.01em; margin:0 0 16px 0;"><span style="display:inline-block;">AIネイティブな実装力<span style="font-family:'Outfit',sans-serif; font-weight:500; color:#A98A4B; margin-left:.2em; font-size:.8em;">×</span></span><br><span style="display:inline-block;">ビジネス現場の解像度</span></h1>
+        <p class="hero-tag" style="margin:0 0 26px 0; font-weight:700; font-size:clamp(16px,2vw,20px); line-height:1.75; letter-spacing:.05em; color:#8A6E33;"><span class="nb">新たな時代の貴社の成長に、</span><span class="nb">変革の翼を。</span></p>
+        <!-- 2つの文は行数を決めて見せる（どちらも PC では1文を1行ずつ置いて2行）。
              Safari は text-wrap:pretty が付くと短い語尾を次行に送るので、ここには付けない -->
         <div class="hero-pts" style="display:flex; flex-direction:column; gap:14px; margin-bottom:30px;">
           <div style="display:flex; gap:14px; align-items:flex-start;">
             <div style="flex:none; width:6px; height:6px; background:#A98A4B; margin-top:11px;"></div>
-            <p style="margin:0; font-size:14px; line-height:1.95; color:#4A515C;">AI時代の成功は、実装力だけでは実現できません。<br class="pc"><span style="color:#14181F; font-weight:500;">経営と現場が一体となり、貴社にとって最適な形でAIを取り込めるかどうか</span>です。</p>
+            <p style="margin:0; font-size:14px; line-height:1.95; color:#4A515C;">AIが利益に結びつくかは、どの業務に何のために使うかで変わります。<br class="pc">Wingは経営と現場に入って<span style="color:#14181F; font-weight:500;">利益を伸ばす業務を選び、その業務に合う形でAIを組み込みます</span>。</p>
           </div>
           <div style="display:flex; gap:14px; align-items:flex-start;">
             <div style="flex:none; width:6px; height:6px; background:#A98A4B; margin-top:11px;"></div>
-            <p style="margin:0; font-size:14px; line-height:1.95; color:#4A515C;">Wingは、<span style="color:#14181F; font-weight:500;">ビジネス・オペレーションの理解とAIネイティブな実装力を併せ持つFDE／コンサルタント</span>が<br class="pc">AIを駆使したビジネスモデル・オペレーションの構想デザインから実装、定着までを一気通貫で伴走します。<a href="#fde" style="color:#14181F; border-bottom:1px solid #A98A4B;">（FDE : Forward Deployed Engineer）</a></p>
+            <p style="margin:0; font-size:14px; line-height:1.95; color:#4A515C;"><span style="color:#14181F; font-weight:500;">大手コンサルティングファームなどで経験を積んだFDE</span><a href="#fde" style="color:#14181F; border-bottom:1px solid #A98A4B; white-space:nowrap;">（Forward Deployed Engineer）</a>がプロジェクトを率います。<br class="pc">弊社オリジナルのテンプレートで迅速に進め、費用は大手と比べ最大で半分以下に<span class="nb">抑えることも可能です。</span></p>
           </div>
         </div>
         <div style="display:flex; gap:12px; align-items:center; margin-bottom:8px; flex-wrap:wrap;">
@@ -744,14 +736,14 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
     </div>
   </section>
 
-  <!-- ═══════ 01 AI DIVIDE ═══════ -->
+  <!-- ═══════ AI活用と利益への効果 ═══════ -->
   <section id="data">
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <h2 class="sec"><span style="display:inline-block;">AIの格差は始まっています。</span><br><span style="display:inline-block;">導入するだけでは、</span><br><span style="display:inline-block;">企業価値は高まりません。</span></h2>
+          <h2 class="sec">AI活用と利益への効果</h2>
         </div>
-        <p class="sec-lead">88%の企業がAIを日常的に使い、利益への効果を実感できているのは39%です。<b style="color:#14181F;">この差は、使った量ではなく、どの業務に当てたかで生まれています。</b>部門ごとに使い道を探すと、成果は個々の作業時間の短縮で止まり、損益計算書には現れません。決めるべき順序は、収益構造のどこにAIを置くかが先で、道具の選定は後です。</p>
+        <p class="sec-lead"><b style="color:#14181F;">少なくとも1つの業務でAIを日常的に使う企業は88%に達しましたが、利益への効果が出ていると答えた企業は39%にとどまります。</b>この差は、AIをどの業務に何のために使うかで開くと、Wingは整理しています。部門ごとに作業を効率化しても、その業務が利益を左右していなければ、効果は損益に表れにくくなります。そのため、利益を伸ばす業務を先に決めてから、使うツールを選びます。</p>
       </div>
 
       <div class="g4">
@@ -762,7 +754,7 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
             <div style="height:8px; width:100%; background:#F1EEE7;"><div data-grow style="height:100%; width:88%; background:#2A3241;"></div></div>
             <div style="height:8px; width:100%; background:#F1EEE7;"><div data-grow style="height:100%; width:39%; background:#B8A882;"></div></div>
           </div>
-          <p style="margin:auto 0 0 0; font-size:12px; line-height:1.95; color:#5C6470;">88%の企業がAIを常用する一方、利益（EBIT）への効果を実感できているのは39%のみ。</p>
+          <p style="margin:auto 0 0 0; font-size:12px; line-height:1.95; color:#5C6470;">少なくとも1つの業務でAIを日常的に使う企業は88%。利益（EBIT）への効果が出ていると答えた企業は39%。</p>
         </div>
         <div style="padding:26px 36px 24px 0; border-right:1px solid #E8E5DE; display:flex; flex-direction:column;">
           <p class="tag-en">CONCENTRATION</p>
@@ -770,16 +762,16 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
           <div style="height:8px; width:100%; background:#F1EEE7; margin-bottom:14px;">
             <div data-grow style="height:100%; width:74%; background:#B8A882;"></div>
           </div>
-          <p style="margin:auto 0 0 0; font-size:12px; line-height:1.95; color:#5C6470;">AIが生む価値の74%を、上位20%の企業が独占している。</p>
+          <p style="margin:auto 0 0 0; font-size:12px; line-height:1.95; color:#5C6470;">AIがもたらした経済的な成果の74%を、上位20%の企業が得ている。</p>
         </div>
         <div style="padding:26px 36px 24px 0; border-right:1px solid #E8E5DE; display:flex; flex-direction:column;">
           <p class="tag-en">WIDENING GAP</p>
-          <p style="margin:0 0 12px 0; font-family:'Outfit',sans-serif; font-weight:500; font-size:38px; line-height:.9; color:#14181F; white-space:nowrap;">×3</p>
+          <p style="margin:0 0 12px 0; font-family:'Outfit',sans-serif; font-weight:500; font-size:38px; line-height:.9; color:#14181F; white-space:nowrap;">×7.2</p>
           <div style="display:flex; flex-direction:column; gap:4px; margin-bottom:14px;">
-            <div style="height:8px; width:100%; background:#F1EEE7;"><div data-grow style="height:100%; width:33%; background:#D6D0C2;"></div></div>
+            <div style="height:8px; width:100%; background:#F1EEE7;"><div data-grow style="height:100%; width:14%; background:#D6D0C2;"></div></div>
             <div style="height:8px; width:100%; background:#F1EEE7;"><div data-grow style="height:100%; width:100%; background:#B8A882;"></div></div>
           </div>
-          <p style="margin:auto 0 0 0; font-size:12px; line-height:1.95; color:#5C6470;">生成AI普及後の3年で、先行企業と後発企業の差は3倍に拡大した。</p>
+          <p style="margin:auto 0 0 0; font-size:12px; line-height:1.95; color:#5C6470;">AI活用で先行する企業がAIから得ている成果は、それ以外の企業の7.2倍。</p>
         </div>
         <div style="padding:26px 0 24px 0; display:flex; flex-direction:column;">
           <p class="tag-en">PRODUCTIVITY</p>
@@ -787,33 +779,33 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
           <div style="height:8px; width:100%; background:#F1EEE7; margin-bottom:14px;">
             <div data-grow style="height:100%; width:100%; background:#2A3241;"></div>
           </div>
-          <p style="margin:auto 0 0 0; font-size:12px; line-height:1.95; color:#5C6470;">上位2割「スーパースター企業」の平均生産性成長。最上位グループは最下位グループより40%高い。</p>
+          <p style="margin:auto 0 0 0; font-size:12px; line-height:1.95; color:#5C6470;">AIの影響を最も受ける業種で、生産性が上位20%の企業の労働生産性の伸び（2018年比）。同じ業種の企業全体では34%。</p>
         </div>
       </div>
 
       <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:40px; margin-top:20px; flex-wrap:wrap;">
-        <p style="margin:4px 0 0 0; font-size:11px; line-height:1.9; color:#6B7280; max-width:520px;">出典：<a href="https://www.pwc.com/gx/en/issues/artificial-intelligence/ai-jobs-barometer.html" style="color:#8A6E33; text-decoration:underline; text-decoration-color:#D6D0C2;">PwC「2026 Global AI Jobs Barometer」</a>（6大陸・10億件超の求人データ分析）／ McKinsey「The State of AI 2025」</p>
+        <p style="margin:4px 0 0 0; font-size:11px; line-height:1.9; color:#6B7280; max-width:none;">出典：<br>88%・39%は <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" style="color:#8A6E33; text-decoration:underline; text-decoration-color:#D6D0C2;">McKinsey「The State of AI in 2025」</a>（2025年11月、1,993人に調査）<br>74%・7.2倍は <a href="https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-performance-study.html" style="color:#8A6E33; text-decoration:underline; text-decoration-color:#D6D0C2;">PwC「2026 AI Performance Study」</a>（2026年4月、経営者1,217人に調査）<br>163%は <a href="https://www.pwc.com/gx/en/issues/artificial-intelligence/ai-jobs-barometer.html" style="color:#8A6E33; text-decoration:underline; text-decoration-color:#D6D0C2;">PwC「2026 Global AI Jobs Barometer」</a>（2026年6月、10億件超の求人広告を分析）</p>
       </div>
     </div>
   </section>
 
-  <!-- ═══════ 02 FDE ═══════ -->
+  <!-- ═══════ FDEとは ═══════ -->
   <section id="fde" class="hairline-t rail">
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <h2 class="sec"><span style="display:inline-block;">現場に入り込み、</span><br><span style="display:inline-block;">経営課題の改善に取り組み、</span><span style="display:inline-block;">企業価値を高める。</span></h2>
+          <h2 class="sec">FDEとは</h2>
         </div>
-        <p class="sec-lead">FDE（Forward Deployed Engineer）は、経営層と現場の双方に入り、課題の特定から、仕組みをつくり現場に定着させるまでを担うコンサルタント兼AIエンジニアです。<b style="color:#14181F;">AIやITはその手段にすぎず、目指すKPIはROIC（投下資本利益率）の改善と企業価値の向上です。</b></p>
+        <p class="sec-lead"><b style="color:#14181F;">Wingでは、対象業務の選定から試作、本番の業務への展開、現場への定着までを、同じFDEが受け持ちます。</b>FDEはForward Deployed Engineerの略で、貴社の中に入って働くコンサルタント兼AIエンジニアです。目標は、ROIC（投下資本利益率）と企業価値を高めることに置きます。</p>
       </div>
 
       <div class="fde-box">
         <div class="fde-fig">
-          <p class="fde-h">内側に入って、推進役を務める</p>
+          <p class="fde-h">貴社の推進チームに加わる</p>
           <div class="cbox">
-            <p class="cbox-t">クライアント企業様<small>推進チームの一員として内部に入る</small></p>
+            <p class="cbox-t">貴社<small>経営層と現場部門の両方に入る</small></p>
             <div class="bridge">
-              <div class="side mgmt"><b>経営層</b><span>経営課題（KPI・収益）</span></div>
+              <div class="side mgmt"><b>経営層</b><span>経営課題（KPI・利益）</span></div>
               <div class="mid">
                 <span class="ar">↕</span>
                 <div class="fde-n"><b>FDE</b><em>Wing</em></div>
@@ -821,157 +813,70 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
               </div>
               <div class="side ops"><b>現場部門</b><span>現場課題（業務実態）</span></div>
             </div>
-            <p class="bridge-cap">経営と現場の間に入り、利益に効いて、かつ現場で回る仕組みを作る</p>
+            <p class="bridge-cap">経営の目標と現場の業務の両方を満たす仕組みを作る</p>
             <div class="fde-role">
-              <span><b>経営課題を特定</b>ROIC・収益への影響で優先順位を決める</span>
-              <span><b>現場実態で設計</b>業務・人・データ</span>
-              <span><b>早く成果を出す</b>AIで作り、効果が出るまでを短く</span>
-              <span><b>現場に根づかせる</b>合意づくり・業務の切り替え・教育</span>
+              <span><b>対象業務を選ぶ</b>利益への影響が大きい業務を優先する</span>
+              <span><b>現場に合わせて作る</b>業務の流れとデータを見て決める</span>
+              <span><b>試作で確かめる</b>本番に広げる前に、特定の業務で効果を見る</span>
+              <span><b>現場に根づかせる</b>関係者の合意をとり、業務の切り替えと教育を進める</span>
             </div>
           </div>
           <div class="backline">
             <span class="bl-ar" aria-hidden="true">↑</span>
             <div class="bl-box">
               <p class="bl-t">技術パートナー（AIスタートアップ等）</p>
-              <p class="bl-d">高度な機械学習、大規模データ基盤、専門技術を要する実装課題はパートナー各社と連携。FDEが窓口となり、貴社は複数社との調整を負いません。</p>
+              <p class="bl-d">高度な機械学習や大規模なデータ基盤など、専門の技術が要る部分はパートナー各社と組み、窓口はFDEが務めます。</p>
             </div>
           </div>
         </div>
         <div class="fde-out">
-          <p class="fde-why">経営・現場・ITを一人が通して見るから、作ったものが現場で使われるところまで行き着く</p>
+          <p class="fde-why">経営と現場の話を聞いたFDEが自ら作るので、経営の狙いと現場の使い勝手が食い違いにくい</p>
           <div class="fde-cred">
             <img src="/images/credly-claude-architect.png" alt="Claude Certified Architect – Professional のバッジ" width="84" height="84">
             <div>
-              <p class="fde-cred-t">Anthropic 認定資格を持つ FDE が在籍しています</p>
-              <p class="fde-cred-d">Claude Certified Architect – Professional <span style="white-space:nowrap;">（Anthropic 社）</span></p>
+              <p class="fde-cred-t"><span class="nb">Anthropic社などのAI導入の</span><span class="nb">認定資格を持つFDEが在籍しています</span></p>
+              <p class="fde-cred-d">Claude Certified Architect – Professional</p>
             </div>
           </div>
           <div class="fde-sp">
-            <p class="sp-t">導入の各段階を、同じFDEが最後まで進める</p>
-            <p class="sp-v"><b>数週間</b><span>初期版を実装</span></p>
-            <p class="sp-d">経営とAIの両方が分かる担当者が、その場で作って直す。専門性の高い部分は技術パートナーと組む</p>
+            <p class="sp-t">特定業務の試作にかかる期間</p>
+            <p class="sp-v"><b>2〜3週間</b><span>目安</span></p>
+            <p class="sp-d">貴社の業務に合わせて作り、使っていただきながら直す</p>
           </div>
-          <div class="fde-r">結果：<b>ROICの改善と企業価値の向上</b><span>投じたお金に対する利益が上がり、他社が真似しにくい仕組みが残る</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══════ 差別化の4要素 ═══════ -->
+  <!-- ═══════ Why Wing? ═══════ -->
   <section id="strength" class="hairline-t rail">
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <h2 class="sec" style="font-family:'Outfit',sans-serif; font-weight:500; letter-spacing:.005em;">Why Wing?</h2>
+          <h2 class="sec" style="font-family:'Outfit',sans-serif; font-weight:600; letter-spacing:.005em;">Why Wing?</h2>
         </div>
+        <p class="sec-lead"><b style="color:#14181F;">FDEは業務の流れとシステムについて弊社オリジナルのテンプレートを使い、初回の打ち合わせから貴社の業務に当てはめて話を進めます。</b>このテンプレートを用いて、少人数で推進するため、費用は大手ファームと比べて最大で半分以下に抑えることも可能です。少人数でも、大手ファームなどで経験を積んだFDEがプロジェクトを率い、進め方と成果物の質を確かめます。メンバーはこれまで、日本と米国で30社を超える企業のDXを支援してきました。</p>
       </div>
 
-      <p class="str-gl">FDE一人が併せ持つ、三つの力</p>
+      <p class="str-gl">FDEは、次の3つを兼ねています</p>
       <div class="str-grid">
         <div class="str">
-          <h3>幅広い業種のビジネスプロセスの理解</h3>
-          <p class="str-d">大手日系・外資コンサルティングファームで10年以上、調達・貿易・経理・IT組織の実務に携わったメンバーが在籍。現場の帳票と例外処理まで理解しているため、初回から具体的な論点に入れます。</p>
+          <h3>業務の知識</h3>
+          <p class="str-d">大手日系・外資コンサルティングファームで10年以上、調達・貿易・経理・IT組織の実務に携わり、チームリーダーやアカウントマネジメントを務めてきたメンバーが在籍しています。現場の帳票や例外の処理まで知っているので、業務のご説明にかかる時間は短く済みます。</p>
           <a class="str-l" href="#expertise">対応領域を見る</a>
         </div>
         <div class="str">
           <h3>コンサルティング力</h3>
-          <p class="str-d">経営課題を解決するためのドライバーと、投資対効果に基づく優先順位を見極め、経営にインパクトをもたらす施策を立案・計画します。</p>
+          <p class="str-d">利益を左右している業務を突き止め、かける費用に対して効果の大きいものから計画を立てます。</p>
           <a class="str-l" href="#consulting">提供サービスを見る</a>
         </div>
         <div class="str">
           <h3>AI実装力</h3>
-          <p class="str-d">要件の整理から開発、運用の設計までを同じ担当者が手がけます。<a href="/products">自社プロダクト</a>と標準業務プロセスの型があるので、ゼロから作らずに数週間で動くものをお見せし、触ってもらいながら直します。高度な専門性が要る部分は、AIスタートアップなどの技術パートナーと組んで解決します。</p>
-          <a class="str-l" href="#fde">進め方を見る</a>
+          <p class="str-d">要件の整理も開発も、FDEが手がけます。提供中の<a href="/products">自社プロダクト</a>がある業務では、それを土台にして試作に入ります。</p>
+          <a class="str-l" href="#products">AIプロダクトを見る</a>
         </div>
       </div>
 
-    </div>
-  </section>
-
-  <!-- ═══════ 03 ご支援の流れ ═══════ -->
-  <section id="model" class="hairline-t rail">
-    <div class="wrap">
-      <div class="sec-head">
-        <div>
-          <h2 class="sec"><span class="nb">小さく試して、</span><span class="nb">効いたところから広げる。</span></h2>
-        </div>
-        <p class="sec-lead">契約は段階ごとに区切ります。診断だけで終えることも、試作を見てから続けるかを決めることもできます。実物を見る前に、大きな投資判断を迫ることはしません。始め方は2通りあり、<b style="color:#14181F;">状況に合うほうをご提案します。</b></p>
-      </div>
-      <div class="g2 entry" style="margin-bottom:36px;">
-        <div class="opt">
-          <p class="tag-en" style="margin-bottom:0;">ENTRY A</p>
-          <h3>全体設計から始める</h3>
-          <p>まず社内の業務とITの現状を棚卸しして、AIをどこに、どの順で入れるかを決めます。「どこから手をつけるか」を固めてから、最初の領域の試作に進みます。</p>
-          <p class="opt-fit">こんな場合に ── AI活用の方向性がまだ固まっていない ／ 部門ごとにバラバラにAIツールが動いている ／ 投資の優先順位を整理したい</p>
-        </div>
-        <div class="opt">
-          <p class="tag-en" style="margin-bottom:0;">ENTRY B</p>
-          <h3>特定領域の開発から始める</h3>
-          <p>「この業務を自動化したい」など開発したいテーマが既に明確な場合は、全体診断を省き、対象領域の試作開発から直接着手します。</p>
-          <p class="opt-fit">こんな場合に ── 開発要望・対象業務が決まっている ／ PoCや要件のたたき台が既にある ／ まず一つ動かして社内の理解を得たい</p>
-        </div>
-      </div>
-      <p style="margin:0 0 14px; font-size:13px; color:#6B7280;">どちらの入口でも、「試作で確かめてから本格展開する」という流れは共通です。</p>
-<div style="margin-top:46px;">
-        <p class="tag-en" style="margin-bottom:6px;">COMPARISON</p>
-        <h3 style="margin:0 0 22px; font-weight:700; font-size:17px; color:#14181F;">従来型のご支援との違い</h3>
-        <div style="overflow-x:auto;">
-        <div class="vs">
-          <div class="vs-r vs-hr">
-            <div></div>
-            <div class="vs-h">従来型のコンサル・SI</div>
-            <div class="vs-h wing"><span class="vs-tag">FDE MODEL</span>Wing（FDE型）</div>
-          </div>
-          <div class="vs-r">
-            <div class="vs-label">最初の成果物</div>
-            <div class="vs-trad">報告書・要件定義書（数ヶ月後）</div>
-            <div class="vs-wing">貴社の業務プロセスと固有要件を<em>作り込んだプロトタイプ</em><span style="display:block;font-size:11px;color:var(--gold-soft);margin-top:3px;font-weight:400;">特定業務：2〜3週間</span></div>
-          </div>
-          <div class="vs-r">
-            <div class="vs-label">体制</div>
-            <div class="vs-trad">実装エリアごとに分業。要件が人を跨ぐたび伝達コストと解釈のズレが積み上がる</div>
-            <div class="vs-wing">業務と技術（AI・仕組み・データ）の両方が分かる<em>同じ担当者</em>が通しで担当</div>
-          </div>
-          <div class="vs-r">
-            <div class="vs-label">要件の固め方</div>
-            <div class="vs-trad">文書の往復とレビュー会議</div>
-            <div class="vs-wing">実物を触りながら<em>現場と直接調整</em></div>
-          </div>
-          <div class="vs-r">
-            <div class="vs-label">投資判断</div>
-            <div class="vs-trad">着手前に全体規模のコミット</div>
-            <div class="vs-wing">段階契約で分割。<em>実物を見てから判断</em></div>
-          </div>
-          <div class="vs-r">
-            <div class="vs-label">運用の作り込み</div>
-            <div class="vs-trad">開発範囲の納品で完了。権限設計・例外処理・運用ルールは発注側の宿題として残る</div>
-            <div class="vs-wing">アプリを作るだけで終わりません。権限・承認フロー・例外処理・データ保全・監視まで設計し、<em>現場で実際に回る状態</em>にします</div>
-          </div>
-          <div class="vs-r">
-            <div class="vs-label">知見の残り方</div>
-            <div class="vs-trad">仕様も判断根拠もベンダー側に蓄積</div>
-            <div class="vs-wing">ソースコード・設計資料ごと<em>貴社に残す</em></div>
-          </div>
-        </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════ 04 サービス ═══════ -->
-  <section id="consulting" class="hairline-t rail">
-    <div class="wrap">
-      <div class="sec-head">
-        <div>
-          <h2 class="sec"><span class="nb">全部まとめても、</span><span class="nb">一部分だけでも。</span></h2>
-        </div>
-        <p class="sec-lead">構想から実装・内製化までをまとめて担うこともできますし、「PMOだけ」「ベンダー選定だけ」「研修だけ」といった特定機能の強化だけでもお引き受けします。<b style="color:#14181F;">貴社に足りている部分は、無理に置き換えません。</b></p>
-      </div>
-      <div class="g3 pillars">
-        <div class="pillar"><p class="tag-en" style="margin-bottom:0;">SERVICE 01</p><h3>戦略構想・アドバイザリー</h3><p>経営・IT・業務の三つの面から現状を見て、実行できる計画に落とします。</p><ul><li>DX現状診断・課題定義</li><li>AI活用ロードマップ策定</li><li>CxO・経営層アドバイザリー</li><li>ITデューデリジェンス・PMI支援</li></ul></div>
-        <div class="pillar"><p class="tag-en" style="margin-bottom:0;">SERVICE 02</p><h3>実装・PMO</h3><p>要件の整理から現場に根づくまで関わり、成果が出るまで続けます。</p><ul><li>PMO・プロジェクト推進</li><li>システム実装・開発管理</li><li>運用設計（権限・承認フロー・監視）</li><li>チェンジマネジメント・現場定着支援</li><li>ベンダー選定・要件定義支援</li><li>グローバル・ASEAN展開支援</li></ul></div>
-        <div class="pillar"><p class="tag-en" style="margin-bottom:0;">SERVICE 03</p><h3>内製化・人材育成</h3><p>知っているだけで終わらせず、現場で使えるようにします。支援が終わったあとも自分たちで回せることが目標です。</p><ul><li>DX・生成AI活用研修</li><li>データ分析・可視化基盤の構築</li><li>プロジェクトマネジメント研修</li><li>推進体制の設計・立ち上げ</li></ul></div>
-      </div>
     </div>
   </section>
 
@@ -980,9 +885,9 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <h2 class="sec"><span class="nb">これまで関わってきた</span><span class="nb">業界と業務。</span></h2>
+          <h2 class="sec">対応領域</h2>
         </div>
-        <p class="sec-lead">AIを業務に組み込むには、その業務を知っていることが前提です。大手日系・外資コンサルティングファームでチームリーダーやアカウントマネジメントを担ってきたメンバーが、日本とアメリカで<b style="color:#14181F;">30社を超える企業のDXを支援</b>してきました。</p>
+        <p class="sec-lead"><b style="color:#14181F;">30社を超える企業の支援では、調達・貿易・経理・IT組織の業務を中心に、ERPの導入や基幹システムの刷新にも携わってきました。</b>AIを組み込むときは、既存の基幹システムを活かしたまま、その周辺の業務から対象を選びます。</p>
       </div>
 
       <div class="exp-grid">
@@ -1026,111 +931,188 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
         </div>
       </div>
 
-      <p class="exp-note">記載のない業界・業務でも、まず理解するところから始めます。<b>「どの業務のどこで手間がかかっているか」</b>が分かれば、AIの使いどころは見えてきます。</p>
+      <p class="exp-note">記載のない業界・業務についてもご相談いただけます。<b>どの業務が利益を左右しているか</b>を伺えば、AIを組み込む業務の候補をお示しします。</p>
     </div>
   </section>
 
-  <!-- ═══════ 05 AIプロダクト（一覧だけ。全体像と詳細は /products） ═══════ -->
+  <!-- ═══════ 提供サービス ═══════ -->
+  <section id="consulting" class="hairline-t rail">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 class="sec">提供サービス</h2>
+        </div>
+        <p class="sec-lead"><b style="color:#14181F;">対象業務の選定から試作、本番の業務への展開までをお引き受けし、支援の終了後に社内で運用を続けるための体制づくりもお手伝いします。</b>PMOやベンダー選定、研修などの個別のご依頼にも応じ、貴社にすでにある体制は無理に置き換えません。投資や買収の場面では、ITデューデリジェンスと買収後の統合（PMI）の支援も行います。</p>
+      </div>
+      <div class="g3 pillars">
+        <div class="pillar"><p class="tag-en" style="margin-bottom:0;">SERVICE 01</p><h3>戦略構想・アドバイザリー</h3><p>業務とITの現状を調べ、利益への影響をもとにAI活用の計画を立てます。</p><ul><li>業務とITの現状調査・課題定義</li><li>AI活用ロードマップ策定</li><li>経営層へのアドバイザリー</li><li>ITデューデリジェンス・PMI支援</li></ul></div>
+        <div class="pillar"><p class="tag-en" style="margin-bottom:0;">SERVICE 02</p><h3>実装・PMO</h3><p>試作を開発し、効果を確かめたものを本番の業務で使える形に仕上げます。</p><ul><li>PMO・プロジェクト推進</li><li>システム実装・開発管理</li><li>権限・承認フロー・監視の運用設計</li><li>業務の切り替えと現場への定着</li><li>データ分析・可視化基盤の構築</li><li>ベンダー選定・要件定義支援</li><li>グローバル・ASEAN展開支援</li></ul></div>
+        <div class="pillar"><p class="tag-en" style="margin-bottom:0;">SERVICE 03</p><h3>内製化・人材育成</h3><p>ソースコードと設計資料をお渡しします。あわせて研修と推進体制の立ち上げをお手伝いし、支援の終了後も社内で運用を続けられる状態を目標にします。</p><ul><li>DX・生成AI活用研修</li><li>プロジェクトマネジメント研修</li><li>推進体制の設計・立ち上げ</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ AIプロダクト（一覧だけ。全体像と詳細は /products） ═══════ -->
   <section id="products" class="hairline-t warm rail">
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <h2 class="sec"><span class="nb">自社プロダクトを土台に、</span><span class="nb">貴社仕様にカスタマイズ。</span></h2>
+          <h2 class="sec">AIプロダクト</h2>
         </div>
-        <p class="sec-lead">計画・調達・輸出入・販売は、担当も帳票も分かれています。ただし、扱う取引そのものは同じものです。<b style="color:#14181F;">全工程に共通する処理を1つの基盤にまとめ、工程ごとの違いは個別のソリューションで受け止めます。</b>読み取り・照合・判定はAIがやり、承認は人がします。</p>
+        <p class="sec-lead"><b style="color:#14181F;">取り組む業務が貿易事務や化学品の規制対応に決まった場合は、提供中の自社プロダクトを土台に、貴社の業務に合わせた試作を始めます。</b>計画・調達・輸出入・販売で共通する処理は1つの基盤にまとめ、工程ごとに異なる部分は個別の製品で対応します。AIが書類を読み取って照合し、判定まで行ったうえで、担当者が承認します。</p>
       </div>
       <div class="pl">
         <a class="pl-i live" href="/borderflow-guide"><span class="pl-s">提供中</span><b>BorderFlow AI</b><span class="pl-d">貿易事務エージェント。契約書・Invoice・BLを読み取り、通関申告と原価計算まで進める</span></a>
-        <a class="pl-i live" href="/chemos-guide"><span class="pl-s">提供中</span><b>ChemOS</b><span class="pl-d">PFAS・chemSHERPA対応。含有物質の解析と判定から、照会メールと提出物の作成まで</span></a>
-        <a class="pl-i live" href="/staypath-guide"><span class="pl-s">デモ公開中</span><b>StayPath</b><span class="pl-d">外国人材受入支援の業務管理。人材・企業・申請・面談・請求を一つのデータベースで</span></a>
+        <a class="pl-i live" href="/chemos-guide"><span class="pl-s">提供中</span><b>ChemOS</b><span class="pl-d">PFAS・chemSHERPA対応。含有物質の解析と判定から、照会メールと提出物の作成まで進める</span></a>
+        <a class="pl-i live" href="/staypath-guide"><span class="pl-s">デモ公開中</span><b>StayPath</b><span class="pl-d">外国人材受入支援の業務管理。人材・企業・申請・面談・請求を一つのデータベースで扱う</span></a>
         <a class="pl-i" href="/products#export-control"><span class="pl-s">開発中</span><b>Export Control AI</b><span class="pl-d">該非判定の下調べ。仕様書から該当候補を抜き出し、条文の引用付きで下書きする</span></a>
         <a class="pl-i" href="/products#procurement"><span class="pl-s">開発中</span><b>Procurement AI</b><span class="pl-d">見積書をまとめて読み取り、条件を揃えた比較表と稟議に使える資料を作る</span></a>
         <a class="pl-i" href="/products#demand-inventory"><span class="pl-s">構想中</span><b>需給・在庫最適化</b><span class="pl-d">需要予測から発注点と安全在庫を出し、過剰在庫と欠品のどちらに寄っているかを見る</span></a>
       </div>
-      <p class="pl-more"><a class="btn-line" href="/products">共通基盤・接続先・各製品の詳細を見る</a><span>BorderFlow AI を土台にした全体像と、外部システム・取引先との接続先をまとめています。</span></p>
+      <p class="pl-more"><a class="btn-line" href="/products">共通基盤・接続先・各製品の詳細を見る</a></p>
+    </div>
+  </section>
+
+  <!-- ═══════ 進め方 ═══════ -->
+  <section id="model" class="hairline-t rail">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 class="sec">進め方</h2>
+        </div>
+        <p class="sec-lead"><b style="color:#14181F;">契約は対象業務の選定・試作・展開の段階ごとに結ぶので、各段階の結果を見て、次に進むか、そこで終えるかをご判断いただけます。</b>始め方は次の2通りです。</p>
+      </div>
+      <div class="g2 entry" style="margin-bottom:36px;">
+        <div class="opt">
+          <p class="tag-en" style="margin-bottom:0;">ENTRY A</p>
+          <h3>対象業務の選定から始める</h3>
+          <p>まず社内の業務とITの現状を洗い出し、AIをどの業務から、どの順番で入れるかを決めます。そのうえで、最初に取り組む業務の試作に進みます。</p>
+          <p class="opt-fit">AI活用の方向性が固まらず、部門ごとに別々のAIツールを使っている企業に向いています。</p>
+        </div>
+        <div class="opt">
+          <p class="tag-en" style="margin-bottom:0;">ENTRY B</p>
+          <h3>特定業務の試作から始める</h3>
+          <p>取り組む業務がすでに決まっている場合は、対象業務の選定を省き、その業務の試作から始めます。</p>
+          <p class="opt-fit">PoCの結果や要件の案が手元にあり、まず一つの業務で動かして社内の理解を得たい企業に向いています。</p>
+        </div>
+      </div>
+      <p style="margin:0 0 14px; font-size:13px; color:#6B7280;">どちらから始めても、試作で効果を確かめてから広げる順番は変わりません。</p>
+<div style="margin-top:46px;">
+        <p class="tag-en" style="margin-bottom:6px;">COMPARISON</p>
+        <h3 style="margin:0 0 22px; font-weight:700; font-size:17px; color:#14181F;">従来型の支援との違い</h3>
+        <div style="overflow-x:auto;">
+        <div class="vs">
+          <div class="vs-r vs-hr">
+            <div></div>
+            <div class="vs-h">従来型のコンサル・SI</div>
+            <div class="vs-h wing"><span class="vs-tag">FDE MODEL</span>Wing（FDE型）</div>
+          </div>
+          <div class="vs-r">
+            <div class="vs-label">立ち上がり</div>
+            <div class="vs-trad">現状の調査から始まり、具体的な議論に入るまでに時間がかかる</div>
+            <div class="vs-wing">弊社オリジナルの<em>テンプレート</em>をもとに、<em>初回から具体的な話</em>ができる</div>
+          </div>
+          <div class="vs-r">
+            <div class="vs-label">最初の成果物</div>
+            <div class="vs-trad">報告書・要件定義書（数ヶ月後）</div>
+            <div class="vs-wing">貴社の業務と独自のルールを<em>組み込んだ試作</em><span style="display:block;font-size:11px;color:var(--gold-soft);margin-top:3px;font-weight:400;">特定業務：2〜3週間</span></div>
+          </div>
+          <div class="vs-r">
+            <div class="vs-label">体制</div>
+            <div class="vs-trad">工程ごとに担当が分かれ、引き継ぎのたびに要件の伝え漏れが起きやすい</div>
+            <div class="vs-wing">業務と技術の両方が分かるFDEが、<em>担当を替えずに</em>受け持つ</div>
+          </div>
+          <div class="vs-r">
+            <div class="vs-label">費用</div>
+            <div class="vs-trad">役割ごとに人を置く体制で、人数に応じた費用がかかる</div>
+            <div class="vs-wing">弊社オリジナルのテンプレートを用いて、少人数で推進するため、大手ファームと比べて<em>最大で半分以下</em>に抑えることも可能です</div>
+          </div>
+          <div class="vs-r">
+            <div class="vs-label">要件の固め方</div>
+            <div class="vs-trad">文書の往復とレビュー会議</div>
+            <div class="vs-wing">実物を触りながら<em>現場と直接調整</em></div>
+          </div>
+          <div class="vs-r">
+            <div class="vs-label">投資判断</div>
+            <div class="vs-trad">始める前に、全体の費用で契約する</div>
+            <div class="vs-wing">段階ごとに契約し、<em>実物を見てから判断</em></div>
+          </div>
+          <div class="vs-r">
+            <div class="vs-label">運用の作り込み</div>
+            <div class="vs-trad">開発範囲の納品で完了。権限設計・例外処理・運用ルールは発注側の作業として残る</div>
+            <div class="vs-wing">権限・承認フロー・例外処理・データ保全・監視まで設計し、<em>本番の業務で使える状態</em>で引き渡す</div>
+          </div>
+          <div class="vs-r">
+            <div class="vs-label">知見の残り方</div>
+            <div class="vs-trad">仕様や判断の理由の記録が、ベンダー側に残りやすい</div>
+            <div class="vs-wing">ソースコード・設計資料ごと<em>貴社に残す</em></div>
+          </div>
+        </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ═══════ MID CTA ═══════ -->
   <div class="cta-strip">
-    <p><span class="nb">貴社の業務では、</span><span class="nb">どこからAIを始めるべきか。</span><br><span class="nb">まずは30分、</span><span class="nb">お話ししませんか。</span></p>
+    <p><span class="nb">どちらの始め方が合うかは、</span><br><span class="nb">30分の無料相談で</span><span class="nb">ご提案します。</span></p>
     <a href="#contact" class="btn-dark">無料相談を申し込む</a>
-    <p class="sub-l">まだ相談段階でない方へ ── <a href="/dx-assessment">5分でできる無料DX診断</a> もご用意しています</p>
+    <p class="sub-l">相談の前に、<a href="/dx-assessment">5分の無料DX診断</a>で自社の状況を確かめることもできます</p>
   </div>
 
-  <!-- ═══════ 06 FAQ ═══════ -->
-  <section id="faq" class="hairline-t rail">
-    <div class="wrap">
-      <div class="sec-head">
-        <div>
-          <h2 class="sec">よくいただくご質問。</h2>
-        </div>
-      </div>
-      <div class="faq">
-        <details><summary>大手コンサルティングファームとの違いは何ですか？</summary><div class="a">最大の違いは、提案した人間が実装まで担う点です。大手では提案フェーズのシニアが実行フェーズで交代することが少なくありません。Wingでは、診断で課題を理解した本人が、開発・定着まで通しで担当します。</div></details>
-        <details><summary>少人数体制で、当社の規模に対応できますか？</summary><div class="a">構想・意思決定支援と実装の初期段階は、経験を積んだシニアメンバーが直接担当します。全社展開で体制が必要な局面や、高度な機械学習・大規模データ基盤など専門性の高い実装課題については、AIスタートアップをはじめとする技術パートナーと連携して対応します。窓口はFDE一人にまとまるので、貴社が複数の会社と調整する必要はありません。</div></details>
-        <details><summary>セキュリティや情報管理の要件に対応できますか？</summary><div class="a">秘密保持契約を締結のうえ、データは国内リージョンで管理し、アクセス権限・バックアップ体制を整えて運用します。貴社の情報セキュリティ規程・調達要件に沿った対応を前提とし、詳細は契約前に書面でご説明します。貴社のデータを外部のAI学習に使うことはありません。</div></details>
-        <details><summary>途中でやめることはできますか？</summary><div class="a">できます。契約は段階ごとに区切っており、診断だけ、試作までで終える形も最初から想定しています。実物を見て「この投資はしない」と判断していただくのも、正しい結論の一つだと考えています。</div></details>
-        <details><summary>既存のベンダーやSIerとの取引があるのですが。</summary><div class="a">併用いただけます。既存の基幹システムはそのまま活かし、その周辺を変えるのが当社の領域です。ベンダー提案の妥当性評価や条件交渉を、発注側の立場でお手伝いすることも可能です。</div></details>
-        <details><summary>最終的に社内で運用できるようになりますか？</summary><div class="a">それを目標にしています。ソースコード・設計資料は成果物としてお渡しし、運用体制の立ち上げと人材育成まで支援します。当社への依存が続く状態は、成功とは考えていません。</div></details>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════ 07 インサイト ═══════ -->
+  <!-- ═══════ インサイト ═══════ -->
   <section id="insights" class="hairline-t rail">
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <h2 class="sec"><span style="display:inline-block;">プロジェクトの現場で得た</span><br><span style="display:inline-block;">知見を公開しています。</span></h2>
+          <h2 class="sec">インサイト</h2>
         </div>
-        <p class="sec-lead">AIエージェント・DX戦略・貿易DX・規制対応。実務で得た知見を記事として公開しています。営業資料より、こちらのほうが私たちの考え方を正確にお伝えできると考えています。</p>
+        <p class="sec-lead"><b style="color:#14181F;">PoCが本番の業務に進まない原因や、海外拠点のIT組織の組み方について、Wingの考え方を記事で公開しています。</b>AIエージェントの導入と運用のルール、輸出入の業務の流れと自動化できる作業についても書いています。</p>
       </div>
       <div class="ins-g">
-        <a class="ins" href="/blog/poc-death-dx-consulting"><p class="cat">DX STRATEGY</p><h3>AI導入が本番稼働に届かない理由｜PoC失敗の原因と対策</h3><p>PoCが本番移行できない5大原因と、失敗しないプロジェクト設計。</p></a>
-        <a class="ins" href="/blog/dx-consulting-guide"><p class="cat">DX STRATEGY</p><h3>DXコンサルティングとは？失敗しない選び方と成功のポイント</h3><p>大手と専門ファームの違い、失敗パターンと成功の秘訣を解説。</p></a>
-        <a class="ins" href="/blog/global-it-organization-model"><p class="cat">IT ORGANIZATION</p><h3>グローバル企業のIT組織モデル｜海外拠点のIT機能設計</h3><p>集中型・分担型・自律型の3モデルとガバナンスの最適解。</p></a>
-        <a class="ins" href="/blog/ai-agent-guide"><p class="cat">AI AGENTS</p><h3>AIエージェント完全ガイド｜概念から導入・ガバナンスまで</h3><p>Gartnerレポートに基づく7ステップの体系的ガイド。</p></a>
-        <a class="ins" href="/blog/trade-dx-complete-guide"><p class="cat">TRADE DX</p><h3>貿易DX完全ガイド｜業務フロー・課題・AI活用まで</h3><p>輸入・輸出の全業務フローとAI・RPA活用による自動化。</p></a>
-        <a class="ins" href="/blog/export-control-ai"><p class="cat">TRADE DX</p><h3>安全保障貿易管理とは？該非判定の実務とAI・DXによる効率化</h3><p>リスト規制・キャッチオール規制と、該非判定の属人化を解く方法。</p></a>
+        <a class="ins" href="/blog/poc-death-dx-consulting"><p class="cat">DX STRATEGY</p><h3>AI導入が本番稼働に届かない理由｜PoC失敗の原因と対策</h3><p>PoCが本番に進まない5つの原因と、段階の区切り方。</p></a>
+        <a class="ins" href="/blog/dx-consulting-guide"><p class="cat">DX STRATEGY</p><h3>DXコンサルティングとは？失敗しない選び方と成功のポイント</h3><p>大手と専門ファームの違い、選ぶときの5つの確認点、よくある失敗。</p></a>
+        <a class="ins" href="/blog/global-it-organization-model"><p class="cat">IT ORGANIZATION</p><h3>グローバル企業のIT組織モデル｜海外拠点のIT機能設計</h3><p>集中型・分担型・自律型の3モデルの違いと、自社に合うモデルの選び方。</p></a>
+        <a class="ins" href="/blog/ai-agent-guide"><p class="cat">AI AGENTS</p><h3>AIエージェント完全ガイド｜概念から導入・ガバナンスまで</h3><p>Gartnerのレポートをもとに、考え方から導入・運用のルールまでを7つの段階で説明。</p></a>
+        <a class="ins" href="/blog/trade-dx-complete-guide"><p class="cat">TRADE DX</p><h3>貿易DX完全ガイド｜業務フロー・課題・AI活用まで</h3><p>輸出入の業務の流れと、AI・RPAで自動化できる作業。</p></a>
+        <a class="ins" href="/blog/export-control-ai"><p class="cat">TRADE DX</p><h3>安全保障貿易管理とは？該非判定の実務とAI・DXによる効率化</h3><p>リスト規制・キャッチオール規制の基本と、該非判定を担当者任せにしない進め方。</p></a>
       </div>
       <p style="margin:28px 0 0;"><a href="/blog/" style="font-size:13px; color:#8A6E33; font-weight:700; letter-spacing:.05em; border-bottom:1px solid #D6D0C2; padding-bottom:2px;">すべての記事を見る <span aria-hidden="true">→</span></a></p>
     </div>
   </section>
 
-  <!-- ═══════ 08 会社概要 ═══════ -->
-  <section id="company" class="hairline-t rail">
+  <!-- ═══════ よくあるご質問 ═══════ -->
+  <section id="faq" class="hairline-t rail">
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <h2 class="sec">会社概要</h2>
+          <h2 class="sec">よくあるご質問</h2>
         </div>
       </div>
-      <div class="co-wrap">
-        <table class="co">
-          <tr><th scope="row">社名</th><td>Wing</td></tr>
-          <tr><th scope="row">設立</th><td>2026年</td></tr>
-          <tr><th scope="row">事業内容</th><td>自社AIプロダクト（BorderFlow AI・ChemOS・該非判定AI・調達プラットフォーム）を軸としたカスタマイズソリューションの開発・提供、AI・DXコンサルティング、実装・定着支援</td></tr>
-          <tr><th scope="row">認定資格</th><td>Claude Certified Architect – Professional（Anthropic 社）</td></tr>
-        </table>
-        <div class="co-badge"><img src="/images/credly-claude-architect.png" alt="Claude Certified Architect – Professional のバッジ" width="150" height="150" loading="lazy"></div>
+      <div class="faq">
+        <details><summary>セキュリティや情報管理の要件に対応できますか？</summary><div class="a">秘密保持契約を結んだうえで、データは国内リージョンで管理し、アクセス権限とバックアップの体制を整えて運用します。貴社の情報セキュリティ規程と調達要件に沿って進め、詳しくは契約前に書面でご説明します。貴社のデータを外部のAI学習に使うことはありません。</div></details>
+        <details><summary>大手コンサルティングファームとの違いは何ですか？</summary><div class="a">対象業務の選定を行ったFDEが、そのまま試作と本番の業務への展開も担当します。弊社オリジナルのテンプレートを使うため、初回の打ち合わせから貴社の業務に当てはめて話を進めます。少人数で推進するため、費用は大手ファームと比べて最大で半分以下に抑えることも可能です。</div></details>
+        <details><summary>少人数体制で、当社の規模に対応できますか？</summary><div class="a">対象業務の選定と試作は、FDEが直接担当します。全社への展開で人数が必要な場合や、高度な機械学習・大規模なデータ基盤など専門の技術が要る部分は、AIスタートアップなどの技術パートナーと組んで対応します。その場合も窓口はFDEが務めるので、貴社が複数の会社と調整する必要はありません。</div></details>
+        <details><summary>途中でやめることはできますか？</summary><div class="a">できます。契約は段階ごとに区切っているので、対象業務の選定や試作を終えた段階でやめていただけます。実物を見たうえで、その先に投資しないと決めていただいて構いません。</div></details>
+        <details><summary>既存のベンダーやSIerと併用できますか？</summary><div class="a">併用いただけます。既存の基幹システムはそのまま活かし、その周辺の業務にAIを組み込みます。ベンダー提案の妥当性評価や条件交渉を、発注側の立場でお手伝いします。</div></details>
+        <details><summary>最終的に社内で運用できるようになりますか？</summary><div class="a">それを目標に進めます。ソースコードと設計資料は成果物としてお渡しし、運用体制の立ち上げと人材育成まで支援します。</div></details>
       </div>
     </div>
   </section>
 
-  <!-- ═══════ 09 CONTACT ═══════ -->
+  <!-- ═══════ 無料相談 ═══════ -->
   <section id="contact" class="hairline-t rail">
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <h2 class="sec"><span class="nb">長年の経営コンサルティングの</span><span class="nb">知見から、</span><br class="pc"><span class="nb">貴社に合わせた打ち手を。</span></h2>
+          <h2 class="sec">無料相談</h2>
         </div>
+        <p class="sec-lead"><b style="color:#14181F;">無料相談は30分で、業界や規模、今お使いのシステムを伺い、最初に取り組む業務の候補と始め方をお伝えします。</b>社内の業務とITの現状まで洗い出す対象業務の選定に進むかは、ご提案をご覧になってからご判断ください。営業目的のお電話はいたしません。</p>
       </div>
       <div class="ct">
         <div class="ct-l">
-          <p>30分の無料相談では、業界・規模・いまのIT環境を伺ったうえで、これまでの経験をもとに、貴社に合う進め方をお話しします。一般論ではなく、次に何をすればよいかが決まる時間にします。営業の電話はしません。</p>
-          <p style="font-size:12px; color:#6B7280;">※ 手が回らなくなるのを避けるため、同時にお受けするのは数社までにしています。<br>返信目安：1〜2営業日以内　／　構想段階からのご相談も歓迎します。</p>
-          <p style="font-size:13px; color:#5C6470; border:1px solid #E8E5DE; padding:14px 18px; background:#fff;">お問い合わせの前に現在地を知りたい方は、<a href="/dx-assessment" style="color:#8A6E33; font-weight:700;">無料DX診断（5分・登録不要）</a>をお試しください。</p>
+          <p style="font-size:12px; color:#6B7280;">返信は1〜2営業日以内を目安にお送りします。構想の段階からのご相談も承ります。<br>※ 各案件の質を保つため、同時にお引き受けする案件数を限っています。</p>
+          <p style="font-size:13px; color:#5C6470; border:1px solid #E8E5DE; padding:14px 18px; background:#fff;">お問い合わせの前に自社の状況を確かめたい方は、<span class="nb">登録なしで使える</span><a href="/dx-assessment" style="color:#8A6E33; font-weight:700; white-space:nowrap;">5分の無料DX診断</a>をお試しください。</p>
         </div>
         <form class="form" action="https://formspree.io/f/xpqopzdj" method="POST">
           <div><label for="f-name">お名前 *</label><input id="f-name" type="text" name="name" autocomplete="name" required></div>
@@ -1138,7 +1120,7 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
             <div><label for="f-company">会社名</label><input id="f-company" type="text" name="company" autocomplete="organization"></div>
             <div><label for="f-email">メールアドレス *</label><input id="f-email" type="email" name="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" required></div>
           </div>
-          <div><label for="f-message">ご相談内容 *</label><textarea id="f-message" name="message" required placeholder="例：見積の突合に時間がかかっている／PoCが本番に進まない…（箇条書きで構いません）"></textarea></div>
+          <div><label for="f-message">ご相談内容 *</label><textarea id="f-message" name="message" required placeholder="例：AIツールを入れたが、費用に見合う効果が出ているか分からない。PoCから本番に進めない。箇条書きでも構いません。"></textarea></div>
           <button type="submit">無料相談を申し込む</button>
           <p class="note" style="margin:0;">送信をもって<a href="/privacy" style="color:var(--gold-deep); text-decoration:underline; text-decoration-color:var(--line2);">プライバシーポリシー</a>に同意したものとみなします。</p>
         </form>
