@@ -514,23 +514,26 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
 .str-l::after{content:'→';content:'→' / '';display:inline-block}
 .str-l:hover{color:var(--ink)}
 @media(max-width:720px){.str-grid{grid-template-columns:1fr}}
-/* ── FDEの立ち位置（#fde）──
-   以前は BEFORE（外から関わる従来型）と AFTER（Wing）を2枚並べて対比させていたが、
-   BEFORE 側を外した。1枚だけを元の幅のまま置くと縦長の札が横に間延びするので、
-   左に「貴社の中に入った FDE」の図、右に速さと結果、という2列に組み替えている */
-.fde-box{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:8px}
-@media(max-width:900px){.fde-box{grid-template-columns:1fr}}
-.fde-fig{position:relative;background:#fff;padding:24px 26px 26px}
-.fde-fig::before{content:'';position:absolute;top:0;left:0;width:34px;height:2px;background:var(--gold)}
-.fde-h{margin:0 0 16px;font-size:14px;font-weight:700;color:var(--ink);letter-spacing:.02em;line-height:1.6}
-.fde-out{background:#FBFAF7;padding:24px 26px 26px;display:flex;flex-direction:column;justify-content:flex-start}
-.fde-why{margin:0 0 16px;font-size:13px;color:var(--gold-deep);line-height:1.9}
-.fde-sp{padding:16px 0;border-top:1px dashed var(--line2)}
-.fde-sp .sp-t{margin:0 0 10px;font-size:13px;font-weight:700;color:var(--ink);line-height:1.7}
-.fde-sp .sp-v{margin:0 0 10px;display:flex;align-items:baseline;gap:10px}
-.fde-sp .sp-v b{font-family:var(--en);font-size:30px;font-weight:600;color:var(--gold-deep);line-height:1;letter-spacing:.02em}
-.fde-sp .sp-v span{font-size:12px;color:var(--sub2)}
-.fde-sp .sp-d{margin:0;font-size:12px;color:var(--sub2);line-height:1.85}
+/* 経営の目標から実装へ進み、検証結果を次の判断に戻す流れ */
+.fde-cycle{margin-top:8px;border:1px solid var(--line);background:#FBFAF7;padding:28px}
+.fde-purpose{margin:0 0 8px;color:var(--gold-deep);font-size:12px;font-weight:700;letter-spacing:.08em}
+.fde-cycle h3{margin:0;color:var(--ink);font-size:22px;line-height:1.6}
+.fde-cycle-intro{margin:10px 0 24px;font-size:14px;color:var(--sub2);line-height:1.9}
+.fde-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.fde-steps li{position:relative;background:#fff;border-top:3px solid var(--gold);padding:18px 16px}
+.fde-steps li+li::before{content:'→';position:absolute;left:-17px;top:42px;color:var(--gold-deep)}
+.fde-step-num{font-family:var(--en);font-size:12px;color:var(--gold-deep)}
+.fde-steps h4{margin:8px 0;font-size:16px;color:var(--ink);line-height:1.6}
+.fde-steps p{margin:0;font-size:13px;color:var(--sub2);line-height:1.9}
+.fde-return{margin:18px 0 0;padding:14px 18px;border:1px solid var(--gold);color:var(--ink);font-size:14px;line-height:1.8}
+.fde-return b{color:var(--gold-deep)}
+.fde-value{display:flex;flex-wrap:wrap;gap:10px 24px;padding-top:20px;font-size:13px;color:var(--sub2);line-height:1.8}
+.fde-value strong{color:var(--ink)}
+.fde-support{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:22px;align-items:center}
+.fde-partner{font-size:13px;color:var(--sub2);line-height:1.9;margin:0}
+.fde-partner b{display:block;color:var(--ink);margin-bottom:5px}
+@media(max-width:900px){.fde-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.fde-steps li:nth-child(3)::before{content:none}}
+@media(max-width:600px){.fde-cycle{padding:20px 16px}.fde-cycle h3{font-size:20px}.fde-steps{grid-template-columns:1fr;gap:22px}.fde-steps li+li::before,.fde-steps li:nth-child(3)::before{content:'↓';left:50%;top:-23px}.fde-support{grid-template-columns:1fr;gap:16px}.fde-value{gap:6px 16px}}
 /* 担当者の認定。Anthropic が出しているのは「Claude Certified Architect – Professional」という資格で、
    FDE という肩書きを認定しているわけではないので、資格名を必ず併記する。
    画像は Credly から取った自社控え（images/credly-claude-architect.png）。
@@ -732,7 +735,7 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
         <div class="hero-pts" style="display:flex; flex-direction:column; gap:14px; margin-bottom:30px;">
           <div style="display:flex; gap:14px; align-items:flex-start;">
             <div style="flex:none; width:6px; height:6px; background:#A98A4B; margin-top:11px;"></div>
-            <p style="margin:0; font-size:14px; line-height:1.95; color:#4A515C;">利益に直結するAI導入には、収益構造を踏まえた業務改革が必要です。<br class="pc">Wingは経営課題から<span style="color:#14181F; font-weight:500;">AIの活用対象を定め、業務の見直しから開発・定着までを担います</span>。</p>
+            <p style="margin:0; font-size:14px; line-height:1.95; color:#4A515C;">利益に直結するAI導入は、経営戦略・業務改革・実装を一体で進める取り組みです。<br class="pc">Wingは貴社の経営と現場に入り、<span style="color:#14181F; font-weight:500;">業務の再設計からAIの開発・定着、導入後の改善まで担います</span>。</p>
           </div>
           <div style="display:flex; gap:14px; align-items:flex-start;">
             <div style="flex:none; width:6px; height:6px; background:#A98A4B; margin-top:11px;"></div>
@@ -807,52 +810,29 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
         <div>
           <h2 class="sec">FDEとは</h2>
         </div>
-        <p class="sec-lead"><b style="color:#14181F;">業務を理解した担当者が、AIの開発と現場への定着まで責任を持って進めます。</b>FDEは、顧客企業の現場に入るコンサルタント兼AIエンジニアです。経営層と改善の目標を定め、現場と要件を詰めながら試作・開発を進めます。ROIC（投下資本利益率）の改善と企業価値の向上を目指します。</p>
+        <p class="sec-lead"><b style="color:#14181F;">企業価値の向上に向けて、経営の構想を現場で動く仕組みに変え、成果を次の経営判断につなげます。</b>FDE（Forward Deployed Engineer）は、顧客企業の現場で開発・改善を担うエンジニアです。Wingでは経営課題の整理から業務改革、AIの実装までを一体で進め、導入後の効果をもとに施策を見直します。</p>
       </div>
 
-      <div class="fde-box">
-        <div class="fde-fig">
-          <p class="fde-h">貴社の推進チームに加わる</p>
-          <div class="cbox">
-            <p class="cbox-t">貴社<small>経営層と現場部門の両方に入る</small></p>
-            <div class="bridge">
-              <div class="side mgmt"><b>経営層</b><span>経営課題（KPI・利益）</span></div>
-              <div class="mid">
-                <span class="ar">↕</span>
-                <div class="fde-n"><b>FDE</b><em>Wing</em></div>
-                <span class="ar">↕</span>
-              </div>
-              <div class="side ops"><b>現場部門</b><span>現場課題（業務実態）</span></div>
-            </div>
-            <p class="bridge-cap">経営の目標と現場の業務の両方を満たす仕組みを作る</p>
-            <div class="fde-role">
-              <span><b>対象業務を選ぶ</b>利益への影響が大きい業務を優先する</span>
-              <span><b>現場に合わせて作る</b>業務の流れとデータを見て決める</span>
-              <span><b>試作で確かめる</b>本番に広げる前に、特定の業務で効果を見る</span>
-              <span><b>現場に根づかせる</b>関係者の合意をとり、業務の切り替えと教育を進める</span>
-            </div>
-          </div>
-          <div class="backline">
-            <span class="bl-ar" aria-hidden="true">↑</span>
-            <div class="bl-box">
-              <p class="bl-t">技術パートナー（AIスタートアップ等）</p>
-              <p class="bl-d">高度な機械学習や大規模なデータ基盤など、専門の技術が要る部分はパートナー各社と組み、窓口はFDEが務めます。</p>
-            </div>
-          </div>
-        </div>
-        <div class="fde-out">
-          <p class="fde-why">経営と現場の話を聞いたFDEが自ら作るので、経営の狙いと現場の使い勝手が食い違いにくい</p>
-          <div class="fde-cred">
-            <img src="/images/credly-claude-architect.png" alt="Claude Certified Architect – Professional のバッジ" width="84" height="84">
-            <div>
-              <p class="fde-cred-t"><span class="nb">Anthropic社などのAI導入の</span><span class="nb">認定資格を持つFDEが在籍しています</span></p>
-              <p class="fde-cred-d">Claude Certified Architect – Professional</p>
-            </div>
-          </div>
-          <div class="fde-sp">
-            <p class="sp-t">特定業務の試作にかかる期間</p>
-            <p class="sp-v"><b>2〜3週間</b><span>目安</span></p>
-            <p class="sp-d">貴社の業務に合わせて作り、使っていただきながら直す</p>
+      <div class="fde-cycle">
+        <p class="fde-purpose">WingのFDEが担う役割</p>
+        <h3>経営の目標から実装へ。現場の検証から、次の判断へ。</h3>
+        <p class="fde-cycle-intro">貴社の経営層・現場部門とともに、目標とする成果を定め、業務とシステムの両面から変革を進めます。</p>
+        <ol class="fde-steps">
+          <li><span class="fde-step-num">01</span><h4>価値の源泉を捉える</h4><p>売上・コスト・投下資本と業務の関係を整理し、改善すべき経営指標と優先課題を定めます。</p></li>
+          <li><span class="fde-step-num">02</span><h4>業務の変え方を描く</h4><p>仕事の流れ、役割分担、判断の基準を見直し、AIを組み込む範囲と実行計画を具体化します。</p></li>
+          <li><span class="fde-step-num">03</span><h4>動く仕組みにする</h4><p>AIエージェントや業務システムを開発し、既存のデータ・システムとつなぎ、運用に組み込みます。</p></li>
+          <li><span class="fde-step-num">04</span><h4>成果を確かめる</h4><p>経営指標の変化と現場での利用状況を確認し、追加の改善や他部門への展開を検討します。</p></li>
+        </ol>
+        <p class="fde-return"><b>検証結果を、目標と計画に反映</b><br>実装で分かった制約や効果を経営層と共有し、取り組みの優先順位と投資配分を見直します。</p>
+        <div class="fde-value"><strong>目指す経営成果</strong><span>売上・収益性の向上</span><span>資本効率（ROIC）の改善</span><span>意思決定の迅速化</span></div>
+      </div>
+      <div class="fde-support">
+        <p class="fde-partner"><b>業務と技術をつなぐ窓口として</b>高度な機械学習や大規模なデータ基盤など、専門の技術が必要な部分はパートナー各社と連携。WingのFDEが全体の目的と要件を共有し、実装を進めます。</p>
+        <div class="fde-cred">
+          <img src="/images/credly-claude-architect.png" alt="Claude Certified Architect – Professional のバッジ" width="84" height="84" loading="lazy">
+          <div>
+            <p class="fde-cred-t">AI導入の認定資格を持つFDEが在籍しています</p>
+            <p class="fde-cred-d">Claude Certified Architect – Professional</p>
           </div>
         </div>
       </div>
