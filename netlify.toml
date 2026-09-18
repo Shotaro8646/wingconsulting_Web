@@ -36,6 +36,25 @@
   to = "https://wingconsulting-profile.netlify.app/:splat"
   status = 200
 
+# ── 構成確認用の試作（/preview/）──────────────────────────────
+# 中身はこのリポジトリに置かない。取引先の名前を出せないため、別の Netlify サイトから取りに行く。
+# 仲間に渡したリンクからだけ開く前提なので、検索には載せず、サイトのどこからも張らない。
+[[headers]]
+  for = "/preview/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive"
+
+# /preview/coop と /preview/coop/ は同じ扱い。301 で寄せると自分に飛んでループするので、両方とも 200 で取り込む。
+[[redirects]]
+  from = "/preview/coop"
+  to = "https://wingconsulting-preview.netlify.app/"
+  status = 200
+
+[[redirects]]
+  from = "/preview/coop/*"
+  to = "https://wingconsulting-preview.netlify.app/:splat"
+  status = 200
+
 # ── StayPath デモ（/staypath/）──────────────────────────────
 # 面談の録音にマイクを使うため、この配下だけ microphone を許可する。
 # 検索結果には製品ページ（/staypath-guide）を出したいので、アプリ本体は noindex。
