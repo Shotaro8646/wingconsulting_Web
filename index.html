@@ -734,7 +734,7 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
         <div class="hero-pts" style="display:flex; flex-direction:column; gap:14px; margin-bottom:30px;">
           <div style="display:flex; gap:14px; align-items:flex-start;">
             <div style="flex:none; width:6px; height:6px; background:#A98A4B; margin-top:11px;"></div>
-            <p style="margin:0; font-size:14px; line-height:1.95; color:#4A515C;"><strong style="color:#14181F; font-weight:700;">Wingは、AI導入と業務システム開発を手がけるコンサルティング会社です。</strong><br class="pc">サプライチェーン（物流・購買など）や貿易業務などの知見に強みを持ち、AIエージェントの開発から現場への定着まで支援します。</p>
+            <p style="margin:0; font-size:14px; line-height:1.95; color:#4A515C;"><strong style="color:#14181F; font-weight:700;">Wingは、AI導入を経営の成果につなげるコンサルティング会社です。</strong><br class="pc">サプライチェーンや貿易の業務に明るく、AIの開発から現場への定着まで手がけます。</p>
           </div>
           <div style="display:flex; gap:14px; align-items:flex-start;">
             <div style="flex:none; width:6px; height:6px; background:#A98A4B; margin-top:11px;"></div>
@@ -756,7 +756,7 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
         <div>
           <h2 class="sec">AI活用と利益への効果</h2>
         </div>
-        <p class="sec-lead"><b style="color:#14181F;">少なくとも1つの業務でAIを日常的に使う企業は88%。利益への効果を報告した企業は39%にとどまります。</b>Wingは、AIへの投資を収益力の向上につなげるために、経営戦略と業務改革を一体で捉えます。収益構造を踏まえて改革の優先順位を定め、業務の再設計とAIの実装を進め、経営指標で成果を検証します。</p>
+        <p class="sec-lead"><b style="color:#14181F;">AIを日常的に使う企業は88%。利益への効果を報告した企業は39%にとどまります。</b>Wingは、AIへの投資を収益力の向上につなげるために、経営戦略と業務改革を一体で捉えます。収益構造を踏まえて改革の優先順位を定め、業務の再設計とAIの実装を進め、経営指標で成果を検証します。</p>
       </div>
 
       <div class="g4">
@@ -1114,7 +1114,12 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
           <p style="font-size:12px; color:#6B7280;">返信は1〜2営業日以内を目安にお送りします。構想の段階からのご相談も承ります。<br>※ 各案件の質を保つため、同時にお引き受けする案件数を限っています。</p>
           <p style="font-size:13px; color:#5C6470; border:1px solid #E8E5DE; padding:14px 18px; background:#fff;">お問い合わせの前に自社の状況を確かめたい方は、<span class="nb">登録なしで使える</span><a href="/dx-assessment" style="color:#8A6E33; font-weight:700; white-space:nowrap;">5分の無料DX診断</a>をお試しください。</p>
         </div>
-        <form class="form" action="https://formspree.io/f/xpqopzdj" method="POST">
+        <!-- 送信先は Netlify のフォーム機能。管理画面の Forms に残り、メール通知もそこで設定する。
+             bot-field は人には見せない欄で、埋まっている送信は機械とみなして捨てられる（迷惑送信よけ） -->
+        <form class="form" name="contact" method="POST" action="/thanks"
+              data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact">
+          <p hidden><label>この欄は入力しないでください<input name="bot-field"></label></p>
           <div><label for="f-name">お名前 *</label><input id="f-name" type="text" name="name" autocomplete="name" required></div>
           <div class="two">
             <div><label for="f-company">会社名</label><input id="f-company" type="text" name="company" autocomplete="organization"></div>

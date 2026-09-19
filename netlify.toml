@@ -55,6 +55,19 @@
   to = "https://wingconsulting-preview.netlify.app/:splat"
   status = 200
 
+# ── 送信後のページ（/thanks）────────────────────────────────
+# 問い合わせフォームの送信先。中身は受付の知らせだけなので検索には載せない。
+# GA4 は入れてあるので、この頁の表示数がそのまま問い合わせの件数になる。
+[[headers]]
+  for = "/thanks"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/thanks.html"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
 # ── StayPath デモ（/staypath/）──────────────────────────────
 # 面談の録音にマイクを使うため、この配下だけ microphone を許可する。
 # 検索結果には製品ページ（/staypath-guide）を出したいので、アプリ本体は noindex。
