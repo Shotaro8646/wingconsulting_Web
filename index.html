@@ -585,7 +585,7 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
 .mnav-p a{padding:14px 0;border-bottom:1px solid var(--line);font-size:15px;color:var(--ink)}
 .mnav-p a:last-child{border-bottom:none}
 .mnav-p a.gold{color:var(--gold-deep)}
-@media(max-width:900px){.navlinks a:not(.btn-dark){display:none}.mnav{display:block}}
+@media(max-width:1120px){.navlinks a:not(.btn-dark){display:none}.mnav{display:block}}
 
 /* ── ヒーロー：モバイル最適化 ── */
 @media(max-width:720px){
@@ -672,6 +672,7 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
 .product-screen-note{font-size:12px;color:var(--sub2);line-height:1.8;margin:0 0 16px}
 @media(max-width:860px){.product-screens{grid-template-columns:1fr;gap:24px}}
 </style>
+<link rel="stylesheet" href="/assets/content-navigation.css">
 </head>
 <body>
 <div style="font-family:'Noto Sans JP','Outfit',sans-serif; color:#14181F; background:#FFFFFF;">
@@ -690,7 +691,8 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
           <a href="#consulting" style="font-size:13px; color:#5C6470; white-space:nowrap;">提供サービス</a>
           <a href="#products" style="font-size:13px; color:#5C6470; white-space:nowrap;">AIプロダクト</a>
           <a href="#model" style="font-size:13px; color:#5C6470; white-space:nowrap;">進め方</a>
-          <a href="#insights" style="font-size:13px; color:#5C6470; white-space:nowrap;">インサイト</a>
+          <a href="/blog/" style="font-size:13px; color:#5C6470; white-space:nowrap;">記事</a>
+          <a href="/news/" style="font-size:13px; color:#5C6470; white-space:nowrap;">ニュース</a>
           <a href="/dx-assessment" style="font-size:13px; color:#8A6E33; white-space:nowrap;">無料DX診断</a>
           <a href="#contact" class="btn-dark" style="padding:11px 22px; font-size:13px;">無料相談</a>
         </nav>
@@ -703,7 +705,8 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
             <a href="#consulting">提供サービス</a>
             <a href="#products">AIプロダクト</a>
             <a href="#model">進め方</a>
-            <a href="#insights">インサイト</a>
+            <a href="/blog/">記事</a>
+            <a href="/news/">ニュース</a>
             <a href="/dx-assessment" class="gold">無料DX診断</a>
           </nav>
         </details>
@@ -1054,16 +1057,23 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
     <p class="sub-l">相談の前に、<a href="/dx-assessment">5分の無料DX診断</a>で自社の状況を確かめることもできます</p>
   </div>
 
-  <!-- ═══════ インサイト ═══════ -->
+  <!-- ═══════ ニュース ═══════ -->
+  <section id="news" class="hairline-t rail"><div class="wrap">
+    <div class="sec-head"><div><h2 class="sec">ニュース</h2></div><p class="sec-lead">関税・規制や技術の新しい動きと、日本企業の実務への影響をお伝えします。</p></div>
+    <ul class="news-list"><li><a class="news-link" href="/news/japan-tariff-impact"><time datetime="2026-09-22">2026.09.22</time><div><span class="news-category">関税・日本企業</span><h3>日本企業への関税影響｜2026年9月22日時点の確認事項</h3><p>IEEPA関税還付のCAPE第3段階は10月6日開始予定。対象条件と、日本企業が契約・調達で確認する項目をまとめました。</p></div><span class="news-arrow" aria-hidden="true">→</span></a></li></ul>
+    <p style="margin:28px 0 0;"><a href="/news/" style="font-size:13px;color:#8A6E33;font-weight:700;border-bottom:1px solid #D6D0C2;padding-bottom:2px;">すべてのニュースを見る <span aria-hidden="true">→</span></a></p>
+  </div></section>
+
+  <!-- ═══════ 記事 ═══════ -->
   <section id="insights" class="hairline-t rail">
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <h2 class="sec">インサイト</h2>
+          <h2 class="sec">記事</h2>
         </div>
-        <p class="sec-lead"><b style="color:#14181F;">PoCが本番の業務に進まない原因や、海外拠点のIT組織の組み方について、Wingの考え方を記事で公開しています。</b>AIエージェントの導入と運用のルール、輸出入の業務の流れと自動化できる作業についても書いています。</p>
+        <p class="sec-lead">AIによる業務改善、調達・貿易、穀物取引の解説。分析の手順や技術の選び方を、具体例と出典を添えて紹介します。</p>
       </div>
-      <div class="ins-g"><a class="ins" href="/blog/japan-tariff-impact"><p class="cat">関税・日本企業</p><h3>日本企業への関税影響｜2026年9月22日時点の確認事項</h3><p>米国関税の変更は、日本企業の粗利・受注・調達・資金繰りにどう影響するか。IEEPA還付の新日程と対象条件、品目別に確認する項目を整理します。</p></a><a class="ins" href="/blog/consulting-tech-ai"><p class="cat">AI・コンサルティング</p><h3>コンサルテックとは？AIで変わる調査・分析・業務改善</h3><p>AIによるコンサルティングは何を変えるのか。調査・数値分析・施策設計・実装の役割分担、導入効果の測り方、発注時の確認事項を具体的に解説します。</p></a><a class="ins" href="/blog/grain-supply-chain-risk"><p class="cat">穀物・サプライチェーン</p><h3>コメ・小麦取引のサプライチェーンリスク｜調達・在庫・物流の分析方法</h3><p>穀物取引のリスクを、天候、品質、調達先、価格・為替、物流、在庫に分解。コメと小麦の違いを踏まえ、欠品日数と調達費用を試算する方法を解説します。</p></a><a class="ins" href="/blog/grain-farming-technology"><p class="cat">穀物・農業技術</p><h3>コメ・小麦の栽培・収穫に使う先端技術｜AI・自動運転・可変施肥</h3><p>コメ・小麦の上流工程を変える自動運転農機、センシング、可変施肥、生育予測を解説。市販技術と研究段階を分け、導入条件と取引へのつなぎ方を整理します。</p></a>
+      <div class="ins-g"><a class="ins" href="/blog/consulting-tech-ai"><p class="cat">AI・コンサルティング</p><h3>コンサルテックとは？AIで変わる調査・分析・業務改善</h3><p>AIによるコンサルティングは何を変えるのか。調査・数値分析・施策設計・実装の役割分担、導入効果の測り方、発注時の確認事項を具体的に解説します。</p></a><a class="ins" href="/blog/grain-supply-chain-risk"><p class="cat">穀物・サプライチェーン</p><h3>コメ・小麦取引のサプライチェーンリスク｜調達・在庫・物流の分析方法</h3><p>穀物取引のリスクを、天候、品質、調達先、価格・為替、物流、在庫に分解。コメと小麦の違いを踏まえ、欠品日数と調達費用を試算する方法を解説します。</p></a><a class="ins" href="/blog/grain-farming-technology"><p class="cat">穀物・農業技術</p><h3>コメ・小麦の栽培・収穫に使う先端技術｜AI・自動運転・可変施肥</h3><p>コメ・小麦の上流工程を変える自動運転農機、センシング、可変施肥、生育予測を解説。市販技術と研究段階を分け、導入条件と取引へのつなぎ方を整理します。</p></a>
         <a class="ins" href="/blog/poc-death-dx-consulting"><p class="cat">DX STRATEGY</p><h3>AI導入が本番稼働に届かない理由｜PoC失敗の原因と対策</h3><p>PoCが本番に進まない5つの原因と、段階の区切り方。</p></a>
         <a class="ins" href="/blog/dx-consulting-guide"><p class="cat">DX STRATEGY</p><h3>DXコンサルティングとは？失敗しない選び方と成功のポイント</h3><p>大手と専門ファームの違い、選ぶときの5つの確認点、よくある失敗。</p></a>
         <a class="ins" href="/blog/global-it-organization-model"><p class="cat">IT ORGANIZATION</p><h3>グローバル企業のIT組織モデル｜海外拠点のIT機能設計</h3><p>集中型・分担型・自律型の3モデルの違いと、自社に合うモデルの選び方。</p></a>
@@ -1132,7 +1142,7 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
   <footer class="rail">
     <div class="wrap">
       <div>© 2026 Wing. All rights reserved.</div>
-      <div><a href="/blog/">インサイト</a>　｜　<a href="/about">会社概要</a>　｜　<a href="/privacy">プライバシーポリシー</a></div>
+      <div><a href="/blog/">記事</a>　｜　<a href="/news/">ニュース</a>　｜　<a href="/about">会社概要</a>　｜　<a href="/privacy">プライバシーポリシー</a></div>
     </div>
   </footer>
 

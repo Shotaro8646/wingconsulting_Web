@@ -91,3 +91,16 @@
 # 合言葉を忘れると入れなくなった。ログインはアプリの1回だけにする。
 # データは Supabase の行レベル権限で守られていて、ログインしないと1件も読めない。
 # 見えるようになるのはログイン画面だけで、検索には上の noindex で載せない。
+
+# 関税の更新情報をニュースへ移した。以前の記事URLも同じ内容へ案内する。
+[[redirects]]
+  from = "/blog/japan-tariff-impact"
+  to = "/news/japan-tariff-impact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/japan-tariff-impact.html"
+  to = "/news/japan-tariff-impact"
+  status = 301
+  force = true

@@ -12,7 +12,7 @@
 - [ChemOS](https://wingconsulting.org/chemos-guide): PFAS・chemSHERPA対応の自動化。含有物質の自動解析からサプライヤー照会・提出物作成まで証跡付きで完走
 - [StayPath](https://wingconsulting.org/staypath-guide): 外国人材受入支援の業務管理システム。登録支援機関・監理団体向けに、在留期限の走査、申請書類の展開、様式差し込みによる契約書作成と照合、面談録音からの要約を自動化。デモ公開中
 
-## 主要インサイト
+## 主な記事
 - [貿易DX完全ガイド](https://wingconsulting.org/blog/trade-dx-complete-guide): 輸出入の全業務フローとAI活用による自動化
 - [HSコードの調べ方・決め方](https://wingconsulting.org/blog/hs-code-guide): 品目分類の基礎から事前教示・EPA活用まで
 - [安全保障貿易管理と該非判定](https://wingconsulting.org/blog/export-control-ai): リスト規制・キャッチオール規制とAIによる効率化
@@ -25,14 +25,18 @@
 - [通関DXとは](https://wingconsulting.org/blog/customs-dx-guide): AI-OCR・次世代NACCS・電子通関
 - [PFAS規制 2026年最新動向](https://wingconsulting.org/blog/pfas-global-regulation-2026): 米国TSCA・EU PPWR・日本化審法
 - [グローバル企業のIT組織モデル](https://wingconsulting.org/blog/global-it-organization-model): 集中型・分担型・自律型の比較
-- [インサイト一覧](https://wingconsulting.org/blog/): 全記事のカテゴリ別索引
+- [記事一覧](https://wingconsulting.org/blog/): 全記事のカテゴリ別索引
 
 ## 補足
 - サイトは日本語（ja）。全ページ静的HTMLでサーバーサイドレンダリング済み。
 - 記事にはdatePublished / dateModifiedをJSON-LDと本文の双方に記載。
 
-## 関税・AI・穀物（2026-09-22追加）
-- [日本企業への関税影響｜2026年9月22日時点の確認事項](https://wingconsulting.org/blog/japan-tariff-impact): 米国関税の変更は、日本企業の粗利・受注・調達・資金繰りにどう影響するか。IEEPA還付の新日程と対象条件、品目別に確認する項目を整理します。
+## AI・穀物の解説記事
 - [コンサルテックとは？AIで変わる調査・分析・業務改善](https://wingconsulting.org/blog/consulting-tech-ai): AIによるコンサルティングは何を変えるのか。調査・数値分析・施策設計・実装の役割分担、導入効果の測り方、発注時の確認事項を具体的に解説します。
 - [コメ・小麦取引のサプライチェーンリスク｜調達・在庫・物流の分析方法](https://wingconsulting.org/blog/grain-supply-chain-risk): 穀物取引のリスクを、天候、品質、調達先、価格・為替、物流、在庫に分解。コメと小麦の違いを踏まえ、欠品日数と調達費用を試算する方法を解説します。
 - [コメ・小麦の栽培・収穫に使う先端技術｜AI・自動運転・可変施肥](https://wingconsulting.org/blog/grain-farming-technology): コメ・小麦の上流工程を変える自動運転農機、センシング、可変施肥、生育予測を解説。市販技術と研究段階を分け、導入条件と取引へのつなぎ方を整理します。
+
+## ニュース
+- [ニュース一覧](https://wingconsulting.org/news/): 関税・規制・技術の重要な更新を日付順に掲載
+- [日本企業への関税影響｜2026年9月22日時点の確認事項](https://wingconsulting.org/news/japan-tariff-impact): 米国関税の変更は、日本企業の粗利・受注・調達・資金繰りにどう影響するか。IEEPA還付の新日程と対象条件、品目別に確認する項目を整理します。
+- [関税ニュースのRSS](https://wingconsulting.org/tariff-news.xml): 重要な変更を確認できたときに配信

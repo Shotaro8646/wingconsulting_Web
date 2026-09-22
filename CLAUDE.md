@@ -16,7 +16,8 @@ wingconsulting.org の公開サイト。**ビルド工程を持たない静的 H
 | 場所 | 中身 |
 |---|---|
 | ルート直下 | `index` / `about` / `privacy` / `dx-assessment` と製品ページ `*-guide.html` |
-| `blog/` | 記事39本 + `index.html`（カテゴリ別索引） |
+| `blog/` | 業務解説・分析の記事 + `index.html`（テーマ別索引） |
+| `news/` | 制度・技術などの更新情報 + `index.html`（新着順） |
 | `staypath/` | 別リポジトリでビルドした SPA の成果物（後述） |
 | `netlify/edge-functions/` | StayPath の入口認証 |
 | `images/og/` | 記事ごとの OG 画像。1200x630、ファイル名は記事スラッグと一致 |
@@ -77,10 +78,12 @@ Google Drive 配下で同期事故が起きやすいので、**編集は `~/dev/
 
 1. `sitemap.xml` … `<loc>` と `<lastmod>`
 2. `llms.txt` … AI 検索向けの索引。主要記事は1行要約を添える
-3. `blog/index.html` … 記事一覧のカード
+3. `blog/index.html` または `news/index.html` … 内容に合う一覧。ニュースはトップのニュース欄にも載せる
 4. `images/og/<スラッグ>.png` … 1200x630
-5. 記事内の JSON-LD … `Article` / `BreadcrumbList` / `WebPage`。
+5. 記事内の JSON-LD … `Article`（ニュースは `NewsArticle`）/ `BreadcrumbList` / `WebPage`。
    `datePublished` と `dateModified` は **JSON-LD と本文の双方**に書く
+
+記事とニュースの分け方・更新時の注意は `docs/editorial-updates.md` にまとめている。
 
 ## SEO / GEO の方針
 
