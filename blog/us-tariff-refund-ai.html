@@ -7,10 +7,10 @@
 
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>AIで米国向けの取引を洗い出し、払った関税を回収する | Wing Blog</title>
-<meta content="IEEPA関税の還付は自動では戻りません。米国の申告データから対象の申告を洗い出し、清算日から請求の段階と期限を出す手順です。経緯の年表、期限の試算、よくある誤解を載せています。" name="description"/>
+<meta content="IEEPA関税の還付は自動では戻りません。米国の申告データから対象の申告を洗い出し、請求の受付条件を確かめ、清算日から期限を計算する手順です。経緯の年表、期限の試算、よくある誤解を載せています。" name="description"/>
 <meta content="IEEPA 関税 還付, CAPE, 米国 関税 還付 手続き, ES-003, 第99類, 清算 80日, 米国 輸出 商社, AI" name="keywords"/>
 <meta content="AIで米国向けの取引を洗い出し、払った関税を回収する" property="og:title"/>
-<meta content="IEEPA関税の還付は自動では戻りません。米国の申告データから対象の申告を洗い出し、清算日から請求の段階と期限を出す手順です。経緯の年表、期限の試算、よくある誤解を載せています。" property="og:description"/>
+<meta content="IEEPA関税の還付は自動では戻りません。米国の申告データから対象の申告を洗い出し、請求の受付条件を確かめ、清算日から期限を計算する手順です。経緯の年表、期限の試算、よくある誤解を載せています。" property="og:description"/>
 <meta content="article" property="og:type"/>
 <meta content="https://wingconsulting.org/blog/us-tariff-refund-ai" property="og:url"/>
 <meta content="ja_JP" property="og:locale"/>
@@ -20,7 +20,7 @@
 <meta content="Wing" property="og:site_name"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="AIで米国向けの取引を洗い出し、払った関税を回収する" name="twitter:title"/>
-<meta content="IEEPA関税の還付は自動では戻りません。米国の申告データから対象の申告を洗い出し、清算日から請求の段階と期限を出す手順です。経緯の年表、期限の試算、よくある誤解を載せています。" name="twitter:description"/>
+<meta content="IEEPA関税の還付は自動では戻りません。米国の申告データから対象の申告を洗い出し、請求の受付条件を確かめ、清算日から期限を計算する手順です。経緯の年表、期限の試算、よくある誤解を載せています。" name="twitter:description"/>
 <meta content="https://wingconsulting.org/images/og/us-tariff-refund-ai.png" name="twitter:image"/>
 <link href="https://wingconsulting.org/blog/us-tariff-refund-ai" rel="canonical"/>
 <script type="application/ld+json">
@@ -28,7 +28,7 @@
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "AIで米国向けの取引を洗い出し、払った関税を回収する",
-  "description": "IEEPA関税の還付は自動では戻りません。米国の申告データから対象の申告を洗い出し、清算日から請求の段階と期限を出す手順です。経緯の年表、期限の試算、よくある誤解を載せています。",
+  "description": "IEEPA関税の還付は自動では戻りません。米国の申告データから対象の申告を洗い出し、請求の受付条件を確かめ、清算日から期限を計算する手順です。経緯の年表、期限の試算、よくある誤解を載せています。",
   "author": {
     "@type": "Organization",
     "name": "Wing編集部",
@@ -273,8 +273,8 @@
 <div class="summary">
 <p class="summary-title">要点</p>
 <ul>
-<li>IEEPA 関税の還付は自動では戻りません。請求できるのは、米国の輸入者か、その申告をした通関業者です。</li>
-<li>いま受け付けているのは、清算の前か清算から80日以内の申告などです。第3段階は10月6日開始予定ですが、訴訟・還付命令・IOR番号の提出に関する条件があります（2026年9月22日確認）。</li>
+<li>IEEPA 関税の還付は自動では戻りません。<strong>請求できるのは、米国の輸入者か、その申告をした通関業者です。</strong></li>
+<li>いま受け付けているのは、清算の前か清算から80日以内の申告などです。<strong>第3段階は10月6日開始予定</strong>ですが、訴訟・還付命令・IOR番号の提出に関する条件があります（2026年9月22日確認）。</li>
 <li>申告データから IEEPA 関税の行と期限を整理し、受付条件に合うかを輸入者・通関業者が確認します。</li>
 </ul>
 </div>
@@ -283,7 +283,7 @@
 
 <p>ただ、還付は自動では戻りません。請求できるのは、米国で輸入者として申告した者（IOR）か、その申告をした通関業者です。対象の申告番号を一覧にして、CBP のシステムから請求します。この記事では、その洗い出しを AI とプログラムでどう進めるか、日本の輸出者が何を確かめるかを説明します。</p>
 
-<p>なお、IEEPA 関税がなくなったあとも、別の法律に基づく関税はかかっています。還付の対象は IEEPA 関税だけです。</p>
+<p>なお、IEEPA 関税がなくなったあとも、別の法律に基づく関税はかかっています。<strong>還付の対象は IEEPA 関税だけです。</strong></p>
 
 <h2>これまでの経緯</h2>
 
@@ -349,7 +349,7 @@
 <figcaption>表1　申告の状態と、還付の受付（2026年9月22日確認）</figcaption>
 </figure>
 
-<p>JETROの9月17日報道によると、第3段階は、還付訴訟を提起してCITの還付命令を得たIORが、7月30日までにIOR番号をCBPに提出していることが条件です。その後の提出分の手続きは今後の発表待ちです。清算日だけで対象とは判定できません。また、戻し税（drawback）を請求中の申告や、異議申立て（protest）の手続中の申告などは、いまの受付の対象外です。</p>
+<p>JETROの9月17日報道によると、第3段階は、還付訴訟を提起してCITの還付命令を得たIORが、<strong>7月30日までにIOR番号をCBPに提出していること</strong>が条件です。その後の提出分の手続きは今後の発表待ちです。<strong>清算日だけで対象とは判定できません。</strong>また、戻し税（drawback）を請求中の申告や、異議申立て（protest）の手続中の申告などは、いまの受付の対象外です。</p>
 
 <h2>作業が止まる理由</h2>
 
@@ -422,7 +422,7 @@
 <li class="step">
 <div class="step-no">3</div>
 <div>
-<p class="step-name">清算日から段階と期限を出す</p>
+<p class="step-name">清算日から期限の目安を出す</p>
 <div class="roles">
 <p class="role"><span class="chip chip-prog">プログラム</span><span>清算日に80日と180日を足し、期限の目安を出す。受付条件は別に確認する</span></p>
 </div>
@@ -466,15 +466,15 @@
 
 <p>米国の税関の電子申告システム（ACE）には、申告の明細を出す ES-003 というレポートがあり、IEEPA 関税の行には印が付いています。まず、輸入者か通関業者に、このレポートを出してもらうよう頼みます。</p>
 
-<p>取引先や通関業者によって、届くファイルの形式はばらばらです。列の名前や並びが違うファイルは、AI で読み取って1つの表にそろえます。そろえたあとは、申告ごとの関税額の合計が元のファイルと合うかを計算で確かめます。</p>
+<p>取引先や通関業者によって、届くファイルの形式はばらばらです。列の名前や並びが違うファイルは、AI で読み取って1つの表にそろえます。そろえたあとは、<strong>申告ごとの関税額の合計が元のファイルと合うか</strong>を計算で確かめます。</p>
 
 <h3>2. IEEPA 関税の行を抜き出す</h3>
 
 <p>表2の番号をもとに、IEEPA 関税の行をプログラムで抜き出し、申告ごとに関税額を足します。番号の一覧は変わることがあるので、使う前に CBP の案内で確かめます。232条の番号は外します。</p>
 
-<h3>3. 清算日から段階と期限を出す</h3>
+<h3>3. 清算日から期限の目安を出す</h3>
 
-<p>申告ごとの清算日から、請求できる段階と期限を計算します。清算から80日を過ぎると、第1段階の対象から外れます。異議申立ての期限は、清算から180日です。日付の足し算なので、プログラムで間違いなく出せます。</p>
+<p>申告ごとの清算日から、期限の目安を計算します。清算から80日を過ぎると、第1段階の対象から外れます。異議申立ての期限は、清算から180日です。計算結果は通関業者と確かめ、<strong>訴訟や還付命令などの受付条件は別に確認します。</strong></p>
 
 <figure class="tbl">
 <div class="table-wrap" tabindex="0" role="region" aria-label="申告ごとの請求の段階と期限の表（横にスクロールできます）">
@@ -537,7 +537,7 @@
 <li>請求そのもの。輸入者か通関業者が行います。</li>
 </ul>
 
-<p>顧客名や金額が入ったデータを外部の AI サービスに入れる場合は、入力した内容が学習に使われない契約や設定になっているかを、先に確かめます。</p>
+<p>顧客名や金額が入ったデータを外部の AI サービスに入れる場合は、<strong>入力した内容が学習に使われない契約や設定</strong>になっているかを、先に確かめます。</p>
 
 <h2>社長が決めること</h2>
 
@@ -582,8 +582,8 @@
 <aside aria-label="無料診断の案内">
 <section style="max-width:800px;margin:3rem auto 0;padding:0 1.5rem;font-family:'Noto Sans JP',sans-serif;">
   <div style="border:1px solid #E8E5DE;border-left:3px solid #A98A4B;background:#FBFAF7;padding:1.5rem 1.6rem;">
-    <p style="margin:0 0 .5rem;font-size:.95rem;font-weight:700;color:#14181F;line-height:1.7;">自社は今、どの段階にいるのか。</p>
-    <p style="margin:0 0 1.1rem;font-size:.82rem;color:#5C6470;line-height:1.95;">業種・規模・IT環境を入力するだけで、IT投資比率の業界比較とDX成熟度、組織のボトルネック類型と推奨アクションを自動で診断します。</p>
+    <p style="margin:0 0 .5rem;font-size:.95rem;font-weight:700;color:#14181F;line-height:1.7;">自社のIT投資と業務の課題を確かめる</p>
+    <p style="margin:0 0 1.1rem;font-size:.82rem;color:#5C6470;line-height:1.95;">業種・規模・IT環境への回答をもとに、IT投資の業界比較と、優先して見直す業務を確認できます。</p>
     <a href="/dx-assessment" style="display:inline-block;background:#14181F;color:#fff;font-size:.8rem;font-weight:700;letter-spacing:.04em;padding:.85rem 1.7rem;text-decoration:none;">無料診断を受ける（5分・登録不要）</a>
   </div>
 </section>
