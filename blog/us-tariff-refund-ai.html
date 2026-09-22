@@ -3,13 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KN7NWHFK9G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-KN7NWHFK9G');
-</script>
+<script src="/assets/analytics.js"></script>
 
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>AIで米国向けの取引を洗い出し、払った関税を回収する | Wing Blog</title>
@@ -50,7 +44,7 @@
     }
   },
   "datePublished": "2026-09-13",
-  "dateModified": "2026-09-13",
+  "dateModified": "2026-09-22",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://wingconsulting.org/blog/us-tariff-refund-ai"
@@ -259,7 +253,7 @@
 <div class="hero-inner">
 <div class="hero-meta">
 <span class="hero-tag">貿易DX</span>
-<time class="hero-date" datetime="2026-09-13">2026.09.13</time>
+<span class="hero-date">公開 <time datetime="2026-09-13">2026.09.13</time> ／ 更新 <time datetime="2026-09-22">2026.09.22</time></span>
 </div>
 <h1><span class="nb">AIで米国向けの取引を洗い出し、</span><span class="nb">払った関税を回収する</span></h1>
 <p class="hero-lead"><span class="nb">IEEPA 関税の還付は、自動では戻りません。</span><span class="nb">対象の申告を洗い出して請求するまでの手順と、</span><span class="nb">日本の輸出者が確かめることです。</span></p>
@@ -274,14 +268,14 @@
 </div>
 </div>
 
-<article class="article">
+<article class="article"><p><a href="/blog/japan-tariff-impact">日本企業への関税影響と更新履歴を見る →</a></p>
 
 <div class="summary">
 <p class="summary-title">要点</p>
 <ul>
 <li>IEEPA 関税の還付は自動では戻りません。請求できるのは、米国の輸入者か、その申告をした通関業者です。</li>
-<li>いま受け付けているのは、清算の前か清算から80日以内の申告などです。清算が確定した申告の受付時期は決まっていません（2026年9月12日時点）。</li>
-<li>申告データから IEEPA 関税の行と清算日を抜き出せば、請求できる申告と期限はプログラムで出せます。</li>
+<li>いま受け付けているのは、清算の前か清算から80日以内の申告などです。第3段階は10月6日開始予定ですが、訴訟・還付命令・IOR番号の提出に関する条件があります（2026年9月22日確認）。</li>
+<li>申告データから IEEPA 関税の行と期限を整理し、受付条件に合うかを輸入者・通関業者が確認します。</li>
 </ul>
 </div>
 
@@ -301,8 +295,8 @@
 <li><time datetime="2026-04-20">4月20日</time><p>CBP が、CAPE と呼ぶ仕組みで還付の受付を始めた（第1段階）</p></li>
 <li><time datetime="2026-06">6月</time><p>政府が、国際貿易裁判所の命令に対して控訴した</p></li>
 <li><time datetime="2026-06-29">6月29日</time><p>還付の受付の第2段階が始まった</p></li>
-<li><time datetime="2026-07-24">7月24日</time><p>通商法301条に基づく措置が始まった。日本からの輸入品には、通常の税率と合わせて12.5%がかかる（通常の税率が12.5%以上の品目と、通商拡大法232条の対象品目は上乗せなし）</p></li>
-<li><time datetime="2026-08">8月下旬</time><p>清算が確定した申告を扱う第3段階の開始が延期された。9月12日時点で、新しい日程は出ていない</p></li>
+<li><time datetime="2026-07-24">7月24日</time><p>通商法301条に基づく措置が始まった。対象品目や除外条件があり、個別の適用は原産地と品目番号で確認する</p></li>
+<li><time datetime="2026-08">8月下旬</time><p>清算が確定した申告を扱う第3段階の開始が延期された。その後、9月15日の報告で10月6日の開始予定が示された</p></li>
 </ol>
 <figcaption>図1　還付をめぐる主な出来事（2026年）</figcaption>
 </figure>
@@ -348,14 +342,14 @@
 <tbody>
 <tr><td>清算の前、または清算から80日以内</td><td>第1段階。2026年4月20日から受け付けている</td></tr>
 <tr><td>後から金額を確定させる申告（reconciliation）の対象で、その申告をまだ出していないもの</td><td>第2段階。2026年6月29日から受け付けている</td></tr>
-<tr><td>清算が確定したもの</td><td>第3段階。受付の時期は決まっていない</td></tr>
+<tr><td>清算が確定したもの</td><td>第3段階。10月6日開始予定。下記の対象条件を満たす輸入者に限る</td></tr>
 </tbody>
 </table>
 </div>
-<figcaption>表1　申告の状態と、還付の受付（2026年9月12日時点）</figcaption>
+<figcaption>表1　申告の状態と、還付の受付（2026年9月22日確認）</figcaption>
 </figure>
 
-<p>清算が確定した申告の扱いは、国際貿易裁判所の命令に対する政府の控訴が続いていて、まだ決まっていません。また、戻し税（drawback）を請求中の申告や、異議申立て（protest）の手続中の申告などは、いまの受付の対象外です。</p>
+<p>JETROの9月17日報道によると、第3段階は、還付訴訟を提起してCITの還付命令を得たIORが、7月30日までにIOR番号をCBPに提出していることが条件です。その後の提出分の手続きは今後の発表待ちです。清算日だけで対象とは判定できません。また、戻し税（drawback）を請求中の申告や、異議申立て（protest）の手続中の申告などは、いまの受付の対象外です。</p>
 
 <h2>作業が止まる理由</h2>
 
@@ -390,11 +384,11 @@
 <p class="calc-title" id="calc-title">清算日からの期限の試算</p>
 <div class="calc-grid2" role="group" aria-labelledby="calc-title">
 <label for="liq">清算日</label><input id="liq" type="date" value="2026-07-01"/>
-<label for="base">基準日</label><input id="base" type="date" value="2026-09-13"/>
+<label for="base">基準日</label><input id="base" type="date" value="2026-09-22"/>
 </div>
 <div class="calc-out" aria-live="polite">
-<div class="calc-row total"><span>第1段階の期限（清算日から80日）</span><b id="o-80">2026年9月19日（あと6日）</b></div>
-<div class="calc-row"><span>異議申立ての期限（清算日から180日）</span><b id="o-180">2026年12月28日（あと106日）</b></div>
+<div class="calc-row total"><span>第1段階の期限（清算日から80日）</span><b id="o-80">2026年9月19日（3日経過）</b></div>
+<div class="calc-row"><span>異議申立ての期限（清算日から180日）</span><b id="o-180">2026年12月28日（あと97日）</b></div>
 </div>
 <p class="fig-note">暦の日数で足した目安です。実際の期限は、CBP の案内と通関業者で確かめます。入力した日付は、この画面の中だけで計算します。</p>
 </figure>
@@ -430,7 +424,7 @@
 <div>
 <p class="step-name">清算日から段階と期限を出す</p>
 <div class="roles">
-<p class="role"><span class="chip chip-prog">プログラム</span><span>清算日に80日と180日を足し、請求できる段階と期限を出す</span></p>
+<p class="role"><span class="chip chip-prog">プログラム</span><span>清算日に80日と180日を足し、期限の目安を出す。受付条件は別に確認する</span></p>
 </div>
 </div>
 </li>
@@ -491,7 +485,7 @@
 <tbody>
 <tr><td>A</td><td>清算の前</td><td class="num">12,400ドル</td><td class="nowrap">第1段階</td><td>清算されたら、その日から80日以内</td></tr>
 <tr><td>B</td><td>2026年7月1日に清算</td><td class="num">8,300ドル</td><td class="nowrap">第1段階</td><td>第1段階は9月19日まで。異議申立ては12月28日まで</td></tr>
-<tr><td>C</td><td>2026年3月2日に清算</td><td class="num">5,100ドル</td><td class="nowrap">第3段階</td><td>受付の時期は決まっていない</td></tr>
+<tr><td>C</td><td>2026年3月2日に清算</td><td class="num">5,100ドル</td><td class="nowrap">第3段階</td><td>10月6日開始予定。訴訟・還付命令・IOR番号提出の条件を要確認</td></tr>
 </tbody>
 </table>
 </div>
@@ -555,7 +549,7 @@
 
 <h2>出典</h2>
 
-<ul class="sources">
+<ul class="sources"><li>JETRO「<a href="https://www.jetro.go.jp/biznews/2026/09/6180b81e4eaf5e18.html">米税関、IEEPA関税還付「フェーズ3」の申請受け付けを10月6日から開始</a>」（2026年9月17日）。今回の更新はこの報道に基づく。申請前にCBPの正式案内を確認する。</li>
 <li>米国連邦最高裁判所「<a href="https://www.supremecourt.gov/opinions/25pdf/24-1287_4gcj.pdf">Learning Resources, Inc. v. Trump</a>」（2026年2月20日）</li>
 <li>CBP「<a href="https://www.cbp.gov/trade/programs-administration/trade-remedies/ieepa-duty-refunds">IEEPA Duty Refunds</a>」、「<a href="https://www.cbp.gov/sites/default/files/2026-07/26_0723_trade_information_notice_CAPE.pdf">CAPE に関する案内</a>」（2026年7月更新）</li>
 <li>CBP「<a href="https://content.govdelivery.com/accounts/USDHSCBP/bulletins/40b11c9">CSMS #67834313</a>」（2026年2月22日）、「<a href="https://content.govdelivery.com/accounts/USDHSCBP/bulletins/412cc7f">CSMS #68340863</a>」（2026年4月13日）、「<a href="https://content.govdelivery.com/accounts/USDHSCBP/bulletins/41de055">CSMS #69066837</a>」（2026年6月29日）</li>

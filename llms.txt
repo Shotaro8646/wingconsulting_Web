@@ -18,7 +18,7 @@
 - [安全保障貿易管理と該非判定](https://wingconsulting.org/blog/export-control-ai): リスト規制・キャッチオール規制とAIによる効率化
 - [輸入申告の洗い直しで関税を減らす](https://wingconsulting.org/blog/import-duty-ai): RCEPの税率の使い忘れと関税の払いすぎを、過去の輸入申告からAIとプログラムで探す手順。実行関税率表から読み出した税率、差額の試算、更正の請求などの手続の比較
 - [品目ごとの原価と値上げの根拠](https://wingconsulting.org/blog/landed-cost-ai): 運賃・通関の請求書を品目ごとの原価に割り振り、為替・仕入値・運賃・関税の上昇を分けて価格交渉の根拠にする手順。原価と減った粗利の試算
-- [米国のIEEPA関税の還付](https://wingconsulting.org/blog/us-tariff-refund-ai): CAPEで請求できる申告の洗い出し、清算日からの請求期限、請求する人とお金の流れ（2026年9月12日時点）
+- [米国IEEPA関税の還付](https://wingconsulting.org/blog/us-tariff-refund-ai): 2026-09-22更新。CAPE第3段階は10月6日開始予定。対象条件と申告データの確認方法。
 - [AIエージェント完全ガイド](https://wingconsulting.org/blog/ai-agent-guide): 概念から導入・ガバナンスまでの7ステップ
 - [AI導入が本番稼働に届かない理由](https://wingconsulting.org/blog/poc-death-dx-consulting): PoC失敗の5大原因と対策
 - [DXコンサルティングの選び方](https://wingconsulting.org/blog/dx-consulting-guide): 大手と専門ファームの違い、失敗パターン
@@ -30,3 +30,9 @@
 ## 補足
 - サイトは日本語（ja）。全ページ静的HTMLでサーバーサイドレンダリング済み。
 - 記事にはdatePublished / dateModifiedをJSON-LDと本文の双方に記載。
+
+## 関税・AI・穀物（2026-09-22追加）
+- [日本企業への関税影響｜2026年9月22日時点の確認事項](https://wingconsulting.org/blog/japan-tariff-impact): 米国関税の変更は、日本企業の粗利・受注・調達・資金繰りにどう影響するか。IEEPA還付の新日程と対象条件、品目別に確認する項目を整理します。
+- [コンサルテックとは？AIで変わる調査・分析・業務改善](https://wingconsulting.org/blog/consulting-tech-ai): AIによるコンサルティングは何を変えるのか。調査・数値分析・施策設計・実装の役割分担、導入効果の測り方、発注時の確認事項を具体的に解説します。
+- [コメ・小麦取引のサプライチェーンリスク｜調達・在庫・物流の分析方法](https://wingconsulting.org/blog/grain-supply-chain-risk): 穀物取引のリスクを、天候、品質、調達先、価格・為替、物流、在庫に分解。コメと小麦の違いを踏まえ、欠品日数と調達費用を試算する方法を解説します。
+- [コメ・小麦の栽培・収穫に使う先端技術｜AI・自動運転・可変施肥](https://wingconsulting.org/blog/grain-farming-technology): コメ・小麦の上流工程を変える自動運転農機、センシング、可変施肥、生育予測を解説。市販技術と研究段階を分け、導入条件と取引へのつなぎ方を整理します。
