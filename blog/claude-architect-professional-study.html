@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><script defer src="/assets/analytics.js"></script><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CCAR-P試験対策ノート｜復習した論点・英語用語・練習問題 | Wing</title><meta name="description" content="Claude Certified Architect – Professionalの学習記録をもとに、設計・キャッシュ・バッチ・権限・評価を整理。英語用語と解説付きの独自問題で、判断の理由を確認できます。"><link rel="canonical" href="https://wingconsulting.org/blog/claude-architect-professional-study"><link rel="stylesheet" href="/assets/editorial.css"><link rel="stylesheet" href="/assets/certification-study.css">
+<meta property="og:type" content="article"><meta property="og:title" content="CCAR-P試験対策ノート｜復習した論点・英語用語・練習問題"><meta property="og:description" content="Claude Certified Architect – Professionalの学習記録をもとに、設計・キャッシュ・バッチ・権限・評価を整理。英語用語と解説付きの独自問題で、判断の理由を確認できます。"><meta property="og:url" content="https://wingconsulting.org/blog/claude-architect-professional-study"><meta property="og:image" content="https://wingconsulting.org/images/og/claude-architect-professional-study.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:locale" content="ja_JP"><meta property="og:site_name" content="Wing"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://wingconsulting.org/images/og/claude-architect-professional-study.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "CCAR-P試験対策ノート｜復習した論点・英語用語・練習問題", "description": "Claude Certified Architect – Professionalの学習記録をもとに、設計・キャッシュ・バッチ・権限・評価を整理。英語用語と解説付きの独自問題で、判断の理由を確認できます。", "datePublished": "2026-09-22", "dateModified": "2026-09-22", "author": {"@type": "Organization", "name": "Wing編集部"}, "publisher": {"@type": "Organization", "name": "Wing", "url": "https://wingconsulting.org"}, "image": "https://wingconsulting.org/images/og/claude-architect-professional-study.png", "mainEntityOfPage": {"@id": "https://wingconsulting.org/blog/claude-architect-professional-study"}}, {"@type": "WebPage", "@id": "https://wingconsulting.org/blog/claude-architect-professional-study", "url": "https://wingconsulting.org/blog/claude-architect-professional-study", "name": "CCAR-P試験対策ノート｜復習した論点・英語用語・練習問題", "datePublished": "2026-09-22", "dateModified": "2026-09-22"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Wing", "item": "https://wingconsulting.org"}, {"@type": "ListItem", "position": 2, "name": "記事一覧", "item": "https://wingconsulting.org/blog/"}, {"@type": "ListItem", "position": 3, "name": "CCAR-P試験対策ノート｜復習した論点・英語用語・練習問題", "item": "https://wingconsulting.org/blog/claude-architect-professional-study"}]}]}</script></head>
+<body><header><nav aria-label="サイト"><a class="logo" href="/">Wing</a><a href="/blog/">記事</a><a href="/news/">ニュース</a><a href="/#contact">相談する</a></nav><div class="hero"><p class="tag">Claude認定・学習ノート</p><h1>CCAR-P試験対策ノート｜復習した論点・英語用語・練習問題</h1><p class="lead">Claude Certified Architect – Professionalの学習記録をもとに、設計・キャッシュ・バッチ・権限・評価を整理。英語用語と解説付きの独自問題で、判断の理由を確認できます。</p><p class="meta">Wing編集部 ｜ 公開 <time datetime="2026-09-22">2026年9月22日</time> ｜ 更新 <time datetime="2026-09-22">2026年9月22日</time></p></div></header>
+<main><article><div class="toc" aria-label="目次"><strong>この記事の内容</strong><a href="#scope">試験範囲を7領域で確認する</a><a href="#review">実際に復習した論点</a><a href="#terms">英語で読むための用語集</a><a href="#practice">条件から判断する独自の練習問題</a><a href="#ai">AIに練習問題を作ってもらうときの頼み方</a><a href="#check">受験前の確認</a></div>
+
+<div class="takeaway"><strong>答えと一緒に、「なぜ他の案では足りないか」を説明する</strong><p>CCAR-Pの学習記録をもとに、つまずいた技術の違いと、設計判断の考え方を整理しました。後半の問題は<strong>編集部が作成した学習用の例</strong>です。本試験の問題や再現問題、公式模試ではありません。</p></div>
+<p>取得した資格や申し込み手順は、<a href="/blog/claude-certified-architect-professional">CCAR-Pの取得記録と申し込みガイド</a>で紹介しています。このページでは、受験前に整理した項目を、2026年9月22日時点の公開資料と照合して説明します。公式ガイド全体の代わりになる網羅的な教材ではありません。</p>
+
+<h2 id="scope">試験範囲を7領域で確認する</h2>
+<p>Professionalでは、技術を使う判断と、企業の業務に載せる判断の両方を扱います。公式の比率に対して、右欄には<strong>編集部が考える学習時の問い</strong>を添えました。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Professionalの7領域と学習の問い"><table><thead><tr><th>公式の領域</th><th>比率</th><th>自分に問いかけること</th></tr></thead><tbody>
+<tr><td>Integration（外部連携）</td><td>19％</td><td>どこで実行し、失敗や重複をどう扱うか。</td></tr>
+<tr><td>Solution Design &amp; Architecture（構成設計）</td><td>17％</td><td>必要な品質・応答時間・費用を満たす構成はどれか。</td></tr>
+<tr><td>Evaluation, Testing &amp; Optimization（評価・改善）</td><td>16％</td><td>変更してよくなったことを、同じ条件で確かめられるか。</td></tr>
+<tr><td>Governance, Safety &amp; Risk Management（統制・安全性）</td><td>14％</td><td>誰が承認し、どの操作を止め、どんな記録を残すか。</td></tr>
+<tr><td>Stakeholder Communication &amp; Lifecycle Management（合意・運用管理）</td><td>14％</td><td>利用開始の条件と、引き継ぎ先が決まっているか。</td></tr>
+<tr><td>Claude Models, Prompting &amp; Context Engineering（モデル・入力設計）</td><td>13％</td><td>必要な情報を渡せているか。上限やモデルの仕様を区別できるか。</td></tr>
+<tr><td>Developer Productivity &amp; Operational Enablement（開発・運用の支援）</td><td>7％</td><td>担当者が替わっても、同じ手順で開発・復旧できるか。</td></tr>
+</tbody></table></div>
+<p class="note">領域と比率の出典：<a href="https://anthropic-partners.skilljar.com/claude-certified-architect-professional-certification">CCAR-P公式試験ページ</a>。学習の問いは公式の出題文ではありません。</p>
+
+<h2 id="review">実際に復習した論点</h2>
+<h3>1．コンテキストの上限と、出力の上限を分ける</h3>
+<p>コンテキストは、モデルが処理で扱う入力や履歴などの範囲です。<code>max_tokens</code>は、生成する出力の上限を指定します。<strong>長い資料が入らない問題を、出力の設定だけで解決しようとしない</strong>ことが出発点です。用途に応じ、必要な部分の検索、履歴の整理、資料の分割を検討します。</p>
+<p>また、上限を指定したからといって、その量が必ず出力されるわけではありません。上限値や入力・出力の扱いはモデルごとに公式リファレンスで確かめます。<a href="https://platform.claude.com/docs/en/api/typescript/beta/messages/create">出典：Messages API</a></p>
+<h3>2．ツールを呼ぶ判断と、実際の処理を分ける</h3>
+<p>外部システムへの書き込みでは、「モデルが操作を提案した」ことと「権限を確認して実行した」ことを分けて設計します。顧客データの変更や請求のような操作では、入力値の検証、実行権限、必要な承認、重複防止の責任をアプリケーション側に置きます。</p>
+<p>学習時には、ツール名を覚えるだけでなく、<strong>実行する場所、渡す情報、失敗が返る場所</strong>を図にすると整理できます。戻せない操作ほど、実行前の確認が必要になります。これは本記事で勧める設計の考え方です。</p>
+<h3>3．数値の正しさは、計算と照合で確認する</h3>
+<p>例えばAIで請求書から単価と数量を取り出した後は、プログラムで掛け算をし、元の合計と照合します。差があれば人の確認に回します。<strong>読めた数字と、計算の正しさは別々に確かめる</strong>という整理です。通貨、税、丸め方が違う場合も、例外として明示します。</p>
+<h3>4．キャッシュは設定だけでなく、利用実績を見る</h3>
+<p>プロンプトのキャッシュは、繰り返し使う共通部分を再利用する仕組みです。基本の並びは<code>tools → system → messages</code>で、前の内容を変えると、そこから後のキャッシュに影響します。毎回変わる情報を共通部分へ混ぜると、再利用しづらくなります。</p>
+<p><strong><code>usage.cache_read_input_tokens</code>を確認し、実際に読み出されたかを調べます。</strong>最低限必要な長さなどはモデルによって異なるので、数字を一律に暗記せず、使用モデルの条件と比較します。<a href="https://platform.claude.com/docs/en/build-with-claude/prompt-caching">出典：Prompt caching</a></p>
+<h3>5．バッチ処理は、個々の結果を識別して扱う</h3>
+<p>翌朝までに大量の文書を処理できればよい場合など、即時の返答を求めない仕事では、非同期のバッチが候補になります。結果は<strong><code>custom_id</code>で元の要求と対応させ、成功・失敗・期限切れを個別に確認</strong>します。返ってきた順番だけに頼らないことが要点です。</p>
+<p>失敗分を再処理する場合も、すでに成功したものとの重複を避けます。業務システムへの書き込みが続くなら、そこでも二重反映を防ぐ設計が必要です。<a href="https://platform.claude.com/docs/en/build-with-claude/batch-processing">出典：Batch processing</a></p>
+<h3>6．古い設定の暗記を、現在の仕様と照合する</h3>
+<p>受験前には「temperatureを0にするのはどんなときか」も整理しました。ただし、<strong>現在のAPIではtemperatureの設定をサポートしないモデルがあります</strong>。設定可能なモデルでも、0なら常に同一の答えになるわけではありません。</p>
+<p>「正確にしたいから0」と覚えるだけでは不十分です。使うモデルの対応状況、出力形式の制約、検証用のテストを分けて確認します。<a href="https://platform.claude.com/docs/en/api/typescript/beta/messages/create">出典：Messages APIのtemperatureの説明</a></p>
+
+<h2 id="terms">英語で読むための用語集</h2>
+<p>当時は、日本語で整理した後に英語の用語集を作りました。ここでは学習時の論点に合わせ、業務場面での意味を添えています。</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="学習に使う英語用語"><table><thead><tr><th>英語</th><th>意味</th><th>読むときの着眼点</th></tr></thead><tbody>
+<tr><td>requirement / constraint</td><td>要件／制約</td><td>達成したいことと、越えてはいけない条件を分ける。</td></tr>
+<tr><td>trade-off</td><td>両立しにくい条件の比較</td><td>品質、費用、時間の何を優先するか。</td></tr>
+<tr><td>latency / throughput</td><td>応答までの遅れ／一定時間の処理量</td><td>1件が速いことと、大量に処理できることを分ける。</td></tr>
+<tr><td>grounding / retrieval</td><td>根拠に基づかせること／情報の検索</td><td>必要な情報を見つけ、回答の根拠として使えているか。</td></tr>
+<tr><td>evaluation / baseline</td><td>評価／比較の基準</td><td>変更前と後を、同じ条件で比べているか。</td></tr>
+<tr><td>acceptance criteria</td><td>受け入れの基準</td><td>どの状態なら利用を開始できるか。</td></tr>
+<tr><td>least privilege / authorization</td><td>必要最小限の権限／操作の許可</td><td>その人・処理に、その操作を許してよいか。</td></tr>
+<tr><td>idempotency</td><td>同じ処理を繰り返しても、追加の変更を起こさない性質</td><td>再送で二重発注・二重請求にならないか。</td></tr>
+<tr><td>reversibility / rollback</td><td>元に戻せること／変更を戻す操作</td><td>失敗時に何を、どこまで戻せるか。</td></tr>
+<tr><td>stakeholder / sign-off</td><td>関係者／承認</td><td>利用者、責任者、情報管理部門の誰が判断するか。</td></tr>
+<tr><td>handoff / runbook</td><td>引き継ぎ／運用手順書</td><td>担当者が替わっても対応できるか。</td></tr>
+</tbody></table></div>
+
+<h2 id="practice">条件から判断する独自の練習問題</h2>
+<p>7領域の理解を確かめるための短い例です。実際の試験の長さや難しさを再現するものではありません。答えを開く前に、<strong>選んだ案の理由と、採らない案の欠点</strong>を説明してみてください。</p>
+<section class="practice" aria-labelledby="q1"><h3 id="q1">1．外部連携：注文の二重登録を防ぐ</h3><p>AIが受注メールを読み、販売管理システムへ注文を登録します。登録要求がタイムアウトし、成功したか分かりません。次にどうしますか？</p><ol type="A"><li>返答がないので、そのまま同じ注文をもう一度登録する。</li><li>注文を識別するキーで結果を調べ、再送しても二重登録されない仕組みを使う。</li><li>AIに成功確率を推測させ、確率が低ければ再登録する。</li></ol><details><summary>答えと理由を見る</summary><p><strong>B。</strong>通信の失敗と、登録処理の失敗は一致しません。相手側で登録済みの可能性があります。取引を識別できるキー、結果照会、重複を防ぐ受付処理を組み合わせます。AIの推測では、二重登録の有無を確定できません。</p></details></section>
+<section class="practice" aria-labelledby="q2"><h3 id="q2">2．構成設計：更新される社内規程を答える</h3><p>社内規程は毎週更新され、部署ごとに閲覧権限が違います。回答には参照元も必要です。最初に比較すべき構成はどれでしょうか？</p><ol type="A"><li>モデルが学習済みの知識だけで回答する。</li><li>全規程を全員の質問に毎回添付する。</li><li>利用者の権限を確認して最新の該当部分を検索し、出典とともに回答する。</li></ol><details><summary>答えと理由を見る</summary><p><strong>C。</strong>この例の制約は、更新頻度、閲覧権限、出典です。検索対象の権限確認と文書の更新管理が必要です。検索を使えば自動的に正しくなるわけではないので、取得した文書と回答の対応も評価します。</p></details></section>
+<section class="practice" aria-labelledby="q3"><h3 id="q3">3．評価：新しいモデルに替えてよいか</h3><p>試作画面で3件試すと、新しいモデルは自然な文章を返しました。本番のモデルを切り替えてよいでしょうか？</p><ol type="A"><li>代表的な事例と失敗しやすい事例を同じ条件で比較し、品質・費用・応答時間を受入基準と照合する。</li><li>文章が自然なので、そのまま切り替える。</li><li>新しいモデル自身に、旧モデルより優れているか尋ねる。</li></ol><details><summary>答えと理由を見る</summary><p><strong>A。</strong>見た目のよい3件だけでは、例外や費用の変化を判断できません。変更前の結果を基準にし、業務に必要な品質を保てるか確かめます。段階的に切り替える方法や、問題時に戻す手順も用意します。</p></details></section>
+<section class="practice" aria-labelledby="q4"><h3 id="q4">4．安全性：本番データの削除を止める</h3><p>開発用エージェントには本番データを削除させたくありません。指示文に「削除しない」と書いた後、何を加えますか？</p><ol type="A"><li>指示文の同じ禁止事項を何度も繰り返す。</li><li>実行側で本番への削除権限を与えず、接続先や許可する操作も制限する。</li><li>一度削除してしまった場合だけ、以後の利用を停止する。</li></ol><details><summary>答えと理由を見る</summary><p><strong>B。</strong>指示文は、実行権限を制限する仕組みの代わりにはなりません。実行側で許可する操作を絞り、必要に応じて承認を挟みます。Claude Codeでも権限設定の役割を理解して使います。<a href="https://code.claude.com/docs/en/permissions">参考：Claude Codeの権限設定</a></p></details></section>
+<section class="practice" aria-labelledby="q5"><h3 id="q5">5．合意形成：現場と情報管理部門の条件が違う</h3><p>現場は早期導入を希望し、情報管理部門は扱うデータが不明だと指摘しています。次の進め方として適切なのは？</p><ol type="A"><li>導入を先に決め、データの扱いは後で説明する。</li><li>関係者が自発的に合意するまで待つ。</li><li>対象業務・データ・責任者・確認項目を整理し、利用開始を判断する条件を合意する。</li></ol><details><summary>答えと理由を見る</summary><p><strong>C。</strong>早さと安全性を抽象的に議論するだけでは決まりません。試行の対象を絞り、誰が何を確認すれば次に進めるかを具体化します。合意した条件と未解決の項目を記録します。</p></details></section>
+<section class="practice" aria-labelledby="q6"><h3 id="q6">6．入力設計：キャッシュが効いていない</h3><p>共通の長い指示文にキャッシュを設定しましたが、読み出し量が0です。どの確認から始めますか？</p><ol type="A"><li>モデルの最低トークン数、共通部分の一致、保存位置、利用量の記録を確認する。</li><li>設定を書いたので、記録に関係なく効いていると判断する。</li><li>毎回違う日時を共通部分の先頭に付ける。</li></ol><details><summary>答えと理由を見る</summary><p><strong>A。</strong>設定があることと、キャッシュを読めたことは別です。利用モデルの条件と、実際に再利用したい範囲を確認します。共通部分に毎回違う情報を入れると、再利用を妨げることがあります。</p></details></section>
+<section class="practice" aria-labelledby="q7"><h3 id="q7">7．開発・運用：担当者が不在でも対応できるか</h3><p>試作は動きますが、設定方法や障害対応を知る人が1人だけです。引き継ぎで優先することは？</p><ol type="A"><li>担当者の個人端末をそのまま共有する。</li><li>設定・確認方法・停止と復旧・連絡先を残し、別の担当者が手順を試す。</li><li>画面の操作動画だけを残す。</li></ol><details><summary>答えと理由を見る</summary><p><strong>B。</strong>文書を作っただけで引き継ぎ完了とは限りません。別の人が、権限を守って設定や復旧を実行できるか確認します。秘密情報そのものを手順書へ貼り付けず、管理された置き場と取得方法を示します。</p></details></section>
+
+<h2 id="ai">AIに練習問題を作ってもらうときの頼み方</h2>
+<p>実際の対策では、試験範囲の取り違えと、正解の位置の偏りがありました。次のように、<strong>対象・出典・解説の条件</strong>を最初に渡すと、教材の点検がしやすくなります。</p>
+<pre class="prompt-example"><code>Claude Certified Architect – Professional（CCAR-P）の学習を手伝ってください。
+添付した最新の公式試験ガイドと公開ドキュメントを基準にしてください。
+
+今回は「外部連携」と「安全性」を学びます。
+架空の業務場面を使った独自問題を3問作ってください。
+正解はまだ見せず、私の回答後に理由と他の選択肢の欠点を説明してください。
+仕様に関わる説明には公式資料のURLを付けてください。
+確認できないことは、推測として明示してください。
+私が答えた後、条件を1つ変え、判断が変わるかを問い直してください。</code></pre>
+<p>AIが出したURLや説明は、実際の公式資料と照合します。正解を選べたら、次は「即時応答が必要になったら」「権限が部署で違ったら」のように条件を変えます。同じ答えを暗記しただけなら、ここで説明が詰まります。</p>
+
+<h2 id="check">受験前の確認</h2>
+<ul><li><strong>試験名がProfessionalであること</strong>と、公式ガイドの範囲を確認した。</li><li>日本語の説明を、英語の用語と結び付けて読める。</li><li>間違えた項目は、答えだけでなく判断理由を説明できる。</li><li>モデルごとに変わる上限・設定を、古い数字のまま覚えていない。</li><li>評価、安全性、関係者との合意、引き継ぎも復習した。</li><li>翻訳やAIを使わずに公式サンプルを読み、受験環境を準備した。</li></ul>
+<p>申し込み先と教材の場所に戻る場合は、<a href="/blog/claude-certified-architect-professional#apply">取得記録の「どこから、どう申し込むか」</a>をご覧ください。</p>
+
+<div class="related"><strong>あわせて読む</strong><a href="/blog/claude-certified-architect-professional">Claude認定資格CCAR-Pの取得記録｜申し込みから試験対策まで →</a><a href="/blog/consulting-tech-ai">コンサルテックとは？AIで変わる調査・分析・業務改善 →</a></div>
+<p class="editor">編集：Wing編集部。資格取得者の学習記録と公開資料をもとに編集した非公式の記事です。Anthropicによる作成・監修ではありません。制度・仕様の確認日：2026年9月22日。訂正のご連絡は<a href="/#contact">お問い合わせフォーム</a>へお寄せください。</p>
+</article></main><footer><a href="/">Wing</a><a href="/blog/">記事</a><a href="/news/">ニュース</a><a href="/privacy">プライバシーポリシー</a></footer></body></html>

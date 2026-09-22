@@ -40,3 +40,7 @@
 - [ニュース一覧](https://wingconsulting.org/news/): 関税・規制・技術の重要な更新を日付順に掲載
 - [日本企業への関税影響｜2026年9月22日時点の確認事項](https://wingconsulting.org/news/japan-tariff-impact): 米国関税の変更は、日本企業の粗利・受注・調達・資金繰りにどう影響するか。IEEPA還付の新日程と対象条件、品目別に確認する項目を整理します。
 - [関税ニュースのRSS](https://wingconsulting.org/tariff-news.xml): 重要な変更を確認できたときに配信
+
+## Claude認定の取得記録と学習
+- [Claude認定資格CCAR-Pの取得記録｜申し込みから試験対策まで](https://wingconsulting.org/blog/claude-certified-architect-professional): Claude Certified Architect – Professionalを2026年9月に取得。受験対象、公式の申し込み先、費用・予約方法と、AIを使った対策で失敗した点や復習方法を紹介します。
+- [CCAR-P試験対策ノート｜復習した論点・英語用語・練習問題](https://wingconsulting.org/blog/claude-architect-professional-study): Claude Certified Architect – Professionalの学習記録をもとに、設計・キャッシュ・バッチ・権限・評価を整理。英語用語と解説付きの独自問題で、判断の理由を確認できます。

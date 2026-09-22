@@ -1,0 +1,11 @@
+/* 解答は、考えてから開けるようにする。 */
+.practice{margin:28px 0;padding:22px 26px;background:#fff;border:1px solid #ded9cd}
+.practice h3{margin-top:0}
+.practice details{border-top:1px solid #ded9cd;margin-top:20px;padding-top:15px}
+.practice summary{cursor:pointer;color:#245577;font-weight:700;padding:6px 0}
+.practice summary:focus-visible,.table-wrap:focus-visible{outline:3px solid #ac955c;outline-offset:4px}
+.practice details[open] summary{color:#14243a}
+article code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.9em;overflow-wrap:anywhere}
+.prompt-example{white-space:pre-wrap;overflow-wrap:anywhere;padding:24px;background:#edf1f2;border-left:3px solid #a8965a;line-height:1.85;font:inherit}
+.hero h1{overflow-wrap:anywhere}
+@media(max-width:600px){.practice{padding:18px}.prompt-example{padding:18px}}
