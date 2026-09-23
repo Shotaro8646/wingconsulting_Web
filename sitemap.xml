@@ -3,7 +3,7 @@
   <!-- ─── トップページ ─── -->
   <url>
     <loc>https://wingconsulting.org/</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-09-22T20:05:12-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -16,7 +16,7 @@
   </url>
   <url>
     <loc>https://wingconsulting.org/news/</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-09-22T20:05:12-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -325,7 +325,7 @@
   </url>
   <url>
     <loc>https://wingconsulting.org/news/japan-tariff-impact</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-09-22T20:05:12-04:00</lastmod>
   </url>
   <url>
     <loc>https://wingconsulting.org/blog/consulting-tech-ai</loc>
