@@ -38,7 +38,7 @@
 
 ## ニュース
 - [ニュース一覧](https://wingconsulting.org/news/): 関税・規制・技術の重要な更新を日付順に掲載
-- [日本企業への関税影響｜2026年9月22日時点の確認事項](https://wingconsulting.org/news/japan-tariff-impact): 2026-09-22（米東部時間）更新。対ロシア制裁法の成立、第三国への追加関税の対象条件と例外を追記。国別税率・通関上の開始日時は未確認。IEEPA還付の受付条件も掲載。
+- [日本企業への関税影響｜2026年9月26日時点の確認事項](https://wingconsulting.org/news/japan-tariff-impact): 2026-09-26（米東部時間）更新。ポリシリコン・太陽電池関連製品の米国輸入制限と、Yokohamaメキシコ工場の貨物の清算停止を追記。対象品目・有効期間・新規IORの数量上限を整理。
 - [関税ニュースのRSS](https://wingconsulting.org/tariff-news.xml): 重要な変更を確認できたときに配信
 
 ## Claude認定の取得記録と学習
