@@ -692,7 +692,6 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
 @media(max-width:860px){.product-screens{grid-template-columns:1fr;gap:24px}}
 </style>
 <link rel="stylesheet" href="/assets/content-navigation.css">
-<link rel="stylesheet" href="/assets/home-visual.css">
 </head>
 <body>
 <div style="font-family:'Noto Sans JP','Outfit',sans-serif; color:#14181F; background:#FFFFFF;">
@@ -746,22 +745,76 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
         <!-- 見出しは太字。「Yu Gothic Medium」は中太しか持たない名前で、太字を頼むと Windows では文字を重ね塗りした太字になるので、先頭には置かない -->
         <h1 class="hero-h1" style="font-family:'Yu Gothic','YuGothic','游ゴシック','Noto Sans JP',sans-serif; font-weight:700; font-size:clamp(22px,3.6vw,50px); line-height:1.42; letter-spacing:.01em; margin:0 0 16px 0;"><span style="display:inline-block;">AIネイティブな実装力<span style="font-family:'Outfit',sans-serif; font-weight:500; color:#A98A4B; margin-left:.2em; font-size:.8em;">×</span></span><br><span style="display:inline-block;">ビジネス現場の解像度</span></h1>
         <p class="hero-tag" style="margin:0 0 26px 0; font-weight:700; font-size:clamp(16px,2vw,20px); line-height:1.75; letter-spacing:.05em; color:#8A6E33;"><span class="nb">新たな時代の貴社の成長に、</span><span class="nb">変革の翼を。</span></p>
-        <p class="home-hero-copy">経営と現場を理解するFDEが、<br>業務の設計からAIの実装・定着まで担当します。</p>
-        <div class="home-hero-tags"><span>標準設計で速く</span><span>業務ごとに導入</span><span>効果を見て拡大</span></div>
+        <!-- 2つの文は行数を決めて見せる（どちらも PC では1文を1行ずつ置いて2行）。
+             Safari は text-wrap:pretty が付くと短い語尾を次行に送るので、ここには付けない -->
+        <div class="hero-pts" style="display:flex; flex-direction:column; gap:14px; margin-bottom:30px;">
+          <div style="display:flex; gap:14px; align-items:flex-start;">
+            <div style="flex:none; width:6px; height:6px; background:#A98A4B; margin-top:11px;"></div>
+            <p style="margin:0; font-size:14px; line-height:1.95; color:#4A515C;"><strong style="color:#14181F; font-weight:700;">Wingは、AI導入を経営の成果につなげるコンサルティング会社です。</strong><br class="pc">サプライチェーンや貿易の業務に明るく、AIの開発から現場への定着まで手がけます。</p>
+          </div>
+          <div style="display:flex; gap:14px; align-items:flex-start;">
+            <div style="flex:none; width:6px; height:6px; background:#A98A4B; margin-top:11px;"></div>
+            <p style="margin:0; font-size:14px; line-height:1.95; color:#4A515C;"><span style="color:#14181F; font-weight:500;">大手コンサルティングファームなどで経験を積んだFDE</span><a href="#fde" style="color:#14181F; border-bottom:1px solid #A98A4B; white-space:nowrap;">（Forward Deployed Engineer）</a>がプロジェクトを率います。<br class="pc">標準アーキテクチャと導入テンプレートを活用し、設計・開発の重複を減らして、<span class="nb">短期間での導入を支援します。</span></p>
+          </div>
+        </div>
         <div style="display:flex; gap:12px; align-items:center; margin-bottom:8px; flex-wrap:wrap;">
           <a href="#contact" class="btn-dark">無料相談を申し込む（30分）</a>
         </div>
       </div>
-      <div class="home-map" role="group" aria-label="経営と現場を理解するFDEが、業務設計・AI実装・効果検証を担当する">
-<p class="home-map-cap">業務とAIをつなぐFDE</p>
-<div class="home-map-input"><span>経営の課題</span><span>現場の業務・データ</span></div>
-<div class="home-map-connector" aria-hidden="true">↓</div>
-<div class="home-map-core"><svg class="home-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="17" cy="14" r="6"/><circle cx="34" cy="17" r="5"/><path d="M5 39v-6c0-14 24-14 24 0v6M32 27c7-1 11 3 11 10"/></svg><div><strong>FDE</strong><small>業務設計から実装まで一貫して担当</small></div></div>
-<div class="home-map-connector" aria-hidden="true">↓</div>
-<div class="home-map-agents"><span>調達</span><span>貿易</span><span>経理</span></div>
-<p class="home-map-caption">業務ごとにAIを導入</p>
-<div class="home-map-outcome"><svg class="home-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6v34h35M13 34V24M23 34V17M33 34V9M10 18l11-8 10 1 9-7"/></svg><span>作業時間・精度・経営指標で<br><b>効果を確認して、次の業務へ</b></span></div>
-</div>
+      <div aria-hidden="true" style="min-width:0;"></div>
+    </div>
+  </section>
+
+  <!-- ═══════ AI活用と利益への効果 ═══════ -->
+  <section id="data">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 class="sec">AI活用と利益への効果</h2>
+        </div>
+        <p class="sec-lead"><b style="color:#14181F;">AIを日常的に使う企業は88%。利益への効果を報告した企業は39%にとどまります。</b>Wingは、AIへの投資を収益力の向上につなげるために、経営戦略と業務改革を一体で捉えます。収益構造を踏まえて改革の優先順位を定め、業務の再設計とAIの実装を進め、経営指標で成果を検証します。</p>
+      </div>
+
+      <div class="g4">
+        <div style="padding:26px 36px 24px 0; border-right:1px solid #E8E5DE; display:flex; flex-direction:column;">
+          <p class="tag-en">ADOPTION TRAP</p>
+          <p style="margin:0 0 12px 0; font-family:'Outfit',sans-serif; font-weight:500; font-size:38px; line-height:.9; color:#14181F; white-space:nowrap;">88<span style="font-size:17px;">%</span><span style="font-size:17px; color:#6B7280; margin:0 6px;">→</span>39<span style="font-size:17px;">%</span></p>
+          <div style="display:flex; flex-direction:column; gap:4px; margin-bottom:14px;">
+            <div style="height:8px; width:100%; background:#F1EEE7;"><div data-grow style="height:100%; width:88%; background:#2A3241;"></div></div>
+            <div style="height:8px; width:100%; background:#F1EEE7;"><div data-grow style="height:100%; width:39%; background:#B8A882;"></div></div>
+          </div>
+          <p style="margin:auto 0 0 0; font-size:12px; line-height:1.95; color:#5C6470;">少なくとも1つの業務でAIを日常的に使う企業は88%。利益（EBIT）への効果が出ていると答えた企業は39%。</p>
+        </div>
+        <div style="padding:26px 36px 24px 0; border-right:1px solid #E8E5DE; display:flex; flex-direction:column;">
+          <p class="tag-en">CONCENTRATION</p>
+          <p style="margin:0 0 12px 0; font-family:'Outfit',sans-serif; font-weight:500; font-size:38px; line-height:.9; color:#14181F; white-space:nowrap;">74<span style="font-size:17px;">%</span></p>
+          <div style="height:8px; width:100%; background:#F1EEE7; margin-bottom:14px;">
+            <div data-grow style="height:100%; width:74%; background:#B8A882;"></div>
+          </div>
+          <p style="margin:auto 0 0 0; font-size:12px; line-height:1.95; color:#5C6470;">AIがもたらした経済的な成果の74%を、上位20%の企業が得ている。</p>
+        </div>
+        <div style="padding:26px 36px 24px 0; border-right:1px solid #E8E5DE; display:flex; flex-direction:column;">
+          <p class="tag-en">WIDENING GAP</p>
+          <p style="margin:0 0 12px 0; font-family:'Outfit',sans-serif; font-weight:500; font-size:38px; line-height:.9; color:#14181F; white-space:nowrap;">×7.2</p>
+          <div style="display:flex; flex-direction:column; gap:4px; margin-bottom:14px;">
+            <div style="height:8px; width:100%; background:#F1EEE7;"><div data-grow style="height:100%; width:14%; background:#D6D0C2;"></div></div>
+            <div style="height:8px; width:100%; background:#F1EEE7;"><div data-grow style="height:100%; width:100%; background:#B8A882;"></div></div>
+          </div>
+          <p style="margin:auto 0 0 0; font-size:12px; line-height:1.95; color:#5C6470;">AI活用で先行する企業がAIから得ている成果は、それ以外の企業の7.2倍。</p>
+        </div>
+        <div style="padding:26px 0 24px 0; display:flex; flex-direction:column;">
+          <p class="tag-en">PRODUCTIVITY</p>
+          <p style="margin:0 0 12px 0; font-family:'Outfit',sans-serif; font-weight:500; font-size:38px; line-height:.9; color:#14181F; white-space:nowrap;">163<span style="font-size:17px;">%</span></p>
+          <div style="height:8px; width:100%; background:#F1EEE7; margin-bottom:14px;">
+            <div data-grow style="height:100%; width:100%; background:#2A3241;"></div>
+          </div>
+          <p style="margin:auto 0 0 0; font-size:12px; line-height:1.95; color:#5C6470;">AIの影響を最も受ける業種で、生産性が上位20%の企業の労働生産性の伸び（2018年比）。同じ業種の企業全体では34%。</p>
+        </div>
+      </div>
+
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:40px; margin-top:20px; flex-wrap:wrap;">
+        <p style="margin:4px 0 0 0; font-size:11px; line-height:1.9; color:#6B7280; max-width:none;">出典：<br>88%・39%は <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" style="color:#8A6E33; text-decoration:underline; text-decoration-color:#D6D0C2;">McKinsey「The State of AI in 2025」</a>（2025年11月、1,993人に調査）<br>74%・7.2倍は <a href="https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-performance-study.html" style="color:#8A6E33; text-decoration:underline; text-decoration-color:#D6D0C2;">PwC「2026 AI Performance Study」</a>（2026年4月、経営者1,217人に調査）<br>163%は <a href="https://www.pwc.com/gx/en/issues/artificial-intelligence/ai-jobs-barometer.html" style="color:#8A6E33; text-decoration:underline; text-decoration-color:#D6D0C2;">PwC「2026 Global AI Jobs Barometer」</a>（2026年6月、10億件超の求人広告を分析）</p>
+      </div>
     </div>
   </section>
 
@@ -770,9 +823,9 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <p class="home-section-label">01 / 支援の全体像</p><h2 class="sec">FDEとは</h2>
+          <h2 class="sec">FDEとは</h2>
         </div>
-        <p class="sec-lead"><b>業務の設計からAIの実装まで、同じFDEが担当。</b>経営と現場に入り、標準設計を貴社の業務に合わせて実装します。</p>
+        <p class="sec-lead"><b style="color:#14181F;">業務の設計からAIの実装まで、同じFDEが担当します。</b>経営と現場の要件を直接確認し、標準アーキテクチャと導入手順を貴社の業務に合わせることで、検討や引継ぎの手戻りを減らします。</p>
       </div>
 
       <div class="fde-cycle">
@@ -821,83 +874,30 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <p class="home-section-label">02 / 3つの強み</p><h2 class="sec" style="font-family:'Outfit',sans-serif; font-weight:600; letter-spacing:.005em;">Why Wing?</h2>
+          <h2 class="sec" style="font-family:'Outfit',sans-serif; font-weight:600; letter-spacing:.005em;">Why Wing?</h2>
         </div>
-        <p class="sec-lead"><b>業務を理解し、優先順位を決め、実装する。</b>この3つを一つのチームで担います。</p>
+        <p class="sec-lead"><b style="color:#14181F;">大手ファームで経験を積んだFDEが、経営課題の整理とシステムの実装を担当します。</b>標準アーキテクチャをもとに必要な機能を整理し、再利用できる部品と追加開発を切り分けて、設計・開発の工数を抑えます。少人数で推進するため、費用は大手ファームと比べて最大で半分以下に抑えることも可能です。メンバーは前職を含め、日本と米国で30社を超える企業のDXを支援してきました。</p>
       </div>
 
-      <div class="home-proof"><span><b>10年以上</b>業務・コンサルティング経験</span><span><b>30社超</b>日本・米国でのDX支援</span><small>メンバーの前職での経験を含みます</small></div>
+      <p class="str-gl">FDEは、次の3つを兼ねています</p>
       <div class="str-grid">
         <div class="str">
-          <svg class="home-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 40V15h15v25M22 40V5h16v35M3 40h40M12 21h5m-5 7h5m10-16h6m-6 8h6m-6 8h6"/></svg><h3>業務の知識</h3><p class="home-payoff">現場の実務を理解</p>
-          <p class="str-d">調達・貿易・経理の帳票、承認、例外処理まで把握し、業務の要件を整理します。</p>
+          <h3>業務の知識</h3>
+          <p class="str-d">大手日系・外資コンサルティングファームで10年以上、調達・貿易・経理・IT組織の実務に携わり、チームリーダーやアカウントマネジメントを務めてきたメンバーが在籍しています。現場の帳票や例外の処理まで知っているので、業務のご説明にかかる時間は短く済みます。</p>
           <a class="str-l" href="#expertise">対応領域を見る</a>
         </div>
         <div class="str">
-          <svg class="home-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 39V7h30v32zM15 16h16M15 23h10M15 30h16"/><path d="m29 24 3 3 9-10"/></svg><h3>コンサルティング力</h3><p class="home-payoff">効果の大きい業務を選定</p>
+          <h3>コンサルティング力</h3>
           <p class="str-d">利益を左右している業務を突き止め、かける費用に対して効果の大きいものから計画を立てます。</p>
           <a class="str-l" href="#consulting">提供サービスを見る</a>
         </div>
         <div class="str">
-          <svg class="home-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="12" y="12" width="22" height="22" rx="4"/><path d="M18 4v8M28 4v8M18 34v8M28 34v8M4 18h8M4 28h8M34 18h8M34 28h8M19 19h8v8h-8z"/></svg><h3>AI実装力</h3><p class="home-payoff">既存システムで動く形に</p>
-          <p class="str-d">標準設計と既存部品を活用し、接続・承認・記録・評価まで実装します。</p>
+          <h3>AI実装力</h3>
+          <p class="str-d">標準設計をもとに、システム接続・承認・記録・評価の機能を組み合わせます。利用できる既存モジュールや<a href="/products">自社プロダクト</a>を再利用し、業務固有の設定と開発に集中します。</p>
           <a class="str-l" href="#products">AIプロダクトを見る</a>
         </div>
       </div>
 
-    </div>
-  </section>
-
-  <!-- ═══════ AI活用と利益への効果 ═══════ -->
-  <section id="data">
-    <div class="wrap">
-      <div class="sec-head">
-        <div>
-          <h2 class="sec">AI活用と利益への効果</h2>
-        </div>
-        <p class="sec-lead"><b>AIの利用と、利益への効果には差があります。</b>業務の見直しとAIの実装を合わせて進め、成果を検証します。</p>
-      </div>
-
-      <div class="g4">
-        <div style="padding:26px 36px 24px 0; border-right:1px solid #E8E5DE; display:flex; flex-direction:column;">
-          <p class="tag-en">AIの利用と利益への効果</p>
-          <p style="margin:0 0 12px 0; font-family:'Outfit',sans-serif; font-weight:500; font-size:38px; line-height:.9; color:#14181F; white-space:nowrap;">88<span style="font-size:17px;">%</span><span style="font-size:17px; color:#6B7280; margin:0 6px;">→</span>39<span style="font-size:17px;">%</span></p>
-          <div style="display:flex; flex-direction:column; gap:4px; margin-bottom:14px;">
-            <div style="height:8px; width:100%; background:#F1EEE7;"><div data-grow style="height:100%; width:88%; background:#2A3241;"></div></div>
-            <div style="height:8px; width:100%; background:#F1EEE7;"><div data-grow style="height:100%; width:39%; background:#B8A882;"></div></div>
-          </div>
-          <p style="margin:auto 0 0 0; font-size:12px; line-height:1.95; color:#5C6470;">少なくとも1つの業務でAIを日常的に使う企業は88%。利益（EBIT）への効果が出ていると答えた企業は39%。</p>
-        </div>
-        <div style="padding:26px 36px 24px 0; border-right:1px solid #E8E5DE; display:flex; flex-direction:column;">
-          <p class="tag-en">成果が上位企業に集中</p>
-          <p style="margin:0 0 12px 0; font-family:'Outfit',sans-serif; font-weight:500; font-size:38px; line-height:.9; color:#14181F; white-space:nowrap;">74<span style="font-size:17px;">%</span></p>
-          <div style="height:8px; width:100%; background:#F1EEE7; margin-bottom:14px;">
-            <div data-grow style="height:100%; width:74%; background:#B8A882;"></div>
-          </div>
-          <p style="margin:auto 0 0 0; font-size:12px; line-height:1.95; color:#5C6470;">AIがもたらした経済的な成果の74%を、上位20%の企業が得ている。</p>
-        </div>
-        <div style="padding:26px 36px 24px 0; border-right:1px solid #E8E5DE; display:flex; flex-direction:column;">
-          <p class="tag-en">先行企業との成果の差</p>
-          <p style="margin:0 0 12px 0; font-family:'Outfit',sans-serif; font-weight:500; font-size:38px; line-height:.9; color:#14181F; white-space:nowrap;">×7.2</p>
-          <div style="display:flex; flex-direction:column; gap:4px; margin-bottom:14px;">
-            <div style="height:8px; width:100%; background:#F1EEE7;"><div data-grow style="height:100%; width:14%; background:#D6D0C2;"></div></div>
-            <div style="height:8px; width:100%; background:#F1EEE7;"><div data-grow style="height:100%; width:100%; background:#B8A882;"></div></div>
-          </div>
-          <p style="margin:auto 0 0 0; font-size:12px; line-height:1.95; color:#5C6470;">AI活用で先行する企業がAIから得ている成果は、それ以外の企業の7.2倍。</p>
-        </div>
-        <div style="padding:26px 0 24px 0; display:flex; flex-direction:column;">
-          <p class="tag-en">労働生産性の伸び</p>
-          <p style="margin:0 0 12px 0; font-family:'Outfit',sans-serif; font-weight:500; font-size:38px; line-height:.9; color:#14181F; white-space:nowrap;">163<span style="font-size:17px;">%</span></p>
-          <div style="height:8px; width:100%; background:#F1EEE7; margin-bottom:14px;">
-            <div data-grow style="height:100%; width:100%; background:#2A3241;"></div>
-          </div>
-          <p style="margin:auto 0 0 0; font-size:12px; line-height:1.95; color:#5C6470;">AIの影響を最も受ける業種で、生産性が上位20%の企業の労働生産性の伸び（2018年比）。同じ業種の企業全体では34%。</p>
-        </div>
-      </div>
-
-      <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:40px; margin-top:20px; flex-wrap:wrap;">
-        <p style="margin:4px 0 0 0; font-size:11px; line-height:1.9; color:#6B7280; max-width:none;">出典：<br>88%・39%は <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" style="color:#8A6E33; text-decoration:underline; text-decoration-color:#D6D0C2;">McKinsey「The State of AI in 2025」</a>（2025年11月、1,993人に調査）<br>74%・7.2倍は <a href="https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-performance-study.html" style="color:#8A6E33; text-decoration:underline; text-decoration-color:#D6D0C2;">PwC「2026 AI Performance Study」</a>（2026年4月、経営者1,217人に調査）<br>163%は <a href="https://www.pwc.com/gx/en/issues/artificial-intelligence/ai-jobs-barometer.html" style="color:#8A6E33; text-decoration:underline; text-decoration-color:#D6D0C2;">PwC「2026 Global AI Jobs Barometer」</a>（2026年6月、10億件超の求人広告を分析）</p>
-      </div>
     </div>
   </section>
 
@@ -906,13 +906,12 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <p class="home-section-label">03 / 対応業務</p><h2 class="sec">調達・貿易・経理のDX支援</h2>
+          <h2 class="sec">調達・貿易・経理のDX支援</h2>
         </div>
-        <p class="sec-lead"><b>調達・貿易・経理の業務を、既存システムとつなぐ。</b>承認や例外処理も含めて、実際の仕事の流れを設計します。</p>
+        <p class="sec-lead"><b style="color:#14181F;">調達・貿易・経理・IT組織を中心に、DX推進と業務改善、システム導入を支援します。</b>メンバーは、前職を含む支援でERPの導入や基幹システムの刷新にも携わってきました。貿易DXでは輸出入書類の処理、調達では見積比較、経理では照合業務など、AIによる業務自動化の対象を検討します。既存システムとの連携や承認手順、例外処理まで確認して開発します。</p>
       </div>
 
-<div class="home-business-flow" role="group" aria-label="調達・貿易・経理の業務の流れ"><div><svg class="home-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 14 18-9 18 9v23l-18 9-18-9zM5 14l18 9 18-9M23 23v23M14 9l18 9"/></svg><h3>調達</h3><p>見積書・仕入先情報</p><span class="home-mini-arrow" aria-hidden="true">↓</span><strong>見積比較・発注案</strong></div><span class="home-flow-arrow" aria-hidden="true">→</span><div><svg class="home-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 17h28l-7-7M38 30H10l7 7"/><path d="M7 5v6M39 35v6"/></svg><h3>貿易</h3><p>Invoice・出荷書類</p><span class="home-mini-arrow" aria-hidden="true">↓</span><strong>書類照合・規制確認</strong></div><span class="home-flow-arrow" aria-hidden="true">→</span><div><svg class="home-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="5" width="30" height="36" rx="3"/><path d="M15 14h16M15 23h5m6 0h5M15 32h5m6 0h5"/></svg><h3>経理</h3><p>発注・入荷・請求書</p><span class="home-mini-arrow" aria-hidden="true">↓</span><strong>照合・原価計算</strong></div></div><div class="home-foundation"><b>共通の接続・運用基盤</b><span>ERP・業務システム</span><span>データ・文書</span><span>権限・承認・監査</span></div>
-<details class="home-detail"><summary>対応する業界・業務・技術を見る</summary>      <div class="exp-grid">
+      <div class="exp-grid">
         <div class="exp">
           <p class="tag-en" style="margin-bottom:0;">INDUSTRIES</p>
           <h3>業界</h3>
@@ -953,7 +952,6 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
         </div>
       </div>
 
-</details>
       <p class="exp-note">記載のない業界・業務についてもご相談いただけます。<b>どの業務が利益を左右しているか</b>を伺えば、AIを組み込む業務の候補をお示しします。</p>
     </div>
   </section>
@@ -963,14 +961,14 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <p class="home-section-label">04 / 提供サービス</p><h2 class="sec">AI導入・開発支援サービス</h2>
+          <h2 class="sec">AI導入・開発支援サービス</h2>
         </div>
-        <p class="sec-lead"><b>構想から開発、社内での運用まで。</b>必要な段階・範囲に絞った支援にも対応します。</p>
+        <p class="sec-lead"><b style="color:#14181F;">生成AIの導入支援からAIエージェント開発、プロジェクト管理、社内で運用するための体制づくりまで対応します。</b>PMO、ベンダー選定、研修など、必要な範囲に絞ったご依頼も承ります。投資・買収に伴うITデューデリジェンスと買収後の統合（PMI）も支援します。</p>
       </div>
       <div class="g3 pillars">
-        <div class="pillar"><div class="home-service-top"><svg class="home-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 39V7h30v32zM15 16h16M15 23h10M15 30h16"/><path d="m29 24 3 3 9-10"/></svg><span>01</span></div><h3>AI戦略・DXコンサルティング</h3><p>業務とITの現状を調べ、利益への影響をもとにAI戦略と導入計画を立てます。</p><details class="home-detail"><summary>支援内容を見る</summary><ul><li>業務とITの現状調査・課題定義</li><li>AI活用ロードマップ策定</li><li>経営層へのアドバイザリー</li><li>ITデューデリジェンス・PMI支援</li></ul></details></div>
-        <div class="pillar"><div class="home-service-top"><svg class="home-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="12" y="12" width="22" height="22" rx="4"/><path d="M18 4v8M28 4v8M18 34v8M28 34v8M4 18h8M4 28h8M34 18h8M34 28h8M19 19h8v8h-8z"/></svg><span>02</span></div><h3>AIエージェント開発・PMO</h3><p>標準アーキテクチャを業務に合わせて設定・実装し、評価と限定運用を経て本番へ移行します。既存部品を再利用できる範囲と、追加開発が必要な範囲を明確にします。</p><details class="home-detail"><summary>支援内容を見る</summary><ul><li>PMO・プロジェクト推進</li><li>システム実装・開発管理</li><li>権限・承認フロー・監視の運用設計</li><li>業務の切り替えと現場への定着</li><li>データ分析・可視化基盤の構築</li><li>ベンダー選定・要件定義支援</li><li>グローバル・ASEAN展開支援</li></ul></details></div>
-        <div class="pillar"><div class="home-service-top"><svg class="home-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="17" cy="14" r="6"/><circle cx="34" cy="17" r="5"/><path d="M5 39v-6c0-14 24-14 24 0v6M32 27c7-1 11 3 11 10"/></svg><span>03</span></div><h3>内製化・人材育成</h3><p>ソースコードと設計資料をお渡しします。あわせて研修と推進体制の立ち上げをお手伝いし、支援の終了後も社内で運用を続けられる状態を目標にします。</p><details class="home-detail"><summary>支援内容を見る</summary><ul><li>DX・生成AI活用研修</li><li>プロジェクトマネジメント研修</li><li>推進体制の設計・立ち上げ</li></ul></details></div>
+        <div class="pillar"><p class="tag-en" style="margin-bottom:0;">SERVICE 01</p><h3>AI戦略・DXコンサルティング</h3><p>業務とITの現状を調べ、利益への影響をもとにAI戦略と導入計画を立てます。</p><ul><li>業務とITの現状調査・課題定義</li><li>AI活用ロードマップ策定</li><li>経営層へのアドバイザリー</li><li>ITデューデリジェンス・PMI支援</li></ul></div>
+        <div class="pillar"><p class="tag-en" style="margin-bottom:0;">SERVICE 02</p><h3>AIエージェント開発・PMO</h3><p>標準アーキテクチャを業務に合わせて設定・実装し、評価と限定運用を経て本番へ移行します。既存部品を再利用できる範囲と、追加開発が必要な範囲を明確にします。</p><ul><li>PMO・プロジェクト推進</li><li>システム実装・開発管理</li><li>権限・承認フロー・監視の運用設計</li><li>業務の切り替えと現場への定着</li><li>データ分析・可視化基盤の構築</li><li>ベンダー選定・要件定義支援</li><li>グローバル・ASEAN展開支援</li></ul></div>
+        <div class="pillar"><p class="tag-en" style="margin-bottom:0;">SERVICE 03</p><h3>内製化・人材育成</h3><p>ソースコードと設計資料をお渡しします。あわせて研修と推進体制の立ち上げをお手伝いし、支援の終了後も社内で運用を続けられる状態を目標にします。</p><ul><li>DX・生成AI活用研修</li><li>プロジェクトマネジメント研修</li><li>推進体制の設計・立ち上げ</li></ul></div>
       </div>
     </div>
   </section>
@@ -980,9 +978,9 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <p class="home-section-label">05 / プロダクト</p><h2 class="sec">AIプロダクト</h2>
+          <h2 class="sec">AIプロダクト</h2>
         </div>
-        <p class="sec-lead"><b>提供中のプロダクトを活用し、貴社の業務に合わせて導入。</b>画面と処理を確かめながら、必要な機能を具体化します。</p>
+        <p class="sec-lead"><b style="color:#14181F;">取り組む業務が貿易事務や化学品の規制対応に決まった場合は、提供中の自社プロダクトを土台に、貴社の業務に合わせた試作を始めます。</b>計画・調達・輸出入・販売で共通する処理は1つの基盤にまとめ、工程ごとに異なる部分は個別の製品で対応します。AIが書類を読み取って照合し、判定まで行ったうえで、担当者が承認します。</p>
       </div>
       <p class="product-screen-note">BorderFlow AIのデモ画面。取引先名はサンプル表記です。数値・照合結果はデモデータで、処理精度や導入実績を示すものではありません。画像を選ぶと拡大できます。</p>
       <div class="product-screens">
@@ -999,11 +997,10 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
         <a class="pl-i live" href="/borderflow-guide"><span class="pl-s">提供中</span><b>BorderFlow AI</b><span class="pl-d">貿易事務エージェント。契約書・Invoice・BLを読み取り、通関申告と原価計算まで進める</span></a>
         <a class="pl-i live" href="/chemos-guide"><span class="pl-s">提供中</span><b>ChemOS</b><span class="pl-d">PFAS・chemSHERPA対応。含有物質の解析と判定から、照会メールと提出物の作成まで進める</span></a>
         <a class="pl-i live" href="/staypath-guide"><span class="pl-s">デモ公開中</span><b>StayPath</b><span class="pl-d">外国人材受入支援の業務管理。人材・企業・申請・面談・請求を一つのデータベースで扱う</span></a>
-      </div>
-<details class="home-detail"><summary>開発中・構想中のプロダクトを見る</summary><div class="pl">        <a class="pl-i" href="/products#export-control"><span class="pl-s">開発中</span><b>Export Control AI</b><span class="pl-d">該非判定の下調べ。仕様書から該当候補を抜き出し、条文の引用付きで下書きする</span></a>
+        <a class="pl-i" href="/products#export-control"><span class="pl-s">開発中</span><b>Export Control AI</b><span class="pl-d">該非判定の下調べ。仕様書から該当候補を抜き出し、条文の引用付きで下書きする</span></a>
         <a class="pl-i" href="/products#procurement"><span class="pl-s">開発中</span><b>Procurement AI</b><span class="pl-d">見積書をまとめて読み取り、条件を揃えた比較表と稟議に使える資料を作る</span></a>
         <a class="pl-i" href="/products#demand-inventory"><span class="pl-s">構想中</span><b>需給・在庫最適化</b><span class="pl-d">需要予測から発注点と安全在庫を出し、過剰在庫と欠品のどちらに寄っているかを見る</span></a>
-</div></details>
+      </div>
       <p class="pl-more"><a class="btn-line" href="/products">共通基盤・接続先・各製品の詳細を見る</a></p>
     </div>
   </section>
@@ -1013,19 +1010,28 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <p class="home-section-label">06 / 導入の進め方</p><h2 class="sec">AI導入支援の進め方</h2>
+          <h2 class="sec">AI導入支援の進め方</h2>
         </div>
-        <p class="sec-lead"><b>一つの業務で確かめてから、次の業務へ。</b>契約は段階ごと。結果を見て、継続・終了を判断できます。</p>
+        <p class="sec-lead"><b style="color:#14181F;">契約は対象業務の選定・試作・展開の段階ごとに結ぶので、各段階の結果を見て、次に進むか、そこで終えるかをご判断いただけます。</b>始め方は次の2通りです。</p>
       </div>
-<div class="home-route">
-<div class="home-route-starts"><div><span>業務が未定</span><strong>全体設計・業務選定</strong><small>課題・システム・優先順位を整理</small></div><div><span>業務が決まっている</span><strong>対象業務の要件確認</strong><small>既存の要件・PoC結果を確認</small></div></div>
-<div class="home-route-join" aria-hidden="true"><svg viewBox="0 0 1000 60" preserveAspectRatio="none"><path d="M250 0v18h250M750 0v18H500v14H120v23m-7-8 7 8 7-8"/></svg></div>
-<ol class="home-roadmap"><li><span>01</span><h3>一業務で試作</h3><p>標準設計と部品を活用</p><small>成果物：動く試作</small></li><li><span>02</span><h3>評価・限定運用</h3><p>精度・工数・承認を確認</p><small>判断：本番に進めるか</small></li><li><span>03</span><h3>本番運用</h3><p>運用担当・復旧手順を整備</p><small>成果物：運用できる仕組み</small></li><li><span>04</span><h3>次の業務へ</h3><p>共通基盤を再利用</p><small>判断：次の対象と投資範囲</small></li></ol>
-<p class="home-route-note">各段階の結果を確認し、次に進むかを判断します。</p>
-</div>
-<details class="home-detail home-comparison"><summary>従来型の支援との違いを見る</summary>
-
-
+      <div class="g2 entry" style="margin-bottom:36px;">
+        <div class="opt">
+          <p class="tag-en" style="margin-bottom:0;">ENTRY A</p>
+          <h3>対象業務の選定から始める</h3>
+          <p>まず社内の業務とITの現状を洗い出し、AIをどの業務から、どの順番で入れるかを決めます。そのうえで、最初に取り組む業務の試作に進みます。</p>
+          <p class="opt-fit">AI活用の方向性が固まらず、部門ごとに別々のAIツールを使っている企業に向いています。</p>
+        </div>
+        <div class="opt">
+          <p class="tag-en" style="margin-bottom:0;">ENTRY B</p>
+          <h3>特定業務の試作から始める</h3>
+          <p>取り組む業務がすでに決まっている場合は、対象業務の選定を省き、その業務の試作から始めます。</p>
+          <p class="opt-fit">PoCの結果や要件の案が手元にあり、まず一つの業務で動かして社内の理解を得たい企業に向いています。</p>
+        </div>
+      </div>
+      <p style="margin:0 0 14px; font-size:13px; color:#6B7280;">どちらから始めても、試作で効果を確かめてから広げる順番は変わりません。</p>
+<div style="margin-top:46px;">
+        <p class="tag-en" style="margin-bottom:6px;">COMPARISON</p>
+        <h3 style="margin:0 0 22px; font-weight:700; font-size:17px; color:#14181F;">従来型の支援との違い</h3>
         <div style="overflow-x:auto;">
         <div class="vs">
           <div class="vs-r vs-hr">
@@ -1075,7 +1081,7 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
           </div>
         </div>
         </div>
-      </details>
+      </div>
     </div>
   </section>
 
@@ -1102,7 +1108,14 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
         </div>
         <p class="sec-lead">AIによる業務改善、調達・貿易、穀物取引の解説。分析の手順や技術の選び方を、具体例と出典を添えて紹介します。</p>
       </div>
-<div class="ins-g"><a class="ins" href="/blog/wing-ai-agent-standard-architecture"><img class="home-article-image" src="/images/og/wing-ai-agent-standard-architecture.png" width="1200" height="630" loading="lazy" decoding="async" alt=""><p class="cat">AIエージェント</p><h3>AIエージェントの標準アーキテクチャ</h3><p>全体構成・技術・段階導入を図で解説。</p></a><a class="ins" href="/blog/consulting-tech-ai"><img class="home-article-image" src="/images/og/consulting-tech-ai.png" width="1200" height="630" loading="lazy" decoding="async" alt=""><p class="cat">AI・コンサルティング</p><h3>コンサルテックとは？AIで変わる業務改善</h3><p>業務と技術の役割分担、効果の測り方。</p></a><a class="ins" href="/blog/grain-supply-chain-risk"><img class="home-article-image" src="/images/og/grain-supply-chain-risk.png" width="1200" height="630" loading="lazy" decoding="async" alt=""><p class="cat">調達・サプライチェーン</p><h3>コメ・小麦取引のサプライチェーンリスク</h3><p>調達・在庫・物流のリスクを分解。</p></a></div>
+      <div class="ins-g"><a class="ins" href="/blog/consulting-tech-ai"><p class="cat">AI・コンサルティング</p><h3>コンサルテックとは？AIで変わる調査・分析・業務改善</h3><p>AIによるコンサルティングは何を変えるのか。調査・数値分析・施策設計・実装の役割分担、導入効果の測り方、発注時の確認事項を具体的に解説します。</p></a><a class="ins" href="/blog/grain-supply-chain-risk"><p class="cat">穀物・サプライチェーン</p><h3>コメ・小麦取引のサプライチェーンリスク｜調達・在庫・物流の分析方法</h3><p>穀物取引のリスクを、天候、品質、調達先、価格・為替、物流、在庫に分解。コメと小麦の違いを踏まえ、欠品日数と調達費用を試算する方法を解説します。</p></a><a class="ins" href="/blog/grain-farming-technology"><p class="cat">穀物・農業技術</p><h3>コメ・小麦の栽培・収穫に使う先端技術｜AI・自動運転・可変施肥</h3><p>コメ・小麦の上流工程を変える自動運転農機、センシング、可変施肥、生育予測を解説。市販技術と研究段階を分け、導入条件と取引へのつなぎ方を整理します。</p></a>
+        <a class="ins" href="/blog/poc-death-dx-consulting"><p class="cat">DX STRATEGY</p><h3>AI導入が本番稼働に届かない理由｜PoC失敗の原因と対策</h3><p>PoCが本番に進まない5つの原因と、段階の区切り方。</p></a>
+        <a class="ins" href="/blog/dx-consulting-guide"><p class="cat">DX STRATEGY</p><h3>DXコンサルティングとは？失敗しない選び方と成功のポイント</h3><p>大手と専門ファームの違い、選ぶときの5つの確認点、よくある失敗。</p></a>
+        <a class="ins" href="/blog/global-it-organization-model"><p class="cat">IT ORGANIZATION</p><h3>グローバル企業のIT組織モデル｜海外拠点のIT機能設計</h3><p>集中型・分担型・自律型の3モデルの違いと、自社に合うモデルの選び方。</p></a>
+        <a class="ins" href="/blog/ai-agent-guide"><p class="cat">AI AGENTS</p><h3>AIエージェント完全ガイド｜概念から導入・ガバナンスまで</h3><p>Gartnerのレポートをもとに、考え方から導入・運用のルールまでを7つの段階で説明。</p></a>
+        <a class="ins" href="/blog/trade-dx-complete-guide"><p class="cat">TRADE DX</p><h3>貿易DX完全ガイド｜業務フロー・課題・AI活用まで</h3><p>輸出入の業務の流れと、AI・RPAで自動化できる作業。</p></a>
+        <a class="ins" href="/blog/export-control-ai"><p class="cat">TRADE DX</p><h3>安全保障貿易管理とは？該非判定の実務とAI・DXによる効率化</h3><p>リスト規制・キャッチオール規制の基本と、該非判定を担当者任せにしない進め方。</p></a>
+      </div>
       <p style="margin:28px 0 0;"><a href="/blog/" style="font-size:13px; color:#8A6E33; font-weight:700; letter-spacing:.05em; border-bottom:1px solid #D6D0C2; padding-bottom:2px;">すべての記事を見る <span aria-hidden="true">→</span></a></p>
     </div>
   </section>
@@ -1133,10 +1146,10 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
         <div>
           <h2 class="sec">無料相談</h2>
         </div>
-        <p class="sec-lead"><b>最初の30分で、課題と進め方を整理します。</b>要件が決まっていない段階でもご相談いただけます。</p>
+        <p class="sec-lead"><b style="color:#14181F;">生成AIの導入、AIエージェント開発、PoCから本番運用への移行、業務改善についてご相談いただけます。</b>初回は30分無料です。現在の業務とシステム、取り組みたい課題を伺い、支援できる内容と進め方をご説明します。具体的な要件が決まっていない段階でも承ります。</p>
       </div>
       <div class="ct">
-        <div class="ct-l"><ol class="home-contact-steps"><li><span>1</span><div><b>課題を伺う</b><small>現在の業務・システム</small></div></li><li><span>2</span><div><b>対象業務を整理</b><small>効果・実現性を確認</small></div></li><li><span>3</span><div><b>進め方をご提案</b><small>支援範囲・次の一歩</small></div></li></ol>
+        <div class="ct-l">
           <p style="font-size:12px; color:#6B7280;">返信は1〜2営業日以内を目安にお送りします。構想の段階からのご相談も承ります。<br>※ 各案件の質を保つため、同時にお引き受けする案件数を限っています。</p>
           <p style="font-size:13px; color:#5C6470; border:1px solid #E8E5DE; padding:14px 18px; background:#fff;">お問い合わせの前に自社の状況を確かめたい方は、<span class="nb">登録なしで使える</span><a href="/dx-assessment" style="color:#8A6E33; font-weight:700; white-space:nowrap;">5分の無料DX診断</a>をお試しください。</p>
         </div>
