@@ -243,18 +243,14 @@ section .wrap{padding:0}
 @media(max-width:860px){.g3{grid-template-columns:1fr}}
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:40px}
 @media(max-width:860px){.g2{grid-template-columns:1fr}}
-/* 標準設計を使う導入手順 */
-.fde-method{margin:30px 0;padding:30px;border:1px solid var(--line);border-top:3px solid var(--gold);background:#FBFAF7}
+/* 標準構成の記事への案内 */
+.fde-method{margin:30px 0;padding:26px;border:1px solid var(--line);border-top:3px solid var(--gold);background:#FBFAF7;display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:30px;align-items:center}
+.fde-method-preview{display:block;background:#fff;border:1px solid var(--line)}
+.fde-method-preview img{display:block;width:100%;height:auto}
 .fde-method h3{margin:0 0 12px;font-size:22px;line-height:1.6;color:var(--ink)}
-.fde-method-lead{margin:0;max-width:850px;font-size:14px;line-height:1.9;color:var(--sub2)}
-.fde-method-steps{list-style:none;margin:26px 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
-.fde-method-steps li{border-top:1px solid var(--gold-soft);padding-top:16px}
-.fde-method-steps span{font-family:var(--en);font-size:13px;color:var(--gold-deep);font-weight:600}
-.fde-method-steps h4{font-size:16px;line-height:1.7;margin:8px 0;color:var(--ink)}
-.fde-method-steps p{font-size:13px;line-height:1.9;color:var(--sub2);margin:0}
-.fde-expansion{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:0 0 10px;font-size:13px}.fde-expansion b{color:var(--gold-deep);margin-right:4px}.fde-expansion span{padding:10px 14px;background:var(--ink);color:#fff}.fde-expansion i{font-style:normal;color:var(--gold-deep);font-size:20px}.fde-expansion-note{font-size:12px;line-height:1.8;color:var(--sub2);margin:0 0 22px}
-.fde-method-link{font-size:14px;font-weight:700;color:var(--gold-deep);text-decoration:underline;text-underline-offset:5px;line-height:1.9}
-@media(max-width:640px){.fde-method{padding:22px}.fde-method h3{font-size:20px}.fde-method-steps{grid-template-columns:1fr;gap:20px}}
+.fde-method-lead{margin:0 0 16px;font-size:14px;line-height:1.9;color:var(--sub2)}
+.fde-method-link{display:inline-block;font-size:14px;font-weight:700;color:var(--gold-deep);text-decoration:underline;text-underline-offset:5px;line-height:1.9}
+@media(max-width:640px){.fde-method{grid-template-columns:1fr;padding:22px;gap:20px}.fde-method-preview{max-width:360px;width:100%;margin:auto}.fde-method h3{font-size:20px}}
 
 /* FDE diagram */
 .dg{border:1px solid var(--line);margin-top:8px}
@@ -835,16 +831,12 @@ footer a{color:var(--faint);display:inline-block;padding:4px 0}
         <div class="fde-value"><strong>目指す経営成果</strong><span>売上・収益性の向上</span><span>資本効率（ROIC）の改善</span><span>意思決定の迅速化</span></div>
       </div>
       <div class="fde-method" aria-labelledby="fde-method-title">
-        <h3 id="fde-method-title">標準設計を活用し、導入を速く、効率的に。</h3>
-        <p class="fde-method-lead">全社の役割・データ・権限を整理し、調達など一つの業務からエージェントを導入します。標準アーキテクチャと導入テンプレートを活用し、効果を確認しながら業務ごとに広げます。</p>
-        <ol class="fde-method-steps">
-          <li><span>01</span><h4>全体を設計し、着手業務を選ぶ</h4><p>業務間の役割分担と接続先を整理。効果とデータの準備状況から、最初に導入するエージェントを決めます。</p></li>
-          <li><span>02</span><h4>一つの業務で導入・検証する</h4><p>例えば調達エージェントを、標準設計と既存部品で構築。業務ルールを設定し、限定運用で精度と作業時間を確認します。</p></li>
-          <li><span>03</span><h4>共通基盤を使い、次の業務へ</h4><p>効果を確認して本番運用へ移し、契約・経理などに順次拡大。接続・承認・記録の共通基盤を再利用し、業務間の連携を加えます。</p></li>
-        </ol>
-        <div class="fde-expansion" aria-label="業務ごとの段階導入の例"><b>導入例</b><span>調達エージェント</span><i aria-hidden="true">→</i><span>契約エージェント</span><i aria-hidden="true">→</i><span>経理エージェント</span></div>
-        <p class="fde-expansion-note">各業務で効果を確かめてから次へ進みます。導入順は、課題と既存システムに応じて決めます。</p>
-        <a class="fde-method-link" href="/blog/wing-ai-agent-standard-architecture">標準アーキテクチャと導入方法を図で見る <span aria-hidden="true">→</span></a>
+        <a class="fde-method-preview" href="/blog/wing-ai-agent-standard-architecture" aria-label="AIエージェントの標準アーキテクチャの詳細を見る"><img src="/images/diagrams/wing-agent-enterprise.svg" alt="各業務のAIエージェントと共通基盤の構成図" width="1600" height="960" loading="lazy" decoding="async"></a>
+        <div>
+          <h3 id="fde-method-title">標準設計を活用し、導入を速く、効率的に。</h3>
+          <p class="fde-method-lead">標準アーキテクチャと既存部品を活用し、設計・開発の重複を減らします。調達など一つの業務から導入し、効果を確かめながら契約・経理などへ段階的に広げます。</p>
+          <a class="fde-method-link" href="/blog/wing-ai-agent-standard-architecture">詳細はこちら <span aria-hidden="true">→</span></a>
+        </div>
       </div>
       <div class="fde-support">
         <p class="fde-partner"><b>専門技術はパートナーと連携</b>WingのFDEが窓口となり、実装を進めます。</p>
