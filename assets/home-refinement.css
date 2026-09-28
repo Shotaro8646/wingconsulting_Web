@@ -26,3 +26,18 @@ h2.sec{font-size:clamp(24px,2.5vw,32px);line-height:1.5;letter-spacing:.01em;col
 @media(max-width:860px){.sec-head{grid-template-columns:1fr;gap:16px;margin-bottom:28px}.sec-lead{margin-top:0;max-width:none}.pillar ul{margin-top:8px}.exp-grid{gap:24px}.str-grid{gap:16px}.g3.pillars{gap:20px}.fde-cycle,.fde-method{padding:24px}}
 @media(max-width:720px){section{padding:46px 22px}.hero-sec{padding-top:28px;padding-bottom:28px}h2.sec{font-size:25px}.str{padding:24px}.section-icon{margin-bottom:16px;width:32px;height:32px}.str h3{font-size:20px}.str-d{font-size:14px}.exp{padding-top:20px}.exp li{padding:11px 0}.exp-note{padding:16px;font-size:12px}.pillar{padding:24px}.pillar h3{font-size:20px}.pillar>p:not(.tag-en){font-size:14px}.pillar li{font-size:13px}.fde-cycle h3,.fde-method h3{font-size:20px}.form{padding:22px 18px}.prod{padding:24px}.opt{padding:24px}.sec-head{margin-bottom:26px}.fde-part,.fde-result{padding:16px}.vs-r>div{padding:16px}}
 @media(prefers-reduced-motion:reduce){.btn-dark,.btn-line,.ins{transition:none}}
+
+/* ご支援領域は分類ごとの横並びで縦幅を抑える */
+#expertise{padding-top:44px;padding-bottom:44px}
+#expertise .sec-head{margin-bottom:24px;grid-template-columns:220px minmax(0,1fr);gap:32px}
+#expertise .sec-lead{font-size:13px;line-height:1.8}
+#expertise .exp-grid{display:block;margin-top:0;border-top:1px solid var(--line)}
+#expertise .exp{display:grid;grid-template-columns:150px minmax(0,1fr);column-gap:24px;position:relative;padding:18px 0;border:0;border-bottom:1px solid var(--line)}
+#expertise .exp .tag-en{grid-column:1;grid-row:1;align-self:start;font-size:10px;margin-top:2px}
+#expertise .exp h3{grid-column:1;grid-row:1;align-self:start;margin:24px 0 0;font-size:18px}
+#expertise .exp ul{grid-column:2;grid-row:1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 24px}
+#expertise .exp li{padding:0;border:0;font-size:13px;line-height:1.6}
+#expertise .exp li span{font-size:12px;margin-top:3px;line-height:1.6}
+#expertise .exp-note{margin:16px 0 0;padding:0;border:0;background:none;font-size:12px;line-height:1.8}
+@media(max-width:1000px){#expertise .exp{grid-template-columns:130px minmax(0,1fr);gap:16px}#expertise .exp ul{gap:12px 16px;grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){#expertise{padding-top:36px;padding-bottom:36px}#expertise .sec-head{grid-template-columns:1fr;gap:12px;margin-bottom:20px}#expertise .exp{grid-template-columns:1fr;padding:18px 0;gap:0}#expertise .exp .tag-en{display:none}#expertise .exp h3{grid-row:1;margin:0 0 14px;font-size:18px}#expertise .exp ul{grid-column:1;grid-row:2;gap:14px 18px}#expertise .exp li{font-size:13px}#expertise .exp li span{font-size:12px}}
