@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><script defer src="/assets/analytics.js"></script><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AIエージェントの標準アーキテクチャ | Wing</title><meta name="description" content="AIエージェントの全体像と技術スタック、食品メーカーの調達・契約への適用例を図解。標準モジュールを使う導入アプローチと、8週間のスケジュール例を整理します。"><link rel="canonical" href="https://wingconsulting.org/blog/wing-ai-agent-standard-architecture"><link rel="stylesheet" href="/assets/editorial.css"><link rel="stylesheet" href="/assets/agent-architecture-article.css">
+<meta property="og:type" content="article"><meta property="og:title" content="AIエージェントの標準アーキテクチャ"><meta property="og:description" content="AIエージェントの全体像と技術スタック、食品メーカーの調達・契約への適用例を図解。標準モジュールを使う導入アプローチと、8週間のスケジュール例を整理します。"><meta property="og:url" content="https://wingconsulting.org/blog/wing-ai-agent-standard-architecture"><meta property="og:image" content="https://wingconsulting.org/images/og/wing-ai-agent-standard-architecture.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:locale" content="ja_JP"><meta property="og:site_name" content="Wing"><meta property="article:published_time" content="2026-09-28"><meta property="article:modified_time" content="2026-09-28"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="AIエージェントの標準アーキテクチャ"><meta name="twitter:description" content="AIエージェントの全体像と技術スタック、食品メーカーの調達・契約への適用例を図解。標準モジュールを使う導入アプローチと、8週間のスケジュール例を整理します。"><meta name="twitter:image" content="https://wingconsulting.org/images/og/wing-ai-agent-standard-architecture.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "AIエージェントの標準アーキテクチャ", "description": "AIエージェントの全体像と技術スタック、食品メーカーの調達・契約への適用例を図解。標準モジュールを使う導入アプローチと、8週間のスケジュール例を整理します。", "datePublished": "2026-09-28", "dateModified": "2026-09-28", "author": {"@type": "Organization", "name": "Wing編集部"}, "publisher": {"@type": "Organization", "name": "Wing", "url": "https://wingconsulting.org"}, "image": "https://wingconsulting.org/images/og/wing-ai-agent-standard-architecture.png", "mainEntityOfPage": {"@id": "https://wingconsulting.org/blog/wing-ai-agent-standard-architecture"}}, {"@type": "WebPage", "@id": "https://wingconsulting.org/blog/wing-ai-agent-standard-architecture", "url": "https://wingconsulting.org/blog/wing-ai-agent-standard-architecture", "name": "AIエージェントの標準アーキテクチャ", "datePublished": "2026-09-28", "dateModified": "2026-09-28"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Wing", "item": "https://wingconsulting.org"}, {"@type": "ListItem", "position": 2, "name": "記事一覧", "item": "https://wingconsulting.org/blog/"}, {"@type": "ListItem", "position": 3, "name": "AIエージェントの標準アーキテクチャ", "item": "https://wingconsulting.org/blog/wing-ai-agent-standard-architecture"}]}]}</script><script defer src="/assets/agent-architecture-article.js"></script></head>
+<body><header><nav aria-label="サイト"><a class="logo" href="/">Wing</a><a href="/blog/">記事</a><a href="/news/">ニュース</a><a href="/#contact">相談する</a></nav><div class="hero"><p class="tag">AI AGENT ARCHITECTURE</p><h1>AIエージェントの標準アーキテクチャ</h1><p class="lead">AIエージェントに必要な機能と技術、既存システムとの接続方法をまとめました。食品メーカーの調達業務を例に、導入の手順とスケジュールを説明します。</p><p class="meta">Wing編集部 ｜ 公開 <time datetime="2026-09-28">2026年9月28日</time> ｜ 更新 <time datetime="2026-09-28">2026年9月28日</time></p></div></header><main><article><div class="toc" aria-label="目次"><strong>この記事の内容</strong><a href="#overview">01　概要：AIエージェントと業務システムの構成</a><a href="#detail">02　詳細：各機能に使う技術と実装方法</a><a href="#food">03　食品メーカーの例：小麦粉の調達と契約</a><a href="#approach">04　導入：共通部品と個別設定</a><a href="#schedule">05　導入スケジュール：8週間の計画例</a></div>
+<div class="takeaway"><strong>実行・承認・記録を共通部品にし、業務ルールと接続先を個別に設定する。</strong><p>承認画面や履歴管理は、複数の業務で共通のものを使います。企業ごとに設定するのは、使うデータ、処理手順、承認者などです。</p></div>
+<p>例えば発注業務なら、在庫の取得、見積の比較、発注案の作成、責任者の承認、取引先への送信が必要です。AIに任せる処理と、プログラムや人が確認する処理を決めてから、システムを設計します。</p>
+<p>以下は、複数の業務で再利用することを想定した<strong>標準構成の設計例</strong>です。概要図、実装に使う技術、食品メーカーの例、導入手順の順に説明します。紹介するテンプレートやモジュールは、導入前に用意する部品です。</p>
+
+<section aria-labelledby="overview"><h2 id="overview"><span class="section-number">01</span>概要：AIエージェントと業務システムの構成</h2>
+<p>担当者が依頼を入力すると、AIエージェントが業務システムからデータを取得し、文書を読み、処理を進めます。<strong>発注や契約送信など、承認が必要な操作の前で処理を止め</strong>、担当者に内容を確認してもらいます。</p>
+<p>受注、在庫、会計、契約の正本は、既存システムで管理します。AIが在庫数や契約状態を確認するときは、そのシステムの最新データを取得します。</p>
+<figure class="architecture-figure" id="figure-overview"><div class="figure-toolbar"><span>図1　AIエージェントの実行フローと継続改善サイクル</span><button type="button" class="zoom-button" data-zoom="/images/diagrams/wing-agent-overview.svg" data-title="図1　AIエージェントの実行フローと継続改善サイクル" aria-haspopup="dialog">図を拡大 ↗</button></div><a href="/images/diagrams/wing-agent-overview.svg" target="_blank" rel="noopener" aria-label="図1　AIエージェントの実行フローと継続改善サイクルを別タブで開く"><img src="/images/diagrams/wing-agent-overview.svg" alt="依頼から計画、情報取得、ツール実行、結果検証を進め、ルール・Skills・ナレッジと実行状態を参照する。ログと人の修正から改善案を作り、評価・承認後に版更新する。" width="1600" height="900" loading="lazy" decoding="async"></a><figcaption>依頼から計画、情報取得、ツール実行、結果検証を進め、ルール・Skills・ナレッジと実行状態を参照する。ログと人の修正から改善案を作り、評価・承認後に版更新する。</figcaption></figure>
+<h3>AIエージェントの4つの処理</h3>
+<div class="process-cards"><div><b>01　タスク計画</b><p>依頼を、入力・作業・完了条件に分解する。</p></div><div><b>02　コンテキスト取得</b><p>指示、Skills、業務データ、文書を選ぶ。</p></div><div><b>03　ツール実行</b><p>許可されたAPIや処理コードを呼び出す。</p></div><div><b>04　結果検証</b><p>形式・数値・業務条件を確認し、記録する。</p></div></div>
+<p>この処理は、LLMと<strong>ランタイム（実行基盤）</strong>で動かします。LLMは文章の解釈や作業案の作成を担い、ランタイムが順序、状態保存、承認待ち、再試行、停止を管理します。必要量の計算や発注可否の判定など、決まったルールで処理できる部分はプログラムに持たせます。</p>
+<p>初期構成では、業務の大枠をワークフローで固定し、文書の読み取りや比較などにAIを使います。処理を独立させる必要が出た段階で、複数エージェントへの分割を検討します。単純な構成から始める設計については、<a href="https://www.anthropic.com/engineering/building-effective-agents">Anthropicの設計ガイド</a>が参考になります。</p>
+<h3>Md・Skills・ナレッジ・DB・MCPの役割</h3>
+<div class="table-wrap" role="region" aria-label="構成要素と役割" tabindex="0"><table><thead><tr><th>構成要素</th><th>何を持つか</th><th>設計上の区別</th></tr></thead><tbody>
+<tr><td><strong>Md／システム指示</strong></td><td>業務の目的、用語、確認項目、文章で表せるルール。</td><td>Markdownは記述形式。権限や金額上限は、文章だけでなく実行側のコードでも強制する。</td></tr>
+<tr><td><strong>Skills</strong></td><td>見積比較や契約差分チェックなどの手順、コード、参照資料、出力様式。</td><td>繰り返す業務の単位で管理する。実行権限や本番への配布は別に管理する。</td></tr>
+<tr><td><strong>ナレッジ／RAG</strong></td><td>規格書、マニュアル、過去契約など、検索して参照する情報。</td><td>原文へのリンク、文書の版、利用者のアクセス権を保持する。</td></tr>
+<tr><td><strong>実行状態DB・メモリ</strong></td><td>途中経過、承認、ツールの結果、会話の要約、確認済みの過去情報。</td><td>一件の処理状態と長期メモリを分ける。業務システムの最新データは都度取得する。</td></tr>
+<tr><td><strong>API・MCP</strong></td><td>システムの検索・登録・送信などを行うための接続口。</td><td>MCPは接続のためのプロトコル。業務ルールや承認フローを自動で用意するものではない。</td></tr>
+</tbody></table></div>
+<p>Agent Skillsの仕様では、<code>SKILL.md</code>を中心に、実行コード、参照資料、テンプレートなどをまとめられます。Skillsにはテスト用の業務例も添え、手順を変更した際に同じ入力で結果を確認できるようにします。変更履歴はGitで管理します。<a href="https://agentskills.io/specification">出典：Agent Skills仕様</a></p>
+<h3>担当者の修正を、次回の処理に反映する</h3>
+<div class="improvement-flow" aria-label="継続改善の順序"><span>実行ログ・人の修正</span><i aria-hidden="true">→</i><span>改善候補の作成</span><i aria-hidden="true">→</i><span>評価・承認</span><i aria-hidden="true">→</i><span>版更新・配布</span></div>
+<p>例えば、担当者が「最安値でも納期を満たさない見積は選べない」と修正したら、その理由を記録します。比較手順に納期チェックを加え、過去の案件で期待どおりに動くかを確かめてから反映します。文書更新は検索用データへ、手順の修正はSkillsへ、承認条件の変更は設定と実行コードへ、それぞれ反映します。</p>
+<p>この運用で更新するのは、参照文書、手順、設定です。LLMの再学習とは別の作業です。変更後の誤りや差戻しを記録し、<strong>担当者の確認を減らしてよい処理かどうかを判断します。</strong></p></section>
+
+<section aria-labelledby="detail"><h2 id="detail"><span class="section-number">02</span>詳細：各機能に使う技術と実装方法</h2>
+<p>画面にはReact、業務APIにはFastAPI、処理の順序と中断・再開にはLangGraphを使う構成例です。画面、実行制御、データ保存、外部接続を分けておくと、モデルや接続先を変更する際の修正範囲を限定できます。</p>
+<figure class="architecture-figure" id="figure-detail"><div class="figure-toolbar"><span>図2　概要図に対応した技術スタックの実装例</span><button type="button" class="zoom-button" data-zoom="/images/diagrams/wing-agent-detail.svg" data-title="図2　概要図に対応した技術スタックの実装例" aria-haspopup="dialog">図を拡大 ↗</button></div><a href="/images/diagrams/wing-agent-detail.svg" target="_blank" rel="noopener" aria-label="図2　概要図に対応した技術スタックの実装例を別タブで開く"><img src="/images/diagrams/wing-agent-detail.svg" alt="ReactのUIからFastAPI、LangGraphの実行制御へ進む。GitのSkills、RAG、LLM、PostgreSQLを使い、実行前チェックを経てAPI・MCP経由で業務システムを操作する。" width="1600" height="1080" loading="lazy" decoding="async"></a><figcaption>ReactのUIからFastAPI、LangGraphの実行制御へ進む。GitのSkills、RAG、LLM、PostgreSQLを使い、実行前チェックを経てAPI・MCP経由で業務システムを操作する。</figcaption></figure>
+<div class="table-wrap" role="region" aria-label="技術スタックと実装範囲" tabindex="0"><table><thead><tr><th>概要図の要素</th><th>技術スタックの例</th><th>実装・設定する内容</th></tr></thead><tbody>
+<tr><td>ユーザーUI</td><td>React ＋ TypeScript</td><td>依頼、進捗、比較表、根拠、変更差分、承認・差戻しを表示する。</td></tr>
+<tr><td>業務API</td><td>Python ＋ FastAPI ＋ Pydantic</td><td>本人確認、案件ID、ジョブ受付、入力検証、承認結果の受付を実装する。</td></tr>
+<tr><td>AIエージェントの実行制御</td><td>LangGraph ＋ ジョブワーカー</td><td>ノード・分岐、承認による中断・再開、試行回数・時間・費用の上限を定義する。</td></tr>
+<tr><td>LLM</td><td>Claude API等のtool use対応API</td><td>呼出部を分離し、使用モデル・プロンプトの版を記録する。候補は業務評価で選ぶ。</td></tr>
+<tr><td>Md・Skills</td><td>Markdown ＋ Git ＋ 配布用成果物</td><td>指示、処理コード、出力様式、依存関係を版管理し、承認済みの版を配布する。</td></tr>
+<tr><td>実行状態・メモリ</td><td>PostgreSQL</td><td>チェックポイント、承認対象、外部処理ID、メモリの出典・期限を保存する。</td></tr>
+<tr><td>ナレッジ検索</td><td>PostgreSQL ＋ pgvector ＋ 埋め込みモデル</td><td>抽出・OCR、文書分割、索引更新、権限を反映した検索を用意する。原本は文書管理やオブジェクトストレージに保持する。</td></tr>
+<tr><td>ツール実行・外部連携</td><td>PythonのAPIコネクタ／必要に応じてMCP</td><td>検索、下書き、確定操作を分ける。資格情報、タイムアウト、重複実行を管理する。</td></tr>
+<tr><td>共通の統制・運用</td><td>既存IdP（OIDC）、秘密情報管理、OpenTelemetry、pytest ＋ CI</td><td>権限、監査、トレース、評価ケース、運用アラート、更新時の回帰評価を整える。</td></tr>
+<tr><td>実行環境</td><td>Docker ＋ 既存クラウドのコンテナ実行環境</td><td>APIとワーカーを分離し、ジョブの復旧、バックアップ、ネットワーク制御を設定する。</td></tr>
+</tbody></table></div>
+<p class="source-note">各技術の公式資料：<a href="https://react.dev/">React</a>、<a href="https://fastapi.tiangolo.com/">FastAPI</a>、<a href="https://pydantic.dev/docs/validation/latest/get-started/">Pydantic</a>、<a href="https://docs.langchain.com/oss/python/langgraph/persistence">LangGraphの永続化</a>、<a href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview">Claudeのtool use</a>、<a href="https://github.com/pgvector/pgvector">pgvector</a>、<a href="https://opentelemetry.io/docs/">OpenTelemetry</a>、<a href="https://docs.pytest.org/en/stable/">pytest</a>、<a href="https://docs.docker.com/get-started/docker-overview/">Docker</a>。組み合わせ方と実装範囲は、本記事の構成例です。</p>
+<h3>承認待ちの状態を保存し、後から再開する</h3>
+<p>承認が翌日になる仕事では、ブラウザやAPIの接続を維持し続ける設計は適しません。APIは案件IDを返し、ワーカーが処理を進めます。承認待ちになったら状態をDBに保存し、担当者の操作を受けて再開します。LangGraphのチェックポイントとinterruptは、この中断・再開に利用できます。実行待ちジョブの管理や業務上の承認権限は、アプリケーション側でも実装します。<a href="https://docs.langchain.com/oss/python/langgraph/interrupts">出典：LangGraph Interrupts</a></p>
+<h3>承認後の変更と二重発注を防ぐ</h3>
+<p>発注ツールを実行する直前に、入力形式、利用者とエージェントの権限、仕入先、数量、金額、承認対象の版をチェックします。<strong>承認後に宛先や金額が変わった場合は、元の承認を流用せず再承認</strong>に戻します。</p>
+<p>操作ごとのIDと外部システムの受付結果も保存します。タイムアウトで送信済みか不明なときは、受付状態を照合してから再試行します。外部APIに重複防止機能がない場合は、照合または手動確認を挟みます。この照合処理は、チェックポイントの保存とは別に実装します。</p>
+<h3>接続権限・操作権限・承認を分けて管理する</h3>
+<p>MCPを採用する場合も、接続先の認証・認可と、業務上の承認は別に扱います。参照できる文書と実行できる操作は、依頼したユーザーに許可された範囲に制限します。MCPには認可仕様とセキュリティの実装指針があり、それらに加えて業務単位の制御が必要です。<a href="https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization">MCP Authorization</a>／<a href="https://modelcontextprotocol.io/docs/2025-11-25/tutorials/security/security_best_practices">Security Best Practices</a></p>
+<p>初期導入では、顧客ごとに実行環境・データ・資格情報を分けます。検索対象にも文書のアクセス権を適用し、取り込んだメールや文書の中の指示をシステム指示として扱わないようにします。監査には実行者・承認者・対象・結果を残し、分析用トレースでは秘密情報や不要な本文を記録しない設定にします。</p>
+</section>
+
+<section aria-labelledby="food"><h2 id="food"><span class="section-number">03</span>食品メーカーの例：小麦粉の調達と契約</h2>
+<p>小麦粉を使う食品メーカーで、購買担当者が「来月分の小麦粉を、在庫を見て手配して」と依頼する場面を考えます。製品名を固定せず、既存の生産・在庫・購買管理、文書管理、メール、電子契約の各システムにつなぎます。<strong>以下は架空の適用例</strong>です。</p>
+<figure class="architecture-figure" id="figure-food"><div class="figure-toolbar"><span>図3　食品メーカーの原料調達・契約に適用した構成例</span><button type="button" class="zoom-button" data-zoom="/images/diagrams/wing-agent-food.svg" data-title="図3　食品メーカーの原料調達・契約に適用した構成例" aria-haspopup="dialog">図を拡大 ↗</button></div><a href="/images/diagrams/wing-agent-food.svg" target="_blank" rel="noopener" aria-label="図3　食品メーカーの原料調達・契約に適用した構成例を別タブで開く"><img src="/images/diagrams/wing-agent-food.svg" alt="必要量の計算、見積比較、契約・発注案の作成、承認後の実行を、生産・在庫・購買管理、文書管理、メール、電子契約と連携して進める。" width="1600" height="900" loading="lazy" decoding="async"></a><figcaption>必要量の計算、見積比較、契約・発注案の作成、承認後の実行を、生産・在庫・購買管理、文書管理、メール、電子契約と連携して進める。</figcaption></figure>
+<div class="table-wrap" role="region" aria-label="食品メーカーで接続するシステム" tabindex="0"><table><thead><tr><th>接続するシステム</th><th>読み取る情報</th><th>処理後に残すもの</th></tr></thead><tbody>
+<tr><td>生産・在庫・購買管理</td><td>生産予定、使用量、使用可能在庫、発注残、認定仕入先。</td><td>承認済みの発注明細と、関連する契約・承認のID。</td></tr>
+<tr><td>文書管理</td><td>原料規格書、見積書、契約ひな形、過去契約。</td><td>比較表、契約案、変更差分、参照した原文と版。</td></tr>
+<tr><td>メール</td><td>見積回答、納期回答、仕入先からの確認事項。</td><td>承認後の発注・照会メールと送信履歴。</td></tr>
+<tr><td>電子契約</td><td>契約の送信・締結状況。</td><td>承認された契約の送信、締結済み文書へのリンク。</td></tr>
+</tbody></table></div>
+<h3>小麦粉を10t調達する場合の処理</h3>
+<ol class="case-steps"><li><strong>必要量を計算する。</strong>仮に来月の使用予定が12t、安全在庫が2t、使用可能在庫が3t、必要納期までに届く確定発注残が1tなら、追加調達量は10tです。単位・基準日・既発注分をそろえ、プログラムで計算します。数量や品目が不明なら推測せず確認します。<p class="formula">12t ＋ 2t − 3t − 1t ＝ 10t</p></li>
+<li><strong>見積と規格書を照合する。</strong>メール・文書管理から候補を集め、単価、納期、原料規格、必要書類を同じ項目で比較します。認定仕入先かどうかは購買管理の情報で確認します。</li>
+<li><strong>比較表・契約案・発注案を作る。</strong>採用候補の根拠と未確認事項を示します。既存契約との差分を抽出し、契約の新規締結・改定が必要な場合に契約案を作成します。</li>
+<li><strong>人の承認後に、確定操作を行う。</strong>購買責任者が発注先・数量・金額を、必要に応じて品質担当者や法務担当者が条件を確認します。契約締結が発注の前提なら、締結完了を待って発注します。承認の順序と実行条件は業務ルールに合わせます。</li></ol>
+<div class="example"><strong>見積比較の出力例</strong><p class="note">架空の数値。10t、同じ納品場所への送料込み・税別単価で比較し、3社とも認定仕入先と仮定します。</p>
+<div class="table-wrap" role="region" aria-label="小麦粉の見積比較例" tabindex="0"><table><thead><tr><th>候補</th><th>単価／見積金額</th><th>納期・書類</th><th>AIが提示する扱い</th></tr></thead><tbody><tr><td>A社</td><td>90円/kg／90万円</td><td>必要納期の3日前。必要な規格書あり。</td><td>承認候補。根拠資料と照合結果を添える。</td></tr><tr><td>B社</td><td>86円/kg／86万円</td><td>必要納期の4日後。</td><td>現条件では対象外。納期変更が可能か別途照会。</td></tr><tr><td>C社</td><td>88円/kg／88万円</td><td>納期内。規格書が旧版。</td><td>保留。最新版を取得し、品質担当者が確認。</td></tr></tbody></table></div></div>
+<p>担当者は、比較表、契約差分、発注案を、参照した資料と一緒に確認できます。送信後は発注番号、契約ID、未完了の処理を確認できます。納期や書類の不備で差し戻された理由は評価ケースに追加し、次回の検索・比較手順の改善に使います。</p></section>
+
+<section aria-labelledby="approach"><h2 id="approach"><span class="section-number">04</span>導入：共通部品と個別設定</h2>
+<p>状態保存、承認、システム接続、監査ログ、評価は、複数の案件で使える部品として用意します。顧客ごとに変更する業務ルールや帳票は、コード本体と分けて管理します。</p>
+<div class="assembly" aria-label="標準基盤と顧客別設定の組み合わせ"><div><small>共通化する</small><b>標準モジュール</b><span>実行基盤・承認・接続・評価</span></div><i aria-hidden="true">＋</i><div><small>業務ごとに選ぶ</small><b>業務テンプレート</b><span>見積比較・契約差分・帳票</span></div><i aria-hidden="true">＋</i><div><small>顧客ごとに設定する</small><b>ルール・データ・権限</b><span>接続先・項目対応・承認者</span></div></div>
+<h3>導入前に整備する標準モジュール</h3>
+<div class="table-wrap" role="region" aria-label="準備する標準モジュールと顧客別設定" tabindex="0"><table><thead><tr><th>標準化する単位</th><th>準備するもの</th><th>顧客ごとに確認・設定するもの</th></tr></thead><tbody>
+<tr><td>導入設定テンプレート</td><td>業務定義書、データ項目表、権限表、受入基準。</td><td>担当者、対象業務、件数、完成形、例外、禁止操作。</td></tr>
+<tr><td>実行・承認モジュール</td><td>状態保存、承認待ち・再開、差戻し、停止、実行履歴の画面。</td><td>承認者、金額条件、期限、代理承認、エスカレーション先。</td></tr>
+<tr><td>業務Skills・帳票</td><td>見積比較、契約差分、文書抽出、帳票作成の手順と出力形式。</td><td>品目、単位、比較条件、契約ひな形、帳票レイアウト。</td></tr>
+<tr><td>接続コネクタ</td><td>読取・下書き・確定の共通インターフェース、認証、再試行、重複防止。</td><td>接続先、API利用可否、項目対応、テスト環境、操作権限。</td></tr>
+<tr><td>文書・ナレッジ管理</td><td>取り込み、OCR、検索、引用、更新・削除の反映。</td><td>対象フォルダ、文書分類、正本、利用者の権限、保存期限。</td></tr>
+<tr><td>評価・運用モジュール</td><td>評価データ形式、回帰テスト、監査ログ、費用集計、通知、復旧手順。</td><td>正解例、許容する誤り、運用責任者、通知先、予算上限。</td></tr>
+</tbody></table></div>
+<p>既存コネクタで接続できないシステムには、追加の接続処理が必要です。読み取れない文書の整備、独自帳票の作成、複雑な承認経路への対応も、個別に工数を見積もります。提案時には<strong>設定で対応する範囲と、追加開発する範囲</strong>を分けます。</p>
+<h3>業務設定をファイルで管理する</h3>
+<p>設定をコード本体から分離しておけば、基盤を顧客ごとに作り直す作業を減らせます。以下は概念例であり、稼働する製品の設定仕様ではありません。APIキーやトークンは設定ファイルに直書きせず、秘密情報管理サービスから参照します。</p>
+<pre aria-label="顧客別設定の概念例"><code>workflow: raw_material_procurement
+skills:
+  - quote_comparison@1.0
+  - contract_diff@1.0
+connectors:
+  purchasing: customer_purchasing_api
+  documents: customer_document_api
+approvals:
+  send_purchase_order: purchasing_manager
+  send_contract: contract_approver
+evaluation_set: procurement_acceptance_v1</code></pre>
+<p>Skills、承認条件、接続先、評価セットを一緒に記録することで、同じ条件で再検証できます。顧客のデータや固有ルールは顧客専用の管理範囲に置き、別の顧客へ再利用するのは共通化できるコード・手順・匿名化した評価パターンに限定します。</p></section>
+
+<section aria-labelledby="schedule"><h2 id="schedule"><span class="section-number">05</span>導入スケジュール：8週間の計画例</h2>
+<p><strong>1業務・既存システム2〜3接続を8週間で導入する計画例</strong>です。標準モジュールが利用でき、API利用許可、サンプルデータ、承認者、検証環境が揃っている場合を想定しています。顧客の業務責任者には週次の確認に参加してもらいます。期間は実績の平均ではなく、対象範囲と準備状況に応じて調整する目安です。</p>
+<figure class="architecture-figure" id="figure-roadmap"><div class="figure-toolbar"><span>図4　標準モジュールを使う8週間の導入計画例</span><button type="button" class="zoom-button" data-zoom="/images/diagrams/wing-agent-roadmap.svg" data-title="図4　標準モジュールを使う8週間の導入計画例" aria-haspopup="dialog">図を拡大 ↗</button></div><a href="/images/diagrams/wing-agent-roadmap.svg" target="_blank" rel="noopener" aria-label="図4　標準モジュールを使う8週間の導入計画例を別タブで開く"><img src="/images/diagrams/wing-agent-roadmap.svg" alt="1週目に業務・基準の確認、2〜3週目に設定・接続、4〜5週目に評価、6〜7週目に限定運用、8週目に本番移行。各段階で成果物と移行条件を確認する。" width="1600" height="770" loading="lazy" decoding="async"></a><figcaption>1週目に業務・基準の確認、2〜3週目に設定・接続、4〜5週目に評価、6〜7週目に限定運用、8週目に本番移行。各段階で成果物と移行条件を確認する。</figcaption></figure>
+<div class="table-wrap" role="region" aria-label="導入工程と役割と移行条件" tabindex="0"><table><thead><tr><th>工程・期間</th><th>構築・導入側の作業</th><th>顧客側の作業</th><th>次へ進む条件</th></tr></thead><tbody>
+<tr><td><strong>01 業務・基準の確認</strong><br>1週目</td><td>業務を分解し、再利用できるモジュールと不足部分を確認。</td><td>実例、ルール、正解例、現状工数、例外を提供。業務責任者を決める。</td><td>対象、禁止操作、完成形、受入基準を合意。</td></tr>
+<tr><td><strong>02 設定・接続</strong><br>2〜3週目</td><td>Skills、帳票、承認、コネクタを設定。検証環境で一連の処理を接続。</td><td>API権限、項目の意味、文書の正本、利用者の権限を確認。</td><td>参照・下書きが動き、承認なしの確定操作が止まる。</td></tr>
+<tr><td><strong>03 評価</strong><br>4〜5週目</td><td>過去案件、欠損、矛盾、API障害、再開・重複実行などを検証して修正。</td><td>結果を採点し、業務上の誤りと許容できる差を判断。</td><td>合意した品質基準を満たし、重大な未解決問題がない。</td></tr>
+<tr><td><strong>04 限定運用</strong><br>6〜7週目</td><td>対象者・取引を限定して監視。修正理由、処理時間、費用を集計。</td><td>確定操作は全件承認し、修正・例外・実際の確認工数を記録。</td><td>従来業務と比較でき、停止・手動引継ぎが機能する。</td></tr>
+<tr><td><strong>05 本番移行</strong><br>8週目</td><td>運用版を固定し、監視、バックアップ、教育、引継ぎを実施。</td><td>業務責任者が移行を判断し、担当者・連絡先・運用時間を確定。</td><td>運用責任と復旧手順が明確。承認条件を維持して稼働。</td></tr>
+</tbody></table></div>
+<h3>本番移行前に確認すること</h3>
+<p>受入評価には、正しく処理できた割合だけでなく、誤った確定操作、根拠資料の欠落、人の確認・修正時間、一件当たり費用、処理時間を含めます。例えば「承認なしの送信が起きない」「権限外の文書が出力されない」「再実行で発注が重複しない」は必須の確認項目です。LLMによる自動採点は補助に使い、数値照合はコード、業務上の妥当性は担当者の評価と組み合わせます。<a href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents">参考：Anthropicのエージェント評価ガイド</a></p>
+<p>予定どおりに基準を満たさなければ、対象の原料や処理範囲を縮めるか、修正して再評価します。APIが未提供、マスタが未整備、契約ひな形や承認規程が未確定の場合は、追加の準備期間を見込みます。前述の食品メーカー例は4種類のシステムを扱うため、初期は参照と下書きに必要な2〜3接続に絞ります。電子契約などの追加接続は、範囲と工数を確認して計画に加えます。</p>
+<h3>運用後の手順変更と承認の見直し</h3>
+<p>運用開始後も、修正・差戻し・障害を定期的に振り返ります。業務Skillsを変更したら、固定した評価セットと新しい例外ケースの両方で比較します。問題があれば前の版へ戻せるようにしておきます。</p>
+<p>自動処理に切り替える候補は、条件が明確で、誤りがあっても影響の小さい操作です。<strong>業務責任者が変更を承認した後に、システムの承認条件を変更します。</strong>契約締結や高額発注の承認要否は、社内規程に従います。</p>
+</section>
+<div class="related"><strong>関連する記事</strong><a href="/blog/ai-agent-iam-identity">AIエージェントのID管理と権限 →</a><a href="/blog/consulting-tech-ai">AIを業務改善に組み込み、効果を測る →</a><a href="/blog/grain-supply-chain-risk">穀物取引の調達・在庫・物流リスク →</a></div>
+<div class="cta"><strong>導入の相談</strong><p>対象業務、利用中のシステム、帳票や文書の例をもとに、必要な機能と開発範囲を確認します。</p><a href="/#contact">導入について相談する →</a></div>
+<p class="editor">編集：Wing編集部。2026年9月28日時点の公式資料を参考にした設計案です。食品メーカーの業務と数値は架空の例です。</p>
+</article></main><dialog id="diagram-dialog" aria-labelledby="diagram-dialog-title"><div class="dialog-bar"><h2 id="diagram-dialog-title">構成図</h2><button type="button" class="zoom-button" autofocus>閉じる</button></div><div class="diagram-scroll" tabindex="0" role="region" aria-label="拡大図。縦横にスクロールできます"><img alt="" width="1600"></div><p class="dialog-note">図が画面より大きい場合は、縦横にスクロールできます。</p></dialog><footer><a href="/">Wing</a><a href="/blog/">記事</a><a href="/news/">ニュース</a><a href="/privacy">プライバシーポリシー</a></footer></body></html>

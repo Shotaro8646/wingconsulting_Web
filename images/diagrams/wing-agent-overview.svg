@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title description">
+<title id="title">AIエージェントの実行フローと継続改善サイクル</title><desc id="description">中央にタスク計画、コンテキスト取得、ツール実行、結果検証の順に実行フローを示す。左のルール、Skills、ナレッジを参照し、右の実行状態DBとメモリに記録する。実行ログと人の修正を評価し、検証済みの更新を知識と手順へ反映する。</desc>
+<style>text{font-family:"Meiryo UI",Meiryo,sans-serif;fill:#0C1C4B}.title{font-size:34px;font-weight:700}.h{font-size:28px;font-weight:700}.body{font-size:20px}.sub{font-size:17px;fill:#4A515C}.label{font-size:13px;letter-spacing:1.5px;fill:#4A515C}.green{fill:#1A3CA2}.amber{fill:#4B3B0C}.flow{stroke:#0C1C4B;stroke-width:5;fill:none;stroke-linejoin:round;stroke-linecap:butt}.feedback{stroke:#8C6F17;stroke-width:5;fill:none;stroke-linejoin:round;stroke-linecap:round}.muted-line{stroke:#c9d6d1;stroke-width:1.5;fill:none}.white{fill:#fff}/* Type scale: title 34, agent 28, function 26, group 22, explanation 19. */
+text.page-title{font-size:34px;font-weight:700}text.agent-name{font-size:28px;font-weight:700}text.function-name{font-size:26px;font-weight:700}text.group-name{font-size:22px;font-weight:700}text.caption{font-size:19px;font-weight:400}text.connector-label{font-size:17px;font-weight:400}text.meta-text{font-size:15px;font-weight:400}text.step-index{font-size:16px;font-weight:700}
+</style><rect width="1600" height="900" fill="#FFFFFF"/><defs>
+<marker id="a" markerUnits="userSpaceOnUse" viewBox="0 0 12 12" refX="12" refY="6" markerWidth="16" markerHeight="16" orient="auto-start-reverse"><path d="M0 0L12 6L0 12Z" fill="#0C1C4B"/></marker>
+<marker id="small" markerUnits="userSpaceOnUse" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L8 4L0 8Z" fill="#0C1C4B"/></marker>
+<marker id="b" markerUnits="userSpaceOnUse" viewBox="0 0 12 12" refX="12" refY="6" markerWidth="16" markerHeight="16" orient="auto-start-reverse"><path d="M0 0L12 6L0 12Z" fill="#8C6F17"/></marker>
+</defs>
+<!-- Title -->
+<text x="50" y="45" style="" class="meta-text">Wing</text><line x1="50" y1="60" x2="1550" y2="60" stroke="#d4ded8"/>
+<text x="50" y="109" class="title page-title">AIエージェントの実行フローと継続改善サイクル</text>
+
+<!-- Input -->
+<rect x="515" y="169" width="575" height="62" rx="9" fill="#fff" stroke="#cad8d1"/>
+<circle cx="545" cy="191" r="6" fill="none" stroke="#0C1C4B" stroke-width="2"/><path d="M533 214v-4c0-15 24-15 24 0v4" fill="none" stroke="#0C1C4B" stroke-width="2"/>
+<text x="579" y="195" class="body group-name" style="">ユーザーUI・イベント</text><text x="579" y="219" class="sub caption">Web UI・チャット・メール・スケジュール</text>
+<path d="M752 233V269" class="flow" marker-end="url(#a)"/><path d="M858 269V233" class="flow" marker-end="url(#a)"/>
+<text x="737" y="253" text-anchor="end" style="fill:#4A515C" class="connector-label">依頼</text><text x="874" y="253" style="fill:#4A515C" class="connector-label">結果・承認</text>
+<!-- Runtime -->
+<rect x="515" y="271" width="575" height="363" rx="15" fill="#E4E9F0" stroke="#B8C0CC" stroke-width="1.5"/>
+<text x="540" y="310" style="fill:#0C1C4B" class="agent-name">AIエージェント</text><text x="1064" y="309" text-anchor="end" style="fill:#4A515C" class="caption">LLM ＋ ランタイム</text>
+<rect x="552" y="329" width="503" height="56" rx="7" fill="#fff"/><circle cx="578" cy="355" r="16" fill="#F1EEE7"/><text x="578" y="360" text-anchor="middle" style="fill:#1A3CA2" class="step-index">01</text><text x="608" y="354" style="" class="function-name">タスク計画</text><text x="608" y="377" style="fill:#4A515C" class="caption">依頼を分解し、実行ステップを決める</text><path d="M803 386V391" fill="none" stroke="#0C1C4B" stroke-width="3" marker-end="url(#small)"/><rect x="552" y="393" width="503" height="56" rx="7" fill="#fff"/><circle cx="578" cy="419" r="16" fill="#F1EEE7"/><text x="578" y="424" text-anchor="middle" style="fill:#1A3CA2" class="step-index">02</text><text x="608" y="418" style="" class="function-name">コンテキスト取得</text><text x="608" y="441" style="fill:#4A515C" class="caption">指示・Skill・検索結果・メモリを選ぶ</text><path d="M803 450V455" fill="none" stroke="#0C1C4B" stroke-width="3" marker-end="url(#small)"/><rect x="552" y="457" width="503" height="56" rx="7" fill="#fff"/><circle cx="578" cy="483" r="16" fill="#F1EEE7"/><text x="578" y="488" text-anchor="middle" style="fill:#1A3CA2" class="step-index">03</text><text x="608" y="482" style="" class="function-name">ツール実行</text><text x="608" y="505" style="fill:#4A515C" class="caption">引数を作成し、認可・承認後に実行</text><path d="M803 514V519" fill="none" stroke="#0C1C4B" stroke-width="3" marker-end="url(#small)"/><rect x="552" y="521" width="503" height="56" rx="7" fill="#fff"/><circle cx="578" cy="547" r="16" fill="#F1EEE7"/><text x="578" y="552" text-anchor="middle" style="fill:#1A3CA2" class="step-index">04</text><text x="608" y="546" style="" class="function-name">結果検証</text><text x="608" y="569" style="fill:#4A515C" class="caption">完了条件・形式・業務整合性を確認</text>
+<path d="M550 547H530V355H550" fill="none" stroke="#B8C0CC" stroke-width="3" stroke-dasharray="5 4" marker-end="url(#small)"/>
+<text x="803" y="600" text-anchor="middle" style="fill:#4A515C" class="caption">未達 → 再計画　／　判断不能 → 人に確認</text>
+<text x="803" y="624" text-anchor="middle" style="fill:#4A515C" class="caption">実行基盤：状態保存・承認待ち・再試行・停止</text>
+<!-- Knowledge: simple aligned rows -->
+<text x="65" y="306" class="label meta-text">CONTEXT &amp; SKILLS</text><text x="65" y="339" class="h group-name">ルール・手順・ナレッジ</text>
+<line x1="65" y1="359" x2="400" y2="359" class="muted-line"/>
+<g fill="none" stroke="#0C1C4B" stroke-width="2"><path d="M72 384h22l8 8v35H72zM94 384v9h8M79 403h15m-15 9h15"/></g>
+<text x="124" y="398" class="h function-name" style="">Md / システム指示</text><text x="124" y="426" class="sub caption">業務ルール・ポリシー</text>
+<line x1="65" y1="447" x2="400" y2="447" class="muted-line"/>
+<g fill="none" stroke="#0C1C4B" stroke-width="2"><rect x="71" y="472" width="32" height="39" rx="3"/><path d="m77 482 3 3 6-7m-9 19 3 3 6-7m5-9h6m-6 14h6"/></g>
+<text x="124" y="486" class="h function-name" style="">Skills</text><text x="124" y="514" class="sub caption">業務手順・コード・出力様式</text>
+<line x1="65" y1="535" x2="400" y2="535" class="muted-line"/>
+<g fill="none" stroke="#0C1C4B" stroke-width="2"><rect x="70" y="565" width="10" height="35"/><rect x="83" y="559" width="10" height="41"/><path d="m96 565 8-2 8 33-8 2z"/></g>
+<text x="124" y="574" class="h function-name" style="">ナレッジ検索</text><text x="124" y="602" class="sub caption">RAG・文書検索</text>
+<path d="M405 419H513" class="flow" marker-end="url(#a)"/><text x="458" y="403" text-anchor="middle" style="fill:#4A515C" class="connector-label">参照</text>
+<!-- Records -->
+<text x="1200" y="306" class="label meta-text">STATE &amp; MEMORY</text><text x="1200" y="339" class="h group-name">実行状態・メモリ</text>
+<line x1="1200" y1="359" x2="1535" y2="359" class="muted-line"/>
+<g fill="none" stroke="#1A3CA2" stroke-width="2"><ellipse cx="1223" cy="391" rx="17" ry="6"/><path d="M1206 391v25c0 8 34 8 34 0v-25m-34 13c0 8 34 8 34 0"/></g>
+<text x="1260" y="398" class="h function-name" style="">実行状態DB</text><text x="1260" y="426" class="sub caption">ログ・承認・人の修正</text>
+<line x1="1200" y1="447" x2="1535" y2="447" class="muted-line"/>
+<g fill="none" stroke="#1A3CA2" stroke-width="2"><path d="M1209 472h24l8 8v31h-32zM1233 472v8h8M1216 489h17m-17 9h17"/></g>
+<text x="1260" y="486" class="h function-name" style="">メモリ</text><text x="1260" y="514" class="sub caption">履歴・要約・長期情報</text>
+<path d="M1092 419H1190" class="flow" marker-start="url(#a)" marker-end="url(#a)"/><text x="1145" y="403" text-anchor="middle" style="fill:#4A515C" class="connector-label">読取・保存</text>
+<!-- Improvement at top: no line over central input -->
+<rect x="1177" y="169" width="358" height="72" rx="10" fill="#F1EEE7" stroke="#8C6F17"/>
+<text x="1356" y="199" text-anchor="middle" class="body amber group-name" style="">評価・更新管理</text><text x="1356" y="224" text-anchor="middle" style="fill:#4B3B0C" class="caption">改善案 → 評価・承認 → 版更新</text>
+<path d="M1516 375V243" class="feedback" marker-end="url(#b)"/>
+<path d="M1356 167V148H232V179" class="feedback" marker-end="url(#b)"/>
+<rect x="65" y="181" width="335" height="63" rx="10" fill="#F1EEE7"/>
+<text x="232" y="207" text-anchor="middle" style="fill:#4B3B0C" class="group-name">検証済みの更新を反映</text><text x="232" y="231" text-anchor="middle" style="fill:#4B3B0C" class="caption">ルール・Skills・ナレッジ</text><path d="M232 246V284" class="feedback" marker-end="url(#b)"/>
+<text x="1200" y="574" class="sub caption">品質評価に基づき</text><text x="1200" y="603" style="fill:#4B3B0C" class="group-name">自動処理の範囲を拡大</text>
+<!-- External tools -->
+<path d="M803 636V675" class="flow" marker-start="url(#a)" marker-end="url(#a)"/><text x="830" y="659" style="fill:#4A515C" class="connector-label">ツール呼出し・結果</text>
+<rect x="515" y="677" width="575" height="57" rx="9" fill="#fff" stroke="#c6d6cd"/>
+<text x="542" y="714" style="" class="function-name">ツール実行・外部連携</text><text x="1067" y="712" text-anchor="end" style="fill:#4A515C" class="caption">API・MCP</text>
+<path d="M803 736V751M277 751H1324" class="flow"/>
+<path d="M277 751V776" class="flow" marker-end="url(#a)"/>
+<path d="M803 751V776" class="flow" marker-end="url(#a)"/>
+<path d="M1324 751V776" class="flow" marker-end="url(#a)"/>
+<circle cx="803" cy="751" r="4" fill="#0C1C4B"/>
+<rect x="65" y="778" width="423" height="47" rx="8" fill="#E4E9F0"/>
+<text x="277" y="810" text-anchor="middle" style="" class="function-name">ERP・基幹システム</text>
+<rect x="591" y="778" width="423" height="47" rx="8" fill="#E4E9F0"/>
+<text x="803" y="810" text-anchor="middle" style="" class="function-name">業務SaaS</text>
+<rect x="1112" y="778" width="423" height="47" rx="8" fill="#E4E9F0"/>
+<text x="1324" y="810" text-anchor="middle" style="" class="function-name">業務DB・文書保管</text>
+<!-- governance -->
+<line x1="65" y1="848" x2="1535" y2="848" stroke="#baccc2"/>
+<text x="65" y="877" style="fill:#0C1C4B" class="caption">共通の統制・運用</text>
+<text x="314" y="877" class="sub caption">IAM・認可</text><text x="552" y="877" class="sub caption">承認・ガードレール</text><text x="891" y="877" class="sub caption">トレーシング・評価</text><text x="1270" y="877" class="sub caption">コスト・障害監視</text>
+</svg>
