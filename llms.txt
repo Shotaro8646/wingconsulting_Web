@@ -19,7 +19,7 @@
 - [安全保障貿易管理と該非判定](https://wingconsulting.org/blog/export-control-ai): リスト規制・キャッチオール規制とAIによる効率化
 - [輸入申告の洗い直しで関税を減らす](https://wingconsulting.org/blog/import-duty-ai): RCEPの税率の使い忘れと関税の払いすぎを、過去の輸入申告からAIとプログラムで探す手順。実行関税率表から読み出した税率、差額の試算、更正の請求などの手続の比較
 - [品目ごとの原価と値上げの根拠](https://wingconsulting.org/blog/landed-cost-ai): 運賃・通関の請求書を品目ごとの原価に割り振り、為替・仕入値・運賃・関税の上昇を分けて価格交渉の根拠にする手順。原価と減った粗利の試算
-- [米国IEEPA関税の還付](https://wingconsulting.org/blog/us-tariff-refund-ai): 2026-09-22更新。CAPE第3段階は10月6日開始予定。対象条件と申告データの確認方法。
+- [米国IEEPA関税の還付](https://wingconsulting.org/blog/us-tariff-refund-ai): 2026-10-08更新。CAPE第3段階の受付開始を反映。対象条件と申告データの確認方法。
 - [AIエージェント完全ガイド](https://wingconsulting.org/blog/ai-agent-guide): 概念から導入・ガバナンスまでの7ステップ
 - [AI導入が本番稼働に届かない理由](https://wingconsulting.org/blog/poc-death-dx-consulting): PoC失敗の5大原因と対策
 - [DXコンサルティングの選び方](https://wingconsulting.org/blog/dx-consulting-guide): 大手と専門ファームの違い、失敗パターン
@@ -39,7 +39,7 @@
 
 ## ニュース
 - [ニュース一覧](https://wingconsulting.org/news/): 関税・規制・技術の重要な更新を日付順に掲載
-- [日本企業への関税影響｜2026年10月7日時点の確認事項](https://wingconsulting.org/news/japan-tariff-impact): 2026-10-07（米東部時間）更新。対中301条関税の継続通知と、一部の金属破砕機用部品の除外番号修正（7月1日適用）を追記。日米など15か国・地域による自動車・電池・化学品など5分野の協議開始も説明。砂糖・海事手数料など過去の更新も掲載。
+- [日本企業への関税影響｜2026年10月8日時点の確認事項](https://wingconsulting.org/news/japan-tariff-impact): 2026-10-08（米東部時間）更新。CAPE第3段階の受付開始、米国の少額貨物の通関規則案（意見期限12月7日）、CBAMの米国輸出への影響に関する意見募集（11月9日）を掲載。過去の関税ニュースも確認できます。
 - [関税ニュースのRSS](https://wingconsulting.org/tariff-news.xml): 重要な変更を確認できたときに配信
 
 ## Claude認定の取得記録と学習
